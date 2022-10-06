@@ -1,0 +1,759 @@
+> cd C:\www.web3d.org\x3d\content\
+> make -i NURBS
+
+
+C:\www.web3d.org\x3d\content>make -i NURBS 
+-------------------------------------------------------------------------
+ls examples/NURBS/*.java
+examples/NURBS/NurbsCurve.java
+examples/NURBS/NurbsPatchSurface.java
+examples/NURBS/NurbsPositionInterpolator.java
+cd examples/NURBS; pwd;	'C:/Program Files/Java/jdk1.5.0_01'/bin/javac -source 1.2 -target 1.1   -classpath ../ScriptConformance/Vrml97ScriptNodePackages.jar *.java
+/cygdrive/c/www.web3d.org/x3d/content/examples/NURBS
+NurbsPositionInterpolator.java:36: cannot find symbol
+symbol  : method getExposedField(java.lang.String)
+location: class vrml.field.SFNode
+	controlPointsValues  = (MFVec3f) controlPoints.getExposedField("point");
+                                                      ^
+1 error
+make: [NURBS] Error 1 (ignored)
+cd examples/NURBS; pwd;	javadoc -version -author -package -breakiterator \
+	-windowtitle "X3D NURBS Prototypes Javadoc"			\
+	-doctitle "<center>X3D NURBS Prototypes Javadoc</center>"	\
+	-d javadoc							\
+	-classpath ../ScriptConformance/Vrml97ScriptNodePackages.jar *.java
+/cygdrive/c/www.web3d.org/x3d/content/examples/NURBS
+Loading source file NurbsCurve.java...
+Loading source file NurbsPatchSurface.java...
+Loading source file NurbsPositionInterpolator.java...
+Constructing Javadoc information...
+Standard Doclet version 1.5.0_01
+Building tree for all the packages and classes...
+Generating javadoc\NurbsCurve.html...
+Generating javadoc\NurbsPatchSurface.html...
+Generating javadoc\NurbsPositionInterpolator.html...
+Generating javadoc\package-frame.html...
+Generating javadoc\package-summary.html...
+Generating javadoc\package-tree.html...
+Generating javadoc\constant-values.html...
+Building index for all the packages and classes...
+Generating javadoc\overview-tree.html...
+Generating javadoc\index-all.html...
+Generating javadoc\deprecated-list.html...
+Building index for all classes...
+Generating javadoc\allclasses-frame.html...
+Generating javadoc\allclasses-noframe.html...
+Generating javadoc\index.html...
+Generating javadoc\help-doc.html...
+Generating javadoc\stylesheet.css...
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\AnimatedNurbsPatchSurfaceHead'			-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d
+examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d
+- - - - -
+Translate examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\AnimatedNurbsPatchSurfaceHeadStyled.wrl examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\AnimatedNurbsPatchSurfaceHeadStyled.x3dv examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\AnimatedNurbsPatchSurfaceHeadStyled.wrl ">" examples\NURBS\AnimatedNurbsPatchSurfaceHead.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\AnimatedNurbsPatchSurfaceHeadStyled.x3dv ">" examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\AnimatedNurbsPatchSurfaceHead.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            75,688 AnimatedNurbsPatchSurfaceHead.wrl
+               1 File(s)         75,688 bytes
+               0 Dir(s)  20,156,620,800 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\AnimatedNurbsPatchSurfaceHead'			-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d
+examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d
+- - - - -
+Pretty print examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\AnimatedNurbsPatchSurfaceHeadStyled.html examples\NURBS\AnimatedNurbsPatchSurfaceHead.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            84,360 AnimatedNurbsPatchSurfaceHead.html
+               1 File(s)         84,360 bytes
+               0 Dir(s)  20,156,620,800 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsExternPrototypes'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsExternPrototypes.x3d
+examples\NURBS\NurbsExternPrototypes.x3d
+- - - - -
+Translate examples\NURBS\NurbsExternPrototypes.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsExternPrototypesStyled.wrl examples\NURBS\NurbsExternPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsExternPrototypesStyled.x3dv examples\NURBS\NurbsExternPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsExternPrototypesStyled.wrl ">" examples\NURBS\NurbsExternPrototypes.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsExternPrototypesStyled.x3dv ">" examples\NURBS\NurbsExternPrototypes.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsExternPrototypes.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            19,254 NurbsExternPrototypes.wrl
+               1 File(s)         19,254 bytes
+               0 Dir(s)  20,156,620,800 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsExternPrototypes'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsExternPrototypes.x3d
+examples\NURBS\NurbsExternPrototypes.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsExternPrototypes.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsExternPrototypesStyled.html examples\NURBS\NurbsExternPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            96,380 NurbsExternPrototypes.html
+               1 File(s)         96,380 bytes
+               0 Dir(s)  20,156,612,608 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\FourDucks'					-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\FourDucks.x3d
+examples\NURBS\FourDucks.x3d
+- - - - -
+Translate examples\NURBS\FourDucks.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\FourDucksStyled.wrl examples\NURBS\FourDucks.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\FourDucksStyled.x3dv examples\NURBS\FourDucks.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\FourDucksStyled.wrl ">" examples\NURBS\FourDucks.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\FourDucksStyled.x3dv ">" examples\NURBS\FourDucks.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\FourDucks.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            13,879 FourDucks.wrl
+               1 File(s)         13,879 bytes
+               0 Dir(s)  20,156,612,608 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\FourDucks'					-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\FourDucks.x3d
+examples\NURBS\FourDucks.x3d
+- - - - -
+Pretty print examples\NURBS\FourDucks.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\FourDucksStyled.html examples\NURBS\FourDucks.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            25,986 FourDucks.html
+               1 File(s)         25,986 bytes
+               0 Dir(s)  20,156,612,608 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\FredTheBunny'					-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\FredTheBunny.x3d
+examples\NURBS\FredTheBunny.x3d
+- - - - -
+Translate examples\NURBS\FredTheBunny.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\FredTheBunnyStyled.wrl examples\NURBS\FredTheBunny.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\FredTheBunnyStyled.x3dv examples\NURBS\FredTheBunny.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\FredTheBunnyStyled.wrl ">" examples\NURBS\FredTheBunny.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\FredTheBunnyStyled.x3dv ">" examples\NURBS\FredTheBunny.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\FredTheBunny.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            50,214 FredTheBunny.wrl
+               1 File(s)         50,214 bytes
+               0 Dir(s)  20,156,612,608 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\FredTheBunny'					-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\FredTheBunny.x3d
+examples\NURBS\FredTheBunny.x3d
+- - - - -
+Pretty print examples\NURBS\FredTheBunny.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\FredTheBunnyStyled.html examples\NURBS\FredTheBunny.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            92,839 FredTheBunny.html
+               1 File(s)         92,839 bytes
+               0 Dir(s)  20,156,612,608 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\HurricaneLantern'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\HurricaneLantern.x3d
+examples\NURBS\HurricaneLantern.x3d
+- - - - -
+Translate examples\NURBS\HurricaneLantern.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\HurricaneLanternStyled.wrl examples\NURBS\HurricaneLantern.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\HurricaneLanternStyled.x3dv examples\NURBS\HurricaneLantern.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\HurricaneLanternStyled.wrl ">" examples\NURBS\HurricaneLantern.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\HurricaneLanternStyled.x3dv ">" examples\NURBS\HurricaneLantern.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\HurricaneLantern.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            56,252 HurricaneLantern.wrl
+               1 File(s)         56,252 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\HurricaneLantern'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\HurricaneLantern.x3d
+examples\NURBS\HurricaneLantern.x3d
+- - - - -
+Pretty print examples\NURBS\HurricaneLantern.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\HurricaneLanternStyled.html examples\NURBS\HurricaneLantern.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            78,615 HurricaneLantern.html
+               1 File(s)         78,615 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsCurveExample'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsCurveExample.x3d
+examples\NURBS\NurbsCurveExample.x3d
+- - - - -
+Translate examples\NURBS\NurbsCurveExample.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsCurveExampleStyled.wrl examples\NURBS\NurbsCurveExample.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsCurveExampleStyled.x3dv examples\NURBS\NurbsCurveExample.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsCurveExampleStyled.wrl ">" examples\NURBS\NurbsCurveExample.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsCurveExampleStyled.x3dv ">" examples\NURBS\NurbsCurveExample.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsCurveExample.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM             2,396 NurbsCurveExample.wrl
+               1 File(s)          2,396 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsCurveExample'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsCurveExample.x3d
+examples\NURBS\NurbsCurveExample.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsCurveExample.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsCurveExampleStyled.html examples\NURBS\NurbsCurveExample.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM             9,638 NurbsCurveExample.html
+               1 File(s)          9,638 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsExternPrototypes'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsExternPrototypes.x3d
+examples\NURBS\NurbsExternPrototypes.x3d
+- - - - -
+Translate examples\NURBS\NurbsExternPrototypes.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsExternPrototypesStyled.wrl examples\NURBS\NurbsExternPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsExternPrototypesStyled.x3dv examples\NURBS\NurbsExternPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsExternPrototypesStyled.wrl ">" examples\NURBS\NurbsExternPrototypes.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsExternPrototypesStyled.x3dv ">" examples\NURBS\NurbsExternPrototypes.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsExternPrototypes.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            19,254 NurbsExternPrototypes.wrl
+               1 File(s)         19,254 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsExternPrototypes'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsExternPrototypes.x3d
+examples\NURBS\NurbsExternPrototypes.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsExternPrototypes.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsExternPrototypesStyled.html examples\NURBS\NurbsExternPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            96,380 NurbsExternPrototypes.html
+               1 File(s)         96,380 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsPatchSurfaceExample'			-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPatchSurfaceExample.x3d
+examples\NURBS\NurbsPatchSurfaceExample.x3d
+- - - - -
+Translate examples\NURBS\NurbsPatchSurfaceExample.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPatchSurfaceExampleStyled.wrl examples\NURBS\NurbsPatchSurfaceExample.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsPatchSurfaceExampleStyled.x3dv examples\NURBS\NurbsPatchSurfaceExample.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPatchSurfaceExampleStyled.wrl ">" examples\NURBS\NurbsPatchSurfaceExample.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPatchSurfaceExampleStyled.x3dv ">" examples\NURBS\NurbsPatchSurfaceExample.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsPatchSurfaceExample.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM             2,653 NurbsPatchSurfaceExample.wrl
+03/13/2005  11:16 PM            48,436 NurbsPatchSurfaceExampleLarge.wrl
+03/13/2005  11:16 PM             2,997 NurbsPatchSurfaceExampleWithOahuTexture.wrl
+               3 File(s)         54,086 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsPatchSurfaceExample'			-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPatchSurfaceExample.x3d
+examples\NURBS\NurbsPatchSurfaceExample.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsPatchSurfaceExample.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPatchSurfaceExampleStyled.html examples\NURBS\NurbsPatchSurfaceExample.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            11,386 NurbsPatchSurfaceExample.html
+03/13/2005  11:16 PM            62,015 NurbsPatchSurfaceExampleLarge.html
+03/13/2005  11:16 PM            12,054 NurbsPatchSurfaceExampleWithOahuTexture.html
+               3 File(s)         85,455 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsPatchSurfaceExampleLarge'			-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d
+examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d
+- - - - -
+Translate examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPatchSurfaceExampleLargeStyled.wrl examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsPatchSurfaceExampleLargeStyled.x3dv examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPatchSurfaceExampleLargeStyled.wrl ">" examples\NURBS\NurbsPatchSurfaceExampleLarge.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPatchSurfaceExampleLargeStyled.x3dv ">" examples\NURBS\NurbsPatchSurfaceExampleLarge.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsPatchSurfaceExampleLarge.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            48,436 NurbsPatchSurfaceExampleLarge.wrl
+               1 File(s)         48,436 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsPatchSurfaceExampleLarge'			-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d
+examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPatchSurfaceExampleLargeStyled.html examples\NURBS\NurbsPatchSurfaceExampleLarge.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            62,015 NurbsPatchSurfaceExampleLarge.html
+               1 File(s)         62,015 bytes
+               0 Dir(s)  20,156,596,224 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture'	-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d
+examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d
+- - - - -
+Translate examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPatchSurfaceExampleWithOahuTextureStyled.wrl examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsPatchSurfaceExampleWithOahuTextureStyled.x3dv examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPatchSurfaceExampleWithOahuTextureStyled.wrl ">" examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPatchSurfaceExampleWithOahuTextureStyled.x3dv ">" examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM             2,997 NurbsPatchSurfaceExampleWithOahuTexture.wrl
+               1 File(s)          2,997 bytes
+               0 Dir(s)  20,156,563,456 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture'	-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d
+examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPatchSurfaceExampleWithOahuTextureStyled.html examples\NURBS\NurbsPatchSurfaceExampleWithOahuTexture.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            12,054 NurbsPatchSurfaceExampleWithOahuTexture.html
+               1 File(s)         12,054 bytes
+               0 Dir(s)  20,156,563,456 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsPositionInterpolatorExample'		-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPositionInterpolatorExample.x3d
+examples\NURBS\NurbsPositionInterpolatorExample.x3d
+- - - - -
+Translate examples\NURBS\NurbsPositionInterpolatorExample.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPositionInterpolatorExampleStyled.wrl examples\NURBS\NurbsPositionInterpolatorExample.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='under development, needs to be upgraded to final version of X3D NURBS nodes'/>
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsPositionInterpolatorExampleStyled.x3dv examples\NURBS\NurbsPositionInterpolatorExample.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPositionInterpolatorExampleStyled.wrl ">" examples\NURBS\NurbsPositionInterpolatorExample.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPositionInterpolatorExampleStyled.x3dv ">" examples\NURBS\NurbsPositionInterpolatorExample.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsPositionInterpolatorExample.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM             3,593 NurbsPositionInterpolatorExample.wrl
+               1 File(s)          3,593 bytes
+               0 Dir(s)  20,156,563,456 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsPositionInterpolatorExample'		-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPositionInterpolatorExample.x3d
+examples\NURBS\NurbsPositionInterpolatorExample.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsPositionInterpolatorExample.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPositionInterpolatorExampleStyled.html examples\NURBS\NurbsPositionInterpolatorExample.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:18 PM            10,727 NurbsPositionInterpolatorExample.html
+               1 File(s)         10,727 bytes
+               0 Dir(s)  20,156,563,456 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\NURBS\NurbsPrototypes'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPrototypes.x3d
+examples\NURBS\NurbsPrototypes.x3d
+- - - - -
+Translate examples\NURBS\NurbsPrototypes.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPrototypesStyled.wrl examples\NURBS\NurbsPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt
+<meta name='warning' content='Under development for final version of X3D NURBS nodes'/>
+<meta name='warning' content='Not all NURBS nodes are prototyped here, and these implementations are not yet fully demonstrated. '/>
+<meta name='warning' content='Need to add child-node typechecking where appropriate?  
+Or simply rely on DTD/Schema to ensure proper parent-child relationships?'/>
+[Error] Script node has neither url nor contained code in CDATA section [Script DEF='ScriptContourPolyline2D']
+[Warning] <ProtoDeclare name='NurbsCurve'/> ProtoBody children following first child will not be rendered. [check X3D source or VRML output to find questionable node]
+[Error] Mismatched ancestor::ProtoDeclare/ProtoInterface/field/@type='SFNode' and Script/field/@type='MFVec3f' [field 'controlPoint' parent Script, parent Prototype name='NurbsCurve' DEF='NurbsCurveScript']
+[Error] Mismatched ancestor::ProtoDeclare/ProtoInterface/field/@type='SFNode' and Script/field/@type='MFVec3f' [field 'set_controlPoint' parent Script, parent Prototype name='NurbsCurve' DEF='NurbsCurveScript']
+[Error] Mismatched ancestor::ProtoDeclare/ProtoInterface/field/@type='SFNode' and Script/field/@type='MFVec3f' [field 'controlPoint_changed' parent Script, parent Prototype name='NurbsCurve' DEF='NurbsCurveScript']
+[Error] Mismatched ancestor::ProtoDeclare/ProtoInterface/field/@type='SFNode' and Script/field/@type='MFVec3f' [field 'controlPoint' parent Script, parent Prototype name='NurbsSurfaceInterpolator' DEF='NurbsSurfaceInterpolatorScript']
+[Error] Mismatched ancestor::ProtoDeclare/ProtoInterface/field/@type='SFNode' and Script/field/@type='MFVec3f' [field 'set_controlPoint' parent Script, parent Prototype name='NurbsSurfaceInterpolator' DEF='NurbsSurfaceInterpolatorScript']
+[Error] Mismatched ancestor::ProtoDeclare/ProtoInterface/field/@type='SFNode' and Script/field/@type='MFVec3f' [field 'controlPoint_changed' parent Script, parent Prototype name='NurbsSurfaceInterpolator' DEF='NurbsSurfaceInterpolatorScript']
+[Error] ROUTE fromNode='NurbsSweptSurfaceScript' is a Script, but fromField='coordIndex' is not a defined field. [check X3D source or VRML output to find erroneous ROUTE]
+[Error] ROUTE fromNode='NurbsSwungSurfaceScript' is a Script, but fromField='coord' is not a defined field. [check X3D source or VRML output to find erroneous ROUTE]
+[Error] ROUTE fromNode='NurbsSwungSurfaceScript' is a Script, but fromField='coordIndex' is not a defined field. [check X3D source or VRML output to find erroneous ROUTE]
+java -jar c:/xml/saxon/saxon.jar -o examples\NURBS\NurbsPrototypesStyled.x3dv examples\NURBS\NurbsPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToVrml97.xslt fileEncoding=ClassicVRML outputDiagnostics=false
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPrototypesStyled.wrl ">" examples\NURBS\NurbsPrototypes.wrl
+Pretty-print VRML output:
+c:\www.web3d.org\x3d\content\vpp               examples\NURBS\NurbsPrototypesStyled.x3dv ">" examples\NURBS\NurbsPrototypes.x3dv
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\NURBS\NurbsPrototypes.wrl -nowarnings
+The system cannot find the path specified.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+- - - - -
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:19 PM            30,810 NurbsPrototypes.wrl
+               1 File(s)         30,810 bytes
+               0 Dir(s)  20,156,563,456 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToXhtml.bat  'examples\NURBS\NurbsPrototypes'				-same
+[X3dDtdChecker] valid XML declaration found, final X3D DOCTYPE found.
+[X3dDtdChecker] set transitional DTD:  scene reset to transitional DTD.
+
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\NURBS\NurbsPrototypes.x3d
+examples\NURBS\NurbsPrototypes.x3d
+- - - - -
+Pretty print examples\NURBS\NurbsPrototypes.x3d
+  XML tags as readable HTML:
+java -jar c:/xml/saxon/saxon.jar    -o examples\NURBS\NurbsPrototypesStyled.html examples\NURBS\NurbsPrototypes.x3d c:\www.web3d.org\x3d\content\X3dToXhtml.xslt
+        1 file(s) copied.
+[X3dDtdChecker] valid XML declaration found, transitional X3D DOCTYPE found.
+[X3dDtdChecker] set final DTD:  scene reset to final DTD.
+
+ Volume in drive C has no label.
+ Volume Serial Number is 5C37-E184
+
+ Directory of C:\www.web3d.org\x3d\content\examples\NURBS
+
+03/13/2005  11:19 PM           217,042 NurbsPrototypes.html
+               1 File(s)        217,042 bytes
+               0 Dir(s)  20,156,563,456 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

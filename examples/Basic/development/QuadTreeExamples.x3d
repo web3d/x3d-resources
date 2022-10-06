@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<!-- ENTITY, ELEMENT and ATTLIST definitions are listed in detail within the DOCTYPE declaration internal subset. -->
+<!-- You must view full source of the DTD declarations (QuadTreeExamples.x3d.txt) to fully understand this file. -->
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='QuadTreeExamples.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='20 January 2020' name='modified'/>
+    <meta content='Show four ways of solving the QuadTree problem using native XML tags, PROTOs, IDREF/USE and MFNode children compatibly - view XML source to see DTD internal-subset declarations.' name='description'/>
+    <meta content='Test to demonstrate DOCTYPE extensibility, this X3D scene not valid and does not render.' name='error'/>
+    <meta content='You must view full source of the DTD declarations (QuadTreeExamples.x3d.txt) to fully understand validation techniques in this file.' name='warning'/>
+    <meta content='QuadTreeExamplesExplanation.html' name='reference'/>
+    <meta content='QuadTreeExamples.x3d.txt' name='reference'/>
+    <meta content='QuadTreeExamples.png' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/development/QuadTreeExamples.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.1, https://www.web3d.org/x3d/content/README.X3D-Edit.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- Example solution approach #1 -->
+    <!-- Note that PROTO declarations are also provided for compatible backwards translation to VRML 97 encoding. They are not necessary for independent X3D use of the QuadTree examples. -->
+    <ProtoDeclare name='QuadTree-USEchildren'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='upperLeftDEFName' type='MFNode'/>
+        <field accessType='inputOutput' name='upperRightDEFName' type='MFNode'/>
+        <field accessType='inputOutput' name='lowerLeftDEFName' type='MFNode'/>
+        <field accessType='inputOutput' name='lowerRightDEFName' type='MFNode'/>
+        <field accessType='inputOutput' name='children' type='MFNode'/>
+        <!-- children field must be declared for any PROTOs or native-tag nodes with children -->
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- VRML 97 specification paragraph 4.8.3, PROTO definition semantics: "A prototype definition consists of one or more nodes." PROTO body follows. -->
+        <Group>
+          <Group DEF='GroupA'>
+            <IS>
+              <connect nodeField='children' protoField='upperLeftDEFName'/>
+            </IS>
+          </Group>
+          <Group DEF='GroupB'>
+            <IS>
+              <connect nodeField='children' protoField='upperRightDEFName'/>
+            </IS>
+          </Group>
+          <Group DEF='GroupC'>
+            <IS>
+              <connect nodeField='children' protoField='lowerLeftDEFName'/>
+            </IS>
+          </Group>
+          <Group DEF='GroupD'>
+            <IS>
+              <connect nodeField='children' protoField='lowerRightDEFName'/>
+            </IS>
+          </Group>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- Example solution approach #3 -->
+    <ProtoDeclare name='QuadTree-TagChildren'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='upperLeftNode' type='MFNode'>
+          <!-- no initialization node -->
+        </field>
+        <field accessType='inputOutput' name='upperRightNode' type='MFNode'>
+          <!-- no initialization node -->
+        </field>
+        <field accessType='inputOutput' name='lowerLeftNode' type='MFNode'>
+          <!-- no initialization node -->
+        </field>
+        <field accessType='inputOutput' name='lowerRightNode' type='MFNode'>
+          <!-- no initialization node -->
+        </field>
+        <field accessType='inputOutput' name='children' type='MFNode'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- PROTO body follows. -->
+        <Group>
+          <Group DEF='GroupE'>
+            <IS>
+              <connect nodeField='children' protoField='upperLeftNode'/>
+            </IS>
+          </Group>
+          <Group DEF='GroupF'>
+            <IS>
+              <connect nodeField='children' protoField='upperRightNode'/>
+            </IS>
+          </Group>
+          <Group DEF='GroupG'>
+            <IS>
+              <connect nodeField='children' protoField='lowerLeftNode'/>
+            </IS>
+          </Group>
+          <Group DEF='GroupH'>
+            <IS>
+              <connect nodeField='children' protoField='lowerRightNode'/>
+            </IS>
+          </Group>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <Group>
+      <Viewpoint description='View QuadTree examples' position='0 0 30'/>
+      <Transform DEF='Example_1' translation='0 6 0'>
+        <ProtoInstance name='QuadTree-USEchildren'>
+          <fieldValue name='children'>
+            <Group>
+              <Transform DEF='UPPER_LEFT' translation='4 0 4'>
+                <Shape>
+                  <Appearance DEF='RED'>
+                    <Material diffuseColor='1 0 0'/>
+                  </Appearance>
+                  <Box/>
+                </Shape>
+              </Transform>
+              <Transform DEF='UPPER_RIGHT' translation='3 0 -3'>
+                <Shape>
+                  <Appearance DEF='GREEN'>
+                    <Material diffuseColor='0 1 0'/>
+                  </Appearance>
+                  <Sphere/>
+                </Shape>
+              </Transform>
+              <Transform DEF='LOWER_LEFT' translation='-3 0 -3'>
+                <Shape>
+                  <Appearance DEF='BLUE'>
+                    <Material diffuseColor='.2 .2 1'/>
+                  </Appearance>
+                  <Cylinder/>
+                </Shape>
+              </Transform>
+              <Transform DEF='LOWER_RIGHT' translation='-6 0 4'>
+                <Shape>
+                  <Appearance DEF='WHITE'>
+                    <Material diffuseColor='1 1 1'/>
+                  </Appearance>
+                  <Text string='"QuadTree-USEchildren" "ProtoInstance"'/>
+                </Shape>
+              </Transform>
+            </Group>
+          </fieldValue>
+          <fieldValue name='upperLeftDEFName'>
+            <Transform USE='UPPER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='upperRightDEFName'>
+            <Transform USE='UPPER_RIGHT'/>
+          </fieldValue>
+          <fieldValue name='lowerLeftDEFName'>
+            <Transform USE='LOWER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='lowerRightDEFName'>
+            <Transform USE='LOWER_RIGHT'/>
+          </fieldValue>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF='Example_2' translation='0 2 0'>
+        <QuadTree-USEchildren nodeType='Group'>
+          <fieldValue name='children'>
+            <!-- children which follow are locally convenient and referenced via IDREF/USE -->
+            <Transform DEF='LOWER_RIGHT_EXAMPLE_2' translation='-6 0 4'>
+              <Shape>
+                <Text string='"QuadTree-USEchildren" "Native tags"'/>
+                <Appearance USE='WHITE'/>
+              </Shape>
+            </Transform>
+          </fieldValue>
+          <fieldValue name='upperLeftDEFName'>
+            <Transform USE='UPPER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='upperRightDEFName'>
+            <Transform USE='UPPER_RIGHT'/>
+          </fieldValue>
+          <fieldValue name='lowerLeftDEFName'>
+            <Transform USE='LOWER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='lowerRightDEFName'>
+            <Transform USE='LOWER_RIGHT_EXAMPLE_2'/>
+          </fieldValue>
+        </QuadTree-USEchildren>
+      </Transform>
+      <Transform DEF='Example_3' translation='0 -2 0'>
+        <ProtoInstance name='QuadTree-TagChildren'>
+          <fieldValue name='upperLeftNode'>
+            <Transform USE='UPPER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='upperRightNode'>
+            <Transform USE='UPPER_RIGHT'/>
+          </fieldValue>
+          <fieldValue name='lowerLeftNode'>
+            <Transform USE='LOWER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='lowerRightNode'>
+            <Transform translation='-6 0 4'>
+              <Shape>
+                <Text string='"QuadTree-TagChildren" "ProtoInstance"'/>
+                <Appearance USE='WHITE'/>
+              </Shape>
+            </Transform>
+          </fieldValue>
+        </ProtoInstance>
+      </Transform>
+      <Transform DEF='Example_4' translation='0 -6 0'>
+        <QuadTree-TagChildren nodeType='Group'>
+          <fieldValue name='upperLeftNode'>
+            <Transform USE='UPPER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='upperRightNode'>
+            <Transform USE='UPPER_RIGHT'/>
+          </fieldValue>
+          <fieldValue name='lowerLeftNode'>
+            <Transform USE='LOWER_LEFT'/>
+          </fieldValue>
+          <fieldValue name='lowerRightNode'>
+            <Transform translation='-6 0 4'>
+              <Shape>
+                <Text string='"QuadTree-TagChildren" "Native tags"'/>
+                <Appearance USE='WHITE'/>
+              </Shape>
+            </Transform>
+            <WorldInfo info='"this WorldInfo is here to demonstrate that the example is type MFNode"'/>
+          </fieldValue>
+        </QuadTree-TagChildren>
+      </Transform>
+    </Group>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </Scene>
+</X3D>

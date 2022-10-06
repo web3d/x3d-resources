@@ -1,0 +1,3805 @@
+> cd C:\www.web3d.org\TaskGroups\x3d\translation\
+> make convertSriCampus
+
+
+C:\www.web3d.org\TaskGroups\x3d\translation>make convertSriCampus 
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-0\world.wrl"	 "SriCampus0.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-0\world.wrl SriCampus0.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-0\world.wrl to x3d file SriCampus0.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-0\world.wrl SriCampus0.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-0
+
+02/01/2000  06:03 PM             3,041 world.wrl
+               1 File(s)          3,041 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,014 SriCampus0.x3d
+               1 File(s)          3,014 bytes
+               0 Dir(s)   6,564,126,720 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-1\world.wrl"	 "SriCampus1.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-1\world.wrl SriCampus1.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-1\world.wrl to x3d file SriCampus1.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-1\world.wrl SriCampus1.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-1
+
+02/01/2000  06:03 PM             1,778 world.wrl
+               1 File(s)          1,778 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,467 SriCampus1.x3d
+               1 File(s)          2,467 bytes
+               0 Dir(s)   6,564,118,528 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-2\world.wrl"	 "SriCampus2.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-2\world.wrl SriCampus2.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-2\world.wrl to x3d file SriCampus2.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-2\world.wrl SriCampus2.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-2
+
+02/01/2000  06:03 PM            13,523 world.wrl
+               1 File(s)         13,523 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             7,742 SriCampus2.x3d
+               1 File(s)          7,742 bytes
+               0 Dir(s)   6,564,184,064 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-3\world.wrl"	 "SriCampus3.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-3\world.wrl SriCampus3.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-3\world.wrl to x3d file SriCampus3.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-3\world.wrl SriCampus3.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-3
+
+02/01/2000  06:03 PM             1,580 world.wrl
+               1 File(s)          1,580 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,397 SriCampus3.x3d
+               1 File(s)          2,397 bytes
+               0 Dir(s)   6,564,175,872 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-4\world.wrl"	 "SriCampus4.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-4\world.wrl SriCampus4.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-4\world.wrl to x3d file SriCampus4.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-4\world.wrl SriCampus4.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-4
+
+02/01/2000  06:03 PM             1,269 world.wrl
+               1 File(s)          1,269 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,254 SriCampus4.x3d
+               1 File(s)          2,254 bytes
+               0 Dir(s)   6,564,171,776 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-5\world.wrl"	 "SriCampus5.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-5\world.wrl SriCampus5.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-5\world.wrl to x3d file SriCampus5.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-5\world.wrl SriCampus5.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-5
+
+02/01/2000  06:03 PM             1,261 world.wrl
+               1 File(s)          1,261 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,254 SriCampus5.x3d
+               1 File(s)          2,254 bytes
+               0 Dir(s)   6,564,167,680 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-6\world.wrl"	 "SriCampus6.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-6\world.wrl SriCampus6.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-6\world.wrl to x3d file SriCampus6.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-6\world.wrl SriCampus6.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-6
+
+02/01/2000  06:03 PM             1,843 world.wrl
+               1 File(s)          1,843 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,508 SriCampus6.x3d
+               1 File(s)          2,508 bytes
+               0 Dir(s)   6,564,163,584 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-7\world.wrl"	 "SriCampus7.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-7\world.wrl SriCampus7.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-7\world.wrl to x3d file SriCampus7.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-7\world.wrl SriCampus7.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-7
+
+02/01/2000  06:03 PM             1,269 world.wrl
+               1 File(s)          1,269 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,262 SriCampus7.x3d
+               1 File(s)          2,262 bytes
+               0 Dir(s)   6,564,159,488 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-8\world.wrl"	 "SriCampus8.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-8\world.wrl SriCampus8.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-8\world.wrl to x3d file SriCampus8.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-8\world.wrl SriCampus8.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-8
+
+02/01/2000  06:03 PM             1,254 world.wrl
+               1 File(s)          1,254 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,247 SriCampus8.x3d
+               1 File(s)          2,247 bytes
+               0 Dir(s)   6,564,155,392 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-9\world.wrl"	 "SriCampus9.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-9\world.wrl SriCampus9.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-9\world.wrl to x3d file SriCampus9.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-9\world.wrl SriCampus9.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-9
+
+02/01/2000  06:03 PM             1,572 world.wrl
+               1 File(s)          1,572 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,409 SriCampus9.x3d
+               1 File(s)          2,409 bytes
+               0 Dir(s)   6,564,151,296 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-10\world.wrl"	 "SriCampus10.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-10\world.wrl SriCampus10.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-10\world.wrl to x3d file SriCampus10.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-10\world.wrl SriCampus10.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-10
+
+02/01/2000  06:03 PM             1,860 world.wrl
+               1 File(s)          1,860 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,506 SriCampus10.x3d
+               1 File(s)          2,506 bytes
+               0 Dir(s)   6,564,147,200 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-11\world.wrl"	 "SriCampus11.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-11\world.wrl SriCampus11.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-11\world.wrl to x3d file SriCampus11.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-11\world.wrl SriCampus11.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-11
+
+02/01/2000  06:03 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus11.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,564,143,104 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-12\world.wrl"	 "SriCampus12.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-12\world.wrl SriCampus12.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-12\world.wrl to x3d file SriCampus12.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-12\world.wrl SriCampus12.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-12
+
+02/01/2000  06:04 PM             5,701 world.wrl
+               1 File(s)          5,701 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             4,197 SriCampus12.x3d
+               1 File(s)          4,197 bytes
+               0 Dir(s)   6,564,130,816 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-13\world.wrl"	 "SriCampus13.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-13\world.wrl SriCampus13.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-13\world.wrl to x3d file SriCampus13.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-13\world.wrl SriCampus13.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-13
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus13.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,564,110,336 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-14\world.wrl"	 "SriCampus14.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-14\world.wrl SriCampus14.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-14\world.wrl to x3d file SriCampus14.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-14\world.wrl SriCampus14.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-14
+
+02/01/2000  06:04 PM             1,836 world.wrl
+               1 File(s)          1,836 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,514 SriCampus14.x3d
+               1 File(s)          2,514 bytes
+               0 Dir(s)   6,564,106,240 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-15\world.wrl"	 "SriCampus15.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-15\world.wrl SriCampus15.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-15\world.wrl to x3d file SriCampus15.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-15\world.wrl SriCampus15.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-15
+
+02/01/2000  06:04 PM             1,246 world.wrl
+               1 File(s)          1,246 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,264 SriCampus15.x3d
+               1 File(s)          2,264 bytes
+               0 Dir(s)   6,564,102,144 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-16\world.wrl"	 "SriCampus16.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-16\world.wrl SriCampus16.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-16\world.wrl to x3d file SriCampus16.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-16\world.wrl SriCampus16.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-16
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus16.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,564,098,048 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-17\world.wrl"	 "SriCampus17.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-17\world.wrl SriCampus17.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-17\world.wrl to x3d file SriCampus17.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-17\world.wrl SriCampus17.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-17
+
+02/01/2000  06:04 PM             1,779 world.wrl
+               1 File(s)          1,779 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,469 SriCampus17.x3d
+               1 File(s)          2,469 bytes
+               0 Dir(s)   6,564,093,952 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-18\world.wrl"	 "SriCampus18.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-18\world.wrl SriCampus18.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-18\world.wrl to x3d file SriCampus18.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-18\world.wrl SriCampus18.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-18
+
+02/01/2000  06:04 PM             1,852 world.wrl
+               1 File(s)          1,852 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,470 SriCampus18.x3d
+               1 File(s)          2,470 bytes
+               0 Dir(s)   6,564,089,856 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-19\world.wrl"	 "SriCampus19.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-19\world.wrl SriCampus19.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-19\world.wrl to x3d file SriCampus19.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-19\world.wrl SriCampus19.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-19
+
+02/01/2000  06:04 PM             3,036 world.wrl
+               1 File(s)          3,036 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,008 SriCampus19.x3d
+               1 File(s)          3,008 bytes
+               0 Dir(s)   6,564,085,760 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-20\world.wrl"	 "SriCampus20.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-20\world.wrl SriCampus20.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-20\world.wrl to x3d file SriCampus20.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-20\world.wrl SriCampus20.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-20
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,256 SriCampus20.x3d
+               1 File(s)          2,256 bytes
+               0 Dir(s)   6,564,081,664 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-21\world.wrl"	 "SriCampus21.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-21\world.wrl SriCampus21.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-21\world.wrl to x3d file SriCampus21.x3d
+
+*** Parsing time (ms): 61
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-21\world.wrl SriCampus21.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-21
+
+02/01/2000  06:04 PM             1,766 world.wrl
+               1 File(s)          1,766 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,466 SriCampus21.x3d
+               1 File(s)          2,466 bytes
+               0 Dir(s)   6,564,077,568 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-22\world.wrl"	 "SriCampus22.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-22\world.wrl SriCampus22.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-22\world.wrl to x3d file SriCampus22.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-22\world.wrl SriCampus22.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-22
+
+02/01/2000  06:04 PM             1,843 world.wrl
+               1 File(s)          1,843 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,501 SriCampus22.x3d
+               1 File(s)          2,501 bytes
+               0 Dir(s)   6,564,073,472 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-23\world.wrl"	 "SriCampus23.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-23\world.wrl SriCampus23.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-23\world.wrl to x3d file SriCampus23.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-23\world.wrl SriCampus23.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-23
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus23.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,564,069,376 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-24\world.wrl"	 "SriCampus24.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-24\world.wrl SriCampus24.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-24\world.wrl to x3d file SriCampus24.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-24\world.wrl SriCampus24.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-24
+
+02/01/2000  06:04 PM             2,983 world.wrl
+               1 File(s)          2,983 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,963 SriCampus24.x3d
+               1 File(s)          2,963 bytes
+               0 Dir(s)   6,564,061,184 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-25\world.wrl"	 "SriCampus25.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-25\world.wrl SriCampus25.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-25\world.wrl to x3d file SriCampus25.x3d
+
+*** Parsing time (ms): 111
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-25\world.wrl SriCampus25.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-25
+
+02/01/2000  06:04 PM           227,951 world.wrl
+               1 File(s)        227,951 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM           100,517 SriCampus25.x3d
+               1 File(s)        100,517 bytes
+               0 Dir(s)   6,563,958,784 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-26\world.wrl"	 "SriCampus26.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-26\world.wrl SriCampus26.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-26\world.wrl to x3d file SriCampus26.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-26\world.wrl SriCampus26.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-26
+
+02/01/2000  06:04 PM             2,950 world.wrl
+               1 File(s)          2,950 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,001 SriCampus26.x3d
+               1 File(s)          3,001 bytes
+               0 Dir(s)   6,563,921,920 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-27\world.wrl"	 "SriCampus27.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-27\world.wrl SriCampus27.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-27\world.wrl to x3d file SriCampus27.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-27\world.wrl SriCampus27.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-27
+
+02/01/2000  06:04 PM             1,586 world.wrl
+               1 File(s)          1,586 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,400 SriCampus27.x3d
+               1 File(s)          2,400 bytes
+               0 Dir(s)   6,563,917,824 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-28\world.wrl"	 "SriCampus28.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-28\world.wrl SriCampus28.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-28\world.wrl to x3d file SriCampus28.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-28\world.wrl SriCampus28.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-28
+
+02/01/2000  06:04 PM             1,864 world.wrl
+               1 File(s)          1,864 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,502 SriCampus28.x3d
+               1 File(s)          2,502 bytes
+               0 Dir(s)   6,563,913,728 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-29\world.wrl"	 "SriCampus29.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-29\world.wrl SriCampus29.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-29\world.wrl to x3d file SriCampus29.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-29\world.wrl SriCampus29.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-29
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,249 SriCampus29.x3d
+               1 File(s)          2,249 bytes
+               0 Dir(s)   6,563,909,632 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-30\world.wrl"	 "SriCampus30.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-30\world.wrl SriCampus30.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-30\world.wrl to x3d file SriCampus30.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-30\world.wrl SriCampus30.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-30
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus30.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,905,536 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-31\world.wrl"	 "SriCampus31.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-31\world.wrl SriCampus31.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-31\world.wrl to x3d file SriCampus31.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-31\world.wrl SriCampus31.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-31
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus31.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,901,440 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-32\world.wrl"	 "SriCampus32.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-32\world.wrl SriCampus32.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-32\world.wrl to x3d file SriCampus32.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-32\world.wrl SriCampus32.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-32
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus32.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,897,344 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-33\world.wrl"	 "SriCampus33.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-33\world.wrl SriCampus33.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-33\world.wrl to x3d file SriCampus33.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-33\world.wrl SriCampus33.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-33
+
+02/01/2000  06:04 PM             1,859 world.wrl
+               1 File(s)          1,859 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,501 SriCampus33.x3d
+               1 File(s)          2,501 bytes
+               0 Dir(s)   6,563,893,248 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-34\world.wrl"	 "SriCampus34.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-34\world.wrl SriCampus34.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-34\world.wrl to x3d file SriCampus34.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-34\world.wrl SriCampus34.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-34
+
+02/01/2000  06:04 PM             1,255 world.wrl
+               1 File(s)          1,255 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus34.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,889,152 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-35\world.wrl"	 "SriCampus35.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-35\world.wrl SriCampus35.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-35\world.wrl to x3d file SriCampus35.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-35\world.wrl SriCampus35.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-35
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus35.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,885,056 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-36\world.wrl"	 "SriCampus36.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-36\world.wrl SriCampus36.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-36\world.wrl to x3d file SriCampus36.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-36\world.wrl SriCampus36.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-36
+
+02/01/2000  06:04 PM             3,042 world.wrl
+               1 File(s)          3,042 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,016 SriCampus36.x3d
+               1 File(s)          3,016 bytes
+               0 Dir(s)   6,563,880,960 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-37\world.wrl"	 "SriCampus37.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-37\world.wrl SriCampus37.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-37\world.wrl to x3d file SriCampus37.x3d
+
+*** Parsing time (ms): 81
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-37\world.wrl SriCampus37.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-37
+
+02/01/2000  06:04 PM             1,852 world.wrl
+               1 File(s)          1,852 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,510 SriCampus37.x3d
+               1 File(s)          2,510 bytes
+               0 Dir(s)   6,563,876,864 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-38\world.wrl"	 "SriCampus38.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-38\world.wrl SriCampus38.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-38\world.wrl to x3d file SriCampus38.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-38\world.wrl SriCampus38.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-38
+
+02/01/2000  06:04 PM             2,761 world.wrl
+               1 File(s)          2,761 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,918 SriCampus38.x3d
+               1 File(s)          2,918 bytes
+               0 Dir(s)   6,563,872,768 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-39\world.wrl"	 "SriCampus39.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-39\world.wrl SriCampus39.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-39\world.wrl to x3d file SriCampus39.x3d
+
+*** Parsing time (ms): 101
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-39\world.wrl SriCampus39.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-39
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus39.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,864,576 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-40\world.wrl"	 "SriCampus40.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-40\world.wrl SriCampus40.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-40\world.wrl to x3d file SriCampus40.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-40\world.wrl SriCampus40.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-40
+
+02/01/2000  06:04 PM             5,890 world.wrl
+               1 File(s)          5,890 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             4,300 SriCampus40.x3d
+               1 File(s)          4,300 bytes
+               0 Dir(s)   6,563,856,384 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-41\world.wrl"	 "SriCampus41.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-41\world.wrl SriCampus41.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-41\world.wrl to x3d file SriCampus41.x3d
+
+*** Parsing time (ms): 81
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-41\world.wrl SriCampus41.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-41
+
+02/01/2000  06:04 PM             3,037 world.wrl
+               1 File(s)          3,037 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,009 SriCampus41.x3d
+               1 File(s)          3,009 bytes
+               0 Dir(s)   6,563,852,288 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-42\world.wrl"	 "SriCampus42.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-42\world.wrl SriCampus42.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-42\world.wrl to x3d file SriCampus42.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-42\world.wrl SriCampus42.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-42
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus42.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,844,096 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-43\world.wrl"	 "SriCampus43.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-43\world.wrl SriCampus43.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-43\world.wrl to x3d file SriCampus43.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-43\world.wrl SriCampus43.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-43
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus43.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,840,000 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-44\world.wrl"	 "SriCampus44.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-44\world.wrl SriCampus44.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-44\world.wrl to x3d file SriCampus44.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-44\world.wrl SriCampus44.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-44
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus44.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,835,904 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-45\world.wrl"	 "SriCampus45.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-45\world.wrl SriCampus45.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-45\world.wrl to x3d file SriCampus45.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-45\world.wrl SriCampus45.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-45
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,256 SriCampus45.x3d
+               1 File(s)          2,256 bytes
+               0 Dir(s)   6,563,831,808 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-46\world.wrl"	 "SriCampus46.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-46\world.wrl SriCampus46.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-46\world.wrl to x3d file SriCampus46.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-46\world.wrl SriCampus46.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-46
+
+02/01/2000  06:04 PM             4,256 world.wrl
+               1 File(s)          4,256 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,553 SriCampus46.x3d
+               1 File(s)          3,553 bytes
+               0 Dir(s)   6,563,827,712 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-47\world.wrl"	 "SriCampus47.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-47\world.wrl SriCampus47.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-47\world.wrl to x3d file SriCampus47.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-47\world.wrl SriCampus47.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-47
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,249 SriCampus47.x3d
+               1 File(s)          2,249 bytes
+               0 Dir(s)   6,563,823,616 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-48\world.wrl"	 "SriCampus48.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-48\world.wrl SriCampus48.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-48\world.wrl to x3d file SriCampus48.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-48\world.wrl SriCampus48.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-48
+
+02/01/2000  06:04 PM             1,254 world.wrl
+               1 File(s)          1,254 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,256 SriCampus48.x3d
+               1 File(s)          2,256 bytes
+               0 Dir(s)   6,563,819,520 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-49\world.wrl"	 "SriCampus49.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-49\world.wrl SriCampus49.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-49\world.wrl to x3d file SriCampus49.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-49\world.wrl SriCampus49.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-49
+
+02/01/2000  06:04 PM             1,255 world.wrl
+               1 File(s)          1,255 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus49.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,815,424 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-50\world.wrl"	 "SriCampus50.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-50\world.wrl SriCampus50.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-50\world.wrl to x3d file SriCampus50.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-50\world.wrl SriCampus50.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-50
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus50.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,811,328 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-51\world.wrl"	 "SriCampus51.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-51\world.wrl SriCampus51.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-51\world.wrl to x3d file SriCampus51.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-51\world.wrl SriCampus51.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-51
+
+02/01/2000  06:04 PM             1,246 world.wrl
+               1 File(s)          1,246 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus51.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,807,232 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-52\world.wrl"	 "SriCampus52.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-52\world.wrl SriCampus52.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-52\world.wrl to x3d file SriCampus52.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-52\world.wrl SriCampus52.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-52
+
+02/01/2000  06:04 PM             1,779 world.wrl
+               1 File(s)          1,779 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,469 SriCampus52.x3d
+               1 File(s)          2,469 bytes
+               0 Dir(s)   6,563,737,600 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-53\world.wrl"	 "SriCampus53.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-53\world.wrl SriCampus53.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-53\world.wrl to x3d file SriCampus53.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-53\world.wrl SriCampus53.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-53
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus53.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,733,504 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-54\world.wrl"	 "SriCampus54.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-54\world.wrl SriCampus54.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-54\world.wrl to x3d file SriCampus54.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-54\world.wrl SriCampus54.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-54
+
+02/01/2000  06:04 PM             1,844 world.wrl
+               1 File(s)          1,844 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,502 SriCampus54.x3d
+               1 File(s)          2,502 bytes
+               0 Dir(s)   6,563,729,408 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-55\world.wrl"	 "SriCampus55.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-55\world.wrl SriCampus55.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-55\world.wrl to x3d file SriCampus55.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-55\world.wrl SriCampus55.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-55
+
+02/01/2000  06:04 PM             3,016 world.wrl
+               1 File(s)          3,016 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,016 SriCampus55.x3d
+               1 File(s)          3,016 bytes
+               0 Dir(s)   6,563,725,312 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-56\world.wrl"	 "SriCampus56.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-56\world.wrl SriCampus56.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-56\world.wrl to x3d file SriCampus56.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-56\world.wrl SriCampus56.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-56
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus56.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,721,216 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-57\world.wrl"	 "SriCampus57.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-57\world.wrl SriCampus57.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-57\world.wrl to x3d file SriCampus57.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-57\world.wrl SriCampus57.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-57
+
+02/01/2000  06:04 PM             1,279 world.wrl
+               1 File(s)          1,279 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus57.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,713,024 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-58\world.wrl"	 "SriCampus58.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-58\world.wrl SriCampus58.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-58\world.wrl to x3d file SriCampus58.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-58\world.wrl SriCampus58.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-58
+
+02/01/2000  06:04 PM             1,254 world.wrl
+               1 File(s)          1,254 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,264 SriCampus58.x3d
+               1 File(s)          2,264 bytes
+               0 Dir(s)   6,563,708,928 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-59\world.wrl"	 "SriCampus59.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-59\world.wrl SriCampus59.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-59\world.wrl to x3d file SriCampus59.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-59\world.wrl SriCampus59.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-59
+
+02/01/2000  06:04 PM             1,255 world.wrl
+               1 File(s)          1,255 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus59.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,704,832 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-60\world.wrl"	 "SriCampus60.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-60\world.wrl SriCampus60.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-60\world.wrl to x3d file SriCampus60.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-60\world.wrl SriCampus60.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-60
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus60.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,696,640 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-61\world.wrl"	 "SriCampus61.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-61\world.wrl SriCampus61.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-61\world.wrl to x3d file SriCampus61.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-61\world.wrl SriCampus61.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-61
+
+02/01/2000  06:04 PM             1,581 world.wrl
+               1 File(s)          1,581 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,391 SriCampus61.x3d
+               1 File(s)          2,391 bytes
+               0 Dir(s)   6,563,692,544 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-62\world.wrl"	 "SriCampus62.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-62\world.wrl SriCampus62.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-62\world.wrl to x3d file SriCampus62.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-62\world.wrl SriCampus62.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-62
+
+02/01/2000  06:04 PM             3,042 world.wrl
+               1 File(s)          3,042 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,016 SriCampus62.x3d
+               1 File(s)          3,016 bytes
+               0 Dir(s)   6,563,688,448 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-63\world.wrl"	 "SriCampus63.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-63\world.wrl SriCampus63.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-63\world.wrl to x3d file SriCampus63.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-63\world.wrl SriCampus63.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-63
+
+02/01/2000  06:04 PM             1,247 world.wrl
+               1 File(s)          1,247 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus63.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,684,352 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-64\world.wrl"	 "SriCampus64.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-64\world.wrl SriCampus64.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-64\world.wrl to x3d file SriCampus64.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-64\world.wrl SriCampus64.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-64
+
+02/01/2000  06:04 PM             1,860 world.wrl
+               1 File(s)          1,860 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,478 SriCampus64.x3d
+               1 File(s)          2,478 bytes
+               0 Dir(s)   6,563,680,256 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-65\world.wrl"	 "SriCampus65.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-65\world.wrl SriCampus65.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-65\world.wrl to x3d file SriCampus65.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-65\world.wrl SriCampus65.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-65
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,232 SriCampus65.x3d
+               1 File(s)          2,232 bytes
+               0 Dir(s)   6,563,676,160 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-66\world.wrl"	 "SriCampus66.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-66\world.wrl SriCampus66.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-66\world.wrl to x3d file SriCampus66.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-66\world.wrl SriCampus66.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-66
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,256 SriCampus66.x3d
+               1 File(s)          2,256 bytes
+               0 Dir(s)   6,563,672,064 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-67\world.wrl"	 "SriCampus67.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-67\world.wrl SriCampus67.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-67\world.wrl to x3d file SriCampus67.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-67\world.wrl SriCampus67.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-67
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,272 SriCampus67.x3d
+               1 File(s)          2,272 bytes
+               0 Dir(s)   6,563,667,968 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-68\world.wrl"	 "SriCampus68.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-68\world.wrl SriCampus68.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-68\world.wrl to x3d file SriCampus68.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-68\world.wrl SriCampus68.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-68
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus68.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,663,872 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-69\world.wrl"	 "SriCampus69.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-69\world.wrl SriCampus69.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-69\world.wrl to x3d file SriCampus69.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-69\world.wrl SriCampus69.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-69
+
+02/01/2000  06:04 PM             1,779 world.wrl
+               1 File(s)          1,779 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,469 SriCampus69.x3d
+               1 File(s)          2,469 bytes
+               0 Dir(s)   6,563,659,776 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-70\world.wrl"	 "SriCampus70.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-70\world.wrl SriCampus70.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-70\world.wrl to x3d file SriCampus70.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-70\world.wrl SriCampus70.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-70
+
+02/01/2000  06:04 PM             3,037 world.wrl
+               1 File(s)          3,037 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,009 SriCampus70.x3d
+               1 File(s)          3,009 bytes
+               0 Dir(s)   6,563,655,680 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-71\world.wrl"	 "SriCampus71.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-71\world.wrl SriCampus71.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-71\world.wrl to x3d file SriCampus71.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-71\world.wrl SriCampus71.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-71
+
+02/01/2000  06:04 PM             1,577 world.wrl
+               1 File(s)          1,577 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,399 SriCampus71.x3d
+               1 File(s)          2,399 bytes
+               0 Dir(s)   6,563,651,584 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-72\world.wrl"	 "SriCampus72.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-72\world.wrl SriCampus72.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-72\world.wrl to x3d file SriCampus72.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-72\world.wrl SriCampus72.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-72
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus72.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,647,488 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-73\world.wrl"	 "SriCampus73.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-73\world.wrl SriCampus73.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-73\world.wrl to x3d file SriCampus73.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-73\world.wrl SriCampus73.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-73
+
+02/01/2000  06:04 PM             3,042 world.wrl
+               1 File(s)          3,042 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,016 SriCampus73.x3d
+               1 File(s)          3,016 bytes
+               0 Dir(s)   6,563,643,392 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-74\world.wrl"	 "SriCampus74.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-74\world.wrl SriCampus74.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-74\world.wrl to x3d file SriCampus74.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-74\world.wrl SriCampus74.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-74
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus74.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,639,296 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-75\world.wrl"	 "SriCampus75.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-75\world.wrl SriCampus75.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-75\world.wrl to x3d file SriCampus75.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-75\world.wrl SriCampus75.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-75
+
+02/01/2000  06:04 PM             2,056 world.wrl
+               1 File(s)          2,056 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,602 SriCampus75.x3d
+               1 File(s)          2,602 bytes
+               0 Dir(s)   6,563,635,200 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-76\world.wrl"	 "SriCampus76.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-76\world.wrl SriCampus76.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-76\world.wrl to x3d file SriCampus76.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-76\world.wrl SriCampus76.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-76
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,256 SriCampus76.x3d
+               1 File(s)          2,256 bytes
+               0 Dir(s)   6,563,631,104 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-77\world.wrl"	 "SriCampus77.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-77\world.wrl SriCampus77.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-77\world.wrl to x3d file SriCampus77.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-77\world.wrl SriCampus77.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-77
+
+02/01/2000  06:04 PM             1,776 world.wrl
+               1 File(s)          1,776 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,476 SriCampus77.x3d
+               1 File(s)          2,476 bytes
+               0 Dir(s)   6,563,627,008 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-78\world.wrl"	 "SriCampus78.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-78\world.wrl SriCampus78.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-78\world.wrl to x3d file SriCampus78.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-78\world.wrl SriCampus78.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-78
+
+02/01/2000  06:04 PM             1,577 world.wrl
+               1 File(s)          1,577 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,399 SriCampus78.x3d
+               1 File(s)          2,399 bytes
+               0 Dir(s)   6,563,618,816 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-79\world.wrl"	 "SriCampus79.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-79\world.wrl SriCampus79.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-79\world.wrl to x3d file SriCampus79.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-79\world.wrl SriCampus79.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-79
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,256 SriCampus79.x3d
+               1 File(s)          2,256 bytes
+               0 Dir(s)   6,563,614,720 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-80\world.wrl"	 "SriCampus80.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-80\world.wrl SriCampus80.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-80\world.wrl to x3d file SriCampus80.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-80\world.wrl SriCampus80.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-80
+
+02/01/2000  06:04 PM             1,868 world.wrl
+               1 File(s)          1,868 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,494 SriCampus80.x3d
+               1 File(s)          2,494 bytes
+               0 Dir(s)   6,563,610,624 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-81\world.wrl"	 "SriCampus81.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-81\world.wrl SriCampus81.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-81\world.wrl to x3d file SriCampus81.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-81\world.wrl SriCampus81.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-81
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus81.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,606,528 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-82\world.wrl"	 "SriCampus82.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-82\world.wrl SriCampus82.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-82\world.wrl to x3d file SriCampus82.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-82\world.wrl SriCampus82.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-82
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,265 SriCampus82.x3d
+               1 File(s)          2,265 bytes
+               0 Dir(s)   6,563,602,432 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-83\world.wrl"	 "SriCampus83.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-83\world.wrl SriCampus83.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-83\world.wrl to x3d file SriCampus83.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-83\world.wrl SriCampus83.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-83
+
+02/01/2000  06:04 PM             3,042 world.wrl
+               1 File(s)          3,042 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,016 SriCampus83.x3d
+               1 File(s)          3,016 bytes
+               0 Dir(s)   6,563,598,336 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-84\world.wrl"	 "SriCampus84.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-84\world.wrl SriCampus84.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-84\world.wrl to x3d file SriCampus84.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-84\world.wrl SriCampus84.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-84
+
+02/01/2000  06:04 PM             2,752 world.wrl
+               1 File(s)          2,752 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,913 SriCampus84.x3d
+               1 File(s)          2,913 bytes
+               0 Dir(s)   6,563,594,240 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-85\world.wrl"	 "SriCampus85.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-85\world.wrl SriCampus85.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-85\world.wrl to x3d file SriCampus85.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-85\world.wrl SriCampus85.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-85
+
+02/01/2000  06:04 PM             1,246 world.wrl
+               1 File(s)          1,246 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus85.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,590,144 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-86\world.wrl"	 "SriCampus86.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-86\world.wrl SriCampus86.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-86\world.wrl to x3d file SriCampus86.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-86\world.wrl SriCampus86.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-86
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus86.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,586,048 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-87\world.wrl"	 "SriCampus87.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-87\world.wrl SriCampus87.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-87\world.wrl to x3d file SriCampus87.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-87\world.wrl SriCampus87.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-87
+
+02/01/2000  06:04 PM             1,779 world.wrl
+               1 File(s)          1,779 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,469 SriCampus87.x3d
+               1 File(s)          2,469 bytes
+               0 Dir(s)   6,563,581,952 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-88\world.wrl"	 "SriCampus88.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-88\world.wrl SriCampus88.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-88\world.wrl to x3d file SriCampus88.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-88\world.wrl SriCampus88.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-88
+
+02/01/2000  06:04 PM             3,042 world.wrl
+               1 File(s)          3,042 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,016 SriCampus88.x3d
+               1 File(s)          3,016 bytes
+               0 Dir(s)   6,563,577,856 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-89\world.wrl"	 "SriCampus89.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-89\world.wrl SriCampus89.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-89\world.wrl to x3d file SriCampus89.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-89\world.wrl SriCampus89.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-89
+
+02/01/2000  06:04 PM             1,779 world.wrl
+               1 File(s)          1,779 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,469 SriCampus89.x3d
+               1 File(s)          2,469 bytes
+               0 Dir(s)   6,563,573,760 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-90\world.wrl"	 "SriCampus90.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-90\world.wrl SriCampus90.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-90\world.wrl to x3d file SriCampus90.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-90\world.wrl SriCampus90.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-90
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus90.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,565,568 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-91\world.wrl"	 "SriCampus91.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-91\world.wrl SriCampus91.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-91\world.wrl to x3d file SriCampus91.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-91\world.wrl SriCampus91.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-91
+
+02/01/2000  06:04 PM             3,002 world.wrl
+               1 File(s)          3,002 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,992 SriCampus91.x3d
+               1 File(s)          2,992 bytes
+               0 Dir(s)   6,563,561,472 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-92\world.wrl"	 "SriCampus92.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-92\world.wrl SriCampus92.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-92\world.wrl to x3d file SriCampus92.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-92\world.wrl SriCampus92.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-92
+
+02/01/2000  06:04 PM             1,270 world.wrl
+               1 File(s)          1,270 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus92.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,557,376 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-93\world.wrl"	 "SriCampus93.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-93\world.wrl SriCampus93.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-93\world.wrl to x3d file SriCampus93.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-93\world.wrl SriCampus93.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-93
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,257 SriCampus93.x3d
+               1 File(s)          2,257 bytes
+               0 Dir(s)   6,563,553,280 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-94\world.wrl"	 "SriCampus94.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-94\world.wrl SriCampus94.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-94\world.wrl to x3d file SriCampus94.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-94\world.wrl SriCampus94.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-94
+
+02/01/2000  06:04 PM             1,779 world.wrl
+               1 File(s)          1,779 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,469 SriCampus94.x3d
+               1 File(s)          2,469 bytes
+               0 Dir(s)   6,563,549,184 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-95\world.wrl"	 "SriCampus95.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-95\world.wrl SriCampus95.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-95\world.wrl to x3d file SriCampus95.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-95\world.wrl SriCampus95.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-95
+
+02/01/2000  06:04 PM             3,037 world.wrl
+               1 File(s)          3,037 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             3,009 SriCampus95.x3d
+               1 File(s)          3,009 bytes
+               0 Dir(s)   6,563,545,088 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-96\world.wrl"	 "SriCampus96.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-96\world.wrl SriCampus96.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-96\world.wrl to x3d file SriCampus96.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-96\world.wrl SriCampus96.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-96
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,240 SriCampus96.x3d
+               1 File(s)          2,240 bytes
+               0 Dir(s)   6,563,532,800 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-97\world.wrl"	 "SriCampus97.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-97\world.wrl SriCampus97.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-97\world.wrl to x3d file SriCampus97.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-97\world.wrl SriCampus97.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-97
+
+02/01/2000  06:04 PM             1,844 world.wrl
+               1 File(s)          1,844 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,510 SriCampus97.x3d
+               1 File(s)          2,510 bytes
+               0 Dir(s)   6,563,528,704 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-98\world.wrl"	 "SriCampus98.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-98\world.wrl SriCampus98.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-98\world.wrl to x3d file SriCampus98.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-98\world.wrl SriCampus98.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-98
+
+02/01/2000  06:04 PM             2,983 world.wrl
+               1 File(s)          2,983 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,963 SriCampus98.x3d
+               1 File(s)          2,963 bytes
+               0 Dir(s)   6,563,524,608 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-99\world.wrl"	 "SriCampus99.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-99\world.wrl SriCampus99.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-99\world.wrl to x3d file SriCampus99.x3d
+
+*** Parsing time (ms): 61
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-99\world.wrl SriCampus99.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-99
+
+02/01/2000  06:04 PM             1,262 world.wrl
+               1 File(s)          1,262 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:22 PM             2,248 SriCampus99.x3d
+               1 File(s)          2,248 bytes
+               0 Dir(s)   6,563,516,416 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-100\world.wrl"	 "SriCampus100.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-100\world.wrl SriCampus100.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-100\world.wrl to x3d file SriCampus100.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-100\world.wrl SriCampus100.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-100
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,259 SriCampus100.x3d
+               1 File(s)          2,259 bytes
+               0 Dir(s)   6,563,512,320 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-101\world.wrl"	 "SriCampus101.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-101\world.wrl SriCampus101.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-101\world.wrl to x3d file SriCampus101.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-101\world.wrl SriCampus101.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-101
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,250 SriCampus101.x3d
+               1 File(s)          2,250 bytes
+               0 Dir(s)   6,563,508,224 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-102\world.wrl"	 "SriCampus102.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-102\world.wrl SriCampus102.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-102\world.wrl to x3d file SriCampus102.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-102\world.wrl SriCampus102.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-102
+
+02/01/2000  06:04 PM             1,279 world.wrl
+               1 File(s)          1,279 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,266 SriCampus102.x3d
+               1 File(s)          2,266 bytes
+               0 Dir(s)   6,563,500,032 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-103\world.wrl"	 "SriCampus103.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-103\world.wrl SriCampus103.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-103\world.wrl to x3d file SriCampus103.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-103\world.wrl SriCampus103.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-103
+
+02/01/2000  06:04 PM             3,043 world.wrl
+               1 File(s)          3,043 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,018 SriCampus103.x3d
+               1 File(s)          3,018 bytes
+               0 Dir(s)   6,563,495,936 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-104\world.wrl"	 "SriCampus104.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-104\world.wrl SriCampus104.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-104\world.wrl to x3d file SriCampus104.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-104\world.wrl SriCampus104.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-104
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,251 SriCampus104.x3d
+               1 File(s)          2,251 bytes
+               0 Dir(s)   6,563,426,304 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-105\world.wrl"	 "SriCampus105.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-105\world.wrl SriCampus105.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-105\world.wrl to x3d file SriCampus105.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-105\world.wrl SriCampus105.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-105
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,259 SriCampus105.x3d
+               1 File(s)          2,259 bytes
+               0 Dir(s)   6,563,422,208 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-106\world.wrl"	 "SriCampus106.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-106\world.wrl SriCampus106.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-106\world.wrl to x3d file SriCampus106.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-106\world.wrl SriCampus106.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-106
+
+02/01/2000  06:04 PM             3,017 world.wrl
+               1 File(s)          3,017 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,018 SriCampus106.x3d
+               1 File(s)          3,018 bytes
+               0 Dir(s)   6,563,418,112 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-107\world.wrl"	 "SriCampus107.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-107\world.wrl SriCampus107.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-107\world.wrl to x3d file SriCampus107.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-107\world.wrl SriCampus107.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-107
+
+02/01/2000  06:04 PM             1,255 world.wrl
+               1 File(s)          1,255 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,258 SriCampus107.x3d
+               1 File(s)          2,258 bytes
+               0 Dir(s)   6,563,414,016 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-108\world.wrl"	 "SriCampus108.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-108\world.wrl SriCampus108.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-108\world.wrl to x3d file SriCampus108.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-108\world.wrl SriCampus108.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-108
+
+02/01/2000  06:04 PM             1,780 world.wrl
+               1 File(s)          1,780 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,471 SriCampus108.x3d
+               1 File(s)          2,471 bytes
+               0 Dir(s)   6,563,409,920 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-109\world.wrl"	 "SriCampus109.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-109\world.wrl SriCampus109.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-109\world.wrl to x3d file SriCampus109.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-109\world.wrl SriCampus109.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-109
+
+02/01/2000  06:04 PM             1,869 world.wrl
+               1 File(s)          1,869 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,524 SriCampus109.x3d
+               1 File(s)          2,524 bytes
+               0 Dir(s)   6,563,405,824 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-110\world.wrl"	 "SriCampus110.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-110\world.wrl SriCampus110.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-110\world.wrl to x3d file SriCampus110.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-110\world.wrl SriCampus110.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-110
+
+02/01/2000  06:04 PM             1,775 world.wrl
+               1 File(s)          1,775 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,464 SriCampus110.x3d
+               1 File(s)          2,464 bytes
+               0 Dir(s)   6,563,401,728 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-111\world.wrl"	 "SriCampus111.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-111\world.wrl SriCampus111.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-111\world.wrl to x3d file SriCampus111.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-111\world.wrl SriCampus111.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-111
+
+02/01/2000  06:04 PM             7,464 world.wrl
+               1 File(s)          7,464 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             4,923 SriCampus111.x3d
+               1 File(s)          4,923 bytes
+               0 Dir(s)   6,563,393,536 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-112\world.wrl"	 "SriCampus112.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-112\world.wrl SriCampus112.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-112\world.wrl to x3d file SriCampus112.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-112\world.wrl SriCampus112.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-112
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,251 SriCampus112.x3d
+               1 File(s)          2,251 bytes
+               0 Dir(s)   6,563,389,440 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-113\world.wrl"	 "SriCampus113.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-113\world.wrl SriCampus113.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-113\world.wrl to x3d file SriCampus113.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-113\world.wrl SriCampus113.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-113
+
+02/01/2000  06:04 PM             1,845 world.wrl
+               1 File(s)          1,845 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,496 SriCampus113.x3d
+               1 File(s)          2,496 bytes
+               0 Dir(s)   6,563,385,344 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-114\world.wrl"	 "SriCampus114.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-114\world.wrl SriCampus114.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-114\world.wrl to x3d file SriCampus114.x3d
+
+*** Parsing time (ms): 71
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-114\world.wrl SriCampus114.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-114
+
+02/01/2000  06:04 PM             3,043 world.wrl
+               1 File(s)          3,043 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,018 SriCampus114.x3d
+               1 File(s)          3,018 bytes
+               0 Dir(s)   6,563,381,248 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-115\world.wrl"	 "SriCampus115.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-115\world.wrl SriCampus115.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-115\world.wrl to x3d file SriCampus115.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-115\world.wrl SriCampus115.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-115
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,259 SriCampus115.x3d
+               1 File(s)          2,259 bytes
+               0 Dir(s)   6,563,377,152 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-116\world.wrl"	 "SriCampus116.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-116\world.wrl SriCampus116.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-116\world.wrl to x3d file SriCampus116.x3d
+
+*** Parsing time (ms): 60
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-116\world.wrl SriCampus116.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-116
+
+02/01/2000  06:04 PM             1,280 world.wrl
+               1 File(s)          1,280 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,267 SriCampus116.x3d
+               1 File(s)          2,267 bytes
+               0 Dir(s)   6,563,373,056 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-117\world.wrl"	 "SriCampus117.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-117\world.wrl SriCampus117.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-117\world.wrl to x3d file SriCampus117.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-117\world.wrl SriCampus117.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-117
+
+02/01/2000  06:04 PM             1,853 world.wrl
+               1 File(s)          1,853 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,512 SriCampus117.x3d
+               1 File(s)          2,512 bytes
+               0 Dir(s)   6,563,364,864 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-118\world.wrl"	 "SriCampus118.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-118\world.wrl SriCampus118.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-118\world.wrl to x3d file SriCampus118.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-118\world.wrl SriCampus118.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-118
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,266 SriCampus118.x3d
+               1 File(s)          2,266 bytes
+               0 Dir(s)   6,563,360,768 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-119\world.wrl"	 "SriCampus119.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-119\world.wrl SriCampus119.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-119\world.wrl to x3d file SriCampus119.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-119\world.wrl SriCampus119.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-119
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,242 SriCampus119.x3d
+               1 File(s)          2,242 bytes
+               0 Dir(s)   6,563,356,672 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-120\world.wrl"	 "SriCampus120.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-120\world.wrl SriCampus120.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-120\world.wrl to x3d file SriCampus120.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-120\world.wrl SriCampus120.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-120
+
+02/01/2000  06:04 PM             1,780 world.wrl
+               1 File(s)          1,780 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,471 SriCampus120.x3d
+               1 File(s)          2,471 bytes
+               0 Dir(s)   6,563,352,576 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-121\world.wrl"	 "SriCampus121.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-121\world.wrl SriCampus121.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-121\world.wrl to x3d file SriCampus121.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-121\world.wrl SriCampus121.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-121
+
+02/01/2000  06:04 PM             1,272 world.wrl
+               1 File(s)          1,272 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,267 SriCampus121.x3d
+               1 File(s)          2,267 bytes
+               0 Dir(s)   6,563,348,480 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-122\world.wrl"	 "SriCampus122.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-122\world.wrl SriCampus122.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-122\world.wrl to x3d file SriCampus122.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-122\world.wrl SriCampus122.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-122
+
+02/01/2000  06:04 PM             3,038 world.wrl
+               1 File(s)          3,038 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,011 SriCampus122.x3d
+               1 File(s)          3,011 bytes
+               0 Dir(s)   6,563,344,384 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-123\world.wrl"	 "SriCampus123.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-123\world.wrl SriCampus123.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-123\world.wrl to x3d file SriCampus123.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-123\world.wrl SriCampus123.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-123
+
+02/01/2000  06:04 PM             1,780 world.wrl
+               1 File(s)          1,780 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,471 SriCampus123.x3d
+               1 File(s)          2,471 bytes
+               0 Dir(s)   6,563,336,192 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-124\world.wrl"	 "SriCampus124.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-124\world.wrl SriCampus124.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-124\world.wrl to x3d file SriCampus124.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-124\world.wrl SriCampus124.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-124
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,250 SriCampus124.x3d
+               1 File(s)          2,250 bytes
+               0 Dir(s)   6,563,332,096 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-125\world.wrl"	 "SriCampus125.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-125\world.wrl SriCampus125.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-125\world.wrl to x3d file SriCampus125.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-125\world.wrl SriCampus125.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-125
+
+02/01/2000  06:04 PM             1,651 world.wrl
+               1 File(s)          1,651 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,430 SriCampus125.x3d
+               1 File(s)          2,430 bytes
+               0 Dir(s)   6,563,328,000 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-126\world.wrl"	 "SriCampus126.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-126\world.wrl SriCampus126.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-126\world.wrl to x3d file SriCampus126.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-126\world.wrl SriCampus126.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-126
+
+02/01/2000  06:04 PM             1,647 world.wrl
+               1 File(s)          1,647 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,428 SriCampus126.x3d
+               1 File(s)          2,428 bytes
+               0 Dir(s)   6,563,323,904 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-127\world.wrl"	 "SriCampus127.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-127\world.wrl SriCampus127.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-127\world.wrl to x3d file SriCampus127.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-127\world.wrl SriCampus127.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-127
+
+02/01/2000  06:04 PM             3,027 world.wrl
+               1 File(s)          3,027 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,036 SriCampus127.x3d
+               1 File(s)          3,036 bytes
+               0 Dir(s)   6,563,319,808 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-128\world.wrl"	 "SriCampus128.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-128\world.wrl SriCampus128.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-128\world.wrl to x3d file SriCampus128.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-128\world.wrl SriCampus128.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-128
+
+02/01/2000  06:04 PM             1,248 world.wrl
+               1 File(s)          1,248 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,251 SriCampus128.x3d
+               1 File(s)          2,251 bytes
+               0 Dir(s)   6,563,315,712 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-129\world.wrl"	 "SriCampus129.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-129\world.wrl SriCampus129.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-129\world.wrl to x3d file SriCampus129.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-129\world.wrl SriCampus129.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-129
+
+02/01/2000  06:04 PM             7,439 world.wrl
+               1 File(s)          7,439 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             4,909 SriCampus129.x3d
+               1 File(s)          4,909 bytes
+               0 Dir(s)   6,563,307,520 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-130\world.wrl"	 "SriCampus130.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-130\world.wrl SriCampus130.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-130\world.wrl to x3d file SriCampus130.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-130\world.wrl SriCampus130.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-130
+
+02/01/2000  06:04 PM             2,763 world.wrl
+               1 File(s)          2,763 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,919 SriCampus130.x3d
+               1 File(s)          2,919 bytes
+               0 Dir(s)   6,563,303,424 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-131\world.wrl"	 "SriCampus131.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-131\world.wrl SriCampus131.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-131\world.wrl to x3d file SriCampus131.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-131\world.wrl SriCampus131.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-131
+
+02/01/2000  06:04 PM             3,038 world.wrl
+               1 File(s)          3,038 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,011 SriCampus131.x3d
+               1 File(s)          3,011 bytes
+               0 Dir(s)   6,563,299,328 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-132\world.wrl"	 "SriCampus132.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-132\world.wrl SriCampus132.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-132\world.wrl to x3d file SriCampus132.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-132\world.wrl SriCampus132.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-132
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,250 SriCampus132.x3d
+               1 File(s)          2,250 bytes
+               0 Dir(s)   6,563,295,232 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-133\world.wrl"	 "SriCampus133.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-133\world.wrl SriCampus133.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-133\world.wrl to x3d file SriCampus133.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-133\world.wrl SriCampus133.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-133
+
+02/01/2000  06:04 PM             1,736 world.wrl
+               1 File(s)          1,736 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,451 SriCampus133.x3d
+               1 File(s)          2,451 bytes
+               0 Dir(s)   6,563,291,136 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-134\world.wrl"	 "SriCampus134.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-134\world.wrl SriCampus134.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-134\world.wrl to x3d file SriCampus134.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-134\world.wrl SriCampus134.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-134
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,258 SriCampus134.x3d
+               1 File(s)          2,258 bytes
+               0 Dir(s)   6,563,287,040 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-135\world.wrl"	 "SriCampus135.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-135\world.wrl SriCampus135.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-135\world.wrl to x3d file SriCampus135.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-135\world.wrl SriCampus135.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-135
+
+02/01/2000  06:04 PM             1,555 world.wrl
+               1 File(s)          1,555 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,390 SriCampus135.x3d
+               1 File(s)          2,390 bytes
+               0 Dir(s)   6,563,278,848 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-136\world.wrl"	 "SriCampus136.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-136\world.wrl SriCampus136.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-136\world.wrl to x3d file SriCampus136.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-136\world.wrl SriCampus136.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-136
+
+02/01/2000  06:04 PM             1,873 world.wrl
+               1 File(s)          1,873 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,500 SriCampus136.x3d
+               1 File(s)          2,500 bytes
+               0 Dir(s)   6,563,274,752 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-137\world.wrl"	 "SriCampus137.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-137\world.wrl SriCampus137.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-137\world.wrl to x3d file SriCampus137.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-137\world.wrl SriCampus137.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-137
+
+02/01/2000  06:04 PM             3,963 world.wrl
+               1 File(s)          3,963 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             3,409 SriCampus137.x3d
+               1 File(s)          3,409 bytes
+               0 Dir(s)   6,563,270,656 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-138\world.wrl"	 "SriCampus138.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-138\world.wrl SriCampus138.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-138\world.wrl to x3d file SriCampus138.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-138\world.wrl SriCampus138.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-138
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,267 SriCampus138.x3d
+               1 File(s)          2,267 bytes
+               0 Dir(s)   6,563,266,560 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-139\world.wrl"	 "SriCampus139.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-139\world.wrl SriCampus139.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-139\world.wrl to x3d file SriCampus139.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-139\world.wrl SriCampus139.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-139
+
+02/01/2000  06:04 PM             1,263 world.wrl
+               1 File(s)          1,263 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,242 SriCampus139.x3d
+               1 File(s)          2,242 bytes
+               0 Dir(s)   6,563,262,464 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-140\world.wrl"	 "SriCampus140.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-140\world.wrl SriCampus140.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-140\world.wrl to x3d file SriCampus140.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-140\world.wrl SriCampus140.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-140
+
+02/01/2000  06:04 PM             1,255 world.wrl
+               1 File(s)          1,255 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,242 SriCampus140.x3d
+               1 File(s)          2,242 bytes
+               0 Dir(s)   6,563,258,368 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-141\world.wrl"	 "SriCampus141.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-141\world.wrl SriCampus141.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-141\world.wrl to x3d file SriCampus141.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-141\world.wrl SriCampus141.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-141
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,259 SriCampus141.x3d
+               1 File(s)          2,259 bytes
+               0 Dir(s)   6,563,254,272 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-142\world.wrl"	 "SriCampus142.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-142\world.wrl SriCampus142.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-142\world.wrl to x3d file SriCampus142.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-142\world.wrl SriCampus142.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-142
+
+02/01/2000  06:04 PM             1,845 world.wrl
+               1 File(s)          1,845 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,500 SriCampus142.x3d
+               1 File(s)          2,500 bytes
+               0 Dir(s)   6,563,250,176 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-143\world.wrl"	 "SriCampus143.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-143\world.wrl SriCampus143.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-143\world.wrl to x3d file SriCampus143.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-143\world.wrl SriCampus143.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-143
+
+02/01/2000  06:04 PM             1,256 world.wrl
+               1 File(s)          1,256 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,259 SriCampus143.x3d
+               1 File(s)          2,259 bytes
+               0 Dir(s)   6,563,246,080 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-144\world.wrl"	 "SriCampus144.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-144\world.wrl SriCampus144.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-144\world.wrl to x3d file SriCampus144.x3d
+
+*** Parsing time (ms): 80
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-144\world.wrl SriCampus144.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-144
+
+02/01/2000  06:04 PM             6,646 world.wrl
+               1 File(s)          6,646 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             4,656 SriCampus144.x3d
+               1 File(s)          4,656 bytes
+               0 Dir(s)   6,563,237,888 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-145\world.wrl"	 "SriCampus145.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-145\world.wrl SriCampus145.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-145\world.wrl to x3d file SriCampus145.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-145\world.wrl SriCampus145.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-145
+
+02/01/2000  06:04 PM             1,780 world.wrl
+               1 File(s)          1,780 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,471 SriCampus145.x3d
+               1 File(s)          2,471 bytes
+               0 Dir(s)   6,563,233,792 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-146\world.wrl"	 "SriCampus146.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-146\world.wrl SriCampus146.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-146\world.wrl to x3d file SriCampus146.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-146\world.wrl SriCampus146.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-146
+
+02/01/2000  06:04 PM             1,845 world.wrl
+               1 File(s)          1,845 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,516 SriCampus146.x3d
+               1 File(s)          2,516 bytes
+               0 Dir(s)   6,563,229,696 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-147\world.wrl"	 "SriCampus147.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-147\world.wrl SriCampus147.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-147\world.wrl to x3d file SriCampus147.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-147\world.wrl SriCampus147.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-147
+
+02/01/2000  06:04 PM             1,256 world.wrl
+               1 File(s)          1,256 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,259 SriCampus147.x3d
+               1 File(s)          2,259 bytes
+               0 Dir(s)   6,563,225,600 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-148\world.wrl"	 "SriCampus148.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-148\world.wrl SriCampus148.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-148\world.wrl to x3d file SriCampus148.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-148\world.wrl SriCampus148.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-148
+
+02/01/2000  06:04 PM             1,264 world.wrl
+               1 File(s)          1,264 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,267 SriCampus148.x3d
+               1 File(s)          2,267 bytes
+               0 Dir(s)   6,563,217,408 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-149\world.wrl"	 "SriCampus149.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-149\world.wrl SriCampus149.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-149\world.wrl to x3d file SriCampus149.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-149\world.wrl SriCampus149.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-149
+
+02/01/2000  06:04 PM             2,367 world.wrl
+               1 File(s)          2,367 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,754 SriCampus149.x3d
+               1 File(s)          2,754 bytes
+               0 Dir(s)   6,563,213,312 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-150\world.wrl"	 "SriCampus150.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-150\world.wrl SriCampus150.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-150\world.wrl to x3d file SriCampus150.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-150\world.wrl SriCampus150.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-150
+
+02/01/2000  06:04 PM             1,271 world.wrl
+               1 File(s)          1,271 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,242 SriCampus150.x3d
+               1 File(s)          2,242 bytes
+               0 Dir(s)   6,563,209,216 bytes free
+cd examples/GeoSpatial/; pwd;	../../Vrml97ToX3dNist.bat	"GeoVrmlSiteExamples\sricampus\object-151\world.wrl"	 "SriCampus151.x3d"
+/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/GeoSpatial
+CLASSPATH=/www.web3D.org/TaskGroups/x3d/translation/Vrml97ToX3dNist.jar
+
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial>java iicm.vrml.vrml2x3d.vrml2x3d GeoVrmlSiteExamples\sricampus\object-151\world.wrl SriCampus151.x3d 
+****Vrml2 to X3d Translator, Version 0.1***
+Translating Vrml2 file GeoVrmlSiteExamples\sricampus\object-151\world.wrl to x3d file SriCampus151.x3d
+
+*** Parsing time (ms): 70
+=== writing x3d data  ===
+=== finished ===
+dir GeoVrmlSiteExamples\sricampus\object-151\world.wrl SriCampus151.x3d
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial\GeoVrmlSiteExamples\sricampus\object-151
+
+02/01/2000  06:04 PM             1,780 world.wrl
+               1 File(s)          1,780 bytes
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\GeoSpatial
+
+04/29/2003  03:23 PM             2,471 SriCampus151.x3d
+               1 File(s)          2,471 bytes
+               0 Dir(s)   6,563,205,120 bytes free

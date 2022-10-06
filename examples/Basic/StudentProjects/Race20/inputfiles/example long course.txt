@@ -1,0 +1,1 @@
+N bvtrack PX 0 PZ 0 L 4 W 8 E .01 ;; N vtrack PX 0 PZ -28 L 52 W 8 E .01 ;; N r1track PX 2 PZ -56 L 4 W 4 ;; N htrack PX 12 PZ -58 L 8 W 16 ;; N l1track PX 24 PZ -58 L 8 W 8 ;; N vtrack PX -2 PZ -56 L 4 W 4 ;; N htrack PX 2 PZ -60 L 4 W 4 ;; N r1track PX -2 PZ -60 L 4 W 4 ;;

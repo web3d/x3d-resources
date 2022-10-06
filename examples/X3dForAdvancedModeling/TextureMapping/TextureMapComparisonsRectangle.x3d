@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TextureMapComparisonsRectangle.x3d' name='title'/>
+    <meta content='Compare ImageTexture mapping for a variety of geometry nodes. This is an excellent test scene for different X3D browsers.' name='description'/>
+    <meta content='Sungmin Kwon and Don Brutzman' name='creator'/>
+    <meta content='15 December 2017' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='TextureMapTesting.pdf' name='reference'/>
+    <meta content='TextureMapComparisonsRectangleX_ITE.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangleX3DOM.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangleBSContact.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangleFreeWrl.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangleH3DViewer.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangleInstantReality.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangleXj3D.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinder.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#Images' name='reference'/>
+    <meta content='X3D Abstract Specification, 18.2.3 Texture coordinates' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#Texturecoordinates' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Images/ImageTexture.gif' name='Image'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/TextureMapComparisonsRectangle.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TextureMapComparisonsRectangle.x3d'/>
+    <Viewpoint DEF='DefaultPosition' description='Texture map examples overview' position='0 0 16'/>
+    <!-- == === ==== 1st row -->
+    <Transform translation='-0.5 1 0'>
+      <!-- IFS : Indexed Face Set -->
+      <Transform translation='-9.6 0 0'>
+        <Shape>
+          <Appearance DEF='TextureAppearance'>
+            <ImageTexture DEF='SpecificationTexture' url='"ImageTextureSpecificationSquare.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/ImageTextureSpecificationSquare.png"'/>
+          </Appearance>
+          <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+          </IndexedFaceSet>
+        </Shape>
+      </Transform>
+      <!-- ITS, TS : Triangle Set -->
+      <Transform translation='-8.4 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <IndexedTriangleSet ccw='true' colorPerVertex='true' index='0 1 2 0 2 3' normalPerVertex='true' solid='true'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+          </IndexedTriangleSet>
+        </Shape>
+      </Transform>
+      <Transform translation='-7.2 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <TriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+          </TriangleSet>
+        </Shape>
+      </Transform>
+      <!-- ITSS, TSS : Triangle Strip Set -->
+      <Transform translation='-6.0 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <IndexedTriangleStripSet ccw='true' colorPerVertex='true' index='0 1 2 3 0 -1' normalPerVertex='true' solid='true'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+          </IndexedTriangleStripSet>
+        </Shape>
+      </Transform>
+      <Transform translation='-4.8 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <TriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true' stripCount='5'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+          </TriangleStripSet>
+        </Shape>
+      </Transform>
+      <!-- ITFS, TFS : Triangle Fan Set -->
+      <Transform translation='-3.6 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <IndexedTriangleFanSet ccw='true' colorPerVertex='true' index='0 1 2 3 -1' normalPerVertex='true' solid='true'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+          </IndexedTriangleFanSet>
+        </Shape>
+      </Transform>
+      <Transform translation='-2.4 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <TriangleFanSet ccw='true' colorPerVertex='true' fanCount='4' normalPerVertex='true' solid='true'>
+            <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+          </TriangleFanSet>
+        </Shape>
+      </Transform>
+      <!-- Box -->
+      <Transform translation='-1.2 0 -0.5'>
+        <Shape>
+          <Appearance USE='TextureAppearance'/>
+          <Box size='1 1 1'/>
+        </Shape>
+      </Transform>
+      <!-- IQS, QS : Quad Set <Transform translation='0 0 0'> <Shape> <Appearance USE='TextureAppearance'/> <IndexedQuadSet index='0 1 2 3'> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </IndexedQuadSet> </Shape> </Transform> <Transform translation='1.2 0 0'> <Shape> <Appearance USE='TextureAppearance'/> <QuadSet> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </QuadSet> </Shape> </Transform> -->
+      <!-- R2D : Rectangle2D -->
+      <Transform translation='2.4 0 0'>
+        <Shape>
+          <Appearance DEF='TextureAppearance_2D'>
+            <ImageTexture USE='SpecificationTexture'/>
+          </Appearance>
+          <Rectangle2D size='1.0 1.0'/>
+        </Shape>
+      </Transform>
+      <!-- TS2D : TriangleSet2D -->
+      <Transform translation='3.6 0 0'>
+        <Shape>
+          <Appearance USE='TextureAppearance_2D'/>
+          <TriangleSet2D vertices='-0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 0.5'/>
+        </Shape>
+      </Transform>
+      <!-- EG : ElevationGrid -->
+      <Transform translation='4.8 0 0'>
+        <Transform rotation='1 0 0 -1.5708' translation='-0.5 -0.5 0.2'>
+          <Shape>
+            <Appearance USE='TextureAppearance_2D'/>
+            <ElevationGrid height='0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2' solid='false' xDimension='6' xSpacing='0.2' zDimension='6' zSpacing='0.2'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 2nd row -->
+      <Transform translation='0 -1.2 0'>
+        <!-- IFS : Indexed Face Set -->
+        <Transform translation='-9.6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureRotate'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform DEF='TexTransRotation' rotation='0.8'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- ITS, TS : Triangle Set -->
+        <Transform translation='-8.4 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <IndexedTriangleSet ccw='true' colorPerVertex='true' index='0 1 2 0 2 3' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-7.2 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <TriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleSet>
+          </Shape>
+        </Transform>
+        <!-- ITSS, TSS : Triangle Strip Set -->
+        <Transform translation='-6.0 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <IndexedTriangleStripSet ccw='true' colorPerVertex='true' index='0 1 2 3 0 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleStripSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-4.8 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <TriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true' stripCount='5'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleStripSet>
+          </Shape>
+        </Transform>
+        <!-- ITFS, TFS : Triangle Fan Set -->
+        <Transform translation='-3.6 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <IndexedTriangleFanSet ccw='true' colorPerVertex='true' index='0 1 2 3 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleFanSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.4 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <TriangleFanSet ccw='true' colorPerVertex='true' fanCount='4' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </TriangleFanSet>
+          </Shape>
+        </Transform>
+        <!-- Box -->
+        <Transform translation='-1.2 0 -0.5'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <Box size='1 1 1'/>
+          </Shape>
+        </Transform>
+        <!-- IQS, QS : Quad Set -->
+        <Transform>
+          <!-- <Shape> <Appearance USE='TextureRotate'/> <IndexedQuadSet index='0 1 2 3'> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </IndexedQuadSet> </Shape> -->
+        </Transform>
+        <Transform translation='1.2 0 0'>
+          <!-- <Shape> <Appearance USE='TextureRotate'/> <QuadSet> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </QuadSet> </Shape> -->
+        </Transform>
+        <!-- R2D : Rectangle2D -->
+        <Transform translation='2.4 0 0'>
+          <Shape>
+            <Appearance DEF='TextureRotate_2D'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform USE='TexTransRotation'/>
+            </Appearance>
+            <Rectangle2D size='1 1' solid='true'/>
+          </Shape>
+        </Transform>
+        <!-- TS2D : TriangleSet2D -->
+        <Transform translation='3.6 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate_2D'/>
+            <TriangleSet2D vertices='-0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 0.5'/>
+          </Shape>
+        </Transform>
+        <!-- EG : ElevationGrid -->
+        <Transform translation='4.8 0 0'>
+          <Transform rotation='1 0 0 -1.5708' translation='-0.5 -0.5 0.2'>
+            <Shape>
+              <Appearance USE='TextureRotate_2D'/>
+              <ElevationGrid height='0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2' solid='false' xDimension='6' xSpacing='0.2' zDimension='6' zSpacing='0.2'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 3rd row -->
+      <Transform translation='0 -2.4 0'>
+        <!-- IFS : Indexed Face Set -->
+        <Transform translation='-9.6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureTrans'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform DEF='TexTransTranslation' rotation='0.8' translation='0.2 -0.5'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- ITS, TS : Triangle Set -->
+        <Transform translation='-8.4 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <IndexedTriangleSet ccw='true' colorPerVertex='true' index='0 1 2 0 2 3' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-7.2 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <TriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleSet>
+          </Shape>
+        </Transform>
+        <!-- ITSS, TSS : Triangle Strip Set -->
+        <Transform translation='-6.0 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <IndexedTriangleStripSet ccw='true' colorPerVertex='true' index='0 1 2 3 0 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleStripSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-4.8 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <TriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true' stripCount='5'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleStripSet>
+          </Shape>
+        </Transform>
+        <!-- ITFS, TFS : Triangle Fan Set -->
+        <Transform translation='-3.6 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <IndexedTriangleFanSet ccw='true' colorPerVertex='true' index='0 1 2 3 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleFanSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.4 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <TriangleFanSet ccw='true' colorPerVertex='true' fanCount='4' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </TriangleFanSet>
+          </Shape>
+        </Transform>
+        <!-- Box -->
+        <Transform translation='-1.2 0 -0.5'>
+          <Shape>
+            <Appearance USE='TextureTrans'/>
+            <Box size='1 1 1'/>
+          </Shape>
+        </Transform>
+        <!-- IQS, QS : Quad Set -->
+        <Transform>
+          <!-- <Shape> <Appearance USE='TextureTrans'/> <IndexedQuadSet index='0 1 2 3'> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </IndexedQuadSet> </Shape> -->
+        </Transform>
+        <Transform translation='1.2 0 0'>
+          <!-- <Shape> <Appearance USE='TextureTrans'/> <QuadSet> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </QuadSet> </Shape> -->
+        </Transform>
+        <!-- R2D : Rectangle2D -->
+        <Transform translation='2.4 0 0'>
+          <Shape>
+            <Appearance DEF='TextureTrans_2D'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform USE='TexTransTranslation'/>
+            </Appearance>
+            <Rectangle2D size='1.0 1.0'/>
+          </Shape>
+        </Transform>
+        <!-- TS2D : TriangleSet2D -->
+        <Transform translation='3.6 0 0'>
+          <Shape>
+            <Appearance USE='TextureTrans_2D'/>
+            <TriangleSet2D vertices='-0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 0.5'/>
+          </Shape>
+        </Transform>
+        <!-- EG : ElevationGrid -->
+        <Transform translation='4.8 0 0'>
+          <Transform rotation='1 0 0 -1.5708' translation='-0.5 -0.5 0.2'>
+            <Shape>
+              <Appearance USE='TextureTrans_2D'/>
+              <ElevationGrid height='0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2' solid='false' xDimension='6' xSpacing='0.2' zDimension='6' zSpacing='0.2'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 4th row -->
+      <Transform translation='0 -3.6 0'>
+        <!-- IFS : Indexed Face Set -->
+        <Transform translation='-9.6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureScale'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform DEF='TexTransScale' rotation='0.8' scale='2 2' translation='0.2 -0.5'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- ITS, TS : Triangle Set -->
+        <Transform translation='-8.4 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <IndexedTriangleSet ccw='true' colorPerVertex='true' index='0 1 2 0 2 3' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-7.2 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <TriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleSet>
+          </Shape>
+        </Transform>
+        <!-- ITSS, TSS : Triangle Strip Set -->
+        <Transform translation='-6.0 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <IndexedTriangleStripSet ccw='true' colorPerVertex='true' index='0 1 2 3 0 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleStripSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-4.8 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <TriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true' stripCount='5'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleStripSet>
+          </Shape>
+        </Transform>
+        <!-- ITFS, TFS : Triangle Fan Set -->
+        <Transform translation='-3.6 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <IndexedTriangleFanSet ccw='true' colorPerVertex='true' index='0 1 2 3 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleFanSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.4 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <TriangleFanSet ccw='true' colorPerVertex='true' fanCount='4' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </TriangleFanSet>
+          </Shape>
+        </Transform>
+        <!-- Box -->
+        <Transform translation='-1.2 0 -0.5'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <Box size='1 1 1'/>
+          </Shape>
+        </Transform>
+        <!-- IQS, QS : Quad Set -->
+        <Transform>
+          <!-- <Shape> <Appearance USE='TextureScale'/> <IndexedQuadSet index='0 1 2 3'> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </IndexedQuadSet> </Shape> -->
+        </Transform>
+        <Transform translation='1.2 0 0'>
+          <!-- <Shape> <Appearance USE='TextureScale'/> <QuadSet> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </QuadSet> </Shape> -->
+        </Transform>
+        <!-- R2D : Rectangle2D -->
+        <Transform translation='2.4 0 0'>
+          <Shape>
+            <Appearance DEF='TextureScale_2D'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform USE='TexTransScale'/>
+            </Appearance>
+            <Rectangle2D size='1.0 1.0'/>
+          </Shape>
+        </Transform>
+        <!-- TS2D : TriangleSet2D -->
+        <Transform translation='3.6 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale_2D'/>
+            <TriangleSet2D vertices='-0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 0.5'/>
+          </Shape>
+        </Transform>
+        <!-- EG : ElevationGrid -->
+        <Transform translation='4.8 0 0'>
+          <Transform rotation='1 0 0 -1.5708' translation='-0.5 -0.5 0.2'>
+            <Shape>
+              <Appearance USE='TextureScale_2D'/>
+              <ElevationGrid height='0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2' solid='false' xDimension='6' xSpacing='0.2' zDimension='6' zSpacing='0.2'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 5th row -->
+      <Transform translation='0 -4.8 0'>
+        <!-- IFS : Indexed Face Set -->
+        <Transform translation='-9.6 0 0'>
+          <Shape>
+            <Appearance DEF='AppearanceNoTexture'>
+              <Material diffuseColor='0.6 1 1'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- ITS, TS : Triangle Set -->
+        <Transform translation='-8.4 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <IndexedTriangleSet ccw='true' colorPerVertex='true' index='0 1 2 0 2 3' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-7.2 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <TriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleSet>
+          </Shape>
+        </Transform>
+        <!-- ITSS, TSS : Triangle Strip Set -->
+        <Transform translation='-6.0 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <IndexedTriangleStripSet ccw='true' colorPerVertex='true' index='0 1 2 3 0 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleStripSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-4.8 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <TriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true' stripCount='5'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+            </TriangleStripSet>
+          </Shape>
+        </Transform>
+        <!-- ITFS, TFS : Triangle Fan Set -->
+        <Transform translation='-3.6 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <IndexedTriangleFanSet ccw='true' colorPerVertex='true' index='0 1 2 3 -1' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </IndexedTriangleFanSet>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.4 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <TriangleFanSet ccw='true' colorPerVertex='true' fanCount='4' normalPerVertex='true' solid='true'>
+              <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/>
+            </TriangleFanSet>
+          </Shape>
+        </Transform>
+        <!-- Box -->
+        <Transform translation='-1.2 0 -0.5'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <Box size='1 1 1'/>
+          </Shape>
+        </Transform>
+        <!-- IQS, QS : Quad Set -->
+        <Transform>
+          <!-- <Shape> <Appearance USE='AppearanceNoTexture'/> <IndexedQuadSet index='0 1 2 3'> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </IndexedQuadSet> </Shape> -->
+        </Transform>
+        <Transform translation='1.2 0 0'>
+          <!-- <Shape> <Appearance USE='AppearanceNoTexture'/> <QuadSet> <Coordinate point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0'/> </QuadSet> </Shape> -->
+        </Transform>
+        <!-- R2D : Rectangle2D -->
+        <Transform translation='2.4 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <Rectangle2D size='1.0 1.0'/>
+          </Shape>
+        </Transform>
+        <!-- TS2D : TriangleSet2D -->
+        <Transform translation='3.6 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <TriangleSet2D vertices='-0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 0.5'/>
+          </Shape>
+        </Transform>
+        <!-- EG : ElevationGrid -->
+        <Transform translation='4.8 0 0'>
+          <Transform rotation='1 0 0 -1.5708' translation='-0.5 -0.5 0.2'>
+            <Shape>
+              <Appearance USE='AppearanceNoTexture'/>
+              <ElevationGrid height='0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2' solid='false' xDimension='6' xSpacing='0.2' zDimension='6' zSpacing='0.2'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+      <!-- == === ==== Text -->
+      <!-- Title -->
+      <Transform translation='0 3.5 0'>
+        <Shape>
+          <Text DEF='Title' string='"Texture Map Comparisons for Rectangles!"'>
+            <FontStyle justify='"MIDDLE" "FIRST"'/>
+          </Text>
+          <Appearance DEF='DefaultAppearance'>
+            <Material DEF='DefaultMaterial'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <!-- X axis : Geometry Index -->
+      <Transform translation='0 1.2 0'>
+        <!-- IFS : Indexed Face Set -->
+        <Transform translation='-9.6 0 0'>
+          <Shape>
+            <Text string='"IFS"'>
+              <FontStyle DEF='CenterFontStyle' justify='"MIDDLE" "MIDDLE"' size='0.5' style='BOLD'/>
+            </Text>
+            <!-- Omitting Appearance can sometimes reveal rendering errors! -->
+            <!-- TODO where is governing specification paragraph? Not found in 12.2 Concepts https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shape.html#Concepts -->
+          </Shape>
+        </Transform>
+        <!-- ITS, TS : Triangle Set -->
+        <Transform translation='-8.4 0 0'>
+          <Shape>
+            <Text string='"ITS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='-7.2 0 0'>
+          <Shape>
+            <Text string='"TS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- ITSS, TSS : Triangle Strip Set -->
+        <Transform translation='-6.0 0 0'>
+          <Shape>
+            <Text string='"ITSS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='-4.8 0 0'>
+          <Shape>
+            <Text string='"TSS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- ITFS, TFS : Triangle Fan Set -->
+        <Transform translation='-3.6 0 0'>
+          <Shape>
+            <Text string='"ITFS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.4 0 0'>
+          <Shape>
+            <Text string='"TFS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- Box -->
+        <Transform translation='-1.2 0 0'>
+          <Shape>
+            <Text string='"BOX"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- IQS, QS : Quad Set -->
+        <Transform>
+          <Shape>
+            <Text string='"IQS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='1.2 0 0'>
+          <Shape>
+            <Text string='"QS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- R2D : Rectangle2D -->
+        <Transform translation='2.4 0 0'>
+          <Shape>
+            <Text string='"R2D"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- TS2D : TriangleSet2D -->
+        <Transform translation='3.6 0 0'>
+          <Shape>
+            <Text string='"TS2D"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+          <TouchSensor description='TriangleSet2D'/>
+          <Shape DEF='TransparentTextSelection'>
+            <Box size='1.1 .4 .001'/>
+            <Appearance>
+              <Material transparency='1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <!-- EG : ElevationGrid -->
+        <Transform translation='4.8 0 0'>
+          <Shape>
+            <Text string='"EG"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+          <TouchSensor description='ElevationGrid'/>
+          <Shape USE='TransparentTextSelection'/>
+        </Transform>
+      </Transform>
+      <!-- Y axis : Texture Description -->
+      <Transform translation='5.6 0.5 0'>
+        <Transform>
+          <Shape>
+            <Text string='"Default Texture"'>
+              <FontStyle DEF='LeftFontStyle' justify='"BEGIN" "BEGIN"' size='0.5'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -1.2 0'>
+          <Shape>
+            <Text string='"Rotate Texture"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -2.4 0'>
+          <Shape>
+            <Text string='"Rotate, Translate Texture"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -3.6 0'>
+          <Shape>
+            <Text string='"Rotate, Translate, Scale"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -4.8 0'>
+          <Shape>
+            <Text string='"No Texture"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+            <Appearance USE='AppearanceNoTexture'/>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

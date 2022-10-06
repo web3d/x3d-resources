@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure20_10BlinkingRedLightbulb.x3d' name='title'/>
+    <meta content='A blinking lightbulb showing multiple lighting effects.' name='description'/>
+    <meta content='Figure 20.10, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch20/20fig10.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='8 September 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Xj3D run-time exception' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter20Lighting/Figure20_10BlinkingRedLightbulb.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure20_10BlinkingRedLightbulb.x3d'/>
+    <Viewpoint description='Blinking red light bulb' orientation='1 0 0 1.1' position='0 2 0.25'/>
+    <!-- It is almost always a good idea to turn off headlight to avoid washing out other lighting effects in a scene -->
+    <NavigationInfo headlight='false'/>
+    <!-- Ceiling height -->
+    <Transform translation='0 3 0'>
+      <Transform translation='0 -0.05 0'>
+        <DirectionalLight DEF='CeilingDirectionalLight' ambientIntensity='1' direction='0 1 0' intensity='0.15'/>
+        <PointLight DEF='BulbLight' color='1 0 0' intensity='0.5' radius='16'/>
+        <Shape>
+          <Sphere DEF='Bulb' radius='0.04'/>
+          <Appearance>
+            <Material DEF='BulbMaterial' diffuseColor='0 0 0' emissiveColor='1 0.3 0.3'/>
+          </Appearance>
+        </Shape>
+        <Transform translation='-0.25 0.05 -0.25'>
+          <Shape>
+            <ElevationGrid height='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0' solid='false' xDimension='11' xSpacing='0.05' zDimension='11' zSpacing='0.05'/>
+            <Appearance>
+              <Material diffuseColor='1 1 1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+    <!-- Animation brightness and colors -->
+    <TimeSensor DEF='Clock' cycleInterval='4' loop='true'/>
+    <ScalarInterpolator DEF='BulbIntensity' key='0 0.5 0.5 1' keyValue='0.8 0.8 0 0'/>
+    <ColorInterpolator DEF='BulbDiffuse' key='0 0.5 0.5 1' keyValue='0.3 0.3 0.3 0.3 0.3 0.3 1 0.3 0.3 1 0.3 0.3'/>
+    <ColorInterpolator DEF='BulbEmissive' key='0 0.5 0.5 1' keyValue='1 0.3 0.3 1 0.3 0.3 0 0 0 0 0 0'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='BulbIntensity'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='BulbDiffuse'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='BulbEmissive'/>
+    <ROUTE fromField='value_changed' fromNode='BulbIntensity' toField='set_intensity' toNode='BulbLight'/>
+    <ROUTE fromField='value_changed' fromNode='BulbDiffuse' toField='set_diffuseColor' toNode='BulbMaterial'/>
+    <ROUTE fromField='value_changed' fromNode='BulbEmissive' toField='set_emissiveColor' toNode='BulbMaterial'/>
+  </Scene>
+</X3D>

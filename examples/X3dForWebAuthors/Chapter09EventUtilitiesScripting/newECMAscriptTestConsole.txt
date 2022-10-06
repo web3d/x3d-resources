@@ -1,0 +1,5 @@
+[newECMAscript.js] initialize() method commenced...
+[newECMAscript.js] exampleData=Hello,World
+[newECMAscript.js] newSFString=Hello World
+[newECMAscript.js] newMFString="Hello" "World"
+[newECMAscript.js] initialize() method complete

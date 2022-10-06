@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	<meta name="author" content="Don Brutzman"/>
+	<meta name="generator" content="ContentCatalogToXmlSpyProject.xslt"/>
+	<meta name="url" content="https://www.web3d.org/x3d/content/ContentCatalogToXmlSpyProject.xslt"/>
+	<meta name="description" content="XSLT stylesheet to convert X3D example-archive catalogs into XML Spy project files."/>
+        -->
+<Project xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" XSL_XMLUseFile=".\X3dToXhtml.xslt" ValidFile="..\..\..\tools\CreateContentCatalog\ContentCatalog.dtd" ValidFileSet="Yes">
+<Folder FolderName="HTML pages">
+<File HomeFolder="Yes" FilePath=".\index.html"/>
+<File HomeFolder="Yes" FilePath=".\X3dResources.html"/>
+<File HomeFolder="Yes" FilePath=".\license.html"/>
+<File HomeFolder="Yes" FilePath=".\X3dSceneAuthoringHints.html"/>
+</Folder>
+<Folder FolderName="Humanoid Animation X3D Examples .x3d encoding" ExtStr=".x3d" ValidFileSet="Yes" ValidFile="C:/x3d-code/www.web3d.org/specifications//x3d-4.0.xsd" XSL_XMLUseSet="Yes" XSL_XMLUseFile="C:/x3d-code/www.web3d.org/x3d/stylesheets/X3dToXhtml.xslt" XSL_DestFileExtSet="Yes" XSL_DestFolderSet="Yes" XSL_DestFolder=".">
+<Folder FolderName="Characters">
+<File FilePath=".\Characters\HAnimModelFootLeft.x3d"/>
+<File FilePath=".\Characters\HAnimModelFootRight.x3d"/>
+<File FilePath=".\Characters\HAnimModelHandLeft.x3d"/>
+<File FilePath=".\Characters\HAnimModelHandRight.x3d"/>
+<File FilePath=".\Characters\HAnimModelsHandsFeet.x3d"/>
+<File FilePath=".\Characters\JinLOA1.x3d"/>
+<File FilePath=".\Characters\JinLOA2.x3d"/>
+<File FilePath=".\Characters\JinLOA3.x3d"/>
+<File FilePath=".\Characters\JinLOA4.x3d"/>
+<File FilePath=".\Characters\JoeKick.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter01Jin.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter02Chul.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter03Hyun.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter04Young.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter05Ju.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter06Ga.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter07No.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter08Da.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter09Ru.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter10Mi.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter11Min.x3d"/>
+<File FilePath=".\Characters\KoreanCharacter12Sun.x3d"/>
+</Folder>
+<Folder FolderName="Legacy">
+	<!--[Warning] AllenDutton.x3d validation warning:  X3D Validator reports numerous warnings are present--><File FilePath=".\Legacy\BoxMan.x3d"/>
+<File FilePath=".\Legacy\BoxManAnimationPanel.x3d"/>
+<File FilePath=".\Legacy\Bubbles.x3d"/>
+<File FilePath=".\Templates\DiamondManLOA_0.x3d"/>
+<File FilePath=".\Templates\DiamondManLOA_1.x3d"/>
+<File FilePath=".\Templates\DiamondManLOA_2.x3d"/>
+<File FilePath=".\Legacy\HAnim1SpecificationLOA3Animation.x3d"/>
+<File FilePath=".\Legacy\HAnim1SpecificationLOA3Illustrated.x3d"/>
+<File FilePath=".\Legacy\HAnim1SpecificationLOA3Invisible.x3d"/>
+<File FilePath=".\Legacy\JoeSkinTexcoordDisplacerKick.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter01Jin.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter02Chul.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter03Hyun.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter04Young.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter05Ju.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter06Ga.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter07No.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter08Da.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter09Ru.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter10Mi.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter11Min.x3d"/>
+<File FilePath=".\Legacy\KoreanCharacter12Sun.x3d"/>
+<File FilePath=".\Legacy\MaskAndSnorkel.x3d"/>
+<File FilePath=".\Legacy\NancyDiving.x3d"/>
+<File FilePath=".\Legacy\NancyNativeTags.x3d"/>
+<File FilePath=".\Legacy\NancyStandShootRifleM24.x3d"/>
+<File FilePath=".\Legacy\ScubaTank.x3d"/>
+</Folder>
+<Folder FolderName="Motion Animation"/>
+<Folder FolderName="Polygonal">
+<File FilePath=".\Polygonal\Marine.x3d"/>
+</Folder>
+<Folder FolderName="Prototypes">
+<File FilePath=".\Prototypes\AllenDuttonProtoInstances.x3d"/>
+<File FilePath=".\Prototypes\AllenStandShootRifleM24.x3d"/>
+<File FilePath=".\Prototypes\HAnimBehaviorPrototypes.x3d"/>
+<File FilePath=".\Prototypes\HAnimPrototypes.x3d"/>
+<File FilePath=".\Prototypes\InterchangableActorsViaDynamicRoutingPrototypes.x3d"/>
+<File FilePath=".\Prototypes\LOA1_JumpAnimation.x3d"/>
+<File FilePath=".\Prototypes\LOA1_KneelAnimation.x3d"/>
+<File FilePath=".\Prototypes\LOA1_RunAnimation.x3d"/>
+<File FilePath=".\Prototypes\LOA1_StandAnimation.x3d"/>
+<File FilePath=".\Prototypes\LOA1_StopAnimation.x3d"/>
+<File FilePath=".\Prototypes\LOA1_SwimmingFlutterKickAnimation.x3d"/>
+<File FilePath=".\Prototypes\LOA1_WalkAnimation.x3d"/>
+<File FilePath=".\Prototypes\NancyDivingProtoInstances.x3d"/>
+<File FilePath=".\Prototypes\NancyPrototypes.x3d"/>
+</Folder>
+<Folder FolderName="Specifications">
+<File FilePath=".\Specifications\HAnimSpecificationLOA3Animation.x3d"/>
+<File FilePath=".\Specifications\HAnimSpecificationLOA3Illustrated.x3d"/>
+<File FilePath=".\Specifications\HAnimSpecificationLOA3Invisible.x3d"/>
+<File FilePath=".\Specifications\HAnim2SpecificationLOA3Illustrated.x3d"/>
+<File FilePath=".\Specifications\HAnim2SpecificationLOA3Invisible.x3d"/>
+<File FilePath=".\Specifications\KoreanCharacterMotionAnnexC01Jin.x3d"/>
+<File FilePath=".\Specifications\KoreanCharacterMotionAnnexD01Jin.x3d"/>
+</Folder>
+<Folder FolderName="Templates">
+<File FilePath=".\Templates\DiamondManLOA0.x3d"/>
+<File FilePath=".\Templates\DiamondManLOA1.x3d"/>
+<File FilePath=".\Templates\DiamondManLOA2.x3d"/>
+</Folder>
+<File FilePath="HelloWorld.x3d"/>
+</Folder>
+<Folder FolderName="Humanoid Animation X3D Examples Canonical.xml encoding" ExtStr=".xml" ValidFileSet="Yes" ValidFile="C:/x3d-code/www.web3d.org/specifications//x3d-4.0.xsd" XSL_XMLUseSet="Yes" XSL_XMLUseFile="C:/x3d-code/www.web3d.org/x3d/stylesheets/X3dToXhtml.xslt" XSL_DestFileExtSet="Yes" XSL_DestFolderSet="Yes" XSL_DestFolder=".">
+<Folder FolderName="Characters">
+<File FilePath=".\Characters\HAnimModelFootLeftCanonical.xml"/>
+<File FilePath=".\Characters\HAnimModelFootRightCanonical.xml"/>
+<File FilePath=".\Characters\HAnimModelHandLeftCanonical.xml"/>
+<File FilePath=".\Characters\HAnimModelHandRightCanonical.xml"/>
+<File FilePath=".\Characters\HAnimModelsHandsFeetCanonical.xml"/>
+<File FilePath=".\Characters\JinLOA1Canonical.xml"/>
+<File FilePath=".\Characters\JinLOA2Canonical.xml"/>
+<File FilePath=".\Characters\JinLOA3Canonical.xml"/>
+<File FilePath=".\Characters\JinLOA4Canonical.xml"/>
+<File FilePath=".\Characters\JoeKickCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter01JinCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter02ChulCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter03HyunCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter04YoungCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter05JuCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter06GaCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter07NoCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter08DaCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter09RuCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter10MiCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter11MinCanonical.xml"/>
+<File FilePath=".\Characters\KoreanCharacter12SunCanonical.xml"/>
+</Folder>
+<Folder FolderName="Legacy">
+	<!--[Warning] AllenDutton.x3d validation warning:  X3D Validator reports numerous warnings are present--><File FilePath=".\Legacy\BoxManCanonical.xml"/>
+<File FilePath=".\Legacy\BoxManAnimationPanelCanonical.xml"/>
+<File FilePath=".\Legacy\BubblesCanonical.xml"/>
+<File FilePath=".\Templates\DiamondManLOA_0Canonical.xml"/>
+<File FilePath=".\Templates\DiamondManLOA_1Canonical.xml"/>
+<File FilePath=".\Templates\DiamondManLOA_2Canonical.xml"/>
+<File FilePath=".\Legacy\HAnim1SpecificationLOA3AnimationCanonical.xml"/>
+<File FilePath=".\Legacy\HAnim1SpecificationLOA3IllustratedCanonical.xml"/>
+<File FilePath=".\Legacy\HAnim1SpecificationLOA3InvisibleCanonical.xml"/>
+<File FilePath=".\Legacy\JoeSkinTexcoordDisplacerKickCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter01JinCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter02ChulCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter03HyunCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter04YoungCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter05JuCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter06GaCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter07NoCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter08DaCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter09RuCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter10MiCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter11MinCanonical.xml"/>
+<File FilePath=".\Legacy\KoreanCharacter12SunCanonical.xml"/>
+<File FilePath=".\Legacy\MaskAndSnorkelCanonical.xml"/>
+<File FilePath=".\Legacy\NancyDivingCanonical.xml"/>
+<File FilePath=".\Legacy\NancyNativeTagsCanonical.xml"/>
+<File FilePath=".\Legacy\NancyStandShootRifleM24Canonical.xml"/>
+<File FilePath=".\Legacy\ScubaTankCanonical.xml"/>
+</Folder>
+<Folder FolderName="Motion Animation">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Polygonal">
+<File FilePath=".\Polygonal\MarineCanonical.xml"/>
+</Folder>
+<Folder FolderName="Prototypes">
+<File FilePath=".\Prototypes\AllenDuttonProtoInstancesCanonical.xml"/>
+<File FilePath=".\Prototypes\AllenStandShootRifleM24Canonical.xml"/>
+<File FilePath=".\Prototypes\HAnimBehaviorPrototypesCanonical.xml"/>
+<File FilePath=".\Prototypes\HAnimPrototypesCanonical.xml"/>
+<File FilePath=".\Prototypes\InterchangableActorsViaDynamicRoutingPrototypesCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_JumpAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_KneelAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_RunAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_StandAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_StopAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_SwimmingFlutterKickAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\LOA1_WalkAnimationCanonical.xml"/>
+<File FilePath=".\Prototypes\NancyDivingProtoInstancesCanonical.xml"/>
+<File FilePath=".\Prototypes\NancyPrototypesCanonical.xml"/>
+</Folder>
+<Folder FolderName="Specifications">
+<File FilePath=".\Specifications\HAnimSpecificationLOA3AnimationCanonical.xml"/>
+<File FilePath=".\Specifications\HAnimSpecificationLOA3IllustratedCanonical.xml"/>
+<File FilePath=".\Specifications\HAnimSpecificationLOA3InvisibleCanonical.xml"/>
+<File FilePath=".\Specifications\HAnim2SpecificationLOA3IllustratedCanonical.xml"/>
+<File FilePath=".\Specifications\HAnim2SpecificationLOA3InvisibleCanonical.xml"/>
+<File FilePath=".\Specifications\KoreanCharacterMotionAnnexC01JinCanonical.xml"/>
+<File FilePath=".\Specifications\KoreanCharacterMotionAnnexD01JinCanonical.xml"/>
+</Folder>
+<Folder FolderName="Templates">
+<File FilePath=".\Templates\DiamondManLOA0Canonical.xml"/>
+<File FilePath=".\Templates\DiamondManLOA1Canonical.xml"/>
+<File FilePath=".\Templates\DiamondManLOA2Canonical.xml"/>
+</Folder>
+<File FilePath="HelloWorldCanonical.xml"/>
+</Folder>
+<Folder FolderName="Validation warnings" ExtStr=".x3d" ValidFileSet="Yes" ValidFile="C:/x3d-code/www.web3d.org/specifications//x3d-4.0.xsd" XSL_XMLUseFile="C:/x3d-code/www.web3d.org/x3d/stylesheets/X3dToXhtml.xslt">
+<File FilePath=".\Legacy\AllenDutton.x3d"/>
+</Folder>
+<File HomeFolder="Yes" FilePath=".\ContentCatalogHumanoidAnimation.xml"/>
+</Project>

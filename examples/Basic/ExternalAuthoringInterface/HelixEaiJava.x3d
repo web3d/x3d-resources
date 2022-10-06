@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='HelixEaiJava.x3d' name='title'/>
+    <meta content='HelixEaiJavaPage.html' name='example'/>
+    <meta content='External Authoring Interface (EAI) Java example from VRML 97 Amendment 2 specification.' name='description'/>
+    <meta content='Vilius Jagminas and Martin Reddy' name='creator'/>
+    <meta content='Xeena VRML importer, X3D-Edit 3.1, https://www.web3d.org/x3d/content/README.X3D-Edit.html' name='translator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='11 December 2000' name='created'/>
+    <meta content='23 June 2003' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Under development. VRML 97 EAI support appears inconsistent for various browsers.' name='warning'/>
+    <meta content='HelixEai.java' name='reference'/>
+    <meta content='javadoc/index.html' name='reference'/>
+    <meta content='originals/helix/' name='reference'/>
+    <meta content='https://www.web3d.org/technicalinfo/specifications/ISO_IEC_14772-All/part2/javaBind.html#Examples' name='reference'/>
+    <meta content='https://www.web3d.org/technicalinfo/specifications/ISO_IEC_14772-All/index.html' name='reference'/>
+    <meta content='http://www.parallelgraphics.com/developer/products/cortona/eai' name='reference'/>
+    <meta content='External Authoring Interface (EAI) Java example' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/ExternalAuthoringInterface/HelixEaiJava.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='HelixEaiJava.x3d'/>
+    <Viewpoint description='HelixEai' orientation='1.0 0.0 0.0 -0.5' position='0.0 4.0 5.0'/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='0.8 0.8 0.9' shininess='1.0'/>
+      </Appearance>
+      <Extrusion DEF='Coil' creaseAngle='3.14'/>
+    </Shape>
+  </Scene>
+</X3D>

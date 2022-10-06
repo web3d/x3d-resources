@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='WinterExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='WinterExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter00' url='"WinterPrototypes.x3d#Winter00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter00" "WinterPrototypes.wrl#Winter00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter01' url='"WinterPrototypes.x3d#Winter01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter01" "WinterPrototypes.wrl#Winter01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter02' url='"WinterPrototypes.x3d#Winter02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter02" "WinterPrototypes.wrl#Winter02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter03' url='"WinterPrototypes.x3d#Winter03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter03" "WinterPrototypes.wrl#Winter03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter04' url='"WinterPrototypes.x3d#Winter04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter04" "WinterPrototypes.wrl#Winter04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter05' url='"WinterPrototypes.x3d#Winter05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter05" "WinterPrototypes.wrl#Winter05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter06' url='"WinterPrototypes.x3d#Winter06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter06" "WinterPrototypes.wrl#Winter06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter07' url='"WinterPrototypes.x3d#Winter07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter07" "WinterPrototypes.wrl#Winter07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter08' url='"WinterPrototypes.x3d#Winter08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter08" "WinterPrototypes.wrl#Winter08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter09' url='"WinterPrototypes.x3d#Winter09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter09" "WinterPrototypes.wrl#Winter09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter10' url='"WinterPrototypes.x3d#Winter10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter10" "WinterPrototypes.wrl#Winter10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter11' url='"WinterPrototypes.x3d#Winter11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter11" "WinterPrototypes.wrl#Winter11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter12' url='"WinterPrototypes.x3d#Winter12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter12" "WinterPrototypes.wrl#Winter12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter13' url='"WinterPrototypes.x3d#Winter13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter13" "WinterPrototypes.wrl#Winter13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter14' url='"WinterPrototypes.x3d#Winter14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter14" "WinterPrototypes.wrl#Winter14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter15' url='"WinterPrototypes.x3d#Winter15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter15" "WinterPrototypes.wrl#Winter15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter16' url='"WinterPrototypes.x3d#Winter16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter16" "WinterPrototypes.wrl#Winter16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter17' url='"WinterPrototypes.x3d#Winter17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter17" "WinterPrototypes.wrl#Winter17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter18' url='"WinterPrototypes.x3d#Winter18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter18" "WinterPrototypes.wrl#Winter18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter19' url='"WinterPrototypes.x3d#Winter19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter19" "WinterPrototypes.wrl#Winter19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter20' url='"WinterPrototypes.x3d#Winter20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter20" "WinterPrototypes.wrl#Winter20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter21' url='"WinterPrototypes.x3d#Winter21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter21" "WinterPrototypes.wrl#Winter21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter22' url='"WinterPrototypes.x3d#Winter22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter22" "WinterPrototypes.wrl#Winter22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter23' url='"WinterPrototypes.x3d#Winter23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter23" "WinterPrototypes.wrl#Winter23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter24' url='"WinterPrototypes.x3d#Winter24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter24" "WinterPrototypes.wrl#Winter24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter25' url='"WinterPrototypes.x3d#Winter25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter25" "WinterPrototypes.wrl#Winter25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter26' url='"WinterPrototypes.x3d#Winter26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter26" "WinterPrototypes.wrl#Winter26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter27' url='"WinterPrototypes.x3d#Winter27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter27" "WinterPrototypes.wrl#Winter27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter28' url='"WinterPrototypes.x3d#Winter28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter28" "WinterPrototypes.wrl#Winter28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter29' url='"WinterPrototypes.x3d#Winter29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter29" "WinterPrototypes.wrl#Winter29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter30' url='"WinterPrototypes.x3d#Winter30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter30" "WinterPrototypes.wrl#Winter30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter31' url='"WinterPrototypes.x3d#Winter31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter31" "WinterPrototypes.wrl#Winter31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter32' url='"WinterPrototypes.x3d#Winter32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter32" "WinterPrototypes.wrl#Winter32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter33' url='"WinterPrototypes.x3d#Winter33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter33" "WinterPrototypes.wrl#Winter33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Winter34' url='"WinterPrototypes.x3d#Winter34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.x3d#Winter34" "WinterPrototypes.wrl#Winter34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.wrl#Winter34"'/>
+    <Group bboxSize='10.5 10.5 2.0'>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Winter00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Winter00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter00' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Winter00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Winter01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Winter01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter01' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Winter02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Winter02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter02' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Winter03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Winter03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter03' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Winter04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Winter04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter04' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Winter05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Winter05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter05' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Winter06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Winter06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter06' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Winter07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Winter07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter07' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Winter08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Winter08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter08' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Winter09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Winter09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter09' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Winter10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Winter10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter10' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Winter11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Winter11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter11' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Winter12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Winter12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter12' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Winter13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Winter13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter13' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Winter14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Winter14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter14' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Winter15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Winter15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter15' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Winter16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Winter16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter16' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Winter17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Winter17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter17' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Winter18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Winter18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter18' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Winter19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Winter19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter19' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Winter20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Winter20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter20' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Winter21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Winter21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter21' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Winter22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Winter22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter22' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Winter23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Winter23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter23' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Winter24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Winter24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter24' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Winter25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Winter25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter25' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Winter26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Winter26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter26' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Winter27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Winter27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter27' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Winter28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Winter28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter28' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Winter29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Winter29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter29' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Winter30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Winter30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter30' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Winter31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Winter31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter31' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Winter32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Winter32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter32' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Winter33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Winter33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter33' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Winter34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Winter34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Winter34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Winter34' parameter='"target=_source"' url='"WinterPrototypes.html#ProtoDeclare_Winter34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/WinterPrototypes.html#ProtoDeclare_Winter34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Winter34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

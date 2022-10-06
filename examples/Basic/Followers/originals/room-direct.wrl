@@ -1,0 +1,499 @@
+#VRML V2.0 utf8
+
+
+EXTERNPROTO Selection [      # allows one to click through objects (the Photo)
+    field SFVec3f bboxSize
+    field SFVec3f bboxCenter
+    exposedField SFBool collide
+    exposedField SFBool select
+    field SFNode proxy
+    exposedField MFNode children
+    eventIn MFNode addChildren
+    eventIn MFNode removeChildren
+]
+[ 
+    "urn:inet:blaxxun.com:node:Selection" 
+    "bitmanagement-nodes.wrl#Selection"
+    "http://www.bitmanagement.de/vrml/protos/nodes.wrl#Selection" 
+]
+
+
+
+Background
+{
+    skyColor .1 .2 .3
+}
+
+Viewpoint 
+{
+    position     -0.000 1.7 7.985
+    orientation  -1.000 -0.000 0.000 0.105
+    fieldOfView  0.785
+    
+    description "inside"
+}
+
+
+
+Viewpoint 
+{
+    position     0.000 2.068 13.879
+    orientation  -1.000 0.000 0.000 0.105
+    fieldOfView  0.785
+    description "outside"
+}
+
+
+NavigationInfo
+{
+    avatarSize [0.25, 1.2, 0.75]
+
+    headlight FALSE
+}
+
+
+DirectionalLight
+{
+    direction 0 0 -1
+    intensity .5
+}
+
+PointLight
+{
+    radius 20
+
+    location 2.5 1  0
+}
+
+DirectionalLight
+{
+    direction 0 -1 0 
+    intensity 1
+}
+
+DirectionalLight
+{
+    direction 1 0 0 
+    intensity .5
+}
+
+#
+# Forgive me my extensive use of lighting.
+# I did it in a text editor, and i'm a programmer, not a designer. :-)
+#
+
+
+Group
+{
+    children
+    [
+        DEF TchFloor TouchSensor {}
+        Shape
+        {
+            appearance Appearance {
+#                material Material {
+#                    diffuseColor .44 .27 .17
+#                    specularColor .29 .31 .05
+#                    ambientIntensity .04
+#                    shininess .19
+#                    emissiveColor .21 .13 .08
+#                }
+                texture ImageTexture
+                {
+                    url "floor.png"
+                }
+
+                textureTransform TextureTransform
+                {
+                    scale 17 17
+                }
+                
+            }
+
+            geometry Box
+            {
+                size 10 .1 10
+            }
+        }
+    ]
+}
+
+
+
+
+Group
+{
+    children
+    [
+        DEF TchWallFront TouchSensor {}
+        Transform
+        {
+            translation 0 1.5 -5
+
+            children DEF ShWall Shape
+            {
+                appearance Appearance {
+                    material Material {
+                        diffuseColor .52 .51 .45
+                        specularColor .76 .78 .54
+                        emissiveColor .28 .27 .24
+                        ambientIntensity .0567
+                        shininess .53
+                    }
+                }
+
+                geometry Box
+                {
+                    size 10 3 .1
+                }
+            }
+        }
+    ]
+}
+
+
+
+
+Group
+{
+    children
+    [
+        DEF TchWallLeft TouchSensor {}
+        Transform
+        {
+            translation -5 1.5 0 
+            rotation 0 1 0 -1.571
+
+            children USE ShWall
+        }
+    ]
+}
+
+
+
+Group
+{
+    children
+    [
+        DEF TchWallRight TouchSensor {}
+        Transform
+        {
+            translation 5 1.5 0
+            rotation 0 1 0 1.571
+
+            children USE ShWall
+        }
+    ]
+}
+
+
+
+Group
+{
+    children
+    [
+        DEF TchRoof TouchSensor {}
+        Transform
+        {
+            translation 0 3 0
+
+            children Shape
+            {
+                appearance Appearance {
+                    material Material {
+                        diffuseColor .522 .451 .447
+                        specularColor .761 .541 .584
+                        emissiveColor .306 .235 .176 
+                        ambientIntensity .0567
+                        shininess .53
+                    }
+#                    texture ImageTexture
+#                    {
+#                        url "floor1.png"
+#                    }
+
+#                    textureTransform TextureTransform
+#                    {
+#                        scale 15 5
+#                    }
+                    
+                }
+                geometry Box
+                {
+                    size 10 .1 10
+                }
+            }
+        }
+    ]
+}
+
+
+
+
+
+Selection
+{
+    select FALSE
+
+    children DEF TransInd Transform
+    {
+        scale 3.5 3 3
+
+        children Transform
+        {
+            #scale .404 .464 1
+            scale .223  .341 .5
+
+            children 
+            [
+                Shape
+                {
+                    appearance Appearance {
+    #                    material Material {
+    #                        diffuseColor 0 0 0
+    #                        emissiveColor .5 .5 .5
+    #                    }
+
+                        texture ImageTexture
+                        {
+                            url "Photo.jpg"
+                        }
+                    }
+
+
+                    geometry IndexedFaceSet
+                    {
+                        solid FALSE
+                        coord Coordinate
+                        {
+                            point
+                            [
+                                -1 -1 .03  # 0
+                                 1 -1 .03  # 1
+                                 1  1 .03  # 2
+                                -1  1 .03  # 3
+
+                                -1 -1  0  # 4
+                                 1 -1  0  # 5
+                                 1  1  0  # 6
+                                -1  1  0  # 7
+                            ]
+                        }
+
+                        texCoord TextureCoordinate
+                        {
+                            point
+                            [
+                                0 0 
+                                1 0 
+                                1 1 
+                                0 1
+                            ]
+                        }
+
+                        coordIndex
+                        [
+                            0 1 2 3 -1
+                            4 5 6 7 -1
+                            4 0 3 7 -1
+                            5 1 0 4 -1
+                            6 2 1 5 -1
+                            7 3 2 6 -1
+                        ]
+
+                        texCoordIndex 
+                        [
+                            0 1 2 3 -1
+                            0 0 0 0 -1
+                            0 0 0 0 -1
+                            0 0 0 0 -1
+                            0 0 0 0 -1
+                            0 0 0 0 -1
+                        ]
+                    }
+                }
+
+                Shape
+                {
+                    appearance Appearance
+                    {
+                        texture ImageTexture
+                        {
+                            url "Shadow.png"
+                        }
+                    }
+
+                    geometry IndexedFaceSet
+                    {
+                        coord Coordinate
+                        {
+                            point
+                            [
+                                -1.15 -1.15 .01
+                                 1.15 -1.15 .01
+                                 1.15  1.15 .01
+                                -1.15  1.15 .01
+                            ]
+                        }
+
+                        texCoord TextureCoordinate
+                        {
+                            point
+                            [
+                                0 0
+                                1 0
+                                1 1
+                                0 1
+                            ]
+                        }
+
+                        coordIndex [ 0 1 2 3 -1 ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
+
+DEF Worker Script
+{
+    eventIn SFVec3f set_hitPoint
+    eventIn SFTime  touchedFloor
+    eventIn SFTime  touchedWallLeft
+    eventIn SFTime  touchedWallRight
+    eventIn SFTime  touchedWallFront
+    eventIn SFTime  touchedRoof
+
+    eventOut SFVec3f    indPos
+    eventOut SFRotation indOri
+
+    field SFVec3f lastHitPoint 0 0 0
+
+#    field SFFloat cPaintingHeight 1.856
+#    field SFFloat cPaintingWidth  1.616
+    field SFFloat cPaintingHeight 2.046
+    field SFFloat cPaintingWidth  1.561
+
+    field SFFloat cRoomWidth  9.9
+    field SFFloat cRoomHeight 2.9
+    field SFFloat cRoomDepth  9.9
+    field SFFloat cFloorY     .05
+
+    url "vrmlscript:
+
+    function set_hitPoint(hp)
+    {
+        lastHitPoint= hp;
+    }
+
+    function touchedFloor(t)
+    {
+        indPos= CheckGroundRoof(lastHitPoint);
+        indOri= new SFRotation(-1, 0, 0, 1.571);
+    }
+
+    function touchedWallLeft(t)
+    {
+        indPos= CheckLeftRightWall(CheckHeight(lastHitPoint));
+        indOri= new SFRotation(0, 1, 0, 1.5705);
+    }
+
+    function touchedWallRight(t)
+    {
+        indPos= CheckLeftRightWall(CheckHeight(lastHitPoint));
+        indOri= new SFRotation(0, -1, 0, 1.5705);
+    }
+
+    function touchedWallFront(t)
+    {
+        indPos= CheckFrontWall(CheckHeight(lastHitPoint));
+        indOri= new SFRotation(0, 1, 0, 0);
+    }
+
+    function touchedRoof(t)
+    {
+        indPos= CheckGroundRoof(lastHitPoint);
+        indOri= (new SFRotation(1, 0, 0, 1.57));//.multiply(new SFRotation(0, 1, 0, 3.14159));
+    }
+
+    function CheckGroundRoof(pos)
+    {
+    return new SFVec3f( Limit(pos.x, -cRoomWidth/2 + cPaintingWidth/2, cRoomWidth/2 - cPaintingWidth/2)
+                      , pos.y
+                      , Limit(pos.z, -cRoomDepth/2 + cPaintingHeight/2, cRoomDepth/2 - cPaintingHeight/2)
+                      );
+    }
+
+    function CheckHeight(pos)
+    {
+    return new SFVec3f( pos.x
+                      , Limit(pos.y, cFloorY + cPaintingHeight/2, cFloorY + cRoomHeight - cPaintingHeight/2)
+                      , pos.z
+                      );
+    }
+
+    function CheckLeftRightWall(pos)
+    {
+        return new SFVec3f( pos.x
+                          , pos.y
+                          , Limit(pos.z, -cRoomDepth/2 + cPaintingWidth/2, cRoomDepth/2 - cPaintingWidth/2)
+                          );
+    }
+
+    function CheckFrontWall(pos)
+    {
+        return new SFVec3f( Limit(pos.x, -cRoomWidth/2 + cPaintingWidth/2, cRoomWidth/2 - cPaintingWidth/2)
+                          , pos.y
+                          , pos.z
+                          );
+    }
+    function Limit(x, min, max)
+    {
+    return Min(Max(x, min), max);
+    }
+
+    function Max(a, b)
+    {
+    return a > b? a:b;
+    }
+
+    function Min(a, b)
+    {
+        return a > b? b:a;
+    }
+
+
+
+    "
+}
+
+ROUTE TchFloor.hitPoint_changed     TO Worker.set_hitPoint
+ROUTE TchWallLeft.hitPoint_changed  TO Worker.set_hitPoint
+ROUTE TchWallRight.hitPoint_changed TO Worker.set_hitPoint
+ROUTE TchWallFront.hitPoint_changed TO Worker.set_hitPoint
+ROUTE TchRoof.hitPoint_changed      TO Worker.set_hitPoint
+
+ROUTE TchFloor.touchTime     TO Worker.touchedFloor
+ROUTE TchWallLeft.touchTime  TO Worker.touchedWallLeft
+ROUTE TchWallRight.touchTime TO Worker.touchedWallRight
+ROUTE TchWallFront.touchTime TO Worker.touchedWallFront
+ROUTE TchRoof.touchTime      TO Worker.touchedRoof
+
+
+
+ROUTE Worker.indPos TO TransInd.translation
+ROUTE Worker.indOri TO TransInd.rotation
+
+
+#DEF DmpPPainting PositionDamper    { tau .3 order 2  }
+#DEF DmpOPainting OrientationDamper { tau .15 order 4 }
+
+#ROUTE Worker.indPos TO DmpPPainting.set_destination
+#ROUTE                  DmpPPainting.value_changed TO TransInd.translation
+#ROUTE Worker.indOri TO DmpOPainting.set_destination
+#ROUTE                  DmpOPainting.value_changed TO TransInd.rotation
+
+
+
+

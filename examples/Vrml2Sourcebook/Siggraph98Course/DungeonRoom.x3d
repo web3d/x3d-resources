@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='DungeonRoom.x3d' name='title'/>
+    <meta content='Dungeon room: this world illustrates the use of Inlines to pull in pieces of a a dungeon room contained in other files. The entire room is then used in larger structures.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/droom.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0389.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/DungeonRoom.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='DungeonRoom.x3d'/>
+    <Viewpoint description='Dungeon room' position='0 1.6 10'/>
+    <Transform translation='0.0 0.0 2.5'>
+      <Inline DEF='Floor' url='"DungeonFloor.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/DungeonFloor.x3d" "DungeonFloor.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/DungeonFloor.wrl"'/>
+    </Transform>
+    <Transform translation='0.0 0.0 -2.5'>
+      <Inline USE='Floor'/>
+    </Transform>
+    <Transform translation='0.0 3.5 2.5'>
+      <Inline USE='Floor'/>
+    </Transform>
+    <Transform translation='0.0 3.5 -2.5'>
+      <Inline USE='Floor'/>
+    </Transform>
+    <Transform translation='-5.0 0.0 0.0'>
+      <Transform translation='0.0 0.0 2.5'>
+        <Inline DEF='Wall' url='"DungeonWall.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/DungeonWall.x3d" "DungeonWall.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/DungeonWall.wrl"'/>
+      </Transform>
+      <Transform translation='0.0 0.0 -2.5'>
+        <Inline USE='Wall'/>
+      </Transform>
+      <Transform rotation='0.0 1.0 0.0 1.57' translation='0.0 2.25 0.0'>
+        <PointLight attenuation='0.0 0.6 0.0' color='1.0 0.4 0.2' intensity='0.8' location='0.0 0.25 0.2' radius='10.0'/>
+        <Inline DEF='Torch' url='"Torches.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Torches.x3d" "Torches.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Torches.wrl"'/>
+      </Transform>
+    </Transform>
+    <Transform translation='5.0 0.0 0.0'>
+      <Transform translation='0.0 0.0 2.5'>
+        <Inline USE='Wall'/>
+      </Transform>
+      <Transform translation='0.0 0.0 -2.5'>
+        <Inline USE='Wall'/>
+      </Transform>
+      <Transform rotation='0.0 1.0 0.0 -1.57' translation='0.0 2.25 0.0'>
+        <PointLight attenuation='0.0 0.6 0.0' color='1.0 0.4 0.2' intensity='0.8' location='0.0 0.25 0.2' radius='10.0'/>
+        <Inline USE='Torch'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

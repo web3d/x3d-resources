@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+		<title>X3D Conformance NIST Examples: GroupingNodes, LOD </title>
+	</head>
+	<!-- This package.html file is used in javadoc documentation -->
+	<!-- Package Comment Files http://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html#packagecomment -->
+
+	<body>
+	
+		<p>
+			LOD (Level Of Detail) uses camera-to-object distance to switch among contained child levels.
+			(Contained nodes are now called 'children' rather than 'level', for consistent naming among all GroupingNodeType nodes.)
+			LOD range values go from near to far (as child geometry gets simpler for better performance).
+			For n range values, you must have n+1 children levels!
+			Only currently selected children level is rendered, but all levels continue to send/receive events. 
+		</p>
+	
+		<p>
+			X3D Tooltips of interest:
+			
+			<a href="https://www.web3d.org/x3d/tooltips/X3dTooltips.html#LOD" target="_blank">LOD</a>.
+		</p>
+		
+		<p>
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/Architecture.html" target="_blank">X3D Specification</a>
+			sections of interest:
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html" target="_blank">23 Navigation component</a>,
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html#Concepts" target="_blank">23.2 Concepts</a>,
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html#LOD" target="_blank">23.4.3 LOD</a>.
+		</p>
+		
+		<p>
+			<a href="https://www.web3d.org/x3d/content/examples/X3dResources.html#Examples" target="_blank">X3D Examples Archives</a>
+			of related interest:
+		</p>
+		<ul>
+			<li>
+				VRML 2 Sourcebook:&nbsp;
+				<a href="https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail" target="_blank">Chapter 25 Level Of Detail</a>
+			</li>
+			<li>
+				X3D for Web Authors:
+				<a href="http://x3dgraphics.com/examples/X3dForWebAuthors/Chapter03Grouping" target="_blank">Chapter 03 Grouping</a>
+			</li>
+		</ul>
+
+		</body>
+</html>

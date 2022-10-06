@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure09_9DeskLamp.x3d' name='title'/>
+    <meta content='Figure 9.9, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch09/09fig09.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='12 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A desk lamp with arm angles that can be adjusted using nested sensors.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter09SensingViewer/Figure09_9DeskLamp.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure09_9DeskLamp.x3d'/>
+    <Viewpoint description='Desk lamp' position='0 0.2 1'/>
+    <!-- First rotate PlaneSensor to horizontal XZ (Y = 0) plane -->
+    <Transform rotation='1 0 0 1.57'>
+      <PlaneSensor DEF='MOVE_LAMP' description='drag to move lamp' maxPosition='0.1 0.1' minPosition='-0.1 -0.1'/>
+      <Transform DEF='LAMP_TRANSFORM'>
+        <!-- Note that we are connecting a chain of behavior engines in these ROUTEs. The event types passed via each ROUTE must each match. -->
+        <ROUTE fromField='translation_changed' fromNode='MOVE_LAMP' toField='set_translation' toNode='LAMP_TRANSFORM'/>
+        <!-- Now rotate back so that actual geometry remains in original coordinate system -->
+        <Transform rotation='1 0 0 -1.57'>
+          <Shape>
+            <Cylinder height='0.01' radius='0.1'/>
+            <Appearance DEF='WHITE'>
+              <Material diffuseColor='.9 .9 .9'/>
+            </Appearance>
+          </Shape>
+          <Group>
+            <SphereSensor DEF='MOVE_FIRST_ARM' description='rotate first arm' offset='1 0 0 -0.7'/>
+            <Transform DEF='FIRST_ARM_TRANSFORM' center='0 -0.15 0' rotation='1 0 0 -0.7' translation='0 0.15 0'>
+              <ROUTE fromField='rotation_changed' fromNode='MOVE_FIRST_ARM' toField='set_rotation' toNode='FIRST_ARM_TRANSFORM'/>
+              <Shape DEF='LAMP_ARM'>
+                <Appearance DEF='LIGHT_BROWN'>
+                  <Material diffuseColor='.6 .6 .2'/>
+                </Appearance>
+                <Cylinder height='0.3' radius='0.01'/>
+              </Shape>
+              <Group>
+                <SphereSensor DEF='MOVE_SECOND_ARM' description='rotate second arm' offset='1 0 0 1.9'/>
+                <Transform DEF='SECOND_ARM_TRANSFORM' center='0 -0.15 0' rotation='1 0 0 1.9' translation='0 0.3 0'>
+                  <ROUTE fromField='rotation_changed' fromNode='MOVE_SECOND_ARM' toField='set_rotation' toNode='SECOND_ARM_TRANSFORM'/>
+                  <Shape USE='LAMP_ARM'/>
+                  <Group>
+                    <SphereSensor DEF='MOVE_LAMP_SHADE' description='rotate lamp shade' offset='1 0 0 -1.25'/>
+                    <Transform DEF='LAMP_SHADE_TRANSFORM' center='0 0.07 0' rotation='1 0 0 -1.25' translation='0 0.075 0'>
+                      <ROUTE fromField='rotation_changed' fromNode='MOVE_LAMP_SHADE' toField='set_rotation' toNode='LAMP_SHADE_TRANSFORM'/>
+                      <Shape>
+                        <Appearance>
+                          <Material diffuseColor='.1 .6 .6'/>
+                        </Appearance>
+                        <Cone bottom='false' bottomRadius='0.12' height='0.15'/>
+                      </Shape>
+                      <Transform translation='0 -0.05 0'>
+                        <Shape>
+                          <Appearance>
+                            <Material diffuseColor='.4 .4 .1' emissiveColor='.8 .8 .2'/>
+                          </Appearance>
+                          <Sphere radius='0.05'/>
+                        </Shape>
+                        <SpotLight beamWidth='1.570796' color='.8 .8 .1' cutOffAngle='.785398' direction='0 -1 0'/>
+                      </Transform>
+                    </Transform>
+                  </Group>
+                </Transform>
+              </Group>
+            </Transform>
+          </Group>
+        </Transform>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

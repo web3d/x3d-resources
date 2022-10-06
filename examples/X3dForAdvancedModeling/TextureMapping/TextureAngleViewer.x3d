@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TextureAngleViewer.x3d' name='title'/>
+    <meta content='View a given texture from different angles to judge readability, example use is a QR code.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='23 April 2013' name='created'/>
+    <meta content='20 April 2020' name='modified'/>
+    <meta content='color mapper in scene for varying Background contrast' name='TODO'/>
+    <meta content='second X-axis angle slider' name='TODO'/>
+    <meta content='TextureAngleViewer36degrees.png' name='Image'/>
+    <meta content='images/QrNpsEduCode.png' name='Image'/>
+    <meta content='http://qr.nps.edu' name='reference'/>
+    <meta content='https://zxing.appspot.com/generator' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/TextureAngleViewer.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ================================ -->
+    <WorldInfo title='Texture Angle Viewer'/>
+    <Background skyColor='0.72549 1 0.721569'/>
+    <Viewpoint description='Texture angle viewer' position='0 0 11'/>
+    <NavigationInfo DEF='NavigationInfoFinal' type='"NONE"'/>
+    <!-- <NavigationInfo DEF='NavigationInfoDebug' type='"EXAMINE" "ANY"'/> -->
+    <!-- ================================ -->
+    <Transform translation='0 3.6 0'>
+      <Shape>
+        <Text DEF='AngleOutputText' string='"Texture angle viewer"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.7'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0.2 0.4 0.8'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <!-- ================================ -->
+    <Anchor description='this QR code links to http://qr.nps.edu' url='"http://qr.nps.edu"'>
+      <Transform DEF='ImageTransform'>
+        <Shape>
+          <!-- TODO add a single geometry node here -->
+          <IndexedFaceSet coordIndex='1 0 2 3 0 -1'>
+            <Coordinate point='-3 -3 0 3 -3 0 3 3 0 -3 3 0 -3 -3 0'/>
+          </IndexedFaceSet>
+          <Appearance>
+            <Material/>
+            <ImageTexture url='"images/QrNpsEduCode.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/images/QrNpsEduCode.png"'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Anchor>
+    <!-- ================================ -->
+    <Transform DEF='SliderSituated' translation='0 -3.6 0'>
+      <Transform DEF='SliderKnobTransform'>
+        <PlaneSensor DEF='SliderPlaneSensor' description='select and drag to change angle values' maxPosition='3 0' minPosition='-3 0'/>
+        <Transform rotation='0 0 1 1.570796'>
+          <Shape>
+            <Cylinder DEF='SliderKnob' height='0.2' radius='0.2'/>
+            <Appearance DEF='Metals13Appearance'>
+              <Material ambientIntensity='0.25641' diffuseColor='0.222308 0.15428 0' specularColor='0.882653 0.860832 0.687861'>
+                <!-- Universal Media Library: Metals 13 -->
+              </Material>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- SliderBar does not rotate or drag with SliderKnob -->
+      <Transform DEF='SliderBar' rotation='0 0 1 1.570796'>
+        <Shape>
+          <Cylinder height='6' radius='0.05'/>
+          <Appearance USE='Metals13Appearance'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <!-- ================================ -->
+    <Script DEF='SliderScript'>
+      <field accessType='inputOnly' appinfo='input provided by SliderKnobTransform PlaneSensor output' name='set_translation' type='SFVec3f'/>
+      <field accessType='initializeOnly' name='angle' type='SFFloat' value='0.0'/>
+      <field accessType='initializeOnly' name='y' type='SFFloat' value='0.0'/>
+      <field accessType='outputOnly' appinfo='output provided for ImageTransform rotation' name='rotation_changed' type='SFRotation'/>
+      <!-- Note that trackPoint_changed events represent unclamped intersection points on plane surface. Browsers can interpret drags off of the surface in various ways. Note that translation_changed events are clamped by minPosition/maxPosition and thus may be preferable. -->
+      <field accessType='outputOnly' appinfo='output provided for SliderKnobTransform translation' name='translation_changed' type='SFVec3f'/>
+      <field accessType='outputOnly' appinfo='output provided for degrees of rotation in Text node' name='angleMFString_changed' type='MFString'/>
+      <field accessType='initializeOnly' appinfo='console output for debugging' name='tracePrint' type='SFBool' value='true'/>
+      <![CDATA[
+ecmascript:
+
+function set_translation (eventValue)
+{
+   x = eventValue.x;
+   if (tracePrint)
+   {
+      Browser.println ("========================");
+      Browser.println ('                  x=' + x);
+   }
+   // clamp values to prevent overrun/underrun, in case minPosition/maxPosition fail
+   if (x >  3.0) x =  3.0;
+   if (x < -3.0) x = -3.0;
+
+   translation_changed = eventValue;
+   angle = Math.round(x * 90.0 / 3.0);
+   rotation_changed = new SFRotation (0, 1, 0, angle * Math.PI / 180.0);
+   var angleString = angle.toString() + ' degrees'; // JavaScript string
+   
+// angleMFString_changed = new MFString (new SFString(angleString)); // only works in InstantReality
+   angleMFString_changed = new MFString (angleString); // works in several players but not all
+// angleMFString_changed = [ angleString ]; // Use JavaScript string array instead of MFString doesn't work
+   
+   if (tracePrint)
+   {
+      Browser.println ('          clamped x=' + x);
+      Browser.println ("    set_translation=" + eventValue);
+      Browser.println ("translation_changed=" + translation_changed.toString() + ", rotation_changed=" + rotation_changed.toString());
+      Browser.println ("angle=" + angle + ", angleString=" + angleString + ", angleMFString_changed=" + angleMFString_changed.toString());
+   }
+/*
+example console excerpt:
+========================
+                  x=-0.05248255282640457
+          clamped x=-0.05248255282640457
+    set_translation=-0.05248255282640457 0 0
+translation_changed=-0.05248255282640457 0 0, rotation_changed=0 1 0 -0.03490658503988659
+angle=-2, angleString=-2 degrees, angleMFString_changed="-2 degrees"
+========================
+*/
+}
+]]>
+    </Script>
+    <ROUTE fromField='translation_changed' fromNode='SliderPlaneSensor' toField='set_translation' toNode='SliderScript'/>
+    <ROUTE fromField='translation_changed' fromNode='SliderScript' toField='translation' toNode='SliderKnobTransform'/>
+    <ROUTE fromField='rotation_changed' fromNode='SliderScript' toField='rotation' toNode='ImageTransform'/>
+    <ROUTE fromField='angleMFString_changed' fromNode='SliderScript' toField='string' toNode='AngleOutputText'/>
+  </Scene>
+</X3D>

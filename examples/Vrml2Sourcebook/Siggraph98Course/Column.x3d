@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Column.x3d' name='title'/>
+    <meta content='Gothic marble column: this file builds a column, such as might be found in gothic architecture. The column is used in multiple other examples.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Columns.x3d' name='reference'/>
+    <meta content='originals/column.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0500.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Column.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Column.x3d'/>
+    <Collision enabled='false'>
+      <Transform translation='0.0 0.2 0.0'>
+        <Shape>
+          <Appearance>
+            <TextureTransform rotation='0.1' scale='1.0 0.1' translation='0.2 0.2'/>
+            <Material DEF='MarbleMaterial' ambientIntensity='0.4'/>
+            <ImageTexture DEF='MarbleImage' url='"marble_g.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/marble_g.jpg"'/>
+          </Appearance>
+          <Box size='0.9 0.4 0.9'/>
+        </Shape>
+      </Transform>
+    </Collision>
+    <Transform translation='0.0 2.5 0.0'>
+      <Shape>
+        <Appearance>
+          <Material USE='MarbleMaterial'/>
+          <ImageTexture USE='MarbleImage'/>
+        </Appearance>
+        <Cylinder bottom='false' height='4.2' radius='0.4' top='false'/>
+      </Shape>
+    </Transform>
+    <Collision enabled='false'>
+      <Transform translation='0.0 4.6 0.0'>
+        <Shape>
+          <Appearance>
+            <TextureTransform rotation='0.4' scale='1.0 0.2' translation='0.1 0.3'/>
+            <Material USE='MarbleMaterial'/>
+            <ImageTexture USE='MarbleImage'/>
+          </Appearance>
+          <IndexedFaceSet coordIndex='0 1 5 4 -1 1 2 6 5 -1 2 3 7 6 -1 3 0 4 7 -1'>
+            <Coordinate point='-0.3 0.0 0.3 0.3 0.0 0.3 0.3 0.0 -0.3 -0.3 0.0 -0.3 -0.4 0.2 0.4 0.4 0.2 0.4 0.4 0.2 -0.4 -0.4 0.2 -0.4'/>
+          </IndexedFaceSet>
+        </Shape>
+      </Transform>
+      <Transform translation='0.0 4.85 0.0'>
+        <Shape>
+          <Appearance>
+            <TextureTransform rotation='0.5' scale='1.0 0.2' translation='0.2 0.3'/>
+            <Material USE='MarbleMaterial'/>
+            <ImageTexture USE='MarbleImage'/>
+          </Appearance>
+          <Box size='1.0 0.1 1.0'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0.0 5.05 0.0'>
+        <Shape>
+          <Appearance>
+            <TextureTransform rotation='0.4' scale='1.0 0.2' translation='0.1 0.3'/>
+            <Material USE='MarbleMaterial'/>
+            <ImageTexture USE='MarbleImage'/>
+          </Appearance>
+          <Box size='1.1 0.3 1.1'/>
+        </Shape>
+      </Transform>
+    </Collision>
+  </Scene>
+</X3D>

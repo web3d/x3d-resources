@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='HomeInCreteGreece.x3d' name='title'/>
+    <meta content='Something Special My Home Villa In Crete Greece' name='description'/>
+    <meta content='Mantzouris Georgios' name='creator'/>
+    <meta content='27 July 2004' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/HomeInCreteGreece.x3d' name='identifier'/>
+    <meta content='Copyright (c) Mantzouris Georgios. 2004' name='rights'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- This background sky color has been taken from https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/SweetHomeLowDetail.x3d -->
+    <WorldInfo title='HomeInCreteGreece.x3d'/>
+    <Background backUrl='"urn:web3d:media:textures/panoramas/ocean_3_back.jpg" "ocean_3_back.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/ocean_3_back.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/ocean_3_back.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/ocean_3_back.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/ocean_3_back.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/ocean_3_back.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/ocean_3_back.jpg"' bottomUrl='"urn:web3d:media:textures/panoramas/ocean_3_bottom.jpg" "ocean_3_bottom.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/ocean_3_bottom.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/ocean_3_bottom.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/ocean_3_bottom.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/ocean_3_bottom.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/ocean_3_bottom.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/ocean_3_bottom.jpg"' frontUrl='"urn:web3d:media:textures/panoramas/ocean_3_front.jpg" "ocean_3_front.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/ocean_3_front.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/ocean_3_front.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/ocean_3_front.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/ocean_3_front.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/ocean_3_front.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/ocean_3_front.jpg"' groundAngle='0.1 1.309 1.570796' groundColor='0 0 0 0 0.1 0.3 0 0.2 0.5 0 0.3 0.8' leftUrl='"urn:web3d:media:textures/panoramas/ocean_3_left.jpg" "ocean_3_left.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/ocean_3_left.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/ocean_3_left.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/ocean_3_left.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/ocean_3_left.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/ocean_3_left.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/ocean_3_left.jpg"' rightUrl='"urn:web3d:media:textures/panoramas/ocean_3_right.jpg" "ocean_3_right.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/ocean_3_right.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/ocean_3_right.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/ocean_3_right.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/ocean_3_right.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/ocean_3_right.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/ocean_3_right.jpg"' skyAngle='0.1 0.15 1.309 1.571' skyColor='0.4 0.4 0.1 0.4 0.4 0.1 0 0.1 0.3 0 0.2 0.6 0.8 0.8 0.8' topUrl='"urn:web3d:media:textures/panoramas/ocean_3_top.jpg" "ocean_3_top.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/ocean_3_top.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/ocean_3_top.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/ocean_3_top.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/ocean_3_top.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/ocean_3_top.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/ocean_3_top.jpg"'/>
+    <Viewpoint description='FAR AWAY' position='0 100 500'/>
+    <Viewpoint description='FRONT VIEW' position='0 20 300'/>
+    <Viewpoint description='RIGHT VIEW' orientation='0 1 0 1.5' position='300 20 0'/>
+    <Viewpoint description='BACK VIEW' orientation='0 1 0 -3.2' position='0 20 -300'/>
+    <Viewpoint description='LEFT VIEW' orientation='0 1 0 -1.57' position='-300 80 -50'/>
+    <Viewpoint description='UP VIEW' orientation='1 0 0 -1.57' position='0 400 0'/>
+    <Viewpoint description='HELLO CRETE VIEW' position='0 200 200'/>
+    <Group DEF='BASE'>
+      <Transform DEF='GROUND' translation='0 0 -75'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' shininess='1'/>
+          </Appearance>
+          <Box size='200 0.5 200'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='POOL' translation='0 -14 70'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0 1' emissiveColor='0 0 1' shininess='0.8' specularColor='0 0 1' transparency='0.8'/>
+          </Appearance>
+          <Box size='100 10 55'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_FRONTYARD_WALL' translation='52.5 -3 25'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.3 0.3 0.3' emissiveColor='1 0 0' shininess='0.7' specularColor='1 0 0'/>
+          </Appearance>
+          <Box size='95 15 0.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_FRONTYARD_WALL' translation='-52.5 -3 25'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.3 0.3 0.3' emissiveColor='1 0 0' shininess='0.7' specularColor='1 0 0'/>
+          </Appearance>
+          <Box size='95 15 0.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='FIRST_STAIR_IN_FRONT_OF_POOL' translation='0 -8 30'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 2 0.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='SECOND_STAIR_IN_FRONT_OF_POOL' translation='0 -7 29'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 0.2 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='THIRD_STAIR_IN_FRONT_OF_POOL' translation='0 -6 28'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 2 0.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='FOURTH_STAIR_IN_FRONT_OF_POOL' translation='0 -5 27'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 0.2 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='FIFTH_STAIR_IN_FRONT_OF_POOL' translation='0 -4 26'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 2 0.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='SIXTH_STAIR_IN_FRONT_OF_POOL' translation='0 -3 25'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 0.2 1.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='SEVENTH_STAIR_IN_FRONT_OF_POOL' translation='0 -1.5 24.5'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 0' shininess='0.8'/>
+          </Appearance>
+          <Box size='10 2.5 0.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='GROUND_IN_FRONT_OF_THE_POOL' translation='0 -9 25'>
+        <Shape>
+          <Box size='200 0.2 35'/>
+          <Appearance>
+            <ImageTexture DEF='GrassForCretanHouse' url='"grass.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/grass.jpg"'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='GROUND_RIGHT_OF_THE_POOL' translation='75 -9 60'>
+        <Shape>
+          <Box size='50 0.2 80'/>
+          <Appearance>
+            <ImageTexture USE='GrassForCretanHouse'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='GROUND_LEFT_OF_THE_POOL' translation='-75 -9 60'>
+        <Shape>
+          <Box size='50 0.2 80'/>
+          <Appearance>
+            <ImageTexture USE='GrassForCretanHouse'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_MARGIN_OF_THE_POOL' translation='50 -9 68'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0.5 0.5' emissiveColor='0 0.5 0.5' shininess='0.8'/>
+          </Appearance>
+          <Box size='5 0.2 50'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_MARGIN_OF_THE_POOL' translation='-50 -9 68'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0.5 0.5' emissiveColor='0 0.5 0.5' shininess='0.8'/>
+          </Appearance>
+          <Box size='5 0.2 50'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='MARGIN_IN_FRONT_OF_THE_POOL' translation='0 -9 45'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0.5 0.5' emissiveColor='0 0.5 0.5' shininess='0.8'/>
+          </Appearance>
+          <Box size='100 0.2 5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='GROUND_AT_THE_END_OF_THE_POOL' translation='0 -9 120'>
+        <Shape>
+          <Box size='200 0.2 50'/>
+          <Appearance>
+            <ImageTexture USE='GrassForCretanHouse'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='MARGIN_AT_THE_END_OF_THE_POOL' translation='0 -9 95'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0.5 0.5' emissiveColor='0 0.5 0.5' shininess='0.8'/>
+          </Appearance>
+          <Box size='100 0.2 5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='WAVES_IN_POOL' translation='0 -14 70'>
+        <Shape>
+          <Appearance>
+            <Material DEF='WAVES' diffuseColor='1 0 0' emissiveColor='1 0 0' shininess='0.7'/>
+          </Appearance>
+          <Box size='100 10 55'/>
+        </Shape>
+        <TimeSensor DEF='CLOCK_1' cycleInterval='2' loop='true'/>
+        <ColorInterpolator DEF='COLOR_OF_THE_POOL_WAVES' key='0.2 0.5 0.5 0.6' keyValue='0 0.1 0.6 0 0.2 0.7 0 0.3 0.8 0 0.4 0.9'/>
+        <ROUTE fromField='fraction_changed' fromNode='CLOCK_1' toField='set_fraction' toNode='COLOR_OF_THE_POOL_WAVES'/>
+        <ROUTE fromField='value_changed' fromNode='COLOR_OF_THE_POOL_WAVES' toField='set_emissiveColor' toNode='WAVES'/>
+      </Transform>
+      <Transform DEF='SUN' rotation='0 1 0 .45' translation='-150 200 -75'>
+        <Shape>
+          <Appearance>
+            <Material DEF='SUNNY' diffuseColor='0.5 0.5 0' emissiveColor='0.5 0.5 0' shininess='0.9'/>
+          </Appearance>
+          <Sphere radius='10'/>
+        </Shape>
+        <TimeSensor DEF='CLOCK_2' cycleInterval='2' loop='true'/>
+        <ColorInterpolator DEF='SUN_OF_CRETE' key='0.2 0.5 0.5 0.6' keyValue='0.5 0.5 0 0.6 0.6 0 0.7 0.7 0 0.8 0.8 0'/>
+        <ROUTE fromField='fraction_changed' fromNode='CLOCK_2' toField='set_fraction' toNode='SUN_OF_CRETE'/>
+        <ROUTE fromField='value_changed' fromNode='SUN_OF_CRETE' toField='set_emissiveColor' toNode='SUNNY'/>
+        <TimeSensor DEF='CLOCK_3' cycleInterval='100' loop='true'/>
+        <PositionInterpolator DEF='SUN_PATH' key='0.6 0.7 0.8 0.9 1.0 0.9 0.8 0.7 0.6' keyValue='-300.0 200.0 -50.0 -50.0 210.0 -50.0 0.0 215.0 -50.0 50.0 220.0 -50.0 300.0 225.0 -50.0 50.0 220.0 -50.0 0.0 215.0 -50.0 -50.0 210.0 -50.0 -300.0 190.0 -50.0'/>
+        <ROUTE fromField='fraction_changed' fromNode='CLOCK_3' toField='set_fraction' toNode='SUN_PATH'/>
+        <ROUTE fromField='value_changed' fromNode='SUN_PATH' toField='set_translation' toNode='SUN'/>
+      </Transform>
+      <Transform DEF='HELLO_CRETE' translation='-100 200 -50'>
+        <Shape>
+          <Text string='"Hello CRETE!"'>
+            <FontStyle size='40' style='BOLD'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='1 1 0'/>
+          </Appearance>
+        </Shape>
+        <TouchSensor DEF='CRETAN_SONG' description='click on the text to hear a traditional cretan song'/>
+        <Sound minBack='5' minFront='5'>
+          <AudioClip DEF='SONG' description='traditional Cretan song' url='"pano.wav" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/pano.wav"'>
+            <MetadataString name='OriginalSite' value='"http://www.olymbos.org/music/pano.wav"'/>
+          </AudioClip>
+        </Sound>
+        <ROUTE fromField='touchTime' fromNode='CRETAN_SONG' toField='set_startTime' toNode='SONG'/>
+      </Transform>
+      <Transform DEF='IN_FRONT_HOUSE_WINDOW_LEFT' translation='-85 15 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.3 0.3 0' transparency='0.8'/>
+          </Appearance>
+          <Box size='20 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='IN_FRONT_OF_HOUSE_WINDOW_RIGHT' translation='-65 15 0'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='0.5' diffuseColor='0.3 0.3 0' transparency='0.6'/>
+          </Appearance>
+          <Box size='20 30 1'/>
+        </Shape>
+        <TouchSensor DEF='TOUCH_WINDOW_RIGHT' description='point at box to spin it'/>
+        <TimeSensor DEF='CLOCK_4' cycleInterval='30' enabled='false' loop='true'/>
+        <OrientationInterpolator DEF='WINDOW_PATH' key='0.0 0.25 0.50 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 1.57 0.0 1.0 0.0 3.14 0.0 1.0 0.0 6.28'/>
+        <ROUTE fromField='isOver' fromNode='TOUCH_WINDOW_RIGHT' toField='set_enabled' toNode='CLOCK_4'/>
+        <ROUTE fromField='fraction_changed' fromNode='CLOCK_4' toField='set_fraction' toNode='WINDOW_PATH'/>
+        <ROUTE fromField='value_changed' fromNode='WINDOW_PATH' toField='set_rotation' toNode='IN_FRONT_OF_HOUSE_WINDOW_RIGHT'/>
+      </Transform>
+      <Transform DEF='LEFT_BASE_COLUMN' translation='-95 15 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.1'/>
+          </Appearance>
+          <Box size='10 30 5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='SECOND_BASE_COLUMN' translation='-50 15 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.1'/>
+          </Appearance>
+          <Box size='10 30 5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='CENTRAL_LEFT_BASE_WINDOW' translation='-40 15 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.4 0.0' transparency='0.6'/>
+          </Appearance>
+          <Box size='10 30 1'/>
+        </Shape>
+        <PlaneSensor DEF='SLIDE_2' description='click and drag to open the window' maxPosition='-40 15' minPosition='-48 15'/>
+        <ROUTE fromField='translation_changed' fromNode='SLIDE_2' toField='set_translation' toNode='CENTRAL_LEFT_BASE_WINDOW'/>
+      </Transform>
+      <Transform DEF='CENTRAL_RIGHT_BASE_WINDOW' translation='-30 15 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.4 0.0' transparency='0.7'/>
+          </Appearance>
+          <Box size='10 30 1'/>
+        </Shape>
+        <PlaneSensor DEF='SLIDE_1' description='click and drag to open the window' maxPosition='-22 15' minPosition='-30 15'/>
+        <ROUTE fromField='translation_changed' fromNode='SLIDE_1' toField='set_translation' toNode='CENTRAL_RIGHT_BASE_WINDOW'/>
+      </Transform>
+      <Transform DEF='THIRD_BASE_COLUMN' translation='-20 15 1'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.1'/>
+          </Appearance>
+          <Box size='10 30 5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_BASE_LEFT_WINDOW' translation='-10 15 1'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.1' transparency='0.7'/>
+          </Appearance>
+          <Box size='30 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BETWEEN_FRONT_DOORS' translation='5 15 1'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.3 0.3 0.1'/>
+          </Appearance>
+          <Box size='1 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_BASE_RIGHT_WINDOW' translation='6 15 1'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.1' transparency='0.7'/>
+          </Appearance>
+          <Box size='30 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='FOURTH_BASE_COLUMN' translation='30 15 1'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.1'/>
+          </Appearance>
+          <Box size='28 30 5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='FIRST_FLOOR' translation='0 30 0'>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 1' shininess='0.9'/>
+          </Appearance>
+          <Extrusion crossSection='0 0 45 0 100 -100 0 -100 -100 -100 -100 0 0 0' solid='false' spine='0 0 0 0 5 0'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='KAGELA_ON_ROOF' translation='-28 40 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' shininess='1' transparency='0.5'/>
+          </Appearance>
+          <Box size='143 10 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='KAGELA_RIGHT' center='70 30 -30' rotation='0 1 0 1.067' translation='-7 40 -67'>
+        <Shape>
+          <Appearance>
+            <Material shininess='1' transparency='0.5'/>
+          </Appearance>
+          <Box size='50 10 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='FIRST_FLOOR_LEFT_WALL_1' translation='-87 50 -40'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='25 30 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_WALL_1' translation='-98 15 -15'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='2 30 30'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_WINDOW' translation='-100 20 -35'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='0.431' diffuseColor='0.376 0.376 0.525' emissiveColor='0.4 0.4 0.4' shininess='0.83' specularColor='0.94 0.54 0' transparency='0.439'/>
+          </Appearance>
+          <Box size='0.5 10 10'/>
+        </Shape>
+        <TouchSensor DEF='TOUCH_LEFT_WINDOW' description='point at window to spin it'/>
+        <TimeSensor DEF='CLOCK_5' cycleInterval='30' enabled='false' loop='true'/>
+        <OrientationInterpolator DEF='LEFT_WINDOW_PATH' key='0.0 0.25 0.50 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 1.57 0.0 1.0 0.0 3.14 0.0 1.0 0.0 6.28'/>
+        <ROUTE fromField='isOver' fromNode='TOUCH_LEFT_WINDOW' toField='set_enabled' toNode='CLOCK_5'/>
+        <ROUTE fromField='fraction_changed' fromNode='CLOCK_5' toField='set_fraction' toNode='LEFT_WINDOW_PATH'/>
+        <ROUTE fromField='value_changed' fromNode='LEFT_WINDOW_PATH' toField='set_rotation' toNode='LEFT_WINDOW'/>
+      </Transform>
+      <Transform DEF='LEFT_WALL_2' translation='-98 15 -70'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='2 30 60'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BOTTOM_WALL_OF_LEFT_WINDOW' translation='-98 7.2 -35'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='2 15.5 10'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='UPPER_WALL_OF_LEFT_WINDOW' translation='-98 30 -35'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='2 10 10'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_WALL_1' translation='-74 15 -100'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='50 30 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_WALL_2' translation='35 8 -100'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='130 15 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_GLASS_WINDOWS' translation='35 23 -100'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' transparency='0.3'/>
+          </Appearance>
+          <Box size='130 15 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_BASE_WALL' center='32.5 0 0' rotation='0 1 0 2.63' translation='0 15 -50'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='5 30 80'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_WINDOWS_FIRST_FLOOR_1' translation='-70 50 -40'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' transparency='0.3'/>
+          </Appearance>
+          <Box size='10 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_WINDOW_FIRST_FLOOR_2' translation='-60 50 -40'>
+        <Transform DEF='RightWindowFirstFloor2'>
+          <Shape>
+            <Box size='10 30 1'/>
+            <Appearance DEF='WINDOW_COLOR'>
+              <Material diffuseColor='1 1 1' transparency='0.3'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <CylinderSensor DEF='RIGHT_WINDOW_FIRST_FLOOR_2_SENSOR' description='click and drag to open the window' maxAngle='1.57'/>
+        <ROUTE fromField='rotation_changed' fromNode='RIGHT_WINDOW_FIRST_FLOOR_2_SENSOR' toField='set_rotation' toNode='RightWindowFirstFloor2'/>
+      </Transform>
+      <Transform DEF='FIRST_FLOOR_COLUMN_LEFT' translation='-52 50 -40'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='5 30 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_WINDOWS_FIRST_FLOOR_RIGHT_1' translation='-45 50 -40'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' transparency='0.5'/>
+          </Appearance>
+          <Box size='10 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_WINDOWS_FIRST_FLOOR_RIGHT_2' translation='-35 50 -40'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' transparency='0.5'/>
+          </Appearance>
+          <Box size='10 30 1'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_FIRST_FLOOR_WALL' translation='-99 50 -69'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='2 30 60'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_FIRST_FLOOR_WALL' translation='-65 50 -100'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='70 30 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_FIRST_FLOOR_HALF_ROOF' rotation='0 0 1 -0.17' translation='-100 65 -70'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1'/>
+          </Appearance>
+          <Extrusion DEF='ROOF' creaseAngle='3.14' crossSection='1 0 1 -30 -1 -30 -1 0 -1 30 1 30' solid='false' spine='0 0 0 10 10 0 20 20 0 30 30 0 0 0 0'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_FIRST_FLOOR_HALF_ROOF' rotation='0 0 1 -1.4' translation='-65 90 -70'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1'/>
+          </Appearance>
+          <Extrusion creaseAngle='3.14' crossSection='1 0 1 -30 -1 -30 -1 0 -1 30 1 30' solid='false' spine='30 30 0 20 20 0 10 10 0 0 0 0'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_DOOR' translation='-40 15 -100'>
+        <Transform DEF='BackDoor'>
+          <Shape>
+            <Box size='19 30 1'/>
+            <Appearance DEF='DOOR_COLOR'>
+              <Material diffuseColor='0.3 0 0' shininess='1'/>
+            </Appearance>
+          </Shape>
+          <CylinderSensor DEF='BACK_DOOR_SENSOR' description='front door' maxAngle='-3.14'/>
+          <ROUTE fromField='rotation_changed' fromNode='BACK_DOOR_SENSOR' toField='set_rotation' toNode='BackDoor'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='POOL_CHAIR_1'>
+        <Transform rotation='0 1 0 -0.8' scale='5 5 5' translation='-80 -3 50'>
+          <Shape DEF='body1'>
+            <Extrusion crossSection='3 0.1 3 0.2 0 0.2 -0.25 0.1 -0.5 0 -0.9 -0.5 -1.2 -1 -1.1 -1 -0.8 -0.5 -0.4 0 0 0.1 3 0.1' spine='0 0 0 0 0 2'/>
+            <Appearance>
+              <Material diffuseColor='0 0 1' transparency='0.4'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform rotation='0 1 0 -0.8' scale='5 5 5' translation='-80 -3 50'>
+          <Shape DEF='leg1'>
+            <Extrusion crossSection='-1.2 0.3 -1.2 0.45 -1.1 0.45 -1.1 0.35 2.9 0.35 2.9 0.7 3 0.7 3 0.3 -1.2 0.3' spine='0 0 0 0 0 0.1'/>
+            <Appearance>
+              <Material diffuseColor='0 0 1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform rotation='0 1 0 -0.8' scale='5 5 5' translation='-87 -3 55'>
+          <Shape DEF='leg2'>
+            <Extrusion crossSection='-1.2 0.3 -1.2 0.45 -1.1 0.45 -1.1 0.35 2.9 0.35 2.9 0.7 3 0.7 3 0.3 -1.2 0.3' spine='0 0 0 0 0 0.1'/>
+            <Appearance>
+              <Material diffuseColor='0 0 1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <!-- Part from the project PoolChairUmbrella -->
+        <CylinderSensor DEF='Chair1Sensor' description='click and drag to move the chair' maxAngle='-3.18' minAngle='-3.14'/>
+        <ROUTE fromField='rotation_changed' fromNode='Chair1Sensor' toField='set_rotation' toNode='POOL_CHAIR_1'/>
+      </Transform>
+      <Transform DEF='POOL_CHAIR_2'>
+        <Transform rotation='0 1 0 0.8' scale='7 7 7' translation='-40 -3 130'>
+          <Shape>
+            <Extrusion crossSection='3 0.1 3 0.2 0 0.2 -0.25 0.1 -0.5 0 -0.9 -0.5 -1.2 -1 -1.1 -1 -0.8 -0.5 -0.4 0 0 0.1 3 0.1' spine='0 0 0 0 0 2'/>
+            <Appearance>
+              <Material diffuseColor='0 0 1' transparency='0.4'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform rotation='0 1 0 0.8' scale='7 7 7' translation='-40 -3 130'>
+          <Shape>
+            <Extrusion crossSection='-1.2 0.3 -1.2 0.45 -1.1 0.45 -1.1 0.35 2.9 0.35 2.9 0.7 3 0.7 3 0.3 -1.2 0.3' spine='0 0 0 0 0 0.1'/>
+            <Appearance>
+              <Material diffuseColor='0 0 1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform rotation='0 1 0 0.8' scale='7 7 7' translation='-30 -3 137'>
+          <Shape>
+            <Extrusion crossSection='-1.2 0.3 -1.2 0.45 -1.1 0.45 -1.1 0.35 2.9 0.35 2.9 0.7 3 0.7 3 0.3 -1.2 0.3' spine='0 0 0 0 0 0.1'/>
+            <Appearance>
+              <Material diffuseColor='0 0 1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <!-- Part from the project PoolChairUmbrella -->
+        <CylinderSensor DEF='Chair2Sensor' description='click and drag to move the pool chair' maxAngle='-3.14'/>
+        <ROUTE fromField='rotation_changed' fromNode='Chair2Sensor' toField='set_rotation' toNode='POOL_CHAIR_2'/>
+      </Transform>
+      <Transform DEF='FIRST_FLOOR_BALCONY_LEFT_WALL' translation='-97.5 5 14'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+          </Appearance>
+          <Box size='5 10 22.5'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_GROUND' translation='150 -9 -18'>
+        <Shape>
+          <Box size='100 2 325'/>
+          <Appearance>
+            <ImageTexture USE='GrassForCretanHouse'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_VERTICAL_WALL' translation='100 -5 -75'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Box size='2 10 200'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='MIDDLE_FIRST_FLOOR_HOUSE'>
+        <Transform DEF='LEFT_FRONT_COLUMN' translation='-28 65 -50'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.33 0 0'/>
+            </Appearance>
+            <Box size='5 60 5'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='RIGHT_FRONT_COLUMN' translation='12 65 -50'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.33 0 0'/>
+            </Appearance>
+            <Box size='5 60 5'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='LEFT_FRONT_GLASS' rotation='0 1 0 -0.5' translation='-18 65 -45'>
+          <Shape>
+            <Appearance>
+              <Material shininess='1' transparency='0.5'/>
+            </Appearance>
+            <Box size='20 60 1'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='RIGHT_FRONT_GLASS' rotation='0 1 0 -2.7' translation='0 65 -45'>
+          <Shape>
+            <Appearance>
+              <Material shininess='1' transparency='0.5'/>
+            </Appearance>
+            <Box size='20 60 1'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='RIGHT_WALL' translation='12 65 -75'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.33 0 0'/>
+            </Appearance>
+            <Box size='5 60 50'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='LEFT_WALL' translation='-28 80 -75'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.33 0 0'/>
+            </Appearance>
+            <Box size='5 30 50'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='BACK_WALL' translation='-10 64 -97.5'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.33 0 0'/>
+            </Appearance>
+            <Box size='40 62 5'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='CEILING' translation='-7.5 95 -70'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.4 0.1 0'/>
+            </Appearance>
+            <Box size='55 0.5 65'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='CEILING_PYRAMID' translation='-7 101 -70'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.4 0.1 0'/>
+            </Appearance>
+            <Cone bottomRadius='44' height='12'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='SMALL_COLUMN' translation='-30 50 -45'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.4 0.1 0'/>
+            </Appearance>
+            <Box size='5 30 10'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='RIGHT_FIRST_FLOOR_HOUSE'>
+        <Transform DEF='BACK' translation='55 55 -97.5'>
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+            </Appearance>
+            <Box size='85 40 5'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='RIGHT_WALL_RIGHT_HOUSE' rotation='0 1 0 2.63' translation='80 55 -70'>
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='1'/>
+            </Appearance>
+            <Box size='5 40 60'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='RIGHT_WINDOW_RIGHT_HOUSE' translation='52 55 -43'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='1 1 1' shininess='0.5' transparency='0.2'/>
+            </Appearance>
+            <Box size='30 40 2'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='LEFT_COLUMN_RIGHT_HOUSE' rotation='0 1 0 2.6' translation='25 55 -50'>
+          <Shape>
+            <Appearance>
+              <Material ambientIntensity='1' diffuseColor='0.8 0.8 0' emissiveColor='0.5 0.5 0.5' shininess='0.5'/>
+            </Appearance>
+            <Box size='30 40 5'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='RIGHT_HOUSE_RIGHT_ROOF' translation='55 81 -75'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='1 1 1'/>
+            </Appearance>
+            <Cone bottomRadius='49' height='12'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='FRONT_ROOF_TRIANGLE' translation='-65 64 -41'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Extrusion DEF='ROOFTRIANGLE' creaseAngle='1' crossSection='-38 0 38 0 0 -26' spine='0 0 0 0 0 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_ROOF_TRIANGLE' translation='-65 64 -100'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Extrusion USE='ROOFTRIANGLE'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_KAGELA' translation='-100 40 -20'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' shininess='1' transparency='0.5'/>
+          </Appearance>
+          <Box size='2 10 42'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_GROUND' translation='-150 -9 -18'>
+        <Shape>
+          <Box size='100 2 325'/>
+          <Appearance>
+            <ImageTexture USE='GrassForCretanHouse'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='LEFT_VERTICAL_WALL' translation='-100 -5 -75'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Box size='2 10 200'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACKYARD' translation='0 -9 -225'>
+        <Shape>
+          <Box size='400 1 100'/>
+          <Appearance>
+            <ImageTexture USE='GrassForCretanHouse'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='BACK_VERTICAL_WALL' translation='0 -5 -175'>
+        <Shape>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Box size='200 10 2'/>
+        </Shape>
+      </Transform>
+      <Transform DEF='RIGHT_DOOR' rotation='0 1 0 2.63' translation='90 15 -83'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1' shininess='1' transparency='0.5'/>
+          </Appearance>
+          <Box size='2 30 38'/>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

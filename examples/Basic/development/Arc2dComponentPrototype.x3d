@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "https://www.web3d.org/specifications/x3d-3.1.dtd">
+<X3D profile='Immersive' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.1.xsd'>
+  <head>
+    <meta content='Arc2dComponentPrototype.x3d' name='title'/>
+    <meta content='X3D Geometry2D component node, implemented as prototype for backwards compatibility with VRML 97. Arc2D specifies a 2D linear circular arc.' name='description'/>
+    <meta content='Christos Kalogrias, Don Brutzman, Ken Curtin, Duane Davis' name='creator'/>
+    <meta content='14 November 2003' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html' name='reference'/>
+    <meta content='Geometry2D component node (Arc2D)' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/Arc2dComponentPrototype.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ==================== -->
+    <WorldInfo title='Arc2dComponentPrototype.x3d'/>
+    <ProtoDeclare name='Arc2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='startAngle' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' name='endAngle' type='SFFloat' value='1.5707963265'/>
+        <field accessType='initializeOnly' name='radius' type='SFFloat' value='1'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- Only the first node counts as the node type of a prototype. This node must be a geometry node. -->
+        <IndexedLineSet DEF='ArcIndexPoints'>
+          <Coordinate DEF='Arc3DPoints'/>
+        </IndexedLineSet>
+        <!-- Any nodes after initial node in a ProtoBody is not rendered. -->
+        <Group>
+          <IS>
+            <connect nodeField='metadata' protoField='metadata'/>
+          </IS>
+          <Script DEF='Arc2dToFaceSet3d'>
+            <field accessType='initializeOnly' name='startAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='endAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='radius' type='SFFloat'/>
+            <field accessType='outputOnly' name='arcSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='arcIndexSet3d' type='MFInt32'/>
+            <IS>
+              <connect nodeField='startAngle' protoField='startAngle'/>
+              <connect nodeField='endAngle' protoField='endAngle'/>
+              <connect nodeField='radius' protoField='radius'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   numOfPoints = 100;
+
+   if (radius < 0)
+   {
+      Browser.print ('[Arc2D] Warning:  invalid value, radius=' + value + ' must instead be >= 0');
+   }
+
+   if ((startAngle < 0) || (startAngle >= 2 * Math.PI))
+   {
+      Browser.print ('[Arc2D] Warning: startAngle=' + startAngle + ' must be within range [0..2pi)');
+   }
+
+   if ((endAngle < 0) || (endAngle >= 2 * Math.PI))
+   {
+      Browser.print ('[Arc2D] Warning: endAngle=' + endAngle + ' must be within range [0..2pi)');
+   }
+
+   // equal startAngle, endAngle means draw full circle.
+   // high out-of-range endAngle is OK for local computation.
+   if (startAngle >= endAngle)
+      endAngle += (2 * Math.PI);
+
+   differAng = Math.abs((endAngle - startAngle))/numOfPoints;
+
+   for (i = 0; i <= numOfPoints; i++)
+   {
+      arcSet3d[i] = new SFVec3f (radius * Math.cos(startAngle + i * differAng), radius * Math.sin(startAngle + i * differAng), 0.0);
+      arcIndexSet3d[i] = i;
+   }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='arcSet3d' fromNode='Arc2dToFaceSet3d' toField='point' toNode='Arc3DPoints'/>
+          <ROUTE fromField='arcIndexSet3d' fromNode='Arc2dToFaceSet3d' toField='set_coordIndex' toNode='ArcIndexPoints'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+  </Scene>
+</X3D>

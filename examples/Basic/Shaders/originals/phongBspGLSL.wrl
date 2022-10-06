@@ -1,0 +1,112 @@
+#VRML V2.0 utf8
+
+Viewpoint {
+	position 0 0 6
+}
+Background {
+	skyColor 0.5 0.5 0.5
+}
+NavigationInfo {
+	headlight FALSE
+}
+Transform {
+    translation 3 4 2
+    render TRUE
+    children [								 
+        DEF eye_light-MT MatrixTransform {
+            children [
+                PointLight {
+                    location 0 0 0
+					ambientIntensity 0.2
+                    showProxyGeometry TRUE		  
+                }
+        	]
+    	}
+    	DEF eye_light-SS SpaceSensor {
+			# move the light around with the middle and right mouse button
+	    	ROUTE eye_light-SS.matrix_changed TO eye_light-MT.set_matrix
+		}
+    ]
+}															  
+
+Transform {
+	children [
+		Shape {
+			appearance Appearance {		 
+        		texture ImageTexture {
+            		url "earth.jpg"		 
+        		}
+				shaders DEF shader ComposedShader {	
+					exposedField SFInt32 earthTex 0
+					exposedField SFFloat ambient  .2
+					#exposedField SFVec3f diffuse  1 0 1
+					exposedField SFVec3f specular .7 .7 .7
+			
+					parts [
+						DEF vs ShaderPart {
+							type "vertex"
+							url "		
+							varying vec3 lightVec;
+							varying vec3 eyeVec;	
+							varying vec3 normalVec;	
+
+							void main(void)
+							{
+								gl_Position = ftransform();
+
+								gl_TexCoord[0] = gl_MultiTexCoord0;	 
+								normalVec = gl_Normal;
+
+								vec4 eyePos = gl_ModelViewMatrixInverse * 
+											  vec4(0., 0., 0., 1.);
+								eyeVec = eyePos.xyz - gl_Vertex.xyz;
+
+								vec4 lightPos = gl_ModelViewMatrixInverse * 
+												vec4(gl_LightSource[0].position.xyz, 1.0);
+    							lightVec = lightPos.xyz - gl_Vertex.xyz;
+							}
+							"
+						}
+				
+						DEF fs ShaderPart {
+							type "fragment"
+							url "		
+							uniform sampler2D earthTex;	
+
+							//uniform vec3 diffuse;
+							uniform vec3 specular;
+							uniform float ambient;
+
+							varying vec3 lightVec;
+							varying vec3 eyeVec;	
+							varying vec3 normalVec;		 
+
+							void main(void)
+							{	
+								vec3 texCol = texture2D(earthTex, gl_TexCoord[0].st).rgb;
+								 
+								vec3 lightVecFrag = normalize(lightVec);
+								vec3 eyeVecFrag = normalize(eyeVec);	
+								vec3 normalVecFrag = normalize(normalVec);	
+								vec3 halfVec = normalize( eyeVecFrag + lightVecFrag );	 
+				
+								float ndotl = max( dot( lightVecFrag, normalVecFrag ), 0.0 ); 
+								float ndoth = (ndotl > 0.0) ? 
+									  pow(max( dot( halfVec, normalVecFrag ), 0.0 ), 128.) : 0.0;  
+								
+							    //vec3 color = 0.2*ambient + ndotl*diffuse + ndoth*specular;	
+							    vec3 color = 0.2*ambient + ndotl*texCol + ndoth*specular;	
+                    
+								gl_FragColor = vec4(color, 1.0);
+							}
+        					"
+						}
+					]
+				}
+			}
+			geometry Sphere	{
+				radius 2.0
+			}
+		}
+	]
+}

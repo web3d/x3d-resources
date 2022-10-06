@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ExampleExternPrototype1.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Show example ExternProto syntax for a nonexistent prototype with simple-type fields.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/ExampleExternPrototype1.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ExampleExternPrototype1.x3d'/>
+    <ExternProtoDeclare appinfo='Show example ExternProto syntax for a nonexistent prototype with simple-type fields' name='MyExternProtoName' url='"ExampleExternPrototype1.x3d#MyExternProtoName" "https://www.web3d.org/x3d/content/examples/Basic/development/ExampleExternPrototype1.x3d#MyExternProtoName" "ExampleExternPrototype1.wrl#MyExternProtoName" "https://www.web3d.org/x3d/content/examples/Basic/development/ExampleExternPrototype1.wrl#MyExternProtoName"'>
+      <field accessType='inputOnly' name='field1' type='SFBool'/>
+      <field accessType='outputOnly' name='field2' type='SFFloat'/>
+      <field accessType='initializeOnly' name='field3' type='SFInt32'/>
+      <field accessType='inputOutput' name='field4' type='SFString'/>
+    </ExternProtoDeclare>
+    <ProtoInstance name='MyExternProtoName'>
+      <fieldValue name='field3' value='3'/>
+    </ProtoInstance>
+  </Scene>
+</X3D>

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>QuadTreeExamples Explanation</title>
+<meta name="description" content="X3D architectural examination">
+<meta name="author" content="Don Brutzman">
+<meta name="revised" content="26 February 2000">
+<meta name="generator" content="HTML-Kit">
+</head>
+<body>
+
+<h2 align="center">QuadTreeExamples Explanation</h2>
+
+<p>
+The following excerpt from
+<a href="QuadTreeExamplesStyled.html">QuadTreeExamples.xml</a>
+(autotranslated to VRML as
+<a href="QuadTreeExamplesTranslated.wrl">QuadTreeExamplesTranslated.wrl</a>)
+explains 
+</p>
+
+<ul>
+	<li>use of the <code>&lt;fieldValue&gt;</code> tag
+	<FONT color="GREEN">(originally named <code>&lt;defaultValue&gt;</code>)</FONT>, and</li>
+	<li>X3D extensibility without wrapper tags</li>
+</ul>
+
+<p>
+<b>First:  field-name information for the new extension
+is provided</b> either via a <code>&lt;ProtoDeclaration&gt;</code> tag (example&nbsp;3)
+or via a native DTD declaration (example&nbsp;4):
+</p>
+
+<pre>
+    &lt;!-- Example solution approach #3 --&gt;
+    &lt;ProtoDeclare name="QuadTree-TagChildren"&gt;
+      &lt;field type="Nodes" name="upperLeftNode"  IS="GroupE.children"/&gt;
+      &lt;field type="Nodes" name="upperRightNode" IS="GroupF.children"/&gt;
+      &lt;field type="Nodes" name="lowerLeftNode"  IS="GroupG.children"/&gt;
+      &lt;field type="Nodes" name="lowerRightNode" IS="GroupH.children"/&gt;
+      &lt;field type="Nodes" name="children"/&gt;
+      &lt;!-- PROTO body follows. --&gt;
+      &lt;Group&gt;
+        &lt;Group DEF="GroupE" /&gt;
+        &lt;Group DEF="GroupF" /&gt;
+        &lt;Group DEF="GroupG" /&gt;
+        &lt;Group DEF="GroupH" /&gt;
+      &lt;/Group&gt;
+    &lt;/ProtoDeclare&gt;
+
+&lt;!-- example solution definition #4 --&gt;
+&lt;!ELEMENT QuadTree-TagChildren ( &lt;!-- list of all nodes goes here --&gt; )* &gt;
+&lt;!ATTLIST QuadTree-TagChildren
+	upperLeftNode    IDREF #IMPLIED
+	upperRightNode   IDREF #IMPLIED
+	lowerLeftNode    IDREF #IMPLIED
+	lowerRightNode   IDREF #IMPLIED
+	nodeTypeHint   NMTOKEN #FIXED "Group"
+        DEF              ID    #IMPLIED
+	USE              IDREF #IMPLIED&gt;
+</pre>
+
+
+<p>
+<b>Next: the X3D scene instantiates the extension, </b>
+either via a <code>&lt;ProtoInstance&gt;</code> tag (example&nbsp;3)
+or via a native XML tag (example&nbsp;4):
+</p>
+
+<PRE>
+&lt;!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --&gt;    
+&lt;!-- Examples 3 and 4 use actual nodes for subtree references, via PROTOs or XML tags.   --&gt;    
+      &lt;Transform DEF="Example_3" translation="0 -2 0"&gt;
+        &lt;ProtoInstance name="QuadTree-TagChildren"&gt;
+          &lt;fieldValue fieldName="upperLeftNode"&gt;&lt;Transform USE="UPPER_LEFT"//fieldValue&gt;
+          &lt;fieldValue fieldName="upperRightNode"&gt;&lt;Transform USE="UPPER_RIGHT"/&gt;&lt;/fieldValue&gt;
+          &lt;fieldValue fieldName="lowerLeftNode"&gt;&lt;Transform USE="LOWER_LEFT"/&gt;&lt;/fieldValue&gt;
+          &lt;fieldValue fieldName="lowerRightNode"&gt;
+            &lt;Transform translation="-6 0 4"&gt;
+              &lt;Shape&gt;
+                &lt;Text string=' "QuadTree-TagChildren" "ProtoInstance" '/&gt;
+                &lt;Appearance USE="WHITE"/&gt;
+              &lt;/Shape&gt;
+            &lt;/Transform&gt;
+          &lt;/fieldValue&gt;
+        &lt;/ProtoInstance&gt;
+      &lt;/Transform&gt;
+&lt;!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --&gt;
+      &lt;Transform DEF="Example_4" translation="0 -6 0"&gt;
+        &lt;QuadTree-TagChildren&gt;
+          &lt;fieldValue fieldName="upperLeftNode"&gt;&lt;Transform USE="UPPER_LEFT"/&gt;&lt;/fieldValue&gt;
+          &lt;fieldValue fieldName="upperRightNode"&gt;&lt;Transform USE="UPPER_RIGHT"/&gt;&lt;/fieldValue&gt;
+          &lt;fieldValue fieldName="lowerLeftNode"&gt;&lt;Transform USE="LOWER_LEFT"/&gt;&lt;/fieldValue&gt;
+          &lt;fieldValue fieldName="lowerRightNode"&gt;
+            &lt;Transform translation="-6 0 4"&gt;
+              &lt;Shape&gt;
+                &lt;Text string=' "QuadTree-TagChildren" "Native tags" '/&gt;
+                &lt;Appearance USE="WHITE"/&gt;
+              &lt;/Shape&gt;
+            &lt;/Transform&gt;
+            &lt;WorldInfo info="this WorldInfo is here to demonstrate that the example is type MFNode/Nodes" /&gt;
+          &lt;/fieldValue&gt;
+        &lt;/QuadTree-TagChildren&gt;
+      &lt;/Transform&gt;
+    &lt;/Group&gt;
+&lt;!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --&gt;
+</PRE>
+
+<p>
+<b>Finally: excerpts from the autotranslated VRML shows preservation of customized field names in the PROTO: </b>
+</p>
+
+<pre>
+PROTO QuadTree-TagChildren [
+  exposedField MFNode upperLeftNode [ ] # IS GroupE.children
+  exposedField MFNode upperRightNode [ ] # IS GroupF.children
+  exposedField MFNode lowerLeftNode [ ] # IS GroupG.children
+  exposedField MFNode lowerRightNode [ ] # IS GroupH.children
+  exposedField MFNode children [ ]
+] {
+  Group {
+    children [
+      DEF GroupE Group {
+	children IS upperLeftNode
+      }
+      DEF GroupF Group {
+	children IS upperRightNode
+      }
+      DEF GroupG Group {
+	children IS lowerLeftNode
+      }
+      DEF GroupH Group {
+	children IS lowerRightNode
+      }
+    ]
+  }
+}
+
+# ... omitted examples 1 and 2 ...
+
+    DEF Example_3 Transform {
+      children [
+	QuadTree-TagChildren {
+	  children [
+	  ]
+	  upperLeftNode USE UPPER_LEFT
+	  upperRightNode USE UPPER_RIGHT
+	  lowerLeftNode USE LOWER_LEFT
+	  lowerRightNode Transform {
+	    children [
+	      Shape {
+		geometry Text {
+		  string [ "QuadTree-TagChildren" "ProtoInstance" ]
+		}
+		appearance USE WHITE
+	      }
+	    ]
+	    translation -6 0 4
+	  }
+	}
+      ]
+      translation 0 -2 0
+    }
+    DEF Example_4 Transform {
+      children [
+	QuadTree-TagChildren {
+	  children [
+	  ]
+	  upperLeftNode USE UPPER_LEFT
+	  upperRightNode USE UPPER_RIGHT
+	  lowerLeftNode USE LOWER_LEFT
+	  lowerRightNode [
+	    Transform {
+	      children [
+		Shape {
+		  geometry Text {
+		    string [ "QuadTree-TagChildren" "Native tags" ]
+		  }
+		  appearance USE WHITE
+		}
+	      ]
+	      translation -6 0 4
+	    }
+	    WorldInfo {
+	      info [ "this WorldInfo is here to demonstrate that the example is MFNode/Nodes" ]
+	    }
+	  ]
+	}
+      ]
+      translation 0 -6 0
+    }
+  ]
+}
+</pre>
+
+<p><b>
+Conclusion: 
+the <code>&lt;fieldValue&gt;</code> tag
+<FONT color="GREEN">(originally named <code>&lt;defaultValue&gt;</code>)</FONT>
+enables the parser to disambiguate contained field data from
+contained content, just as field-name wrapper tags do.</b>
+A further advantage of this approach is that strong typing of nodes is retained throughout the scene.
+</p>
+
+<!-- - - - - - - - - - - - - - - - -->
+
+<hr width="50%">
+
+<p>
+<i>Revised</i>:  22 April 2000
+</p>
+
+<p>
+<i>Uniform Resource Locator (URL)</i>:
+ <A HREF = "http://www.web3D.org/TaskGroups/x3d/translation/example/QuadTreeExamplesExplanation.html">www.web3D.org/TaskGroups/x3d/translation/example/QuadTreeExamplesExplanation.html</A>
+
+</p>
+
+<p>
+<i>Author</i>:  <a href="mailto:brutzman@nps.navy.mil(Don Brutzman)?subject=QuadTreeExamplesExplanation feedback ">Don Brutzman</a>
+</p>
+
+
+</body>
+</html>

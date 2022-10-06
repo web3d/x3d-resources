@@ -1,0 +1,36 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO GeoLOD [
+  field     MFString rootUrl
+  field     MFNode   rootNode
+
+  field     MFString child1Url
+  field     MFString child2Url
+  field     MFString child3Url
+  field     MFString child4Url
+
+  field     SFFloat  range
+
+  field     SFNode   geoOrigin
+  field     MFString geoSystem
+  field     SFString center
+
+  eventOut  MFNode   children
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoLOD.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoLOD.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoLOD.wrl"
+]
+
+GeoLOD {
+   rootUrl "http://www.ai.sri.com/~reddy/geovrml/examples/geolod/tiles/1/p1p0.wrl"
+   child1Url "http://www.ai.sri.com/~reddy/geovrml/examples/geolod/tiles/2/p2p0.wrl"
+   child2Url "http://www.ai.sri.com/~reddy/geovrml/examples/geolod/tiles/2/p3p0.wrl"
+   child3Url "http://www.ai.sri.com/~reddy/geovrml/examples/geolod/tiles/2/p3p1.wrl"
+   child4Url "http://www.ai.sri.com/~reddy/geovrml/examples/geolod/tiles/2/p2p1.wrl"
+
+   range     4
+
+   geoSystem [ "GCC" ]
+   center    "0.5 -0.5 0"
+}

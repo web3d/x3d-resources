@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<molecule convention="MDLMol" title="Tartaric Acid">
+
+  <formula>C4 H6 O6</formula>
+  <float title="molecule weight">150.09</float>
+  <float title="melting point" units="degC">170</float>
+  <float title="boiling point" units="degC">210</float>
+  <float title="specific gravity">1.75</float>
+  <atomArray>
+    <atom id="tartaric_acid_a1">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">2.0926</float>
+      <float builtin="y3">3.8262</float>
+      <float builtin="z3">0.6865</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-51.96152422706632</float>
+      <float builtin="y2">29.999999999999993</float>
+    </atom>
+    <atom id="tartaric_acid_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.0709</float>
+      <float builtin="y3">2.4447</float>
+      <float builtin="z3">0.9016</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-25.98076211353316</float>
+      <float builtin="y2">45.0</float>
+    </atom>
+    <atom id="tartaric_acid_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.5158</float>
+      <float builtin="y3">1.8392</float>
+      <float builtin="z3">0.8957</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">30.0</float>
+    </atom>
+    <atom id="tartaric_acid_a4">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.27</float>
+      <float builtin="y3">2.0165</float>
+      <float builtin="z3">2.134</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-25.980762113533174</float>
+      <float builtin="y2">75.0</float>
+    </atom>
+    <atom id="tartaric_acid_a5">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">3.5065</float>
+      <float builtin="y3">0.4829</float>
+      <float builtin="z3">0.5593</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="tartaric_acid_a6">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">4.2769</float>
+      <float builtin="y3">2.1586</float>
+      <float builtin="z3">2.1861</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">25.980762113533153</float>
+      <float builtin="y2">45.000000000000014</float>
+    </atom>
+    <atom id="tartaric_acid_a7">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.4593</float>
+      <float builtin="y3">2.9436</float>
+      <float builtin="z3">2.6771</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-51.96152422706634</float>
+      <float builtin="y2">89.99999999999999</float>
+    </atom>
+    <atom id="tartaric_acid_a8">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">1.265</float>
+      <float builtin="y3">0.9204</float>
+      <float builtin="z3">2.6702</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-2.8421709430404007E-14</float>
+      <float builtin="y2">90.00000000000003</float>
+    </atom>
+    <atom id="tartaric_acid_a9">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">5.0451</float>
+      <float builtin="y3">1.1762</float>
+      <float builtin="z3">2.6931</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">25.98076211353313</float>
+      <float builtin="y2">75.00000000000001</float>
+    </atom>
+    <atom id="tartaric_acid_a10">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">4.284</float>
+      <float builtin="y3">3.2142</float>
+      <float builtin="z3">2.798</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">51.96152422706633</float>
+      <float builtin="y2">30.000000000000036</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="tartaric_acid_b1">
+      <string builtin="atomRef">tartaric_acid_a1</string>
+      <string builtin="atomRef">tartaric_acid_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b3">
+      <string builtin="atomRef">tartaric_acid_a2</string>
+      <string builtin="atomRef">tartaric_acid_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b4">
+      <string builtin="atomRef">tartaric_acid_a2</string>
+      <string builtin="atomRef">tartaric_acid_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b6">
+      <string builtin="atomRef">tartaric_acid_a3</string>
+      <string builtin="atomRef">tartaric_acid_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b7">
+      <string builtin="atomRef">tartaric_acid_a3</string>
+      <string builtin="atomRef">tartaric_acid_a6</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b9">
+      <string builtin="atomRef">tartaric_acid_a4</string>
+      <string builtin="atomRef">tartaric_acid_a7</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b10">
+      <string builtin="atomRef">tartaric_acid_a4</string>
+      <string builtin="atomRef">tartaric_acid_a8</string>
+      <string builtin="order">2</string>
+    </bond>
+    <bond id="tartaric_acid_b12">
+      <string builtin="atomRef">tartaric_acid_a6</string>
+      <string builtin="atomRef">tartaric_acid_a9</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="tartaric_acid_b13">
+      <string builtin="atomRef">tartaric_acid_a6</string>
+      <string builtin="atomRef">tartaric_acid_a10</string>
+      <string builtin="order">2</string>
+    </bond>
+  </bondArray>
+</molecule>

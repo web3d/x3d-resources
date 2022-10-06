@@ -1,0 +1,178 @@
+//
+// Java版Lattice Kernel利用の全体の流れ（一例）
+//
+
+import  jp.co.lattice.vkernel.b0.*;
+import  jp.co.lattice.vkernel.c0.*;
+		;
+		;
+lvGlobal      mlvGlobal;
+int           mNumShell;
+lvToKernel    mlvToKernel[];
+lvFromKernel  mlvFromKernel[][];
+
+int  mNumVertex[];
+int  mNumEdge[];
+int  mNumGsNumVtx[];
+int  mNumGsVtxSeq[];
+int  mNumNgNumVtx[];
+int  mNumNgVtxSeq[];
+
+
+// 初期化
+public void step1()
+{
+	mlvGlobal = lvWorld.Init();
+}
+		;
+		;
+// Kernel にシェル数を通知する
+public void step2()
+{
+	mNumShell = ...;
+	
+	lvToKernel  toKernel = new lvToKernel( mlvGlobal );
+	boolean  result = toKernel.AppendNumShell( mNumShell );
+	if( result == lvConst.LV_FAILURE ) {
+		System.out.println( lvError.Message( mlvGlobal ) );
+		.....;
+	}
+	toKernel = null;				// toKernelは、このあと不使用
+}
+		;
+		;
+// シェル毎に各シェル内情報配列の個数を設定する
+public void step3()
+{
+	mNumVertex   = new int[ mNumShell ];
+	mNumEdge     = new int[ mNumShell ];
+	mNumGsNumVtx = new int[ mNumShell ];
+	mNumGsVtxSeq = new int[ mNumShell ];
+	mNumNgNumVtx = new int[ mNumShell ];
+	mNumNgVtxSeq = new int[ mNumShell ];
+	
+	mNumVertex[ 0 ]   = .....;	.........;
+	mNumEdge[ 0 ]     = .....;	.........;
+	mNumGsNumVtx[ 0 ] = .....;	.........;
+	mNumGsVtxSeq[ 0 ] = .....;	.........;
+	mNumNgNumVtx[ 0 ] = .....;	.........;
+	mNumNgVtxSeq[ 0 ] = .....;	.........;
+}
+		;
+		;
+// Kernelに対する入出力インスタンスの作成
+public void step4()
+{
+	mlvToKernel = new lvToKernel[ mNumShell ];
+	for( int i=0; i<mNumShell; i++ )
+		mlvToKernel[ i ] = new lvToKernel( mlvGlobal );
+	
+	mlvFromKernel = new lvFromKernel[ mNumShell ][];
+	for( int i=0; i<mNumShell; i++ ) {
+		mlvFromKernel[ i ] = new lvFromKernel[ mNumVertex[ i ] ];
+		for( int j=0; j<mNumGsNumVtx[ i ]; j++ )
+			mlvFromKernel[ i ][ j ] = new lvFromKernel( mlvGlobal );
+	}
+}
+		;
+		;
+// Kernelへの出力データの設定
+public void step5()
+{
+	for( int i=0; i<mNumShell; i++ )
+		step5a( i );
+}
+
+public void step5a( int shellNo )
+{
+	mlvToKernel[ shellNo ].vertex = new lvToKernelType.Vertex[ mNumVertex[ shellNo ] ];
+	for( int i=0; i<mNumVertex[ shellNo ]; i++ )
+		mlvToKernel[ shellNo ].vertex[ i ] = new lvToKernelType.Vertex();
+		
+	mlvToKernel[ shellNo ].edge = new lvToKernelType.Edge[ mNumEdge[ shellNo ] ];
+	for( int i=0; i<mNumEdge[ shellNo ]; i++ )
+		mlvToKernel[ shellNo ].edge[ i ] = new lvToKernelType.Edge();
+		
+	mlvToKernel[ shellNo ].gsNumVtx = new int[ mNumGsNumVtx[ shellNo ] ];
+	mlvToKernel[ shellNo ].gsVtxSeq = new int[ mNumGsVtxSeq[ shellNo ] ];
+	mlvToKernel[ shellNo ].ngNumVtx = new int[ mNumNgNumVtx[ shellNo ] ];
+	mlvToKernel[ shellNo ].ngVtxSeq = new int[ mNumNgVtxSeq[ shellNo ] ];
+	
+	mlvToKernel[ shellNo ].vertex[ 0 ].pos.x = .....;	.........;
+	mlvToKernel[ shellNo ].edge[ 0 ].v0 = .....;		.........;
+	mlvToKernel[ shellNo ].gsNumVtx[ 0 ] = .....;		.........;
+	mlvToKernel[ shellNo ].gsVtxSeq[ 0 ] = .....;		.........;
+	mlvToKernel[ shellNo ].ngNumVtx[ 0 ] = .....;		.........;
+	mlvToKernel[ shellNo ].ngVtxSeq[ 0 ] = .....;		.........;
+}
+		;
+		;
+// Kernelへの属性出力 ＆ データ出力
+public void step6()
+{
+	for( int i=0; i<mNumShell; i++ )
+		step6a( i );
+
+	mlvToKernel = null;				// mlvToKernelは、このあと不使用
+}
+
+public void step6a( int shellNo )
+{
+	lvToKernelType.Attr  attr = new lvToKernelType.Attr();
+	attr.numDiv = ...;
+	attr.round  = ....;
+	lvToKernel  toKernel = new lvToKernel( mlvGlobal );
+	toKernel.SetAttr( shellNo, attr );
+	toKernel = null;				// toKernelは、このあと不使用
+	
+	boolean  result = mlvToKernel[ shellNo ].SetData( shellNo );
+	if( result == lvConst.LV_FAILURE ) {
+		System.out.println( lvError.Message( mlvGlobal ) );
+		.....;
+	}
+}
+		;
+		;
+// Kernelからのデータ取得
+public void step7()
+{
+	for( int i=0; i<mNumShell; i++ ) {
+		for( int j=0; j<mNumGsNumVtx[ i ]; j++ )
+			step7a( i, j );
+	}
+}
+
+public void step7a( int shellNo, int gsNo )
+{
+	boolean  result = mlvFromKernel[ shellNo ][ gsNo ].GetData( shellNo, gsNo );
+	if( result == lvConst.LV_FAILURE ) {
+		System.out.println( lvError.Message( mlvGlobal ) );
+		.....;
+	}
+}
+		;
+		;
+// Kernelからのデータの利用
+public void step8()
+{
+	for( int i=0; i<mNumShell; i++ ) {
+		for( int j=0; j<mNumGsNumVtx[ i ]; j++ )
+			step8a( i, j );
+	}
+	mlvFromKernel = null;				// 必要無いなら消去してよい
+}
+
+public void step8a( int shellNo, int gsNo )
+{
+	for( int i=0; i<mlvFromKernel[ shellNo ][ gsNo ].vertex.length; i++ ) {
+		... = mlvFromKernel[ shellNo ][ gsNo ].vertex[ i ].pos.x;
+			;
+		... = mlvFromKernel[ shellNo ][ gsNo ].vertex[ i ].normal.x;
+			;
+	}
+	
+	for( int i=0; i<mlvFromKernel[ shellNo ][ gsNo ].triIndex.length; i++ ) {
+		for( int j=0; j<3; j++ )
+			... = mlvFromKernel[ shellNo ][ gsNo ].triIndex[ i ].vtxNo[ j ];
+	}
+}

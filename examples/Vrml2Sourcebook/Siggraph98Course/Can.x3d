@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Can.x3d' name='title'/>
+    <meta content='Diet VRML can illustrates the use of texture mapping on primitive shapes.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/can.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0261.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0262.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Can.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1997, Andrea L. Ames, David R. Nadeau, John L. Moreland"' title='Diet VRML Can'/>
+    <Viewpoint description='Entry view' position='0.0 0.0 6.0'/>
+    <NavigationInfo/>
+    <Shape>
+      <Appearance>
+        <Material/>
+        <ImageTexture url='"cantop.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cantop.jpg"'/>
+      </Appearance>
+      <Cylinder bottom='false' height='2.7' side='false'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+        <ImageTexture url='"canbot.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/canbot.jpg"'/>
+      </Appearance>
+      <Cylinder height='2.7' side='false' top='false'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+        <ImageTexture url='"canlabel.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/canlabel.jpg"'/>
+      </Appearance>
+      <Cylinder bottom='false' height='2.8' top='false'/>
+    </Shape>
+  </Scene>
+</X3D>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <component level='1' name='DIS'/>
+    <meta content='TestBoxEspdu.x3d' name='title'/>
+    <meta content='Don Brutzman, Don McGregor' name='creator'/>
+    <meta content='1 January 2007' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A simple EspduTransform test to move a Box.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/DistributedInteractiveSimulation/TestBoxEspdu.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TestBoxEspdu.x3d'/>
+    <Viewpoint description='EspduTransform moves Box' position='0 0 25'/>
+    <Background skyColor='0.5 0.6 0.8'/>
+    <EspduTransform address='239.1.2.3' entityID='2' marking='TestBox' networkMode='networkReader' port='62040'>
+      <Shape>
+        <Box size='2 4 6'/>
+        <Appearance>
+          <Material diffuseColor='0.748014 0.62085 0' shininess='0.93' specularColor='0.860606 0.860606 0.860599'/>
+        </Appearance>
+      </Shape>
+    </EspduTransform>
+    <Transform scale='5 5 5'>
+      <Inline url='"../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"'/>
+    </Transform>
+  </Scene>
+</X3D>

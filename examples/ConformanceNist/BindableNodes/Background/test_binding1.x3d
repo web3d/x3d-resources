@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='test_binding1.x3d' name='title'/>
+    <meta content='test-binding1-movie.mpg' name='MovingImage'/>
+    <meta content='http://www.nist.gov/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/members.html' name='creator'/>
+    <meta content='This file was provided by the National Institute of Standards and Technology, and is part of the X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html The information contained within this file is provided for use in establishing conformance to the ISO VRML97 Specification. Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology. This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are derived from it, and any modified versions bear some notice that they have been modified.' name='disclaimer'/>
+    <meta content='Correct definition and compliance of this conformance scene is maintained by the X3D Working Group, https://www.web3d.org/working-groups/x3d' name='info'/>
+    <meta content='Michael Kass NIST, Don Brutzman NPS' name='translator'/>
+    <meta content='21 January 2001' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='This test addresses the ability of a background node to send true events when it is the currently binded background. Two backgrounds are defined in the local coordinate system. The first one is binded by default. The test then sends a false event to the first background and true event to the second background. This will make the second background the currently binded background. The second background should then start sending true events (via the is_Bound field). These events are caputure and use to start a timer. The test should generate a blue sky image first and then a sunset background with some text flashing on it. The test can be started by clicking on the text displayed when the test is first loaded.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/test_binding1.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='test_binding1.x3d'/>
+    <NavigationInfo type='"EXAMINE" "WALK" "FLY" "ANY"'/>
+    <Group>
+      <Viewpoint DEF='the-view' description='Back View' position='0 0 20'/>
+    </Group>
+    <Group>
+      <Background DEF='sky-back1' backUrl='"sky1.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky1.jpg"' bottomUrl='"sky1.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky1.jpg"' frontUrl='"sky1.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky1.jpg"' groundColor='0 0 0' leftUrl='"sky1.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky1.jpg"' rightUrl='"sky1.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky1.jpg"' topUrl='"sky1.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky1.jpg"'/>
+      <Background DEF='sky-back2' backUrl='"sky2.png" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky2.png"' bottomUrl='"sky2.png" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky2.png"' frontUrl='"sky2.png" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky2.png"' groundColor='0 0 0' leftUrl='"sky2.png" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky2.png"' rightUrl='"sky2.png" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky2.png"' topUrl='"sky2.png" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/sky2.png"'/>
+    </Group>
+    <Transform translation='0.5 3 0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='the-material1' diffuseColor='0 0 1' emissiveColor='0 0 1'/>
+        </Appearance>
+        <Text string='"Background 2 sending true Event"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform scale='0.04 0.04 0.04' translation='0.5 0 0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='the-material5' diffuseColor='1 0 0'/>
+        </Appearance>
+        <Text string='"CLICK HERE TO START"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='32' style='BOLD'/>
+        </Text>
+      </Shape>
+      <TouchSensor DEF='the-touch' description='touch to activate'/>
+    </Transform>
+    <TimeSensor DEF='timer1' cycleInterval='8' enabled='false'/>
+    <ColorInterpolator DEF='colors1' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0'/>
+    <Script DEF='set_backtrue'>
+      <field accessType='inputOnly' name='value_in' type='SFTime'/>
+      <field accessType='outputOnly' name='value_out' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+function value_in (the_value)
+{
+	value_out = true;
+}
+]]>
+    </Script>
+    <Script DEF='set_backfalse'>
+      <field accessType='inputOnly' name='value_in' type='SFTime'/>
+      <field accessType='outputOnly' name='value_out' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+function value_in (the_value)
+{
+    value_out = false;
+}
+]]>
+    </Script>
+    <ROUTE fromField='touchTime' fromNode='the-touch' toField='value_in' toNode='set_backtrue'/>
+    <ROUTE fromField='touchTime' fromNode='the-touch' toField='value_in' toNode='set_backfalse'/>
+    <ROUTE fromField='touchTime' fromNode='the-touch' toField='startTime' toNode='timer1'/>
+    <ROUTE fromField='value_out' fromNode='set_backfalse' toField='set_bind' toNode='sky-back1'/>
+    <ROUTE fromField='value_out' fromNode='set_backtrue' toField='set_bind' toNode='sky-back2'/>
+    <ROUTE fromField='isBound' fromNode='sky-back2' toField='enabled' toNode='timer1'/>
+    <ROUTE fromField='fraction_changed' fromNode='timer1' toField='set_fraction' toNode='colors1'/>
+    <ROUTE fromField='value_changed' fromNode='colors1' toField='diffuseColor' toNode='the-material1'/>
+  </Scene>
+</X3D>

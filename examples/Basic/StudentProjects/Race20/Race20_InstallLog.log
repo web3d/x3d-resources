@@ -1,0 +1,288 @@
+Install Begin: Wed Aug 28 15:44:13 PDT 2002
+Install End:   Wed Aug 28 15:44:17 PDT 2002
+
+Created with Zero G's InstallAnywhere 5.0.4 Enterprise Build 1615
+
+
+Summary
+-------
+
+Installation: Successful.
+
+84 SUCCESSES
+0 WARNINGS
+0 NONFATAL ERRORS
+0 FATAL ERRORS
+
+Action Notes:
+
+None.
+
+Install Log Detail:
+
+Check Disk Space:         C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Required Disk Space: 5,718,858; Free Disk Space: 21,639,421,952
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\
+                          Status: SUCCESSFUL
+
+Install Uninstaller:      Race20 (Install All Uninstaller Components)
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\jre
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe
+                          Status: SUCCESSFUL
+
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.lax
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource\iawin32.dll
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource\remove.exe
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: DisplayName
+                          Value Data: Race20
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: UninstallString
+                          Value Data: "C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe"
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: Publisher
+                          Value Data: c h a productions
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: URLInfoAbout
+                          Value Data: http://home.attbi.com/~cnadams
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: ProductID
+                          Value Data: 02c72553-1ec2-11b2-b06e-86a3f71e6eec
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: InstallLocation
+                          Value Data: C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: InstallDate
+                          Value Data: Wed Aug 28 15:44:15 PDT 2002
+                          Status: SUCCESSFUL
+
+Make Registry Entry:      Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20
+                          Value Name: DisplayVersion
+                          Value Data: 2.0.0.0
+                          Status: SUCCESSFUL
+
+Install Uninstaller:      Race20 (Install All Uninstaller Components)
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\Movement.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\Track.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\Scene.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\TrackType.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\RaceControl.class
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\TrackType.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\Movement.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\Track.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\Scene.java
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\RaceControl.java
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\allclasses-frame.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\deprecated-list.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\help-doc.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\index-all.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\index.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\overview-tree.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\package-list
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\packages.html
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\TrackType.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\Movement.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\RaceControl.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\package-frame.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\package-summary.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\Track.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\Scene.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\package-tree.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\serialized-form.html
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\stylesheet.css
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\allcollide.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\bvtrack.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\Carbody.wrl
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\carsound.wav
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex1.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex2.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex3.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex4.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\clouds.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\grass.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\htrack.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\il1track.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\ir1track.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\l1track.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\r1track.jpg
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\race20.wrl
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\RaceControl.class
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\Tires.wrl
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\vtrack.jpg
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\input files\
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\input files\example long course.txt
+                          Status: SUCCESSFUL
+
+Install File:             C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\input files\short track course.txt
+                          Status: SUCCESSFUL
+
+Set Environment Variable: CLASSPATH = C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20\
+                          Status: SUCCESSFUL
+
+Create Shortcut:          C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20\Race20.wrl.lnk
+                          Status: SUCCESSFUL
+
+Create Shortcut:          C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20\Java Documentation.lnk
+                          Status: SUCCESSFUL
+
+Install Directory:        C:\Documents and Settings\brutzman.NPGS\Desktop\
+                          Status: SUCCESSFUL
+                          Additional Notes: NOTE - Directory already existed
+
+Install File:             C:\Documents and Settings\brutzman.NPGS\Desktop\course.txt
+                          Status: SUCCESSFUL
+
+Install File:             C:\Documents and Settings\brutzman.NPGS\Desktop\tracktypes.txt
+                          Status: SUCCESSFUL
+
+

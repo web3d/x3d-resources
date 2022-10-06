@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>Temple Description</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+This GeoVRML example illustrates the requirement for greater than
+single-precision floating point support, and how the GeoOrigin node
+helps to get around this limitation. In the two examples below, all of
+the columns and slabs of the temple have been georeferenced to 1-meter
+accuracy using the UTM coordinate system. The model on the left
+essentially rounds all coordinates to single-precision - you will
+notice that many of the columns are misaligned and that navigation is
+jerky. The model on the right uses a GeoOrigin node to establish a
+local coordinate system at the center of the temple - as a result, all
+of the coordinates can be represented accurately within
+single-precision and navigation is smooth.
+
+</body>
+</html>

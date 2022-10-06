@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Space2.x3d' name='title'/>
+    <meta content='Simple spaceship scene illustrates the use of VRML primitive shapes to build a more complex shape. Transform nodes are used to position and orient the shapes. Scaling in the Transform node squishes and stretches shapes, enabling you to create flattened ellipsoids out of spheres, and more.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/space2.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0114.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Space2.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"copyright (c) 1997, David R. Nadeau"' title='Simple spaceship'/>
+    <Viewpoint description='Entry view' position='0.0 0.0 4.0'/>
+    <NavigationInfo/>
+    <Transform DEF='LeftWing' rotation='0.0 1.0 0.0 0.52' scale='0.4 0.035 1.5' translation='0.0 0.0 -0.9'>
+      <Shape DEF='WingSphere'>
+        <Appearance>
+          <Material diffuseColor='0.7 0.7 1.0' shininess='0.1' specularColor='1.0 1.0 1.0'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform DEF='RightWing' rotation='0.0 1.0 0.0 -0.52' scale='0.4 0.035 1.5' translation='0.0 0.0 0.9'>
+      <Shape USE='WingSphere'/>
+    </Transform>
+    <Transform DEF='Fuselage' scale='2.0 0.2 0.5'>
+      <Shape DEF='FuselageSphere'>
+        <Appearance>
+          <Material diffuseColor='0.5 0.5 1.0' shininess='0.1' specularColor='0.4 0.7 1.0'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform scale='0.6 0.4 0.375'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.5' diffuseColor='0.7 0.5 1.0' shininess='0.5' specularColor='1.0 0.0 0.3'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform scale='0.6 0.06 0.1' translation='-0.6 0.0 -1.5'>
+      <Shape DEF='EngineSphere'>
+        <Appearance>
+          <Material diffuseColor='0.3 0.3 0.7'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform scale='0.6 0.06 0.1' translation='-0.6 0.0 1.5'>
+      <Shape USE='EngineSphere'/>
+    </Transform>
+    <Transform scale='0.4 0.4 0.4' translation='-2.0 0.5 0.0'>
+      <Transform USE='LeftWing'/>
+      <Transform USE='RightWing'/>
+      <Transform USE='Fuselage'/>
+    </Transform>
+    <Transform rotation='0.0 0.0 1.0 -0.6' scale='0.5 0.2 0.075' translation='-1.5 0.25 0.0'>
+      <Shape USE='FuselageSphere'/>
+    </Transform>
+  </Scene>
+</X3D>

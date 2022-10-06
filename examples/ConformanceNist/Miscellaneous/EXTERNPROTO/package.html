@@ -1,0 +1,67 @@
+<html>
+
+	<head>
+		<title>X3D Conformance NIST Examples: Miscellaneous, EXTERNPROTO </title>
+	</head>
+	<!-- This package.html file is used in javadoc documentation -->
+	<!-- Package Comment Files http://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html#packagecomment -->
+
+	<body>
+	
+		<p>
+				VRML97 and ClassicVRML encodings use the term EXTERNPROTO, while XML and JSON encodings use the ExternProtoDeclare element.
+		</p>
+		<p>
+				ExternProtoDeclare refers to a ProtoDeclare node declaration provided in another file.
+				ExternProtoDeclare interfaces are defined by field statements (without IS/connect statements).
+				<i>Hint:</i>
+				ExternProtoDeclare is a definition only, add corresponding ProtoInstance nodes to create new instances.
+		</p>
+		<p>
+				VRML97 and ClassicVRML encodings simply uses the prototype name to create an instance node, while XML and JSON encodings use the ProtoInstance element.
+		</p>
+		<p>
+				ProtoInstance creates an instance node of a locally or externally declared prototype definition.
+				ProtoDeclare/ExternProtoDeclare definitions are abstract, corresponding ProtoInstance nodes are concrete.
+				ProtoInstance nodes typically contain fieldValue statements to override default field values defined in the original ProtoDeclare statement.
+				<i>Hint:</i>
+				the node type of a ProtoInstance exactly matches the first node in the corresponding ProtoDeclare/ProtoBody declaration. 
+		</p>
+	
+		<p>
+			X3D Tooltips of interest:
+			
+			<a href="https://www.web3d.org/x3d/tooltips/X3dTooltips.html#ExternProtoDeclare" target="_blank">ExternProtoDeclare</a> statement,
+			<a href="https://www.web3d.org/x3d/tooltips/X3dTooltips.html#field" target="_blank">field</a>,
+			<a href="https://www.web3d.org/x3d/tooltips/X3dTooltips.html#ProtoDeclare" target="_blank">ProtoDeclare</a> statement,
+			and
+			<a href="https://www.web3d.org/x3d/tooltips/X3dTooltips.html#ProtoInstance" target="_blank">ProtoInstance</a> node with
+			<a href="https://www.web3d.org/x3d/tooltips/X3dTooltips.html#fieldValue" target="_blank">fieldValue</a> statement.
+		</p>
+		
+		<p>
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/Architecture.html" target="_blank">X3D Specification</a>
+			sections of interest:
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/core.html" target="_blank">7 Core component</a>,
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/core.html#Concepts" target="_blank">7.2 Concepts</a>
+			and
+			<a href="https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/core.html#EXTERNPROTOStatement" target="_blank">7.2.5.9 EXTERNPROTO statement</a>.
+		</p>
+		
+		<p>
+			<a href="https://www.web3d.org/x3d/content/examples/X3dResources.html#Examples" target="_blank">X3D Examples Archives</a>
+			of related interest:
+		</p>
+		<ul>
+			<li>
+				VRML 2 Sourcebook:&nbsp;
+				<a href="https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes" target="_blank">Chapter 31 Prototypes</a>
+			</li>
+			<li>
+				X3D for Web Authors:
+				<a href="http://x3dgraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes" target="_blank">Chapter 14 Prototypes</a>
+			</li>
+		</ul>
+
+		</body>
+</html>

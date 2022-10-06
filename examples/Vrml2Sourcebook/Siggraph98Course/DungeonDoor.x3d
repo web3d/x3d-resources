@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='DungeonDoor.x3d' name='title'/>
+    <meta content='Dungeon door: this is a simple rectangular door with a studded metal texture. The door is used in a dungeon room.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='DungeonRoom.x3d' name='reference'/>
+    <meta content='originals/ddoor.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0389.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/DungeonDoor.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='DungeonDoor.x3d'/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='1.0 1.0 1.0'/>
+        <ImageTexture url='"panel.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/panel.jpg"'/>
+      </Appearance>
+      <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+        <TextureCoordinate point='0.0 0.0 1.0 0.0 1.0 2.0 0.0 2.0'/>
+        <Coordinate point='-0.75 0.0 0.0 0.75 0.0 0.0 0.75 2.5 0.0 -0.75 2.5 0.0'/>
+      </IndexedFaceSet>
+    </Shape>
+  </Scene>
+</X3D>

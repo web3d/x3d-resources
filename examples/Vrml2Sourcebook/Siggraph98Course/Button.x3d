@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Button.x3d' name='title'/>
+    <meta content='Simple button: this file contains a Prototype declaration to manage a button that, when clicked, rotates 90 degrees and sends a URL. This button is used in "loader.wrl".' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Loader.x3d' name='reference'/>
+    <meta content='originals/button.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0469.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Button.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1998, David R. Nadeau"' title='Simple Button'/>
+    <ProtoDeclare name='Button'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='url' type='MFString' value='""'/>
+        <field accessType='inputOutput' name='textureUrl' type='MFString' value='""'/>
+        <field accessType='outputOnly' name='url_changed' type='MFString'/>
+        <field accessType='initializeOnly' name='translation' type='SFVec3f' value='0.0 0.0 0.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Transform DEF='Trans'>
+          <IS>
+            <connect nodeField='translation' protoField='translation'/>
+          </IS>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='1.0 1.0 1.0'/>
+              <ImageTexture>
+                <IS>
+                  <connect nodeField='url' protoField='textureUrl'/>
+                </IS>
+              </ImageTexture>
+            </Appearance>
+            <Box size='1.0 1.0 1.0'/>
+          </Shape>
+          <TouchSensor DEF='Touch' description='Select to initiate button spin and scene loading'/>
+        </Transform>
+        <TimeSensor DEF='Timer' stopTime='1.0'/>
+        <OrientationInterpolator DEF='Rotator' key='0.0 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 1.571'/>
+        <Script DEF='SendUrl'>
+          <field accessType='initializeOnly' name='sendUrl' type='MFString'/>
+          <field accessType='inputOnly' name='set_touchTime' type='SFTime'/>
+          <field accessType='outputOnly' name='url_changed' type='MFString'/>
+          <IS>
+            <connect nodeField='sendUrl' protoField='url'/>
+            <connect nodeField='url_changed' protoField='url_changed'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+	function set_touchTime( tm, ts ) {
+		url_changed = sendUrl;
+	}
+]]>
+        </Script>
+        <ROUTE fromField='touchTime' fromNode='Touch' toField='set_startTime' toNode='Timer'/>
+        <ROUTE fromField='fraction_changed' fromNode='Timer' toField='set_fraction' toNode='Rotator'/>
+        <ROUTE fromField='value_changed' fromNode='Rotator' toField='set_rotation' toNode='Trans'/>
+        <ROUTE fromField='touchTime' fromNode='Touch' toField='set_touchTime' toNode='SendUrl'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- Display scene instructions for viewing an example scene with a corresponding prototype instance -->
+    <Background skyColor='0 0.333333 0.66667'/>
+    <Anchor description='select text to view parent scene' url='"Loader.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Loader.x3d" "Loader.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Loader.wrl"'>
+      <Shape>
+        <Text string='"Button.x3d scene holds" "a prototype declaration" "" "Select this text to view example" "use in Loader.x3d scene"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 0.9 0.4'/>
+        </Appearance>
+      </Shape>
+      <!-- Selectable text: invisible box behind text makes selection easier -->
+      <Shape>
+        <Box size='12 5 0.1'/>
+        <Appearance>
+          <Material transparency='1'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

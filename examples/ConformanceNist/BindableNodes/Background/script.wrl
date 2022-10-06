@@ -1,0 +1,84 @@
+#VRML V2.0 utf8
+DEF image-back1 Script {
+     eventIn SFBool value_in  
+     eventOut SFBool value_out 
+     url "vrmlscript:
+             function value_in (the_value) {
+                  if (the_value == true){
+                         value_out = true;}
+                  else {
+                         value_out = true;}
+             }"
+} 
+DEF image-back2 Script {
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventIn SFBool value_in
+     eventOut SFBool value_out
+     url "vrmlscript:
+             function value_in (the_value) {
+                  if (the_value == true){
+                         value_out = true;}
+                  else {
+                         value_out = true;}
+             }"
+}
+DEF image-back3 Script {
+     eventIn SFBool value_in
+     eventOut SFBool value_out
+     url "vrmlscript:
+             function value_in (the_value) {
+                  if (the_value == true){
+                         value_out = true;}
+                  else {
+                         value_out = true;}
+             }"
+}
+DEF image-back4 Script {
+     eventIn SFBool value_in
+     eventOut SFBool value_out
+     url "vrmlscript:
+             function value_in (the_value) {
+                  if (the_value == true){
+                         value_out = true;}
+                  else {
+                         value_out = true;}
+             }"
+}
+ROUTE the-touch1.isActive TO image-back1.value_in
+ROUTE the-touch2.isActive TO image-back2.value_in
+ROUTE the-touch3.isActive TO image-back3.value_in
+ROUTE the-touch4.isActive TO image-back4.value_in
+ROUTE image-back1.value_out TO back1.set_bind
+ROUTE image-back2.value_out TO back2.set_bind
+ROUTE image-back3.value_out TO back3.set_bind
+ROUTE image-back4.value_out TO back4.set_bind

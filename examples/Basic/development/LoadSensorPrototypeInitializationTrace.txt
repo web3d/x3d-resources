@@ -1,0 +1,19 @@
+[ LoadSensor ] initialize() enabled=true
+[ LoadSensor ] isActive=true
+[ LoadSensor ] isLoaded=false
+[ LoadSensor ] loadTime=0
+[ LoadSensor ] progress=0
+[ LoadSensor ] timeOut=4
+[ LoadSensor ] progress=0.2512499988079071, priorFraction=0
+[ LoadSensor ] progress=0.546750009059906, priorFraction=0.2512499988079071
+[ LoadSensor ] progress=0.659500002861023, priorFraction=0.546750009059906
+[ LoadSensor ] progress=0.7645000219345093, priorFraction=0.659500002861023
+[ LoadSensor ] progress=0.7720000147819519, priorFraction=0.7645000219345093
+[ LoadSensor ] progress=0.8772500157356262, priorFraction=0.7720000147819519
+[ LoadSensor ] progress=0.987500011920929, priorFraction=0.8772500157356262
+[ LoadSensor ] progress=0.11750000715255737, priorFraction=0.987500011920929
+[ LoadSensor ] isActive=false
+[ LoadSensor ] isLoaded=true
+[ LoadSensor ] loadTime=1072554972.47
+[ LoadSensor ] progress=1
+[ LoadSensor ] complete

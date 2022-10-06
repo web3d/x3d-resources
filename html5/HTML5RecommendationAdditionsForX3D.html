@@ -1,0 +1,915 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+ <head>
+	<link rel="shortcut icon" href="http://www.web3d.org/x3d/content/examples/images/X3DtextIcon16.png" title="X3D" >
+	<title> HTML5 Recommendation additions for integrating X3D Graphics </title>
+	<meta name="author"      content="Don Brutzman">
+	<meta name="description" content="Recommended additions to HTML5 for integrating X3D">
+	<meta name="filename"    content="HTML5RecommendationAdditionsForX3D.html">
+	<meta name="identifier"  content="http://www.web3d.org/x3d/content/html5/HTML5RecommendationAdditionsForX3D.html">
+	<meta name="reference"   content="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/content/html5/HTML5RecommendationAdditionsForX3D.html">
+	<meta name="reference"   content="http://www.web3d.org/x3d/wiki/index.php/X3D_and_HTML5">
+	<meta name="generator"   content="X3D-Edit, https://savage.nps.edu/X3D-Edit">
+	<meta name="created"     content="1 January 2010">
+ </head>
+ <body>
+     
+        <table border="0" cellspacing="0" cellpadding="0" summary="" align="center">
+            <tr align="center">
+                <td><a href="http://www.web3d.org/x3d"><img src="http://www.web3d.org/x3d/content/examples/images/x3d2-s.gif" width="154" height="97" border="0" title="to X3D home page" alt="to X3D home page"></a></td>
+                <td><pre>   </pre></td>
+                <td><h2>HTML5 Recommendation Additions for&nbsp;Integrating X3D Graphics</h2></td>
+                <td><pre>    </pre></td>
+                <td><a href="http://www.web3d.org"><img src="http://www.web3d.org/x3d/content/examples/images/web3d_logo2.png" width="120" height="60" border="0" title="to Web3D home page" alt="to Web3D home page"></a></td>
+            </tr>
+        </table>
+
+        <blockquote>
+            <p align="center"><small>
+                <a href="#Overview">Overview</a> |
+                <a href="#Motivation">Motivation</a> |
+                <a href="#References">References</a> |
+                <a href="#SuggestedAdditions">Suggested Additions</a> |
+                <a href="#OpenIssues">Open Issues</a> |
+                <a href="#RelatedX3dIssues">Related X3D Issues</a> |
+                <a href="#Contact">Contact</a>
+            </small></p>
+        </blockquote>
+
+      <h3> <a name="Overview">Overview</a> </h3>
+
+      <p>
+          This document presents suggested changes for integrating XML-based
+          <a href="http://www.web3d.org/x3d">Extensible 3D (X3D) Graphics</a>
+          support in
+          <a href="http://dev.w3.org/html5/spec">HTML5</a>.
+      </p>
+
+      <p>
+          Our goal for HTML5 authors is to make the native addition and use of declarative X3D scenes
+          as well-supported as that provided for
+          <a href="http://www.w3.org/Graphics/SVG">Scalable Vector Graphics (SVG)</a>
+          and
+          <a href="http://www.w3.org/Math">Mathematical Markup Language (MathML)</a>.
+      </p>
+
+      <p>
+          This document provides detailed technical rationales and specification recommendations
+          for inclusion of X3D capabilities in HTML5.
+      </p>
+
+      <p>
+          This work is prepared and coordinated by the
+          <a href="http://www.web3d.org/x3d">X3D Working Group</a>
+          with public discussion on the
+          <a href="http://web3d.org/mailman/listinfo/x3d-public_web3d.org">x3d-public@web3d.org</a>
+          and
+          <a href="http://lists.w3.org/Archives/Public/public-html">public-html@w3.org</a>
+          mailing lists.
+      </p>
+
+      <!-- ===================== -->
+
+      <h3> <a name="Motivation">Motivation</a> </h3>
+
+      <p>
+          X3D has numerous benefits that make it a natural addition for documents written using HTML5, SVG and MathML.
+      </p>
+
+      <ul>
+          <li>
+              X3D is a royalty-free open standard for real-time 3D graphics communication on the Web.
+          </li>
+          <li>
+              X3D is an interchange format for many 3D graphics technologies with well-defined run-time behavior.
+          </li>
+          <li>
+              Many aspects of X3D design closely match the architecture of HTML and other XML languages.
+              <!--
+              to make it a good fit for the
+              <a href="http://www.w3.org/TR/webarch">Architecture of the World Wide Web</a>.
+              -->
+          </li>
+          <li>
+              X3D scenes can be linked via <code>Anchor</code> elements or grown via embedded <code>Inline</code> elements.
+          </li>
+          <li>
+              X3D scene authoring does not require programming expertise and can be accomplished by Web authors.
+          </li>
+          <li>
+              X3D is designed for performance, device independence, user interactivity and internationalization (I18N).
+          </li>
+          <li>
+              Web3D working groups are responsive, continuing to produce X3D Specification updates every 2-3 years.
+          </li>
+          <li>
+              X3D has a long and stable evolution that originated with the
+              Virtual Reality Modeling Language (VRML97).
+          </li>
+          <li>
+              X3D maintains backwards compatibility while steadily adding new cutting-edge industry capabilities.
+          </li>
+          <li>
+              X3D is well supported by many browser plugins, players, authoring tools and conversion tools.
+          </li>
+          <li>
+              X3D implementations are widely available as either commercial products or open source.
+          </li>
+          <li>
+              Quality assurance (QA) for X3D scenes includes DTD, XML Schema and Schematron validation.
+          </li>
+          <li>
+              Conformance suites and numerous example scenes are available to test proper software compliance.
+          </li>
+      </ul>
+
+      <p>
+          The provenance of X3D has many similarities to other
+          <a href="http://www.w3.org">World Wide Web Consortium (W3C)</a>
+          efforts.
+          The royalty-free X3D Specifications are produced by working groups in the non-profit
+          <a href="http://www.web3d.org">Web3D Consortium</a>
+          and approved by
+          <a href="http://www.iso.org">International Organization for Standardization (ISO)</a>/<a href="http://www.iec.ch/">International Electrotechnical Commission (IEC)</a>.
+      </p>
+
+      <!-- ===================== -->
+
+      <h3> <a name="References">References</a> </h3>
+
+      <ul>
+          <li>
+              <a href="http://dev.w3.org/html5/spec/Overview.html" target="html5">HTML5</a>
+              working draft is a vocabulary and associated APIs for HTML and XHTML.
+          </li>
+          <li>
+              <a href="http://www.web3d.org/x3d/wiki/index.php/X3D_and_HTML5">X3D and HTML5</a>
+              wiki page examines how to best integrate
+              X3D with HTML5.
+          </li>
+          <li>
+              <a href="http://www.web3d.org/x3d/specifications">X3D Specifications</a>
+              page provides the full set of of approved specification documents.
+          </li>
+          <li>
+              <a href="http://www.web3d.org/specifications/">X3D DTDs and Schemas</a>
+              formally define X3D syntax for use by any XML tool.
+          </li>
+          <li>
+              <a href="http://www.web3d.org/x3d/content/examples/X3dResources.html">X3D Resources</a>
+              provides numerous links to related and supporting material.
+          </li>
+          <li>
+              Mailing list discussion archives:
+              <a href="http://web3d.org/pipermail/x3d-public_web3d.org/2010-January/000580.html">x3d-public@web3d.org</a>
+              and
+              <a href="http://lists.w3.org/Archives/Public/public-html/2010Jan/0150.html">public-html@w3.org</a>
+          </li>
+          <!--
+          <li>
+
+          </li>
+          -->
+      </ul>
+
+      <!-- ===================== -->
+
+      <h3> <a name="SuggestedAdditions">Suggested Additions to HTML5 Recommendation for Integrating X3D</a> </h3>
+
+      <p>
+          This section lists change suggestions to the HTML5 Recommendation that together add support for X3D graphics.
+      </p>
+      <p>
+          Editorially each change entry is structured to provide:
+      </p>
+      <ul>
+          <li>
+              A link to the appropriate section of the HTML5 draft
+          </li>
+          <li>
+              A pertinent excerpt from the HTML5 draft, indented as a <code>&lt;blockquote&gt;</code>
+          </li>
+          <li>
+              A specific change suggestion, again indented as a <code>&lt;blockquote&gt;</code>
+          </li>
+          <li>
+              Each change is recorded as html source suitable for copying and pasting (or replacing) in the HTML5 draft document
+          </li>
+          <li>
+              When an existing HTML5 section has been copied and adapted for X3D,
+              irrelevant prior prose may be included in <strike>strikeout form</strike> for review comparison
+          </li>
+          <li>
+              Open specification issues or discussion items (if any) and eventual resolution
+          </li>
+      </ul>
+
+      <p>
+          Specific change suggestions to the HTML5 Recommendation follow.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-a">a.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#dom-tree-accessors" target="html5">3.1.4 DOM tree accessors</a>
+      </h4>
+
+      <p>   Change </p>
+      <blockquote>
+          HTML, SVG, and MathML elements define which classes they are in by having an attribute with no namespace with the name class containing a space-separated list of classes to which the element belongs. Other specifications may also allow elements in their namespaces to be labeled as being in specific classes.
+      </blockquote>
+      <p>   to </p>
+      <blockquote>
+          HTML, SVG, MathML and X3D elements define which classes they are in [etc.]
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-b">b.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#semantics-0" target="html5">3.2.1 Semantics</a>
+      </h4>
+
+      <p>
+         Note that HTML5
+         <a href="http://www.w3.org/html/wg/tracker/issues/41" target="_blank">ISSUE-41</a> (Decentralized-extensibility)
+         blocks progress to Last Call.
+         Discussion of relevant issues follows.
+      </p>
+
+      <p>
+         The proposed changes for HTML5 outlined in this document appear to show that
+         centralized extensibility (i.e. formal inclusion of an external language as an addition to HTML5)
+         is feasible for X3D.  No showstopper issues have been found.
+      </p>
+
+      <p>
+         The submitters of this proposal recommend the formal inclusion of X3D in HTML5.
+      </p>
+
+      <p>
+          Note that the related HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#extensibility" target="html5">2.2.2 Extensibility</a>
+          states
+      </p>
+      <blockquote>
+          "Vendor-specific proprietary extensions to this specification are strongly discouraged.
+          Documents must not use such extensions, as doing so reduces interoperability and
+          fragments the user base, allowing only users of specific user agents to access the content in question."
+      </blockquote>
+      <p> and </p>
+      <blockquote>
+          When vendor-neutral extensions to this specification are needed, either this specification can be updated accordingly,
+          or an extension specification can be written that overrides the requirements in this specification. When someone
+          applying this specification to their activities decides that they will recognise the requirements of such an
+          extension specification, it becomes an applicable specification for the purposes of conformance requirements
+          in this specification.
+      </blockquote>
+
+      <p>
+          If X3D is not approved as a vendor-neutral extension within HTML5, then
+      </p>
+      <ul>
+          <li>
+              Decentralized extensibility mechanisms for HTML5 documents will remain of interest
+              as an alternative way to add XML-based 3D graphics authoring to HTML pages.
+          </li>
+          <li>
+              Embedded X3D objects can still be used within HTML5 pages, albeit without the possiblity of
+              creating single mixed-source documents.
+          </li>
+      </ul>
+
+      <p>
+          The potential text/html serialization of X3D within HTML5 documents is seen as a mechanism
+          for unambiguously mapping the resulting DOM5 tree to a correctly capitalized X3D tree that
+          can be handed off to an X3D player.
+          The following table shows the correspondence between XML capitalization and lower-case form of all X3D v3.2 elements and attributes:
+          <a href="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/stylesheets/X3dElementsAttributesLowerCaseTable.txt">X3dElementsAttributesLowerCaseTable.txt</a>
+      </p>
+
+      <p>
+          There is no desire by the Web3D Consortium to formalize or otherwise adopt the relaxed-case text/html encoding for X3D
+          outside of the scope of HTML5 documents.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-c">c.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#the-lang-and-xml:lang-attributes" target="html5">3.2.3.3 The lang and xml:lang attributes</a>
+      </h4>
+
+      <p>
+          This section contains the illustrative note:
+      </p>
+      <blockquote>
+          (in particular, MathML and SVG allow lang attributes in the XML namespace to be specified on their elements)
+      </blockquote>
+      <p>
+          Edit to include the X3D approach.  For clarity have changed a long parenthetical section into separate sentences.
+      </p>
+      <blockquote>
+          In particular, MathML and SVG allow lang attributes in the XML namespace to be specified on their elements.
+          X3D uses the <code>FontStyle</code> element's <code>language</code> attribute
+          for displayed <code>Text</code> element <code>string</code> values.
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-d">d.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#the-dir-attribute" target="html5">3.2.3.5 The dir attribute</a>
+      </h4>
+
+      <p>
+          This section describes an HTML5 element's text directionality.
+      </p>
+      <p>
+          No mention is made of SVG or MathML text directionality.  It that is added (see
+          <a href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8594">bug 8594</a>),
+          then similar prose can be added for X3D
+          such as
+      </p>
+      <blockquote>
+          X3D uses the <code>FontStyle</code> element's 
+          <code>horizontal</code>, <code>topToBottom</code>, <code>leftToRight</code> and <code>justify</code> attributes
+          to control the directionality of displayed <code>Text</code> element <code>string</code> values.
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-e">e.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#flow-content-0" target="html5">3.2.5.1.2 Flow content</a>
+      </h4>
+
+      <p>
+          Add a new link <em>x3d</em> to the list of links.
+      </p>
+      <blockquote>
+          <ul class="brief category-list">
+             <li><code><a href="#x3d">x3d</a></code></li>
+          </ul>
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-f">f.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#phrasing-content-0" target="html5">3.2.5.1.5 Phrasing content</a>
+      </h4>
+
+      <p>
+          Add a new link <em>x3d</em> to the list of links.
+      </p>
+      <blockquote>
+          <ul class="brief category-list">
+             <li><code><a href="#x3d">x3d</a></code></li>
+          </ul>
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-g">g.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#embedded-content-0" target="html5">3.2.5.1.6 Embedded content</a>
+      </h4>
+
+      <p>
+          Add a new link <em>x3d</em> to the list of links.
+      </p>
+      <blockquote>
+          <ul class="brief category-list">
+             <li><code><a href="#x3d">x3d</a></code></li>
+          </ul>
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-h">h.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#interactive-content-0" target="html5">3.2.5.1.7 Interactive content</a>
+      </h4>
+
+      <p>
+          Wondering why <code>svg</code> and <code>math</code> elements are not listed under interactive content.
+          Perhaps they should be?  Perhaps X3D should be?
+          If they are added (see
+          <a href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8595">bug 8595</a>), add a link to the list of relevant elements as shown in preceding changes.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-i">i.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#paragraphs" target="html5">3.2.5.3 Paragraphs</a>
+      </h4>
+
+      <p>
+          This section includes the statement
+      </p>
+      <blockquote>
+          Conformance checkers may warn authors of cases where they have paragraphs that
+          overlap each other (this can happen with object, video, audio, and canvas elements).
+      </blockquote>
+      <p>
+          Wondering why <code>embed</code>, <code>svg</code> and <code>math</code> elements are not also listed?
+          If they are added (see
+          <a href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8597">bug 8597</a>),
+          then add a link to <code>x3d</code> as well.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-j">j.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#apis-in-html-documents" target="html5">3.3 APIs in HTML documents</a>
+      </h4>
+
+      <p>
+          Of relevant note is the following section:
+      </p>
+      <blockquote>
+          <p>Element.getElementsByTagName()
+          <br />
+          HTML elements match by lower-casing the argument before comparison, elements from other namespaces are treated as in XML (case-sensitively).</p>
+
+          <p>Specifically, these methods (but not their namespaced counterparts) must compare the given argument in a case-sensitive manner, but when looking at HTML elements, the argument must first be converted to ASCII lowercase.</p>
+
+          <p>Thus, in an HTML document with nodes in multiple namespaces, these methods will effectively be both case-sensitive and case-insensitive at the same time.</p>
+      </blockquote>
+      <p>
+          This approach appears to work fine for X3D.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-k">k.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#svg-0" target="html5">4.8.16 SVG</a>
+      </h4>
+
+      <p>
+          Insert new X3D section after SVG section, renumber section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#dimension-attributes" target="html5">4.8.17 Dimension attributes</a>
+          as
+          <a href="http://dev.w3.org/html5/spec/Overview.html#dimension-attributes" target="html5">4.8.18 Dimension attributes</a>
+      </p>
+
+      <blockquote>
+          <h4 id="x3d-0"><span class="secno">4.8.17 </span>X3D</h4><p class="XXX annotation">
+          <p>The <dfn id="x3d"><code>x3d</code></dfn> element from the <a href="#x3d-namespace">X3D
+  namespace</a> falls into the <a href="#embedded-content">embedded content</a>,
+  <a href="#phrasing-content">phrasing content</a>, and <a href="#flow-content">flow content</a>
+
+  categories for the purposes of the content models in this
+  specification.<div class="impl">
+
+  <p>To enable authors to use X3D tools that only accept X3D in its
+  XML form, interactive HTML user agents are encouraged to provide a
+  way to export any X3D fragment as an XML namespace-well-formed XML
+  fragment.</p>
+  </div>
+
+  <p><strike>When the SVG <code>foreignObject</code> element contains elements
+  from the <a href="#html-namespace-0">HTML namespace</a>, such elements must all be
+  <a href="#flow-content">flow content</a>. <a href="#refsSVG">[SVG]</a></strike>
+  </p>
+  <p><strike>The content model for <code title="">title</code> elements in the
+  <a href="#svg-namespace">SVG namespace</a> inside <a href="#html-documents">HTML documents</a> is
+  <a href="#phrasing-content">phrasing content</a>. (This further constrains the
+  requirements given in the SVG specification.)</strike>
+  </p>
+
+  <p>The semantics of X3D elements are defined by the X3D
+  specification and other relevant specifications. <a href="#refsX3D">[X3D]</a></p>
+  <!-- The following paragraph is for bug 7510 -->
+  <p><strike>The SVG specification includes requirements regarding the
+  handling of elements in the DOM that are not in the SVG namespace,
+  that are in SVG fragments, and that are not included in a
+  <code>foreignObject</code> element. </strike>
+
+  <em>This</em> specification does
+  not define any processing for elements in X3D fragments <strike>that are not
+  in the HTML namespace</strike>; they are considered neither conforming nor
+  non-conforming from the perspective of this specification.
+      </blockquote>
+
+      <p>
+          Of relevant note is that
+          <a href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8238#c21">HTML bug 8238</a>
+          examines element/attribute capitalization issues for X3D.
+      </p>
+
+      <p>
+          The following table shows the correspondence between XML capitalization and lower-case form of all X3D v3.2 elements and attributes:
+          <a href="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/stylesheets/X3dElementsAttributesLowerCaseTable.txt">X3dElementsAttributesLowerCaseTable.txt</a>.
+      </p>
+
+      <p>
+          The only noted ambiguity is the existence of a camel-case <code>Color</code> element and a lower-case <code>color</code> attribute.
+          Since processing of elements and attributes gets handled by separate conversion tables, this special case does not appear to be a problem.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-l">l.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#introduction-2" target="html5">6.5.1 (Scripting) Introduction</a>
+      </h4>
+
+      <p>   Change </p>
+      <ul>
+          <li>Processing of technologies like XBL or SVG that have their own scripting features.</li>
+      </ul>
+      <p>   to </p>
+      <ul>
+          <li>Processing of technologies like XBL, SVG or X3D that have their own scripting features.</li>
+      </ul>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-m">m.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#parsing-main-inbody" target="html5">9.2.5.10 The "in body" insertion mode</a>
+      </h4>
+
+      <p>
+          Following the subsection which begins
+      </p>
+      <blockquote>
+          A start tag whose tag name is "svg"
+      </blockquote>
+      <p>
+          Add a new subsection which begins
+      </p>
+      <blockquote>
+ <dl>
+   <dt>A start tag whose tag name is "x3d"</dt>
+   <dd>
+
+    <p><a href="#reconstruct-the-active-formatting-elements">Reconstruct the active formatting elements</a>, if
+    any.</p>
+
+    <p><a href="#adjust-svg-attributes">Adjust X3D attributes</a> for the token. (This fixes
+    the case of X3D attributes that are not all lowercase.)</p>
+
+    <p><a href="#adjust-foreign-attributes">Adjust foreign attributes</a> for the token. (This
+    fixes the use of namespaced attributes, in particular XLink in
+    X3D.)</p>
+
+    <p><a href="#insert-a-foreign-element">Insert a foreign element</a> for the token, in the
+    <a href="#x3d-namespace">X3D namespace</a>.</p>
+
+    <!-- If we ever change the frameset-ok flag to an insertion mode,
+    the following change would be implied, except we'd have to do it
+    even in the face of a self-closed tag:
+    <p>Set the <span>frameset-ok flag</span> to "not ok".</p>
+    -->
+
+    <p>If the token has its <i>self-closing flag</i> set, pop the
+    <a href="#current-node">current node</a> off the <a href="#stack-of-open-elements">stack of open
+    elements</a> and <a href="#acknowledge-self-closing-flag" title="acknowledge self-closing
+    flag">acknowledge the token's <i>self-closing flag</i></a>.</p>
+
+    <p>Otherwise, if the <a href="#insertion-mode">insertion mode</a> is not already
+    "<a href="#parsing-main-inforeign" title="insertion mode: in foreign content">in foreign
+    content</a>", let the <a href="#secondary-insertion-mode">secondary insertion mode</a> be
+    the current <a href="#insertion-mode">insertion mode</a>, and then switch the
+    <a href="#insertion-mode">insertion mode</a> to "<a href="#parsing-main-inforeign" title="insertion mode: in
+    foreign content">in foreign content</a>".</p>
+
+   </dd>
+</dl>
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-n">n.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#elements-0" target="html5">9.1.2 Elements</a>
+      </h4>
+
+      <p>
+          Definition list includes
+      </p>
+      <blockquote>
+          <dl>
+              <dt><dfn id="foreign-elements">Foreign elements</dfn></dt>
+              <dd>Elements from the <a href="#mathml-namespace">MathML namespace</a>
+               and the <a href="#svg-namespace">SVG namespace</a>.</dd>
+          </dl>
+      </blockquote>
+      <p>
+          change to
+      </p>
+      <blockquote>
+          <dl>
+              <dt><dfn id="foreign-elements">Foreign elements</dfn></dt>
+              <dd>Elements from the <a href="#mathml-namespace">MathML namespace</a>,
+               the <a href="#svg-namespace">SVG namespace</a>
+               and the <a href="#x3d-namespace">X3D namespace</a>.</dd>
+          </dl>
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-o">o.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#creating-and-inserting-elements" target="html5">9.2.5.1 Creating and inserting elements</a>
+      </h4>
+
+      <p>
+          Following the paragraph and table beginning:
+      </p>
+      <blockquote>
+          When the steps below require the user agent to <b>adjust SVG attributes</b> for a token, [...]
+              <br />
+              [... Attribute name on token / element table ...]
+      </blockquote>
+      <p>
+          Append prose as follows:
+      </p>
+      <blockquote>
+            <p>
+                When the steps below require the user agent to
+                <dfn id="adjust-x3d-attributes">adjust X3D attributes</dfn>
+                for a token, then, for each attribute on the token
+                whose attribute name is one of the ones in the first column of the
+                following table, change the attribute's name to the name given in
+                the corresponding cell in the second column. (This fixes the case of
+                X3D attributes that are not in mixed-case XML encoding.)
+            </p>
+      </blockquote>
+      <p>
+          Also append table as found at
+          <a href="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/stylesheets/X3dAttributesLowerCaseTable.html">X3dAttributesLowerCaseTable.html</a>
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-p">p.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#parsing-main-inforeign" target="html5">9.2.5.21 The "in foreign content" insertion mode</a>
+      </h4>
+      <p>
+          Similarly, following the paragraphs and table beginning:
+      </p>
+      <blockquote>
+          <b>Any other start tag</b>
+          <br />
+              If the current node is an element in the MathML namespace, [...]
+          <p>
+              If the current node is an element in the SVG namespace, and the token [...]
+              <br />
+              [... Tag name / Element name table ...]
+              <br />
+              If the current node is an element in the SVG namespace, adjust SVG attributes [...]
+          </p>
+          </blockquote>
+      <p>
+          Append prose as follows:
+      </p>
+      <blockquote>
+            <p>
+                If the <a href="#current-node">current node</a> is an element in the
+                <a href="#x3d-namespace">X3D namespace</a>, and the
+                token's tag name is one of the ones in the first column of the
+                following table, change the tag name to the name given in the
+                corresponding cell in the second column. (This fixes the case of
+                X3D elements that are not in mixed-case XML encoding.)
+            </p>
+            <p>
+                  [Insert table as found at
+                  <a href="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/stylesheets/X3dElementsLowerCaseTable.html">X3dElementsLowerCaseTable.html</a>]
+            </p>
+            <p>
+                If the <a href="#current-node">current node</a> is an element in the
+                <a href="#x3d-namespace">X3D namespace</a>,
+                <a href="#adjust-x3d-attributes">adjust X3D attributes</a> for the token.
+                (This fixes the case of
+                X3D attributes that are not in mixed-case XML encoding.)
+            </p>
+      </blockquote>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-q">q.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#namespaces" target="html5">9.3 Namespaces</a>
+      </h4>
+
+      <p>
+          Following the line which begins
+      </p>
+      <blockquote>
+          The <dfn id="svg-namespace">SVG namespace</dfn> is: <code>http://www.w3.org/2000/svg</code>
+      </blockquote>
+      <p>
+          Add a new line as follows:
+      </p>
+      <blockquote>
+          <p>The <dfn id="x3d-namespace">X3D namespace</dfn> is: <code>http://www.web3d.org/specifications/x3d</code></p>
+      </blockquote>
+
+      <p>
+          X3D action item:  current X3D namespaces use versioned schema URIs (such as
+          <a href="http://www.web3d.org/specifications/x3d-3.2.xsd">http://www.web3d.org/specifications/x3d-3.2.xsd</a>).
+          An X3D specification change will be needed to match any agreed-upon change in this namespace-identification convention.
+          Further discussion of a
+          <a href="http://www.web3d.org/x3d/content/html5/PotentialX3DNamespace.html">proposed X3D namespace change</a>
+          is ongoing.
+      </p>
+
+      <!-- ======================================================== -->
+
+      <h4>
+          <a name="issue-r">r.</a>  Change to HTML5 section
+          <a href="http://dev.w3.org/html5/spec/Overview.html#references" target="html5">References</a>
+      </h4>
+
+      <p>
+          The X3D Abstract Specification defines
+          scene rendering and user interaction in a manner
+          that can be implemented equivalently using various document encodings
+          (XML, ClassicVRML, Compressed Binary) or programming-language bindings
+          (ECMAScript, Java).
+      </p>
+      <p>
+          Add the following reference:
+      </p>
+      <blockquote>
+          <dl>
+           <dt id="refsX3D">[X3D]</dt>
+           <dd><cite><a href="http://www.web3d.org/x3d/specifications/ISO-IEC-19775-1.2-X3D-AbstractSpecification/index.html">X3D Architecture and base components Edition 2</a></cite>,
+           ISO/IEC 19775-1.2:2008.
+           <a href="http://www.web3d.org">Web3D Consortium</a>
+           and
+           <a href="http://www.iso.org">International Organization for Standardization (ISO)</a>/<a href="http://www.iec.ch/">International Electrotechnical Commission (IEC)</a>,
+           July 2008.</dd>
+          </dl>
+      </blockquote>
+
+      <p>
+          Note that multiple documents make up the X3D Specification.
+          HTML5 use of embedded X3D utilizes the XML encoding and ECMAScript event passing.
+          Therefore additional related references may also be appropriate:
+      </p>
+      <blockquote>
+          <dl>
+           <dt id="refsX3D-XML">[X3D-XML]</dt>
+           <dd><cite><a href="http://www.web3d.org/x3d/specifications/ISO-IEC-19776-1.2-X3DEncodings-XML/index.html">X3D encodings: XML encoding Edition 2</a></cite>,
+           ISO/IEC 19776-1.2:2009.
+           <a href="http://www.web3d.org">Web3D Consortium</a>
+           and
+           <a href="http://www.iso.org">International Organization for Standardization (ISO)</a>/<a href="http://www.iec.ch/">International Electrotechnical Commission (IEC)</a>,
+           October 2009.</dd>
+
+           <dt id="refsX3D-SAI">[X3D-SAI]</dt>
+           <dd><cite><a href="http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-2.2-X3D-SceneAccessInterface/index.html">X3D Scene access interface Edition 1</a></cite>,
+           ISO/IEC 19775-2:2006.
+           <a href="http://www.web3d.org">Web3D Consortium</a>
+           and
+           <a href="http://www.iso.org">International Organization for Standardization (ISO)</a>/<a href="http://www.iec.ch/">International Electrotechnical Commission (IEC)</a>,
+           July 2008.</dd>
+
+           <dt id="refsX3D-ECMASCRIPT">[X3D-ECMASCRIPT]</dt>
+           <dd><cite><a href="http://www.web3d.org/x3d/specifications/ISO-IEC-19777-1-X3DLanguageBindings-ECMAScript/index.html">X3D language bindings: ECMAScript</a></cite>,
+           ISO/IEC 19777-1:2006.
+           <a href="http://www.web3d.org">Web3D Consortium</a>
+           and
+           <a href="http://www.iso.org">International Organization for Standardization (ISO)</a>/<a href="http://www.iec.ch/">International Electrotechnical Commission (IEC)</a>,
+           May 2006.</dd>
+          </dl>
+      </blockquote>
+
+      <!-- ===================== -->
+
+      <h3> <a name="OpenIssues">Open Issues</a> </h3>
+
+      <ul>
+          <li>
+              <a name="SAI-Event-Passing"><i>Event passing</i></a>.
+              Need to document event-passing mechanisms between HTML5 scripts and X3D Scene Access Interface (SAI).
+              This will primarily consist of documenting the X3D SAI correspondences and example
+              communications between X3D nodes/fields and HTML elements/attributes.
+          </li>
+          <li>
+              <a name="ID-attributes"><i>ID attributes</i></a>.
+              X3D attributes DEF, USE explicitly correspond to types id, idref.  Does this need to be mentioned somewhere, perhaps in
+              <a href="http://dev.w3.org/html5/spec/Overview.html#the-id-attribute" target="html5">3.2.3.1 The id attribute</a> section?
+          </li>
+          <li>
+              <a name="Titles"><i>Titles</i></a>.
+              Section <a href="http://dev.w3.org/html5/spec/Overview.html#dom-tree-accessors" target="html5">3.1.4 DOM tree accessors</a>.
+              Whether to add prose regarding document title (for X3D <code>WorldInfo</code> element <code>title</code> attribute),
+              similar to entry provided for SVG title attribute.
+          </li>
+          <li>
+              <a name="Overlays"><i>Overlays</i></a>.
+              Typically an X3D scene occupies a rectangle of screen space via an HTML <code>embed</code> or <code>object</code> element.
+              What about how to handle X3D (or SVG, or MathML) that may include
+              background transparency
+              and is overlaid as a layer above the HTML page?
+              (Note that this form of transparency is different than that discussed in
+              <a href="http://dev.w3.org/html5/spec/Overview.html#transparent" target="html5">3.2.5.2 Transparent content models</a>
+              and the corresponding
+              <a href="http://www.w3.org/Bugs/Public/show_bug.cgi?id=8596">HTML5&nbsp;bug&nbsp;8596: terminology name collision: "Transparent" content models</a>.)
+          </li>
+          <li>
+              <a name="Security"><i>Security</i></a>.
+              Are there any new or unique security considerations introduced by including X3D in HTML5?
+              None are yet identified.
+          </li>
+      </ul>
+
+      <!-- ===================== -->
+
+      <h3> <a name="RelatedX3dIssues">Related X3D Issues</a> </h3>
+
+      <ul>
+          <li>
+              <a name="Ecmascript"><i>Ecmascript</i></a>.
+              We want to continue to ensure that specified versions of Javascript match.  X3D refers to the
+              <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=33835">ISO/IEC 16262:2002</a>
+              version of ECMAScript, which
+              <a href="http://en.wikipedia.org/wiki/Ecmascript">apparently matches</a>
+              the ECMA-262 specification from December 1999 which is specified by HTML5.
+              <ul>
+                  <li>
+                      <a href="http://dev.w3.org/html5/spec/Overview.html#refsECMA262">HTML5 reference</a>:
+                      <code>[ECMA262] <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript Language Specification</a>.
+                      ECMA, December 1999.</code>
+                  </li>
+                  <li>
+                      <a href="http://www.web3d.org/x3d/specifications/ISO-IEC-19775-1.2-X3D-AbstractSpecification/Part01/references.html#[I16262]">X3D reference</a>:
+                      <code>[I16262] ISO/IEC 16262:2002, Information technology — ECMAScript language specification.</code>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a name="X3D-and-DOM"><i>X3D and DOM</i></a>.
+              The X3D specifications do not refer to DOM manipulation of an X3D document which is also a separate live rendered X3D scene graph.
+              <ul>
+                  <li>
+                        Defining how to pass HTML5 DOM structure (i.e. the parsed text/html or xml version of the embedded X3D source)
+                        to an X3D player.
+                  </li>
+                  <li>
+                      Likely a corresponding section will be needed in the X3D specifications to match agreed-upon HTML5&nbsp;DOM semantics.
+                  </li>
+              </ul>
+          </li>
+          
+          <li>
+              <a name="Overlays"><i>Overlays</i></a>.
+              How to handle HTML (or SVG, or MathML) that is overlaid as a layer above an X3D scene?
+              Note that HTML5 background can be fully transparent,
+              and also that an individual HTML <code>canvas</code> can have
+              <a href="http://dev.w3.org/html5/spec/Overview.html#compositing">alpha value transparency compositing</a>).
+              Are partially transparent backgrounds needed for full HTML pages, so that they might serve as annotation overlays?
+          </li>
+
+          <li>
+              <a name="NewTextures"><i>New textures</i></a>.
+              Similarly, shall we add
+              <a href="http://www.web3d.org/membership/login/memberwiki/index.php/X3D_v3.3_Specification_Changes#SvgTexture_node">SvgTexture</a>
+              and
+              <a href="http://www.web3d.org/membership/login/memberwiki/index.php/X3D_v3.3_Specification_Changes#Other_textures">HtmlTexture</a>
+              to the X3D specifications for draping the 2D imagery on 3D geometry?
+          </li>
+      </ul>
+
+      <!-- ===================== -->
+
+        <h3><a name="Contact">Contact</a></h3>
+
+        <blockquote>
+            Questions, suggestions and comments about these issues are welcome.
+            Public discussion occurs on the
+            <a href="mailto:x3d-public@web3d.org?subject=feedback:%20HTML5%20and%20X3D%20">x3d-public@web3d.org</a>
+            and
+            <a href="mailto:public-html@w3.org?subject=feedback:%20HTML5%20and%20X3D%20">public-html@w3.org</a>
+            mailing lists.
+        </blockquote>
+
+        <blockquote>
+            Individual comments on this document can be sent to
+            <a href="http://web.nps.navy.mil/~brutzman" target="_blank">Don&nbsp;Brutzman</a>
+            (<a href="mailto:brutzman%20at%20nps.edu%20(Don%20Brutzman)?subject=feedback:%20HTML5%20and%20X3D%20"><i>brutzman&nbsp;at&nbsp;nps.edu</i></a>).
+        </blockquote>
+
+        <blockquote>
+            Available online at
+            <a href="http://www.web3d.org/x3d/content/html5/HTML5RecommendationAdditionsForX3D.html">http://www.web3d.org/x3d/content/html5/HTML5RecommendationAdditionsForX3D.html</a>
+            (also in
+            <a href="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/content/html5/HTML5RecommendationAdditionsForX3D.html">version control</a>)
+        </blockquote>
+        <blockquote>
+            Revised: 7 January 2010
+        </blockquote>
+ </body>
+</html>

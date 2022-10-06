@@ -1,0 +1,18 @@
+#VRML V2.0 utf8
+Group { 
+    children [
+        DEF Hour TimeSensor {
+            loop TRUE
+            cycleInterval 3.0      # 60*60 seconds == 1 hour
+        }
+        Sound {     
+            source DEF Sounder AudioClip {  
+                url "click.wav" 
+            }
+        }
+    ]
+}
+ROUTE Hour.cycleTime TO Sounder.startTime
+
+# misplaced 'DEF Sounder' in original spec sample, line 8
+# erroneous '}' in original spec example, line 10

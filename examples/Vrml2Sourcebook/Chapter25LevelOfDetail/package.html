@@ -1,0 +1,71 @@
+<html>
+
+<head>
+	<title> VRML 2.0 Sourcebook examples in X3D </title>
+</head>
+	
+<!-- Package Comment Files http://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html#packagecomment -->
+
+<!-- This package.html file is used in javadoc documentation -->
+<body>
+	
+	<p>
+		Level of detail (LOD) allows an overall world become very large by letting an author provide 
+		high-fidelity models when a viewer is nearby, and simpler geometry when the viewer is far away.
+	</p>
+    
+    <table border="0" width="100%">
+        <tbody>
+            <tr>
+                
+                <td align="left">
+
+                    <p>
+                        The further the viewer can see, the more there is to draw.
+                        Note that if a shape is distant, the shape is smaller and the viewer can't see as much detail.
+                        So... draw it with less detail.
+                        Varying detail with distance reduces initial download time and increases drawing speed.
+                    </p>
+                    
+
+                    <p>
+                        Increase performance by making multiple levels of shapes: high detail for close up viewing, 
+                        progressively lower detail for more distant viewing.
+                        Group the levels in an LOD node, ordered from high detail to low detail, and using an array of range values to select switching distances .
+                    </p>
+                    
+
+                    <p>
+                           These X3D scenes are adapted directly from the
+                           <a href="http://www.wiley.com/legacy/compbooks/vrml2sbk/toc/ch25.htm" target="Vrml2Sourcebook">original VRML 2.0 Sourcebook chapter examples</a>.
+                           Also available:
+                           <a href="http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0387.htm" target="Vrml2SourcebookCourse">VRML 2.0 Sourcebook course notes</a>.
+                    </p>
+                    
+    
+                </td>
+                
+                <td align="center" rowspan="2">
+
+                    <p>
+                    <!-- 782 x 446 -->
+                    <a href="../../..//index.html"><img border="0" alt="Figure 25.04 Three Torches Side By Side" title="Figure 25.04 Three Torches Side By Side" hspace="10" 
+                        src="../../..//_viewpoints/Figure25_04ThreeTorchesSideBySide.x3d._VP_Torch_(medium_detail).png" width="156" height="89" align="middle"/></a>
+                    </p>
+                    
+
+                    <p>
+                    <!-- 782 x 446 -->
+                    <a href="../../../Chapter25LevelOfDetail/index.html"><img border="0" alt="Figure 25.12 Dungeon Rooms With Sliding Doors" title="Figure 25.12 Dungeon Rooms With Sliding Doors" hspace="10" 
+                        src="../../../Chapter25LevelOfDetail/_viewpoints/Figure25_12DungeonRoomsWithSlidingDoors.x3d._VP_Torch_(high_detail).png" width="156" height="89" align="middle"/></a>
+                    </p>
+                    
+                    
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>

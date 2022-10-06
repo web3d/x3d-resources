@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TestProtoDeclareDisconnectedField.x3d' name='title'/>
+    <meta content='Michalis Kamburelis, Dick Puk, Don Brutzman' name='creator'/>
+    <meta content='25 October 2020' name='created'/>
+    <meta content='25 October 2020' name='modified'/>
+    <meta content='Simple ProtoDeclare example to check if diagnostics find disconnected field.' name='description'/>
+    <meta content='http://web3d.org/pipermail/x3d-public_web3d.org/2020-October/013891.html' name='reference'/>
+    <meta content='http://web3d.org/pipermail/x3d-public_web3d.org/2020-October/013905.html' name='reference'/>
+    <meta content='TestProtoDeclareDisconnectedField.diagnostics.txt' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/TestProtoDeclareDisconnectedField.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TestProtoDeclareDisconnectedField.x3d'/>
+    <ProtoDeclare name='MyShape'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='geometry' type='SFNode'>
+          <Sphere/>
+        </field>
+        <field accessType='inputOutput' name='color' type='SFColor' value='1 1 0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Shape DEF='ContainedShape'>
+          <IS>
+            <connect nodeField='geometry' protoField='geometry'/>
+            <connect nodeField='bboxCenter' protoField='undefinedProtoField'/>
+          </IS>
+          <Appearance DEF='NoConnection'>
+            <Material/>
+          </Appearance>
+        </Shape>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoInstance name='MyShape'>
+      <!-- use default field values -->
+    </ProtoInstance>
+  </Scene>
+</X3D>

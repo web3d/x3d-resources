@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='GlassExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='GlassExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass00' url='"GlassPrototypes.x3d#Glass00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass00" "GlassPrototypes.wrl#Glass00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass01' url='"GlassPrototypes.x3d#Glass01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass01" "GlassPrototypes.wrl#Glass01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass02' url='"GlassPrototypes.x3d#Glass02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass02" "GlassPrototypes.wrl#Glass02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass03' url='"GlassPrototypes.x3d#Glass03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass03" "GlassPrototypes.wrl#Glass03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass04' url='"GlassPrototypes.x3d#Glass04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass04" "GlassPrototypes.wrl#Glass04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass05' url='"GlassPrototypes.x3d#Glass05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass05" "GlassPrototypes.wrl#Glass05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass06' url='"GlassPrototypes.x3d#Glass06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass06" "GlassPrototypes.wrl#Glass06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass07' url='"GlassPrototypes.x3d#Glass07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass07" "GlassPrototypes.wrl#Glass07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass08' url='"GlassPrototypes.x3d#Glass08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass08" "GlassPrototypes.wrl#Glass08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass09' url='"GlassPrototypes.x3d#Glass09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass09" "GlassPrototypes.wrl#Glass09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass10' url='"GlassPrototypes.x3d#Glass10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass10" "GlassPrototypes.wrl#Glass10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass11' url='"GlassPrototypes.x3d#Glass11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass11" "GlassPrototypes.wrl#Glass11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass12' url='"GlassPrototypes.x3d#Glass12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass12" "GlassPrototypes.wrl#Glass12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass13' url='"GlassPrototypes.x3d#Glass13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass13" "GlassPrototypes.wrl#Glass13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass14' url='"GlassPrototypes.x3d#Glass14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass14" "GlassPrototypes.wrl#Glass14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass15' url='"GlassPrototypes.x3d#Glass15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass15" "GlassPrototypes.wrl#Glass15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass16' url='"GlassPrototypes.x3d#Glass16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass16" "GlassPrototypes.wrl#Glass16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass17' url='"GlassPrototypes.x3d#Glass17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass17" "GlassPrototypes.wrl#Glass17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass18' url='"GlassPrototypes.x3d#Glass18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass18" "GlassPrototypes.wrl#Glass18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass19' url='"GlassPrototypes.x3d#Glass19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass19" "GlassPrototypes.wrl#Glass19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass20' url='"GlassPrototypes.x3d#Glass20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass20" "GlassPrototypes.wrl#Glass20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass21' url='"GlassPrototypes.x3d#Glass21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass21" "GlassPrototypes.wrl#Glass21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass22' url='"GlassPrototypes.x3d#Glass22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass22" "GlassPrototypes.wrl#Glass22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass23' url='"GlassPrototypes.x3d#Glass23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass23" "GlassPrototypes.wrl#Glass23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass24' url='"GlassPrototypes.x3d#Glass24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass24" "GlassPrototypes.wrl#Glass24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass25' url='"GlassPrototypes.x3d#Glass25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass25" "GlassPrototypes.wrl#Glass25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass26' url='"GlassPrototypes.x3d#Glass26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass26" "GlassPrototypes.wrl#Glass26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass27' url='"GlassPrototypes.x3d#Glass27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass27" "GlassPrototypes.wrl#Glass27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass28' url='"GlassPrototypes.x3d#Glass28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass28" "GlassPrototypes.wrl#Glass28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass29' url='"GlassPrototypes.x3d#Glass29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass29" "GlassPrototypes.wrl#Glass29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass30' url='"GlassPrototypes.x3d#Glass30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass30" "GlassPrototypes.wrl#Glass30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass31' url='"GlassPrototypes.x3d#Glass31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass31" "GlassPrototypes.wrl#Glass31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass32' url='"GlassPrototypes.x3d#Glass32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass32" "GlassPrototypes.wrl#Glass32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass33' url='"GlassPrototypes.x3d#Glass33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass33" "GlassPrototypes.wrl#Glass33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Glass34' url='"GlassPrototypes.x3d#Glass34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.x3d#Glass34" "GlassPrototypes.wrl#Glass34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.wrl#Glass34"'/>
+    <Group>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Glass00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Glass00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass00' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Glass00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Glass01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Glass01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass01' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Glass02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Glass02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass02' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Glass03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Glass03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass03' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Glass04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Glass04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass04' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass4" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Glass05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Glass05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass05' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass5" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Glass06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Glass06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass06' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Glass07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Glass07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass07' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass7" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Glass08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Glass08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass08' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Glass09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Glass09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass09' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Glass10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Glass10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass10' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Glass11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Glass11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass11' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Glass12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Glass12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass12' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Glass13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Glass13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass13' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Glass14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Glass14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass14' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Glass15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Glass15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass15' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass5" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Glass16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Glass16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass16' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Glass17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Glass17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass17' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Glass18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Glass18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass18' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Glass19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Glass19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass19' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Glass20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Glass20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass20' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Glass21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Glass21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass21' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Glass22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Glass22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass22' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass2" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Glass23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Glass23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass23' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Glass24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Glass24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass24' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass4" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Glass25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Glass25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass25' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass5" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Glass26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Glass26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass26' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass6" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Glass27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Glass27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass27' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass7" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Glass28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Glass28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass28' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Glass29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Glass29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass29' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass9" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Glass30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Glass30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass30' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Glass31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Glass31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass31' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Glass32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Glass32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass32' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Glass33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Glass33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass33' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Glass34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Glass34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Glass34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Glass34' parameter='"target=_source"' url='"GlassPrototypes.html#ProtoDeclare_Glass34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/GlassPrototypes.html#ProtoDeclare_Glass34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Glass34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

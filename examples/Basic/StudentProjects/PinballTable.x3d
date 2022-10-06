@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='PinballTable.x3d' name='title'/>
+    <meta content='A pinball table with some ball animations.' name='description'/>
+    <meta content='Jiradett Kerdsri and Kacha Jitpanya' name='creator'/>
+    <meta content='6 August 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='PinballTableModel.png' name='Image'/>
+    <meta content='http://www.pinballrebel.com/game/pins/tommy/tommy_pinball.htm' name='reference'/>
+    <meta content='http://www.pinballrebel.com/game/pins/tommy/tombg.jpg' name='Image'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/PinballTable.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='PinballTable.x3d'/>
+    <Group>
+      <!-- table -->
+      <Transform center='0 0 -4' rotation='1 0 0 0.25'>
+        <Group>
+          <Transform>
+            <Shape>
+              <Box size='4.5 0.2 8'/>
+              <Appearance>
+                <Material diffuseColor='1 0 0'/>
+                <ImageTexture DEF='TommyPinballGame' url='"pinballFiles/TommyPinballGame.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/pinballFiles/TommyPinballGame.jpg"'/>
+              </Appearance>
+            </Shape>
+            <!-- side beam -->
+            <Transform translation='2.25 0 0'>
+              <Shape DEF='sideBeam'>
+                <Box size='0.3 0.6 8.8'/>
+                <Appearance DEF='WoodAppearance'>
+                  <ImageTexture url='"woodTexture.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/woodTexture.jpg"'/>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <!-- side beam2 -->
+            <Transform translation='-2.25 0 0'>
+              <Shape USE='sideBeam'/>
+            </Transform>
+            <!-- back of the table -->
+            <Transform translation='0 -0.198 0'>
+              <Shape>
+                <Box size='4.5 0.2 7.6'/>
+                <Appearance USE='WoodAppearance'/>
+              </Shape>
+            </Transform>
+            <!-- circle -->
+            <Transform translation='0 .17 -0.72'>
+              <Shape DEF='cylinder'>
+                <Cylinder height='.15' radius='.2'/>
+                <Appearance>
+                  <Material DEF='BALL_COLOR_2'/>
+                </Appearance>
+              </Shape>
+              <Transform translation='-0.36 0 -0.66'>
+                <Shape USE='cylinder'/>
+              </Transform>
+              <Transform translation='0.38 0 -0.82'>
+                <Shape USE='cylinder'/>
+              </Transform>
+              <Transform translation='-1.57 0 -2.03'>
+                <Shape USE='cylinder'/>
+              </Transform>
+              <TimeSensor DEF='CLOCK_2' cycleInterval='2.4' loop='true'/>
+              <ColorInterpolator DEF='COLOR_PATH_2' key='0.0 0.5 0.5 1.0' keyValue='0 1 0 0 1 0 0 0 1 0 0 1'/>
+            </Transform>
+            <!-- center circle -->
+            <Transform translation='0 .1 2.05'>
+              <Shape>
+                <Cylinder height='.2' radius='.54'/>
+                <Appearance>
+                  <ImageTexture url='"pinballFiles/center.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/pinballFiles/center.jpg"'/>
+                  <Material DEF='BALL_COLOR_1'/>
+                </Appearance>
+              </Shape>
+              <TimeSensor DEF='CLOCK_1' cycleInterval='2' loop='true'/>
+              <ColorInterpolator DEF='COLOR_PATH_1' key='0.0 0.5 0.5 1.0' keyValue='1 0 0 1 0 0 0 0 1 0 0 1'/>
+            </Transform>
+            <!-- beam -->
+            <Transform translation='0 0 4.25'>
+              <Shape DEF='beam'>
+                <Box size='4.5 0.6 0.3'/>
+                <Appearance USE='WoodAppearance'/>
+              </Shape>
+            </Transform>
+          </Transform>
+          <!-- overhead light -->
+          <DirectionalLight direction='0 -1 0' intensity='0.7'/>
+          <!-- blinking route for center -->
+          <ROUTE fromField='fraction_changed' fromNode='CLOCK_1' toField='set_fraction' toNode='COLOR_PATH_1'/>
+          <ROUTE fromField='value_changed' fromNode='COLOR_PATH_1' toField='set_emissiveColor' toNode='BALL_COLOR_1'/>
+          <!-- blinking route for small circle -->
+          <ROUTE fromField='fraction_changed' fromNode='CLOCK_2' toField='set_fraction' toNode='COLOR_PATH_2'/>
+          <ROUTE fromField='value_changed' fromNode='COLOR_PATH_2' toField='set_emissiveColor' toNode='BALL_COLOR_2'/>
+        </Group>
+        <!-- ball -->
+        <Group>
+          <Transform DEF='BALL1' translation='1.8 .2 3.6'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0 0'/>
+              </Appearance>
+              <Sphere radius='.1'/>
+            </Shape>
+          </Transform>
+          <TouchSensor DEF='Touch' description='ball 1 - touch to activate'/>
+        </Group>
+        <!-- stick1 -->
+        <Group>
+          <Transform DEF='stck1' rotation='0 1 0 .67' scale='1 2 1' translation='.5 .2 3.8'>
+            <Shape DEF='stick'>
+              <Appearance>
+                <Material diffuseColor='.8 .8 .8'/>
+              </Appearance>
+              <Extrusion creaseAngle='0.785' crossSection='0 0.1 0.37 0.11 0.44 0.07 0.45 0 0.44 -0.07 0.37 -0.11 0 -0.1 -0.2 -0.08 -0.32 -0.06 -0.38 -0.04 -0.4 0 -0.38 0.04 -0.32 0.06 -0.2 0.08 0 0.1' spine='0 -0.03 0 0 0.03 0'/>
+            </Shape>
+          </Transform>
+          <TouchSensor DEF='Touch1' description='stick 1 - touch to activate'/>
+        </Group>
+        <!-- stick2 -->
+        <Group>
+          <Transform DEF='stck2' rotation='0 1 0 2.47' scale='1 2 1' translation='-0.5 .2 3.8'>
+            <Shape USE='stick'/>
+          </Transform>
+          <TouchSensor DEF='Touch2' description='stick 2 - touch to activate'/>
+        </Group>
+      </Transform>
+      <TimeSensor DEF='Clock' cycleInterval='6'/>
+      <TimeSensor DEF='Clock1_1' cycleInterval='3'/>
+      <TimeSensor DEF='Clock1_2' cycleInterval='3'/>
+      <TimeSensor DEF='Clock1_3' cycleInterval='3'/>
+      <TimeSensor DEF='Clock1_4' cycleInterval='3'/>
+      <TimeSensor DEF='Clock2_1' cycleInterval='3'/>
+      <TimeSensor DEF='Clock2_2' cycleInterval='3'/>
+      <TimeSensor DEF='Clock2_3' cycleInterval='3'/>
+      <TimeSensor DEF='Clock2_4' cycleInterval='3'/>
+      <TimeSensor DEF='ClockOrient1'/>
+      <TimeSensor DEF='ClockOrient2'/>
+      <PositionInterpolator DEF='PosBall1' key='0 0.0625 0.125 0.1875 0.25 0.3125 0.375 0.4375 0.5 0.5625 0.625 0.6875 0.75 0.8125 0.875 0.9375 1' keyValue='1.8 .2 3.6 1.8 .2 -1.4 1.7 .2 -2.0 1.46 .2 -2.5 1.1 .2 -2.9 0.6 .2 -3.1 0 .2 -3.2 -0.6 .2 -3.1 -1.1 .2 -2.9 -1.5 .2 -2.5 -1.7 .2 -2.0 -1.8 .2 -1.4 -0.36 .2 -1.38 .36 .2 -1.54 0 .2 -0.74 0.562 .2 3.396 .242 .2 3.745'/>
+      <PositionInterpolator DEF='PosFlip1_1' key='0 0.25 0.5 0.75 1' keyValue='1.2 .2 3.4 0.701 .2 -2.826 -1.774 .2 -0.675 -1.511 .2 2.791 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip1_2' key='0 0.2 0.4 0.6 0.8 1' keyValue='.242 .2 3.745 1 0.2 1 -1.2 0.2 0.8 0.8 0.2 -2.4 0.4 0.2 -2.6 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip1_3' key='0 0.076923077 0.153846154 0.230769231 0.307692308 0.384615385 0.461538462 0.538461538 0.615384615 0.692307692 0.769230769 0.846153846 0.923076923 1' keyValue='.242 .2 3.745 -1.5 0.2 0 0.3 0.2 -3.1 -1.4 0.2 -3.1 -0.2 0.2 -1 -0.3 0.2 -3.4 -1.8 0.2 -1.8 0.3 0.2 -2.8 -1.1 0.2 -3.4 -1.7 0.2 -2.4 1.8 0.2 -0.4 -0.8 0.2 1.8 2 0.2 -3.4 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip1_4' key='0 0.2 0.4 0.6 0.8 1' keyValue='.242 .2 3.745 2.2 0.2 1 0 0.2 0 1.5 0.2 -3 -1 0.2 2.5 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip2_1' key='0 0.166666667 0.333333333 0.5 0.666666667 0.833333333 1' keyValue='1.2 0.2 -3 -2 0.2 0.2 2 0.2 -0.6 -2.2 0.2 1.2 1.2 0.2 0.8 -1.2 0.2 -3.4 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip2_2' key='0 0.066666667 0.129166667 0.191666667 0.254166667 0.316666667 0.379166667 0.441666667 0.504166667 0.566666667 0.629166667 0.691666667 0.754166667 0.816666667 0.879166667 0.941666667' keyValue='0 .2 4.25 -2 0.2 -1 -1.8 0.2 -3.4 -0.4 0.2 -3.6 1.8 0.2 -3.4 1.6 0.2 -2 1 0.2 1 0 .2 4.25 -0.5 0.2 0 -1 0.2 -2 0.5 0.2 2.5 0.8 0.2 1 -2.2 0.2 1 2.2 0.2 -3.6 -0.5 0.2 3 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip2_3' key='0 0.0625 0.125 0.1875 0.25 0.3125 0.375 0.4375 0.5 0.5625 0.625 0.6875 0.75 0.8125 0.875 0.9375 1' keyValue='-1.6 0.2 0 -1.8 0.2 -1 -1.6 0.2 -2.4 -0.4 0.2 -2.5 0 0.2 -1.6 -0.2 0.2 -0.9 -1 0.2 -1.8 0.2 0.2 -2.2 0.2 0.2 -1.4 -0.6 0.2 -1.4 -0.6 0.2 -1.6 0 0.2 -1.4 -0.2 0.2 -1.3 0.8 0.2 0 -1 0.2 0.2 1.4 0.2 -1.6 -0.4 .2 3.6'/>
+      <PositionInterpolator DEF='PosFlip2_4' key='0 0.25 0.5 0.75 1' keyValue='-0.4 .2 3.6 1.8 .2 0 0.936 .2 -2.842 0 .2 3.4 .242 .2 3.745'/>
+      <OrientationInterpolator DEF='orienFlip1' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 -0.5 0 1 0 -1.0 0 1 0 -1.57 0 1 0 -1 0 1 0 0.5'/>
+      <OrientationInterpolator DEF='orienFlip2' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0.5 0 1 0 1.0 0 1 0 1.57 0 1 0 1 0 1 0 -0.5'/>
+      <!-- pinballBackground -->
+      <Group>
+        <!-- beam for pinballBackground -->
+        <!-- left beam -->
+        <Transform translation='2.245 2 -4'>
+          <Shape>
+            <Box size='.3 4.5 0.8'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+        <!-- right beam -->
+        <Transform translation='-2.245 2 -4'>
+          <Shape>
+            <Box size='.3 4.5 0.8'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+        <!-- upper beam -->
+        <Transform translation='0 4.4 -4'>
+          <Shape>
+            <Box size='4.81 0.3 0.8'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+        <!-- back of pinballBackground -->
+        <Transform translation='0 -0.6 -4.5'>
+          <Shape>
+            <Box size='4.78 10.3 0.4'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+        <!-- pinballBackground -->
+        <Transform translation='0 2 -3.95'>
+          <Shape>
+            <Box size='4.5 4.5 0.5'/>
+            <Appearance>
+              <ImageTexture USE='TommyPinballGame'/>
+              <!-- animate color behind image -->
+              <Material DEF='BALL_COLOR_3'/>
+            </Appearance>
+          </Shape>
+          <TimeSensor DEF='CLOCK_3' cycleInterval='5' loop='true'/>
+          <ColorInterpolator DEF='COLOR_PATH_3' key='0.0 0.5 0.5 1.0' keyValue='0 0 0 .91 .98 .36 0 0 0 0 0 0'/>
+        </Transform>
+        <!-- Left front beam -->
+        <Transform translation='-2.25 -3.7 3.9'>
+          <Shape>
+            <Box size='0.3 3.8 0.6'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+        <!-- right front beam -->
+        <Transform translation='2.25 -3.7 3.9'>
+          <Shape>
+            <Box size='0.3 3.8 0.6'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+        <ROUTE fromField='fraction_changed' fromNode='CLOCK_3' toField='set_fraction' toNode='COLOR_PATH_3'/>
+        <ROUTE fromField='value_changed' fromNode='COLOR_PATH_3' toField='set_emissiveColor' toNode='BALL_COLOR_3'/>
+      </Group>
+      <!-- front -->
+      <Transform translation='0 -3.6 4'>
+        <Shape>
+          <Box size='4.2 2.8 .05'/>
+          <Appearance>
+            <Material/>
+            <ImageTexture url='"pinballFiles/pinballFront.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/pinballFiles/pinballFront.jpg"'/>
+          </Appearance>
+        </Shape>
+        <Transform translation='0 -1.7 0'>
+          <Shape>
+            <Box size='4.5 0.6 0.3'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- pinballSide -->
+      <Group>
+        <!-- right side -->
+        <Transform rotation='0 1 0 -1.57' translation='2.44 -5.6 4'>
+          <Shape>
+            <Appearance USE='WoodAppearance'/>
+            <IndexedFaceSet coordIndex='0 1 2 3 0'>
+              <Coordinate point='0 0 0 -8.7 0 0 -8.7 5.5 0 0 3.35 0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- left side -->
+        <Transform rotation='0 1 0 -1.57' translation='-2.43 -5.6 4'>
+          <Shape>
+            <Appearance USE='WoodAppearance'/>
+            <IndexedFaceSet coordIndex='0 3 2 1 0'>
+              <Coordinate point='0 0 0 -8.7 0 0 -8.7 5.5 0 0 3.35 0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- floor -->
+        <Transform translation='0 -5.4 -0.3'>
+          <Shape>
+            <Box size='4.9 0.4 8.4'/>
+            <Appearance USE='WoodAppearance'/>
+          </Shape>
+        </Transform>
+      </Group>
+      <!-- routeSelecter is used to select different routes when a player clicks on flippers. -->
+      <Script DEF='routeSelecter1' mustEvaluate='true'>
+        <field accessType='inputOnly' name='set_startTime' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime1' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime2' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime3' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime4' type='SFTime'/>
+        <![CDATA[
+ecmascript:
+
+function set_startTime( touchTime ) {
+	prob= Math.random();
+
+	if ( prob < 0.25 ) {
+		startTime1 = touchTime;
+	}
+	else if ( (prob >= 0.25) && (prob < 0.50) ) {
+		startTime2 = touchTime;
+	}
+	else if ( ( prob >= 0.50) && (prob < 0.75) ) {
+		startTime3 = touchTime;
+	}
+	else {
+		startTime4 = touchTime;	
+	}
+}
+]]>
+      </Script>
+      <Script DEF='routeSelecter2' mustEvaluate='true'>
+        <field accessType='inputOnly' name='set_startTime' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime1' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime2' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime3' type='SFTime'/>
+        <field accessType='outputOnly' name='startTime4' type='SFTime'/>
+        <![CDATA[
+ecmascript:
+
+function set_startTime( touchTime ) {
+	prob= Math.random();
+	if ( prob < 0.25 ) {
+		startTime1 = touchTime;
+	}
+	else if ( (prob >= 0.25) && (prob < 0.50) ) {
+		startTime2 = touchTime;
+	}
+	else if ( (prob >= 0.50) && (prob < 0.75) ) {
+		startTime3 = touchTime;
+	}
+	else {
+		startTime4 = touchTime;	
+	}
+}
+]]>
+      </Script>
+    </Group>
+    <!-- Start game -->
+    <ROUTE fromField='touchTime' fromNode='Touch' toField='set_startTime' toNode='Clock'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='PosBall1'/>
+    <ROUTE fromField='value_changed' fromNode='PosBall1' toField='set_translation' toNode='BALL1'/>
+    <!-- Path1 -->
+    <ROUTE fromField='touchTime' fromNode='Touch1' toField='set_startTime' toNode='routeSelecter1'/>
+    <ROUTE fromField='startTime1' fromNode='routeSelecter1' toField='set_startTime' toNode='Clock1_1'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock1_1' toField='set_fraction' toNode='PosFlip1_1'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip1_1' toField='set_translation' toNode='BALL1'/>
+    <!-- Path2 -->
+    <ROUTE fromField='startTime2' fromNode='routeSelecter1' toField='set_startTime' toNode='Clock1_2'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock1_2' toField='set_fraction' toNode='PosFlip1_2'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip1_2' toField='set_translation' toNode='BALL1'/>
+    <!-- Path3 -->
+    <ROUTE fromField='startTime3' fromNode='routeSelecter1' toField='set_startTime' toNode='Clock1_3'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock1_3' toField='set_fraction' toNode='PosFlip1_3'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip1_3' toField='set_translation' toNode='BALL1'/>
+    <!-- Path4 -->
+    <ROUTE fromField='startTime4' fromNode='routeSelecter1' toField='set_startTime' toNode='Clock1_4'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock1_4' toField='set_fraction' toNode='PosFlip1_4'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip1_4' toField='set_translation' toNode='BALL1'/>
+    <!-- Path5 -->
+    <ROUTE fromField='touchTime' fromNode='Touch2' toField='set_startTime' toNode='routeSelecter2'/>
+    <ROUTE fromField='startTime1' fromNode='routeSelecter2' toField='set_startTime' toNode='Clock2_1'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock2_1' toField='set_fraction' toNode='PosFlip2_1'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip2_1' toField='set_translation' toNode='BALL1'/>
+    <!-- Path6 -->
+    <ROUTE fromField='startTime2' fromNode='routeSelecter2' toField='set_startTime' toNode='Clock2_2'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock2_2' toField='set_fraction' toNode='PosFlip2_2'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip2_2' toField='set_translation' toNode='BALL1'/>
+    <!-- Path7 -->
+    <ROUTE fromField='startTime3' fromNode='routeSelecter2' toField='set_startTime' toNode='Clock2_3'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock2_3' toField='set_fraction' toNode='PosFlip2_3'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip2_3' toField='set_translation' toNode='BALL1'/>
+    <!-- Path8 -->
+    <ROUTE fromField='startTime4' fromNode='routeSelecter2' toField='set_startTime' toNode='Clock2_4'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock2_4' toField='set_fraction' toNode='PosFlip2_4'/>
+    <ROUTE fromField='value_changed' fromNode='PosFlip2_4' toField='set_translation' toNode='BALL1'/>
+    <!-- Rotating sticks -->
+    <ROUTE fromField='touchTime' fromNode='Touch1' toField='set_startTime' toNode='ClockOrient1'/>
+    <ROUTE fromField='fraction_changed' fromNode='ClockOrient1' toField='set_fraction' toNode='orienFlip1'/>
+    <ROUTE fromField='value_changed' fromNode='orienFlip1' toField='set_rotation' toNode='stck1'/>
+    <ROUTE fromField='touchTime' fromNode='Touch2' toField='set_startTime' toNode='ClockOrient2'/>
+    <ROUTE fromField='fraction_changed' fromNode='ClockOrient2' toField='set_fraction' toNode='orienFlip2'/>
+    <ROUTE fromField='value_changed' fromNode='orienFlip2' toField='set_rotation' toNode='stck2'/>
+    <!-- View Point -->
+    <Viewpoint description='normal view' position='0 0 8.5'/>
+    <Viewpoint description='far' position='0 1 20'/>
+    <Viewpoint description='right' fieldOfView='0.7' orientation='0 1 0 1.2' position='15 0 15'/>
+    <Viewpoint description='left' orientation='0 1 0 -1.2' position='-15 0 15'/>
+    <Viewpoint description='over' orientation='1 0 0 -1.2' position='0 17 5'/>
+    <Background backUrl='"urn:web3d:media:textures/panoramas/space_1_back.jpg" "../UniversalMediaPanoramas/space_1_back.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_back.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_back.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_back.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_back.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_back.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_back.jpg"' bottomUrl='"urn:web3d:media:textures/panoramas/space_1_bottom.jpg" "../UniversalMediaPanoramas/space_1_bottom.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_bottom.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_bottom.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_bottom.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_bottom.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_bottom.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_bottom.jpg"' frontUrl='"urn:web3d:media:textures/panoramas/space_1_front.jpg" "../UniversalMediaPanoramas/space_1_front.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_front.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_front.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_front.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_front.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_front.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_front.jpg"' groundAngle='1.309 1.570796' groundColor='0 0 0' leftUrl='"urn:web3d:media:textures/panoramas/space_1_left.jpg" "../UniversalMediaPanoramas/space_1_left.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_left.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_left.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_left.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_left.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_left.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_left.jpg"' rightUrl='"urn:web3d:media:textures/panoramas/space_1_right.jpg" "../UniversalMediaPanoramas/space_1_right.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_right.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_right.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_right.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_right.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_right.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_right.jpg"' skyAngle='1.309 1.571' topUrl='"urn:web3d:media:textures/panoramas/space_1_top.jpg" "../UniversalMediaPanoramas/space_1_top.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_top.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_top.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_top.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_top.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_top.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_top.jpg"'/>
+  </Scene>
+</X3D>

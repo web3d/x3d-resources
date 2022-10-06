@@ -1,0 +1,4487 @@
+#VRML V2.0 utf8
+
+# created by heller@ai.sri.com Tue Feb  1 2000  17:30:02
+
+EXTERNPROTO GeoLocation [
+             field   SFNode    geoOrigin     # NULL
+             field   MFString  geoSystem     # [ "GDC" ]
+             field   SFString  geoCoords     # ""
+             eventIn SFString  set_geoCoords
+             field   MFNode    children      # []
+          ] "http://www.ai.sri.com/geovrml/1.0/protos/GeoLocation.wrl"
+
+EXTERNPROTO GeoMetadata [
+             exposedField MFString url        # []
+             exposedField MFString summary    # []
+             exposedField MFNode   data       # []
+          ] "http://www.ai.sri.com/geovrml/1.0/protos/GeoMetadata.wrl"
+
+EXTERNPROTO GeoOrigin [
+            exposedField  MFString  geoSystem    # [ "GDC" ]
+            exposedField  SFString  geoCoords    # ""
+          ] "http://www.ai.sri.com/geovrml/1.0/protos/GeoOrigin.wrl"
+
+EXTERNPROTO GeoViewpoint [
+            field         SFNode      geoOrigin        # NULL
+            field         MFString    geoSystem        # ["GDC"]
+            field         SFString    position         # "0 0 100000"
+            field         SFRotation  orientation      # 0 0 1 0
+            exposedField  SFFloat     fieldOfView      # 0.785398
+            exposedField  SFBool      jump             # TRUE
+            exposedField  MFString    navType          # ["EXAMINE","ANY"]
+            exposedField  SFBool      headlight        # TRUE
+            field         SFString    description      # ""
+            field         SFFloat     speed            # 1.0
+            eventIn       SFString    set_position
+            eventIn       SFString    set_orientation
+            eventIn       SFBool      set_bind
+            eventOut      SFTime      bindTime
+            eventOut      SFBool      isBound
+          ] [ "urn:web3d:geovrml:1.0/protos/GeoViewpoint.wrl"
+              "http://www.geovrml.org/1.0/protos/GeoViewpoint.wrl" ]
+
+
+
+DEF LVCS-ORIGIN GeoOrigin {
+  geoSystem [
+     "GDC",
+     "WE",
+     "WE",
+  ]
+  geoCoords "37.45657629289387 -122.1772098019601 10.0"
+}
+
+DEF martins_office GeoViewpoint {
+  geoSystem [
+     "GDC",
+     "WE",	
+     "WE",	
+  ]
+  geoOrigin 
+    USE LVCS-ORIGIN 
+
+  position "37.45657629289387 -122.1772098019601 -1000.0"
+  orientation 1.0 0.0 0.0 1.5707963267948966
+  description "Martin's Office +1000m"
+  }
+
+
+Group {
+  children [ 
+    NavigationInfo {
+      speed 100.0
+      type [
+         "EXAMINE",
+         "ANY",
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4572702942313 -122.17285272090446 13.575352419167757"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-0/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45855087547784 -122.17299719228962 6.5414795177057386"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-1/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.33597754563042015
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455090143380325 -122.17577908304841 6.858270224183798"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-2/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45587247434353 -122.17549681473791 5.48073857370764"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-3/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.0606579634599274
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45696959896483 -122.17349356475092 2.5236815866082907"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-4/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5682819310775525
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45752986169077 -122.17255239265335 3.0489128064364195"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-5/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5571664527401798
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45508901792349 -122.1744509895613 5.380065024830401"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-6/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45636316454118 -122.17448723463019 2.573365761898458"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-7/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.54725034255133
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45502643073463 -122.17742528313674 3.3866771683096886"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-8/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45588879799328 -122.17524623801919 4.98465908691287"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-9/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -2.1260337647017225
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456517519745695 -122.17328336441369 2.713802792131901"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-10/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -2.1507865769988688
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45600155148939 -122.17599240217978 18.010228152386844"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-11/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.21222101893881418
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45723685203812 -122.17511987604118 15.92335551790893"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-12/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45503421704476 -122.17670563469521 3.221325115300715"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-13/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45660302303386 -122.17497866580095 4.641824320890009"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-14/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455662812713115 -122.17815579828474 7.127999701537192"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-15/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.454777118864726 -122.17428652336148 5.93625679705292"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-16/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5545655016341481
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4586277365655 -122.173191886012 6.549256028607488"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-17/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.255762732188408
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456656900883765 -122.17432461409655 4.092642282135785"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-18/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45589196793829 -122.17661290206827 13.849743553437293"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-19/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.454742097706344 -122.176075551685 9.548194108530879"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-20/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5448796128717067
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.459343100583965 -122.17577382427473 2.365921502932906"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-21/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 2.5693567081186713
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45829026053256 -122.17403444710365 5.760875140316784"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-22/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.0156201395518077
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45491557328823 -122.17726006224678 3.0214025918394327"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-23/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45591917814891 -122.17571403160821 8.78000576607883"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-24/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.27598278273685223
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45657326482748 -122.17430275688713 2.487428056076169"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-25/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457954698100075 -122.17548056555404 17.594010497443378"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-26/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45590585076085 -122.1751944596797 3.552113295532763"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-27/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5015775569069375
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45610913695282 -122.17399622245125 4.362026927061379"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-28/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4547116922646 -122.17681020280229 3.355502273887396"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-29/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45766070886009 -122.17599575766377 5.076752241700888"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-30/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45796451160252 -122.17613803796557 6.220091599971056"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-31/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45677350057518 -122.17749573363987 2.197195878252387"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-32/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.9981249073914538
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45807779112422 -122.17411764890807 5.709648999385536"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-33/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.0156201395518077
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.454882244588006 -122.17692956544983 4.7519437577575445"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-34/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45597603145201 -122.17611074695542 18.00964650325477"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-35/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.21222101893881418
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457230040769886 -122.17267919332014 13.204680165275932"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-36/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45480613981243 -122.17386945372586 4.2101172199472785"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-37/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45708528417106 -122.17296111448651 9.479117675684393"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-38/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4557183207063 -122.17555223488636 3.840058395639062"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-39/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45634044951326 -122.1756935597244 15.859837665222586"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-40/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 3.1311206780778274
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45592566042719 -122.17660938487437 13.852261767722667"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-41/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457529892816005 -122.17256711496873 11.012683819048107"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-42/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.538558852052865
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45482242600392 -122.17658734313236 4.471417527645826"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-43/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45914867841565 -122.17542440073804 2.6793939722701907"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-44/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45657629289387 -122.1772098019601 17.19216455705464"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-45/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5530734199481815
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455442192677 -122.17682685627666 8.63792418781668"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-46/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456380605079986 -122.17571867583752 7.213743315078318"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-47/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5423788594575503
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.454818712921295 -122.17585322698553 4.202082556672394"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-48/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5448796128717067
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4550502471287 -122.17682036348906 3.8518225820735097"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-49/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45746330669514 -122.17345143211628 2.9129314199090004"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-50/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5682819310775525
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.454442875116044 -122.17594377760844 6.156108728609979"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-51/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5592255609907331
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45879701654415 -122.17393522056128 6.569330669008195"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-52/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.33597754563042015
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45582234818999 -122.17715115863376 17.133673508651555"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-53/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5530734199481815
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45585039052191 -122.17529710799967 6.946160456165671"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-54/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.0208304395549366
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457508873176856 -122.172491886199 14.514393392950297"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-55/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45513578302731 -122.17717506959657 3.4812645660713315"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-56/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45719839591745 -122.17509532185987 7.586426428519189"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-57/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5845048582093503
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4569883265308 -122.1729676712078 6.5581301134079695"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-58/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.0149408883476366
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45456145819844 -122.17689486975709 7.527868615463376"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-59/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45740319412557 -122.17618841369759 5.0026247035712"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-60/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455980832229784 -122.1754127566971 5.2845821883529425"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-61/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -2.1260337647017225
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4572507076156 -122.17266351614355 13.141504678875208"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-62/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45512771849234 -122.17753368161324 6.1585897551849485"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-63/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45648897149806 -122.17474510430961 4.042569777928293"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-64/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457545419520336 -122.17647045693873 6.57679077796638"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-65/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4567782426038 -122.17300057286778 8.243166682310403"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-66/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.6031481712187037
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45460042628699 -122.17581565926682 6.317391004413366"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-67/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5580243257152826
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45671927239422 -122.17710406092134 17.201877245679498"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-68/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5530734199481815
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45847639259631 -122.1732855152507 6.537731416523457"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-69/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.33597754563042015
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455910343615315 -122.17664992226594 13.851592540740967"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-70/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45579582804456 -122.17533034339407 4.9784933580085635"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-71/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.020476207703911
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455199117886465 -122.17701342699323 4.017314109019935"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-72/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45742307208743 -122.17284002175455 15.32203997951001"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-73/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455266201390465 -122.17506929403226 6.281517929397523"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-74/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.458249512657666 -122.17582503824109 13.063681640662253"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-75/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45703379139092 -122.17608269698909 17.61487079691142"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-76/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.459349758117824 -122.17577994880299 12.226319789886475"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-77/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5287975837504346
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455523631670936 -122.17826624724431 4.396789534017444"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-78/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.012785013718432
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45748923066822 -122.1757325976501 17.814282183535397"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-79/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45622632561962 -122.17423430878904 4.528802731074393"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-80/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45501807177614 -122.17719105822079 4.006106214597821"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-81/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45465566409258 -122.17698610464193 3.2464131880551577"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-82/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45712962221045 -122.17265941441853 13.401793683879078"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-83/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45692498803204 -122.17769601887739 16.93729296978563"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-84/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456814457875936 -122.1769710991232 2.2080116970464587"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-85/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45440500608271 -122.17564484966901 5.874921953305602"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-86/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5592255609907331
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45887150100618 -122.17364689701467 6.572895417921245"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-87/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.33597754563042015
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457302044512346 -122.17262076560766 13.290771765634418"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-88/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45787902024201 -122.17202008954384 4.758735476993024"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-89/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.255762732188408
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456270157439285 -122.17655409213578 17.732382902875543"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-90/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.21222101893881418
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455202658874605 -122.17537929382321 10.800645593553782"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-91/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45826209565133 -122.17595626355404 11.577650134451688"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-92/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45544706135105 -122.17542250128548 6.491053903475404"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-93/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.458398889705016 -122.1730916119198 6.529909424483776"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-94/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.255762732188408
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45590814672539 -122.1765990028583 13.850803661160171"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-95/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456286881934034 -122.17435595010173 2.799916968680918"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-96/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5626131909939915
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45598740170031 -122.17375297634354 4.297718069516122"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-97/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45632012788061 -122.17701436276613 8.888750216923654"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-98/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.27598278273685223
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.456845922281055 -122.17669512470076 5.616073635406792"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-99/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455818973641165 -122.17500576498591 5.202997267246246"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-100/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45606574957878 -122.17762711789799 17.579336941242218"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-101/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5530734199481815
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45679915195322 -122.17630003052214 18.843943851068616"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-102/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457331549143376 -122.1726072752575 13.708675358444453"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-103/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45520547056154 -122.17781585094827 3.2565740747377277"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-104/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.454810121643106 -122.1772881517725 3.4585653822869063"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-105/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4574835594975 -122.17250934197735 14.512516235001386"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-106/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457111007051886 -122.17287436027812 7.242378053255379"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-107/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.6548297552683101
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.458031005215425 -122.1719256683745 4.770276533439755"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-108/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.33597754563042015
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45515720353775 -122.17406431710244 4.3671683901920915"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-109/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45934859760897 -122.17577724891385 3.8770384145900607"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-110/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -2.1220883212420874
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45552187784782 -122.1767457842618 8.714063614606858"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-111/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45487218593971 -122.177110948491 4.0440065916627646"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-112/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45714986360583 -122.17352452743129 4.084409800358117"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-113/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45736742589547 -122.17254854118927 12.031191472895444"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-114/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.453927446067314
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45525714274129 -122.17507028895217 6.794414064846933"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-115/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45527295154821 -122.17532124323364 6.476923021487892"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-116/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45692705603369 -122.1733747901541 4.366944617591798"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-117/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5485743236680747
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45785850917333 -122.17548124695458 17.76672370173037"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-118/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4562485875788 -122.17668959142121 18.037382354959846"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-119/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.21222101893881418
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45810786809718 -122.17212035970775 4.777719925157726"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-120/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.255762732188408
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455266201390465 -122.17506929403226 6.281517929397523"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-121/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45592875610246 -122.17663227644208 13.852776668034494"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-122/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45795652492048 -122.17221399048172 4.766224743798375"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-123/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.33597754563042015
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45714439718839 -122.17676921602542 5.741842704825103"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-124/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.458446345493876 -122.17621659673107 12.486853444948793"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-125/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45479119875997 -122.17587485217826 12.241555511020124"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-126/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455637529653934 -122.17805175366064 9.068381279706955"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-127/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45763170885517 -122.17283667995618 3.710161382332444"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-128/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5161410849914236
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4552030561581 -122.17537929603283 17.37209532316774"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-129/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45932899377421 -122.17558236032434 6.673216645605862"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-130/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45589059230768 -122.17663857154662 13.849952574819327"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-131/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.06768272864462333
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45918042954255 -122.1754082085766 5.576121235266328"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-132/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5679538150811854
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.425131055190136 -122.16542623141605 15.226345616392792"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-133/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.6047001224931912
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455833276710195 -122.17782281798755 4.371283515356481"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-134/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455470051193935 -122.1764647666282 4.49514652043581"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-135/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -2.1285855769103126
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45657234678347 -122.17339401563034 2.7787711387500167"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-136/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -2.1507865769988688
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45631310248525 -122.17629745601055 23.58098861668259"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-137/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455171973416775 -122.17478671098695 5.2806648556143045"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-138/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457562174137806 -122.17653367409845 5.033575700595975"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-139/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45801521983128 -122.1757853295299 6.195992290042341"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-140/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45625863524508 -122.17663801938741 9.305874523706735"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-141/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.2204078802129132
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.457739055012425 -122.1734358580361 5.76438597496599"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-142/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 1.0156201395518077
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45598818694582 -122.17605942042514 9.153055736795068"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-143/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.2204078802129132
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.4576116909627 -122.17360001041664 5.102806192822754"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-144/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45894836101852 -122.17384159223147 6.580874713137746"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-145/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.255762732188408
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45776336144376 -122.17341476074354 5.653091097250581"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-146/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5436424257293775
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45516876487382 -122.17770066739573 3.311441686935723"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-147/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.455490754774395 -122.1758039372311 3.435827133245766"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-148/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5448796128717067
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45752755262736 -122.17293579558575 11.593646936118603"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-149/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 0.0
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45714391701085 -122.17638076991432 4.629718789830804"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-150/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -0.5600868105882667
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+    GeoLocation {
+      geoSystem [
+         "GDC",
+         "WE",
+         "WE",
+      ]
+      geoOrigin 
+        USE LVCS-ORIGIN 
+      geoCoords "37.45871951472387 -122.1737413157338 6.561306121759117"
+      children [ 
+        Transform {
+          children [ 
+            Transform {
+              children [ 
+                Transform {
+                  children [ 
+                    Inline {
+                      url "object-151/world.wrl"
+                    }
+                  ]
+                }
+              ]
+              rotation 0.0 1.0 0.0 -1.255762732188408
+            }
+          ]
+          rotation 1.0 0.0 0.0 0.0
+        }
+      ]
+    }
+  ]
+}

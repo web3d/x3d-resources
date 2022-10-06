@@ -1,0 +1,45 @@
+#X3D V3.0 utf8
+
+PROFILE Immersive
+
+PROTO ColoredSphere [
+    initializeOnly SFColor color 0 1 0
+] {
+    Shape {
+        appearance Appearance {
+            material Material {
+                diffuseColor IS color
+            }
+        }
+        geometry Sphere {}
+    }
+}
+
+DEF SC Script {
+    url ["ecmascript:
+
+        function initialize() {
+            // Create nodes directly in the parent scene
+            scene = Browser.currentScene;
+
+            // Look through proto declarations for ColoredSphere
+            protoDecls = scene.protoDeclarations;
+
+            var protoDecl;
+
+            for(i=0; i < protoDecls.length; i++) {
+                if (protoDecls[i].name == 'ColoredSphere')
+                    protoDecl = protoDecls[i];
+            }
+
+            // Create an instance of RedSphere
+            instance = protoDecl.newInstance();
+
+            // Set the color field to Red
+            instance.color = new SFColor(1,0,0);
+
+            // Add the created proto to the scene
+            scene.rootNodes[0] = instance;
+        }
+    "]
+}

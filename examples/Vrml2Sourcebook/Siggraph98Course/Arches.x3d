@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Arches.x3d' name='title'/>
+    <meta content='Transform group example: gazebo made of arches. This example illustrates the use of Transform grouping nodes and their translation, rotation, and scale features.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/arches.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0069.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Arches.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- First, an Arch is created in a group. The Arch includes of left and right columns, each positioned using a Transform group and its translation field. -->
+    <!-- Next, each Arch group includes a horizontal box spanning the two columns. The box is translated up to the top of the columns using a Transform group node. -->
+    <!-- The angled top of each Arch is created using two boxes, each rotated about the Z axis to tilt them. A translation then positions the tilted boxes at the top of the archway. -->
+    <!-- Next, the entire Arch group is instanced multiple times, rotating each instance to create a circle of archs forming a gazeebo-like structure. -->
+    <!-- Finally a base for the structure is added. -->
+    <WorldInfo title='Arches.x3d'/>
+    <Transform DEF='Arch'>
+      <Transform translation='-2.0 -1.0 0.0'>
+        <Shape DEF='Column'>
+          <Appearance DEF='White'>
+            <Material/>
+          </Appearance>
+          <Cylinder bottom='false' height='6.0' radius='0.3' top='false'/>
+        </Shape>
+      </Transform>
+      <Transform translation='2.0 -1.0 0.0'>
+        <Shape USE='Column'/>
+      </Transform>
+      <Transform translation='0.0 2.05 0.0'>
+        <Shape>
+          <Appearance USE='White'/>
+          <Box size='4.6 0.4 0.6'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='0.0 0.0 1.0 0.524' translation='-1.15 3.12 0.0'>
+        <Shape DEF='Roof'>
+          <Appearance USE='White'/>
+          <Box size='2.86 0.4 0.6'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='0.0 0.0 1.0 -0.524' translation='1.15 3.12 0.0'>
+        <Shape USE='Roof'/>
+      </Transform>
+    </Transform>
+    <Transform rotation='0.0 1.0 0.0 0.785'>
+      <Transform USE='Arch'/>
+    </Transform>
+    <Transform rotation='0.0 1.0 0.0 -0.785'>
+      <Transform USE='Arch'/>
+    </Transform>
+    <Transform rotation='0.0 1.0 0.0 1.571'>
+      <Transform USE='Arch'/>
+    </Transform>
+    <Transform translation='0.0 -4.125 0.0'>
+      <Shape>
+        <Appearance USE='White'/>
+        <Cylinder bottom='false' height='0.25' radius='3.0'/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.0 -4.375 0.0'>
+      <Shape>
+        <Appearance USE='White'/>
+        <Cylinder height='0.25' radius='4.0'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

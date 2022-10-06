@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta content='TestMetadataNodes.x3d' name='title'/>
+    <meta content='Test parentage and type checking of MetadataNodes using X3D4 defaults.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='12 March 2005' name='created'/>
+    <meta content='2 July 2022' name='modified'/>
+    <meta content='https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-DIS/Part01/components/core.html#NodeReference' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/X3dTooltips.html#MetadataDouble' name='reference'/>
+    <meta content='metadata nodes test' name='subject'/>
+    <meta content='MetadataString node within NavigationInfo is legal X3D but will cause error when translating to VRML97 due to (previously) disallowed parent node.' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TestMetadataNodes.x3d'/>
+    <Background skyColor='0.5 0.5 1'/>
+    <Anchor description='Click to see documentation example' url='"TestMetadataNodesIndex.html" "https://www.web3d.org/x3d/content/examples/Basic/development/TestMetadataNodesIndex.html"'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 0.9 0.9'/>
+        </Appearance>
+        <Text length='0' string='"TestMetadataNodes.x3d" "shows X3D4 Metadata nodes"'>
+          <FontStyle DEF='TextFont' justify='"MIDDLE" "MIDDLE"' size='1' style='BOLD'/>
+        </Text>
+      </Shape>
+    </Anchor>
+    <Group>
+      <MetadataSet DEF='M0' containerField='metadata' name='TestSet'>
+        <MetadataBoolean DEF='M1' value='true false true'/>
+        <MetadataString DEF='M2' value='"internal" "metadata"'/>
+        <MetadataDouble DEF='M3' value='1.0'/>
+        <!-- intermediate comment should not be sorted -->
+        <MetadataFloat DEF='M4' value='1.0'/>
+        <MetadataInteger DEF='M5' value='1'/>
+        <MetadataSet DEF='M6'>
+          <!-- presence of comment will suppress warning about no MetadataSet children found -->
+        </MetadataSet>
+      </MetadataSet>
+    </Group>
+    <NavigationInfo>
+      <MetadataString containerField='metadata' name='Test illegal parent under VRML97'/>
+    </NavigationInfo>
+    <!-- Metadata nodes are allowed as root nodes in X3D4, but must define containerField='metadata' -->
+    <!-- https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-DIS/Part01/concepts.html#Rootnodes -->
+    <MetadataSet USE='M0' containerField='metadata'/>
+    <MetadataBoolean USE='M1' containerField='metadata'/>
+    <MetadataString USE='M2' containerField='metadata'/>
+    <MetadataDouble USE='M3' containerField='metadata'/>
+    <MetadataFloat USE='M4' containerField='metadata'/>
+    <MetadataInteger USE='M5' containerField='metadata'/>
+    <MetadataSet USE='M6' containerField='metadata'/>
+    <!-- Test case: Metadata nodes are only allowed to contain other metadata nodes, test fragment follows -->
+    <!-- <MetadataSet DEF='ErroneousChild'> <DirectionalLight/> </MetadataSet> -->
+  </Scene>
+</X3D>

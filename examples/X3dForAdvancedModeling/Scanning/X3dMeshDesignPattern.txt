@@ -1,0 +1,41 @@
+X3D Mesh Design Pattern for Scanner Output                 revised 6 June 2017
+
+==============================================================================
+1. Potential improvements to X3D specification
+
+a. boolean indexMatch indicating identical coordIndex, colorIndex, normalIndex
+
+b. Consider allowing Normal node within PointSet and IndexedLineSet nodes
+   in order to support partial scan output (might produce points but not mesh)
+
+c. Consider adding Switch and ViewpointGroup to X3D Interchange Profile
+
+==============================================================================
+2. Information of interest
+
+a. Scan Metadata
+- Date, time, person performing scan, location
+- Lighting, mounting, positioning
+- Registration info: markers, april tags, QR codes, etc.
+- Description and annotation comments of note
+
+b. Scanner Metadata
+- Make, model, software version
+
+c. Object Metadata
+- description of object being scanned
+- Identifying information: serial number, UUID, etc.
+- Photographs, drawings
+- Reference url links
+
+d. Mesh Metadata
+- meshInformationAvailable?
+- center
+- bounding box
+- vertexSpacing
+- colorsQuantized?
+- colorsAvailable, normalsAvailable, texturesAvailable (simplifies tool access)
+- waterTight, i.e. closed hull?
+- fidelity and resolution information: accuracy, lossy, etc.
+- imageTexture available?
+- textureTransform available?

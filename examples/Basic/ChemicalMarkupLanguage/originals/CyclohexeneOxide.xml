@@ -1,0 +1,118 @@
+<molecule convention="MDLMol" title="Cyclohexene Oxide" type="3D">
+
+  <formula>C6 H10 O</formula>
+  <float title="molecule weight">98.14</float>
+  <float title="melting point" units="degC">-40</float>
+  <float title="boiling point" units="degC">130</float>
+  <float title="specific gravity">0.97</float>
+
+  <date day="05" month="02" year="2010"/>
+  <comment>Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.</comment>
+  <atomArray>
+    <atom id="cyclohexene_oxide_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">0.8118</float>
+      <float builtin="y3">0.9766</float>
+      <float builtin="z3">1.8854</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-30.000000000000004</float>
+      <float builtin="y2">5.4502972368423104E-15</float>
+    </atom>
+    <atom id="cyclohexene_oxide_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.0793</float>
+      <float builtin="y3">0.7825</float>
+      <float builtin="z3">3.3416</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-14.999999999999995</float>
+      <float builtin="y2">25.980762113533167</float>
+    </atom>
+    <atom id="cyclohexene_oxide_a3">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.3606</float>
+      <float builtin="y3">1.93</float>
+      <float builtin="z3">2.8637</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-45.00000000000001</float>
+      <float builtin="y2">25.980762113533174</float>
+    </atom>
+    <atom id="cyclohexene_oxide_a4">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.9157</float>
+      <float builtin="y3">1.4197</float>
+      <float builtin="z3">0.9518</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">-15.000000000000016</float>
+      <float builtin="y2">-25.980762113533153</float>
+    </atom>
+    <atom id="cyclohexene_oxide_a5">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.4624</float>
+      <float builtin="y3">0.9966</float>
+      <float builtin="z3">3.9062</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">15.000000000000005</float>
+      <float builtin="y2">25.98076211353316</float>
+    </atom>
+    <atom id="cyclohexene_oxide_a6">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.2987</float>
+      <float builtin="y3">1.2094</float>
+      <float builtin="z3">1.5502</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">14.999999999999982</float>
+      <float builtin="y2">-25.980762113533174</float>
+    </atom>
+    <atom id="cyclohexene_oxide_a7">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.381</float>
+      <float builtin="y3">1.7599</float>
+      <float builtin="z3">2.9643</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">30.000000000000004</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="cyclohexene_oxide_b1">
+      <string builtin="atomRef">cyclohexene_oxide_a2</string>
+      <string builtin="atomRef">cyclohexene_oxide_a1</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b2">
+      <string builtin="atomRef">Cyclohexene_Oxide_a1</string>
+      <string builtin="atomRef">cyclohexene_oxide_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b3">
+      <string builtin="atomRef">cyclohexene_oxide_a1</string>
+      <string builtin="atomRef">cyclohexene_oxide_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b5">
+      <string builtin="atomRef">cyclohexene_oxide_a3</string>
+      <string builtin="atomRef">cyclohexene_oxide_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b6">
+      <string builtin="atomRef">cyclohexene_oxide_a5</string>
+      <string builtin="atomRef">cyclohexene_oxide_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b8">
+      <string builtin="atomRef">cyclohexene_oxide_a4</string>
+      <string builtin="atomRef">cyclohexene_oxide_a6</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b11">
+      <string builtin="atomRef">cyclohexene_oxide_a7</string>
+      <string builtin="atomRef">cyclohexene_oxide_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclohexene_oxide_b14">
+      <string builtin="atomRef">cyclohexene_oxide_a7</string>
+      <string builtin="atomRef">cyclohexene_oxide_a6</string>
+      <string builtin="order">1</string>
+    </bond>
+  </bondArray>
+</molecule>

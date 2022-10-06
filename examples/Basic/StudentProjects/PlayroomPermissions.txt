@@ -1,0 +1,38 @@
+Subject:	FW: MV3204 Final Project Savage Corrections
+From:		"Pangelinan, Vaughn USA" <vpangeli@nps.navy.mil>
+Date:		Mon, 29 Mar 2004 19:08:39 -0800
+To:		"Brutzman, Don USA" <Brutzman@nps.navy.mil>,
+		"Weekley, Jeff USA" <jdweekle@nps.navy.mil>
+
+Gentlemen,
+I have made the requested corrections to my final project for loading to savage.
+The attached zip file contains my final project with the updates. I will load it
+onto the class directory tomorrow. This version has image textures optimized for
+file size and 4 way repeating. This is the playroom version with the rocking chair
+and spinning balls. My midterm version was loaded on savage by mistake.
+This one is much better...
+ 
+All my patterns and images came from the following sources:
+ 
+brick.jpg is from the VRML 2.0 sourcebook
+ 
+PrintShopFloorWood.jpg is a pattern I built off of a printshop image.
+(I clipped it, made it 4 way repeat, and optimized the filesize.)
+ 
+RoofRock.jpg is a pattern I built off of a printshop image.
+(I clipped it, made it 4 way repeat, and optimized the filesize.)
+ 
+StuccoCeiling.jpg  is a pattern I built off of a printshop image.
+(I clipped it, made it 4 way repeat, and optimized the filesize.)
+ 
+Tree1.png is from the VRML 2.0 sourcebook
+ 
+BushPattern.png is a modified version of the Tree1.jpg file above.
+ 
+The rest are modified from real world digital pictures I took.
+ 
+R/S,
+Vaughn Pangelinan
+     
+PangelinanMV3204FinalProjectCorrected.zip
+

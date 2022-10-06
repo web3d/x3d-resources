@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='DuttonVillage.x3d' name='title'/>
+    <meta content='LT Allen Dutton' name='creator'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Primitive village. Move mouse over the hut roofs to see a demonstration of sensors and interpolators' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/DuttonVillage.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='DuttonVillage.x3d'/>
+    <Viewpoint description='View from 80m away' orientation='-1 0 0 0.5' position='0 60 100'/>
+    <Viewpoint description='Default viewpoint at (0 0 10) is way too close!! That is a bad place to be, provide a replacement viewpoint instead.'/>
+    <Background skyColor='0 0 .7'/>
+    <DirectionalLight color='1 1 0.8' direction='0 -1 0' intensity='0.5'/>
+    <Group>
+      <Transform translation='0 -3.5 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 .7 0'/>
+            <ImageTexture url='"grass.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/grass.jpg"'/>
+            <TextureTransform scale='20 20'/>
+          </Appearance>
+          <Box size='160 1 160'/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform rotation='0 1 0 2.7' scale='0.01 0.01 0.01' translation='5 12.3 30'>
+        <Inline url='"AllenDutton.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/AllenDutton.x3d" "AllenDutton.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/AllenDutton.wrl"'/>
+      </Transform>
+      <Transform translation='5 0 30'>
+        <Shape>
+          <Box size='5 5 5'/>
+          <Appearance>
+            <Material diffuseColor='0.5 0.5 0.5'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group DEF='HUT'>
+      <Shape>
+        <Appearance>
+          <Material DEF='BROWN' diffuseColor='0.5 0.4 0.3'/>
+          <ImageTexture url='"wood.gif" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/grass.jpg"'/>
+          <TextureTransform rotation='1.57079' scale='1.0 4.0'/>
+        </Appearance>
+        <Cylinder bottom='false' height='6' radius='4' top='false'/>
+      </Shape>
+      <Transform DEF='ROOF_TRANSFORM' translation='0 4 0'>
+        <Shape>
+          <Appearance>
+            <Material DEF='YELLOW' diffuseColor='0.8 0.8 0'/>
+            <ImageTexture url='"straw.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/grass.jpg"'/>
+          </Appearance>
+          <Cone bottomRadius='6' height='4'/>
+        </Shape>
+        <TouchSensor DEF='MyTouchSensor'/>
+      </Transform>
+      <TimeSensor DEF='CLOCK' cycleInterval='4' enabled='false' loop='true'/>
+      <OrientationInterpolator DEF='RoofRotateInterpolator' key='0.0 0.50 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 3.14 0.0 1.0 0.0 6.28'/>
+      <PositionInterpolator DEF='RoofTranslateInterpolator' key='0.0 0.5 1.0' keyValue='0.0 4.0 0.0 0.0 8.0 0.0 0.0 4.0 0.0'/>
+    </Group>
+    <Group DEF='CONE_TREE'>
+      <Transform translation='10 0 0'>
+        <Shape>
+          <Appearance>
+            <Material USE='BROWN'/>
+            <ImageTexture DEF='wood' url='"wood.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/wood.jpg"'/>
+          </Appearance>
+          <Cylinder bottom='false' height='6' radius='0.5' top='false'/>
+        </Shape>
+      </Transform>
+      <Transform translation='10 3 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 .3 0'/>
+            <ImageTexture url='"leaves.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/leaves.jpg"'/>
+          </Appearance>
+          <Cone bottomRadius='2' height='6'/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group DEF='SPHERE_TREE'>
+      <Transform translation='-30 0 -3'>
+        <Shape>
+          <Appearance>
+            <Material USE='BROWN'/>
+            <ImageTexture USE='wood'/>
+          </Appearance>
+          <Cylinder bottom='false' height='6' radius='0.5' top='false'/>
+        </Shape>
+      </Transform>
+      <Transform translation='-30 6 -3'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 .3 0'/>
+            <ImageTexture url='"leaves.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/leaves.jpg"'/>
+          </Appearance>
+          <Sphere radius='3.5'/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='.8 1 .8' translation='-45 0 10'>
+        <Group USE='HUT'/>
+        <Transform translation='0 11 0'>
+          <Shape>
+            <Text string='"Visitor&apos;s" "Center"'>
+              <FontStyle justify='"MIDDLE" "MIDDLE"' size='5.0' style='BOLDITALIC'/>
+            </Text>
+            <Appearance>
+              <Material diffuseColor='0.8 0.1 0.4'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='1.5 1 1.5' translation='30 0 20'>
+        <Group USE='HUT'/>
+        <Transform translation='1 8 0'>
+          <Shape>
+            <Text string='"Chief&apos;s Hut"'>
+              <FontStyle justify='"MIDDLE" "MIDDLE"' size='4.0' style='BOLD'/>
+            </Text>
+            <Appearance>
+              <Material diffuseColor='0.8 0.1 0.4'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='.5 1 .5' translation='-10 0 20'>
+        <Group USE='HUT'/>
+        <Transform translation='0 24 0'>
+          <Shape>
+            <Text string='"Outhouse"'>
+              <FontStyle family='"SANS"' horizontal='false' justify='"MIDDLE" "MIDDLE"' size='5.0' style='BOLD'/>
+            </Text>
+            <Appearance>
+              <Material diffuseColor='0.8 0.1 0.4'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='0.5 1.0 0.5' translation='30 0 30'>
+        <Group USE='SPHERE_TREE'/>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='2 1.0 2' translation='-45 0 30'>
+        <Group USE='CONE_TREE'/>
+      </Transform>
+    </Group>
+    <ROUTE fromField='isOver' fromNode='MyTouchSensor' toField='set_enabled' toNode='CLOCK'/>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK' toField='set_fraction' toNode='RoofRotateInterpolator'/>
+    <ROUTE fromField='value_changed' fromNode='RoofRotateInterpolator' toField='set_rotation' toNode='ROOF_TRANSFORM'/>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK' toField='set_fraction' toNode='RoofTranslateInterpolator'/>
+    <ROUTE fromField='value_changed' fromNode='RoofTranslateInterpolator' toField='set_translation' toNode='ROOF_TRANSFORM'/>
+  </Scene>
+</X3D>

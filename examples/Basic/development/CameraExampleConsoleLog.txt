@@ -1,0 +1,155 @@
+Recorded using Octaga Player 2.3.0.7
+
+Loading file: 'C:\www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d'
+[CameraShot Simple shot of Camera Zoom] number of contained CameraMove nodes=3, shotDuration=7 seconds
+[CameraMovement Camera Zoom In] initialize() goalPosition=-50 1 -15, goalAimPoint=0 0 0
+[CameraMovement Camera Zoom Out] initialize() goalPosition=-50 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Pause] initialize() goalPosition=-50 1 -10, goalAimPoint=0 0 0
+[CameraShot Simple shot of Camera Dolly] number of contained CameraMove nodes=3, shotDuration=7 seconds
+[CameraMovement Camera Dolly from Right to Left] initialize() goalPosition=-45 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Dolly from Left to Right] initialize() goalPosition=-40 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Pause] initialize() goalPosition=-40 1 -10, goalAimPoint=0 0 0
+[CameraShot Simple shot of Camera Pan left right and back to center] number of contained CameraMove nodes=4, shotDuration=9 seconds
+[CameraMovement Pan Left] initialize() goalPosition=-30 1 -10, goalAimPoint=0 0 0
+[CameraMovement Pan Right] initialize() goalPosition=-30 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Pan back to Center] initialize() goalPosition=-30 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Pause] initialize() goalPosition=-30 1 -10, goalAimPoint=0 0 0
+[CameraShot Camera Boom] number of contained CameraMove nodes=3, shotDuration=8 seconds
+[CameraMovement Camera Boom Up] initialize() goalPosition=-20 5 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Boom Down] initialize() goalPosition=-20 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Pause] initialize() goalPosition=-20 1 -10, goalAimPoint=0 0 0
+[CameraShot Camera Tilt] number of contained CameraMove nodes=6, shotDuration=11 seconds
+[CameraMovement Camera Tilt Pause] initialize() goalPosition=-10 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Tilt Left] initialize() goalPosition=-10 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Tilt Pause] initialize() goalPosition=-10 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Tilt Right] initialize() goalPosition=-10 1 -10, goalAimPoint=0 0 0
+[CameraMovement Camera Tilt Pause] initialize() goalPosition=-10 1 -10, goalAimPoint=0 0 0
+[CameraMovement Return to home] initialize() goalPosition=0 2 12, goalAimPoint=0 0 0
+[OfflineRender] ... initialize() complete
+[CameraShot #3 Tracking shot] number of contained CameraMove nodes=4, shotDuration=24 seconds
+[CameraMovement AimPoint 3.1 moving BoxPath] initialize() goalPosition=6 6 10, goalAimPoint=0 0 0
+[CameraMovement AimPoint 3.2 pan right while tracking] initialize() goalPosition=40 6 12, goalAimPoint=0 0 0
+[CameraMovement AimPoint 3.3 boom up while tracking] initialize() goalPosition=40 20 13, goalAimPoint=0 0 0
+[CameraMovement AimPoint 3.4 restore camera back to home] initialize() goalPosition=4 4 10, goalAimPoint=4 4 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.0714286 0.142857 0.166667 0.166667 0.238095 0.309524 0.333333 0.333333 0.380952 0.452381 0.5 0.547619 0.547619 0.619048 0.690476 0.738095 0.738095 0.761905 0.833333 0.857143 0.928571 0.952381 1' keyValue='-50 1 -10 -50 1 -15 -50 1 -10 -50 1 -10 -40 1 -10 -45 1 -10 -40 1 -10 -40 1 -10 -30 1 -10 -30 1 -10 -30 1 -10 -30 1 -10 -30 1 -10 -20 1 -10 -20 5 -10 -20 1 -10 -20 1 -10 -10 1 -10 -10 1 -10 -10 1 -10 -10 1 -10 -10 1 -10 -10 1 -10 0 2 12'/>
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.0714286 0.142857 0.166667 0.166667 0.238095 0.309524 0.333333 0.333333 0.380952 0.452381 0.5 0.547619 0.547619 0.619048 0.690476 0.738095 0.738095 0.761905 0.833333 0.857143 0.928571 0.952381 1' keyValue='0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0.4 0 1 0 -0.4 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 1 0.785 0 0 1 0.785 0 0 1 0 0 0 1 0 0 0 1 0'/>
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] Animation loop commencing, timestamp=1.26824e+009
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=0 seconds, frameCount=0, fraction=0.000333332, position=0 2 12, orientation=0 0 1 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=1.008 seconds, frameCount=71, fraction=0.0243333, position=-50 1 -11.68, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=2.133 seconds, frameCount=141, fraction=0.051119, position=-50 1 -13.3167, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=3.136 seconds, frameCount=189, fraction=0.075, position=-50 1 -14.7733, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=4.141 seconds, frameCount=254, fraction=0.0989286, position=-50 1 -13.0983, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=5.15 seconds, frameCount=321, fraction=0.122952, position=-50 1 -11.43, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=6.163 seconds, frameCount=387, fraction=0.147071, position=-50 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=7.19 seconds, frameCount=458, fraction=0.171524, position=-40.2867 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=8.193 seconds, frameCount=530, fraction=0.195405, position=-41.9883 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=9.2 seconds, frameCount=597, fraction=0.219381, position=-43.6667 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=10.214 seconds, frameCount=662, fraction=0.243524, position=-44.6533 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=11.227 seconds, frameCount=734, fraction=0.267643, position=-42.955 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=12.238 seconds, frameCount=806, fraction=0.291714, position=-41.27 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=13.251 seconds, frameCount=878, fraction=0.315833, position=-40 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=14.26 seconds, frameCount=950, fraction=0.339857, position=-30 1 -10, orientation=0 0.999858 0 0.0520074
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=15.26 seconds, frameCount=1019, fraction=0.363667, position=-30 1 -10, orientation=0 1 0 0.252
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=16.27 seconds, frameCount=1091, fraction=0.387714, position=-30 1 -10, orientation=0 1 0 0.327999
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=17.279 seconds, frameCount=1163, fraction=0.411738, position=-30 1 -10, orientation=0 0.999945 0 0.0589367
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=18.292 seconds, frameCount=1235, fraction=0.435857, position=-30 1 -10, orientation=0 -0.999997 0 0.211201
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=19.3 seconds, frameCount=1307, fraction=0.459857, position=-30 1 -10, orientation=0 -0.999997 0 0.340001
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=20.302 seconds, frameCount=1378, fraction=0.483714, position=-30 1 -10, orientation=0 -1 0 0.1396
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=21.31 seconds, frameCount=1450, fraction=0.507714, position=-30 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=22.321 seconds, frameCount=1522, fraction=0.531786, position=-30 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=23.33 seconds, frameCount=1590, fraction=0.555809, position=-20 1.44 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=24.367 seconds, frameCount=1638, fraction=0.5805, position=-20 2.73733 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=25.376 seconds, frameCount=1677, fraction=0.604524, position=-20 4.168 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=26.377 seconds, frameCount=1748, fraction=0.628357, position=-20 4.49733 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=27.406 seconds, frameCount=1821, fraction=0.652857, position=-20 3.14667 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=28.408 seconds, frameCount=1893, fraction=0.676714, position=-20 1.78933 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=29.419 seconds, frameCount=1965, fraction=0.700786, position=-20 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=30.426 seconds, frameCount=2036, fraction=0.724762, position=-20 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=31.436 seconds, frameCount=2106, fraction=0.74881, position=-10 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=32.442 seconds, frameCount=2170, fraction=0.772762, position=-10 1 -10, orientation=0 0 0.999993 0.115657
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=33.455 seconds, frameCount=2242, fraction=0.796881, position=-10 1 -10, orientation=0 0 1 0.380725
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=34.455 seconds, frameCount=2314, fraction=0.82069, position=-10 1 -10, orientation=0 0 1 0.642392
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=35.467 seconds, frameCount=2385, fraction=0.844786, position=-10 1 -10, orientation=0 0 1 0.785
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=36.494 seconds, frameCount=2462, fraction=0.869238, position=-10 1 -10, orientation=0 0 0.999999 0.659662
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=37.499 seconds, frameCount=2534, fraction=0.893167, position=-10 1 -10, orientation=0 0 0.999999 0.392762
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=38.507 seconds, frameCount=2603, fraction=0.917167, position=-10 1 -10, orientation=0 0 0.999995 0.130049
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=39.516 seconds, frameCount=2667, fraction=0.94119, position=-10 1 -10, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=40.525 seconds, frameCount=2739, fraction=0.965214, position=-7.375 1.2625 -4.225, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=41.534 seconds, frameCount=2811, fraction=0.989238, position=-2.33 1.767 6.87401, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] shotClock=41.986, frameCount=2843, fraction=1, position=-0.0750017 1.9925 11.835, orientation=1 0 0 0
+[Camera Camera example - Five Simple Shots: Zoom Dolly Pan Boom and Tilt] Animation loop complete.
+[Camera Camera example: AimPointTest] Animation loop commencing, timestamp=1.26824e+009
+[Camera Camera example: AimPointTest] shotClock=0 seconds, frameCount=0, fraction=0.000583331, position=4 4 10, orientation=0 0 1 0
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.0817376 -0.996654 0 0.588457 -0.0817376 -0.996654 0 0.588457 -0.0817376 -0.996654 0 0.588457 0 1 0 0'/>
+[Camera Camera example: AimPointTest] shotClock=1.007 seconds, frameCount=72, fraction=0.0425417, position=6 6 10, orientation=-0.321588 -0.946754 0 0.0346787
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.3272 -0.944955 0 0.271004 -0.3272 -0.944955 0 0.271004 -0.3272 -0.944955 0 0.271004 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=2.015 seconds, frameCount=144, fraction=0.0845417, position=6 6 10, orientation=-0.676787 0.736344 0 0.0336316
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.658131 0.752903 0 0.137263 -0.658131 0.752903 0 0.137263 -0.658131 0.752903 0 0.137263 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=3.025 seconds, frameCount=216, fraction=0.126625, position=6 6 10, orientation=-0.413809 0.910379 0 0.109991
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.413803 0.910366 0 0.292808 -0.413803 0.910366 0 0.292808 -0.413803 0.910366 0 0.292808 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=4.029 seconds, frameCount=287, fraction=0.168458, position=6 6 10, orientation=-0.413803 0.910367 0 0.270615
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.413803 0.910367 0 0.543467 -0.413803 0.910367 0 0.543467 -0.413803 0.910367 0 0.543467 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=5.039 seconds, frameCount=358, fraction=0.210542, position=6 6 10, orientation=-0.635173 0.77237 0 0.632971
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.65294 0.75741 0 0.992357 -0.65294 0.75741 0 0.992357 -0.65294 0.75741 0 0.992357 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=6.048 seconds, frameCount=430, fraction=0.252583, position=6 6 10, orientation=-0.334218 -0.942496 0 0.943677
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.328419 -0.944532 0 1.25348 -0.328419 -0.944532 0 1.25348 -0.328419 -0.944532 0 1.25348 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=7.061 seconds, frameCount=502, fraction=0.294792, position=6 6 10, orientation=-0.144001 -0.989577 0 1.26019
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.142861 -0.989743 0 1.4289 -0.142861 -0.989743 0 1.4289 -0.142861 -0.989743 0 1.4289 -0.707107 0.707107 0 0.275643'/>
+[Camera Camera example: AimPointTest] shotClock=8.069 seconds, frameCount=574, fraction=0.336792, position=6.29325 6 10.0173, orientation=-0.127919 -0.991785 0 1.08709
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.128112 -0.99176 0 1.0808 -0.128112 -0.99176 0 1.0808 -0.128112 -0.99176 0 1.0808 -0.657276 0.75365 0 0.294905'/>
+[Camera Camera example: AimPointTest] shotClock=9.075 seconds, frameCount=645, fraction=0.378708, position=10.5688 6 10.2688, orientation=-0.143467 -0.989655 0 0.705654
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.14371 -0.98962 0 0.701413 -0.14371 -0.98962 0 0.701413 -0.14371 -0.98962 0 0.701413 -0.29127 0.956641 0 0.589393'/>
+[Camera Camera example: AimPointTest] shotClock=10.083 seconds, frameCount=717, fraction=0.420708, position=14.8527 6 10.5208, orientation=-0.200693 -0.979654 0 0.421818
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.203408 -0.979094 0 0.416798 -0.203408 -0.979094 0 0.416798 -0.203408 -0.979094 0 0.416798 -0.181233 0.98344 0 0.809273'/>
+[Camera Camera example: AimPointTest] shotClock=11.092 seconds, frameCount=789, fraction=0.46275, position=19.141 6 10.773, orientation=-0.999913 0.0122983 0 0.0894229
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.9968 0.079942 0 0.0896952 -0.9968 0.079942 0 0.0896952 -0.9968 0.079942 0 0.0896952 -0.130954 0.991388 0 0.956466'/>
+[Camera Camera example: AimPointTest] shotClock=12.1 seconds, frameCount=861, fraction=0.50475, position=23.425 6 11.025, orientation=-0.199917 0.979814 0 0.419891
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.197292 0.980345 0 0.42481 -0.197292 0.980345 0 0.42481 -0.197292 0.980345 0 0.42481 -0.102419 0.994741 0 1.05683'/>
+[Camera Camera example: AimPointTest] shotClock=13.109 seconds, frameCount=933, fraction=0.546792, position=27.7132 6 11.2773, orientation=-0.151358 0.988479 0 0.690879
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.151089 0.98852 0 0.695166 -0.151089 0.98852 0 0.695166 -0.151089 0.98852 0 0.695166 -0.0840427 0.996462 0 1.12826'/>
+[Camera Camera example: AimPointTest] shotClock=14.118 seconds, frameCount=1005, fraction=0.588833, position=32.0015 6 11.5295, orientation=-0.134124 0.990965 0 1.07784
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.133913 0.990993 0 1.08426 -0.133913 0.990993 0 1.08426 -0.133913 0.990993 0 1.08426 -0.0712433 0.997459 0 1.1811'/>
+[Camera Camera example: AimPointTest] shotClock=15.126 seconds, frameCount=1077, fraction=0.630833, position=36.2855 6 11.7815, orientation=-0.143161 0.989699 0 1.37911
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.144061 0.989569 0 1.37784 -0.144061 0.989569 0 1.37784 -0.144061 0.989569 0 1.37784 -0.0618288 0.998087 0 1.22151'/>
+[Camera Camera example: AimPointTest] shotClock=16.134 seconds, frameCount=1149, fraction=0.672833, position=40 6.62533 12.0447, orientation=-0.292459 0.956278 0 1.21615
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.299808 0.954 0 1.21163 -0.299808 0.954 0 1.21163 -0.299808 0.954 0 1.21163 -0.0727328 0.997351 0 1.24873'/>
+[Camera Camera example: AimPointTest] shotClock=17.145 seconds, frameCount=1220, fraction=0.714958, position=40 11.3433 12.3817, orientation=-0.980866 -0.194685 0 0.957382
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.975756 -0.218861 0 0.962516 -0.975756 -0.218861 0 0.962516 -0.975756 -0.218861 0 0.962516 -0.199866 0.979823 0 1.24575'/>
+[Camera Camera example: AimPointTest] shotClock=18.153 seconds, frameCount=1292, fraction=0.756958, position=40 16.0473 12.7177, orientation=-0.94857 -0.31657 0 0.56503
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.948981 -0.315332 0 0.561669 -0.948981 -0.315332 0 0.561669 -0.948981 -0.315332 0 0.561669 -0.31735 0.948309 0 1.24754'/>
+[Camera Camera example: AimPointTest] shotClock=19.162 seconds, frameCount=1364, fraction=0.799, position=38.8336 19.4816 12.9028, orientation=-0.976904 -0.213674 0 0.401101
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.948593 -0.316499 0 0.404081 -0.948593 -0.316499 0 0.404081 -0.948593 -0.316499 0 0.404081 -0.406138 0.913812 0 1.24441'/>
+[Camera Camera example: AimPointTest] shotClock=20.164 seconds, frameCount=1434, fraction=0.84075, position=31.7632 16.3392 12.3136, orientation=-0.885383 0.464864 0 0.358878
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.932588 -0.360944 0 0.279472 -0.932588 -0.360944 0 0.279472 -0.932588 -0.360944 0 0.279472 -0.406138 0.913812 0 1.18573'/>
+[Camera Camera example: AimPointTest] shotClock=21.177 seconds, frameCount=1508, fraction=0.882958, position=24.3256 13.0336 11.6938, orientation=-0.529552 0.848277 0 0.591421
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.855434 0.517912 0 0.243215 -0.855434 0.517912 0 0.243215 -0.855434 0.517912 0 0.243215 -0.406138 0.913812 0 1.08677'/>
+[Camera Camera example: AimPointTest] shotClock=22.187 seconds, frameCount=1580, fraction=0.925042, position=17.0536 9.8016 11.0878, orientation=-0.405713 0.914001 0 0.717609
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.399225 0.916853 0 0.374522 -0.399225 0.916853 0 0.374522 -0.399225 0.916853 0 0.374522 -0.406138 0.913812 0 0.910739'/>
+[Camera Camera example: AimPointTest] shotClock=23.196 seconds, frameCount=1652, fraction=0.967083, position=9.7888 6.5728 10.4824, orientation=-0.399654 0.916668 0 0.526874
+[Camera Camera example: AimPointTest] <PositionInterpolator    DEF='CameraPositionInterpolator'    key='0 0.333333 0.666667 0.791667 1' keyValue='6 6 10 6 6 10 40 6 12 40 20 13 4 4 10'/>
+[Camera Camera example: AimPointTest] <OrientationInterpolator DEF='CameraOrientationInterpolator' key='0 0.333333 0.666667 0.791667 1' keyValue='0 1 0 0 -0.352621 0.935766 0 0.402291 -0.352621 0.935766 0 0.402291 -0.352621 0.935766 0 0.402291 -0.406139 0.913812 0 0.543594'/>
+[Camera Camera example: AimPointTest] shotClock=23.994, frameCount=1709, fraction=1, position=4.0432 4.0192 10.0036, orientation=-0.403558 0.915431 0 0.0162239
+[Camera Camera example: AimPointTest] Animation loop complete.

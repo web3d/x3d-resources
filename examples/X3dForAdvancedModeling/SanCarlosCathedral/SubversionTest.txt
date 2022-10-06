@@ -1,0 +1,10 @@
+Michele and Chad:
+
+this is a test file to practice making changes in subversion.
+Please make a change.
+
+I'm here!!  CRH
+
+I'm here (FINALLY)!!! Michele
+
+I am very happy that this is working for you both.

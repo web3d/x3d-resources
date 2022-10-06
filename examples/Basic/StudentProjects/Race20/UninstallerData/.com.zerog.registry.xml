@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registry install_date="2002-08-28 15:44:13" version="1.1" last_modified="2002-08-28 15:44:17">
+	<products>
+		<product name="Race20" id="02c72553-1ec2-11b2-b06e-86a3f71e6eec" version="2.0.0.0" copyright="2002" info_url="" support_url="" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20" last_modified="2002-08-28 15:44:14">
+			<vendor name="c h a productions" id="02c72554-1ec2-11b2-b06d-86a3f71e6eec" home_page="http://home.attbi.com/~cnadams" email=""/>
+			<feature name="Application" last_modified="2002-08-28 15:44:14">
+			<![CDATA[This installs the application feature.]]>
+				<component ref_id="02c725d7-1ec2-11b2-b082-86a3f71e6eec" version="1.0.0.0" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe"/>
+				<component ref_id="02c725d7-1ec2-11b2-b081-86a3f71e6eec" version="1.0.0.0" location="C:\Documents and Settings\brutzman.NPGS\Desktop\course.txt"/>
+			</feature>
+			<feature name="Help" last_modified="2002-08-28 15:44:14">
+			<![CDATA[This installs the help feature.]]>
+				<component ref_id="02c725d7-1ec2-11b2-b082-86a3f71e6eec" version="1.0.0.0" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe"/>
+				<component ref_id="02c725d7-1ec2-11b2-b081-86a3f71e6eec" version="1.0.0.0" location="C:\Documents and Settings\brutzman.NPGS\Desktop\course.txt"/>
+			</feature>
+		</product>
+	</products>
+	<components>
+		<component id="02c725d7-1ec2-11b2-b081-86a3f71e6eec" version="1.0.0.0" name="Common" location="C:\Documents and Settings\brutzman.NPGS\Desktop\course.txt" vendor="c h a productions">
+			<resource keyfile="false" name="UninstallerData" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="java package" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Race" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race" type="directory" uninstall="false">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Movement.class" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\Movement.class" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Track.class" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\Track.class" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Scene.class" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\Scene.class" type="file" uninstall="true"/>
+			<resource keyfile="false" name="TrackType.class" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\TrackType.class" type="file" uninstall="true"/>
+			<resource keyfile="false" name="RaceControl.class" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package\Race\RaceControl.class" type="file" uninstall="true"/>
+			<resource keyfile="false" name="java source" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="TrackType.java" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\TrackType.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Movement.java" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\Movement.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Track.java" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\Track.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Scene.java" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\Scene.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="RaceControl.java" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java source\RaceControl.java" type="file" uninstall="true"/>
+			<resource keyfile="false" name="javadoc" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="allclasses-frame.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\allclasses-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="deprecated-list.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\deprecated-list.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="help-doc.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\help-doc.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index-all.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\index-all.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="index.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\index.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="overview-tree.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\overview-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-list" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\package-list" type="file" uninstall="true"/>
+			<resource keyfile="false" name="packages.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\packages.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Race" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="TrackType.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\TrackType.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Movement.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\Movement.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="RaceControl.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\RaceControl.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-frame.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\package-frame.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-summary.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\package-summary.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Track.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\Track.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Scene.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\Scene.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="package-tree.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\Race\package-tree.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="serialized-form.html" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\serialized-form.html" type="file" uninstall="true"/>
+			<resource keyfile="false" name="stylesheet.css" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\javadoc\stylesheet.css" type="file" uninstall="true"/>
+			<resource keyfile="false" name="race20" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="allcollide.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\allcollide.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="bvtrack.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\bvtrack.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Carbody.wrl" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\Carbody.wrl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="carsound.wav" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\carsound.wav" type="file" uninstall="true"/>
+			<resource keyfile="false" name="cartex1.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex1.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="cartex2.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex2.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="cartex3.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex3.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="cartex4.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\cartex4.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="clouds.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\clouds.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="grass.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\grass.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="htrack.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\htrack.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="il1track.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\il1track.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="ir1track.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\ir1track.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="l1track.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\l1track.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="r1track.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\r1track.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="race20.wrl" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\race20.wrl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="RaceControl.class" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\RaceControl.class" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Tires.wrl" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\Tires.wrl" type="file" uninstall="true"/>
+			<resource keyfile="false" name="vtrack.jpg" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\race20\vtrack.jpg" type="file" uninstall="true"/>
+			<resource keyfile="false" name="input files" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\input files" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="example long course.txt" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\input files\example long course.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="short track course.txt" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\input files\short track course.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="environment" location="[key=HKEY_CURRENT_USER\Environment][variable=CLASSPATH][value=.;C:\Program Files\GeoVRML\1.0\classes\geovrml.jar;c:\vrtp\dis-java-vrml.jar;c:\Program Files\Nexternet\Player\nxvrml.jar;c:\Program Files\Netscape\Communicator\Program\Java\classes\java40.jar;C:\Program Files\Java\j2re1.4.0\QTJava.zip;;C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\java package]" type="environment" uninstall="true"/>
+			<resource keyfile="false" name="Race20.wrl.lnk" location="C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20\Race20.wrl.lnk" type="shortcut" uninstall="true"/>
+			<resource keyfile="false" name="Java Documentation.lnk" location="C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20\Java Documentation.lnk" type="shortcut" uninstall="true"/>
+			<resource keyfile="true" name="course.txt" location="C:\Documents and Settings\brutzman.NPGS\Desktop\course.txt" type="file" uninstall="true"/>
+			<resource keyfile="false" name="tracktypes.txt" location="C:\Documents and Settings\brutzman.NPGS\Desktop\tracktypes.txt" type="file" uninstall="true"/>
+		</component>
+		<component id="02c725d7-1ec2-11b2-b082-86a3f71e6eec" version="1.0.0.0" name="InstallAnywhere Uninstall Component" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe" vendor="c h a productions">
+			<resource keyfile="false" name="Race20_InstallLog.log" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\Race20_InstallLog.log" type="file" uninstall="true"/>
+			<resource keyfile="false" name="Race20" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="UninstallerData" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="uninstaller.jar" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\uninstaller.jar" type="file" uninstall="true"/>
+			<resource keyfile="true" name="Uninstall Race20.exe" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe" type="executable" uninstall="true"/>
+			<resource keyfile="false" name="Uninstall Race20.lax" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.lax" type="file" uninstall="true"/>
+			<resource keyfile="false" name="resource" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="iawin32.dll" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource\iawin32.dll" type="file" uninstall="true"/>
+			<resource keyfile="false" name="remove.exe" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource\remove.exe" type="file" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20||STRING|$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|DisplayName|STRING|Race20$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|DisplayName" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|UninstallString|STRING|&quot;C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\Uninstall Race20.exe&quot;$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|UninstallString" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|Publisher|STRING|c h a productions$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|Publisher" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|URLInfoAbout|STRING|http://home.attbi.com/~cnadams$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|URLInfoAbout" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|ProductID|STRING|02c72553-1ec2-11b2-b06e-86a3f71e6eec$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|ProductID" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|InstallLocation|STRING|C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|InstallLocation" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|InstallDate|STRING|Wed Aug 28 15:44:15 PDT 2002$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|InstallDate" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="win_reg_entry" location="$INSTALLED$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|DisplayVersion|STRING|2.0.0.0$DELETE$|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Race20|DisplayVersion" type="win_reg_entry" uninstall="true"/>
+			<resource keyfile="false" name="Race20" location="C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="Race20" location="C:\Documents and Settings\All Users\Start Menu\Programs\X3D Extensible 3D Graphics\X3D Examples\Race20" type="directory" uninstall="true">
+			<![CDATA[false]]>
+			</resource>
+			<resource keyfile="false" name="ZGWin32LaunchHelper.exe" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\resource\ZGWin32LaunchHelper.exe" type="file" uninstall="true"/>
+			<resource keyfile="false" name=".com.zerog.registry.xml" location="C:\www.web3d.org\TaskGroups\x3d\translation\examples\StudentProjects\Race20\UninstallerData\.com.zerog.registry.xml" type="file" uninstall="true"/>
+		</component>
+	</components>
+</registry>

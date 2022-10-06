@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='PongGame.x3d' name='title'/>
+    <meta content='12 Second Simulation Of The Game Pong' name='description'/>
+    <meta content='Nicholas Hittner' name='creator'/>
+    <meta content='19 July 2021' name='created'/>
+    <meta content='20 July 2021' name='modified'/>
+    <meta content='pong.wav' name='Sound'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/PongGame.x3d' name='identifier'/>
+    <meta content='X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"PongSimulation"' title='Pong'/>
+    <Viewpoint description='Pong' position='0 0 10'/>
+    <TimeSensor DEF='SceneClock' cycleInterval='12'/>
+    <Transform DEF='SquareBall' translation='.5 .5 0'>
+      <Shape>
+        <Rectangle2D size='.3 .3' solid='false'/>
+        <Appearance>
+          <Material diffuseColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <PositionInterpolator DEF='SquareBallPosition' key='0 0.1667 0.25 0.5 0.6667 0.7 1' keyValue='0.5 0.5 1 2.5 2 1 1.5 2.5 1 -2.5 0 1 2 -2.5 1 2.5 -2 1 -2.8 2.3 1'/>
+    <ROUTE fromField='value_changed' fromNode='SquareBallPosition' toField='set_translation' toNode='SquareBall'/>
+    <ROUTE fromField='fraction_changed' fromNode='SceneClock' toField='set_fraction' toNode='SquareBallPosition'/>
+    <Transform DEF='RightPaddle' translation='2.8 .5 0'>
+      <Shape>
+        <Rectangle2D size='.2 1.2' solid='false'/>
+        <Appearance>
+          <Material diffuseColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <PositionInterpolator DEF='RightPaddlePosition' key='0 0.1667 0.3333 0.5 0.6667 0.8333 1' keyValue='2.8 0.5 1 2.8 2 1 2.8 0 1 2.8 1 1 2.8 -2 1 2.8 -2 1 2.8 0 1'/>
+    <ROUTE fromField='value_changed' fromNode='RightPaddlePosition' toField='set_translation' toNode='RightPaddle'/>
+    <ROUTE fromField='fraction_changed' fromNode='SceneClock' toField='set_fraction' toNode='RightPaddlePosition'/>
+    <Transform DEF='LeftPaddle' translation='-2.8 -.5 0'>
+      <Shape>
+        <Rectangle2D size='.2 1.2' solid='false'/>
+        <Appearance>
+          <Material diffuseColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <PositionInterpolator DEF='LeftPaddlePosition' key='0 0.1667 0.3333 0.5 0.6667 0.8333 1' keyValue='-2.8 0.5 1 -2.8 1 1 -2.8 -1 1 -2.8 0 1 -2.8 -1 1 -2.8 -2 1 -2.8 1 1'/>
+    <ROUTE fromField='value_changed' fromNode='LeftPaddlePosition' toField='set_translation' toNode='LeftPaddle'/>
+    <ROUTE fromField='fraction_changed' fromNode='SceneClock' toField='set_fraction' toNode='LeftPaddlePosition'/>
+    <Transform DEF='TriggerBackground' translation='0 0 -8'>
+      <TouchSensor DEF='GameTouched' description='touch to activate'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0 0 0'/>
+        </Appearance>
+        <Rectangle2D size='14 14' solid='false'/>
+      </Shape>
+    </Transform>
+    <TimeTrigger DEF='GameTrigger'/>
+    <ROUTE fromField='isActive' fromNode='GameTouched' toField='set_boolean' toNode='GameTrigger'/>
+    <ROUTE fromField='triggerTime' fromNode='GameTrigger' toField='startTime' toNode='SceneClock'/>
+    <Transform translation='0 0 -1'>
+      <Shape DEF='MidLine'>
+        <IndexedLineSet coordIndex='0 1 0 1'>
+          <Coordinate point='0 3.72 -1 0 -3.72 -1'/>
+        </IndexedLineSet>
+        <Appearance>
+          <Material emissiveColor='1 1 1'/>
+          <LineProperties DEF='DashedLine' linetype='2' linewidthScaleFactor='3'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform>
+      <Shape DEF='TopLine'>
+        <IndexedLineSet coordIndex='0 1 0 1'>
+          <Coordinate point='-3.5 3.4 -1 3.5 3.4 -1'/>
+        </IndexedLineSet>
+        <Appearance>
+          <Material emissiveColor='1 1 1'/>
+          <LineProperties linewidthScaleFactor='5'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform>
+      <Shape DEF='BottomLine'>
+        <IndexedLineSet coordIndex='0 1 0 1'>
+          <Coordinate point='-3.5 -3.4 -1 3.5 -3.4 -1'/>
+        </IndexedLineSet>
+        <Appearance>
+          <Material emissiveColor='1 1 1'/>
+          <LineProperties linewidthScaleFactor='5'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform DEF='LeftScore' translation='-.7 3 0'>
+      <Shape>
+        <Text solid='false' string='"0"'>
+          <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='1' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform DEF='RightScore' translation='.7 3 0'>
+      <IntegerSequencer DEF='ScoreSequencer' key='0.01 0.99' keyValue='0 1'/>
+      <Switch DEF='GoalScored' whichChoice='0'>
+        <Shape DEF='Child0'>
+          <Text solid='false' string='"0"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='1' style='BOLD'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.9 0.9 0.9'/>
+          </Appearance>
+        </Shape>
+        <Shape DEF='Child1'>
+          <Text solid='false' string='"1"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='1' style='BOLD'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.9 0.9 0.9'/>
+          </Appearance>
+        </Shape>
+      </Switch>
+    </Transform>
+    <ROUTE fromField='fraction_changed' fromNode='SceneClock' toField='set_fraction' toNode='ScoreSequencer'/>
+    <ROUTE fromField='value_changed' fromNode='ScoreSequencer' toField='whichChoice' toNode='GoalScored'/>
+    <Sound direction='0 -0.19612 -0.98058' location='0 1 0' maxBack='100' maxFront='100' minBack='20' minFront='20' priority='1' spatialize='false'>
+      <AudioClip DEF='PongAudio' description='AudioClip' stopTime='12' url='"pong.wav" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/pong.wav"'/>
+    </Sound>
+    <ROUTE fromField='startTime' fromNode='SceneClock' toField='startTime' toNode='PongAudio'/>
+  </Scene>
+</X3D>

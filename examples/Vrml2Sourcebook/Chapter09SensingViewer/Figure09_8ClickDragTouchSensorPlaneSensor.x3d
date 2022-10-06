@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure09_8ClickDragTouchSensorPlaneSensor.x3d' name='title'/>
+    <meta content='Figure 9.8, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch09/09fig08.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='12 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Two shapes that rotate about an axis when the viewer drags them, with coordinate axes superimposed to show X3D/VRML directions.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter09SensingViewer/Figure09_8ClickDragTouchSensorPlaneSensor.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Click and drag to spin and move shapes. Superfluous Group nodes removed. -->
+    <WorldInfo title='Figure09_8ClickDragTouchSensorPlaneSensor.x3d'/>
+    <Group>
+      <Transform DEF='ROTATING_SHAPE_TRANSFORM'>
+        <Shape>
+          <Box size='1.414 1.414 1.414'/>
+          <Appearance>
+            <Material diffuseColor='.1 .9 .9' emissiveColor='.05 .2 .2'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <TouchSensor DEF='CLICK_SENSOR' description='Touch to spin'/>
+      <PlaneSensor DEF='DRAG_SENSOR' description='Click to drag in plane' maxPosition='4 4' minPosition='-4 -4'/>
+      <TimeSensor DEF='CLOCK' cycleInterval='4' enabled='false' loop='true'/>
+      <OrientationInterpolator DEF='SPIN_PATH' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'/>
+    </Group>
+    <!-- A small transparent box is added to indicate the virtual geometry of the PlaneSensor -->
+    <Transform DEF='TRANSPARENT_BOX_TRANSFORM'>
+      <Shape>
+        <Box size='8 8 0.1'/>
+        <Appearance>
+          <Material diffuseColor='.7 .7 .7' transparency='.5'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <!-- Note that we are connecting a chain of behavior engines in these ROUTEs. The event types passed via each ROUTE must each match. -->
+    <ROUTE fromField='isOver' fromNode='CLICK_SENSOR' toField='set_enabled' toNode='CLOCK'/>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK' toField='set_fraction' toNode='SPIN_PATH'/>
+    <ROUTE fromField='value_changed' fromNode='SPIN_PATH' toField='set_rotation' toNode='ROTATING_SHAPE_TRANSFORM'/>
+    <ROUTE fromField='translation_changed' fromNode='DRAG_SENSOR' toField='set_translation' toNode='ROTATING_SHAPE_TRANSFORM'/>
+  </Scene>
+</X3D>

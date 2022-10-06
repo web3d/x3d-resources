@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Core' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <component level='3'/>
+    <component name='Geometry2D'/>
+    <component level='3' name='Geometry2D'/>
+    <component level='3' name='Geometry2D'/>
+    <unit category='angle' conversionFactor='-1' name='nonPositiveConversionFactor'/>
+    <unit category='angle' conversionFactor='-1' name='nonPositiveConversionFactor'/>
+    <meta content='TestSchematronDiagnostics.x3d' name='title'/>
+    <meta content='Test Schematron diagnostics capabilities for detecting various content errors and style warnings.' name='description'/>
+    <meta content='Second meta tag to test warning that two description meta tags are present.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='19 October 2008' name='created'/>
+    <meta content='25 October 2020' name='modified'/>
+    <meta content='The regex is not finding IllegalMinusSignsTest.' name='warning'/>
+    <meta content='Test scene with many errors, primarily intended to exercise most of the rules in the X3D Schematron diagnostic set.' name='error'/>
+    <meta content='Test scene with many warnings embedded in comments.' name='warning'/>
+    <meta content='Test scene with many hints embedded in comments.' name='hint'/>
+    <meta content='Perhaps the most erroneous X3D scene in the world!' name='info'/>
+    <meta content='Perhaps the most erroneous X3D scene in the world!' name='info'/>
+    <meta content='https://www.web3d.org/x3d/tools/schematron/X3dSchematronValidityChecks.sch' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/tools/schematron/X3dSchematron.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html#QualityAssurance' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene DEF='improperDEF' USE='improperUSE'>
+    <!-- - illegal comment starts with extra hyphen - character -->
+    <!-- - illegal comment has intermediate paired-hyphen - - characters -->
+    <TouchSensor DEF='IllegalCombinationDEFUSE' USE='IllegalCombinationDEFUSE'/>
+    <CylinderSensor DEF='DoubleDEF' enabled='false'/>
+    <TimeSensor DEF='DoubleDEF'/>
+    <WorldInfo DEF='FirstTitle' title='title #1'/>
+    <WorldInfo DEF='SecondTitle' title='title #2'/>
+    <WorldInfo DEF='DEFPrependedSpace'/>
+    <WorldInfo DEF='DEFEmbedded Space'/>
+    <WorldInfo DEF='DEFAppendedSpace'/>
+    <WorldInfo DEF='IllegalInfoQuotes' info='"WorldInfo info strings need to be quoted"'/>
+    <WorldInfo DEF='IllegalChild'>
+      <WorldInfo/>
+    </WorldInfo>
+    <WorldInfo DEF='LegalChild'>
+      <MetadataString/>
+    </WorldInfo>
+    <Anchor DEF='NoChildrenNoUrl'/>
+    <Anchor DEF='AnchorBookmark' parameter='"target=unquoted"' url='"#missingBookmark"'>
+      <Group/>
+    </Anchor>
+    <Inline DEF='HelloWorld' url='"../HelloWorld.x3d" "https://www.web3d.org/x3d/content/examples/Basic/HelloWorld.x3d" "../HelloWorld.wrl"'/>
+    <Inline DEF='UrlDotWrlPrecedesDotX3d' url='"test.wrl" "test.x3d" "adjacent""quote marks"'/>
+    <Inline DEF='NoUrlIllegalChild'>
+      <WorldInfo/>
+    </Inline>
+    <Inline DEF='NodeUrlVRML.wrl.PrecedingX3D.x3d' url='"HelloWorld.wrl" "HelloWorld.x3d"'/>
+    <ExternProtoDeclare name='ExternProtoDeclareUrlVRML.wrl.PrecedingX3D.x3d' url='"HelloWorld.wrl" "HelloWorld.x3d"'/>
+    <ExternProtoDeclare name='ExternProtoDeclareUrlVRML.wrl.MissingX3D.x3d' url='"HelloWorld.x3d" "https://www.web3d.org/x3d/content/examples/Basic/development/HelloWorld.x3d" "HelloWorld.wrl" "https://www.web3d.org/x3d/content/examples/Basic/development/HelloWorld.wrl"'/>
+    <Shape DEF='NoChildAppearance'>
+      <Box/>
+    </Shape>
+    <Shape DEF='NoChildGeometry'>
+      <Appearance DEF='NoMaterialNoTexture'/>
+    </Shape>
+    <!-- test no other fields if USE present -->
+    <Shape USE='NoChildAppearance'/>
+    <Shape USE='NoChildAppearance'/>
+    <Shape USE='NoChildAppearance'/>
+    <Shape DEF='USEwithChildElement'>
+      <Box/>
+      <Appearance DEF='AppearanceWithProtoInstanceChild'>
+        <ProtoInstance name='NodeSubstituteNoDeclaration'/>
+      </Appearance>
+    </Shape>
+    <Appearance DEF='MissingParentShape'/>
+    <Shape USE='USEwithChildElement'>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape DEF='SingleProtoInstanceChild'>
+      <ProtoInstance name='NodeSubstituteNoDeclaration'/>
+    </Shape>
+    <!-- no DEF name -->
+    <TimeSensor DEF='NoOutputROUTE'/>
+    <TimeSensor DEF='Clock' cycleInterval='100' loop='true'/>
+    <ColorInterpolator/>
+    <ColorInterpolator DEF='InterpolatorWithSingleKey' key='0'/>
+    <ColorInterpolator DEF='ColorInterpolatorColorProblems' key='0' keyValue='-1 1.2 0.3 0.4'/>
+    <!-- no DEF name -->
+    <PositionInterpolator DEF='NoROUTEsNoKeyValueArray' key='0 0'/>
+    <ScalarInterpolator DEF='MismatchedKeyArrays' key='0' keyValue='0 0'/>
+    <NormalInterpolator DEF='MismatchedKeyArraysSFVec3f' key='0 1' keyValue='0 0 0 1 1'/>
+    <!-- bogus ROUTEs to allow trapping deeper error -->
+    <ROUTE fromField='value_changed' fromNode='MismatchedKeyArrays' toField='set_fraction' toNode='MismatchedKeyArrays'/>
+    <ROUTE fromField='value_changed' fromNode='MismatchedKeyArraysSFVec3f' toField='set_fraction' toNode='MismatchedKeyArraysSFVec3f'/>
+    <BooleanSequencer/>
+    <BooleanSequencer DEF='NoROUTEs' key='0 0.5 1' keyValue='true false true'/>
+    <IntegerTrigger/>
+    <IntegerTrigger DEF='NoROUTE'/>
+    <OrientationInterpolator DEF='OI'/>
+    <LoadSensor DEF='ChildrenIncorrectContainerField'>
+      <ImageTexture DEF='textureContainerField' url='"http:/bogus" "https://www.web3d.org/x3d/content/examples/Basic/development/http:/bogus"'/>
+    </LoadSensor>
+    <LoadSensor DEF='ChildrenCorrectContainerField'>
+      <ImageTexture DEF='watchListContainerField' containerField='watchList'/>
+    </LoadSensor>
+    <LoadSensor DEF='IncorrectChildNodes'>
+      <Group containerField='watchList'/>
+      <Anchor DEF='IllegalChildForLoadSensor'/>
+    </LoadSensor>
+    <Script DEF='HasLegalCDATA'>
+      <field accessType='inputOnly' name='duplicatedFieldName' type='SFBool'/>
+      <field accessType='inputOnly' name='duplicatedFieldName' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+function initialize()
+{
+   // initialize() method silences ROUTE check
+}
+]]>
+    </Script>
+    <Script DEF='HasCDATAwithoutEcmascriptHeader'>
+      <field name='noAccessType' type='SFBool'/>
+      <field accessType='inputOnly' name='noType'/>
+      <field accessType='inputOnly' type='noName'/>
+      <field accessType='outputOnly' name='neverSet' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+      
+// empty Script body
+
+    
+]]>
+    </Script>
+    <Script DEF='HasUrlNoCDATA' url='"TestSchematronDiagnostics.js" "https://www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.js"'/>
+    <Script DEF='NoUrlNoCDATA'/>
+    <Script DEF='BothUrlAndCDATA' url='"TestSchematronDiagnostics.js" "https://www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.js"'>
+      <field accessType='inputOnly' name='inputFunctionDefinedTwice' type='SFBool'/>
+      <field accessType='outputOnly' name='noInputFunctionAllowed' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+
+function set_noInputFunctionAllowed (newValue)
+{
+    // cannot have input function for output field
+}
+function set_inputFunctionDefinedTwice (newValue)
+{
+    // only one definition allowed; this is #1
+}
+function set_inputFunctionDefinedTwice (newValue)
+{
+    // only one definition allowed; this is #2
+}
+]]>
+    </Script>
+    <Script DEF='RouteButNoFields' url='"TestSchematronDiagnostics.js" "https://www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.js"'/>
+    <ROUTE fromField='blah' fromNode='NoFields' toField='blah' toNode='NoFields'/>
+    <ProtoInstance name='NoDeclaration'/>
+    <ProtoDeclare name='MissingProtoBody'/>
+    <WorldInfo DEF='DEFoutsideProtoDeclareScope'/>
+    <ProtoDeclare DEF='DuplicatedDeclaration' name='DoubleMixedDeclaration'>
+      <ProtoBody>
+        <Group/>
+        <Viewpoint DEF='ISconnectDescription'>
+          <IS>
+            <connect nodeField='description' protoField='description'/>
+          </IS>
+        </Viewpoint>
+        <!-- TODO not yet working... -->
+        <WorldInfo USE='DEFoutsideProtoDeclareScope'/>
+        <WorldInfo DEF='USEoutsideProtoDeclareScope'/>
+        <WorldInfo DEF='DEF_USEinsideProtoDeclareScope'/>
+        <WorldInfo USE='DEF_USEinsideProtoDeclareScope'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <WorldInfo USE='USEoutsideProtoDeclareScope'/>
+    <ExternProtoDeclare name='DoubleMixedDeclaration' url='http://bogus#DifferentRemotePrototypeName'/>
+    <ProtoInstance DEF='DoubleDeclaration2' name='DoubleMixedDeclaration'>
+      <fieldValue name='duplicatedFieldValueName' value='blah'/>
+      <fieldValue name='duplicatedFieldValueName'/>
+      <fieldValue value='noName'/>
+    </ProtoInstance>
+    <ProtoDeclare name='DoubleProtoDeclaration' url='"http:/bogus" "https://www.web3d.org/x3d/content/examples/Basic/development/http:/bogus"'/>
+    <ProtoDeclare name='DoubleProtoDeclaration' url='http:///bogus'/>
+    <ExternProtoDeclare name='DoubleDeclarationUrlMissingPoundProtoName' url='http:///bogus'/>
+    <ExternProtoDeclare name='DoubleDeclarationUrlMissingPoundProtoName' url='"http:/bogus" "https://www.web3d.org/x3d/content/examples/Basic/development/http:/bogus"'/>
+    <ProtoDeclare name='EmptyProtoInterfaceEmptyProtoBody'>
+      <ProtoInterface/>
+      <ProtoBody/>
+    </ProtoDeclare>
+    <ProtoDeclare name='IllegalProtoInterface'>
+      <ProtoInterface>
+        <Group DEF='OnlyFieldDeclarationsAllowedInProtoInterface'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ExternProtoDeclare name='ExternProtoDeclareBeforeInstance' url='"httpsMissing" "https://www.web3d.org/x3d/content/examples/Basic/development/httpsMissing"'/>
+    <ProtoInstance name='ExternProtoDeclareBeforeInstance'/>
+    <ProtoInstance name='ExternProtoDeclareAfterInstance'/>
+    <ExternProtoDeclare name='ExternProtoDeclareAfterInstance' url='"httpMissing" "https://www.web3d.org/x3d/content/examples/Basic/development/httpMissing"'/>
+    <ProtoDeclare name='ProtoDeclareBeforeInstance'>
+      <ProtoBody>
+        <Group/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoInstance name='ProtoDeclareBeforeInstance'/>
+    <ProtoInstance name='ProtoDeclareAfterInstance'/>
+    <ProtoDeclare name='ProtoDeclareAfterInstance'>
+      <ProtoBody>
+        <Group>
+          <IS>
+            <connect nodeField='danglingConnectNodeField' protoField='danglingConnectProtoField'/>
+          </IS>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Group DEF='ContainsISchildButNoParentProtoDeclare'>
+      <IS>
+        <connect nodeField='isolatedConnectNodeField' protoField='isolatedConnectProtoField'/>
+      </IS>
+    </Group>
+    <!-- test isolated (invalid) connect element <connect nodeField="isolatedConnectNodeField" protoField="isolatedConnectProtoField"/> -->
+    <Shape DEF='BadBoundingBoxValues' bboxCenter='1a 2b 3c' bboxSize='-1 -2 -3'>
+      <Extrusion DEF='ExtrusionCrossSectionMiscountSpineMismatchCrossSectionMiscount' crossSection='1 2 3' orientation='0 0 1 0 0 0 1 0 0 0 1 0' scale='1 1 1 1 1 1 1 1 1 1 1 1' spine='0 0 0 0 2 0'/>
+      <!-- check for reserved word in DEF -->
+      <Appearance DEF='DEF'>
+        <TwoSidedMaterial DEF='separateBackColorWrong' backShininess='0.123'/>
+      </Appearance>
+    </Shape>
+    <ROUTE fromField='set_blah' fromNode='blah' toField='bleah_changed' toNode='bleah'/>
+    <Viewpoint DEF='OKviewpoint' description='this viewpoint is OK'/>
+    <Viewpoint DEF='DEFdescriptionMatch' description='DEFdescriptionMatch'/>
+    <OrthoViewpoint DEF='NoSpacesInDescription' description='NeedToPutSpacesInDescription'/>
+    <GeoViewpoint DEF='IllegalFields' navType='"OTHER"'/>
+    <GeoMetadata DEF='BadChild'>
+      <GeoViewpoint DEF='BadContainerField'/>
+    </GeoMetadata>
+    <!-- check for reserved word in name definitions -->
+    <ProtoDeclare name='X3D'>
+      <ProtoBody>
+        <Group DEF='PrototypeRootNode'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ExternProtoDeclare name='X3D'>
+      <field accessType='inputOnly' name='X3D' type='SFBool'/>
+    </ExternProtoDeclare>
+    <ProtoInstance DEF='BadNameBadFieldValueNameMissingInitialization' name='X3D'>
+      <fieldValue name='X3D'/>
+    </ProtoInstance>
+    <ProtoInstance name='X3D'>
+      <fieldValue name='X3D' value='doubleInitialization'>
+        <Shape/>
+      </fieldValue>
+    </ProtoInstance>
+    <LOD>
+      <Background DEF='BackgroundWithParentLOD'/>
+      <Fog DEF='FogWithParentLOD'/>
+      <NavigationInfo DEF='NavigationInfoWithParentLOD'/>
+      <Viewpoint DEF='ViewpointWithParentLOD'/>
+    </LOD>
+    <ViewpointGroup DEF='IllegalViewpointGroupChild'>
+      <Transform/>
+    </ViewpointGroup>
+    <Shape>
+      <Box/>
+      <Appearance>
+        <PixelTexture DEF='NoImageData'/>
+      </Appearance>
+    </Shape>
+    <Shape>
+      <Box/>
+      <Appearance>
+        <PixelTexture DEF='IllegalImageData' image='1 a b c d'/>
+      </Appearance>
+    </Shape>
+    <Shape>
+      <Box/>
+      <Appearance>
+        <PixelTexture DEF='DefaultImageData'/>
+      </Appearance>
+    </Shape>
+    <Shape>
+      <Box/>
+      <Appearance>
+        <PixelTexture DEF='DuplicateImageData'/>
+      </Appearance>
+    </Shape>
+    <Shape>
+      <Box/>
+      <Appearance>
+        <PixelTexture DEF='ImageDataTest' image='1 1 1 0xAA'/>
+      </Appearance>
+    </Shape>
+    <WorldInfo DEF='USEandDEFtogether' USE='USEandDEFtogether'/>
+    <WorldInfo USE='USEprecedesDEF'/>
+    <WorldInfo DEF='USEprecedesDEF'/>
+    <WorldInfo USE='noDEFforUSE'/>
+    <WorldInfo DEF='noChildNodeforUSE'/>
+    <WorldInfo USE='noChildNodeforUSE'>
+      <MetadataSet>
+        <MetadataString name='someStringArray' value='"unquoted string values"'/>
+      </MetadataSet>
+    </WorldInfo>
+    <Group DEF='DEFcontainsUSEcopyOfSelf'>
+      <Group USE='DEFcontainsUSEcopyOfSelf'/>
+    </Group>
+    <WorldInfo DEF='USEmismatchDEFnodeType'/>
+    <Group USE='USEmismatchDEFnodeType'/>
+    <LocalFog DEF='NoLocalFogV3.0'/>
+    <PointLight/>
+    <Shape>
+      <IndexedFaceSet DEF='CountTests' coordIndex='0 1 2 -1' creaseAngle='-1.234'>
+        <Coordinate point='0 0 0 0 1 0 1 0 0 5'/>
+        <Color DEF='IllegalValuesColor' color='-1 2 3'/>
+        <ColorRGBA DEF='IllegalValuesColorRGBA' color='-1 1.2 0.3 0.4'/>
+        <TextureCoordinate/>
+        <TextureCoordinateGenerator/>
+      </IndexedFaceSet>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape>
+      <Text DEF='CharacterBeforeQuotes' string='x " "'>
+        <FontStyle family='"unquotedFontFamilyName"' justify='"unquotedIllegalJustification"'/>
+      </Text>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape>
+      <Text DEF='ThreeUnescapedQuoteMarksMissingSpaceEndsApostrophe' string='"" x" &apos;'>
+        <FontStyle DEF='familyValuesMissingIntermediateQuotes' family='"SANS SERIF"' justify='"BEGIN" "BEGIN"'/>
+      </Text>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape>
+      <Text DEF='EscapedQuoteMarkWarning' string='"here is a single escaped \" quote mark character"'>
+        <FontStyle justify='"IllegalValue"'/>
+      </Text>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape>
+      <Text DEF='NeedQuoteMarks' string='"quote marks are required for single string"'>
+        <FontStyle/>
+      </Text>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape>
+      <Text DEF='EmbeddedQuoteMarksOK' string='"plain text with \"quote marks\" embedded"'>
+        <FontStyle DEF='FontStyleFieldsContainIllegalQuotes' language='"noquo"' style='"PLAIN"'/>
+      </Text>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <Shape>
+      <IndexedQuadSet DEF='MissingIndex' ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+        <Coordinate DEF='DuplicatedCoordinatePointArray' point='0 0 0 0 1 0 1 0 0 5'/>
+      </IndexedQuadSet>
+      <Appearance USE='NoMaterialNoTexture'/>
+    </Shape>
+    <NormalInterpolator DEF='NormalPath' key='0 0.5 1' keyValue='0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 5'/>
+    <GeoLocation DEF='LegalGeoSystem' geoCoords='36.607 -121.885 0.0'/>
+    <ProtoDeclare name='ReferenceTest'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='defaultTest' type='SInt32' value='78'/>
+        <field accessType='initializeOnly' name='incorrectInitializationSFColorRGBA' type='SFColorRGBA' value='1 1 1'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script url='"http:///bogus"'>
+          <field accessType='initializeOnly' name='missingInitializationValue1' type='SFBool'/>
+          <field accessType='initializeOnly' name='missingInitializationValue2' type='SFInt32'/>
+          <field accessType='initializeOnly' name='incorrectInitializationSFVec3f' type='SFVec3f' value='0.0'/>
+          <field accessType='initializeOnly' name='incorrectInitializationMFColor' type='MFColor' value='1 2 3 4 5 6 7'/>
+          <field accessType='initializeOnly' name='missingInitializationValueHasIS' type='SFBool' value='true'/>
+          <fieldValue name='shouldBeField'/>
+          <IS>
+            <connect nodeField='missingInitializationValue2' protoField='defaultTest'/>
+            <connect nodeField='missingInitializationValueHasIS' protoField='test'/>
+          </IS>
+        </Script>
+        <!-- Subsequent nodes do not render, but still must be a valid X3D subgraph -->
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoInstance name='ReferenceTest'>
+      <fieldValue name='defaultTest' value='78'/>
+      <fieldValue name='incorrectInitializationSFColorRGBA' value='1 1 1 1 1'/>
+      <field name='shouldBeFieldValue'/>
+    </ProtoInstance>
+    <Transform DEF='ZeroMagnitudeRotationAxes' scaleOrientation='0 0 0 0'/>
+    <Box DEF='GeometryNodeNeedsShapeParent'/>
+    <Collision DEF='IllegalGeometryProxyNode'>
+      <Box DEF='GeometryNodeCollisionParentNeedsParentShapeWithProxyContainerField' containerField='proxy'/>
+    </Collision>
+    <NavigationInfo DEF='UnquotedTypeAndTransitionTypeErrors' transitionType='"ALTERNATE"' type='OTHER'/>
+    <NavigationInfo DEF='NavigationInfoWithTypeALL' type='"ALL"'/>
+    <Group DEF='IllegalParentChild-DEF-USE'>
+      <Group USE='IllegalParentChild-DEF-USE'/>
+    </Group>
+    <CADLayer name='contains whitespace and incorrect boolean value' visible='true false wrong'/>
+    <Shape>
+      <ImageTexture DEF='IllegalParent1'/>
+      <MovieTexture DEF='IllegalParent2'/>
+      <PixelTexture DEF='IllegalParent3'/>
+    </Shape>
+    <Shape>
+      <TextureTransform DEF='TextureTransformWithNoSiblingTextureNode'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <TextureTransform USE='TextureTransformWithNoSiblingTextureNode'/>
+        <TextureCoordinateGenerator DEF='TextureCoordinateGeneratorIllegalMode' mode='Bogus'/>
+        <TextureCoordinateGenerator DEF='TextureCoordinateGeneratorIllegalParameterCount' mode='NOISE' parameter='1 2 3 4'/>
+      </Appearance>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <MultiTexture DEF='NoTextureChildren' function='"BogusFunction1Value" "BogusFunction2Value" "' mode='"BogusMode1Value" BogusMode2Value"' source='"BogusSourceValue"'/>
+      </Appearance>
+    </Shape>
+    <Background DEF='NoBackgroundChildrenAllowed'>
+      <ImageTexture DEF='IllegalBackgroundChild'/>
+    </Background>
+    <TextureBackground>
+      <ImageTexture DEF='LegalChild1'/>
+      <MovieTexture DEF='LegalChild2'/>
+      <PixelTexture DEF='LegalChild3'/>
+      <Group DEF='IllegalTextureBackgroundChild'/>
+      <ImageTexture DEF='IllegalTextureBackgroundChildContainerField' containerField='frontUrl'/>
+    </TextureBackground>
+    <Group DEF='Embedded Blanks DEF'/>
+    <Group USE='Embedded Blanks USE'/>
+    <Group DEF='"QuotedDEF"'/>
+    <Group USE='"QuotedUSE"'/>
+    <MetadataSet>
+      <MetadataBoolean/>
+      <MetadataFloat containerField='value'/>
+      <MetadataDouble containerField='illegalName'/>
+    </MetadataSet>
+    <MetadataString DEF='IllegalMetadataContainerField' containerField='value'/>
+    <ScalarInterpolator DEF='IllegalDecimalPointsTest' key='0.00.5 1.0' keyValue='1 2 3'/>
+    <ScalarInterpolator DEF='IllegalMinusSignsTest' key='0.0 0.5 1.0' keyValue='-1-2 3'/>
+    <!-- test of NeedsChildNode -->
+    <Group DEF='EmptyGroup'/>
+    <Switch whichChoice='-1'>
+      <!-- test of NeedsChildNode -->
+      <Group DEF='EmptyGroupInsideSwitch'/>
+    </Switch>
+    <Group DEF='EmptyGroupContainsComment'>
+      <!-- test of NeedsChildNode -->
+    </Group>
+    <Switch DEF='EmptySwitchContainsROUTE' whichChoice='-1'>
+      <!-- test of NeedsChildNode -->
+      <ROUTE fromField='blah' fromNode='NoFields' toField='blah' toNode='NoFields'/>
+    </Switch>
+    <CADLayer visible='false'>
+      <CADAssembly>
+        <CADPart>
+          <CADFace DEF='CADFaceOneShapeChild'>
+            <Transform containerField='shape'>
+              <Shape/>
+            </Transform>
+          </CADFace>
+          <CADFace DEF='CADFaceMultipleShapeChildren'>
+            <Transform DEF='containerFieldNot_shape'>
+              <Shape/>
+              <Shape/>
+            </Transform>
+          </CADFace>
+        </CADPart>
+      </CADAssembly>
+    </CADLayer>
+    <GeoOrigin DEF='DeprecatedNodeUnquotedGeoSystem' geoSystem='"GD WE"'/>
+    <Viewpoint DEF='ViewHumanoidMissingCenterOfRotation'/>
+    <Shape DEF='EmptyShapeWithCommentSilencesWarning'>
+      <!-- silence warning -->
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material DEF='IllegalColorValuesMaterial' diffuseColor='-1 1.2 0.3 0.4' emissiveColor='-1 1.2 0.3 0.4' specularColor='-1 1.2 0.3 0.4'/>
+      </Appearance>
+    </Shape>
+    <Background DEF='BackgroundColorProblems' groundColor='-1 1.2 0.3 0.4' skyColor='-1 1.2 0.3 0.4'/>
+    <Fog DEF='FogColorProblems' color='-1 1.2 0.3 0.4'/>
+    <DirectionalLight DEF='DirectionalLightColorProblems' color='-1 1.2 0.3 0.4'/>
+    <PointLight DEF='PointLightColorProblems' color='-1 1.2 0.3 0.4'/>
+    <SpotLight DEF='SpotLightColorProblems' color='-1 1.2 0.3 0.4'/>
+    <ClipPlane DEF='IllegalPlaneEquationValues' plane='1 2 3 4 5'/>
+    <HAnimHumanoid DEF='notUniqueName1' name='JimDandy' version='1.1'/>
+    <HAnimHumanoid DEF='notUniqueName2' name='JimDandy' version='2.0'>
+      <!-- keep the following Group node as first child so that it is reported by diagnostic test -->
+      <Group DEF='HumanoidCannotContainChildrenNodes' name='IllegalGroupChildrenNode'/>
+      <HAnimJoint containerField='skeleton' name='HumanoidRoot'>
+        <HAnimJoint DEF='MissingComponentH-AnimLevel1'>
+          <HAnimHumanoid DEF='incorrectlyNestedHumanoidMissingNameAttribute' version='2.0'/>
+        </HAnimJoint>
+        <HAnimJoint DEF='MissingNameAttributeCheckContainerField'/>
+        <HAnimJoint USE='MissingNameAttributeCheckContainerField'/>
+        <HanimJoint DEF='ImproperCapitalizationOfNodeName'/>
+        <HAnimJoint DEF='duplicateName1' name='sacroiliac'/>
+        <HAnimJoint DEF='duplicateName2' name='sacroiliac'/>
+        <HAnimJoint USE='duplicateName1' containerField='joints'/>
+        <PositionInterpolator DEF='JointInterpolator' key='0 0' keyValue='0 0 0 1 0 0'/>
+        <ROUTE fromField='value_changed' fromNode='JointInterpolator' toField='translation' toNode='MissingNameAttribute'/>
+        <HAnimJoint DEF='ImproperDEFname' name='l_acromioclavicular'/>
+        <HAnimJoint DEF='hanim_HumanoidRoot' name='HumanoidRoot'>
+          <HAnimSegment DEF='JointNameSegmentNameHierarchyTest' name='notSacrum'>
+            <!-- the following construct is OK and should not throw errors -->
+            <HAnimSite DEF='hanim_Top_view' containerField='viewpoints' name='Top_view' rotation='1 0 0 -1.57' translation='0 3.5 0'>
+              <Viewpoint DEF='hanim_Top_viewpoint' centerOfRotation='0 0.9 0' description='Top' position='0 0 0'/>
+            </HAnimSite>
+          </HAnimSegment>
+          <HAnimJoint DEF='negativeCenterHeight' center='0 -1 0' name='negativeCenterHeight'>
+            <HAnimSegment DEF='IllegalChildrenContainerFields' name='IllegalChildrenContainerFields'>
+              <HAnimSite DEF='negativeTranslationHeight' name='negativeTranslationHeight' translation='0 -1 0'>
+                <HAnimDisplacer DEF='IllegalHAnimDisplacerInHAnimSiteNode' containerField='displacers'/>
+              </HAnimSite>
+              <Coordinate/>
+              <CoordinateDouble/>
+            </HAnimSegment>
+          </HAnimJoint>
+          <HAnimJoint DEF='MismatchedJointCenter_l_knee' center='1 2 3' name='l_knee'/>
+          <HAnimJoint DEF='MismatchedJointCenter_r_knee' center='4 5 6' name='r_knee'/>
+          <HAnimJoint USE='IllegalEmbeddedHAnimUse'/>
+          <HAnimSite DEF='IllegalNameIllegalParent' name='IllegalNameIllegalParent'/>
+          <!-- TODO test IllegalEmbeddedHAnimUse in another HAnimHumanoid -->
+        </HAnimJoint>
+      </HAnimJoint>
+      <HAnimSite USE='hanim_Top_view' containerField='viewpoints'/>
+      <HAnimSite USE='hanim_Top_view' containerField='viewpoints'/>
+      <HAnimSegment USE='JointNameSegmentNameHierarchyTest' containerField='segments'/>
+      <HAnimSegment USE='IllegalChildrenContainerFields' containerField='segments'/>
+      <!-- test for duplicated USE node -->
+      <HAnimSegment USE='IllegalChildrenContainerFields' containerField='segments'/>
+      <Coordinate DEF='HAnimCoordinateCorrectContainerField' containerField='skinCoord' point='0 0 0'/>
+      <Coordinate DEF='HAnimCoordinateIncorrectContainerField'/>
+      <CoordinateDouble DEF='HAnimCoordinateDoubleCorrectContainerField' containerField='skinCoord' point='0 0 0'/>
+      <CoordinateDouble DEF='HAnimCoordinateDoubleIncorrectContainerField'/>
+      <Normal DEF='HAnimNormalIncorrectContainerField'/>
+      <HAnimJoint USE='MissingComponentH-AnimLevel1' containerField='joints'/>
+      <HAnimJoint USE='MissingNameAttributeCheckContainerField' containerField='joints'/>
+      <HAnimJoint USE='duplicateName1' containerField='joints'/>
+      <HAnimJoint USE='duplicateName2' containerField='joints'/>
+      <HAnimJoint USE='ImproperDEFname' containerField='joints'/>
+      <HAnimJoint USE='hanim_HumanoidRoot' containerField='joints'/>
+      <HAnimJoint USE='negativeCenterHeight' containerField='joints'/>
+      <HAnimJoint USE='MismatchedJointCenter_l_knee' containerField='joints'/>
+      <HAnimJoint USE='MismatchedJointCenter_r_knee' containerField='joints'/>
+      <HAnimSite USE='hanim_Top_view' containerField='sites'/>
+      <HAnimSite USE='negativeTranslationHeight' containerField='sites'/>
+      <HAnimSite USE='IllegalNameIllegalParent' containerField='sites'/>
+    </HAnimHumanoid>
+    <Sound DEF='NoChildren'/>
+    <AudioClip DEF='NoParentSoundNode' description='bad clip reference' url='"blah" "https://www.web3d.org/x3d/content/examples/Basic/development/blah"'/>
+    <Sound class='must separate classes with;space characters' location='0 2 0'>
+      <AudioClip description='bad clip reference' url='"blah" "https://www.web3d.org/x3d/content/examples/Basic/development/blah"'/>
+    </Sound>
+    <Sound DEF='SoundDefaults' location='0 2 0'>
+      <AudioClip DEF='ReusableAudioClip' description='reusable' url='"../Vrml97Specification/click.wav" "https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/click.wav"'/>
+    </Sound>
+    <Sound DEF='SoundMinNegative' location='0 2 0' minBack='-1' minFront='-1'>
+      <AudioClip USE='ReusableAudioClip'/>
+    </Sound>
+    <Sound DEF='SoundMaxNegative' location='0 2 0' maxBack='-10' maxFront='-10'>
+      <AudioClip USE='ReusableAudioClip'/>
+    </Sound>
+    <Sound DEF='SoundMinGreaterThanMax' location='0 2 0' maxBack='11' maxFront='11' minBack='12' minFront='12'>
+      <AudioClip USE='ReusableAudioClip'/>
+    </Sound>
+    <Sound DEF='SoundMinGreaterThanDefaultMax' location='0 2 0' minBack='13' minFront='13'>
+      <AudioClip USE='ReusableAudioClip'/>
+    </Sound>
+    <Sound DEF='SoundMaxLessThanDefaultMin' location='0 2 0' maxBack='0.5' maxFront='0.5'>
+      <AudioClip USE='ReusableAudioClip'/>
+    </Sound>
+    <ROUTE fromField='test1' fromNode='DuplicateROUTE' toField='test3' toNode='test2'/>
+    <ROUTE fromField='test1' fromNode='DuplicateROUTE' toField='test3' toNode='test2'/>
+    <ROUTE fromField='test1' fromNode='DuplicateROUTE' toField='test3' toNode='test2'/>
+    <ROUTE fromField='children' fromNode='NodeFollowsRoute1' toField='children' toNode='NodeFollowsRoute2'/>
+    <Group DEF='NodeFollowsRoute1'>
+      <Group DEF='NodeFollowsRoute2'>
+        <!-- silence warning -->
+      </Group>
+    </Group>
+    <Shape DEF='ElevationGridInsufficientHeights'>
+      <ElevationGrid height='1 2 3 4 5' solid='false' xSpacing='0' zDimension='3' zSpacing='0'/>
+    </Shape>
+    <Shape DEF='ElevationGridTooManyHeights'>
+      <ElevationGrid height='1 2 3 4 5 6 7' solid='false' xSpacing='-1' zDimension='3' zSpacing='-1'/>
+    </Shape>
+    <Shape DEF='ElevationGridBadDimensions'>
+      <ElevationGrid height='1 2 3 4 5 6' solid='false' xDimension='-2' zDimension='-3'/>
+    </Shape>
+    <StaticGroup DEF='StaticGroupChildTests'>
+      <Group>
+        <TimeSensor DEF='StaticGroupDescendantsCannotProduceEvents'/>
+        <PositionInterpolator DEF='StaticGroupDescendantsCannotConsumeEvents'/>
+        <PositionInterpolator USE='StaticGroupDescendantsCannotBeUsed'/>
+      </Group>
+      <!-- note mistake capitalization, correct form is ROUTE -->
+      <Route fromField='fraction_changed' fromNode='StaticGroupDescendantsCannotProduceEvents' toField='set_fraction' toNode='StaticGroupDescendantsCannotConsumeEvents'/>
+    </StaticGroup>
+    <Group DEF='CaseSensitive'>
+      <!-- test case sensitivity of DEF/USE -->
+    </Group>
+    <Group USE='CASESENSITIVE'/>
+    <Group>
+      <TouchSensor DEF='PeerTouchSensor'/>
+      <CylinderSensor DEF='PeerCylinderSensor'/>
+      <Billboard DEF='PeerBillboard'/>
+    </Group>
+    <Inline DEF='RecursiveInlineInvocation' url='"TestSchematronDiagnostics.x3d" "https://www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.x3d" "TestSchematronDiagnostics.wrl" "https://www.web3d.org/x3d/content/examples/Basic/development/TestSchematronDiagnostics.wrl"'/>
+    <Shape>
+      <IndexedFaceSet DEF='IfsEmptyChildren'>
+        <Coordinate DEF='EmptyCoordinate'/>
+        <Color DEF='EmptyColor'/>
+        <Normal DEF='EmptyNormal'/>
+        <TextureCoordinate DEF='EmptyTextureCoordinate'/>
+      </IndexedFaceSet>
+    </Shape>
+    <Shape>
+      <IndexedFaceSet DEF='IfsSingletonChildren'>
+        <Coordinate DEF='SingleCoordinate' point='1 2 3'/>
+        <Color DEF='SingleColor' color='0.1 0.2 0.3'/>
+        <Normal DEF='SingleNormal' vector='0 1 0'/>
+        <TextureCoordinate DEF='SingleTextureCoordinate' point='0.4 0.8'/>
+      </IndexedFaceSet>
+    </Shape>
+    <GeoLOD>
+      <Shape DEF='rootNodeContainerFieldIsCorrect'/>
+    </GeoLOD>
+    <TextureProjector/>
+    <TextureProjectorParallel DEF='DistanceMismatchIllegalFieldOfView' farDistance='.1' fieldOfView='1 2 3 4 5' nearDistance='20'/>
+  </Scene>
+</X3D>

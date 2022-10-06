@@ -1,0 +1,115 @@
+<html>
+
+	<head>
+		<title>X3D for Advanced Modeling: TextureMapping Package Information</title>
+	</head>
+	<!-- This package.html file is used in javadoc documentation -->
+	<!-- Package Comment Files http://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html#packagecomment -->
+	<body>
+
+		<p>
+			This chapter will demonstrate techniques for texture mapping, multitextures and 3D textures.
+		</p>
+		<table border="0" width="100%">
+			<tbody>
+				<tr>
+
+					<td align="left">
+						<p>
+							<a href="https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/texturing.html">Texture mapping</a>
+							maps images to geometry nodes.
+						</p>
+						<ul>
+							<li>
+								Images can be provided by
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#ImageTexture" target="tooltips">ImageTexture</a>,
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#MovieTexture" target="tooltips">MovieTexture</a> or
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#PixelTexture" target="tooltips">PixelTexture</a>
+								nodes.
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureCoordinate" target="tooltips">TextureCoordinate</a>
+								and
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureCoordinateGenerator target="tooltips"">TextureCoordinateGenerator</a>
+								can select image-texture coordinates for direct matching with geometry vertices.
+								Animation can be provided by
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TexCoordChaser2D" target="tooltips">TexCoordChaser2D</a>
+								and
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TexCoordDamper2D" target="tooltips">TexCoordDamper2D</a>
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureProperties" target="tooltips">TextureProperties</a>
+								provides precise fine-grained control over application of image textures to geometry.
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureTransform" target="tooltips">TextureTransform</a>
+								shifts 2D texture coordinates for positioning, orienting and scaling image textures on geometry.
+							</li>
+						</ul>
+						<p>
+							<a href="https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/texturing.html#MultiTexture">Multitexture techniques</a>
+							apply multiple textures to a single set of geometry,
+							enabling a variety of visual effects such as light mapping and environment mapping.
+						</p>
+						<ul>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#MultiTexture" target="tooltips">MultiTexture</a>
+								node can contain multiple ImageTexture, MovieTexture and PixelTexture nodes.
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#MultiTextureCoordinate" target="tooltips">MultiTextureCoordinate</a>
+								node can contain TextureCoordinate or TextureCoordinateGenerator nodes.
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#MultiTextureTransform" target="tooltips">MultiTextureTransform</a>
+								node contains TextureTransform nodes that correspond to each texture image.
+							</li>
+						</ul>
+						<p>
+							<a href="https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/texture3D.html">3D texture</a>
+							techniques apply volumetric textures that describe a volume in space, rather than a flat surface.
+						</p>
+						<ul>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#ComposedTexture3D" target="tooltips">ComposedTexture3D</a>,
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#ImageTexture3D" target="tooltips">ImageTexture3D</a>
+								and
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureCoordinate4D" target="tooltips">PixelTexture3D</a>
+								define 3D image-based texture maps.
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureCoordinate3D" target="tooltips">TextureCoordinate3D</a>
+								and
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureCoordinate4D" target="tooltips">TextureCoordinate4D</a>
+								map 3D textures to vertices.
+							</li>
+							<li>
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureTransform3D" target="tooltips">TextureTransform3D</a>
+								and
+								<a href="https://www.web3d.org/x3d/content/X3dTooltips.html#TextureTransformMatrix3D" target="tooltips">TextureTransformMatrix3D</a>
+								apply a 3D transformation to texture coordinates.
+							</li>
+						</ul>
+					</td>
+
+					<td align="center" width="140">
+						<p>
+							<!-- 203 x 262 -->
+							<a href="../../../TextureMapping/index.html" target="_top"><img alt="Texture Map Comparisons Cylinder" title="Texture Map Comparisons Cylinder" hspace="10" src="../../../TextureMapping/TextureMapComparisonsCylinderXj3D.png" width="90" height="80" align="middle"/></a>
+						</p>
+						<p>
+							<!-- 897 x 795 -->
+							<a href="../../../TextureMapping/index.html" target="_top"><img alt="Texture Map Comparisons Rectangle" title="Texture Map Comparisons Rectangle" hspace="10" src="../../../TextureMapping/TextureMapComparisonsRectangleXj3D.png" width="127" height="80" align="middle"/></a>
+						</p>
+						<p>
+							<!-- 203 x 262 -->
+							<a href="../../../TextureMapping/index.html" target="_top"><img alt="MultiTexture Design Pattern" title="MultiTexture Design Pattern" hspace="10" src="../../../TextureMapping/MultiTextureDesignPatternSceneGraph.png" width="102" height="132" align="middle"/></a>
+						</p>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+</html>

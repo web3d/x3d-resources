@@ -1,0 +1,21 @@
+#VRML V2.0 utf8
+
+Shape {
+   appearance Appearance {
+      material Material { diffuseColor .8 .8 .8 }
+      texture ImageTexture { url "p0p0.jpg"
+	 repeatS TRUE repeatT TRUE
+ }
+   }
+   geometry IndexedFaceSet {
+      coord Coordinate {
+	 point [
+	    -1 -1  0
+	     0 -1  0
+	     0  0  0
+	    -1  0  0
+	 ]
+      }
+      coordIndex [ 0 1 2 3 -1 ]
+   }
+}

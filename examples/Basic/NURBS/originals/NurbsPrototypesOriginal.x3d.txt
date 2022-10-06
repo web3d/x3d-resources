@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "http://www.web3D.org/TaskGroups/x3d/translation/x3d-compact.dtd"
+"/www.web3D.org/TaskGroups/x3d/translation/x3d-compact.dtd">
+<X3D>
+  <head>
+    <meta name="filename" content="examples/Nurbs/NurbsPrototypesOriginal.x3d"/>
+    <meta name="description" content="*enter description here, short-sentence summaries preferred*"/>
+    <meta name="author" content="*enter name of original author here*"/>
+    <meta name="translator" content="*if manually translating VRML-to-X3D, enter name of person translating here*"/>
+    <meta name="created" content="*enter date of initial version here*"/>
+    <meta name="revised" content="*enter date of latest revision here*"/>
+    <meta name="version" content="*enter version here*"/>
+    <meta name="reference" content="*enter reference citation or relative/online url here*"/>
+    <meta name="reference" content="*enter additional url/bibliographic reference information here*"/>
+    <meta name="copyright" content="*enter copyright information here* Example:  Copyright (c) Web3D Consortium Inc. 2001"/>
+    <meta name="drawing" content="*enter drawing filename/url here*"/>
+    <meta name="image" content="*enter image filename/url here*"/>
+    <meta name="movie" content="*enter movie filename/url here*"/>
+    <meta name="photo" content="*enter photo filename/url here*"/>
+    <meta name="keywords" content="*enter keywords here*"/>
+    <meta name="url" content="*enter online url address for this file here*"/>
+    <meta name="generator" content="Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html"/>
+  </head>
+  <Scene>
+  <ProtoDeclare name="NurbsSurface">
+    <field  name="uTessellation" type="Integer" value="0" accessType="exposedField"/>
+    <field  name="texCoord" type="Node" accessType="exposedField">
+    </field>
+    <field  name="vOrder" type="Integer" value="3" accessType="field"/>
+    <field  name="vKnot" type="Floats" value="" accessType="field"/>
+    <field  name="weight" type="Floats" value="" accessType="exposedField"/>
+    <field  name="uKnot" type="Floats" value="" accessType="field"/>
+    <field  IS="_IS_0.point" name="controlPoint" type="Vector3FloatArray" value="" accessType="exposedField"/>
+    <field  name="vTessellation" type="Integer" value="0" accessType="exposedField"/>
+    <field  IS="s.uDimension" name="uDimension" type="Integer" value="0" accessType="field"/>
+    <field  name="solid" type="Boolean" value="true" accessType="field"/>
+    <field  name="ccw" type="Boolean" value="true" accessType="field"/>
+    <field  name="uOrder" type="Integer" value="3" accessType="field"/>
+    <field  IS="s.vDimension" name="vDimension" type="Integer" value="0" accessType="field"/>
+    <IndexedLineSet  DEF="ils" coordIndex=" 1 2 3 -1 5 6 7 -1">
+        <Coordinate  DEF="_IS_0"/>
+    </IndexedLineSet>
+    <Script xml:space="preserve" DEF="s" directOutput="true">
+      <![CDATA[
+javascript:
+        function initialize() {
+			//Browser.print('Sorry, your browser does not support NURBS nodes');
+			var u,v, counter, number;
+			counter = 0;
+			number = 0;
+			var ind = new MFInt32();
+			ind.length = 2*vDimension * uDimension + uDimension + vDimension;
+
+			for(v=0; v<vDimension;v++)
+			{
+				for(u=0; u<uDimension;u++)
+				{
+					ind[counter] = number;
+					counter++;
+					number++;
+				}
+				ind[counter] = -1; counter++;
+			}
+		
+			for(u=0; u<uDimension;u++)
+			{
+				for(v=0; v<vDimension;v++)
+				{
+					ind[counter] = v*uDimension + u;
+					counter++;
+					number++;
+				}
+				ind[counter] = -1; counter++;
+			}
+			
+			ils.set_coordIndex = ind;
+
+		}
+      
+    	
+      ]]>
+      <field xml:space="preserve" name="uDimension" type="Integer" value="0" accessType="field"/>
+      <field xml:space="preserve" name="vDimension" type="Integer" value="0" accessType="field"/>
+      <field xml:space="preserve" name="ils" type="Node" USE="ils" accessType="field"/>
+    </Script>
+  </ProtoDeclare>
+  <ProtoDeclare name="NurbsPositionInterpolator">
+    <field  name="value_changed" type="Vector3Float" accessType="eventOut"/>
+    <field  name="set_fraction" type="Float" accessType="eventIn"/>
+    <field  IS="s.order" name="order" type="Integer" value="3" accessType="field"/>
+    <field  IS="s.knot" name="knot" type="Floats" value="" accessType="field"/>
+    <field  IS="s.keyValue" name="keyValue" type="Vector3FloatArray" value="" accessType="field"/>
+    <field  name="fractionAbsolute" type="Boolean" value="true" accessType="exposedField"/>
+    <field  name="keyWeight" type="Floats" value="" accessType="exposedField"/>
+    <field  name="set_keyValue" type="Floats" accessType="eventIn"/>
+    <field  name="set_knot" type="Floats" accessType="eventIn"/>
+    <field  name="set_order" type="Floats" accessType="eventIn"/>
+    <PositionInterpolator  DEF="pi"/>
+    <Script xml:space="preserve" DEF="s" directOutput="true">
+      <![CDATA[
+javascript:
+        function initialize() {
+			//Browser.print('Sorry, your browser does not support NURBS nodes');
+			var i;
+			i=0;
+			pi.set_keyValue = keyValue;
+			var keys = new MFFloat();
+			for(i=0; i<keyValue.length; i++)
+			{
+				keys[i] = knot[i + order - 1];
+				//Browser.print('keyValue' + keyValue[i]);
+				//Browser.print('key' + keys[i]);
+			}
+			pi.set_key = keys;
+		}
+      
+    	
+      ]]>
+      <field xml:space="preserve" name="order" type="Integer" value="0" accessType="field"/>
+      <field xml:space="preserve" name="knot" type="Floats" value="" accessType="field"/>
+      <field xml:space="preserve" name="keyValue" type="Vector3FloatArray" value="" accessType="field"/>
+      <field xml:space="preserve" name="pi" type="Node" USE="pi" accessType="field"/>
+    </Script>
+  </ProtoDeclare>
+  <ProtoDeclare name="NurbsCurve">
+    <field  name="order" type="Integer" value="3" accessType="field"/>
+    <field  IS="_IS_1.point" name="controlPoint" type="Vector3FloatArray" value="" accessType="exposedField"/>
+    <field  name="tessellation" type="Integer" value="10" accessType="exposedField"/>
+    <field  name="knot" type="Floats" value="" accessType="field"/>
+    <field  name="weight" type="Floats" value="" accessType="exposedField"/>
+    <IndexedLineSet  DEF="ils" coordIndex=" 1 2 3 -1 5 6 7 -1">
+        <Coordinate  DEF="_IS_1"/>
+    </IndexedLineSet>
+    <Script xml:space="preserve" DEF="s" directOutput="true">
+      <![CDATA[
+javascript:
+        function initialize() {
+			//Browser.print('Sorry, your browser does not support NURBS nodes');
+			var u,v, counter, number, Dimension;
+			counter = 0;
+			number = 0;
+			Dimension = ils.coord.point.length;
+			//Browser.print('Dimension ' + Dimension);
+			var ind = new MFInt32();
+			ind.length = Dimension + 1;
+
+			for(counter=0; counter<Dimension;counter++)
+			{
+				//Browser.print('ils.point ' + ils.coord.point[counter]);
+				ind[counter] = counter;
+				//Browser.print('ils.ind ' + ind[counter]);
+			}
+			counter++;
+			ind[counter] = -1;
+			
+			ils.set_coordIndex = ind;
+
+		}
+      
+    	
+      ]]>
+      <field xml:space="preserve" name="ils" type="Node" USE="ils" accessType="field"/>
+    </Script>
+  </ProtoDeclare>
+  <ProtoDeclare name="NurbsGroup">
+    <field  name="tessellationScale" type="Float" value="1.0" accessType="exposedField"/>
+    <field  name="bboxCenter" type="Vector3Float" value="0.0 0.0 0.0" accessType="field"/>
+    <field  name="addChildren" type="Nodes" accessType="eventIn"/>
+    <field  IS="_IS_2.children" name="children" type="Nodes" accessType="exposedField">
+    </field>
+    <field  name="removeChildren" type="Nodes" accessType="eventIn"/>
+    <field  name="bboxSize" type="Vector3Float" value="-1.0 -1.0 -1.0" accessType="field"/>
+    <Group  DEF="_IS_2">
+    </Group>
+  </ProtoDeclare>
+  <ProtoDeclare name="NurbsCurve2ILS">
+    <field  name="order" type="Integer" value="3" accessType="field"/>
+    <field  IS="_IS_3.point s.cvs" name="controlPoint" type="Vector3FloatArray" value="" accessType="exposedField"/>
+    <field  name="tessellation" type="Integer" value="10" accessType="exposedField"/>
+    <field  name="knot" type="Floats" value="" accessType="field"/>
+    <field  name="weight" type="Floats" value="" accessType="exposedField"/>
+    <IndexedLineSet  DEF="ils" coordIndex=" 1 2 3 -1 5 6 7 -1">
+        <Coordinate  DEF="_IS_3"/>
+    </IndexedLineSet>
+    <Transform  DEF="mtr">
+        <Shape >
+            <Appearance >
+                <Material  diffuseColor="1.0 0.0 0.0"/>
+            </Appearance>
+        </Shape>
+    </Transform>
+    <Script xml:space="preserve" DEF="s" directOutput="true">
+      <![CDATA[
+javascript:
+        function initialize() {
+			//Browser.print('Sorry, your browser does not support NURBS nodes');
+			var u,v, counter, number, Dimension;
+			counter = 0;
+			number = 0;
+			Dimension = ils.coord.point.length;
+			//Browser.print('Dimension ' + Dimension);
+			var ind = new MFInt32();
+			ind.length = Dimension + 1;
+
+			for(counter=0; counter<Dimension;counter++)
+			{
+				//Browser.print('ils.point ' + ils.coord.point[counter]);
+				ind[counter] = counter;
+			}
+			counter++;
+			ind[counter] = -1;
+			
+			ils.set_coordIndex = ind;
+
+
+
+			//------------------------------------------------------------------------------------------
+			//					the little spheres
+			//------------------------------------------------------------------------------------------
+			var nodes = new MFNode();
+			var mSphereString1 = new MFString('
+			Transform {
+				scale .1 .1 .1
+				translation  
+				');
+				var mTranslation = new SFVec3f(1,1,1);
+				var mSphereString2 = new MFString('
+				children Shape { 
+					appearance	Appearance {material Material {diffuseColor	1 0 0}}
+					geometry Sphere	{}
+				}
+			}
+			');
+
+			var megaString = new MFString('');
+
+			for (counter=0;counter<Dimension;counter++)
+			{
+				mTranslation = cvs[counter];
+				Browser.print(mTranslation);
+				megaString += mSphereString1;
+				megaString += mTranslation;
+				megaString += mSphereString2;
+			}
+			
+			nodes = Browser.createVrmlFromString(megaString);			 
+			set_Children = nodes;
+		}
+      
+    	
+      ]]>
+      <field xml:space="preserve" name="mtr" type="Node" USE="mtr" accessType="field"/>
+      <field xml:space="preserve" name="set_Children" type="Nodes" accessType="eventOut"/>
+      <field xml:space="preserve" name="cvs" type="Vector3FloatArray" value="" accessType="field"/>
+      <field xml:space="preserve" name="ils" type="Node" USE="ils" accessType="field"/>
+    </Script>
+<ROUTE fromNode="s" fromField="set_Children" toNode="mtr" toField="addChildren"/>
+  </ProtoDeclare>
+  <ProtoDeclare name="NurbsSurface2ILS">
+    <field  name="uTessellation" type="Integer" value="0" accessType="exposedField"/>
+    <field  name="texCoord" type="Node" accessType="exposedField">
+    </field>
+    <field  name="vOrder" type="Integer" value="3" accessType="field"/>
+    <field  name="vKnot" type="Floats" value="" accessType="field"/>
+    <field  name="weight" type="Floats" value="" accessType="exposedField"/>
+    <field  name="uKnot" type="Floats" value="" accessType="field"/>
+    <field  IS="_IS_4.point s.cvs" name="controlPoint" type="Vector3FloatArray" value="" accessType="exposedField"/>
+    <field  name="vTessellation" type="Integer" value="0" accessType="exposedField"/>
+    <field  IS="s.uDimension" name="uDimension" type="Integer" value="0" accessType="field"/>
+    <field  name="solid" type="Boolean" value="true" accessType="field"/>
+    <field  name="ccw" type="Boolean" value="true" accessType="field"/>
+    <field  name="uOrder" type="Integer" value="3" accessType="field"/>
+    <field  IS="s.vDimension" name="vDimension" type="Integer" value="0" accessType="field"/>
+    <Transform >
+        <Shape >
+            <Appearance >
+                <Material  emissiveColor="1.0 0.0 0.0" diffuseColor="1.0 0.0 0.0"/>
+            </Appearance>
+            <IndexedLineSet  DEF="ils" coordIndex=" 1 2 3 -1 5 6 7 -1">
+                <Coordinate  DEF="_IS_4"/>
+            </IndexedLineSet>
+        </Shape>
+    </Transform>
+    <Transform  DEF="mtr">
+        <Shape >
+            <Appearance >
+                <Material  diffuseColor="1.0 0.0 0.0"/>
+            </Appearance>
+        </Shape>
+    </Transform>
+    <Script xml:space="preserve" DEF="s" directOutput="true">
+      <![CDATA[
+javascript:
+        function initialize() {
+			//Browser.print('Sorry, your browser does not support NURBS nodes');
+			var u,v, counter, number;
+			counter = 0;
+			number = 0;
+			var ind = new MFInt32();
+			ind.length = 2*vDimension * uDimension + uDimension + vDimension;
+
+			for(v=0; v<vDimension;v++)
+			{
+				for(u=0; u<uDimension;u++)
+				{
+					ind[counter] = number;
+					counter++;
+					number++;
+				}
+				ind[counter] = -1; counter++;
+			}
+		
+			for(u=0; u<uDimension;u++)
+			{
+				for(v=0; v<vDimension;v++)
+				{
+					ind[counter] = v*uDimension + u;
+					counter++;
+					number++;
+				}
+				ind[counter] = -1; counter++;
+			}
+			
+			ils.set_coordIndex = ind;
+
+			//------------------------------------------------------------------------------------------
+			//					the little spheres
+			//------------------------------------------------------------------------------------------
+			var nodes = new MFNode();
+			var mSphereString1 = new MFString('
+			Transform {
+				scale .03 .03 .03
+				translation  
+				');
+				var mTranslation = new SFVec3f(1,1,1);
+				var mSphereString2 = new MFString('
+				children Shape { 
+					appearance	Appearance {material Material {diffuseColor	1 0 0}}
+					geometry Sphere	{}
+				}
+			}
+			');
+
+			var megaString = new MFString('');
+
+			for (counter=0;counter<uDimension*vDimension;counter++)
+			{
+				mTranslation = cvs[counter];
+				Browser.print(mTranslation);
+				megaString += mSphereString1;
+				megaString += mTranslation;
+				megaString += mSphereString2;
+			}
+			
+			nodes = Browser.createVrmlFromString(megaString);			 
+			set_Children = nodes;	
+
+
+		}
+      
+    	
+      ]]>
+      <field xml:space="preserve" name="set_Children" type="Nodes" accessType="eventOut"/>
+      <field xml:space="preserve" name="ils" type="Node" USE="ils" accessType="field"/>
+      <field xml:space="preserve" name="mtr" type="Node" USE="mtr" accessType="field"/>
+      <field xml:space="preserve" name="cvs" type="Vector3FloatArray" value="" accessType="field"/>
+      <field xml:space="preserve" name="uDimension" type="Integer" value="0" accessType="field"/>
+      <field xml:space="preserve" name="vDimension" type="Integer" value="0" accessType="field"/>
+    </Script>
+<ROUTE fromNode="s" fromField="set_Children" toNode="mtr" toField="addChildren"/>
+  </ProtoDeclare>
+  </Scene>
+
+</X3D>

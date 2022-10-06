@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='SimpleExtrusionShipHull.x3d' name='title'/>
+    <meta content='Don Brutzman and MV4204 class' name='creator'/>
+    <meta content='29 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Using Extrusion to model a ship hull and deck.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/course/SimpleExtrusionShipHull.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SimpleExtrusionShipHull.x3d'/>
+    <Viewpoint description='Extruded ship hull and deck' orientation='1 0 0 -0.2' position='-2 8 40'/>
+    <Transform>
+      <Shape>
+        <Extrusion creaseAngle='1.57' crossSection='0.00 1.00 0.38 0.92 0.71 0.71 0.92 0.38 1.00 0.00 0.92 -0.38 0.71 -0.71 0.38 -0.92 0.00 -1.00' orientation='0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 -0.5' scale='4 4 4 4 4 4 4 .1' solid='false' spine='-20 0 0 0 0 0 10 0 0 18 0.25 0'/>
+        <Appearance>
+          <Material diffuseColor='0 0.3 1' emissiveColor='0.2 0.2 0.2'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <Extrusion creaseAngle='1.57' crossSection='0.10 0.96 0.10 -0.96' scale='4 4 4 4 4 4 4 .1' solid='false' spine='-19.9 0 0 0 0 0 10 0 0 17.5 0.25 0'/>
+        <Appearance>
+          <Material diffuseColor='0 1 0' emissiveColor='0 0.2 0'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

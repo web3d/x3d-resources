@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='set_righturl.x3d' name='title'/>
+    <meta content='http://www.nist.gov/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/members.html' name='creator'/>
+    <meta content='This file was provided by the National Institute of Standards and Technology, and is part of the X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html The information contained within this file is provided for use in establishing conformance to the ISO VRML97 Specification. Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology. This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are derived from it, and any modified versions bear some notice that they have been modified.' name='disclaimer'/>
+    <meta content='Correct definition and compliance of this conformance scene is maintained by the X3D Working Group, https://www.web3d.org/working-groups/x3d' name='info'/>
+    <meta content='Michael Kass NIST, Don Brutzman NPS' name='translator'/>
+    <meta content='21 January 2001' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Test browser to switch between different backgrounds where each one contains a different right JPEG image associated with it. The right image may be changed by clicking on the appropriate text as indicated. The test should generate a different JPEG image each time the appropriate text is clicked. All images are on JPEG format and are of the mountains of the High Sierra. A viewpoint node is set so that the image will be rotated -1.57 radians along the Y axis the make it possible to see and toggle the images.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/set_righturl.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='set_righturl.x3d'/>
+    <NavigationInfo type='"EXAMINE" "WALK" "FLY" "ANY"'/>
+    <Group>
+      <Viewpoint DEF='the-view1' description='Right View' orientation='0 1 0 -1.57' position='10 0 20'/>
+    </Group>
+    <Group>
+      <Background DEF='back1' backUrl='"mt-humphreys.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/mt-humphreys.jpg"' groundColor='0 0 0'/>
+      <Background DEF='back2' backUrl='"lostlakes.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/lostlakes.jpg"' groundColor='0 0 0'/>
+      <Background DEF='back3' backUrl='"mt-huxley.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/mt-huxley.jpg"' groundColor='0 0 0'/>
+      <Background DEF='back4' backUrl='"mt-whitney.jpg" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Background/mt-whitney.jpg"' groundColor='0 0 0'/>
+    </Group>
+    <Transform DEF='big-trans' rotation='0 1 0 -1.57' translation='20 0 20'>
+      <Transform scale='0.02 0.02 0.02' translation='-5.4 -2 0'>
+        <Shape>
+          <Appearance>
+            <Material ambientIntensity='1' diffuseColor='0 1 0' emissiveColor='0 1 0'/>
+          </Appearance>
+          <Text string='"CLICK TO SELECT RIGHT URL IMAGE"'>
+            <FontStyle DEF='the-style' justify='"FIRST" "FIRST"' size='28' style='BOLD'/>
+          </Text>
+        </Shape>
+      </Transform>
+      <Transform scale='0.02 0.02 0.02' translation='-5.4 -2.7 0'>
+        <Shape>
+          <Appearance DEF='the-appearance'>
+            <Material ambientIntensity='1' diffuseColor='0 0 1' emissiveColor='0 0 1'/>
+          </Appearance>
+          <Text string='"Mt. Humphreys"'>
+            <FontStyle USE='the-style'/>
+          </Text>
+        </Shape>
+        <TouchSensor DEF='the-touch1' description='touch to activate'/>
+      </Transform>
+      <Transform scale='0.02 0.02 0.02' translation='-5.4 -3.4 0'>
+        <Shape>
+          <Appearance USE='the-appearance'/>
+          <Text string='"Lost Lakes"'>
+            <FontStyle USE='the-style'/>
+          </Text>
+        </Shape>
+        <TouchSensor DEF='the-touch2' description='touch to activate'/>
+      </Transform>
+      <Transform scale='0.02 0.02 0.02' translation='1 -2.7 0'>
+        <Shape>
+          <Appearance USE='the-appearance'/>
+          <Text string='"Mt. Huxley"'>
+            <FontStyle USE='the-style'/>
+          </Text>
+        </Shape>
+        <TouchSensor DEF='the-touch3' description='touch to activate'/>
+      </Transform>
+      <Transform scale='0.02 0.02 0.02' translation='1 -3.4 0'>
+        <Shape>
+          <Appearance USE='the-appearance'/>
+          <Text string='"Mt. Whitney"'>
+            <FontStyle USE='the-style'/>
+          </Text>
+        </Shape>
+        <TouchSensor DEF='the-touch4' description='touch to activate'/>
+      </Transform>
+    </Transform>
+    <Script DEF='image-back1'>
+      <field accessType='inputOnly' name='value_in' type='SFBool'/>
+      <field accessType='outputOnly' name='value_out' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+function value_in (the_value) {
+	if (the_value == true) { value_out = true; }
+	else { value_out = true;}
+}
+]]>
+    </Script>
+    <Script DEF='image-back2'>
+      <field accessType='inputOnly' name='value_in' type='SFBool'/>
+      <field accessType='outputOnly' name='value_out' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+
+function value_in (the_value) 
+{
+	if (the_value == true)
+	{
+		value_out = true;
+	}
+	else
+	{
+		value_out = true;
+	}
+}
+]]>
+    </Script>
+    <Script DEF='image-back3'>
+      <field accessType='inputOnly' name='value_in' type='SFBool'/>
+      <field accessType='outputOnly' name='value_out' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+
+function value_in (the_value) 
+{
+	if (the_value == true)
+	{
+		value_out = true;
+	}
+	else
+	{
+		value_out = true;
+	}
+}
+]]>
+    </Script>
+    <Script DEF='image-back4'>
+      <field accessType='inputOnly' name='value_in' type='SFBool'/>
+      <field accessType='outputOnly' name='value_out' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+
+function value_in (the_value) 
+{
+	if (the_value == true)
+	{
+		value_out = true;
+	}
+	else
+	{
+		value_out = true;
+	}
+}
+]]>
+    </Script>
+    <ROUTE fromField='isActive' fromNode='the-touch1' toField='value_in' toNode='image-back1'/>
+    <ROUTE fromField='isActive' fromNode='the-touch2' toField='value_in' toNode='image-back2'/>
+    <ROUTE fromField='isActive' fromNode='the-touch3' toField='value_in' toNode='image-back3'/>
+    <ROUTE fromField='isActive' fromNode='the-touch4' toField='value_in' toNode='image-back4'/>
+    <ROUTE fromField='value_out' fromNode='image-back1' toField='set_bind' toNode='back1'/>
+    <ROUTE fromField='value_out' fromNode='image-back2' toField='set_bind' toNode='back2'/>
+    <ROUTE fromField='value_out' fromNode='image-back3' toField='set_bind' toNode='back3'/>
+    <ROUTE fromField='value_out' fromNode='image-back4' toField='set_bind' toNode='back4'/>
+  </Scene>
+</X3D>

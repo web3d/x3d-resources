@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Metadata Information</title>
+        <link rel="stylesheet" href="../stylesheets/X3dAuthoringBook.css" type="text/css" />
+        <meta name="generator" content=
+              "DocBook XSL Stylesheets V1.67.2" />
+    </head>
+    <body>
+
+        <h2><a id="ChapterDirectoryName" name=
+               "ChapterDirectoryName"></a>Metadata Information</h2>
+
+        <p><b>Table of Contents</b></p>
+        <dl>
+            <dt><span><a href="#Metadata-Introduction">1. What
+                        this chapter covers</a></span></dt>
+            <dt><span><a href="#Metadata-Concepts">2.
+                        Concepts</a></span></dt>
+            <dd>
+                <dl>
+                    <dt><span><a href="#d0e34">2.1. Purpose and common
+                                functionality</a></span></dt>
+                    <dt><span><a href="#Comments">2.2.
+                                Comments</a></span></dt>
+                    <dt><span><a href="#MetadataAbstractNodeTypes">2.3.
+                                Abstract node types</a></span></dt>
+                </dl>
+            </dd>
+            <dt><span><a href="#Metadata-Nodes">3. Node
+                        descriptions</a></span></dt>
+            <dd>
+                <dl>
+                    <dt><span><a href="#WorldInfo">3.1. WorldInfo
+                                node</a></span></dt>
+                    <dt><span><a href="#MetadataDouble">3.2.
+                                MetadataDouble node</a></span></dt>
+                    <dt><span><a href="#MetadataFloat">3.3.
+                                MetadataFloat node</a></span></dt>
+                    <dt><span><a href="#MetadataInteger">3.4.
+                                MetadataInteger node</a></span></dt>
+                    <dt><span><a href="#MetadataString">3.5.
+                                MetadataString node</a></span></dt>
+                    <dt><span><a href="#MetadataSet">3.6. MetadataSet
+                                node</a></span></dt>
+                </dl>
+            </dd>
+            <dt><span><a href="#Metadata-Summary">4.
+                        Summary</a></span></dt>
+            <dd>
+                <dl>
+                    <dt><span><a href="#d0e998">4.1. Key
+                                ideas</a></span></dt>
+                    <dt><span><a href="#d0e1005">4.2. Related nodes and
+                                concepts</a></span></dt>
+                </dl>
+            </dd>
+        </dl>
+
+        <blockquote>
+
+            <table border="0" width="100%" cellspacing="0" cellpadding="0"
+                   summary="Block quote">
+                <tr>
+
+                    <td width="80%" valign="top">
+                        <p>Metadata defined: in general, "data about data;" functionally,
+                            "structured data about data." Metadata includes data associated
+                            with either an information system or an information object for
+                            purposes of description, administration, legal requirements,
+                            technical functionality, use and usage, and preservation.</p>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td colspan="2" align="right" valign="top">--<span>Dublin Core Metadata Initiative (DCMI)</span></td>
+                </tr>
+            </table>
+        </blockquote>
+
+        <h2><a id=
+               "Metadata-Introduction" name=
+               "Metadata-Introduction"></a>1. What this chapter covers</h2>
+
+        <p>Metadata is the use of data to explain other data. In other
+            words, the information provided in a document might have further
+            descriptions that explain the origin or context of the
+            information itself.</p>
+        <p>An X3D metadata node can be used to provide such information
+            about any node in an X3D scene graph, and is placed as a child of
+            the node that it describes. Metadata nodes are persistent,
+            meaning that their values remain available and accessible after
+            loading. Metadata nodes do not affect the visible rendering of a
+            scene.</p>
+        <p>Other mechanisms to place information in a scene include meta
+            tags, the WorldInfo node, and comments.</p>
+        <p>X3D documents are a growing and important part of the World
+            Wide Web. Metadata strategies become important when X3D scenes
+            might get reused, repurposed or improved. Since authoring good
+            content takes time, and since one X3D motto states "content is
+            king," it is often worth documenting the relevant resources that
+            are used to construct the many details presented in an X3D
+            scene.</p>
+
+        <h2><a id="Metadata-Concepts"
+               name="Metadata-Concepts"></a>2. Concepts</h2>
+
+        <h3><a id="d0e34" name=
+               "d0e34"></a>2.1. Purpose and common functionality</h3>
+
+        <p>There are four general mechanisms for adding metadata
+            information in an X3D scene, listed as follows.</p>
+
+        <ul type="disc">
+            <li>
+                <p>Meta tags are contained in the scene header and provide
+                    attribute-value pairs of information about the overall scene.
+                    They are not available after a scene is loaded.</p>
+            </li>
+            <li>
+                <p>A metadata node can be provided as the metadata field of any
+                    other X3D node.</p>
+            </li>
+            <li>
+                <p>A WorldInfo node contains a simple unstructured string of
+                    persistent information, but it's fields are not accessible
+                    outside of the node.</p>
+            </li>
+            <li>
+                <p>Comments are unstructured text that can provide helpful
+                    information to authors. They are not retained when an X3D scene
+                    is parsed, and not presentable to users when a scene is
+                    loaded.</p>
+            </li>
+        </ul>
+
+        <p>Meta tags are discussed in Chapter 1, Technical Introduction,
+            section 1.2.5.5.</p>
+        <p>The metadata nodes include MetadataDouble, MetadataFloat,
+            MetadataInteger, MetadataString and MetadataSet. Each node can
+            contain an array of named values, along with an optional
+            reference that governs naming and semantic conventions. In each
+            case, the data value is strongly typed to match the name of the
+            node.</p>
+        <p>The WorldInfo node was defined in the original Virtual Reality
+            Modeling Language (VRML97) specification and was the only way to
+            persistently save metadata in such scenes. Because each WorldInfo
+            node was able to include an array of arbitrary string values, it
+            might seem that any type of metadata information might be
+            included. However, without internal structure, and without the
+            ability to read such strings at run time, WorldInfo has limited
+            practical use from a metadata standpoint and is infrequently
+            used.</p>
+        <p>Comment syntax and considerations appear in the next section.
+            Abstract node type definitions and detailed node definitions
+            follow.</p>
+
+        <h3><a id="Comments" name=
+               "Comments"></a>2.2. Comments</h3>
+
+        <p>Comments are commonly included by authors to explain the
+            rationale for constructs of interest in a scene. Purpose, design
+            decisions, sources of information and any other kind of
+            information might be included.</p>
+        <p>Commenting styles vary widely. In general, it is good to be
+            brief and factual. Comments should help an author who looks at
+            the scene later. That author might be you, perhaps six or twelve
+            months from now when you might remember the general flow of what
+            you created but not all of the specific details. Thinking about
+            what comments you like to find in other people's work provides a
+            good guideline for how much detail to put in your work.</p>
+        <p>One good convention is to document unresolved problems or
+            upcoming work by first putting the the phrase TODO in the
+            comment. Some authoring tools look for such labels and flag them
+            for authors, making it easier to later find the parts that need
+            further work.</p>
+        <p>If the comments are documenting a signficant problem, then
+            another good practice is to put a <code>&lt;meta
+                name="error" description="..."/&gt;</code> (or <code>warning</code> or <code>info</code>)
+            tag in the scene header. In this way, authors can immediately be
+            aware of showstopper difficulties in the scene.</p>
+
+        <h3><a id="MetadataAbstractNodeTypes" name=
+               "MetadataAbstractNodeTypes"></a>2.3. Abstract node
+            types</h3>
+
+        <h4><a id="X3DMetadataObject" name=
+               "X3DMetadataObject"></a>2.3.1. X3DMetadataObject</h4>
+
+        <p>The X3DMetadataObject type defines the minimum required fields
+            for metadata nodes. It is part of the Core profile, meaning that
+            it is integral to X3D.</p>
+        <p>All nodes of type X3DMetadataObject also include a value
+            field, either as a simple type or as contained nodes. Field
+            definitions are listed in Table 15.1.</p>
+        <a id="d0e102" name="d0e102"></a>
+        <p><b>Table 1. Field definitions for
+                X3DMetadataObject</b></p>
+        <table summary="Field definitions for X3DMetadataObject" border=
+               "1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>name</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>reference</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5><a id="d0e151" name=
+               "d0e151"></a>2.3.1.1. name</h5>
+
+        <p>The name field lists the name of the metadata being provided.
+            Metadata information is provided as name-value pairs so that each
+            value is uniquely identified. The default value is an empty
+            string array.</p>
+
+        <h5><a id="d0e159" name=
+               "d0e159"></a>2.3.1.2. reference</h5>
+
+
+        <p>The reference field is optional and the default value is an
+            empty string array. When used, it identifies the reference or
+            standard defining the allowed values and semantic meaning of the
+            metadata being provided.</p>
+
+
+
+
+
+        <h5><a id="d0e167" name=
+               "d0e167"></a>2.3.1.3. Hints and warnings</h5>
+
+
+
+
+
+
+        <p>If the reference field is not provided, authors are expected
+            to deduce the meaning of the metadata from the name field.</p>
+        <p>A meta tag can be used to identify a metadata reference that
+            is globally applicable to a scene.</p>
+
+
+
+
+
+
+        <h4><a id="X3DInfoNode" name=
+               "X3DInfoNode"></a>2.3.2. X3DInfoNode</h4>
+
+
+
+
+
+
+        <p>The X3DInfoNode type implements the X3DChildNode interface,
+            meaning that it can appear as a child node under a grouping node.
+            Only the WorldInfo node implements the X3DInfoNode interface.
+            Field definitions are listed in Table 15.2.</p>
+        <a id="d0e185" name="d0e185"></a>
+        <p><b>Table 2. Field Definitions for
+                X3DInfoNode Type</b></p>
+        <table summary="Field Definitions for X3DInfoNode Type" border=
+               "1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+        <h5><a id="d0e223" name=
+               "d0e223"></a>2.3.2.1. metadata</h5>
+
+
+
+
+
+
+        <p>The metadata field simply matches the requirements of the
+            X3DNode interface, allowing such nodes to themselves include a
+            single metadata node.</p>
+
+
+
+
+
+
+
+
+        <h2><a id="Metadata-Nodes"
+               name="Metadata-Nodes"></a>3. Node descriptions</h2>
+
+
+
+
+
+
+
+        <h3><a id="WorldInfo" name=
+               "WorldInfo"></a>3.1. WorldInfo node</h3>
+
+
+
+
+
+
+        <p>The WorldInfo node can provide a title for a scene as well as
+            a simple string array providing arbitrary information. WorldInfo
+            implements the X3DInfoObject type.</p>
+        <p>WorldInfo title information is helpful. A good authoring
+            practice is to put a WorldInfo node with title information near
+            the top of a scene so that it is easily found by an author.</p>
+        <p>The WorldInfo node is in the Interchange Profile. The
+            Interchange Profile provides full support for all fields. The
+            WorldInfo node has the fields defined in Table 15.3. Node syntax
+            is shown in Table 15.4.</p>
+        <a id="d0e246" name="d0e246"></a>
+        <p><b>Table 3. Field Definitions for
+                WorldInfo Node</b></p>
+        <table summary="Field Definitions for WorldInfo Node" border="1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MFString</td>
+                    <td>initializeOnly</td>
+                    <td>info</td>
+                    <td>[ ]</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>initializeOnly</td>
+                    <td>title</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id="d0e309" name="d0e309"></a>
+        <p><b>Table 4. Node Syntax for
+                WorldInfo Node</b></p>
+        <table summary="Node Syntax for WorldInfo Node" border="1">
+            <colgroup>
+                <col align="center" />
+                <col align="center" /></colgroup>
+            <thead>
+                <tr>
+                    <th align="center">XML syntax (.x3d)</th>
+                    <th align="center">ClassicVRML syntax (.x3dv)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <pre>
+&lt;WorldInfo DEF="MyWorldInfo"
+info=' "String1" "String2" '
+title="Example World"/&gt;
+                        </pre></td>
+                    <td align="left">
+                        <pre>
+DEF MyWorldInfo WorldInfo {
+info ["String1" "String2"]
+title "Example World"
+}
+                        </pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>WorldInfo nodes can appear at the top level of the scene
+            graph, and as a child under a grouping node.</p>
+        <p>WorldInfo is not an X3DMetadataObject and cannot appear as a
+            child of other nodes where only metadata nodes are allowed.</p>
+
+
+
+
+        <h4><a id="d0e337" name=
+               "d0e337"></a>3.1.1. info</h4>
+
+
+
+
+
+
+        <p>The info field allows multi-element strings to be specified.
+            Because info has accessType initializeOnly, it cannot be set or
+            read during run time. This string array is not processed by X3D
+            and exists to allow the creator to save human-readable
+            information about the content in a scene file.</p>
+
+
+
+
+
+        <h4><a id="d0e344" name=
+               "d0e344"></a>3.1.2. title</h4>
+
+
+
+
+
+
+        <p>The title field allows a single-element string to be provided
+            as the title for the model, possibly displayed in the browser's
+            title bar.</p>
+
+
+
+
+
+        <h4><a id="d0e351" name=
+               "d0e351"></a>3.1.3. Hints and warnings</h4>
+
+
+
+
+
+
+        <p>Browsers and viewers are allowed to present titles in any way
+            that they want. Thus a user may (or may not) see this
+            information.</p>
+        <p>No rules are defined for cases when multiple titles are
+            provided by multiple WorldInfo nodes.</p>
+        <p>The Browser class in the Scene Authoring Interface (SAI) can
+            be used by Script nodes to set the title of a scene. Use of the
+            SAI is beyond the scope of this book.</p>
+        <p>Setting the scene title using WorldInfo is a good practice.
+            Otherwise use a metadata node instead of a WorldInfo node to save
+            information about the scene.</p>
+
+
+
+
+
+
+        <h3><a id="MetadataDouble" name=
+               "MetadataDouble"></a>3.2. MetadataDouble node</h3>
+
+
+
+
+
+
+        <p>The MetadataDouble node holds a value array of
+            double-precision floating-point numbers. MetadataDouble
+            implements the X3DMetadataObject type.</p>
+        <p>MetadataDouble is in the Core Profile. The node has the fields
+            defined in Table 15.5. Node syntax is shown in Table 15.6.</p>
+        <a id="d0e374" name="d0e374"></a>
+        <p><b>Table 5. Field Definitions for
+                MetadataDouble Node</b></p>
+        <table summary="Field Definitions for MetadataDouble Node"
+               border="1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>name</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>reference</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>MFDouble</td>
+                    <td>inputOutput</td>
+                    <td>value</td>
+                    <td>[ ]</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id="d0e449" name="d0e449"></a>
+        <p><b>Table 6. Node Syntax for
+                MetadataDouble Node</b></p>
+        <table summary="Node Syntax for MetadataDouble Node" border="1">
+            <colgroup>
+                <col align="center" />
+                <col align="center" /></colgroup>
+            <thead>
+                <tr>
+                    <th align="center">XML syntax (.x3d)</th>
+                    <th align="center">ClassicVRML syntax (.x3dv)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <pre>
+&lt;MetadataDouble DEF="MyMetadataDouble"
+      name="Metadata_name"
+      reference="Standard 1.2.3c"
+      value='3.141592658, 2.71812181'
+&lt;/MetadataDouble&gt;
+                        </pre></td>
+                    <td align="left">
+                        <pre>
+DEF MyMetadataDouble MetadataDouble {
+      name "Metadata_name"
+      reference "Standard 1.2.3c"
+      value [3.141592658, 2.71812181]
+}
+                        </pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+        <h4><a id="d0e473" name=
+               "d0e473"></a>3.2.1. value</h4>
+
+
+
+
+
+
+        <p>The value of this metadata. MetadataDouble supports
+            multiple-element array of double-precision numbers. Each element
+            may be be any valid double-precision value.</p>
+
+
+
+
+
+        <h4><a id="d0e480" name=
+               "d0e480"></a>3.2.2. Hints and warnings</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3><a id="MetadataFloat" name=
+               "MetadataFloat"></a>3.3. MetadataFloat node</h3>
+
+
+
+
+
+
+        <p>The MetadataFloat node holds a value array of single-precision
+            floating-point numbers. MetadataFloat implements the
+            X3DMetadataObject type.</p>
+        <p>MetadataFloat is in the Core Profile. The node has the fields
+            defined in Table 15.7. Node syntax is shown in Table 15.8.</p>
+        <a id="d0e496" name="d0e496"></a>
+        <p><b>Table 7. Field Definitions for
+                MetadataFloat Node</b></p>
+        <table summary="Field Definitions for MetadataFloat Node" border=
+               "1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>name</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>reference</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>MFSFloat</td>
+                    <td>inputOutput</td>
+                    <td>value</td>
+                    <td>[ ]</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id="d0e571" name="d0e571"></a>
+        <p><b>Table 8. Node Syntax for
+                MetadataFloat Node</b></p>
+        <table summary="Node Syntax for MetadataFloat Node" border="1">
+            <colgroup>
+                <col align="center" />
+                <col align="center" /></colgroup>
+            <thead>
+                <tr>
+                    <th align="center">XML syntax (.x3d)</th>
+                    <th align="center">ClassicVRML syntax (.x3dv)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <pre>
+&lt;MetadataFloat DEF="MyMetadataFloat"
+      name="Metadata_name"
+      reference="Standard 1.2.3c"
+      value='9.8 6.023e+23'
+&lt;/MetadataString&gt;
+                        </pre></td>
+                    <td align="left">
+                        <pre>
+DEF MyMetadataFloat MetadataFloat {
+      name "Metadata_name"
+      reference "Standard 1.2.3c"
+      value [9.8 6.023e+23]
+}
+                        </pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+        <h4><a id="d0e595" name=
+               "d0e595"></a>3.3.1. value</h4>
+
+
+
+
+
+
+        <p>The value of this metadata. MetadataFloat supports
+            multiple-element array of floats. Each element may be be any
+            valid float value.</p>
+
+
+
+
+
+        <h4><a id="d0e602" name=
+               "d0e602"></a>3.3.2. Hints and warnings</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3><a id="MetadataInteger" name=
+               "MetadataInteger"></a>3.4. MetadataInteger node</h3>
+
+
+
+
+
+
+        <p>The MetadataInteger node holds a value array of integer
+            values. MetadataInteger implements the X3DMetadataObject
+            type.</p>
+        <p>MetadataInteger is in the Core Profile. The node has the
+            fields defined in Table 15.9. Node syntax is shown in Table
+            15.10.</p>
+        <a id="d0e618" name="d0e618"></a>
+        <p><b>Table 9. Field Definitions for
+                MetadataInteger Node</b></p>
+        <table summary="Field Definitions for MetadataInteger Node"
+               border="1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>name</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>reference</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>MFInt32</td>
+                    <td>inputOutput</td>
+                    <td>value</td>
+                    <td>[ ]</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id="d0e693" name="d0e693"></a>
+        <p><b>Table 10. Node Syntax for
+                MetadataInteger Node</b></p>
+        <table summary="Node Syntax for MetadataInteger Node" border="1">
+            <colgroup>
+                <col align="center" />
+                <col align="center" /></colgroup>
+            <thead>
+                <tr>
+                    <th align="center">XML syntax (.x3d)</th>
+                    <th align="center">ClassicVRML syntax (.x3dv)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <pre>
+&lt;MetadataInteger DEF="MyMetadataInteger"
+      name="Metadata_name"
+      reference="Standard 1.2.3c"
+      value='6, 28, 496'
+&lt;/MetadataString&gt;
+                        </pre></td>
+                    <td align="left">
+                        <pre>
+DEF MyMetadataInteger MetadataInteger {
+      name "Metadata_name"
+      reference "Standard 1.2.3c"
+      value [6, 28, 496]
+}
+                        </pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+        <h4><a id="d0e717" name=
+               "d0e717"></a>3.4.1. value</h4>
+
+
+
+
+
+
+        <p>The value of this metadata. MetadataInteger supports
+            multiple-element array of integer. Each element may be be any
+            valid integer value.</p>
+
+
+
+
+
+        <h4><a id="d0e724" name=
+               "d0e724"></a>3.4.2. Hints and warnings</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h3><a id="MetadataString" name=
+               "MetadataString"></a>3.5. MetadataString node</h3>
+
+
+
+
+
+
+        <p>The MetadataString node holds a value array of string values.
+            MetadataString implements the X3DMetadataObject type.</p>
+        <p>As discussed above, the Metadata nodes allow the storage of
+            node-specific information in the scene graph. While the WorldInfo
+            node does support the general issue of a "storage" node, it's
+            fields are not accessible outside of the node, and WorldInfo does
+            not support non-String datatypes. The Metadata nodes do support
+            datatype specific information that is accessible in a structured
+            manner.</p>
+        <p>The MetadataString node holds a value array string of
+            information. It is possible to use this node to hold all
+            information as a string, but using the other datatype-specific
+            nodes is generally recommended for non-string data.</p>
+        <p>MetadataString is in the Core Profile. The node has the fields
+            defined in Table 15.11. Node syntax is shown in Table 15.12.</p>
+        <a id="d0e744" name="d0e744"></a>
+        <p><b>Table 11. Field Definitions for
+                MetadataString Node</b></p>
+        <table summary="Field Definitions for MetadataString Node"
+               border="1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>name</td>
+                    <td>""</td>
+                    <td> </td>                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>reference</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>MFString</td>
+                    <td>inputOutput</td>
+                    <td>value</td>
+                    <td>[ ]</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id="d0e819" name="d0e819"></a>
+        <p><b>Table 12. Node Syntax for
+                MetadataString Node</b></p>
+        <table summary="Node Syntax for MetadataString Node" border="1">
+            <colgroup>
+                <col align="center" />
+                <col align="center" /></colgroup>
+            <thead>
+                <tr>
+                    <th align="center">XML syntax (.x3d)</th>
+                    <th align="center">ClassicVRML syntax (.x3dv)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <pre>
+&lt;MetadataString DEF="MyMetadataString"
+      name="Metadata_name"
+      reference="Standard 1.2.3c"
+      value=' "Part 27", "P27", "p27" '
+&lt;/MetadataString&gt;
+                        </pre></td>
+                    <td align="left">
+                        <pre>
+DEF MyMetadataString MetadataString {
+      name "Metadata_name"
+      reference "Standard 1.2.3c"
+      value ["Part 27", "P27", "p27"]
+}
+                        </pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+        <h4><a id="d0e843" name=
+               "d0e843"></a>3.5.1. value</h4>
+
+
+
+
+
+
+        <p>The value of this metadata. MetadataString supports
+            multiple-element array of strings. Each element may be be any
+            valid string value.</p>
+
+
+
+
+
+        <h4><a id="d0e850" name=
+               "d0e850"></a>3.5.2. Hints and warnings</h4>
+
+
+
+
+
+
+        <p>MetadataString can be used to hold specially typed data such
+            as enumerations or boolean values.</p>
+
+
+
+
+
+
+        <h3><a id="MetadataSet" name=
+               "MetadataSet"></a>3.6. MetadataSet node</h3>
+
+
+
+
+
+
+        <p>The MetadataSet node holds zero or more metadata nodes. This
+            allows more complex structures than the simple parnet-child
+            relationship available with the basic metadata nodes.</p>
+        <p>MetadataDouble implements the X3DMetadataObject type.</p>
+        <p>MetadataDouble is in the Core Profile. The node has the fields
+            defined in Table 15.13. Node syntax is shown in Table 15.14.</p>
+        <a id="d0e869" name="d0e869"></a>
+        <p><b>Table 13. Field Definitions for
+                MetadataSet Node</b></p>
+        <table summary="Field Definitions for MetadataSet Node" border=
+               "1">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col /></colgroup>
+            <thead>
+                <tr>
+                    <th>type</th>
+                    <th>accessType</th>
+                    <th>name</th>
+                    <th>default</th>
+                    <th>range</th>
+                    <th>profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>name</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFString</td>
+                    <td>inputOutput</td>
+                    <td>reference</td>
+                    <td>""</td>
+                    <td> </td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>MFNode</td>
+                    <td>inputOutput</td>
+                    <td>value</td>
+                    <td>[ ]</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+                <tr>
+                    <td>SFNode</td>
+                    <td>inputOutput</td>
+                    <td>metadata</td>
+                    <td>NULL</td>
+                    <td>[X3DMetadataObject]</td>
+                    <td>Core</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a id="d0e945" name="d0e945"></a>
+        <p><b>Table 14. Node Syntax for
+                MetadataSet Node</b></p>
+        <table summary="Node Syntax for MetadataSet Node" border="1">
+            <colgroup>
+                <col align="center" />
+                <col align="center" /></colgroup>
+            <thead>
+                <tr>
+                    <th align="center">XML syntax (.x3d)</th>
+                    <th align="center">ClassicVRML syntax (.x3dv)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <pre>
+&lt;MetadataSet DEF="MyMetadataSet"
+      name="Metadata_name"
+      reference="Standard 1.2.3c"&gt;
+        &lt;MetadataString  USE="MyMetadataString" containerField="value"/&gt;
+        &lt;MetadataInteger USE="MyMetadataInteger" containerField="value"/&gt;
+        &lt;MetadataFloat    USE="MyMetadataFloat" containerField="value"/&gt;
+        &lt;MetadataFloat    name="coefficients" value="3.141592653 2.7128 1 0" containerField="value"/&gt;
+&lt;/MetadataSet&gt;
+                        </pre></td>
+                    <td align="left">
+                        <pre>
+DEF MyMetadataSet MetadataSet {
+      name "Metadata_name"
+      reference "Standard 1.2.3c"
+      value [
+          use MyMetadataString
+          use MyMetadataInteger
+          use MyMetadataFloat
+          MetadataFloat {
+         name="coefficients"
+         value [ 3.141592653 2.7128 1 0 ]
+          }
+      ]
+}
+                        </pre></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+        <h4><a id="d0e969" name=
+               "d0e969"></a>3.6.1. value</h4>
+
+
+
+
+
+
+        <p>Unlike the other metadata nodes which contain simple-type
+            values, the value field of the MetadataSet node can contain
+            multiple additional metadata nodes, including nested MetadataSet
+            nodes. This is useful when a variety of metadata is needed to
+            fully describe the significance of the parent node.</p>
+
+
+
+
+
+        <h4><a id="d0e976" name=
+               "d0e976"></a>3.6.2. Hints and warnings</h4>
+
+
+
+
+
+
+        <p>Reset <code>containerField="value"</code> for
+            each contained metadata node that is part of the set of metadata
+            being collected.</p>
+        <p>MetadataSet nodes can contain MetadataSet nodes in order to
+            create sophisticated metadata structures.</p>
+        <p>A MetadataSet node can contain a single metadata node
+            describing it. Set the default <code>containerField="metadata"</code> in that special
+            node.</p>
+
+
+
+
+
+
+
+        <h2><a id="Metadata-Summary"
+               name="Metadata-Summary"></a>4. Summary</h2>
+
+
+
+
+
+
+
+
+
+
+        <h3><a id="d0e998" name=
+               "d0e998"></a>4.1. Key ideas</h3>
+
+
+
+
+
+
+        <p>Meta tags provide information about a scene. Metadata nodes
+            provided arrays of strongly typed data that is paired with a name
+            and (optionally) a semantic reference. A WorldInfo node can
+            provide a scene title. Comments let authors document scene
+            construction but are not available at run time and not
+            necessarily persistent after processing by some tools.</p>
+
+
+
+
+
+        <h3><a id="d0e1005" name=
+               "d0e1005"></a>4.2. Related nodes and concepts</h3>
+
+
+
+
+
+
+        <p>Chapter 1 Technical Introduction describes meta tags and a
+            number of other scene-construction issues that are relevant to
+            metadata structures in a scene.</p>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='TestRegularExpressionChecks.x3d' name='title'/>
+    <meta content='Conformance test for regular expression checks. Tests are performed by build.xml target processScenes.regularExpressionChecks.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='19 March 2012' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='this scene contains intentional errors in floating point arrays in order to test regular expression (regex) checking' name='error'/>
+    <meta content='../build.xml' name='reference'/>
+    <meta content='X3D regular expression conformance test' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/TestRegularExpressionChecks.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TestRegularExpressionChecks.x3d'/>
+    <Background skyColor='1 0.768627 0.321569'/>
+    <Shape>
+      <Text string='"This scene is a" "conformance test for" "regular expression checks"'>
+        <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+      </Text>
+      <Appearance>
+        <Material diffuseColor='0.4 0.8 0.6' shininess='0.8'/>
+      </Appearance>
+    </Shape>
+    <ScalarInterpolator DEF='MergedFloatsErrorDetectionTest' key='0 0.250.5 0.75 1' keyValue='0 1 2 3 4 5'/>
+    <ScalarInterpolator DEF='LeadingZerosErrorDetectionTest' key='0 0.25 0.5 0.75 01' keyValue='0 01 2 3 4 5'/>
+  </Scene>
+</X3D>

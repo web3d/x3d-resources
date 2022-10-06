@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='HelloCostaRica.x3d' name='title'/>
+    <meta content='Hello World: ¡Pura vida! Hello Costa Rica in Spanish, Hola Costa Rica en español' name='description'/>
+    <meta content='Don Brutzman and Sarah Brutzman' name='creator'/>
+    <meta content='3 July 2015' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='HelloWorld.x3d' name='reference'/>
+    <meta content='Hello World Example Costa Rica Spanish' name='subject'/>
+    <meta content='https://www.web3d.org/realtime-3d/news/internationalization-x3d' name='reference'/>
+    <meta content='https://en.wikipedia.org/wiki/Spanish_orthography' name='reference'/>
+    <meta content='images/HelloCostaRica.png' name='Image'/>
+    <meta content='images/HelloCostaRicaBsContact.png' name='Image'/>
+    <meta content='images/HelloCostaRicaFreeWrl.png' name='Image'/>
+    <meta content='images/HelloCostaRicaH3Dviewer.png' name='Image'/>
+    <meta content='images/HelloCostaRicaInstantReality.png' name='Image'/>
+    <meta content='images/HelloCostaRicaView3dscene.png' name='Image'/>
+    <meta content='images/HelloCostaRicaX3DOM.png' name='Image'/>
+    <meta content='images/HelloCostaRicaXj3D.png' name='Image'/>
+    <meta content='https://en.wikipedia.org/wiki/Costa_Rica' name='reference'/>
+    <meta content='https://es.wikipedia.org/wiki/Costa_Rica' name='reference'/>
+    <meta content='https://es.wikipedia.org/wiki/Pura_vida_(frase)' name='reference'/>
+    <meta content='Flag_of_Costa_Rica.svg' name='Image'/>
+    <meta content='Flag_of_Costa_Rica.svg.png' name='Image'/>
+    <meta content='https://en.wikipedia.org/wiki/Costa_Rica#/media/File:Flag_of_Costa_Rica.svg' name='reference'/>
+    <meta content='http://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloCostaRica.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='¡Hola Costa Rica: Pura Vida!'/>
+    <Viewpoint DEF='Hola' centerOfRotation='1.2 0.25 0' description='¡Hola Costa Rica: Pura Vida!' position='1.2 0.25 8'/>
+    <Transform translation='4 1 0'>
+      <Anchor description='Pura Vida page on Wikipedia' parameter='"target=blank"' url='"https://es.wikipedia.org/wiki/Pura_vida_(frase)"'>
+        <Shape>
+          <Text string='"¡Pura vida!"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLDITALIC'/>
+          </Text>
+          <Appearance DEF='TextAppearance'>
+            <Material diffuseColor='1 1 1'/>
+          </Appearance>
+        </Shape>
+        <Shape>
+          <Box size='4.5 1.2 .001'/>
+          <Appearance>
+            <Material transparency='1'/>
+          </Appearance>
+        </Shape>
+      </Anchor>
+    </Transform>
+    <Transform translation='-0.5 -1.25 0'>
+      <Transform translation='1.8 0 0'>
+        <Shape>
+          <Text string='"Hola Costa Rica en español"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLDITALIC'/>
+          </Text>
+          <Appearance USE='TextAppearance'/>
+        </Shape>
+      </Transform>
+      <Transform translation='-0.4 2.2 0'>
+        <Anchor description='Costa Rica Wikipedia page' url='"https://en.wikipedia.org/wiki/Costa_Rica"'>
+          <Shape>
+            <Box DEF='FlagAspectRatio' size='5 3 .0001'/>
+            <Appearance>
+              <ImageTexture url='"Flag_of_Costa_Rica.svg.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorld/Flag_of_Costa_Rica.svg.png"'/>
+            </Appearance>
+          </Shape>
+        </Anchor>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

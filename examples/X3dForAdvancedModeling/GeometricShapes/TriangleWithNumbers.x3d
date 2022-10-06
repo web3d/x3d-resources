@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TriangleWithNumbers.x3d' name='title'/>
+    <meta content='Simple Triangle with labeled points, where labels always face the user and stay in place with the triangle.' name='description'/>
+    <meta content='Chad R. Hutchins, Michele Foti and Don Brutzman' name='creator'/>
+    <meta content='31 January 2012' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='TriangleWithNumbers.png' name='Image'/>
+    <meta content='Can we build a prototype that automates generation of this type of model from any IFS or ILS?' name='TODO'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/TriangleWithNumbers.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TriangleWithNumbers.x3d'/>
+    <Background skyColor='0.3 0.3 0.45'/>
+    <Viewpoint description='Triangle annotated with coordinate indices' position='0 0 4'/>
+    <Transform DEF='PolygonGroup0'>
+      <TouchSensor description='Polygon 0'/>
+      <Shape>
+        <IndexedLineSet coordIndex='0 1 2 0 -1'>
+          <Coordinate DEF='TriangleCoordinatePoints' point='-1 -1 0 1 -1 0 0 1 0'/>
+        </IndexedLineSet>
+        <Appearance>
+          <Material emissiveColor='0.1254902035 1 0.0784313753'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <IndexedFaceSet colorIndex='0' colorPerVertex='false' coordIndex='0 1 2 0 -1'>
+          <Coordinate USE='TriangleCoordinatePoints'/>
+          <ColorRGBA color='0 0 0 0'/>
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
+    <Transform DEF='VertexGroup0' translation='-1.1 -1.1 0'>
+      <Billboard axisOfRotation='0 0 0'>
+        <TouchSensor description='Vertex 0'/>
+        <Shape>
+          <Appearance DEF='LABEL_APPEARANCE'>
+            <Material diffuseColor='1 1 .3' emissiveColor='.33 .33 .1'/>
+          </Appearance>
+          <Text string='"0"'>
+            <FontStyle DEF='LABEL_FONT' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='.2'/>
+          </Text>
+        </Shape>
+        <Shape DEF='TransparentBox'>
+          <Box size='0.2 0.2 0.01'/>
+          <Appearance DEF='TransparentAppearance'>
+            <Material transparency='1'/>
+          </Appearance>
+        </Shape>
+      </Billboard>
+    </Transform>
+    <Transform DEF='VertexGroup1' translation='1.1 -1.1 0'>
+      <Billboard axisOfRotation='0 0 0'>
+        <TouchSensor description='Vertex 1'/>
+        <Shape>
+          <Appearance USE='LABEL_APPEARANCE'/>
+          <Text string='"1"'>
+            <FontStyle USE='LABEL_FONT'/>
+          </Text>
+        </Shape>
+        <Shape USE='TransparentBox'/>
+      </Billboard>
+    </Transform>
+    <Transform DEF='VertexGroup2' translation='0 1.1 0'>
+      <Billboard axisOfRotation='0 0 0'>
+        <TouchSensor description='Vertex 2'/>
+        <Shape>
+          <Appearance USE='LABEL_APPEARANCE'/>
+          <Text string='"2"'>
+            <FontStyle USE='LABEL_FONT'/>
+          </Text>
+        </Shape>
+        <Shape USE='TransparentBox'/>
+      </Billboard>
+    </Transform>
+  </Scene>
+</X3D>

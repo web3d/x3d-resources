@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Shiny.x3d' name='title'/>
+    <meta content='The shiny spheres world creates a set of spheres, each given a different set of material attributes. The attributes illustrate creation of lic surfaces by using the specularColor, shininess, and ambientIntensity fields along with the standard diffuseColor field.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/shiny.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0082.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Shiny.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Shiny.x3d'/>
+    <Transform translation='-2.0 1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.3' diffuseColor='0.3 0.3 0.5' shininess='0.1' specularColor='0.7 0.7 0.8'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.0 1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.26' diffuseColor='0.3 0.11 0.0' shininess='0.08' specularColor='0.75 0.33 0.0'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform translation='2.0 1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.4' diffuseColor='0.22 0.15 0.0' shininess='0.16' specularColor='0.71 0.7 0.56'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform translation='-2.0 -1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.17' diffuseColor='0.1 0.03 0.22' specularColor='0.64 0.0 0.98'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.0 -1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.15' diffuseColor='0.27 0.0 0.0' specularColor='0.61 0.13 0.18'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+    <Transform translation='2.0 -1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.1' diffuseColor='0.2 0.2 0.71' shininess='0.12' specularColor='0.83 0.83 0.83'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

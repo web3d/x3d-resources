@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure06_04bRotation45xWithAxes.x3d' name='title'/>
+    <meta content='Figure 6.4b, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch06/06fig04b.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='5 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Rotating 45 degrees about X axis, with coordinate axes superimposed to show X3D/VRML directions' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter06RotatingShapes/Figure06_04bRotation45xWithAxes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure06_04bRotation45xWithAxes.x3d'/>
+    <Viewpoint description='View shape' position='0 0 6'/>
+    <!-- 45 degrees equals 0.785 radians, 1 0 0 indicates X axis -->
+    <Transform rotation='1 0 0 0.785'>
+      <Transform translation='0 0.8 0'>
+        <Shape>
+          <Cone bottomRadius='0.3' height='0.6'/>
+          <Appearance DEF='GREEN_APPEARANCE'>
+            <Material diffuseColor='0.1 0.7 0.2'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Shape>
+        <Box size='0.25 1 0.25'/>
+        <Appearance USE='GREEN_APPEARANCE'/>
+      </Shape>
+    </Transform>
+    <!-- Adding this Inline reference to another scene superimposes X3D/VRML coordinate system axes. -->
+    <Transform scale='1.5 1.5 1.5'>
+      <Inline DEF='CoordinateAxes' url='"../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.x3d" "../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.wrl" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.wrl" "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.wrl"'/>
+    </Transform>
+  </Scene>
+</X3D>

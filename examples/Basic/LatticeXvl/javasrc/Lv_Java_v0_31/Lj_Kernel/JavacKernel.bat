@@ -1,0 +1,11 @@
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvCom0_SrcList.txt         2>  ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvCom0a_SrcList.txt        2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvUVcalc0Dmy_SrcList.txt   2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvAtt0_SrcList.txt         2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvGeom0_SrcList.txt        2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvTopo0_SrcList.txt        2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvCom0g_SrcList.txt        2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvAtt0g_SrcList.txt        2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvGeom0g_SrcList.txt       2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvTopo0g_SrcList.txt       2>> ..\BatOut\JavacKernel_BatOut.txt
+javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvBase0_SrcList.txt        2>> ..\BatOut\JavacKernel_BatOut.txt

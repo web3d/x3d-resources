@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='Geospatial'/>
+    <meta content='A2_AnimatedGeoViewpoint.x3d' name='title'/>
+    <meta content='Martin Reddy SRI, original example' name='creator'/>
+    <meta content='Don Brutzman NPS, X3D encoding' name='creator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Specification example shows animated GeoViewpoint, using GeoPositionInterpolator between latitude/longitude locations for London, Paris, and New York.' name='description'/>
+    <meta content='http://www.geovrml.org/1.0/doc/examples.html' name='reference'/>
+    <meta content='originals/viewanim.wrl' name='reference'/>
+    <meta content='VRML 97 encoding http://www.geovrml.org/1.0/doc/examples/viewanim.wrl' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/A2_AnimatedGeoViewpoint.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='A2_AnimatedGeoViewpoint.x3d'/>
+    <Group>
+      <GeoViewpoint DEF='V' description='Animating GeoViewpoint' orientation='1 0 0 -1.57' position='51.5122 -0.065 10000000'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 1.0 0.3'/>
+          <ImageTexture url='"images/earth.jpg" "https://www.web3d.org/x3d/content/examples/Basic/images/earth.jpg" "http://www.geovrml.org/1.0/doc/images/earth.jpg"'/>
+        </Appearance>
+        <GeoElevationGrid creaseAngle='1.05' geoGridOrigin='-90 -180 0' height='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0' xDimension='11' xSpacing='36' zDimension='11' zSpacing='18'/>
+      </Shape>
+      <GeoPositionInterpolator DEF='GPI' key='0.0 0.1 0.55 1.0' keyValue='51.5122 -0.065 10000000 48.865 2.35 10000000 40.6698 -73.943849 10000000 51.5122 -0.065 10000000'/>
+      <TimeSensor DEF='TS' cycleInterval='8.0' loop='true'/>
+      <Background groundColor='0.3 0.3 0.3' skyColor='0.3 0.3 0.3'/>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='GPI'/>
+    <ROUTE fromField='geovalue_changed' fromNode='GPI' toField='set_position' toNode='V'/>
+  </Scene>
+</X3D>

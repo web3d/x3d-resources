@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 1995-2014 held by the author(s).  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer
+      in the documentation and/or other materials provided with the
+      distribution.
+    * Neither the names of the Naval Postgraduate School (NPS)
+      Modeling Virtual Environments and Simulation (MOVES) Institute
+      (http://www.nps.edu and https://MovesInstitute.nps.edu)
+      nor the names of its contributors may be used to endorse or
+      promote products derived from this software without specific
+      prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<project name="X3D examples: Basic, X3D Specification Examples" default="build" basedir=".">
+    <description>Builds and tests the X3D Specification examples from Java Scene Application Interface (SAI) using Ant</description>
+    
+    <!-- TODO update this reference from NPS branch to upcoming v2.1 trunk when Sourceforge codebase is refactored -->
+    
+    <property name="xj3d.dir"        value="C:/xj3d-code/branches/NPS"/>
+    <property name="xj3d.dir.jars"   value="${xj3d.dir}/jars"/>
+    <property name="xj3d.jar"        value="${xj3d.dir.jars}/xj3d-2.1-nps.jar"/>
+
+    <!-- Former location using Xj3D.org build: C:\Xj3D.nps\jars/xj3d-2.0-nps.jar -->
+    
+    <target name="build" description="compile java source">
+        <echo message="Compiling local java examples using ${xj3d.jar}"/>
+        <javac classpath="${xj3d.jar}"
+               srcdir='.'
+               failonerror="false"
+               includeAntRuntime="false"
+               includes="*.java"/>
+    </target>
+
+</project>

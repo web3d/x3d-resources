@@ -1,0 +1,52 @@
+ChangeList:
+
+Schema:
+
+9/18/2002
+
+BaseType needed to be changed to Base to compile?
+Removed CollisionNodeType to get compiling.  Not in base spec anymore either
+Changed ScriptNodeType profile to Immersive as Script node does not include Extensibility Profile
+Removed class globalAttribute because it was creating a getClass call on BaseNode which tries to override the Java getClass method and fails
+
+Changed BaseNodeArray to extend BaseFieldArray instead of BaseNode
+	Makes BaseNodeArray(MFNode) be a field instead of a node type
+
+Removed Base type.  There are no common methods to fields, nodes, scenegraphstructure objects...
+Made profile on X3D required and no default
+
+---
+9/19/2002
+Changed BaseField to X3DField, BaseFieldArray to X3DArrayField
+Changed BaseNode to X3DNode
+Changed Boolean to X3DBoolean... all the rest of the types
+Changed all *NodeType to X3D*
+Changed X3DWorldInfoNode to X3DInfoNode
+
+9/20/2002
+
+Moved X3DFontStyleNode to extend X3DNode instead of X3DGeometricPropertyNode as current base spec
+Moved X3DGroupingNode to extend X3DNode
+	Added X3DBoundedObject as other interfaces to nodes extending X3DGroupingNode
+
+**WatchList on LoadSensor is not a GroupingNode at least as abstract spec, but watchList does need grouping(element) children
+Changed X3DBoundedObject to be a top-level type only usable as otherInterfaces.  Had to add bboxCenter and size to each object
+Inline/GeoInline is not a grouping node.  Changed to X3DChildNode and X3DBoundedObject
+Added X3DUrlObject.  Converted all url containing objects to use in otherInterfaces.  The Url attribute must be still be hand added.
+
+XSLT:
+
+9/18/2002
+
+changed getField to return BaseField instead of Base
+changed setField to use BaseField though likely just need to remove as setField method is untyped and handled at concrete level
+
+9/19/2002
+Changed BaseField to X3DField, BaseFieldArray to MField
+Changed Boolean to X3DBoolean... all the rest of the types
+Map StringsURL to X3DStrings
+Map BoundingBoxSize to X3DVector3Float
+
+2/20/2002
+Ignore ContainedNodeLabel and WildcardNodeType in code generation
+	Used a x3d:choose instead of catching all ContainedNodeLabel to avoid element processing.  Need XSLT syntax

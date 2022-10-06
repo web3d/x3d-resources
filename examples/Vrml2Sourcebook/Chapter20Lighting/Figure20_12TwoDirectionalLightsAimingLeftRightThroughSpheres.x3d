@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure20_12TwoDirectionalLightsAimingLeftRightThroughSpheres.x3d' name='title'/>
+    <meta content='Figure 20.12, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch20/20fig12.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='8 September 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A sphere world illuminated by a DirectionalLight aiming up and to the right. Compare Figures 20.11a, 11b, 12.' name='description'/>
+    <meta content='Figure20_11aDirectionalLightAimingRightThroughSpheres.x3d' name='reference'/>
+    <meta content='Figure20_11bDirectionalLightAimingUpperRightThroughSpheres.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter20Lighting/Figure20_12TwoDirectionalLightsAimingLeftRightThroughSpheres.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure20_12TwoDirectionalLightsAimingLeftRightThroughSpheres.x3d'/>
+    <Viewpoint description='DirectionalLight shining parallel rays to right. No location, light source is infinitely distant.' position='0 0 30'/>
+    <!-- Note headlight turned off in NavigationInfo. Most browsers allow user toggling headlight also. -->
+    <!-- This NavigationInfo node is bound at runtime and overrides the NavigationInfo headlight setting within the Inlined scene. -->
+    <NavigationInfo headlight='false'/>
+    <Transform translation='-9 0 0'>
+      <DirectionalLight/>
+      <Inline DEF='HeadlightSpheres' bboxSize='16 16 16' url='"Figure20_04HeadlightSpheres.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter20Lighting/Figure20_04HeadlightSpheres.x3d" "Figure20_04HeadlightSpheres.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter20Lighting/Figure20_04HeadlightSpheres.wrl"'/>
+    </Transform>
+    <!-- Separate each set of spheres to emphasize different light directions. Try swapping directions... -->
+    <Transform translation='9 0 0'>
+      <DirectionalLight direction='-1 0 0'/>
+      <Inline USE='HeadlightSpheres'/>
+    </Transform>
+  </Scene>
+</X3D>

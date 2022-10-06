@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ProjectileSliderBarPrototype.x3d' name='title'/>
+    <meta content='A generic slider bar prototype. Colors, size of the bar and name are changable.' name='description'/>
+    <meta content='Ozan APAYDIN' name='creator'/>
+    <meta content='1 December 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ProjectileSliderBarPrototype.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ProjectileSliderBarPrototype.x3d'/>
+    <ProtoDeclare name='ProjectileSliderBar'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' appinfo='Name of the Slider Bar. It appears on the left side of the bar.' name='name' type='MFString'/>
+        <field accessType='initializeOnly' appinfo='Length of the Slider bar. According to given value bar will arrange itself.' name='length' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' appinfo='Width of the Slider bar. According to given value bar will arrange itself.' name='width' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' appinfo='Max. value of Slider Bar.It can be assigned a positive or a negative value.' name='maxValue' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' appinfo='Min. value of Slider Bar. It can be assigned a positive or a negative value.' name='minValue' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' appinfo='Color of Slider Bar.' name='barColor' type='SFColor' value='1 0 0'/>
+        <field accessType='initializeOnly' appinfo='Pointer Color of Slider Bar.' name='pointerColor' type='SFColor' value='1 1 0'/>
+        <field accessType='initializeOnly' appinfo='Slider Bar Name Color.' name='nameColor' type='SFColor' value='1 0 1'/>
+        <field accessType='initializeOnly' appinfo='Color of Current Value text.' name='currentValueColor' type='SFColor' value='0.2 0.8 0.2'/>
+        <field accessType='outputOnly' appinfo='If the precision is 0 current Value will be output in this eventOut field as Integer else in currentValueFloat eventOut field as Float.' name='currentValueInt' type='SFInt32'/>
+        <field accessType='outputOnly' appinfo='If the precision is NOT 0 current Value will be output in this eventOut field as Float else in currentValueInt eventOut field as Integer.' name='currentValueFloat' type='SFFloat'/>
+        <field accessType='initializeOnly' appinfo='Count of the numbers after Decimal Point. Example : If precision is 2 1.562777 -> 1.56' name='precision' type='SFInt32' value='2'/>
+        <field accessType='initializeOnly' appinfo='Translation values of Slider Bar to define its location on the screen.' name='translation' type='SFVec3f'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group DEF='HUDGroup'>
+          <Collision enabled='false'>
+            <ProximitySensor DEF='HudProx' size='1000000 1000000 1000000'/>
+            <Transform DEF='HudTransform'>
+              <Transform translation='0 0 -0.2'>
+                <Transform DEF='SliderTransform'>
+                  <IS>
+                    <connect nodeField='translation' protoField='translation'/>
+                  </IS>
+                  <Group DEF='SliderShape'>
+                    <Transform DEF='barTransform'>
+                      <Shape>
+                        <Appearance>
+                          <Material DEF='BarColor' diffuseColor='0 0 1'>
+                            <IS>
+                              <connect nodeField='diffuseColor' protoField='barColor'/>
+                            </IS>
+                          </Material>
+                        </Appearance>
+                        <Box DEF='bar' size='0.05 0.001 0.000001'/>
+                      </Shape>
+                    </Transform>
+                    <Transform DEF='pointerTransform'>
+                      <Shape>
+                        <Appearance>
+                          <Material DEF='PointerColor' diffuseColor='1 1 0'>
+                            <IS>
+                              <connect nodeField='diffuseColor' protoField='pointerColor'/>
+                            </IS>
+                          </Material>
+                        </Appearance>
+                        <Cone DEF='pointer' bottomRadius='0.0025' height='0.005'/>
+                      </Shape>
+                      <PlaneSensor DEF='SVPlaneSensor' maxPosition='0.025 0' minPosition='-0.025 0'/>
+                    </Transform>
+                    <Transform DEF='sliderNameTransform'>
+                      <Shape>
+                        <Text DEF='SliderName'>
+                          <IS>
+                            <connect nodeField='string' protoField='name'/>
+                          </IS>
+                          <FontStyle justify='"END"' size='0.0085' style='BOLD'/>
+                        </Text>
+                        <Appearance>
+                          <Material DEF='sliderNameColor'>
+                            <IS>
+                              <connect nodeField='diffuseColor' protoField='nameColor'/>
+                            </IS>
+                          </Material>
+                        </Appearance>
+                      </Shape>
+                    </Transform>
+                    <Transform DEF='currentValueTransform'>
+                      <Shape DEF='currentValue'>
+                        <Text DEF='currentValueText'>
+                          <FontStyle DEF='currentValueFont' justify='"BEGIN" "MIDDLE"' size='0.0085' style='BOLD'/>
+                        </Text>
+                        <Appearance>
+                          <Material DEF='valueColor'>
+                            <IS>
+                              <connect nodeField='diffuseColor' protoField='currentValueColor'/>
+                            </IS>
+                          </Material>
+                        </Appearance>
+                      </Shape>
+                    </Transform>
+                  </Group>
+                </Transform>
+              </Transform>
+            </Transform>
+          </Collision>
+        </Group>
+        <Script DEF='ShapeOrganizer' directOutput='true'>
+          <field accessType='initializeOnly' name='Length' type='SFFloat'/>
+          <field accessType='initializeOnly' name='Width' type='SFFloat'/>
+          <field accessType='initializeOnly' name='SliderNameTransformNode' type='SFNode'>
+            <Transform USE='sliderNameTransform'/>
+          </field>
+          <field accessType='initializeOnly' name='CurrentValueTransformNode' type='SFNode'>
+            <Transform USE='currentValueTransform'/>
+          </field>
+          <field accessType='initializeOnly' name='BarTransformNode' type='SFNode'>
+            <Transform USE='barTransform'/>
+          </field>
+          <field accessType='initializeOnly' name='PointerTransformNode' type='SFNode'>
+            <Transform USE='pointerTransform'/>
+          </field>
+          <field accessType='initializeOnly' name='CurrentValueText' type='SFNode'>
+            <Text USE='currentValueText'/>
+          </field>
+          <field accessType='initializeOnly' name='SVPlaneSensorNode' type='SFNode'>
+            <PlaneSensor USE='SVPlaneSensor'/>
+          </field>
+          <IS>
+            <connect nodeField='Length' protoField='length'/>
+            <connect nodeField='Width' protoField='width'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+function initialize() {
+      
+   for(i = 0; i < 3; i++) { 
+      BarTransformNode.scale[i] = 1;
+      if(i == 2) {
+         PointerTransformNode.scale[i] = 0.1; 
+      }
+      else {
+         PointerTransformNode.scale[i] = 1;
+      }
+   } 
+   setBarSize();
+   setPointerSize();
+   setCurrentValueTransform();
+   setNameTransform();
+}
+
+function setBarSize() {
+   BarTransformNode.scale[0] = Length * BarTransformNode.scale[0];
+   BarTransformNode.scale[1] = Width * BarTransformNode.scale[1];
+}
+
+function setPointerSize() {
+   PointerTransformNode.scale[0] = Width * PointerTransformNode.scale[0];
+   PointerTransformNode.scale[1] = Width * PointerTransformNode.scale[1];
+   SVPlaneSensorNode.minPosition[0] = Length * SVPlaneSensorNode.minPosition[0];
+   SVPlaneSensorNode.maxPosition[0] = Length * SVPlaneSensorNode.maxPosition[0];
+}
+
+function setCurrentValueTransform() {
+   CurrentValueTransformNode.translation[0] = (BarTransformNode.scale[0] * 0.05 / 2) + (BarTransformNode.scale[1] * 0.001 * 2);
+}
+
+function setNameTransform() {
+   SliderNameTransformNode.translation[0] = -((BarTransformNode.scale[0] * 0.05 / 2) + (BarTransformNode.scale[1] * 0.001 * 2));
+}
+]]>
+        </Script>
+        <Script DEF='CurrentValueFinder' directOutput='true'>
+          <field accessType='initializeOnly' name='SVPlaneSensorNode' type='SFNode'>
+            <PlaneSensor USE='SVPlaneSensor'/>
+          </field>
+          <field accessType='initializeOnly' name='MaxValue' type='SFFloat'/>
+          <field accessType='initializeOnly' name='MinValue' type='SFFloat'/>
+          <field accessType='initializeOnly' name='CurrentValueTextNode' type='SFNode'>
+            <Text USE='currentValueText'/>
+          </field>
+          <field accessType='inputOnly' name='updateCurrentValue' type='SFVec3f'/>
+          <field accessType='outputOnly' name='CurrentValueInt' type='SFInt32'/>
+          <field accessType='outputOnly' name='CurrentValueFloat' type='SFFloat'/>
+          <field accessType='initializeOnly' name='Precision' type='SFInt32'/>
+          <IS>
+            <connect nodeField='MaxValue' protoField='maxValue'/>
+            <connect nodeField='MinValue' protoField='minValue'/>
+            <connect nodeField='CurrentValueInt' protoField='currentValueInt'/>
+            <connect nodeField='CurrentValueFloat' protoField='currentValueFloat'/>
+            <connect nodeField='Precision' protoField='precision'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+var totalLength;
+
+function initialize() {
+   realValue = (MaxValue + MinValue) / 2;
+   realValue = roundOff(realValue, Precision);
+   CurrentValueFloat = realValue;
+   CurrentValueInt = Math.round(realValue);
+   totalLength = SVPlaneSensorNode.maxPosition[0] - SVPlaneSensorNode.minPosition[0];
+   updateCurrentValueText(realValue.toString()); 
+}
+
+//Map pointer translation value to the real value
+function updateCurrentValue(translation, timeEvent) {
+   var displayString;
+   var curPositionOnBar = translation[0] + totalLength / 2;
+   var x = (MaxValue - MinValue) * curPositionOnBar / totalLength;
+   
+   var realValue = MinValue + x;
+
+   if(Precision == 0) { //If 
+      CurrentValueInt = Math.round(realValue);
+      displayString = CurrentValueInt.toString();
+   }
+   else {
+      CurrentValueFloat = roundOff(realValue, Precision);       
+      displayString = CurrentValueFloat.toString();
+   } 
+      
+   updateCurrentValueText(displayString);
+}
+
+
+function updateCurrentValueText(dispStr) {
+   CurrentValueTextNode.string[0] = dispStr;
+}
+
+//A function to round the values regarding to given precision.
+function roundOff(value, precision) {
+
+   var result;
+   var isNegative = false;
+   var wholeInt = Math.round(value * Math.pow(10, precision));
+ 
+   //Negative numbers creates exceptional condition, therefor they are converted
+   //to positive values.
+   if(wholeInt < 0) {
+      wholeInt = -wholeInt;
+      isNegative = true;
+   }
+
+   var whole = wholeInt.toString();
+   
+   var decPoint = whole.length - precision;
+   
+   //Exception when precision is bigger than the string length   
+   if(decPoint < 0) {
+      i = -decPoint;
+      for(i; i > 0; i--) {  
+         whole ='0' + whole;
+      }
+
+      //Calculate decPoint according to new string expanded with 0s      
+      decPoint = whole.length - precision;
+   }
+
+   if(whole !='0') {
+      //Put the decimal point on the appropriate place
+      result = whole.substring(0, decPoint);
+      result +='.';
+      result += whole.substring(decPoint, whole.length);
+   }
+   else { //If the string is'0', then result is'0'
+      result = whole;
+   }
+   
+   //Negative numbers are altered.
+   if(isNegative) {
+      result ='-' + result;
+   }
+   //Convert the String value to Float.
+   resultFloat = parseFloat(result); 
+  
+  
+   return resultFloat;
+  
+}
+]]>
+        </Script>
+        <ROUTE fromField='position_changed' fromNode='HudProx' toField='set_translation' toNode='HudTransform'/>
+        <ROUTE fromField='orientation_changed' fromNode='HudProx' toField='set_rotation' toNode='HudTransform'/>
+        <ROUTE fromField='position_changed' fromNode='HudProx' toField='center' toNode='HudProx'/>
+        <ROUTE fromField='translation_changed' fromNode='SVPlaneSensor' toField='set_translation' toNode='pointerTransform'/>
+        <ROUTE fromField='translation_changed' fromNode='SVPlaneSensor' toField='updateCurrentValue' toNode='CurrentValueFinder'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Viewpoint description='Slider bar' position='0 0 5'/>
+    <ProtoInstance name='ProjectileSliderBar'>
+      <fieldValue name='name' value='"AFAA"'/>
+      <fieldValue name='length' value='1.5'/>
+      <fieldValue name='width' value='1'/>
+      <fieldValue name='maxValue' value='10'/>
+      <fieldValue name='minValue' value='-2'/>
+    </ProtoInstance>
+  </Scene>
+</X3D>

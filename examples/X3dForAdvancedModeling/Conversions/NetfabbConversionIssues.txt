@@ -1,0 +1,146 @@
+NetfabbConversionIssues.txt                                  revised 20 OCT 2017
+
+=======================================================
+1. XML declaration: stray whitespace in XML header confuses some tools.  Change
+
+	<?xml version="1.0" encoding ="UTF-8"?>
+to
+	<?xml version="1.0" encoding="UTF-8"?>
+
+=======================================================
+2. DTD validation: no DOCTYPE found, recommend adding
+
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+
+=======================================================
+3. X3D element: profile used is quite old, recommend using latest approved version.
+Also recommend adding X3D XML Schema validation.
+
+	<X3D profile="Interchange" version="3.0">
+to
+	<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+
+Comprehensive information on DOCTYPE and XML Schema declarations can be found at
+
+    X3D Scene Authoring Hints: Validation of X3D Scenes using DTD and XML Schema 
+    http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#Validation
+
+=======================================================
+4. X3D Schematron warnings and information hints:
+
+Performing X3D Schematron check...
+Missing X3D filename in meta tag, should appear as <meta name='title' content='FileName.x3d'/> [/X3D/head, warning]
+Correct url for X3D file should appear in <meta name='identifier' content='http://someAddress/somePath/FileName.x3d'/> [/X3D/head, warning]
+Missing name of X3D scene author in meta tag, add <meta name='creator' content='Author Name'/> [/X3D/head, info]
+Missing X3D scene description in meta tag, should appear as <meta name='description' content='topic sentence plus good summary'/> [/X3D/head, info]
+
+Recommend adding further informational meta tags.  References:
+
+	X3D Scene Authoring Hints: meta Statements and Metadata Nodes
+	http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#metaStatements
+
+=======================================================
+5. Related: defined ColorRGBA values are fully transparent, making model invisible.
+
+	<ColorRGBA color=" 1.000000 0.000000 0.000000 0.000000 "/>
+
+has RGB color of red, and alpha opacity of 0 (which equals transparency 1)
+and is fully transparent.  Thus the model will not visibly render.
+
+Recommended approach:
+
+	<ColorRGBA color="1 0 0 1"/>
+or
+	<Color color="1 0 0"/>
+
+or
+	<Appearance>
+		<!-- Material eliminates need for colorIndex array in IndexedFaceSet.
+		<Material diffuseColor="1 0 1"/>
+	</Appearance>
+
+=======================================================
+6. Alpha opacity can be avoided, or component support needs to corrected.
+
+The exported scenes use ColorRGBA node which has special requirements.
+
+Of note: if alpha transparency is not needed, can simply use Color node instead
+of ColorRGBA node. This seems preferable for 3D printing, unless choice of
+variably transparent printing materials becomes a future printer feature.
+
+For use of Color node, an X3D model can simply utilize profile="Interchange"
+which already includes
+	<component name="Rendering" level="3"/>
+
+For use of ColorRGBA node, can use profile="CADInterchange" (which supports
+Rendering component level 3), otherwise utilize X3D profile="Interchange" with
+	<component name="Rendering" level="4"/>
+
+http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/interchange.html#ComponentSupport
+http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/CADInterchange.html#t-ComponentsAndLevels
+
+=======================================================
+7. Numeric values do not need trailing zeroes, these add file bloat and
+can further lead to garbles that are difficult to correct if a whitespace
+character is inadvertently lost.  Example corrections:
+
+	0.000000 to 0.0 (or 0)
+	1.000000 to 1.0 (or 1)
+	etc.
+
+=======================================================
+8. X3D Canonicalization (C14N) can further reduce file size and make
+equivalent model files directly comparable.  Canonicalization provides
+a regular format for attribute ordering, removing default attribute values
+and consistent whitespace.
+
+Recommend that the file-export tool try to follow these file-format
+normalization techniques: consistent indentation, alphabetizing attributes,
+omitting default attributes, etc.
+
+Of note: X3D Canonicalization also prepares a model file for XML Security tools,
+namely XML Digital Signature (for authentication) and XML Encryption (for privacy).
+
+	Extensible 3D (X3D) encodings, Part 3: Compressed binary encoding
+	Concepts: 4.2.3 X3D canonical form
+	http://www.web3d.org/documents/specifications/19776-3/V3.3/Part03/concepts.html#X3DCanonicalForm
+
+Utility tool available in Java open source, applied to all models in
+X3D Example Archives and bundled in X3D-Edit:
+
+	X3D Canonicalizer
+	http://www.web3d.org/x3d/tools/canonical/doc/x3dTools.htm
+
+=======================================================
+
+9. Transform nodes are ignored when importing other X3D files,
+resulting in incorrectly positioned Shape geometry that is originallly
+a child in the scene transformation hierarchy.
+
+=======================================================
+
+10.  DEF/USE is apparently not implemented.  USE copies of nodes that have a
+DEF label are ignored, at least for Appearance/Material nodes in the
+NetfabbFishHead examples.
+
+=======================================================
+
+11. CAD structure nodes are lost: CADAssembly, CADPart, CADFace.
+
+=======================================================
+
+Tool resources for conversion developers:
+
+a. X3D Specifications, especially X3D Abstract Specification.
+   http://www.web3d.org/standards
+   http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/X3D.html
+b. X3D Scene Authoring Hints
+   http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html
+c. X3D Tooltips
+   http://www.web3d.org/x3d/content/X3dTooltips.html
+b. X3D Resources
+   http://www.web3d.org/x3d/content/examples/X3dResources.html
+
+=======================================================
+=======================================================
+

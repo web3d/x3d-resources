@@ -1,0 +1,121 @@
+BlenderConversionIssues.txt                                     1 November 2017
+
+http://x3dgraphics.com/examples/X3dForAdvancedModeling/ToolConversions/BlenderConversionIssues.txt
+
+=======================================================
+
+Castle Game Engine (view3dscene) documentation provides excellent
+detail on how to effectively convert from Blender to X3D on
+https://github.com/castle-engine/castle-engine/wiki/Blender
+along with a Blender export plugin at
+https://castle-engine.sourceforge.io/creating_data_blender.php
+
+=======================================================
+
+1. NavigationInfo headlight="off"/> means model is invisible.
+
+Can either turn on, or simply leave out NavigationInfo which will have correct
+values by default.
+
+2. Updated X3D from version 3.0 to version 3.3.
+
+3. Illegal and default/verbose Transform and Viewpoint values.
+
+a. SFRotation values are a normal vector followed by a radians angle.
+   A zero-magnitude vector is illegal.  Default value is 0 0 1 0.
+   If a zero rotation was intended, it is best omitted.
+   rotation='0.000000 0.000000 -0.000000 0.000000'
+
+b. scale has default 1 1 1, translation has default 0 0 0, the following are
+   both too long (due to trailing zeroes) and unnecessary.
+
+   scale='1.000000 1.000000 1.000000'
+   translation='0.000000 0.000000 0.000000'
+
+c. Viewpoint default-valued attributes can similarly be omitted:
+   centerOfRotation='0 0 0'  orientation='1.00 0.00 0.00 0.00' position='-0.00 -0.00 0.00'
+   illegal rotation value:   orientation='0.00 0.00 0.00 0.00'
+
+d. PointLight default-valued attributes can similarly be omitted:
+   ambientIntensity='0.0000' color='1.0000 1.0000 1.0000' location='-0.0000 -0.0000 0.0000'
+
+e. DirectionalLight direction='-0.0000 0.0000 -1.0000' matches default value 0 0 -1
+   and can be omitted.
+
+=======================================================
+
+f. The viewpoints themselves do not permit model viewing or navigation.  Any
+   attempt to look at the model immediately spins it off and away into hyperspace.
+   This is probably because the Viewpoints (and also PointLight definitions)
+   are wrapped inside of Transform nodes, even though they are at scene root.
+
+=======================================================
+
+g. Viewpoint description fields are ignored on import and thus omitted on export.
+   This omission means that the five existing Viewpoints are not listed in the
+   X3D browser's Viewpoint menu, again preventing/confounding user navigation.
+
+=======================================================
+
+4. Original X3D Validator reports:
+
+<X3D profile='Immersive'> is defined, but nodes in scene have actual profile='Interactive' [/X3D, info]
+Missing X3D filename in meta tag, should appear as <meta name='title' content='FileName.x3d'/> [/X3D/head, warning]
+<Viewpoint DEF='CA_Viewpoint_003'/> is missing description which is important for accessibility and usability.  Example: description='default view, rotate to examine object' [/X3D/Scene/Transform[164]/Viewpoint, warning]
+<Viewpoint DEF='CA_Viewpoint_002'/> is missing description which is important for accessibility and usability.  Example: description='default view, rotate to examine object' [/X3D/Scene/Transform[165]/Viewpoint, warning]
+<Viewpoint DEF='CA_Viewpoint_001'/> is missing description which is important for accessibility and usability.  Example: description='default view, rotate to examine object' [/X3D/Scene/Transform[166]/Viewpoint, warning]
+<Viewpoint DEF='CA_Viewpoint'/> is missing description which is important for accessibility and usability.  Example: description='default view, rotate to examine object' [/X3D/Scene/Transform[167]/Viewpoint, warning]
+<Viewpoint DEF='CA_Camera'/> is missing description which is important for accessibility and usability.  Example: description='default view, rotate to examine object' [/X3D/Scene/Transform[171]/Viewpoint, warning]
+
+=======================================================
+
+5. Fixed meta tag:
+
+	<meta content='BlenderFishHead.x3d' name='filename'/>
+to
+	<meta content='BlenderFishHead.x3d' name='title'/>
+
+Also added further meta tags.
+
+=======================================================
+
+6. Changed <X3D profile='Interactive'> as prompted by X3D Validator.
+(Immersive is satisfactory, just tuning to best match.)
+
+=======================================================
+
+7. Note that Viewpoint descriptions are present in original model, apparently
+they were dropped during import since they do not appear in subsequent export.
+
+=======================================================
+
+8. CAD structure nodes are lost: CADAssembly, CADPart, CADFace.
+
+=======================================================
+
+9. Metadata nodes and values are lost on import.  This removes critical and
+   required information in a scene.
+
+=======================================================
+
+10. A small extraneous Box was added.  Inspection revealed that a small center
+   Cube_TRANSFORM was inserted without user knowledge.  That should be an
+   explicit decision by author, rather than having a Cube_Transform appear
+   in any scene using Blender.
+
+=======================================================
+
+Tool resources for conversion developers:
+
+a. X3D Specifications, especially X3D Abstract Specification.
+   http://www.web3d.org/standards
+   http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/X3D.html
+b. X3D Scene Authoring Hints
+   http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html
+c. X3D Tooltips
+   http://www.web3d.org/x3d/content/X3dTooltips.html
+b. X3D Resources
+   http://www.web3d.org/x3d/content/examples/X3dResources.html
+
+=======================================================
+=======================================================

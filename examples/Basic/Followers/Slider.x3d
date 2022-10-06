@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <meta content='Slider.x3d' name='title'/>
+    <meta content='X3D Follower example' name='description'/>
+    <meta content='Herbert Stocker' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='18 April 2006' name='created'/>
+    <meta content='2 December 2011' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/test_Sliders.wrl' name='reference'/>
+    <meta content='Stocker_06_Followers.pdf' name='reference'/>
+    <meta content='http://www.hersto.com/Publications/Followers' name='reference'/>
+    <meta content='X3D version 3.2 or greater' name='requires'/>
+    <meta content='X3D Follower Chaser Damper' name='subject'/>
+    <meta content='under development' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Followers/Slider.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='" The original versions of the PROTO Slider was written by me, Herbert Stocker. The original versions and some test and demonstration Worlds can be found at http://www.hersto.de/ . " " You can use and modify the PROTO in this file if you keep the credit information valid and if you do not remove the link to the originating site http://www.hersto.de/ . In brief, keep this WorldInfo node along with the Proto. " " Please send a message to hersto@hersto.de where you describe how you use or improved the nodes. Especially if you included the improved versions. "' title='Copyright (C) 2002 by Herbert Stocker (AKA hersto)'/>
+    <ProtoDeclare name='Slider'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='initial_position' type='SFFloat' value='0.5'/>
+        <field accessType='initializeOnly' name='credits' type='MFString' value='"Initial idea and copyright by Herbert Stocker http://www.hersto.com/"'/>
+        <field accessType='inputOutput' name='radiusKnob' type='SFFloat' value='0.3'/>
+        <field accessType='inputOutput' name='radiusStick' type='SFFloat' value='0.2'/>
+        <field accessType='inputOnly' name='silently_set_unfiltered_position' type='SFFloat'/>
+        <field accessType='inputOutput' name='min' type='SFFloat' value='0.0'/>
+        <field accessType='outputOnly' name='position_changed' type='SFFloat'/>
+        <field accessType='inputOutput' name='appearance' type='SFNode'>
+          <Appearance>
+            <Material/>
+          </Appearance>
+        </field>
+        <field accessType='inputOutput' name='smoothMovements' type='SFBool' value='true'/>
+        <field accessType='inputOnly' name='set_position' type='SFFloat'/>
+        <field accessType='inputOutput' name='pageSize' type='SFFloat' value='0.2'/>
+        <field accessType='inputOutput' name='max' type='SFFloat' value='1.0'/>
+        <field accessType='outputOnly' name='unfiltered_position_changed' type='SFFloat'/>
+        <field accessType='inputOnly' name='silently_set_position' type='SFFloat'/>
+        <field accessType='inputOnly' name='set_unfiltered_position' type='SFFloat'/>
+        <field accessType='inputOutput' name='height' type='SFFloat' value='2.0'/>
+        <field accessType='outputOnly' name='positionInt_changed' type='SFInt32'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Billboard>
+          <Transform DEF='TrStickAbove'>
+            <TouchSensor DEF='TchPgUp' description='touch to activate PgUp'/>
+            <Shape>
+              <IS>
+                <connect nodeField='appearance' protoField='appearance'/>
+              </IS>
+              <Cylinder height='1.0'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='TrStickBelow'>
+            <TouchSensor DEF='TchPgDown' description='touch to activate PgDown'/>
+            <Shape>
+              <IS>
+                <connect nodeField='appearance' protoField='appearance'/>
+              </IS>
+              <Cylinder height='1.0'/>
+            </Shape>
+          </Transform>
+          <Group>
+            <PlaneSensor DEF='SensKnob' autoOffset='false' description='touch to activate' maxPosition='0.0 -1.0'/>
+            <Transform DEF='TrKnob'>
+              <Shape>
+                <IS>
+                  <connect nodeField='appearance' protoField='appearance'/>
+                </IS>
+                <Cylinder height='1.0'/>
+              </Shape>
+            </Transform>
+          </Group>
+        </Billboard>
+        <ProtoDeclare name='EFFS'>
+          <ProtoInterface>
+            <field accessType='inputOutput' name='height' type='SFFloat' value='2.0'/>
+            <field accessType='inputOutput' name='max' type='SFFloat' value='1.0'/>
+            <field accessType='inputOutput' name='radiusKnob' type='SFFloat' value='0.5'/>
+            <field accessType='inputOutput' name='pageSize' type='SFFloat' value='0.2'/>
+            <field accessType='inputOutput' name='smoothMovements' type='SFBool' value='true'/>
+            <field accessType='inputOutput' name='radiusStick' type='SFFloat' value='0.25'/>
+            <field accessType='inputOutput' name='min' type='SFFloat' value='0.0'/>
+          </ProtoInterface>
+          <ProtoBody>
+            <Group/>
+          </ProtoBody>
+        </ProtoDeclare>
+        <ProtoInstance DEF='EFFS' name='EFFS'>
+          <fieldValue name='max' value='1.0'/>
+          <fieldValue name='height' value='2.0'/>
+          <fieldValue name='pageSize' value='0.2'/>
+          <fieldValue name='radiusKnob' value='0.5'/>
+          <fieldValue name='smoothMovements' value='true'/>
+          <fieldValue name='radiusStick' value='0.25'/>
+          <fieldValue name='min' value='0.0'/>
+        </ProtoInstance>
+        <TimeSensor DEF='Timer' loop='true'/>
+        <Script DEF='Worker' directOutput='true'>
+          <field accessType='initializeOnly' name='height' type='SFFloat' value='2.0'/>
+          <field accessType='inputOnly' name='set_max' type='SFFloat'/>
+          <field accessType='initializeOnly' name='silent' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='lastTick' type='SFTime' value='0.0'/>
+          <field accessType='inputOnly' name='set_pageSize' type='SFFloat'/>
+          <field accessType='inputOnly' name='decPage' type='SFTime'/>
+          <field accessType='inputOnly' name='set_radiusStick' type='SFFloat'/>
+          <field accessType='inputOnly' name='set_height' type='SFFloat'/>
+          <field accessType='outputOnly' name='position_changed' type='SFFloat'/>
+          <field accessType='initializeOnly' name='Timer' type='SFNode'>
+            <TimeSensor USE='Timer'/>
+          </field>
+          <field accessType='inputOnly' name='set_position' type='SFFloat'/>
+          <field accessType='initializeOnly' name='snapTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='TrStickAbove' type='SFNode'>
+            <Transform USE='TrStickAbove'/>
+          </field>
+          <field accessType='inputOnly' name='set_radiusKnob' type='SFFloat'/>
+          <field accessType='initializeOnly' name='smoothMovements' type='SFBool' value='true'/>
+          <field accessType='initializeOnly' name='max' type='SFFloat' value='1.0'/>
+          <field accessType='initializeOnly' name='initialUpdate' type='SFBool' value='true'/>
+          <field accessType='initializeOnly' name='EFFS' type='SFNode'>
+            <ProtoInstance USE='EFFS'/>
+          </field>
+          <field accessType='initializeOnly' name='SensKnobOrigin' type='SFFloat' value='0.0'/>
+          <field accessType='initializeOnly' name='pageSize' type='SFFloat' value='0.2'/>
+          <field accessType='outputOnly' name='positionInt_changed' type='SFInt32'/>
+          <field accessType='initializeOnly' name='SmoothTau3' type='SFFloat' value='0.05'/>
+          <field accessType='initializeOnly' name='SmoothTau2' type='SFFloat' value='0.05'/>
+          <field accessType='initializeOnly' name='SmoothTau1' type='SFFloat' value='0.05'/>
+          <field accessType='inputOnly' name='set_min' type='SFFloat'/>
+          <field accessType='inputOnly' name='SensKnob_isActive' type='SFBool'/>
+          <field accessType='initializeOnly' name='KnobSize' type='SFFloat' value='0.0'/>
+          <field accessType='inputOnly' name='silently_set_position' type='SFFloat'/>
+          <field accessType='initializeOnly' name='initialUnfilteredUpdate' type='SFBool' value='true'/>
+          <field accessType='initializeOnly' name='positionSmo3' type='SFFloat' value='0.0'/>
+          <field accessType='initializeOnly' name='snapToInt' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='positionSmo2' type='SFFloat' value='0.0'/>
+          <field accessType='inputOnly' name='set_unfiltered_position' type='SFFloat'/>
+          <field accessType='initializeOnly' name='positionSmo1' type='SFFloat' value='0.0'/>
+          <field accessType='inputOnly' name='silently_set_unfiltered_position' type='SFFloat'/>
+          <field accessType='initializeOnly' name='radiusStick' type='SFFloat' value='0.25'/>
+          <field accessType='initializeOnly' name='KnobCenterPos' type='SFFloat' value='0.0'/>
+          <field accessType='initializeOnly' name='position' type='SFFloat'/>
+          <field accessType='inputOnly' name='SensKnob_translationChanged' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='radiusKnob' type='SFFloat' value='0.5'/>
+          <field accessType='initializeOnly' name='TrStickBelow' type='SFNode'>
+            <Transform USE='TrStickBelow'/>
+          </field>
+          <field accessType='initializeOnly' name='TchPgUp' type='SFNode'>
+            <TouchSensor USE='TchPgUp'/>
+          </field>
+          <field accessType='inputOnly' name='incPage' type='SFTime'/>
+          <field accessType='outputOnly' name='unfiltered_position_changed' type='SFFloat'/>
+          <field accessType='inputOnly' name='Tick' type='SFTime'/>
+          <field accessType='inputOnly' name='set_smooothMovements' type='SFBool'/>
+          <field accessType='initializeOnly' name='min' type='SFFloat' value='0.0'/>
+          <field accessType='initializeOnly' name='TchPgDown' type='SFNode'>
+            <TouchSensor USE='TchPgDown'/>
+          </field>
+          <field accessType='initializeOnly' name='TrKnob' type='SFNode'>
+            <Transform USE='TrKnob'/>
+          </field>
+          <IS>
+            <connect nodeField='position_changed' protoField='position_changed'/>
+            <connect nodeField='set_position' protoField='set_position'/>
+            <connect nodeField='positionInt_changed' protoField='positionInt_changed'/>
+            <connect nodeField='silently_set_position' protoField='silently_set_position'/>
+            <connect nodeField='set_unfiltered_position' protoField='set_unfiltered_position'/>
+            <connect nodeField='silently_set_unfiltered_position' protoField='silently_set_unfiltered_position'/>
+            <connect nodeField='position' protoField='initial_position'/>
+            <connect nodeField='unfiltered_position_changed' protoField='unfiltered_position_changed'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize()
+{            
+    positionSmo1= position;
+    positionSmo2= position;
+    positionSmo3= position;
+
+    min=             EFFS.min;
+    max=             EFFS.max;
+    pageSize=        EFFS.pageSize;
+    height=          EFFS.height;
+    radiusKnob=      EFFS.radiusKnob;
+    radiusStick=     EFFS.radiusStick;
+    smoothMovements= EFFS.smoothMovements;
+
+    // work around the initialization bug in Contact 5.
+    if(   Browser.getName() == 'blaxxunCC3D'
+       && Browser.getVersion() <= 5.104
+       && !position && !min && !max && !pageSize && !height && !radiusKnob && !radiusStick
+      )
+    {
+        position= .5;
+        min= 0;
+        max= 1;
+        pageSize= .2;
+        height= 2;
+        radiusKnob= .3;
+        radiusStick= .2;
+
+        positionSmo1= 
+        positionSmo2= 
+        positionSmo3=
+            position;
+    }
+
+
+    Update();
+
+    Timer.enabled= true; // TBD: Shouldn't we start with false?
+}
+
+function set_min(m)           {          min= m;  Update();          }
+function set_max(m)           {          max= m;  Update();          }
+function set_pageSize(s)      {     pageSize= s;  Update();          }
+function set_height(h)        {       height= h;  UpdateGeometry();  }
+function set_radiusKnob(r)    {   radiusKnob= r;  UpdateGeometry();  }
+function set_radiusStick(r)   {  radiusStick= r;  UpdateGeometry();  }
+function set_position(p) 
+{ 
+    silent= false; 
+    snapTime= 0; 
+    position= snapToInt? Math.floor(p + .5) : p;
+    Update();
+}
+
+function set_smooothMovements(s)
+{
+    smoothMovements= s;
+    Update();
+}
+
+function silently_set_position(p) 
+{ 
+    silent= true;
+    snapTime= 0;
+    position= snapToInt? Math.floor(p + .5) : p;
+    Update();        
+}
+
+function silently_set_unfiltered_position(p, now)  
+{ 
+    silent= true; 
+    snapTime= 0;
+    position= positionSmo1= positionSmo2= positionSmo3= p;
+    snapTime= now + .1;
+    Update(); 
+}
+
+ function set_unfiltered_position(p, now)  
+{ 
+    snapTime= 0;
+    position= positionSmo1= positionSmo2= positionSmo3= p;
+    snapTime= now + .1;
+    Update(); 
+}
+
+function incPage(t, now)
+{
+    silent= false;
+    position+= pageSize;
+    snapTime= now + .3;
+    Update();
+}
+
+function decPage(t, now)
+{
+    silent= false;
+    position-= pageSize;
+    snapTime= now + .3;
+    Update();
+}
+
+function SensKnob_isActive(a, now)
+{
+    if(a)
+    {
+        SensKnobOrigin= smoothMovements? positionSmo3 : position;  // TBD: Da stimmt noch was nicht.
+        SmoothTau1= .07;
+        SmoothTau2= .001;
+        SmoothTau3= .001;
+//                last_SensKnob_translationChange= SensKnob_translationChanged;
+    }else{
+        SmoothTau1= .06;
+        SmoothTau2= .06;
+        SmoothTau3= .06;
+        snapTime=   now;
+    }
+}
+
+function SensKnob_translationChanged(t, now)
+{
+    silent= false;
+//            if(t.subtract(last_SensKnob_translationChange).length() > .0001 )
+//            {
+        position= SensKnobOrigin + ( height? t.y * (max - min) / (height - KnobSize)
+                                           : 0
+                                   );
+//                snapTime= now + .3;
+
+//                last_SensKnob_translationChange= t;
+//            }
+    Update();
+}
+
+function Update()
+{
+    UpdateLogic();
+
+    UpdateGeometry();
+
+    if(smoothMovements) 
+    {
+        setUPC(position);
+    }else{
+        setUPC(position);
+        positionSmo1= position;
+        positionSmo2= position;
+        positionSmo3= position;
+        setPC(position);
+    }
+}
+
+function UpdateLogic()
+{
+    if(max < min)
+        max= min;
+
+    if(position     > max)    position=     max;
+    if(positionSmo1 > max)    positionSmo1= max;
+    if(positionSmo2 > max)    positionSmo2= max;
+    if(positionSmo3 > max)    positionSmo3= max;
+
+    if(position     < min)    position=     min;
+    if(positionSmo1 < min)    positionSmo1= min;
+    if(positionSmo2 < min)    positionSmo2= min;
+    if(positionSmo3 < min)    positionSmo3= min;
+}
+
+function UpdateGeometry()
+{
+    KnobSize= max - min? pageSize / (max - min) * height
+                       : height
+                       ;
+
+    KnobCenterPos= max - min? ( ( smoothMovements? positionSmo3
+                                                 : position
+                                )
+                              - (max + min)/2
+                              ) / (max - min) * (height - KnobSize)
+                            : 0
+                            ;
+
+    TrKnob.scale=             new SFVec3f(radiusKnob,   KnobSize,                     radiusKnob);
+    TrKnob.translation=       new SFVec3f(0,            KnobCenterPos,                0);
+
+    TrStickAbove.scale=       new SFVec3f(radiusStick,  (height/2 - KnobCenterPos),   radiusStick);
+    TrStickAbove.translation= new SFVec3f(0,           (height/2 + KnobCenterPos)/2, 0          );
+
+    TrStickBelow.scale=       new SFVec3f(radiusStick, (KnobCenterPos - -height/2),   radiusStick);
+    TrStickBelow.translation= new SFVec3f(0,           (KnobCenterPos + -height/2)/2, 0          );
+}
+
+function Tick(now)
+{
+    if(!lastTick)
+    {
+        lastTick= now;
+return;
+    }
+
+    var Delta= now - lastTick;
+
+    if(smoothMovements)  // TBD: The timer should be completely off if !Smoothmovements.
+    {
+        positionSmo1= position     + (positionSmo1 - position    ) * Math.exp(-Delta/SmoothTau1);
+        positionSmo2= positionSmo1 + (positionSmo2 - positionSmo1) * Math.exp(-Delta/SmoothTau2);
+        positionSmo3= positionSmo2 + (positionSmo3 - positionSmo2) * Math.exp(-Delta/SmoothTau3);
+
+        UpdateGeometry();
+
+        setPC(positionSmo3);
+    }
+
+    if(snapToInt)
+        if(snapTime && now >= snapTime)
+        {
+            var newPos= Math.floor(position + .5);
+            SensKnobOrigin+= newPos - position;
+            position= newPos;
+            snapTime= 0;
+        }
+
+
+    //TBD: Set Timer.enabled
+
+    lastTick= now;
+}
+
+function setUPC(value)
+{
+    if(unfiltered_position_changed != value || initialUnfilteredUpdate)
+        if(!silent) unfiltered_position_changed= value;
+
+    initialUnfilteredUpdate= false;
+}
+
+function setPC(value)
+{
+    if(position_changed != value || initialUpdate) 
+        if(!silent) position_changed= value;
+
+    if(Math.floor(position_changed + .5) != positionInt_changed || initialUpdate)
+        if(!silent) positionInt_changed= Math.floor(position_changed + .5);
+
+    initialUpdate= false;
+}
+]]>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- TODO anchor link -->
+  </Scene>
+</X3D>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='RoboHead.x3d' name='title'/>
+    <meta content='Robot Billboard head for RoboBill.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='RoboBill.x3d' name='reference'/>
+    <meta content='originals/robohead.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0093.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/RoboHead.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='RoboHead.x3d'/>
+    <Shape>
+      <Appearance DEF='RobotColor'>
+        <Material diffuseColor='0.6 0.6 0.8'/>
+      </Appearance>
+      <Sphere radius='0.5'/>
+    </Shape>
+    <Transform translation='0.0 0.25 0.35'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.2 0.2 0.2'/>
+        </Appearance>
+        <Box size='0.6 0.05 0.2'/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.1 0.15 0.38'>
+      <Shape DEF='Eye'>
+        <Appearance>
+          <Material diffuseColor='0.4 1.0 0.0' emissiveColor='0.6 0.0 0.0'/>
+        </Appearance>
+        <Sphere radius='0.09'/>
+      </Shape>
+    </Transform>
+    <Transform translation='-0.1 0.15 0.38'>
+      <Shape USE='Eye'/>
+    </Transform>
+    <Transform translation='0.85 0.1 0.0'>
+      <Transform rotation='0.0 0.0 1.0 1.57' translation='-0.2 0.0 0.0'>
+        <Shape DEF='AntenaeBar'>
+          <Appearance USE='RobotColor'/>
+          <Cylinder height='0.4' radius='0.04'/>
+        </Shape>
+      </Transform>
+      <Shape>
+        <Appearance USE='RobotColor'/>
+        <Sphere radius='0.09'/>
+      </Shape>
+      <Transform translation='0.0 0.58 0.0'>
+        <Shape>
+          <Appearance DEF='RobotGlow'>
+            <Material diffuseColor='0.0 1.0 0.0' emissiveColor='1.0 0.0 0.0'/>
+          </Appearance>
+          <Cone bottomRadius='0.02' height='1.0'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform translation='-0.85 0.1 0.0'>
+      <Transform rotation='0.0 0.0 1.0 -1.57' translation='0.2 0.0 0.0'>
+        <Shape USE='AntenaeBar'/>
+      </Transform>
+      <Transform rotation='0.0 0.0 1.0 0.785'>
+        <Shape>
+          <Appearance USE='RobotColor'/>
+          <Box size='0.2 0.2 0.2'/>
+        </Shape>
+        <Transform translation='0.0 0.58 0.0'>
+          <Shape>
+            <Appearance USE='RobotGlow'/>
+            <Box size='0.02 1.0 0.02'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0.0 0.95 0.0'>
+          <Shape>
+            <Appearance USE='RobotGlow'/>
+            <Box size='0.2 0.02 0.02'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0.0 0.85 0.0'>
+          <Shape>
+            <Appearance USE='RobotGlow'/>
+            <Box size='0.4 0.02 0.02'/>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

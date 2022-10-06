@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D version='3.0' profile='Immersive' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='MelonLauncher.x3d' name='title'/>
+    <meta content='DIS test world for shooting a watermelon.' name='description'/>
+    <meta content='Andrew Wiest' name='creator'/>
+    <meta content='*enter name of VRML-to-X3D translator (if any) here*' name='translator'/>
+    <meta content='5 June 2001' name='created'/>
+    <meta content='9 October 2008' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/melon/MelonLauncher.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta name='license' content='../../license.html'/>
+  </head>
+  <Scene>
+    <!--Scene graph nodes are added here -->
+    <Background skyAngle='1.57' skyColor='0.6 0.8 0.6, 0.6 0.6 0.6'/>
+    <Viewpoint DEF='DefaultViewpoint' description='Launcher Main' orientation=' -0.140128 0.988431 0.058043 0.79366' position='500 0 100'/>
+    <Transform scale='10 10 10'>
+      <Inline url='&quot;GridXY_20x20Movable.wrl&quot;&#10;&quot;/www.web3d.org/x3d/content/examples/Basic/course/GridXY_20x20Movable.wrl&quot;&#10;&quot;https://www.web3d.org/x3d/content/examples/Basic/course/GridXY_20x20Movable.wrl&quot;&#10;&quot;GridXY_20x20Movable.x3d&quot;&#10;&quot;/www.web3d.org/x3d/content/examples/Basic/course/GridXY_20x20Movable.x3d&quot;&#10;&quot;https://www.web3d.org/x3d/content/examples/Basic/course/GridXY_20x20Movable.x3d&quot;'/>
+      <Inline url='&quot;GridXZ_20x20Movable.wrl&quot;&#10;&quot;/www.web3d.org/x3d/content/examples/Basic/course/GridXZ_20x20Movable.wrl&quot;&#10;&quot;https://www.web3d.org/x3d/content/examples/Basic/course/GridXZ_20x20Movable.wrl&quot;&#10;&quot;GridXZ_20x20Movable.x3d&quot;&#10;&quot;/www.web3d.org/x3d/content/examples/Basic/course/GridXZ_20x20Movable.x3d&quot;&#10;&quot;https://www.web3d.org/x3d/content/examples/Basic/course/GridXZ_20x20Movable.x3d&quot;'/>
+      <Inline url='&quot;GridYZ_20x20Movable.wrl&quot;&#10;&quot;/www.web3d.org/x3d/content/examples/Basic/course/GridYZ_20x20Movable.wrl&quot;&#10;&quot;https://www.web3d.org/x3d/content/examples/Basic/course/GridYZ_20x20Movable.wrl&quot;&#10;&quot;GridYZ_20x20Movable.x3d&quot;&#10;&quot;/www.web3d.org/x3d/content/examples/Basic/course/GridYZ_20x20Movable.x3d&quot;&#10;&quot;https://www.web3d.org/x3d/content/examples/Basic/course/GridYZ_20x20Movable.x3d&quot;'/>
+    </Transform>
+    <EspduTransform DEF='MelonReceiver' address='224.2.181.145' applicationID='5' center='0 0 0' entityID='6' fired1='false' fired2='false' marking='melon' port='62040' readInterval='0.1' scaleOrientation='0 0 1 0' siteID='1' writeInterval='0'>
+      <!-- traceJava="false" traceSize="5 5 5" traceOffset="0 -5 0" -->
+      <Transform>
+        <Shape>
+          <Sphere radius='2'/>
+          <Appearance>
+            <Material diffuseColor='0.1 0.9 0.1' shininess='.5'/>
+            <ImageTexture url='http://faculty.nps.edu/brutzman/images/brutzman.94.gif'/>
+          </Appearance>
+        </Shape>
+        <Viewpoint DEF='withtheMelon' description='with the melon' position='0 0 10'/>
+      </Transform>
+    </EspduTransform>
+  </Scene>
+</X3D>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure25_03TorchLowDetail.x3d' name='title'/>
+    <meta content='Figure 25.3, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch25/25fig03.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='3 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A low-detail torch.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_03TorchLowDetail.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure25_03TorchLowDetail.x3d'/>
+    <Viewpoint description='Torch (low detail)' orientation='1 0 0 -0.3' position='0 0.4 2'/>
+    <Transform scale='0.5 0.5 0.5' translation='0 0 0.2'>
+      <Shape>
+        <IndexedFaceSet coordIndex='0 1 2'>
+          <Coordinate point='-0.15 0 0 0 -1.5 0 0.15 0 0'/>
+        </IndexedFaceSet>
+        <Appearance DEF='Gray'>
+          <Material diffuseColor='0.4 0.4 0.4' specularColor='0.7 0.7 0.7'/>
+        </Appearance>
+      </Shape>
+      <Shape DEF='Ring'>
+        <IndexedFaceSet coordIndex='0 1 2 3 -1 4 5 6 7 -1'>
+          <Coordinate point='-0.40 -0.05 0.1 0.40 -0.05 0.1 0.40 0.05 0.1 -0.40 0.05 0.1 -0.40 0.15 0.1 0.40 0.15 0.1 0.40 0.25 0.1 -0.40 0.25 0.1'/>
+        </IndexedFaceSet>
+        <Appearance USE='Gray'/>
+      </Shape>
+      <Transform translation='0 -0.35 0'>
+        <Shape>
+          <Cylinder height='0.15' radius='0.20'/>
+          <Appearance USE='Gray'/>
+        </Shape>
+        <Transform translation='0 0 -0.2'>
+          <Shape>
+            <Box size='0.45 0.25 0.39'/>
+            <Appearance USE='Gray'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Shape DEF='Flames'>
+        <!-- No appearance, use emissive shading -->
+        <IndexedFaceSet coordIndex='0 1 2'>
+          <Coordinate point='0.18 0 0.05 0 1.2 0.05 -0.18 0 0.05'/>
+          <Color color='1 0 0 0.9 0.5 0 1 0 0'/>
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

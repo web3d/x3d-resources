@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN"
+                     "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile="Immersive"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.0.xsd">
+  <head>
+    <component level="1" name="DIS"/>
+    <meta content="EspduTransformPrototypes.x3d" name="filename"/>
+    <meta
+      content="Prototype definition for EspduTransform which handles network communications for multiple DIS Prototype Data Units (PDUs):  EntityState, Collision, Detonate, Fire, CreateEntity and RemoveEntity.  Also contains EspduTransformTrace which compatibly adds billboarded text-trace capabilities for run-time debugging inside a scene." name="description"/>
+    <meta content="Don Brutzman, Don McGregor, and Duane Davis" name="authors"/>
+    <meta content="7 December 2001" name="created"/>
+    <meta content="4 July 2004" name="revised"/>
+    <meta
+      content="under development but mostly complete.  &#10;need articulationParameters and miscellany fields connected.&#10;ROUTE firstFired1/2 to sound node?" name="warning"/>
+    <meta content="/vrtp/mil/navy/nps/dis/EspduTransformPROTO.wrl" name="reference"/>
+    <meta content="/vrtp/mil/navy/nps/dis/EspduTransform.java" name="reference"/>
+    <meta
+      content="http://www.web3d.org/WorkingGroups/vrtp/mil/navy/nps/dis/EspduTransform.java" name="reference"/>
+    <meta
+      content="http://www.web3d.org/x3d/content/examples/DistributedInteractiveSimulation/ExternProtoDeclareDefinitions.x3d" name="reference"/>
+    <meta
+      content="http://www.web3d.org/x3d/content/examples/DistributedInteractiveSimulation/EspduTransformPrototypes.x3d" name="url"/>
+    <meta
+      content="X3D-Edit, http://www.web3d.org/x3d/content/README.X3D-Edit.html" name="generator"/>
+  </head>
+
+  <Scene><!--============================================================--><!--Why
+      a prototype rather than an Inline file?  Prototyping allows
+      replacement of standard VRML nodes (e.g. Transform) and can also
+      expose events and fields to the encapsulating top-level
+      scene.--><!--============================================================--><ProtoDeclare
+      appinfo="EspduTransform is a networked Grouping node that can contain most nodes.&#10;Prototype definition for EspduTransform which handles network communications for multiple DIS Prototype Data Units (PDUs):  EntityState, Collision, Detonate, Fire, CreateEntity and RemoveEntity." name="EspduTransform">
+      <ProtoInterface>
+        <field accessType="outputOnly"
+          appinfo="Double precision output for 64-bit Espdu translation, usable by georeferenced nodes."
+          name="geoCoords_changed" type="SFVec3d"/><!--Standard
+          Transform fields--><field accessType="inputOnly"
+          appinfo="Adding a node to the children field will add that node to the EspduTransform&apos;s set of children.  Warning:  adding any node to the EspduTransform&apos;s children field that is already in that child list is illegal.  Warning:  adding any node to the EspduTransform&apos;s children that is an ancestor of that grouping is illegal."
+          name="addChildren" type="MFNode"/>
+        <field accessType="inputOnly"
+          appinfo="The removeChildren event removes nodes from the EspduTransform&apos;s children field. Any nodes in the removeChildren event that are not in the EspduTransform&apos;s children list are ignored."
+          name="removeChildren" type="MFNode"/>
+        <field accessType="inputOutput"
+          appinfo="Children nodes within translation and rotation coordinate system of EspduTransform.  Hint:  XML encoding can include child node(s) directly."
+          name="children" type="MFNode"/>
+        <field accessType="inputOutput"
+          appinfo="Position of children relative to local coordinate system, usually read from (or written to) remote, networked EspduTransform nodes."
+          name="translation" type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput"
+          appinfo="Orientation of children relative to local coordinate system, usually read from (or written to) remote, networked EspduTransform nodes."
+          name="rotation" type="SFRotation" value="0 0 1 0"/>
+        <field accessType="inputOutput"
+          appinfo="Translation offset from origin of local coordinate system."
+          name="center" type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput"
+          appinfo="Non-uniform x-y-z scale of child coordinate system, adjusted by center and scaleOrientation."
+          name="scale" type="SFVec3f" value="1 1 1"/>
+        <field accessType="inputOutput"
+          appinfo="Non-uniform x-y-z scale of child coordinate system, adjusted by center and scaleOrientation."
+          name="scaleOrientation" type="SFRotation" value="0 0 1 0"/>
+        <field accessType="initializeOnly"
+          appinfo="Bounding box center:  position offset from origin of local coordinate system."
+          name="bboxCenter" type="SFVec3f" value="0 0 0"/>
+        <field accessType="initializeOnly"
+          appinfo="Bounding box size:  automatically calculated, can be specified as an optimization or constraint."
+          name="bboxSize" type="SFVec3f" value="-1 -1 -1"/><!--Entity
+          identity--><field accessType="inputOutput"
+          appinfo="0..11 character label for entity." name="marking" type="SFString"/>
+        <field accessType="inputOutput"
+          appinfo="[0,65535] EntityID: unique ID for that site."
+          name="siteID" type="SFInt32" value="0"/>
+        <field accessType="inputOutput"
+          appinfo="[0,65535] EntityID: application ID, unique ID for application at that site."
+          name="applicationID" type="SFInt32" value="1"/>
+        <field accessType="inputOutput"
+          appinfo="[0,65535] EntityID:  unique ID for entity within that application."
+          name="entityID" type="SFInt32" value="0"/><!--Networking
+          configuration parameters--><field accessType="inputOutput"
+          appinfo="multicast address, or else &quot;localhost&quot; listens to local defaultBridge"
+          name="address" type="SFString" value="localhost"/>
+        <field accessType="inputOutput"
+          appinfo="[0,65535] multicast port, or else listen to local defaultBridge"
+          name="port" type="SFInt32" value="0"/>
+        <field accessType="inputOutput"
+          appinfo="Host name of multicast relay server to provide alternative connectivity if local native multicast traffic not heard."
+          name="multicastRelayHost" type="SFString"/>
+        <field accessType="inputOutput"
+          appinfo="Connection port on multicast relay server."
+          name="multicastRelayPort" type="SFInt32" value="0"/>
+        <field accessType="inputOutput"
+          appinfo="networkMode:&amp;#10;standAlone (ignore network but still respond to local events)&amp;#10;networkReader (listen to network as ghost entity)&amp;#10;networkWriter (output to network as master entity at writeInterval)"
+          name="networkMode" type="SFString" value="standAlone"/>
+        <field accessType="outputOnly"
+          appinfo="Whether networkMode standAlone (ignore network but still respond to local events) is true/false"
+          name="isStandAlone" type="SFBool"/>
+        <field accessType="outputOnly"
+          appinfo="Whether networkMode &apos;networkWriter&apos; (output to network as master entity at writeInterval) is true/false"
+          name="isMaster" type="SFBool"/>
+        <field accessType="outputOnly"
+          appinfo="Whether networkMode &apos;networkReader&apos; (listen to network as ghost entity) is true/false"
+          name="isRemote" type="SFBool"/>
+        <field accessType="inputOutput"
+          appinfo="seconds between read updates" name="readInterval"
+          type="SFTime" value="0.1"/>
+        <field accessType="inputOutput"
+          appinfo="seconds between write updates" name="writeInterval"
+          type="SFTime" value="1.0"/>
+        <field accessType="outputOnly"
+          appinfo="Indicates if the node has received a DIS message (isActive=true) or not (isActive=false). Since DIS entities can be considered inactive after some period of time (typically five seconds) either event may be received by listening nodes."
+          name="isActive" type="SFBool"/>
+        <field accessType="outputOnly"
+          appinfo="DIS timestamp in VRML units" name="timestamp" type="SFTime"/>
+        <field accessType="initializeOnly"
+          appinfo="whether RTP header is expected to be prepended to DIS packet"
+          name="rtpHeaderExpected" type="SFBool" value="false"/>
+        <field accessType="outputOnly"
+          appinfo="whether RTP header was found prepended to DIS packet"
+          name="isRtpHeaderHeard" type="SFBool"/><!--Further
+          identification--><field accessType="inputOutput"
+          appinfo="[0,255]" name="forceID" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,255]"
+          name="entityKind" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,255]"
+          name="entityDomain" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="entityCountry" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,255]"
+          name="entityCategory" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,255]"
+          name="entitySubCategory" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,255]"
+          name="entitySpecific" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,255]"
+          name="entityExtra" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" name="linearVelocity"
+          type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput" name="linearAcceleration"
+          type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput"
+          appinfo="Dead reckoning algorithm being used to project position/orientation with velocities/accelerations."
+          name="deadReckoning" type="SFInt32" value="0"/><!--Collision
+          PDU events--><field accessType="outputOnly" name="isCollided" type="SFBool"/>
+        <field accessType="outputOnly" name="collideTime" type="SFTime"/>
+        <field accessType="outputOnly" appinfo="[0,65535]"
+          name="eventApplicationID" type="SFInt32"/>
+        <field accessType="outputOnly" appinfo="[0,65535]"
+          name="eventSiteID" type="SFInt32"/>
+        <field accessType="outputOnly" appinfo="[0,65535]"
+          name="eventEntityID" type="SFInt32"/>
+        <field accessType="outputOnly" appinfo="[0,255]"
+          name="collisionType" type="SFInt32"/>
+        <field accessType="outputOnly" appinfo="[0,65535]"
+          name="eventNumber" type="SFInt32"/><!--Fire, Detonate PDU
+          events--><field accessType="inputOutput" name="fired1"
+          type="SFBool" value="false"/>
+        <field accessType="inputOutput" name="fired2" type="SFBool" value="false"/>
+        <field accessType="outputOnly" name="firedTime" type="SFTime"/>
+        <field accessType="inputOutput" name="munitionStartPoint"
+          type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput" name="munitionEndPoint"
+          type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="munitionApplicationID" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="munitionSiteID" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="munitionEntityID" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="fireMissionIndex" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="warhead" type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]" name="fuse"
+          type="SFInt32" value="0"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="munitionQuantity" type="SFInt32" value="1"/>
+        <field accessType="inputOutput" appinfo="[0,65535]"
+          name="firingRate" type="SFInt32" value="1"/>
+        <field accessType="inputOutput" name="firingRange"
+          type="SFFloat" value="0"/>
+        <field accessType="outputOnly" name="isDetonated" type="SFBool"/>
+        <field accessType="outputOnly" name="detonateTime" type="SFTime"/>
+        <field accessType="outputOnly" name="detonationLocation" type="SFVec3f"/>
+        <field accessType="outputOnly" name="detonationRelativeLocation" type="SFVec3f"/>
+        <field accessType="outputOnly" name="detonationResult"
+          type="SFInt32"/><!--Articulation parameters are extra blocks
+          of information, appended one by one to end of regular
+          Espdu.--><field accessType="inputOutput"
+          appinfo="range [0,78].  Indicates the number of appended parameters that are being used to describe articulation of various segments of the entity model."
+          name="articulationParameterCount" type="SFInt32" value="0"/>
+        <field accessType="inputOutput"
+          appinfo="range [0,255].  The Parameter Type Designator entries in the articulationParameterDesignatorArray indicate if the the parameter record is for an articulated or&#10;attached part. It is represented by an 8-bit enumeration. "
+          name="articulationParameterDesignatorArray" type="MFInt32"/>
+        <field accessType="inputOutput"
+          appinfo="range [0,255].  The Change Indicator entries in the articulationChangeIndicatorArray indicate the change of any parameter for the associated articulated part. This&#10;is specified by an 8-bit unsigned integer. The value is initially set to zero for each exercise and is sequentially incremented by one for each change&#10;in the articulation parameters. The proper indicator is updated automatically by an X3D DIS implementation upon receipt of a&#10;set_articulationParameterValue event. "
+          name="articulationParameterChangeIndicatorArray" type="MFInt32"/>
+        <field accessType="inputOutput"
+          appinfo="range [0,65535].  The ID - Part Attached To entries in the articulationParameterIdPartAttachedToArray identify the articulated part to which this articulation&#10;parameter is attached. The value is specified by a 16-bit unsigned integer, and is set to zero if the articulated part is attached directly to the entity."
+          name="articulationParameterIdPartAttachedToArray" type="MFInt32"/>
+        <field accessType="inputOutput"
+          appinfo="range [0,255].  The Parameter Type entries in the articulationParameterTypeArray are specified by 32-bit enumeration values."
+          name="articulationParameterTypeArray" type="MFInt32"/>
+        <field accessType="inputOutput"
+          appinfo="The Parameter Value entries in the articulationParameterArray are specified by a 64-bit field. The definition of the 64 bits is determined based on the type of parameter indicated above."
+          name="articulationParameterArray" type="MFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue0" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue1" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue2" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue3" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue4" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue5" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue6" type="SFFloat"/>
+        <field accessType="inputOnly"
+          name="set_articulationParameterValue7" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue0_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue1_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue2_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue3_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue4_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue5_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue6_changed" type="SFFloat"/>
+        <field accessType="outputOnly"
+          name="articulationParameterValue7_changed" type="SFFloat"/>
+      </ProtoInterface>
+      <ProtoBody><!--First node inside a PrototypeDeclaration is the
+          node type of the ProtoInstance--><Transform DEF="DisTransformNode">
+          <IS>
+            <connect nodeField="addChildren" protoField="addChildren"/>
+            <connect nodeField="removeChildren" protoField="removeChildren"/>
+            <connect nodeField="children" protoField="children"/>
+            <connect nodeField="translation" protoField="translation"/>
+            <connect nodeField="rotation" protoField="rotation"/>
+            <connect nodeField="center" protoField="center"/>
+            <connect nodeField="scale" protoField="scale"/>
+            <connect nodeField="scaleOrientation" protoField="scaleOrientation"/>
+            <connect nodeField="bboxCenter" protoField="bboxCenter"/>
+            <connect nodeField="bboxSize" protoField="bboxSize"/>
+          </IS>
+        </Transform>
+        <Switch DEF="HiddenExposedFieldNodesCache"
+            whichChoice="-1"><!--child 0 is intentionally ignored,
+            because the children nodes are simply used for caching
+            interface values used by the Script nodes, and not for
+            rendering.--><Group DEF="CacheExposedFieldNodes"><!--This
+              first               set of nodes are not rendered and only
+              hold exposedField               state.  This hack is
+              necessary to work around the               restriction on
+              exposedFields directly in Script
+              nodes.--><Anchor DEF="MarkingState">
+              <IS>
+                <connect nodeField="description" protoField="marking"/>
+              </IS>
+            </Anchor>
+            <Switch DEF="SiteIdState">
+              <IS>
+                <connect nodeField="whichChoice" protoField="siteID"/>
+              </IS>
+            </Switch>
+            <Switch DEF="ApplicationIdState">
+              <IS>
+                <connect nodeField="whichChoice" protoField="applicationID"/>
+              </IS>
+            </Switch>
+            <Switch DEF="EntityIdState">
+              <IS>
+                <connect nodeField="whichChoice" protoField="entityID"/>
+              </IS>
+            </Switch>
+            <Anchor DEF="NetworkModeState">
+              <IS>
+                <connect nodeField="description" protoField="networkMode"/>
+              </IS>
+            </Anchor>
+            <TimeSensor DEF="ReaderState">
+              <IS>
+                <connect nodeField="enabled" protoField="isRemote"/>
+              </IS>
+            </TimeSensor>
+            <TimeSensor DEF="MasterState">
+              <IS>
+                <connect nodeField="enabled" protoField="isMaster"/>
+              </IS>
+            </TimeSensor>
+            <TimeSensor DEF="LocalState">
+              <IS>
+                <connect nodeField="enabled" protoField="isStandAlone"/>
+              </IS>
+            </TimeSensor>
+            <TimeSensor DEF="ReadWriteIntervalState">
+              <IS>
+                <connect nodeField="startTime" protoField="readInterval"/>
+                <connect nodeField="stopTime" protoField="writeInterval"/>
+              </IS>
+            </TimeSensor>
+            <Transform DEF="MunitionPointNode">
+              <IS>
+                <connect nodeField="translation" protoField="munitionStartPoint"/>
+                <connect nodeField="center" protoField="munitionEndPoint"/>
+              </IS>
+            </Transform>
+            <Switch>
+              <Anchor DEF="AddressHolder">
+                <IS>
+                  <connect nodeField="description" protoField="address"/>
+                </IS>
+              </Anchor>
+              <Anchor DEF="MulticastAddressHolder">
+                <IS>
+                  <connect nodeField="description" protoField="multicastRelayHost"/>
+                </IS>
+              </Anchor>
+              <Switch DEF="PortHolder">
+                <IS>
+                  <connect nodeField="whichChoice" protoField="port"/>
+                </IS>
+              </Switch>
+              <Switch DEF="MulticastPortHolder">
+                <IS>
+                  <connect nodeField="whichChoice" protoField="multicastRelayPort"/>
+                </IS>
+              </Switch>
+              <Switch DEF="ArticulationParameterCountHolder">
+                <IS>
+                  <connect nodeField="whichChoice" protoField="articulationParameterCount"/>
+                </IS>
+              </Switch>
+              <ScalarInterpolator DEF="ArticulationParameterArrayHolder">
+                <IS>
+                  <connect nodeField="keyValue" protoField="articulationParameterArray"/>
+                </IS>
+              </ScalarInterpolator>
+            </Switch>
+          </Group>
+        </Switch><!--Nonrendering Script that connects network
+          communications to interfaces--><Group
+            DEF="NetworkingScriptAndReadWriteClocks"><!--Fields in
+            the Script are directly mapped to the PrototypeDeclare
+            field-tag interfaces by using the IS
+            construct--><!--Warning:  VRML97-style scripting, not X3D
+            Scene Authoring Interface (SAI)--><Script
+            DEF="EspduScriptNode" directOutput="true"
+            mustEvaluate="true"
+              url="&quot;EspduTransform.class&quot;&#10;&quot;/vrtp/mil/navy/nps/dis/EspduTransform.class&quot;&#10;&quot;dis-java-vrml.jar#EspduTransform.class&quot;&#10;&quot;/vrtp/dis-java-vrml.jar#EspduTransform.class&quot;&#10;&quot;file:///c:/vrtp/mil/navy/nps/dis/EspduTransform.class&quot;"><!--Generic
+              events--><field accessType="outputOnly"
+              appinfo="Double precision outputs for 64-bit Espdu translation."
+              name="geoCoords_changed" type="SFVec3d"/>
+            <field accessType="initializeOnly" name="traceJava"
+              type="SFBool" value="false"/>
+            <field accessType="inputOnly"
+              appinfo="Used by TimeSensor clocks to trigger processEvents() method."
+              name="update" type="SFTime"/>
+            <field accessType="initializeOnly" name="transformNode" type="SFNode">
+              <Transform USE="DisTransformNode"/>
+            </field>
+            <field accessType="initializeOnly" name="markingNode" type="SFNode">
+              <Anchor USE="MarkingState"/>
+            </field><!--Initialization fields--><field
+              accessType="initializeOnly" name="siteIdNode" type="SFNode">
+              <Switch USE="SiteIdState"/>
+            </field>
+            <field accessType="initializeOnly" name="applicationIdNode" type="SFNode">
+              <Switch USE="ApplicationIdState"/>
+            </field>
+            <field accessType="initializeOnly" name="entityIdNode" type="SFNode">
+              <Switch USE="EntityIdState"/>
+            </field>
+            <field accessType="initializeOnly" name="addressNode" type="SFNode">
+              <Anchor USE="AddressHolder"/>
+            </field>
+            <field accessType="initializeOnly"
+              name="multicastAddressNode" type="SFNode">
+              <Anchor USE="MulticastAddressHolder"/>
+            </field>
+            <field accessType="initializeOnly" name="portNode" type="SFNode">
+              <Switch USE="PortHolder"/>
+            </field>
+            <field accessType="initializeOnly" name="multicastPortNode" type="SFNode">
+              <Switch USE="MulticastPortHolder"/>
+            </field>
+            <field accessType="initializeOnly" name="networkModeNode" type="SFNode">
+              <Anchor USE="NetworkModeState"/>
+            </field>
+            <field accessType="initializeOnly"
+              name="readWriteIntervalNode" type="SFNode">
+              <TimeSensor USE="ReadWriteIntervalState"/>
+            </field>
+            <field accessType="outputOnly" name="isActive" type="SFBool"/>
+            <field accessType="outputOnly" name="timestamp" type="SFTime"/>
+            <field accessType="initializeOnly" name="rtpHeaderExpected" type="SFBool"/>
+            <field accessType="outputOnly" name="isRtpHeaderHeard" type="SFBool"/>
+            <field accessType="outputOnly" name="isCollided" type="SFBool"/>
+            <field accessType="outputOnly" name="collideTime" type="SFTime"/>
+            <field accessType="outputOnly" name="isDetonated" type="SFBool"/>
+            <field accessType="outputOnly" name="detonateTime" type="SFTime"/>
+            <field accessType="initializeOnly" name="fired1Node" type="SFNode"/>
+            <field accessType="initializeOnly" name="fired2Node" type="SFNode"/>
+            <field accessType="outputOnly" name="firedTime" type="SFTime"/>
+            <field accessType="initializeOnly" name="munitionPointNode" type="SFNode">
+              <Transform USE="MunitionPointNode"/>
+            </field>
+            <field accessType="initializeOnly"
+              name="articulationParameterCountNode" type="SFNode">
+              <Switch USE="ArticulationParameterCountHolder"/>
+            </field>
+            <field accessType="initializeOnly"
+              name="articulationParameterArrayNode" type="SFNode">
+              <ScalarInterpolator USE="ArticulationParameterArrayHolder"/>
+            </field>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue0" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue1" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue2" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue3" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue4" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue5" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue6" type="SFFloat"/>
+            <field accessType="inputOnly"
+              name="set_articulationParameterValue7" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue0_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue1_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue2_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue3_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue4_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue5_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue6_changed" type="SFFloat"/>
+            <field accessType="outputOnly"
+              name="articulationParameterValue7_changed" type="SFFloat"/>
+            <IS>
+              <connect nodeField="geoCoords_changed" protoField="geoCoords_changed"/>
+              <connect nodeField="isActive" protoField="isActive"/>
+              <connect nodeField="timestamp" protoField="timestamp"/>
+              <connect nodeField="rtpHeaderExpected" protoField="rtpHeaderExpected"/>
+              <connect nodeField="isRtpHeaderHeard" protoField="isRtpHeaderHeard"/>
+              <connect nodeField="isCollided" protoField="isCollided"/>
+              <connect nodeField="collideTime" protoField="collideTime"/>
+              <connect nodeField="isDetonated" protoField="isDetonated"/>
+              <connect nodeField="detonateTime" protoField="detonateTime"/>
+              <connect nodeField="firedTime" protoField="firedTime"/>
+              <connect nodeField="set_articulationParameterValue0" protoField="set_articulationParameterValue0"/>
+              <connect nodeField="set_articulationParameterValue1" protoField="set_articulationParameterValue1"/>
+              <connect nodeField="set_articulationParameterValue2" protoField="set_articulationParameterValue2"/>
+              <connect nodeField="set_articulationParameterValue3" protoField="set_articulationParameterValue3"/>
+              <connect nodeField="set_articulationParameterValue4" protoField="set_articulationParameterValue4"/>
+              <connect nodeField="set_articulationParameterValue5" protoField="set_articulationParameterValue5"/>
+              <connect nodeField="set_articulationParameterValue6" protoField="set_articulationParameterValue6"/>
+              <connect nodeField="set_articulationParameterValue7" protoField="set_articulationParameterValue7"/>
+              <connect nodeField="articulationParameterValue0_changed" protoField="articulationParameterValue0_changed"/>
+              <connect nodeField="articulationParameterValue1_changed" protoField="articulationParameterValue1_changed"/>
+              <connect nodeField="articulationParameterValue2_changed" protoField="articulationParameterValue2_changed"/>
+              <connect nodeField="articulationParameterValue3_changed" protoField="articulationParameterValue3_changed"/>
+              <connect nodeField="articulationParameterValue4_changed" protoField="articulationParameterValue4_changed"/>
+              <connect nodeField="articulationParameterValue5_changed" protoField="articulationParameterValue5_changed"/>
+              <connect nodeField="articulationParameterValue6_changed" protoField="articulationParameterValue6_changed"/>
+              <connect nodeField="articulationParameterValue7_changed" protoField="articulationParameterValue7_changed"/>
+            </IS>
+          </Script><!--Clocks stimulate the processEvents() method in
+            the Script code, resulting in DIS PDU reads/writes.   The
+            'update' eventIn is implicit (i.e. no corresponding Java
+            method is needed).--><TimeSensor DEF="ReadIntervalClock"
+            enabled="true" loop="true">
+            <IS>
+              <connect nodeField="cycleInterval" protoField="readInterval"/>
+            </IS>
+          </TimeSensor>
+          <TimeSensor DEF="WriteIntervalClock" enabled="true" loop="true">
+            <IS>
+              <connect nodeField="cycleInterval" protoField="writeInterval"/>
+            </IS>
+          </TimeSensor>
+          <ROUTE fromField="cycleTime" fromNode="ReadIntervalClock"
+            toField="update" toNode="EspduScriptNode"/>
+          <ROUTE fromField="cycleTime" fromNode="WriteIntervalClock"
+            toField="update" toNode="EspduScriptNode"/>
+        </Group>
+      </ProtoBody>
+
+    </ProtoDeclare><!--============================================================--><ProtoDeclare
+      appinfo="EspduTransformTrace provides 3D trace values for a corresponding EspduTransorm, usually as a child so that it stays local to an entity&apos;s position.&#10;EspduTransformTrace compatibly adds billboarded text-trace capabilities for run-time debugging inside a scene." name="EspduTransformTrace">
+      <ProtoInterface><!--Special trace fields (beyond regular
+          EspduTransform signature)--><field accessType="initializeOnly"
+          appinfo="initialize with &lt;EspduTransform USE=&quot;NodeToBeTraced&quot;/&gt; so that networked data is passed by reference"
+          name="espduTransformNode" type="SFNode"><!-- provide
+            <EspduTransform USE="nodeName"/> i.e. copy-by=reference node
+            to initialize --></field>
+        <field accessType="initializeOnly" appinfo="Trace text color"
+          name="traceColor" type="SFColor" value="1 0.4 0.05"/>
+        <field accessType="initializeOnly"
+          appinfo="Trace text position relative to entity"
+          name="traceOffset" type="SFVec3f" value="0 2.5 0"/>
+        <field accessType="initializeOnly" appinfo="Trace text scale"
+          name="traceFontSize" type="SFFloat" value="0.8"/>
+        <field accessType="initializeOnly"
+          appinfo="whether or not to include verbose trace comments in Java console, in order to help debug network connectivity"
+          name="traceJava" type="SFBool" value="false"/>
+        <field accessType="initializeOnly"
+          appinfo="Whether EspduTransformTrace debug scripting is visible inside the X3D scene"
+          name="localTraceEnabled" type="SFBool" value="false"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Group DEF="PrimaryControlScripts"><!--Warning:  VRML97-style
+              scripting, not X3D Scene Authoring Interface
+              (SAI)--><!--OverriddenDefaultEspduTransformNode--><Script
+              DEF="TraceScript" directOutput="true" mustEvaluate="true">
+              <field accessType="initializeOnly"
+                appinfo="initialize with &lt;EspduTransform USE=&quot;NodeToBeTraced&quot;/&gt;"
+                name="espduTransformNode" type="SFNode"/>
+              <field accessType="initializeOnly"
+                appinfo="Trace text color" name="traceColor" type="SFColor"/>
+              <field accessType="initializeOnly"
+                appinfo="Trace text position relative to entity"
+                name="traceOffset" type="SFVec3f"/>
+              <field accessType="initializeOnly"
+                appinfo="Trace text scale" name="traceFontSize" type="SFFloat"/>
+              <field accessType="initializeOnly"
+                appinfo="(not passable???) whether or not to include verbose trace comments in Java console, in order to help debug network connectivity"
+                name="traceJava" type="SFBool"/>
+              <field accessType="initializeOnly"
+                appinfo="Whether EspduTransformTrace debug scripting has verbose output"
+                name="localTraceEnabled" type="SFBool"/>
+              <field accessType="inputOnly" name="touched" type="SFBool"/>
+              <field accessType="inputOnly"
+                appinfo="Used by TimeSensor clocks to trigger processEvents() method."
+                name="update" type="SFTime"/><!--Changed-value
+                outputs--><field accessType="outputOnly" name="marking" type="SFString"/>
+              <field accessType="outputOnly" name="readInterval" type="SFTime"/>
+              <field accessType="outputOnly" name="writeInterval" type="SFTime"/>
+              <field accessType="outputOnly" name="fired1" type="SFBool"/>
+              <field accessType="outputOnly" name="fired2" type="SFBool"/>
+              <field accessType="outputOnly" name="fireTime" type="SFTime"/>
+              <field accessType="outputOnly" name="traceString"
+                type="MFString"/><!--other internal state
+                variables--><field accessType="initializeOnly"
+                name="prior_marking" type="SFString"/>
+              <field accessType="initializeOnly"
+                name="prior_readInterval" type="SFTime"/>
+              <field accessType="initializeOnly"
+                name="prior_writeInterval" type="SFTime"/>
+              <field accessType="initializeOnly" name="prior_fired1" type="SFBool"/>
+              <field accessType="initializeOnly" name="prior_fired2" type="SFBool"/>
+              <field accessType="initializeOnly"
+                name="prior_translation" type="SFVec3f"/>
+              <field accessType="initializeOnly"
+                name="prior_geoCoords_changed" type="SFVec3d"/>
+              <IS>
+                <connect nodeField="espduTransformNode" protoField="espduTransformNode"/>
+                <connect nodeField="traceColor" protoField="traceColor"/>
+                <connect nodeField="traceOffset" protoField="traceOffset"/>
+                <connect nodeField="traceFontSize" protoField="traceFontSize"/>
+                <connect nodeField="traceJava" protoField="traceJava"/>
+                <connect nodeField="localTraceEnabled" protoField="localTraceEnabled"/>
+</IS><![CDATA[ecmascript:
+
+function initialize ()
+{
+	tracePrint('TraceScript initialize() start...');
+	tracePrint('traceColor=' + traceColor);
+	tracePrint('traceOffset=' + traceOffset);
+	tracePrint('traceFontSize=' + traceFontSize);
+	tracePrint('traceJava=' + traceJava);
+	tracePrint('marking=' + espduTransformNode.marking);
+	tracePrint('address=' + espduTransformNode.address);
+	tracePrint('   port=' + espduTransformNode.port);
+	tracePrint('networkMode=' + espduTransformNode.networkMode);
+
+	if (espduTransformNode.networkMode == 'networkReader')
+	{
+		readInterval  = espduTransformNode.readInterval;
+		writeInterval = 0;
+	}
+	if (espduTransformNode.networkMode == 'networkWriter')
+	{
+		readInterval  = 0;
+		writeInterval = espduTransformNode.writeInterval;
+	}
+	tracePrint('readInterval='  + espduTransformNode.readInterval);
+	tracePrint('writeInterval=' + espduTransformNode.writeInterval);
+
+	prior_marking       = espduTransformNode.marking;
+	prior_readInterval  = espduTransformNode.readInterval;
+	prior_writeInterval = espduTransformNode.writeInterval;
+	prior_translation   = espduTransformNode.translation;
+	prior_geoCoords_changed = espduTransformNode.geoCoords_changed;
+
+	prior_fired1  = espduTransformNode.fired1;
+	prior_fired2  = espduTransformNode.fired2;
+
+	outputString1 = espduTransformNode.marking + '  (' +
+			espduTransformNode.siteID + ', ' +
+			espduTransformNode.applicationID + ', ' +
+			espduTransformNode.entityID + ')';
+
+	outputString2 = 'awaiting PDUs...';
+
+	traceString = new MFString (outputString1, outputString2);
+	tracePrint ('traceString=' + traceString);
+//	if (offsetFollowsEspduTransform)
+//	{
+//		// create ROUTEs to connect parent EspduTransform
+//	}
+	tracePrint('TraceScript initialize() finish.');
+}
+
+function touched (isActiveValue, timestamp)
+{
+	tracePrint ('touched=' + isActiveValue + ', no action');
+}
+
+function update (value, timestamp)
+{
+//	tracePrint('begin update() ...');
+	changed = false;  // only send output events when changed
+	if (prior_marking != espduTransformNode.marking)
+	{
+		tracePrint('update() changed marking');
+		marking        = espduTransformNode.marking;
+		prior_marking  = marking;
+		changed = true;
+	}
+	if (prior_readInterval != espduTransformNode.readInterval)
+	{
+		tracePrint('update() changed readInterval');
+		readInterval        = espduTransformNode.readInterval;
+		prior_readInterval  = espduTransformNode.readInterval;
+		changed = true;
+	}
+	if (prior_writeInterval != espduTransformNode.writeInterval)
+	{
+		tracePrint('update() changed writeInterval');
+		writeInterval        = espduTransformNode.writeInterval;
+		prior_writeInterval  = espduTransformNode.writeInterval;
+		changed = true;
+	}
+	if (	(prior_translation.x != espduTransformNode.translation.x) ||
+		(prior_translation.y != espduTransformNode.translation.y) ||
+		(prior_translation.z != espduTransformNode.translation.z))		
+	{
+		tracePrint('update() changed translation');
+		prior_translation = espduTransformNode.translation;
+		changed = true;
+	}
+	if (prior_geoCoords_changed != espduTransformNode.geoCoords_changed)
+	{
+		tracePrint('update() changed geoCoords_changed');
+		prior_geoCoords_changed = espduTransformNode.geoCoords_changed;
+		changed = true;
+	}
+//	tracePrint('espduTransformNode.translation=' + espduTransformNode.translation);
+//	tracePrint('prior_translation=' + prior_translation);
+//	tracePrint('prior_geoCoords_changed=' + prior_geoCoords_changed);
+	if (prior_fired1 != espduTransformNode.fired1)
+	{
+		tracePrint('update() changed fired1');
+		fired1        = espduTransformNode.fired1;
+		fireTime      = timestamp;
+		prior_fired1  = espduTransformNode.fired1;
+		changed = true;
+	}
+	if (prior_fired2 != espduTransformNode.fired2)
+	{
+		tracePrint('update() changed fired2');
+		fired2        = espduTransformNode.fired2;
+		fireTime      = timestamp;
+		prior_fired2  = espduTransformNode.fired2;
+		changed = true;
+	}
+
+	if (changed == true) // produce, then send trace text
+	{
+		tracePrint('update() changed == true');
+		outputString1 = espduTransformNode.marking + '  (' +
+			espduTransformNode.siteID + ', ' +
+			espduTransformNode.applicationID + ', ' +
+			espduTransformNode.entityID + ')';
+
+		outputString2 = prior_geoCoords_changed;
+
+		traceString = new MFString (outputString1, outputString2);
+	}
+	tracePrint('end update()   changed=' + changed);
+}
+function roundoff (x)
+{
+	return Math.round(x * 10) / 10;
+}
+function tracePrint(outputString)
+{
+    if (localTraceEnabled)
+	Browser.print ('[EspduTransformTrace ' + espduTransformNode.marking + '] ' + outputString);
+}
+function forcePrint(outputString)
+{
+	Browser.print ('[EspduTransformTrace ' + espduTransformNode.marking + '] ' + outputString);
+}]]></Script><!--Clocks stimulate the processEvents() method
+              --><TimeSensor DEF="ReadIntervalTraceClock" enabled="true" loop="true"/>
+            <ROUTE fromField="readInterval" fromNode="TraceScript"
+              toField="cycleInterval" toNode="ReadIntervalTraceClock"/>
+            <ROUTE fromField="cycleTime"
+              fromNode="ReadIntervalTraceClock" toField="update" toNode="TraceScript"/>
+            <TimeSensor DEF="WriteIntervalTraceClock" enabled="true" loop="true"/>
+            <ROUTE fromField="writeInterval" fromNode="TraceScript"
+              toField="cycleInterval" toNode="WriteIntervalTraceClock"/>
+            <ROUTE fromField="cycleTime"
+              fromNode="WriteIntervalTraceClock" toField="update"
+              toNode="TraceScript"/><!--Warning:  VRML97-style
+              scripting, not X3D Scene Authoring Interface
+              (SAI)--><Script DEF="DEBUG_JAVASCRIPT" directOutput="true">
+              <field accessType="initializeOnly"
+                appinfo="initialize with &lt;EspduTransform USE=&quot;NodeToBeTraced&quot;/&gt;"
+                name="espduTransformNode" type="SFNode"/>
+              <field accessType="initializeOnly"
+                appinfo="Whether EspduTransformTrace debug scripting has verbose output"
+                name="localTraceEnabled" type="SFBool"/>
+              <field accessType="inputOnly"
+                name="articulationParameterCount" type="SFInt32"/>
+              <field accessType="outputOnly" name="MFmarking" type="MFString"/>
+              <field accessType="inputOnly" name="set_rotation" type="SFRotation"/>
+              <field accessType="inputOnly" name="timestamp" type="SFTime"/>
+              <field accessType="inputOnly" name="set_translation" type="SFVec3f"/>
+              <field accessType="inputOnly" name="detonated" type="SFBool"/>
+              <field accessType="outputOnly" name="marking_address_text" type="MFString"/>
+              <field accessType="outputOnly" name="result" type="SFBool"/>
+              <field accessType="initializeOnly" name="entityID"
+                type="SFInt32" value="0"/>
+              <field accessType="inputOnly" name="start" type="SFBool"/>
+              <field accessType="outputOnly" name="translation_text" type="MFString"/>
+              <field accessType="initializeOnly" name="port"
+                type="SFInt32" value="0"/>
+              <field accessType="inputOnly" name="collided" type="SFBool"/>
+              <field accessType="inputOnly" name="rtpHeaderHeard" type="SFBool"/>
+              <field accessType="outputOnly" name="rotation_text" type="MFString"/>
+              <field accessType="initializeOnly" name="applicationID"
+                type="SFInt32" value="0"/>
+              <field accessType="initializeOnly" name="address" type="SFString"/>
+              <field accessType="initializeOnly" name="active"
+                type="SFBool" value="true"/>
+              <field accessType="inputOnly" name="touch" type="SFTime"/>
+              <field accessType="initializeOnly" name="marking" type="SFString"/>
+              <field accessType="initializeOnly" name="siteID"
+                type="SFInt32" value="0"/>
+              <IS>
+                <connect nodeField="espduTransformNode" protoField="espduTransformNode"/>
+                <connect nodeField="localTraceEnabled" protoField="localTraceEnabled"/>
+</IS><![CDATA[ecmascript:
+
+function initialize ( )
+{
+	tracePrint ('DEBUG_JAVASCRIPT initialize() start...');
+	translation_text[0]     = espduTransformNode.marking + '  awaiting DIS';
+//	rotation_text   [0]     = 'translation and rotation updates';
+//	marking_address_text[0] = 'multicast group: ' + address + '/' + port + ', ID: '
+//		+ siteID + ',' + applicationID + ',' + entityID;
+	MFmarking[0] = espduTransformNode.marking;
+	tracePrint ('DEBUG_JAVASCRIPT initialize() finish.');
+}
+function set_translation ( translation, ts )
+{
+	if (active) {
+		// round to nearest tenth
+		translation.x = Math.round (translation.x * 10.0) / 10.0;
+		translation.y = Math.round (translation.y * 10.0) / 10.0;
+		translation.z = Math.round (translation.z * 10.0) / 10.0;
+		translation_text[0] = marking + '  translation ' + translation;
+	}
+}
+function set_rotation    ( rotation, ts )
+{
+	if (active) {
+		// round terms to nearest thousandth
+		rotation.x     = Math.round (rotation.x     * 1000.0) / 1000.0;
+		rotation.y     = Math.round (rotation.y     * 1000.0) / 1000.0;
+		rotation.z     = Math.round (rotation.z     * 1000.0) / 1000.0;
+		rotation.angle = (rotation.angle * 180.0) / 3.141592653;
+		rotation.angle = Math.round (rotation.angle * 10.0) / 10.0;
+//		rotation_text   [0] = 'rotation ' + rotation + ' axis/degrees';
+	}
+}
+function touch (value, time)
+{
+	active = !active;
+	result =  active;
+	if (result) {
+		translation_text[0]     = marking + '  awaiting DIS';
+//		rotation_text   [0]     = 'translation and rotation updates';
+//		marking_address_text[0] = 'multicast group: ' + address + '/' + port + ', ID: '
+//			+ siteID + ',' + applicationID + ',' + entityID;
+		MFmarking[0] = marking;
+	} else {
+		translation_text[0] = '';
+		rotation_text   [0] = '';
+		marking_address_text[0] = '';
+		MFmarking[0] = '';
+	}
+}
+function timestamp    ( value, ts ) {
+	tracePrint ('DIS timestamp=' + value + ', event timestamp=' + ts);
+}
+function collided    ( value, ts ) {
+	tracePrint ('collided=' + value);
+}
+function detonated    ( value, ts ) {
+	tracePrint ('detonated=' + value);
+}
+function articulationParameterCount    ( value, ts ) {
+	tracePrint ('articulationParameterCount=' + value);
+}
+function articulationParameterValue0   ( value, ts ) {
+	tracePrint ('articulationParameterValue0=' + value);
+}
+function articulationParameterValue1   ( value, ts ) {
+	tracePrint ('articulationParameterValue1=' + value);
+}
+function articulationParameterValue2   ( value, ts ) {
+	tracePrint ('articulationParameterValue2=' + value);
+}
+function articulationParameterValue3   ( value, ts ) {
+	tracePrint ('articulationParameterValue3=' + value);
+}
+function articulationParameterValue4   ( value, ts ) {
+	tracePrint ('articulationParameterValue4=' + value);
+}
+function articulationParameterValue5   ( value, ts ) {
+	tracePrint ('articulationParameterValue5=' + value);
+}
+function articulationParameterValue6   ( value, ts ) {
+	tracePrint ('articulationParameterValue6=' + value);
+}
+function articulationParameterValue7   ( value, ts ) {
+	tracePrint ('articulationParameterValue7=' + value);
+}
+function articulationParameterValue8   ( value, ts ) {
+	tracePrint ('articulationParameterValue8=' + value);
+}
+function articulationParameterValue9   ( value, ts ) {
+	tracePrint ('articulationParameterValue9=' + value);
+}
+function articulationParameterValue10   ( value, ts ) {
+	tracePrint ('articulationParameterValue10=' + value);
+}
+function articulationParameterValue11   ( value, ts ) {
+	tracePrint ('articulationParameterValue11=' + value);
+}
+function articulationParameterValue12   ( value, ts ) {
+	tracePrint ('articulationParameterValue12=' + value);
+}
+function articulationParameterValue13   ( value, ts ) {
+	tracePrint ('articulationParameterValue13=' + value);
+}
+function articulationParameterValue14   ( value, ts ) {
+	tracePrint ('articulationParameterValue14=' + value);
+}
+function munitionStartPoint   ( value, ts ) {
+	tracePrint ('munitionStartPoint=' + value);
+}
+function munitionEndPoint   ( value, ts ) {
+	tracePrint ('munitionEndPoint=' + value);
+}
+function rtpHeaderHeard   ( value, ts ) {
+	tracePrint ('unexpected RTP header status, rtpHeaderHeard=' + value);
+}
+function tracePrint(outputString)
+{
+    if (localTraceEnabled)
+	Browser.print ('[EspduTransformTrace ' + espduTransformNode.marking + '] ' + outputString);
+}
+function forcePrint(outputString)
+{
+	Browser.print ('[EspduTransformTrace ' + espduTransformNode.marking + '] ' + outputString);
+}]]></Script>
+          </Group>
+          <Group DEF="TouchToActivateGroup">
+            <TouchSensor DEF="ActivationTouchSensor" description="Touch trace text to toggle simple or verbose"/>
+            <ROUTE fromField="isActive" fromNode="ActivationTouchSensor"
+              toField="touched" toNode="TraceScript"/>
+            <LOD range="300.0 3000.0 40000.0">
+              <Transform>
+                <IS>
+                  <connect nodeField="translation" protoField="traceOffset"/>
+                </IS>
+                <Billboard>
+                  <Shape>
+                    <Appearance>
+                      <Material DEF="TextColor" diffuseColor="0 0 0">
+                        <IS>
+                          <connect nodeField="emissiveColor" protoField="traceColor"/>
+                        </IS>
+                      </Material>
+                    </Appearance>
+                    <Text DEF="TraceText">
+                      <FontStyle DEF="TraceFont" justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;">
+                        <IS>
+                          <connect nodeField="size" protoField="traceFontSize"/>
+                        </IS>
+                      </FontStyle>
+                    </Text>
+                  </Shape>
+                  <ROUTE fromField="traceString" fromNode="TraceScript"
+                    toField="string" toNode="TraceText"/>
+                  <Transform translation="0.0 -0.25 0.0">
+                    <Shape>
+                      <Appearance>
+                        <Material USE="TextColor"/>
+                      </Appearance>
+                      <Text DEF="DEBUG_ROTATION" string="&quot;&quot;">
+                        <FontStyle USE="TraceFont"/>
+                      </Text>
+                    </Shape>
+                  </Transform>
+                  <Transform translation="0.0 -0.5 0.0">
+                    <Shape>
+                      <Appearance>
+                        <Material USE="TextColor"/>
+                      </Appearance>
+                      <Text DEF="DEBUG_MARKING_ADDRESS" string="&quot;&quot;">
+                        <FontStyle USE="TraceFont"/>
+                      </Text>
+                    </Shape>
+                  </Transform>
+                </Billboard>
+              </Transform>
+              <WorldInfo/>
+              <Billboard axisOfRotation="0.0 0.0 0.0">
+                <Transform translation="0.0 800.0 0.0">
+                  <Shape>
+                    <Appearance>
+                      <Material USE="TextColor"/>
+                    </Appearance>
+                    <Text DEF="LONG_RANGE_MARKING" string="&quot;&quot;">
+                      <FontStyle
+                        justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"
+                        size="125.0" style="BOLD"/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation="0.0 40.0 0.0">
+                  <Shape>
+                    <Appearance>
+                      <Material USE="TextColor"/>
+                    </Appearance>
+                    <Box size="50.0 50.0 50.0"/>
+                  </Shape>
+                </Transform>
+              </Billboard>
+              <WorldInfo/>
+            </LOD>
+          </Group>
+          <Group DEF="LineOfFireGroup">
+            <Shape>
+              <Appearance>
+                <Material emissiveColor="0.3 0.15 0.15"/>
+              </Appearance>
+              <IndexedLineSet colorIndex="0 1 -1" coordIndex="0 1 -1">
+                <Color color="0.0 1.0 0.0&#10;1.0 0.0 0.0"/>
+                <Coordinate DEF="LineOfFireCoordinateNode" point="0.0 0.0 0.0&#10;0.0 0.0 20.0"/>
+              </IndexedLineSet>
+            </Shape><!--Warning:  VRML97-style scripting, not X3D Scene
+              Authoring Interface (SAI)--><Script DEF="SetFireLineEndpoints">
+              <field accessType="inputOnly"
+                name="set_munitionStartPoint" type="SFVec3f"/>
+              <field accessType="inputOnly" name="set_munitionEndPoint" type="SFVec3f"/>
+              <field accessType="initializeOnly" name="holdArray" type="MFVec3f"/>
+              <field accessType="outputOnly" name="pointArray" type="MFVec3f"/>
+              <field accessType="initializeOnly"
+                appinfo="Whether EspduTransformTrace debug scripting has verbose output"
+                name="localTraceEnabled" type="SFBool"/>
+              <IS>
+                <connect nodeField="localTraceEnabled" protoField="localTraceEnabled"/>
+</IS><![CDATA[ecmascript:
+
+function initialize ( )
+{
+	tracePrint ('SetFireLineEndpoints initialize() start...');
+	holdArray [0] = new SFVec3f (0.0, 0.0, 0.0);
+	holdArray [1] = new SFVec3f (0.0, 0.0, 0.0);
+	pointArray = holdArray;
+	tracePrint ('SetFireLineEndpoints initialize() start...');
+}
+function munitionStartPoint   ( value, timestamp )
+{
+	holdArray [0] = value;
+}
+function munitionEndPoint   ( value, timestamp )
+{
+	holdArray [1] = value;
+	pointArray = holdArray;
+//	tracePrint ('fire line endpoints=' + holdArray);
+}
+function tracePrint(outputString)
+{
+    if (localTraceEnabled)
+	Browser.print ('[EspduTransformTrace SetFireLineEndpoints] ' + outputString);
+}
+function forcePrint(outputString)
+{
+	Browser.print ('[EspduTransformTrace SetFireLineEndpoints] ' + outputString);
+}
+			]]></Script>
+            <ROUTE fromField="pointArray"
+              fromNode="SetFireLineEndpoints" toField="set_point"
+              toNode="LineOfFireCoordinateNode"/><!--Needed?--><!--Warning:
+              VRML97-style scripting, not X3D Scene Authoring Interface
+              (SAI)--><Script DEF="FireSequenceScript" mustEvaluate="true">
+              <field accessType="inputOnly" name="set_fired1" type="SFBool"/>
+              <field accessType="inputOnly" name="set_fired2" type="SFBool"/>
+              <field accessType="inputOnly" name="fireTime" type="SFTime"/>
+              <field accessType="outputOnly" name="firstFired1" type="SFBool"/>
+              <field accessType="outputOnly" name="firstFired2" type="SFBool"/>
+              <field accessType="initializeOnly"
+                appinfo="Whether EspduTransformTrace debug scripting has verbose output"
+                name="localTraceEnabled" type="SFBool"/>
+              <IS>
+                <connect nodeField="localTraceEnabled" protoField="localTraceEnabled"/>
+</IS><![CDATA[ecmascript:
+
+function initialize ( )
+{
+	tracePrint ('FireSequenceScript initialize() start...');
+	firstFired1 = false;
+	firstFired2 = false;
+	tracePrint ('FireSequenceScript initialize() finish.');
+}
+function fireTime (value, timestamp)
+{
+	// no action
+}
+function set_fired1 (value, timestamp)
+{
+	if ((value == true) && (firstFired1 == false))
+	{
+		firstFired1 = true;
+		tracePrint ('EspduTransformPROTO.wrl: fired1 FIRE_SEQUENCE_SCRIPT timestamp ' + fireTime);
+	}
+}
+
+function set_fired2 (value, timestamp)
+{
+	if ((value == true) && (firstFired1 == false))
+	{
+		firstFired2 = true;
+		tracePrint ('EspduTransformPROTO.wrl: fired2 FIRE_SEQUENCE_SCRIPT timestamp ' + fireTime);
+	}
+}
+function tracePrint(outputString)
+{
+    if (localTraceEnabled)
+	Browser.print ('[EspduTransformTrace FireSequenceScript] ' + outputString);
+}
+function forcePrint(outputString)
+{
+	Browser.print ('[EspduTransformTrace FireSequenceScript] ' + outputString);
+}
+            ]]></Script>
+            <ROUTE fromField="fired1" fromNode="TraceScript"
+              toField="set_fired1" toNode="FireSequenceScript"/>
+            <ROUTE fromField="fired2" fromNode="TraceScript"
+              toField="set_fired2" toNode="FireSequenceScript"/>
+            <ROUTE fromField="fireTime" fromNode="TraceScript"
+              toField="fireTime" toNode="FireSequenceScript"/><!--ROUTE
+              firstFired1/2 to sound node?--></Group>
+        </Group>
+      </ProtoBody>
+
+    </ProtoDeclare><!--============================================================--><!--Begin
+      rendered scene--><!--Ensure that instances of this node are placed
+      at the top-most level and are not translated away from the local
+      world coordinates origin.--><NavigationInfo type="&quot;EXAMINE&quot; &quot;ANY&quot;"/>
+    <EspduTransform DEF="EspduTrans" address="224.2.181.145"
+      applicationID="1" entityID="0" marking="Example PDU"
+      networkMode="networkReader" port="62040" readInterval="10"
+      siteID="0" writeInterval="10">
+      <Viewpoint description="moving viewpoint"/>
+      <Shape>
+        <Text string="EspduTransform body goes here">
+          <FontStyle DEF="FontJustifyMiddle" justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;"/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor="0 0.6 0.6"/>
+        </Appearance>
+      </Shape><!--Typically place EspduTransformTrace as a child of
+        corresponding EspduTransform so that outputs are positioned relatively.--></EspduTransform>
+    <Transform DEF="TraceTransform"><!--EspduTransformTrace cannot be a
+        direct child of EspduTransform or a directed-acyclic graph (DAG)
+        error occurs--><!--EspduTransformTrace must be translated for
+        trace text to stay local to parent
+        EspduTransform--><ProtoInstance name="EspduTransformTrace">
+        <fieldValue name="espduTransformNode">
+          <EspduTransform USE="EspduTrans"/>
+        </fieldValue>
+        <fieldValue name="traceColor" value="0.9 0.4 0.2"/>
+        <fieldValue name="traceFontSize" value="0.8"/>
+        <fieldValue name="traceJava" value="true"/>
+        <fieldValue name="localTraceEnabled" value="true"/>
+      </ProtoInstance>
+      <ROUTE fromField="translation" fromNode="EspduTrans"
+        toField="set_translation" toNode="TraceTransform"/>
+      <ROUTE fromField="rotation" fromNode="EspduTrans"
+        toField="set_rotation" toNode="TraceTransform"/>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,155 @@
+#VRML V2.0 utf8
+
+# EXTERNAL Prototype fallback implementations for builtin blaxxunCC3D extension nodes
+
+# 4.2
+PROTO NurbsSurface[
+    exposedField SFInt32 uDimension 0
+    exposedField SFInt32 vDimension 0
+    exposedField MFVec3f controlPoint []
+    exposedField MFFloat weight []
+    exposedField SFNode texCoord NULL
+    exposedField SFInt32 uOrder 3
+    exposedField SFInt32 vOrder 3
+    exposedField MFFloat uKnot  []
+    exposedField MFFloat vKnot  []
+    exposedField SFInt32 uTessellation 0
+    exposedField SFInt32 vTessellation 0
+    exposedField SFBool solid TRUE
+    exposedField SFBool ccw FALSE
+]
+{ 
+    PointSet {}
+}
+
+# Cosmo is strict about     field IS exposedField, is this correct ??
+
+PROTO NurbsGroup[
+    field SFVec3f bboxSize -1 -1 -1
+    field SFVec3f bboxCenter 0 0 0
+    exposedField SFFloat tessellationScale 1.0
+    exposedField MFNode children []
+    eventIn MFNode addChildren
+    eventIn MFNode removeChildren
+]
+{
+    Group {
+        bboxSize IS bboxSize
+        bboxCenter IS bboxCenter
+        children IS children
+        addChildren IS addChildren
+        removeChildren IS removeChildren
+    }
+}
+
+PROTO NurbsCurve[
+    exposedField SFInt32 dimension 0
+    exposedField SFInt32 tessellation 0
+    exposedField MFFloat knot []
+    exposedField SFInt32 order 3
+    exposedField MFVec3f controlPoint []
+    exposedField MFFloat weight []
+]
+{ 
+    PointSet {}
+}
+
+
+
+PROTO NurbsCurve2D[
+    exposedField SFInt32 tessellation 0
+    exposedField MFFloat knot []
+    exposedField SFInt32 order 3
+    exposedField MFVec2f controlPoint []
+    exposedField MFFloat weight []
+]
+{ 
+    PointSet {}
+}
+
+PROTO Polyline2D[
+    exposedField MFVec2f point []
+]
+{ 
+    PointSet {}
+}
+
+PROTO NurbsPositionInterpolator[
+    exposedField MFFloat knot []
+    exposedField SFInt32 order 3
+    exposedField SFBool fractionAbsolute FALSE
+    exposedField MFFloat keyWeight []
+    exposedField MFVec3f keyValue  []
+    eventIn SFFloat fraction
+    eventOut SFVec3f value
+]
+{
+    PositionInterpolator { keyValue IS keyValue 
+        set_fraction IS fraction 
+        value_changed IS value
+    }
+}
+PROTO TrimmedSurface[
+    exposedField MFNode trimmingContour  []
+    exposedField SFNode surface NULL
+    eventIn MFNode addTrimmingContour 
+    eventIn MFNode removeTrimmingContour
+]
+{
+    PointSet {}
+}
+
+PROTO Contour2D[
+    field SFVec3f bboxSize -1 -1 -1 
+    field SFVec3f bboxCenter    0 0 0
+    exposedField SFBool fill FALSE
+    exposedField MFNode children []
+    eventIn MFNode addChildren
+    eventIn MFNode removeChildren
+]
+{
+    Group {
+        bboxSize IS bboxSize
+        bboxCenter IS bboxCenter
+        children IS children
+        addChildren IS addChildren
+        removeChildren IS removeChildren
+    }
+}
+
+PROTO CoordinateDeformer[
+    field SFVec3f bboxSize -1 -1 -1
+    field SFVec3f bboxCenter 0 0 0
+    exposedField SFInt32 uDimension 0
+    exposedField SFInt32 vDimension 0
+    exposedField SFInt32 wDimension 0
+    exposedField MFFloat uKnot []
+    exposedField MFFloat vKnot []
+    exposedField MFFloat wKnot []
+    exposedField SFInt32 uOrder 2
+    exposedField SFInt32 vOrder 2
+    exposedField SFInt32 wOrder 2
+    exposedField MFVec3f controlPoint []
+    exposedField MFFloat weight []
+    exposedField MFNode inputCoord []
+    exposedField MFNode inputTransform []
+    exposedField MFNode outputCoord []
+    exposedField MFNode children []
+    eventIn MFNode addChildren
+    eventIn MFNode removeChildren
+]
+{
+    Group {
+        bboxSize IS bboxSize
+        bboxCenter IS bboxCenter
+        children IS children
+        addChildren IS addChildren
+        removeChildren IS removeChildren
+    }
+}
+
+
+
+
+
+

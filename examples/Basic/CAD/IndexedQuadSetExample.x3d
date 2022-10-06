@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "https://www.web3d.org/specifications/x3d-3.1.dtd">
+<X3D profile='CADInterchange' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.1.xsd'>
+  <head>
+    <component level='2' name='CADGeometry'/>
+    <meta content='IndexedQuadSetExample.x3d' name='title'/>
+    <meta content='Simple IndexedQuadSet example.' name='description'/>
+    <meta content='Andrew Grieve, Don Brutzman' name='creator'/>
+    <meta content='15 October 2005' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='create similar test for QuadSet' name='TODO'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/CAD/IndexedQuadSetExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='IndexedQuadSetExample.x3d'/>
+    <NavigationInfo type='"EXAMINE"'/>
+    <Viewpoint DEF='Side' description='IndexedQuadSet side view'/>
+    <Viewpoint DEF='Front' description='IndexedQuadSet front view' orientation='0 1 0 1.57' position='10 0 0'/>
+    <Viewpoint DEF='Top' description='IndexedQuadSet top view' orientation='1 0 0 -1.57' position='0 10 0'/>
+    <Transform scale='2 2 2'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1 1 1'/>
+        </Appearance>
+        <IndexedQuadSet ccw='true' colorPerVertex='true' index='0 3 2 1 4 5 6 7 2 7 9 8 2 3 4 7' normalPerVertex='true' solid='true'>
+          <Coordinate point='-1.5 0 0 -1.5 1 -1 -.5 1 -1 -.5 0 0 0.5 0 0 1.5 0 0 1.5 1 -1 0.5 1 -1 -0.5 2 -1 0.5 2 -1'/>
+        </IndexedQuadSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

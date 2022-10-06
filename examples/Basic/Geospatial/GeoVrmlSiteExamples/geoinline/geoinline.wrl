@@ -1,0 +1,123 @@
+#VRML V2.0 utf8
+
+# Define the GeoInline PROTO, and the relevant subset of the fields
+# that we will need for this example
+
+EXTERNPROTO GeoInline [
+  field        MFString url
+  eventIn      MFString set_url
+  eventOut     MFString url_changed
+  field        SFBool   load
+  eventIn      SFBool   set_load
+  eventOut     SFBool   load_changed
+  field        SFVec3f  bboxCenter
+  field        SFVec3f  bboxSize
+  eventOut     MFNode   children
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoInline.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoInline.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoInline.wrl"
+]
+
+# Here is a simple world that does a single GeoInline, then it creates
+# two cones and attaches a TouchSensor to each.  These are used to
+# send a TRUE or a FALSE event to the set_load eventIn of GeoInline.
+
+DEF root_node Group {
+   children [
+
+      WorldInfo { title "Test World for GeoInline" }
+      NavigationInfo { type [ "EXAMINE" "ANY" ] }
+
+      # The GeoInline node - this inlines a simple Box{} shape
+
+      DEF TestInline GeoInline {
+	 url "test.wrl"
+	 load FALSE
+      }
+
+      # Two cones that are used to load and unload the URL for the box
+
+      Transform {
+	 translation 2 1.0 0 
+	 scale 0.5 0.5 0.5
+	 children [
+	    DEF LoadSensor TouchSensor {}
+	    Shape {
+	       appearance Appearance { material Material {diffuseColor 1 0 0} }
+	       geometry Cone {}
+	    }
+	 ]
+      }
+      Transform {
+	 translation 1.5 1.2 0.3
+	 scale 0.5 0.5 0.5
+	 children [
+	    Shape {
+	       geometry Text {
+		  string "Load Cube"
+		  fontStyle FontStyle {
+		     size 1.0
+		  }
+	       }
+	    }
+	 ]
+      }
+
+      Transform {
+	 translation 2 -1.0 0 
+	 scale 0.5 0.5 0.5
+	 rotation 1 0 0 3.1415
+	 children [
+	    DEF UnLoadSensor TouchSensor {}
+	    Shape {
+	       appearance Appearance { material Material {diffuseColor 0 0 1} }
+	       geometry Cone {} 
+	    } 
+	 ]
+      }
+      Transform {
+	 translation 1.5 -1.5 0.3
+	 scale 0.5 0.5 0.5
+	 children [
+	    Shape {
+	       geometry Text {
+		  string "Unload Cube"
+		  fontStyle FontStyle {
+		     size 1.0
+		  }
+	       }
+	    }
+	 ]
+      }
+
+   ]
+
+}
+
+# We will define two very simple scripts: one only returns a TRUE if
+# and only is it receives a TRUE event. The other only returns a FALSE
+# event if it receives a TRUE event. These are used because the
+# TouchSensor returns TRUE when you click over an object, then FALSE
+# when you release the button.  This is therefore a crude method of
+# ignoring the mouse down events.
+
+DEF ReturnTrue Script {
+   eventIn  SFBool set_value
+   eventOut SFBool value_changed
+   url "javascript: function set_value( value ) { 
+           if ( value == true ) value_changed = true; }"
+}
+
+DEF ReturnFalse Script {
+   eventIn  SFBool set_value
+   eventOut SFBool value_changed
+   url "javascript: function set_value( value ) {
+           if ( value == true ) value_changed = false; }"
+}
+
+ROUTE LoadSensor.isActive TO ReturnTrue.set_value
+ROUTE ReturnTrue.value_changed TO TestInline.set_load
+
+ROUTE UnLoadSensor.isActive TO ReturnFalse.set_value
+ROUTE ReturnFalse.value_changed TO TestInline.set_load

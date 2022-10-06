@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure25_05ThreeTorchesSingleLOD.x3d' name='title'/>
+    <meta content='Figure 25.5, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch25/25fig05.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='24 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Three torches within an LOD node. First you must change viewpoints or fly in to watch levels shift. Ordinarily transitions are hard to discern, these transitions are designed to be noticeable.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_05ThreeTorchesSingleLOD.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <Viewpoint description='20m no-detail torch - zoom in!' orientation='1 0 0 -0.1' position='0 1.5 20'/>
+    <Viewpoint description='10m low-detail torch' orientation='1 0 0 -0.1' position='0 1 10'/>
+    <Viewpoint description='5m medium-detail torch' orientation='1 0 0 -0.1' position='0 0.5 5'/>
+    <Viewpoint description='2m high-detail torch' orientation='1 0 0 -0.1' position='0 0 2'/>
+    <NavigationInfo speed='2' type='"FLY" "EXAMINE" "ANY"'/>
+    <!-- In practice, transitions occur at ranges where the switch in geometry is not visible -->
+    <LOD range='4 8 16'>
+      <Inline url='"Figure25_01TorchHighDetail.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_01TorchHighDetail.x3d" "Figure25_01TorchHighDetail.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_01TorchHighDetail.wrl"'/>
+      <Inline url='"Figure25_02TorchMediumDetail.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_02TorchMediumDetail.x3d" "Figure25_02TorchMediumDetail.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_02TorchMediumDetail.wrl"'/>
+      <Inline url='"Figure25_03TorchLowDetail.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_03TorchLowDetail.x3d" "Figure25_03TorchLowDetail.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter25LevelOfDetail/Figure25_03TorchLowDetail.wrl"'/>
+      <WorldInfo info='"null node"'/>
+    </LOD>
+  </Scene>
+</X3D>

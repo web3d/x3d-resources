@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <meta content='TestPrototypeInterpolators.x3d' name='title'/>
+    <meta content='Test case for Prototype PositionInterpolator OrientationInterpolator, expected behavior: is for both sets of test Text to move identically.' name='description'/>
+    <meta content='Don Brutzman and Jeff Weekley' name='creator'/>
+    <meta content='4 April 2009' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://savage.nps.edu/Savage/Tools/Animation/WaypointInterpolatorPrototype.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/TestPrototypeInterpolators.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TestPrototypeInterpolators.x3d'/>
+    <ProtoDeclare appinfo='Test output of PositionInterpolator, OrientationInterpolator when within Protototype' name='InterpolatorTest'>
+      <ProtoInterface>
+        <field accessType='inputOnly' appinfo='exposed PositionInterpolator and OrientationInterpolator setting' name='set_fraction' type='SFFloat'/>
+        <field accessType='outputOnly' appinfo='exposed PositionInterpolator setting' name='position_changed' type='SFVec3f'/>
+        <field accessType='outputOnly' appinfo='exposed OrientationInterpolator setting' name='orientation_changed' type='SFRotation'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- First node determines node type of this prototype -->
+        <Group DEF='PrototypeRootNode'>
+          <PositionInterpolator DEF='WaypointPI' key='0 0.5 1' keyValue='0 0 0 1 1 1 2 2 2'>
+            <IS>
+              <connect nodeField='set_fraction' protoField='set_fraction'/>
+              <connect nodeField='value_changed' protoField='position_changed'/>
+            </IS>
+          </PositionInterpolator>
+          <OrientationInterpolator DEF='WaypointOI' key='0 0.5 1' keyValue='0 1 0 0 0.7071 0.7071 0 3.1416 0 1 0 0'>
+            <IS>
+              <connect nodeField='set_fraction' protoField='set_fraction'/>
+              <connect nodeField='value_changed' protoField='orientation_changed'/>
+            </IS>
+          </OrientationInterpolator>
+        </Group>
+        <!-- Subsequent nodes do not render, but still must be a valid X3D subgraph -->
+        <Script DEF='InternalTraceScript'>
+          <field accessType='inputOnly' name='set_position' type='SFVec3f'/>
+          <field accessType='inputOutput' name='holdPosition' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='inputOnly' name='set_rotation' type='SFRotation'/>
+          <![CDATA[
+ecmascript:
+function set_position (value)
+{
+	holdPosition=value;
+}
+function set_rotation (value)
+{
+	Browser.print ('Internal position=' + holdPosition.toString() + ' , internal rotation=' + value.toString() + '\n');
+}
+]]>
+        </Script>
+        <ROUTE fromField='value_changed' fromNode='WaypointPI' toField='set_position' toNode='InternalTraceScript'/>
+        <ROUTE fromField='value_changed' fromNode='WaypointOI' toField='set_rotation' toNode='InternalTraceScript'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ===================================== -->
+    <TimeSensor DEF='Clock' cycleInterval='6' loop='true'/>
+    <!-- ===================================== -->
+    <ProtoInstance DEF='InterpolatorTestInstance' name='InterpolatorTest'/>
+    <Transform DEF='LeftText' translation='-3 0 0'>
+      <Transform DEF='TrackingTransformLeft'>
+        <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='InterpolatorTestInstance'/>
+        <ROUTE fromField='position_changed' fromNode='InterpolatorTestInstance' toField='translation' toNode='TrackingTransformLeft'/>
+        <ROUTE fromField='orientation_changed' fromNode='InterpolatorTestInstance' toField='rotation' toNode='TrackingTransformLeft'/>
+        <Shape>
+          <Text string='"prototype interpolators"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.8 0.2 0.2'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Transform>
+    <!-- ===================================== -->
+    <PositionInterpolator DEF='ActualPositionInterpolator' key='0 0.5 1' keyValue='0 0 0 1 1 1 2 2 2'/>
+    <OrientationInterpolator DEF='ActualOrientationInterpolator' key='0 0.5 1' keyValue='0 1 0 0 0.7071 0.7071 0 3.1416 0 1 0 0'/>
+    <Transform DEF='RightText' translation='-3 -2 0'>
+      <Transform DEF='TrackingTransformRight'>
+        <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='ActualPositionInterpolator'/>
+        <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='ActualOrientationInterpolator'/>
+        <ROUTE fromField='value_changed' fromNode='ActualPositionInterpolator' toField='translation' toNode='TrackingTransformRight'/>
+        <ROUTE fromField='value_changed' fromNode='ActualOrientationInterpolator' toField='rotation' toNode='TrackingTransformRight'/>
+        <Shape>
+          <Text string='"native interpolators"'/>
+          <Appearance>
+            <Material diffuseColor='0.2 0.8 0.2'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Script DEF='ExternalTraceScript'>
+      <field accessType='inputOnly' name='set_position' type='SFVec3f'/>
+      <field accessType='inputOutput' name='holdPosition' type='SFVec3f' value='0.0 0.0 0.0'/>
+      <field accessType='inputOnly' name='set_rotation' type='SFRotation'/>
+      <![CDATA[
+ecmascript:
+function set_position (value)
+{
+	holdPosition=value;
+}
+function set_rotation (value)
+{
+	 Browser.print ('External position=' + holdPosition.toString() + ' , external rotation=' + value.toString() + '\n');
+}
+]]>
+    </Script>
+    <ROUTE fromField='value_changed' fromNode='ActualPositionInterpolator' toField='set_position' toNode='ExternalTraceScript'/>
+    <ROUTE fromField='value_changed' fromNode='ActualOrientationInterpolator' toField='set_rotation' toNode='ExternalTraceScript'/>
+  </Scene>
+</X3D>

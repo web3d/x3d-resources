@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='NeonExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='NeonExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon00' url='"NeonPrototypes.x3d#Neon00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon00" "NeonPrototypes.wrl#Neon00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon01' url='"NeonPrototypes.x3d#Neon01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon01" "NeonPrototypes.wrl#Neon01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon02' url='"NeonPrototypes.x3d#Neon02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon02" "NeonPrototypes.wrl#Neon02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon03' url='"NeonPrototypes.x3d#Neon03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon03" "NeonPrototypes.wrl#Neon03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon04' url='"NeonPrototypes.x3d#Neon04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon04" "NeonPrototypes.wrl#Neon04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon05' url='"NeonPrototypes.x3d#Neon05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon05" "NeonPrototypes.wrl#Neon05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon06' url='"NeonPrototypes.x3d#Neon06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon06" "NeonPrototypes.wrl#Neon06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon07' url='"NeonPrototypes.x3d#Neon07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon07" "NeonPrototypes.wrl#Neon07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon08' url='"NeonPrototypes.x3d#Neon08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon08" "NeonPrototypes.wrl#Neon08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon09' url='"NeonPrototypes.x3d#Neon09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon09" "NeonPrototypes.wrl#Neon09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon10' url='"NeonPrototypes.x3d#Neon10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon10" "NeonPrototypes.wrl#Neon10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon11' url='"NeonPrototypes.x3d#Neon11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon11" "NeonPrototypes.wrl#Neon11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon12' url='"NeonPrototypes.x3d#Neon12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon12" "NeonPrototypes.wrl#Neon12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon13' url='"NeonPrototypes.x3d#Neon13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon13" "NeonPrototypes.wrl#Neon13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon14' url='"NeonPrototypes.x3d#Neon14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon14" "NeonPrototypes.wrl#Neon14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon15' url='"NeonPrototypes.x3d#Neon15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon15" "NeonPrototypes.wrl#Neon15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon16' url='"NeonPrototypes.x3d#Neon16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon16" "NeonPrototypes.wrl#Neon16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon17' url='"NeonPrototypes.x3d#Neon17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon17" "NeonPrototypes.wrl#Neon17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon18' url='"NeonPrototypes.x3d#Neon18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon18" "NeonPrototypes.wrl#Neon18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon19' url='"NeonPrototypes.x3d#Neon19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon19" "NeonPrototypes.wrl#Neon19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon20' url='"NeonPrototypes.x3d#Neon20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon20" "NeonPrototypes.wrl#Neon20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon21' url='"NeonPrototypes.x3d#Neon21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon21" "NeonPrototypes.wrl#Neon21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon22' url='"NeonPrototypes.x3d#Neon22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon22" "NeonPrototypes.wrl#Neon22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon23' url='"NeonPrototypes.x3d#Neon23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon23" "NeonPrototypes.wrl#Neon23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon24' url='"NeonPrototypes.x3d#Neon24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon24" "NeonPrototypes.wrl#Neon24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon25' url='"NeonPrototypes.x3d#Neon25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon25" "NeonPrototypes.wrl#Neon25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon26' url='"NeonPrototypes.x3d#Neon26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon26" "NeonPrototypes.wrl#Neon26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon27' url='"NeonPrototypes.x3d#Neon27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon27" "NeonPrototypes.wrl#Neon27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon28' url='"NeonPrototypes.x3d#Neon28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon28" "NeonPrototypes.wrl#Neon28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon29' url='"NeonPrototypes.x3d#Neon29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon29" "NeonPrototypes.wrl#Neon29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon30' url='"NeonPrototypes.x3d#Neon30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon30" "NeonPrototypes.wrl#Neon30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon31' url='"NeonPrototypes.x3d#Neon31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon31" "NeonPrototypes.wrl#Neon31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon32' url='"NeonPrototypes.x3d#Neon32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon32" "NeonPrototypes.wrl#Neon32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon33' url='"NeonPrototypes.x3d#Neon33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon33" "NeonPrototypes.wrl#Neon33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon34' url='"NeonPrototypes.x3d#Neon34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d#Neon34" "NeonPrototypes.wrl#Neon34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.wrl#Neon34"'/>
+    <Group>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Neon00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Neon00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon00' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Neon00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Neon01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Neon01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon01' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Neon02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Neon02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon02' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Neon03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Neon03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon03' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Neon04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Neon04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon04' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Neon05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Neon05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon05' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Neon06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Neon06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon06' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Neon07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Neon07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon07' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Neon08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Neon08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon08' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Neon09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Neon09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon09' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Neon10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Neon10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon10' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Neon11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Neon11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon11' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Neon12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Neon12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon12' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Neon13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Neon13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon13' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Neon14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Neon14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon14' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon4" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Neon15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Neon15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon15' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon5" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Neon16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Neon16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon16' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Neon17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Neon17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon17' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Neon18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Neon18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon18' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Neon19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Neon19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon19' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Neon20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Neon20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon20' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Neon21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Neon21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon21' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Neon22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Neon22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon22' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Neon23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Neon23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon23' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Neon24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Neon24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon24' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Neon25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Neon25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon25' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Neon26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Neon26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon26' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Neon27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Neon27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon27' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Neon28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Neon28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon28' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Neon29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Neon29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon29' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Neon30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Neon30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon30' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Neon31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Neon31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon31' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Neon32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Neon32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon32' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Neon33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Neon33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon33' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Neon34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Neon34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Neon34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Neon34' parameter='"target=_source"' url='"NeonPrototypes.html#ProtoDeclare_Neon34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.html#ProtoDeclare_Neon34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Neon34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

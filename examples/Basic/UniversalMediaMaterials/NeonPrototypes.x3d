@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='NeonPrototypes.x3d' name='title'/>
+    <meta content='Prototype declarations defining values for X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonPrototypes.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='NeonPrototypes.x3d'/>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon00'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 0.398733 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon01'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 0.628573 1.0' shininess='0.05102' specularColor='0.47027 0.47027 0.47027'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon02'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.018841 0.940276 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon03'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 1.0 0.734243' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon04'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 1.0 0.456346' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon05'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 1.0 0.168349' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon06'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.023906 1.0 0.00239' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon07'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.363921 1.0 0.0478' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon08'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.559606 1.0 0.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon09'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.757687 1.0 0.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon10'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.871763 0.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon11'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.7155 0.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon12'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.577069 0.0' shininess='0.054054' specularColor='0.383784 0.383784 0.383784'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon13'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.442751 0.0' shininess='0.05102' specularColor='0.475676 0.475676 0.475676'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon14'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.318894 0.0' shininess='0.086486' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon15'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.151505 0.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon16'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.0 0.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon17'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.0 0.080733' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon18'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.0 0.265757' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon19'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.0 0.34678' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon20'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.079082 0.656922' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon21'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.934028 0.003043 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon22'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.755836 0.0 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon23'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.58832 0.017294 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon24'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.460235 0.0 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon25'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.17496 0.0 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon26'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 0.135953 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon27'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 0.277276 1.0' shininess='0.05102' specularColor='0.622449 0.622449 0.622449'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon28'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 0.2805 0.39661' shininess='0.081081' specularColor='0.616216 0.616216 0.616216'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon29'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.0 0.2805 0.040678' shininess='0.081081' specularColor='0.616216 0.616216 0.616216'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon30'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.921769 0.544218 0.0' shininess='0.054054' specularColor='0.637764 0.37654 0.0'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon31'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 0.286509 0.159322' shininess='0.054054' specularColor='0.535135 0.535135 0.535135'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon32'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.667797 0.076966 0.171099' shininess='0.054054' specularColor='0.497297 0.497297 0.497297'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon33'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.59083 0.058279 0.307405' shininess='0.075676' specularColor='0.6 0.6 0.6'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Neon34'>
+      <ProtoBody>
+        <Material ambientIntensity='0.0' diffuseColor='0.0 0.0 0.0' emissiveColor='0.595346 0.187689 0.595358' shininess='0.054054' specularColor='0.47027 0.47027 0.47027'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Anchor description='click for examples' parameter='"target=_blank"' url='"NeonExamples.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonExamples.x3d" "NeonExamples.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/NeonExamples.wrl"'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 0.4 0'/>
+        </Appearance>
+        <Text string='"NeonExamples.x3d" "is a Materials Prototype declaration file." "" "For an example scene using these node," "click this text and view" "NeonExamples.x3d"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.8'/>
+        </Text>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure23_3cExponentialFogVisibility20.x3d' name='title'/>
+    <meta content='Figure 23.3, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch23/23fig03c.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='22 September 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='An exponential-fog world with a visibility range of 20m. Compare Figures 23.3a, 3b and 3c.' name='description'/>
+    <meta content='Figure23_3aExponentialFogVisibility100.x3d' name='reference'/>
+    <meta content='Figure23_3bExponentialFogVisibility40.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter23Fog/Figure23_3cExponentialFogVisibility20.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure23_3cExponentialFogVisibility20.x3d'/>
+    <Viewpoint description='Seven pairs of columns' position='0 3 32'/>
+    <NavigationInfo type='"FLY" "EXAMINE" "ANY"'/>
+    <Fog fogType='EXPONENTIAL' visibilityRange='20'/>
+    <Background groundColor='0 0 0' skyColor='1 1 1'/>
+    <Inline url='"Figure23_1FogTestWorld.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter23Fog/Figure23_1FogTestWorld.x3d" "Figure23_1FogTestWorld.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter23Fog/Figure23_1FogTestWorld.wrl"'/>
+  </Scene>
+</X3D>

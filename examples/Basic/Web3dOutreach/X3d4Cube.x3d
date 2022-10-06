@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='X3d4Cube.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='Anita Havele' name='creator'/>
+    <meta content='30 September 2020' name='created'/>
+    <meta content='30 September 2020' name='modified'/>
+    <meta content='Provides a cube-shaped model with interesting theme words for the Box of X3D Blog!' name='description'/>
+    <meta content='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CubeWithLabeledSides.x3d' name='reference'/>
+    <meta content='logo/X3d4CubeImages.png' name='Image'/>
+    <meta content='logo/X3d4CubeImages.vsd' name='drawing'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/TestBoxImages.vsd' name='drawing'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/X3d4Cube.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='X3d4Cube.x3d'/>
+    <Background skyColor='0.05 0.05 0.1'/>
+    <Group>
+      <Viewpoint description='Front view' orientation='0 1 0 1.57' position='8 0 0'/>
+      <Shape DEF='Front'>
+        <IndexedFaceSet coordIndex='0 1 2 3' texCoordIndex='0 1 2 3'>
+          <Coordinate DEF='Points' point='1 1 1 1 -1 1 1 -1 -1 1 1 -1 -1 1 1 -1 -1 1 -1 -1 -1 -1 1 -1'/>
+          <TextureCoordinate DEF='DefaultTextureCoordinate' point='0 0 1 0 1 1 0 1'/>
+        </IndexedFaceSet>
+        <Appearance>
+          <ImageTexture url='"logo/frontGlTF.png" "https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/logo/frontGlTF.png" "https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/frontGlTF.png"'/>
+          <!-- Possible variation: experiment with indices to as alternative to TextureTransform rotations -->
+          <TextureTransform DEF='RotateRight' rotation='-1.57'/>
+        </Appearance>
+      </Shape>
+      <Viewpoint description='Back view' orientation='0 1 0 -1.57' position='-8 0 0'/>
+      <Shape DEF='Back'>
+        <IndexedFaceSet coordIndex='7 6 5 4' texCoordIndex='0 1 2 3'>
+          <Coordinate USE='Points'/>
+          <TextureCoordinate USE='DefaultTextureCoordinate'/>
+        </IndexedFaceSet>
+        <Appearance>
+          <ImageTexture url='"logo/backWebGL.png" "https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/logo/backWebGL.png" "https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/backWebGL.png"'/>
+          <TextureTransform USE='RotateRight'/>
+        </Appearance>
+      </Shape>
+      <Viewpoint description='Left view' orientation='0 1 0 3.1416' position='0 0 -8'/>
+      <Shape DEF='Left'>
+        <IndexedFaceSet coordIndex='3 2 6 7' texCoordIndex='0 1 2 3'>
+          <Coordinate USE='Points'/>
+          <TextureCoordinate USE='DefaultTextureCoordinate'/>
+        </IndexedFaceSet>
+        <Appearance>
+          <ImageTexture url='"logo/leftHTML5.png" "https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/logo/leftHTML5.png" "https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/leftHTML5.png"'/>
+          <TextureTransform USE='RotateRight'/>
+        </Appearance>
+      </Shape>
+      <Viewpoint description='Right view' position='0 0 8'/>
+      <Shape DEF='Right'>
+        <IndexedFaceSet coordIndex='0 4 5 1' texCoordIndex='0 1 2 3'>
+          <Coordinate USE='Points'/>
+          <TextureCoordinate USE='DefaultTextureCoordinate'/>
+        </IndexedFaceSet>
+        <Appearance>
+          <ImageTexture url='"logo/rightWebAudio.png" "https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/logo/rightWebAudio.png" "https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/rightWebAudio.png"'/>
+          <TextureTransform DEF='Rotate180' rotation='3.14159'/>
+        </Appearance>
+      </Shape>
+      <Viewpoint description='Top view' orientation='1 0 0 -1.57' position='0 8 0'/>
+      <Shape DEF='Top'>
+        <IndexedFaceSet coordIndex='0 3 7 4' texCoordIndex='0 1 2 3'>
+          <Coordinate USE='Points'/>
+          <TextureCoordinate USE='DefaultTextureCoordinate'/>
+        </IndexedFaceSet>
+        <Appearance>
+          <ImageTexture url='"logo/topX3D4.png" "https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/logo/topX3D4.png" "https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/topX3D4.png"'/>
+          <TextureTransform DEF='RotateLeft' rotation='1.57'/>
+        </Appearance>
+      </Shape>
+      <Viewpoint description='Bottom view' orientation='1 0 0 1.57' position='0 -8 0'/>
+      <Shape DEF='Bottom'>
+        <IndexedFaceSet coordIndex='1 5 6 2' texCoordIndex='0 1 2 3'>
+          <Coordinate USE='Points'/>
+          <TextureCoordinate USE='DefaultTextureCoordinate'/>
+        </IndexedFaceSet>
+        <Appearance>
+          <ImageTexture url='"logo/bottomJoinWeb3D.png" "https://X3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/logo/bottomJoinWeb3D.png" "https://www.web3d.org/x3d/content/examples/Basic/Web3dOutreach/logo/bottomJoinWeb3D.png"'/>
+          <TextureTransform USE='Rotate180'/>
+        </Appearance>
+      </Shape>
+    </Group>
+  </Scene>
+</X3D>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<link rel="shortcut icon" href="http://www.web3d.org/x3d/content/examples/images/X3DtextIcon16.png" title="X3D">
+	<title>X3D Security Examples</title>
+	<meta name="author" content="Don Brutzman">
+	<meta name="description" content="ReadMe instructions for X3D examples using XML security.">
+	<meta name="filename" content="X3dSecurityReadMe.html">
+	<meta name="identifier" content="http://www.web3d.org/x3d/content/examples/Basic/Security/X3dSecurityReadMe.html">
+    <meta name="generator" content="X3D-Edit 3.2, https://savage.nps.edu/X3D-Edit">
+	<meta name="created" content="4 July 2008">
+    <meta name="subject" content="X3D security, XML encryption authentication digital signature">
+   </head>
+ <body>
+
+    <a name="top"></a>
+    <table border="0" cellspacing="0" cellpadding="0" summary="" align="center">
+        <tr align="center">
+            <td><a href="http://www.web3d.org/x3d/content/examples/X3dResources.html#Security"><img src="../images/x3d2-s.gif" width="154" height="97" border="0" title="to X3D Resources: Security" alt="to X3D Resources: Security"/></a></td>
+            <td><pre>   </pre></td>
+            <td><h1>X3D Security Examples README </h1></td>
+            <td><pre>    </pre></td>
+            <td><a href="http://www.web3d.org"><img src="../images/web3d_logo2.png" width="120" height="60" border="0" title="to Web3D home page" alt="to Web3D home page"/></a></td>
+        </tr>
+    </table>
+      
+      <p>
+          These examples show how to use the
+          <a href="http://www.w3.org/Security" target="_blank">World Wide Web Consortium (W3C) Security Recommendations</a>
+          for 
+          <a href="http://www.w3.org/TR/xmldsig-core" target="_blank">XML Signature</a>
+          and 
+          <a href="http://www.w3.org/TR/xmlenc-core" target="_blank">XML Encryption</a>
+          with X3D.
+      </p>
+	  <ul>
+		  <li>
+			  <a href="http://www.web3d.org/x3d/content/examples/X3dResources.html#Security" target="_blank">X3D Resources: Security</a>
+			  provides an additional set of security issues and resources.
+		  </li>
+	  </ul>
+
+      <h3> <a href="index.html" target="_blank">Example X3D scenes</a> using XML Security </h3>
+
+      <ol>
+          <li>
+              <a href="HelloWorldSigned.x3d">HelloWorldSigned.x3d</a>
+             (<a href="HelloWorldSigned.html">.html</a>)
+              is digitally signed for authentication purposes.
+              Digital signature elements appear at the end of the X3D scene.          
+          </li>
+
+          <li>
+              <a href="HelloWorldEncryptionInput.x3d">HelloWorldEncryptionInput.x3d</a>
+             (<a href="HelloWorldEncryptionInput.html">.html</a>)
+              is the example X3D scene that gets encrypted.
+          </li>
+
+          <li>
+              <a href="HelloWorldEncryptionResult.xml">HelloWorldEncryptionResult.xml</a>
+              is the resulting XML document after applying
+              XML encryption.
+          </li>
+
+          <li>
+              <a href="HelloWorldDecrypted.x3d">HelloWorldDecrypted.x3d</a>
+             (<a href="HelloWorldDecrypted.html">.html</a>)
+              is the round-trip version that shows successful decryption.
+          </li>
+
+          <li>
+              <a href="HelloWorldSignedEncryptionResult.xml">HelloWorldSignedEncryptionResult.xml</a>
+              is the resulting XML document after applying
+              XML encryption to the signed version.
+          </li>
+
+          <li>
+              <a href="HelloWorldSignedDecrypted.x3d">HelloWorldSignedDecrypted.x3d</a>
+             (<a href="HelloWorldSignedDecrypted.html">.html</a>)
+              is the round-trip version that shows successful decryption, and subsequent verification, of the signed version.
+          </li>
+      </ol>
+      
+      <p>
+          <a href="http://www.web3d.org/x3d/specifications/ISO-IEC-FCD-19776-3.2-X3DEncodings-CompressedBinary/Part03/concepts.html#X3DCanonicalForm">X3D Canonicalization (C14N)</a>
+          was also performed on each of the unsigned .x3d scenes.
+      </p>
+      
+      <p>
+          These examples are distributed in the
+          <a href="index.html">Security</a>
+          section of the
+          <a href="../index.html">X3D Basic Examples Archive</a>
+          under an
+          <a href="../license.html">open-source license</a>.
+      </p>
+
+      <h3> Keystore and keys for testing </h3>
+      <p>
+          An example copy of the 
+          <a href="keystore/X3D-EditKeystore.ks">X3D-EditKeystore.ks</a> 
+          containing encryption and authentication keys
+          is provided in the
+          <code><a href="keystore/">keystore</a></code>
+          subdirectory.  The
+          <a href="#Portecle">Portecle tool</a>
+          produced reports about the keystore contents:
+          <a href="keystore/X3D-EditKeystoreReport.txt">X3D-EditKeystoreReport.txt</a>
+          and
+          <a href="keystore/X3D-EditKeystoreReport.xml">X3D-EditKeystoreReport.xml</a>.
+      </p>
+      <p>
+          X3D-Edit places keystore files in the
+          <code>%HOMEPATH%/X3D-Edit/security</code>
+          subdirectory.
+          The password for this keystore is <i>test</i>.
+      </p>
+      <p>
+          <a href="http://www.w3.org/TR/xmldsig-core" target="_blank">XML Signature</a> (digital authentication)
+          was applied using the example
+          <a href="keystore/SelectSigningKeyPair.png">PublicPrivatePair</a> key pair,
+          available as 
+          <code><a href="keystore/PublicPrivatePair_certificateChain.cer">PublicPrivatePair_certificateChain.cer</a></code>.
+      </p>
+      <p>
+          <a href="http://www.w3.org/TR/xmlenc-core" target="_blank">XML Encryption</a>
+          and decryption was applied using a single example
+          <a href="keystore/SelectSigningSecretKey.png">SecretKey</a>,
+          available as 
+          <code><a href="keystore/SecretKey_key.b64">SecretKey_key.b64</a></code>.
+      </p>
+      <p>
+          <i>Warning:</i> these keys are only provided for repeatability testing of the example results.
+          Do not use them for your own work since they are publicly available and not secure.
+      </p>
+
+      <h3> Tools </h3>
+
+      <p>
+          These examples were produced using the
+          <a href="https://savage.nps.edu/X3D-Edit">X3D-Edit</a>
+          authoring tool.
+          XML Security functions are provided via a right-click context menu
+          for X3D scenes.  A simple
+          <a href="keystore/ManageX3D-EditKeystorePanel.png">keystore management panel</a>
+          is also provided for creating, deleting, importing and exporting various public/private key pairs and secret keys.
+      </p>
+      <ul>
+          <li>
+                <a href="http://santuario.apache.org">Apache Santuario</a>
+                and
+                <a href="http://santuario.apache.org/Java/api/index.html">Apache XML Security Java (Javadoc)</a>.
+          </li>
+          <!-- TODO, defunct:
+          <li>
+                Issues and improvements are tracked using the
+                <a href="https://www.movesinstitute.org/bugzilla/showdependencytree.cgi?id=1729&hide_resolved=1">X3D Security Issues using XML Signature and Encryption</a>
+                bug entry.
+          </li>
+          -->
+          <li>
+                <a name="Portecle">Supplementary tool:</a>
+                <a href="http://portecle.sourceforge.net" target="_blank">Portecle</a>
+                is a user-friendly GUI application for creating, managing and examining
+                keystores, keys, certificates, certificate requests, certificate
+                revocation lists and more.
+          </li>
+      </ul>
+      
+      <hr />
+      
+      <p>
+          Uniform Resource Locator (URL) for this page is
+          <br>
+          <a href="http://www.web3d.org/x3d/content/examples/Basic/Security/X3dSecurityReadMe.html">http://www.web3d.org/x3d/content/examples/Basic/Security/X3dSecurityReadMe.html</a>
+
+          <br>
+           Revised 18 December 2018.
+      </p>
+
+ </body></html>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	<meta name="author" content="Don Brutzman"/>
+	<meta name="generator" content="ContentCatalogToXmlSpyProject.xslt"/>
+	<meta name="url" content="https://www.web3d.org/x3d/content/ContentCatalogToXmlSpyProject.xslt"/>
+	<meta name="description" content="XSLT stylesheet to convert X3D example-archive catalogs into XML Spy project files."/>
+        -->
+<Project xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" XSL_XMLUseFile=".\X3dToXhtml.xslt" ValidFile="..\..\..\tools\CreateContentCatalog\ContentCatalog.dtd" ValidFileSet="Yes">
+<Folder FolderName="HTML pages">
+<File HomeFolder="Yes" FilePath=".\index.html"/>
+<File HomeFolder="Yes" FilePath=".\X3dResources.html"/>
+<File HomeFolder="Yes" FilePath=".\license.html"/>
+<File HomeFolder="Yes" FilePath=".\X3dSceneAuthoringHints.html"/>
+</Folder>
+<Folder FolderName="X3D4AM, X3D for Advanced Modeling X3D Examples .x3d encoding" ExtStr=".x3d" ValidFileSet="Yes" ValidFile="C:/x3d-code/www.web3d.org/specifications//x3d-4.0.xsd" XSL_XMLUseSet="Yes" XSL_XMLUseFile="C:/x3d-code/www.web3d.org/x3d/stylesheets/X3dToXhtml.xslt" XSL_DestFileExtSet="Yes" XSL_DestFolderSet="Yes" XSL_DestFolder=".">
+<Folder FolderName="Additive Manufacturing"/>
+<Folder FolderName="Animation"/>
+<Folder FolderName="Audio Spatial Sound"/>
+<Folder FolderName="Buildings"/>
+<Folder FolderName="Conversions"/>
+<Folder FolderName="Geometric Shapes"/>
+<Folder FolderName="Gltf Sample Models">
+	<!--[Warning] AlphaBlendModeTest.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] AntiqueCamera.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] AttenuationTest.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] DamagedHelmet.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] DragonAttenuation.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] GlamVelvetSofa.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] Lantern.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] Suzanne.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] ToyCar.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] TransmissionTest.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] TwoCylinderEngine.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] WaterBottle.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4--></Folder>
+<Folder FolderName="Hello World Scenes"/>
+<Folder FolderName="Inspiration"/>
+<Folder FolderName="Matlab"/>
+<Folder FolderName="San Carlos Cathedral"/>
+<Folder FolderName="Scanning"/>
+<Folder FolderName="Security"/>
+<Folder FolderName="Shay D Pixel"/>
+<Folder FolderName="Texture Mapping">
+	<!--[Warning] MultiTextureTeapot.x3d validation warning:  ComposedCubeMapTexture, GeneratedCubeMapTexture, ImageCubeMapTexture not yet an allowed child for X3D4 validation of MultiTexture--></Folder>
+<Folder FolderName="User Experience UX"/>
+<Folder FolderName="Visualization"/>
+<File FilePath="HelloWorld.x3d"/>
+</Folder>
+<Folder FolderName="X3D4AM, X3D for Advanced Modeling X3D Examples Canonical.xml encoding" ExtStr=".xml" ValidFileSet="Yes" ValidFile="C:/x3d-code/www.web3d.org/specifications//x3d-4.0.xsd" XSL_XMLUseSet="Yes" XSL_XMLUseFile="C:/x3d-code/www.web3d.org/x3d/stylesheets/X3dToXhtml.xslt" XSL_DestFileExtSet="Yes" XSL_DestFolderSet="Yes" XSL_DestFolder=".">
+<Folder FolderName="Additive Manufacturing">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Animation">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Audio Spatial Sound">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Buildings">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Conversions">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Geometric Shapes">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Gltf Sample Models">
+	<!--[Warning] AlphaBlendModeTest.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] AntiqueCamera.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] AttenuationTest.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] DamagedHelmet.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] DragonAttenuation.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] GlamVelvetSofa.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] Lantern.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] Suzanne.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] ToyCar.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] TransmissionTest.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] TwoCylinderEngine.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4-->
+	<!--[Warning] WaterBottle.x3d validation warning:  commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4--></Folder>
+<Folder FolderName="Hello World Scenes">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Inspiration">
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Matlab">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="San Carlos Cathedral">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Scanning">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Security">
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Shay D Pixel">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Texture Mapping">
+<File FilePath=".\Canonical.xml"/>
+	<!--[Warning] MultiTextureTeapot.x3d validation warning:  ComposedCubeMapTexture, GeneratedCubeMapTexture, ImageCubeMapTexture not yet an allowed child for X3D4 validation of MultiTexture--><File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="User Experience UX">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<Folder FolderName="Visualization">
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+<File FilePath=".\Canonical.xml"/>
+</Folder>
+<File FilePath="HelloWorldCanonical.xml"/>
+</Folder>
+<Folder FolderName="Validation warnings" ExtStr=".x3d" ValidFileSet="Yes" ValidFile="C:/x3d-code/www.web3d.org/specifications//x3d-4.0.xsd" XSL_XMLUseFile="C:/x3d-code/www.web3d.org/x3d/stylesheets/X3dToXhtml.xslt">
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+<File FilePath=".\"/>
+</Folder>
+<File HomeFolder="Yes" FilePath=".\ContentCatalogX3dForAdvancedModeling.xml"/>
+</Project>

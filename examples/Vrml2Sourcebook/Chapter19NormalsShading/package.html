@@ -1,0 +1,72 @@
+<html>
+
+<head>
+	<title> VRML 2.0 Sourcebook examples in X3D </title>
+</head>
+	
+<!-- Package Comment Files http://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html#packagecomment -->
+
+<!-- This package.html file is used in javadoc documentation -->
+<body>
+	
+	<p>
+		Normal (perpendicular) vectors defined for individual points or polygons can change the shading of geometry.
+	</p>
+    
+    <table border="0" width="100%">
+        <tbody>
+            <tr>
+                
+                <td align="left">
+
+                    <p>
+                        When shaded, the faces on a shape are obvious.
+                        Creating a smooth shape may require a large number of small faces.
+                        An alternative is to instead use smooth shading to create the illusion of a smooth shape, but with a smaller number of faces.
+                    </p>
+                    
+
+                    <p>
+                        The Normal node lists normal vectors to use for parts of a shape which can change shading.
+                        These are used as the value of the normal field, and normal index values select which normals to use (similar to color index values).
+                        Ordinarily the creaseAngle field controls faceted or smooth shading.
+                        Normals override the normal effect of the creaseAngle value.
+                        The normalPerVertex field selects normal per face/grid square or normal per coordinate.
+                        The NormalInterpolator node converts time values to normal values for animation effects.
+                    </p>
+                    
+
+                    <p>
+                           These X3D scenes are adapted directly from the
+                           <a href="http://www.wiley.com/legacy/compbooks/vrml2sbk/toc/ch19.htm" target="Vrml2Sourcebook">original VRML 2.0 Sourcebook chapter examples</a>.
+                           Also available:
+                           <a href="http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0238.htm" target="Vrml2SourcebookCourse">Introduction to VRML97 SIGGRAPH98 course notes</a>.
+                    </p>
+                    
+    
+                </td>
+                
+                <td align="center" rowspan="2">
+
+                    <p>
+                    <!-- 782 x 446 -->
+                    <a href="../../../Chapter19NormalsShading/index.html"><img border="0" alt="Figure 19.22 Normal Square Shaded" title="Figure 19.22 Normal Square Shaded" hspace="10" 
+                        src="../../../Chapter19NormalsShading/_viewpoints/Figure19_22NormalSquareShaded.x3d._VP_Square_with_artificial_normals,_thus_shaded._Careful,_solid=true_means_visible_only_on_one_side!.png" width="156" height="89" align="middle"/></a>
+                    </p>
+                    
+
+                    <p>
+                    <!-- 782 x 446 -->
+                    <a href="../../..//index.html"><img border="0" alt="Figure 19.26 Normal Shaded Elevation Grid" title="Figure 19.26 Normal Shaded Elevation Grid" hspace="10" 
+                        src="../../..//_viewpoints/Figure19_26NormalShadedElevationGrid.x3d._VP_Shaded_(but_flat)_ElevationGrid.png" width="156" height="89" align="middle"/></a>
+                    </p>
+                    
+                    
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>

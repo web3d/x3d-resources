@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='RococoExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='RococoExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo00' url='"RococoPrototypes.x3d#Rococo00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo00" "RococoPrototypes.wrl#Rococo00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo01' url='"RococoPrototypes.x3d#Rococo01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo01" "RococoPrototypes.wrl#Rococo01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo02' url='"RococoPrototypes.x3d#Rococo02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo02" "RococoPrototypes.wrl#Rococo02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo03' url='"RococoPrototypes.x3d#Rococo03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo03" "RococoPrototypes.wrl#Rococo03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo04' url='"RococoPrototypes.x3d#Rococo04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo04" "RococoPrototypes.wrl#Rococo04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo05' url='"RococoPrototypes.x3d#Rococo05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo05" "RococoPrototypes.wrl#Rococo05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo06' url='"RococoPrototypes.x3d#Rococo06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo06" "RococoPrototypes.wrl#Rococo06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo07' url='"RococoPrototypes.x3d#Rococo07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo07" "RococoPrototypes.wrl#Rococo07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo08' url='"RococoPrototypes.x3d#Rococo08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo08" "RococoPrototypes.wrl#Rococo08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo09' url='"RococoPrototypes.x3d#Rococo09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo09" "RococoPrototypes.wrl#Rococo09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo10' url='"RococoPrototypes.x3d#Rococo10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo10" "RococoPrototypes.wrl#Rococo10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo11' url='"RococoPrototypes.x3d#Rococo11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo11" "RococoPrototypes.wrl#Rococo11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo12' url='"RococoPrototypes.x3d#Rococo12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo12" "RococoPrototypes.wrl#Rococo12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo13' url='"RococoPrototypes.x3d#Rococo13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo13" "RococoPrototypes.wrl#Rococo13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo14' url='"RococoPrototypes.x3d#Rococo14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo14" "RococoPrototypes.wrl#Rococo14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo15' url='"RococoPrototypes.x3d#Rococo15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo15" "RococoPrototypes.wrl#Rococo15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo16' url='"RococoPrototypes.x3d#Rococo16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo16" "RococoPrototypes.wrl#Rococo16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo17' url='"RococoPrototypes.x3d#Rococo17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo17" "RococoPrototypes.wrl#Rococo17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo18' url='"RococoPrototypes.x3d#Rococo18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo18" "RococoPrototypes.wrl#Rococo18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo19' url='"RococoPrototypes.x3d#Rococo19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo19" "RococoPrototypes.wrl#Rococo19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo20' url='"RococoPrototypes.x3d#Rococo20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo20" "RococoPrototypes.wrl#Rococo20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo21' url='"RococoPrototypes.x3d#Rococo21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo21" "RococoPrototypes.wrl#Rococo21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo22' url='"RococoPrototypes.x3d#Rococo22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo22" "RococoPrototypes.wrl#Rococo22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo23' url='"RococoPrototypes.x3d#Rococo23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo23" "RococoPrototypes.wrl#Rococo23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo24' url='"RococoPrototypes.x3d#Rococo24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo24" "RococoPrototypes.wrl#Rococo24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo25' url='"RococoPrototypes.x3d#Rococo25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo25" "RococoPrototypes.wrl#Rococo25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo26' url='"RococoPrototypes.x3d#Rococo26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo26" "RococoPrototypes.wrl#Rococo26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo27' url='"RococoPrototypes.x3d#Rococo27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo27" "RococoPrototypes.wrl#Rococo27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo28' url='"RococoPrototypes.x3d#Rococo28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo28" "RococoPrototypes.wrl#Rococo28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo29' url='"RococoPrototypes.x3d#Rococo29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo29" "RococoPrototypes.wrl#Rococo29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo30' url='"RococoPrototypes.x3d#Rococo30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo30" "RococoPrototypes.wrl#Rococo30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo31' url='"RococoPrototypes.x3d#Rococo31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo31" "RococoPrototypes.wrl#Rococo31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo32' url='"RococoPrototypes.x3d#Rococo32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo32" "RococoPrototypes.wrl#Rococo32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo33' url='"RococoPrototypes.x3d#Rococo33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo33" "RococoPrototypes.wrl#Rococo33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Rococo34' url='"RococoPrototypes.x3d#Rococo34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.x3d#Rococo34" "RococoPrototypes.wrl#Rococo34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.wrl#Rococo34"'/>
+    <Group>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Rococo00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Rococo00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo00' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Rococo00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Rococo01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Rococo01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo01' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Rococo02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Rococo02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo02' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Rococo03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Rococo03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo03' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Rococo04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Rococo04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo04' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Rococo05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Rococo05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo05' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Rococo06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Rococo06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo06' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Rococo07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Rococo07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo07' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Rococo08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Rococo08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo08' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Rococo09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Rococo09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo09' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Rococo10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Rococo10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo10' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Rococo11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Rococo11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo11' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Rococo12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Rococo12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo12' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Rococo13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Rococo13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo13' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Rococo14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Rococo14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo14' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Rococo15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Rococo15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo15' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Rococo16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Rococo16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo16' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Rococo17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Rococo17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo17' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Rococo18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Rococo18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo18' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Rococo19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Rococo19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo19' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Rococo20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Rococo20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo20' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Rococo21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Rococo21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo21' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo1" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Rococo22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Rococo22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo22' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo2" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Rococo23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Rococo23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo23' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Rococo24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Rococo24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo24' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Rococo25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Rococo25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo25' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Rococo26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Rococo26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo26' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo6" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Rococo27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Rococo27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo27' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Rococo28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Rococo28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo28' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo8" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Rococo29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Rococo29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo29' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Rococo30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Rococo30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo30' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Rococo31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Rococo31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo31' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Rococo32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Rococo32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo32' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Rococo33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Rococo33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo33' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Rococo34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Rococo34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Rococo34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Rococo34' parameter='"target=_source"' url='"RococoPrototypes.html#ProtoDeclare_Rococo34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/RococoPrototypes.html#ProtoDeclare_Rococo34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Rococo34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

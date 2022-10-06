@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE X3D PUBLIC
+	"http://www.web3D.org/TaskGroups/x3d/translation/x3d-compact.dtd"
+	"file://localhost/www.web3D.org/TaskGroups/x3d/translation/x3d-compact.dtd" [
+ <!ENTITY % BaseLineProfile    "INCLUDE">
+ <!ENTITY % CoreProfile        "IGNORE">
+ <!ENTITY % DisJavaVrmlProfile "INCLUDE">
+ <!ENTITY % GeoVrmlProfile     "INCLUDE">
+ <!ENTITY % HAnimProfile       "INCLUDE">
+]>
+<X3D>
+   <Header>
+      <meta content="http://www.itl.nist.gov/div897/ctg/vrml/members.html" name="author"/>
+      <meta content="all_primitives_pixeltexture.xml " name="filename"/>
+      <meta content="This file was provided by the National Institute of Standards and Technology, and is part of the    X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html  The information contained within this file   is provided for use in establishing comformance to the ISO VRML97 Specification.    Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology.   This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are    derived from it, and any modified versions bear some notice that they have been modified. " name="disclaimer"/>
+      <meta content="Michael Kass, NIST" name="translator"/>
+      <meta content="21 January 2001" name="revised"/>
+      <meta content="Test TextureTransform of scale, center, translation and rotation to primitive geometry for PixelTexture. Test browser ability to apply a +45 degree rotation, with a  center of 1 1, a scale of .5 .5 ( creating a double sized image ),  and a translation of .5 .5 to a PixelTexture  consisting of a square  checkerboard of blue ( lower left quadrant ), yellow ( lower right ),  red ( upper right ) and green ( upper left )  mapped to the faces of  primitive geometry. The result is: each face should display four adjacent right triangles, all with 90 degree angles and joined  at the central vertex. The top triangle should be RED, the bottom  BLUE, the left YELLOW and the right GREEN.                                                                                 " name="description"/>
+      <meta content="http://www.web3D.org/TaskGroups/x3d/translation/examples/Conformance/Appearance/TextureTransform/all_primitives_pixeltexture.xml " name="url"/>
+      <meta content="X3D-Edit, http://www.web3D.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+   </Header>
+   <Scene>
+      <Group>
+         <Viewpoint description="&#34;Front View&#34;" orientation="0 1 0 0" position="0 0 25"/>
+         <Viewpoint description="&#34;Rear View&#34;" orientation="0 1 0 3.14" position="0 0 -25"/>
+         <Viewpoint description="&#34;Top View&#34;" orientation="1 0 0 -1.57" position="0 25 0"/>
+         <Viewpoint description="&#34;Bottom View&#34;" orientation="1 0 0 1.57" position="0 -25 0"/>
+         <Viewpoint description="&#34;Right View&#34;" orientation="0 1 0 1.57" position="25 0 0"/>
+         <Viewpoint description="&#34;Left View&#34;" orientation="0 1 0 -1.57" position="-25 0 0"/>
+      </Group>
+      <NavigationInfo type="&#34;EXAMINE&#34; &#34;WALK&#34; &#34;FLY&#34; &#34;ANY&#34;"/>
+      <DirectionalLight ambientIntensity="1" intensity="0.2"/>
+      <DirectionalLight ambientIntensity="1" direction="0 0 1" intensity="0.2"/>
+      <Transform translation="-5.85443 0 0">
+         <Shape>
+            <Appearance>
+               <PixelTexture DEF="PIXTEX" image="2 2 3  0x0000FF 0xFFFF00 0x00FF00 0xFF0000"/>
+               <TextureTransform center="1 1" rotation="0.785" scale="0.5 0.5" translation="0.5 0.5"/>
+               <Material/>
+            </Appearance>
+            <Sphere/>
+         </Shape>
+      </Transform>
+      <Transform translation="-2.47341 0 0">
+         <Shape>
+            <Appearance>
+               <PixelTexture USE="PIXTEX"/>
+               <TextureTransform center="1 1" rotation="0.785" scale="0.5 0.5" translation="0.5 0.5"/>
+               <Material/>
+            </Appearance>
+            <Cone/>
+         </Shape>
+      </Transform>
+      <Transform translation="1.31094 0 0">
+         <Shape>
+            <Appearance>
+               <PixelTexture USE="PIXTEX"/>
+               <TextureTransform center="1 1" rotation="0.785" scale="0.5 0.5" translation="0.5 0.5"/>
+               <Material/>
+            </Appearance>
+            <Cylinder/>
+         </Shape>
+      </Transform>
+      <Transform translation="5.14221 0 0">
+         <Shape>
+            <Appearance>
+               <PixelTexture USE="PIXTEX"/>
+               <TextureTransform center="1 1" rotation="0.785" scale="0.5 0.5" translation="0.5 0.5"/>
+               <Material/>
+            </Appearance>
+            <Box/>
+         </Shape>
+      </Transform>
+   </Scene>
+</X3D>

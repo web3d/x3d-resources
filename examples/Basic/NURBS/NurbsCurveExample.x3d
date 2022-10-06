@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <component level='1' name='NURBS'/>
+    <meta content='NurbsCurveExample.x3d' name='title'/>
+    <meta content='NurbsCurve exemplar showing controlPoint animation. Upper example has knot values explicitly defined, lower example has implicit knot values.' name='description'/>
+    <meta content='Charles Adams, Vincent Marchetti, Don Brutzman' name='creator'/>
+    <meta content='4 February 2003' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='videos/NurbsCurveExample.mov' name='MovingImage'/>
+    <meta content='check NurbsCurve containerField handling and weight defaults' name='TODO'/>
+    <meta content='http://edocs.nps.edu/npspubs/scholarly/theses/2003/Jun/03Jun_Adams.pdf' name='reference'/>
+    <meta content='NURBS Curve Example' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/NURBS/NurbsCurveExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='NurbsCurveExample.x3d'/>
+    <Viewpoint description='NurbsCurve' position='12 7 18'/>
+    <Transform translation='0 5 0'>
+      <Shape>
+        <NurbsCurve DEF='NurbsCurveKnotted' knot='0 0 0 0 0.5 1 1 1 1' order='4' tessellation='30' weight='1 1 1 1 1'>
+          <Coordinate DEF='np' containerField='controlPoint' point='4 6 0 7 12 0 11 6 0 15 2 0 20 6 0'/>
+        </NurbsCurve>
+        <Appearance DEF='LightGreenAppearance'>
+          <Material diffuseColor='0.8 1 0.8' emissiveColor='0.8 1 0.8'/>
+        </Appearance>
+      </Shape>
+      <Transform translation='0 7 0'>
+        <Shape>
+          <Text string='"NurbsCurve with knots"'/>
+          <Appearance USE='LightGreenAppearance'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Shape>
+      <NurbsCurve DEF='NurbsCurveUnknotted' order='4' tessellation='30'>
+        <Coordinate USE='np' containerField='controlPoint'/>
+      </NurbsCurve>
+      <Appearance DEF='LightBlueAppearance'>
+        <Material diffuseColor='0.8 0.8 1' emissiveColor='0.8 0.8 1'/>
+      </Appearance>
+    </Shape>
+    <Transform translation='0 7 0'>
+      <Shape>
+        <Text string='"NurbsCurve without knots"'/>
+        <Appearance USE='LightBlueAppearance'/>
+      </Shape>
+    </Transform>
+    <CoordinateInterpolator DEF='ci' key='0 .5 1' keyValue='4 6 0 7 12 0 11 6 0 15 2 0 20 6 0 4 6 0 7 0 0 11 6 0 15 10 0 20 6 0 4 6 0 7 12 0 11 6 0 15 2 0 20 6 0'/>
+    <TimeSensor DEF='ts' cycleInterval='6' loop='true'/>
+    <ROUTE fromField='fraction_changed' fromNode='ts' toField='set_fraction' toNode='ci'/>
+    <ROUTE fromField='value_changed' fromNode='ci' toField='set_point' toNode='np'/>
+    <!-- Authoring hint -->
+    <Transform DEF='GridXY_20x20Fixed_AdjustScale' translation='12 7 0'>
+      <Inline DEF='GridXY_20x20Fixed' url='"GridXY_20x20Fixed.x3d" "../../Savage/Tools/Authoring/GridXY_20x20Fixed.x3d" "https://savage.nps.edu/Savage/Tools/Authoring/GridXY_20x20Fixed.x3d" "GridXY_20x20Fixed.wrl" "../../Savage/Tools/Authoring/GridXY_20x20Fixed.wrl" "https://savage.nps.edu/Savage/Tools/Authoring/GridXY_20x20Fixed.wrl"'/>
+    </Transform>
+  </Scene>
+</X3D>

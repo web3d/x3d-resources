@@ -1,0 +1,296 @@
+#VRML V2.0 utf8
+
+
+EXTERNPROTO Slider 
+[
+    exposedField SFFloat min            # 0
+    exposedField SFFloat max            # 1
+    exposedField SFFloat pageSize       # .2
+
+    eventIn  SFFloat     set_position
+    field    SFFloat initial_position   # .5
+    eventOut SFFloat         position_changed 
+
+    exposedField SFFloat height         # 2
+    exposedField SFFloat radiusKnob     # .3
+    exposedField SFFloat radiusStick    # .2
+
+    exposedField SFBool smoothMovements        # TRUE
+
+    exposedField SFNode  appearance     # NULL
+]
+    "Slider.wrl#Slider"
+
+
+NavigationInfo
+{
+    type "EXAMINE"
+}
+
+Viewpoint
+{
+    position 2.741 3.259 6.600 
+    orientation -.527 .846 .075 .462 
+    description "view 1"
+}
+
+Viewpoint
+{
+    position .865 -1.591 6.723
+    orientation .973 .232 .024 .466
+    description "view 2"
+}
+
+Viewpoint
+{
+    position .934 -5.744 -.794
+    orientation .997 .060 .050 1.705
+    description "view 3"
+}
+
+Viewpoint
+{
+    position 5.165 3.009 -4.663 
+    orientation .888 .230 .399 3.139
+    description "view 4"
+}
+
+Viewpoint
+{
+    position .424 -2.489 8.627 
+    orientation .116 .234 -.965 1.866
+    description "view 5"
+}
+
+
+Viewpoint
+{
+    position 6.309 -1.261 2.853
+    orientation -.300 .639 -.708 1.922
+    description "view 6"
+}
+
+
+Transform
+{
+    children Transform
+    {
+        rotation .983  .152 .098 .286
+        children Transform
+        {
+            rotation .705 .654 -.274 -1.090
+
+            children 
+            [
+                Transform
+                {
+                    translation 2.5 0 0 
+                    rotation 0 0 -1 1.5708
+
+                    children 
+                    [
+                        DEF SldX Slider 
+                        {
+                            pageSize 1
+                            min  1
+                            max  5
+                            initial_position 2.5 
+                            radiusStick .15
+                            radiusKnob  .225
+
+                            appearance DEF App Appearance 
+                            {
+                                material Material 
+                                {
+                                    diffuseColor .75 0 .55
+                                    specularColor .67 .67 .67
+                                    emissiveColor .1 0 .07
+                                    ambientIntensity .055
+                                    shininess .157
+                                }
+                            }
+                        }
+
+                        Transform
+                        {
+                            translation  0 -1.25 0 
+                            children Shape 
+                            {
+                                appearance USE App
+
+                                geometry Cylinder 
+                                { 
+                                    radius .02
+                                    height 2.5
+                                }
+                            }                                    
+                        }
+                    ]
+                }
+
+                Transform
+                {
+                    translation 0 2.5 0
+
+                    children
+                    [
+                        DEF SldY Slider 
+                        {
+                            pageSize 1
+                            min  1
+                            max  5
+                            initial_position 2.5 
+                            radiusStick .15
+                            radiusKnob  .225
+
+                            appearance USE App
+                        }
+
+                        Transform
+                        {
+                            translation  0 -1.25 0 
+                            children Shape 
+                            {
+                                appearance USE App
+
+                                geometry Cylinder 
+                                { 
+                                    radius .02
+                                    height 2.5
+                                }
+                            }
+                        }
+                    ]
+                }
+
+                Transform
+                {
+                    translation  0 0 2.5
+                    rotation     1 0 0 1.5708
+
+                    children
+                    [
+                        DEF SldZ Slider 
+                        {
+                            pageSize 1
+                            min  1
+                            max  5
+                            initial_position 2.5 
+                            radiusStick .15
+                            radiusKnob  .225
+
+                            appearance USE App
+                        }
+
+                        Transform
+                        {
+                            translation  0 -1.25 0 
+                            children Shape 
+                            {
+                                appearance USE App
+
+                                geometry Cylinder 
+                                { 
+                                    radius .02
+                                    height 2.5
+                                }
+                            } 
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+
+
+Transform
+{
+    rotation .983  .152 .098 .286
+
+    children Transform
+    {
+        rotation .705 .654 -.274 -1.090
+
+        children DEF Trans Transform
+        {
+            children 
+            [
+                DEF TchBox TouchSensor {}
+
+                Shape 
+                {
+                    appearance Appearance {
+                        material Material {
+                            diffuseColor     .37 0 .75
+                            specularColor   .91 .91 .91
+                            emissiveColor    .05 0 .1
+                            ambientIntensity .0933
+                            shininess .41
+                        }
+                    }
+                    geometry Box { size .3 .3 .3 }
+                }
+            ]
+        }
+    }
+}
+
+DEF Worker Script
+{
+    eventIn SFFloat set_X 
+    eventIn SFFloat set_Y
+    eventIn SFFloat set_Z
+
+    eventOut SFVec3f Pos_changed
+
+    field SFVec3f Pos  1 1 1
+
+    url "vrmlscript:
+
+    function set_X(x) { Pos.x= x; }
+    function set_Y(y) { Pos.y= y; }
+    function set_Z(z) { Pos.z= z; }
+
+    function eventsProcessed()
+    {
+        Pos_changed= Pos;
+    }
+    "
+}
+
+ROUTE SldX.position_changed TO Worker.set_X
+ROUTE SldY.position_changed TO Worker.set_Y
+ROUTE SldZ.position_changed TO Worker.set_Z
+ROUTE Worker.Pos_changed TO Trans.scale
+
+
+       
+
+DEF SmoothWorker Script
+{
+    eventIn SFTime Box_touched
+
+    eventOut SFBool SmoothMovements
+
+    url "vrmlscript:
+
+    function initialize()
+    {
+        SmoothMovements= true;
+    }
+
+    function Box_touched(now)
+    {
+        SmoothMovements= !SmoothMovements;
+    }
+
+
+    "
+}
+
+ROUTE TchBox.touchTime TO SmoothWorker.Box_touched
+ROUTE SmoothWorker.SmoothMovements TO SldX.smoothMovements
+ROUTE SmoothWorker.SmoothMovements TO SldY.smoothMovements
+ROUTE SmoothWorker.SmoothMovements TO SldZ.smoothMovements
+

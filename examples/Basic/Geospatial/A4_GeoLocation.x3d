@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='Geospatial'/>
+    <meta content='A4_GeoLocation.x3d' name='title'/>
+    <meta content='Martin Reddy SRI, original example' name='creator'/>
+    <meta content='Don Brutzman NPS, X3D encoding' name='creator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Specification example georeferencing VRML objects: display standard VRML cone at latitude/longitude location of Lossiemouth, Scotland.' name='description'/>
+    <meta content='http://www.geovrml.org/1.0/doc/examples.html' name='reference'/>
+    <meta content='originals/geoloc.wrl' name='reference'/>
+    <meta content='VRML 97 encoding http://www.geovrml.org/1.0/doc/examples/geoinline.wrl' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/A4_GeoLocation.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='A4_GeoLocation.x3d'/>
+    <Group>
+      <Background groundColor='0 0 0' skyColor='1 1 1'/>
+      <GeoViewpoint description='Initial GeoViewpoint' orientation='1 0 0 -1.57' position='51.5122 -40.0 10000000'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 1.0 0.3'/>
+          <ImageTexture url='"images/earth.gif" "images/earth.jpg" "images/earth2.gif" "images/earth3.jpg" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/earth.gif" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/earth.jpg" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/earth2.gif" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/earth3.jpg"'/>
+        </Appearance>
+        <GeoElevationGrid creaseAngle='1.05' geoGridOrigin='-90 -180 0' height='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0' xDimension='11' xSpacing='36' zDimension='11' zSpacing='18'/>
+      </Shape>
+      <GeoLocation geoCoords='57.7174 -3.286119 200000'>
+        <Transform rotation='1 0 0 3.1415926'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='1 1 0'/>
+            </Appearance>
+            <Cone bottomRadius='100000' height='500000'/>
+          </Shape>
+        </Transform>
+      </GeoLocation>
+    </Group>
+  </Scene>
+</X3D>

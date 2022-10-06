@@ -1,0 +1,17 @@
+TODO: additional geometries of interest
+
+_GeometricShapes in 3D_
+
+Capsule
+Pyramids
+
+_GeometricShapes2D_
+
+Parallelogram
+Pentagon
+Hexagon
+Septagon
+Octagon
+Nonagon
+Decagon
+Dodecagon

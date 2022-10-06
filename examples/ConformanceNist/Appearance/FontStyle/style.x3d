@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='style.x3d' name='title'/>
+    <meta content='style-front.jpg' name='Image'/>
+    <meta content='http://www.nist.gov/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/members.html' name='creator'/>
+    <meta content='This file was provided by the National Institute of Standards and Technology, and is part of the X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html The information contained within this file is provided for use in establishing conformance to the ISO VRML97 Specification. Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology. This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are derived from it, and any modified versions bear some notice that they have been modified.' name='disclaimer'/>
+    <meta content='Correct definition and compliance of this conformance scene is maintained by the X3D Working Group, https://www.web3d.org/working-groups/x3d' name='info'/>
+    <meta content='Michael Kass NIST, Don Brutzman NPS' name='translator'/>
+    <meta content='21 January 2001' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Test style attribute for FontStyle node. All three required family fonts are used to test the four "style" types of "PLAIN" (upper left quadrant), "ITALIC" (upper right quadrant), "BOLD" (lower left quadrant) and "BOLDITALIC" (lower right quadrant). Text should reflect these styles.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/FontStyle/style.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='style.x3d'/>
+    <Viewpoint description='FontStyle style attribute' position='0 0 20'/>
+    <Transform translation='-14 3 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is PLAIN SERIF"'>
+          <FontStyle/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='-14 2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is PLAIN SANS"'>
+          <FontStyle family='"SANS"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='-14 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is PLAIN TYPEWRITER"'>
+          <FontStyle family='"TYPEWRITER"'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 3 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is ITALIC SERIF"'>
+          <FontStyle style='ITALIC'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is ITALIC SANS"'>
+          <FontStyle family='"SANS"' style='ITALIC'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is ITALIC TYPEWRITER"'>
+          <FontStyle family='"TYPEWRITER"' style='ITALIC'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='-14 -1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is BOLD SERIF"'>
+          <FontStyle style='BOLD'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='-14 -2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is BOLD SANS"'>
+          <FontStyle family='"SANS"' style='BOLD'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='-14 -3 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is BOLD TYPEWRITER"'>
+          <FontStyle family='"TYPEWRITER"' style='BOLD'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 -1 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is BOLDITALIC SERIF"'>
+          <FontStyle style='BOLDITALIC'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 -2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is BOLDITALIC SANS"'>
+          <FontStyle family='"SANS"' style='BOLDITALIC'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='0 -3 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"This is BOLDITALIC TYPEWRITER"'>
+          <FontStyle family='"TYPEWRITER"' style='BOLDITALIC'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform>
+      <Shape>
+        <IndexedLineSet DEF='LINES' coordIndex='0 1 -1 1 2 -1 3 4 -1 4 5 -1 6 7 -1 7 8 -1 9 10 -1 10 11 -1 12 13 -1 13 14 -1 15 16 -1 16 17 -1 18 19 -1 19 20 -1 21 22 -1 22 23 -1 24 25 -1 25 26 -1 27 28 -1 28 29 -1'>
+          <Coordinate point='-20 -5 0 0 -5 0 20 -5 0 -20 -4 0 0 -4 0 20 -4 0 -20 -3 0 0 -3 0 20 -3 0 -20 -2 0 0 -2 0 20 -2 0 -20 -1 0 0 -1 0 20 -1 0 -20 1 0 0 1 0 20 1 0 -20 2 0 0 2 0 20 2 0 -20 3 0 0 3 0 20 3 0 -20 4 0 0 4 0 20 4 0 -20 5 0 0 5 0 20 5 0'/>
+        </IndexedLineSet>
+        <Appearance>
+          <Material emissiveColor='0 1 0'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform>
+      <Shape>
+        <Appearance>
+          <Material emissiveColor='0 1 0'/>
+        </Appearance>
+        <IndexedLineSet DEF='AXES' coordIndex='0 1 -1 2 3 -1'>
+          <Coordinate point='-20 0 0 20 0 0 0 5 0 0 -5 0'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

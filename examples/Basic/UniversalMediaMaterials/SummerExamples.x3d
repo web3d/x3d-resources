@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='SummerExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SummerExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer00' url='"SummerPrototypes.x3d#Summer00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer00" "SummerPrototypes.wrl#Summer00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer01' url='"SummerPrototypes.x3d#Summer01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer01" "SummerPrototypes.wrl#Summer01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer02' url='"SummerPrototypes.x3d#Summer02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer02" "SummerPrototypes.wrl#Summer02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer03' url='"SummerPrototypes.x3d#Summer03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer03" "SummerPrototypes.wrl#Summer03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer04' url='"SummerPrototypes.x3d#Summer04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer04" "SummerPrototypes.wrl#Summer04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer05' url='"SummerPrototypes.x3d#Summer05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer05" "SummerPrototypes.wrl#Summer05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer06' url='"SummerPrototypes.x3d#Summer06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer06" "SummerPrototypes.wrl#Summer06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer07' url='"SummerPrototypes.x3d#Summer07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer07" "SummerPrototypes.wrl#Summer07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer08' url='"SummerPrototypes.x3d#Summer08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer08" "SummerPrototypes.wrl#Summer08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer09' url='"SummerPrototypes.x3d#Summer09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer09" "SummerPrototypes.wrl#Summer09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer10' url='"SummerPrototypes.x3d#Summer10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer10" "SummerPrototypes.wrl#Summer10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer11' url='"SummerPrototypes.x3d#Summer11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer11" "SummerPrototypes.wrl#Summer11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer12' url='"SummerPrototypes.x3d#Summer12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer12" "SummerPrototypes.wrl#Summer12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer13' url='"SummerPrototypes.x3d#Summer13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer13" "SummerPrototypes.wrl#Summer13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer14' url='"SummerPrototypes.x3d#Summer14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer14" "SummerPrototypes.wrl#Summer14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer15' url='"SummerPrototypes.x3d#Summer15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer15" "SummerPrototypes.wrl#Summer15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer16' url='"SummerPrototypes.x3d#Summer16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer16" "SummerPrototypes.wrl#Summer16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer17' url='"SummerPrototypes.x3d#Summer17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer17" "SummerPrototypes.wrl#Summer17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer18' url='"SummerPrototypes.x3d#Summer18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer18" "SummerPrototypes.wrl#Summer18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer19' url='"SummerPrototypes.x3d#Summer19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer19" "SummerPrototypes.wrl#Summer19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer20' url='"SummerPrototypes.x3d#Summer20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer20" "SummerPrototypes.wrl#Summer20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer21' url='"SummerPrototypes.x3d#Summer21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer21" "SummerPrototypes.wrl#Summer21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer22' url='"SummerPrototypes.x3d#Summer22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer22" "SummerPrototypes.wrl#Summer22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer23' url='"SummerPrototypes.x3d#Summer23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer23" "SummerPrototypes.wrl#Summer23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer24' url='"SummerPrototypes.x3d#Summer24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer24" "SummerPrototypes.wrl#Summer24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer25' url='"SummerPrototypes.x3d#Summer25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer25" "SummerPrototypes.wrl#Summer25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer26' url='"SummerPrototypes.x3d#Summer26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer26" "SummerPrototypes.wrl#Summer26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer27' url='"SummerPrototypes.x3d#Summer27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer27" "SummerPrototypes.wrl#Summer27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer28' url='"SummerPrototypes.x3d#Summer28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer28" "SummerPrototypes.wrl#Summer28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer29' url='"SummerPrototypes.x3d#Summer29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer29" "SummerPrototypes.wrl#Summer29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer30' url='"SummerPrototypes.x3d#Summer30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer30" "SummerPrototypes.wrl#Summer30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer31' url='"SummerPrototypes.x3d#Summer31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer31" "SummerPrototypes.wrl#Summer31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer32' url='"SummerPrototypes.x3d#Summer32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer32" "SummerPrototypes.wrl#Summer32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer33' url='"SummerPrototypes.x3d#Summer33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer33" "SummerPrototypes.wrl#Summer33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Summer34' url='"SummerPrototypes.x3d#Summer34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.x3d#Summer34" "SummerPrototypes.wrl#Summer34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.wrl#Summer34"'/>
+    <Group bboxSize='10.5 10.5 2.0'>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Summer00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Summer00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer00' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Summer00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Summer01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Summer01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer01' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Summer02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Summer02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer02' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Summer03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Summer03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer03' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Summer04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Summer04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer04' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Summer05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Summer05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer05' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Summer06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Summer06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer06' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Summer07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Summer07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer07' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Summer08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Summer08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer08' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Summer09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Summer09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer09' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Summer10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Summer10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer10' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Summer11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Summer11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer11' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Summer12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Summer12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer12' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Summer13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Summer13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer13' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Summer14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Summer14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer14' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Summer15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Summer15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer15' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Summer16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Summer16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer16' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Summer17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Summer17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer17' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Summer18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Summer18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer18' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Summer19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Summer19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer19' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Summer20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Summer20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer20' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Summer21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Summer21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer21' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Summer22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Summer22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer22' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer2" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Summer23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Summer23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer23' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Summer24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Summer24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer24' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Summer25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Summer25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer25' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Summer26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Summer26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer26' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Summer27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Summer27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer27' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Summer28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Summer28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer28' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Summer29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Summer29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer29' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Summer30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Summer30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer30' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Summer31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Summer31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer31' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Summer32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Summer32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer32' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Summer33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Summer33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer33' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Summer34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Summer34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Summer34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Summer34' parameter='"target=_source"' url='"SummerPrototypes.html#ProtoDeclare_Summer34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SummerPrototypes.html#ProtoDeclare_Summer34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Summer34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

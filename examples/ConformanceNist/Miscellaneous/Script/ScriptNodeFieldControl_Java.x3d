@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ScriptNodeFieldControl-Java.x3d' name='title'/>
+    <meta content='Script node interface between VRML and Java: this conformance example tests field-based VRML-Java functionality.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='30 November 1997' name='created'/>
+    <meta content='8 July 2001' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ScriptConformance/ScriptNodeFieldControl-Java.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/Miscellaneous/Script/ScriptNodeFieldControl-Java.x3d' name='identifier'/>
+    <meta content='VRML 97 Specification, Annex B, Java platform scripting reference' name='reference'/>
+    <meta content='https://www.web3d.org/technicalinfo/specifications/vrml97/part1/java.html' name='reference'/>
+    <meta content='https://www.web3d.org/technicalinfo/specifications/vrml97/part1/java.html#B.5' name='reference'/>
+    <meta content='Don Brutzman, "The Virtual Reality Modeling Language and Java," Communications of the ACM, vol. 41 no. 6, June 1998, pp. 57-64.' name='reference'/>
+    <meta content='VrmlJavaPaper.pdf' name='reference'/>
+    <meta content='ScriptNodeFieldControl.java' name='reference'/>
+    <meta content='javadoc/index.html' name='reference'/>
+    <meta content='Makefile' name='reference'/>
+    <meta content='Makefile.out' name='reference'/>
+    <meta content='Vrml97ScriptNodePackages.jar' name='reference'/>
+    <meta content='ScriptNodeFieldControl-JavaConsoleOutput.txt' name='reference'/>
+    <meta content='ScriptNodeFieldControl-JavaSnapshots.html' name='reference'/>
+    <meta content='ScriptNodeFieldControl-EcmaScript.x3d' name='reference'/>
+    <meta content='VRML X3D Java Script conformance' name='subject'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ScriptNodeFieldControl-Java.x3d'/>
+    <Viewpoint description='View test' position='0 0 12'/>
+    <Group>
+      <TouchSensor DEF='ClickTextToTest' description='Click text to test'/>
+      <Transform DEF='TextPosition'>
+        <!-- TextPosition translation is modified by InterfaceScriptNode. -->
+        <Shape>
+          <Text DEF='MessageToUser'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.8'/>
+          </Text>
+          <Appearance>
+            <Material DEF='TextMaterial' diffuseColor='0.8 0.2 0.2' shininess='0.9'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <!-- Warning: VRML97-style scripting, not X3D Scene Authoring Interface (SAI) -->
+      <Script DEF='InterfaceScriptNode' directOutput='true' url='"ScriptNodeFieldControl.class" "https://www.web3d.org/x3d/content/examples/ScriptConformance/ScriptNodeFieldControl.class"'>
+        <!-- No default values are allowed for eventIn or eventOut. -->
+        <field accessType='inputOnly' name='startTime' type='SFTime'/>
+        <field accessType='initializeOnly' name='sceneText' type='SFNode'>
+          <Text USE='MessageToUser'/>
+        </field>
+        <field accessType='initializeOnly' name='sceneTransform' type='SFNode'>
+          <Transform USE='TextPosition'/>
+        </field>
+        <field accessType='initializeOnly' name='sceneMaterial' type='SFNode'>
+          <Material USE='TextMaterial'/>
+        </field>
+      </Script>
+    </Group>
+    <ROUTE fromField='touchTime' fromNode='ClickTextToTest' toField='startTime' toNode='InterfaceScriptNode'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<molecule convention="MDLMol" title="Cyclopentanamine">
+
+  <formula>C5 H11 N</formula>
+  <float title="molecule weight">85.15</float>
+  <float title="melting point" units="degC">-6</float>
+  <float title="boiling point" units="degC">106</float>
+  <float title="specific gravity">0.863</float>
+
+  <atomArray>
+    <atom id="cyclopentanamine_a1">
+      <string builtin="elementType">N</string>
+      <float builtin="x3">0.6333</float>
+      <float builtin="y3">2.5818</float>
+      <float builtin="z3">1.6112</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">17.15647651303542</float>
+      <float builtin="y2">-52.802205320103035</float>
+    </atom>
+    <atom id="cyclopentanamine_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.0204</float>
+      <float builtin="y3">2.1653</float>
+      <float builtin="z3">1.9102</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">7.885966681787003</float>
+      <float builtin="y2">-24.270509831248425</float>
+    </atom>
+    <atom id="cyclopentanamine_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.053</float>
+      <float builtin="y3">3.047</float>
+      <float builtin="z3">1.1939</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">25.519524250561197</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="cyclopentanamine_a4">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">4.2903</float>
+      <float builtin="y3">2.1762</float>
+      <float builtin="z3">0.9973</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">7.885966681787004</float>
+      <float builtin="y2">24.27050983124842</float>
+    </atom>
+    <atom id="cyclopentanamine_a5">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.8619</float>
+      <float builtin="y3">0.7218</float>
+      <float builtin="z3">1.1851</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">-20.645728807067595</float>
+      <float builtin="y2">15.0</float>
+    </atom>
+    <atom id="cyclopentanamine_a6">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.3704</float>
+      <float builtin="y3">0.7241</float>
+      <float builtin="z3">1.4997</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">-20.6457288070676</float>
+      <float builtin="y2">-14.999999999999998</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="cyclopentanamine_b1">
+      <string builtin="atomRef">cyclopentanamine_a1</string>
+      <string builtin="atomRef">cyclopentanamine_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclopentanamine_b4">
+      <string builtin="atomRef">cyclopentanamine_a2</string>
+      <string builtin="atomRef">cyclopentanamine_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclopentanamine_b5">
+      <string builtin="atomRef">cyclopentanamine_a6</string>
+      <string builtin="atomRef">cyclopentanamine_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclopentanamine_b7">
+      <string builtin="atomRef">cyclopentanamine_a3</string>
+      <string builtin="atomRef">cyclopentanamine_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclopentanamine_b10">
+      <string builtin="atomRef">cyclopentanamine_a4</string>
+      <string builtin="atomRef">cyclopentanamine_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="cyclopentanamine_b13">
+      <string builtin="atomRef">cyclopentanamine_a5</string>
+      <string builtin="atomRef">cyclopentanamine_a6</string>
+      <string builtin="order">1</string>
+    </bond>
+  </bondArray>
+</molecule>

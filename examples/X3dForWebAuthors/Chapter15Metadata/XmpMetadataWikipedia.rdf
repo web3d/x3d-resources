@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xap="http://ns.adobe.com/xap/1.0/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Area="http://ns.adobe.com/xmp/sType/Area#"
+     xmlns:exif="http://ns.adobe.com/exif/1.0/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:regions="http://www.metadataworkinggroup.com/schemas/regions/"
+     xmlns:Dimensions="http://ns.adobe.com/xap/1.0/sType/Dimensions#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.adobe.com/exif/1.0/ExifVersion -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/exif/1.0/ExifVersion"/>
+    
+
+
+    <!-- http://ns.adobe.com/exif/1.0/PixelXDimension -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/exif/1.0/PixelXDimension"/>
+    
+
+
+    <!-- http://ns.adobe.com/exif/1.0/PixelYDimension -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/exif/1.0/PixelYDimension"/>
+    
+
+
+    <!-- http://ns.adobe.com/xap/1.0/CreatorTool -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xap/1.0/CreatorTool"/>
+    
+
+
+    <!-- http://ns.adobe.com/xap/1.0/sType/Dimensions#h -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xap/1.0/sType/Dimensions#h"/>
+    
+
+
+    <!-- http://ns.adobe.com/xap/1.0/sType/Dimensions#unit -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xap/1.0/sType/Dimensions#unit"/>
+    
+
+
+    <!-- http://ns.adobe.com/xap/1.0/sType/Dimensions#w -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xap/1.0/sType/Dimensions#w"/>
+    
+
+
+    <!-- http://ns.adobe.com/xmp/sType/Area#h -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xmp/sType/Area#h"/>
+    
+
+
+    <!-- http://ns.adobe.com/xmp/sType/Area#unit -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xmp/sType/Area#unit"/>
+    
+
+
+    <!-- http://ns.adobe.com/xmp/sType/Area#w -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xmp/sType/Area#w"/>
+    
+
+
+    <!-- http://ns.adobe.com/xmp/sType/Area#x -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xmp/sType/Area#x"/>
+    
+
+
+    <!-- http://ns.adobe.com/xmp/sType/Area#y -->
+
+    <AnnotationProperty rdf:about="http://ns.adobe.com/xmp/sType/Area#y"/>
+    
+
+
+    <!-- http://www.metadataworkinggroup.com/schemas/regions/AppliedToDimensions -->
+
+    <AnnotationProperty rdf:about="http://www.metadataworkinggroup.com/schemas/regions/AppliedToDimensions"/>
+    
+
+
+    <!-- http://www.metadataworkinggroup.com/schemas/regions/Area -->
+
+    <AnnotationProperty rdf:about="http://www.metadataworkinggroup.com/schemas/regions/Area"/>
+    
+
+
+    <!-- http://www.metadataworkinggroup.com/schemas/regions/RegionList -->
+
+    <AnnotationProperty rdf:about="http://www.metadataworkinggroup.com/schemas/regions/RegionList"/>
+    
+
+
+    <!-- http://www.metadataworkinggroup.com/schemas/regions/Regions -->
+
+    <AnnotationProperty rdf:about="http://www.metadataworkinggroup.com/schemas/regions/Regions"/>
+    
+
+
+    <!-- http://www.metadataworkinggroup.com/schemas/regions/Type -->
+
+    <AnnotationProperty rdf:about="http://www.metadataworkinggroup.com/schemas/regions/Type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag -->
+
+    <Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"/>
+    <rdf:Description>
+        <regions:Area>
+            <rdf:Description>
+                <Area:h>0.4264919941775837</Area:h>
+                <Area:unit>normalized</Area:unit>
+                <Area:w>0.32127192982456143</Area:w>
+                <Area:x>0.680921052631579</Area:x>
+                <Area:y>0.3537117903930131</Area:y>
+            </rdf:Description>
+        </regions:Area>
+        <regions:Type></regions:Type>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="file:/C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/XmpMetadataWikipedia.xml">
+        <exif:ExifVersion>0220</exif:ExifVersion>
+        <exif:PixelXDimension>912</exif:PixelXDimension>
+        <regions:Regions>
+            <rdf:Description>
+                <regions:AppliedToDimensions>
+                    <rdf:Description>
+                        <Dimensions:h>687</Dimensions:h>
+                        <Dimensions:unit>pixel</Dimensions:unit>
+                        <Dimensions:w>912</Dimensions:w>
+                    </rdf:Description>
+                </regions:AppliedToDimensions>
+                <regions:RegionList>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"/>
+                    </rdf:Description>
+                </regions:RegionList>
+            </rdf:Description>
+        </regions:Regions>
+        <exif:PixelYDimension>687</exif:PixelYDimension>
+        <xap:CreatorTool>Picasa</xap:CreatorTool>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

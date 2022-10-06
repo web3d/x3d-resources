@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <meta content='WaypointInterpolatorPrototype.x3d' name='title'/>
+    <meta content='Prototype to provide a set of waypoints, plus either leg durations or speed, and return position/orientation interpolation values. Included example can be stopped/started via TouchSensor mouse over floor Box.' name='description'/>
+    <meta content='Don Brutzman, Curtis Blais, Jeff Weekley, Jane Wu' name='creator'/>
+    <meta content='6 April 2001' name='created'/>
+    <meta content='3 March 2013' name='modified'/>
+    <meta content='https://savage.nps.edu/Savage/Tools/Animation/WaypointInterpolatorPrototype.x3d' name='identifier'/>
+    <meta content='https://savage.nps.edu/Savage/Tools/Animation/WaypointInterpolatorExample.x3d' name='reference'/>
+    <meta content='browsers do not compute pitch angle consistently' name='warning'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <ProtoDeclare appinfo='Reads waypoints and legSpeeds/legDurations/defaultSpeed to provide a customizable position/orientation interpolator.' name='WaypointInterpolator'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' appinfo='Short description of what is animated by this WaypointInterpolator.' name='description' type='SFString'/>
+        <field accessType='initializeOnly' appinfo='Waypoints being traversed with interpolation of intermediate positions and orientations.' name='waypoints' type='MFVec3f' value='0 0 0 0 0 0'/>
+        <field accessType='inputOnly' appinfo='Add another single waypoint to array of waypoints recalculate interpolator values.' name='add_waypoint' type='SFVec3f'/>
+        <field accessType='inputOnly' appinfo='Replace all waypoints recalculate interpolator values.' name='set_waypoints' type='MFVec3f'/>
+        <field accessType='initializeOnly' appinfo='Whether to pitch child geometry (such as a vehicle) up or down to match vertical slope' name='pitchUpDownForVerticalWaypoints' type='SFBool' value='false'/>
+        <!-- Priority of use: legSpeeds (m/sec), legDurations (seconds), defaultSpeed (m/sec) -->
+        <field accessType='initializeOnly' appinfo='Units m/sec. If used, array lengths for legSpeeds and legDurations must be one less than number of waypoints.' name='legSpeeds' type='MFFloat'>
+          <!-- default initialization is empty array [] -->
+        </field>
+        <field accessType='initializeOnly' appinfo='Units in seconds. If used, array lengths for legSpeeds and legDurations must be one less than number of waypoints.' name='legDurations' type='MFFloat'>
+          <!-- default initialization is empty array [] -->
+        </field>
+        <field accessType='initializeOnly' appinfo='Units m/sec.' name='defaultSpeed' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' appinfo='turningRate (degrees/second) also determines standoff distance prior to waypoint where turn commences. If 0 turns are instantaneous.' name='turningRate' type='SFFloat' value='90'/>
+        <field accessType='outputOnly' appinfo='Output calculation summing all leg durations, useful for setting TimeSensor cycleInterval. Units in seconds.' name='totalDuration' type='SFTime'/>
+        <!-- interpolation fields -->
+        <field accessType='inputOnly' appinfo='exposed PositionInterpolator and OrientationInterpolator setting' name='set_fraction' type='SFFloat'/>
+        <field accessType='outputOnly' appinfo='exposed PositionInterpolator setting' name='position_changed' type='SFVec3f'/>
+        <field accessType='outputOnly' appinfo='exposed OrientationInterpolator setting' name='orientation_changed' type='SFRotation'/>
+        <!-- display-related fields -->
+        <field accessType='inputOutput' appinfo='default color for non-active line segments' name='lineColor' type='SFColor' value='0.6 0.6 0.6'/>
+        <field accessType='inputOutput' appinfo='highlightSegmentColors must contain two color values for each endpoint of the highlight segment.' name='highlightSegmentColor' type='SFColor' value='0.3 0.3 1'/>
+        <field accessType='inputOutput' appinfo='1.0 is completely transparent, 0.0 is completely opaque.' name='transparency' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' appinfo='allowed values: none; waypoints (produce labels at each waypoint); or interpolation (produce single moving label at interpolator time course speed location)' name='labelDisplayMode' type='SFString' value='waypoints'/>
+        <field accessType='initializeOnly' appinfo='allowed values: altitude depth (negate Y value) none' name='heightLabel' type='SFString' value='altitude'/>
+        <field accessType='initializeOnly' appinfo='heightLabel relative location' name='labelOffset' type='SFVec3f' value='0 -1 0'/>
+        <field accessType='initializeOnly' appinfo='heightLabel text size' name='labelFontSize' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' appinfo='heightLabel text color' name='labelColor' type='SFColor' value='0.8 0.8 0.8'/>
+        <field accessType='initializeOnly' appinfo='enable console output to trace script computations and prototype progress' name='traceEnabled' type='SFBool' value='false'/>
+        <field accessType='initializeOnly' appinfo='Output the number of waypoints totalDistance and totalDuration to console upon initialization' name='outputInitializationComputations' type='SFBool' value='true'/>
+        <field accessType='inputOutput' appinfo='default color for vertical drop-line segments' name='verticalDropLineColor' type='SFColor' value='0.4 0.4 0.4'/>
+        <field accessType='inputOutput' appinfo='1.0 is completely transparent, 0.0 is completely opaque.' name='verticalDropLineTransparency' type='SFFloat' value='1'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- First node in prototype determines node type of prototype. This prototype extends PositionInterpolator and OrientationInterpolator functionality. Nevertheless, a Group node is wrapped around all of them in order to avoid a Prototype bug in CosmoPlayer. -->
+        <Group>
+          <!-- key, keyValue will be generated by WaypointTrackScript. set_fraction is a common input to both interpolators. Interpolator value outputs are returned via the corresponding Prototype field interfaces. -->
+          <PositionInterpolator DEF='WaypointPI.instance' key='0 0.5 1' keyValue='0 0 0 1 1 1 2 2 2'>
+            <IS>
+              <connect nodeField='set_fraction' protoField='set_fraction'/>
+              <connect nodeField='value_changed' protoField='position_changed'/>
+            </IS>
+          </PositionInterpolator>
+          <OrientationInterpolator DEF='WaypointOI.instance'>
+            <IS>
+              <connect nodeField='set_fraction' protoField='set_fraction'/>
+              <connect nodeField='value_changed' protoField='orientation_changed'/>
+            </IS>
+          </OrientationInterpolator>
+          <Group DEF='CoordinateLabelsAndViewpointsGroup'/>
+          <Script DEF='WaypointTrackScript' directOutput='true' mustEvaluate='false'>
+            <field accessType='initializeOnly' name='description' type='SFString'/>
+            <field accessType='initializeOnly' name='waypoints' type='MFVec3f'/>
+            <field accessType='inputOnly' name='add_waypoint' type='SFVec3f'/>
+            <field accessType='inputOnly' name='set_waypoints' type='MFVec3f'/>
+            <field accessType='initializeOnly' name='pitchUpDownForVerticalWaypoints' type='SFBool'/>
+            <field accessType='initializeOnly' name='legSpeeds' type='MFFloat'/>
+            <field accessType='initializeOnly' name='legDurations' type='MFFloat'/>
+            <field accessType='initializeOnly' name='defaultSpeed' type='SFFloat'/>
+            <field accessType='initializeOnly' name='turningRate' type='SFFloat'/>
+            <field accessType='outputOnly' name='totalDuration' type='SFTime'/>
+            <field accessType='initializeOnly' name='WaypointPI' type='SFNode'>
+              <PositionInterpolator USE='WaypointPI.instance'/>
+            </field>
+            <field accessType='initializeOnly' name='WaypointOI' type='SFNode'>
+              <OrientationInterpolator USE='WaypointOI.instance'/>
+            </field>
+            <field accessType='outputOnly' name='pointIndices' type='MFInt32'/>
+            <field accessType='initializeOnly' name='OutputLabelsGroup' type='SFNode'>
+              <Group USE='CoordinateLabelsAndViewpointsGroup'/>
+            </field>
+            <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+            <field accessType='outputOnly' appinfo='Initialized to (0 0 0 0 0 0)' name='highlightCoordinates' type='MFVec3f'/>
+            <field accessType='initializeOnly' name='heightLabel' type='SFString'/>
+            <field accessType='initializeOnly' name='labelDisplayMode' type='SFString'/>
+            <field accessType='initializeOnly' name='labelOffset' type='SFVec3f'/>
+            <field accessType='initializeOnly' name='labelFontSize' type='SFFloat'/>
+            <field accessType='initializeOnly' name='labelColor' type='SFColor'/>
+            <field accessType='outputOnly' name='labelInterpolation' type='MFString'/>
+            <field accessType='initializeOnly' name='traceEnabled' type='SFBool'/>
+            <field accessType='initializeOnly' appinfo='Output the number of waypoints totalDistance and totalDuration to console upon initialization' name='outputInitializationComputations' type='SFBool'/>
+            <!-- local variables (do not use internal var declarations) for persistence -->
+            <field accessType='initializeOnly' appinfo='whether or not an error was detected during script processing.' name='scriptError' type='SFBool' value='false'/>
+            <field accessType='initializeOnly' appinfo='retain state information while constructing fraction array' name='previousFractionIndex' type='SFInt32' value='0'/>
+            <field accessType='initializeOnly' appinfo='label' name='depthString' type='SFString'/>
+            <field accessType='initializeOnly' appinfo='label' name='whichRotationVersion' type='SFString'/>
+            <field accessType='outputOnly' name='verticalDropLineIndices' type='MFInt32'/>
+            <field accessType='outputOnly' name='verticalDropLinePoints' type='MFVec3f'/>
+            <field accessType='initializeOnly' name='positionKey' type='MFFloat' value='0'/>
+            <field accessType='initializeOnly' name='positionKeyValueArray' type='MFVec3f'/>
+            <field accessType='outputOnly' name='finalPositionKey' type='MFFloat'/>
+            <field accessType='outputOnly' name='finalPositionKeyValueArray' type='MFVec3f'/>
+            <field accessType='initializeOnly' name='distances' type='MFFloat'/>
+            <field accessType='initializeOnly' name='pointIndicesAccumulator' type='MFInt32'/>
+            <field accessType='initializeOnly' name='verticalDropLineIndicesAccumulator' type='MFInt32'/>
+            <field accessType='initializeOnly' name='verticalDropLinePointsAccumulator' type='MFVec3f'/>
+            <field accessType='initializeOnly' name='totalDistance' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='orientations' type='MFRotation'/>
+            <field accessType='initializeOnly' name='dx' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='dy' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='dz' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='legDistance' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='heading' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='pitchAngle' type='SFFloat' value='0'/>
+            <field accessType='initializeOnly' name='orientationKey' type='MFFloat'/>
+            <field accessType='initializeOnly' name='newKey' type='MFFloat'/>
+            <field accessType='initializeOnly' name='newKeyValue' type='MFRotation'/>
+            <field accessType='initializeOnly' name='outputChild' type='MFNode' value='NULL'/>
+            <field accessType='initializeOnly' name='rotatedVector' type='SFVec3f' value='0 0 0'/>
+            <IS>
+              <connect nodeField='description' protoField='description'/>
+              <connect nodeField='waypoints' protoField='waypoints'/>
+              <connect nodeField='add_waypoint' protoField='add_waypoint'/>
+              <connect nodeField='set_waypoints' protoField='set_waypoints'/>
+              <connect nodeField='pitchUpDownForVerticalWaypoints' protoField='pitchUpDownForVerticalWaypoints'/>
+              <connect nodeField='legSpeeds' protoField='legSpeeds'/>
+              <connect nodeField='legDurations' protoField='legDurations'/>
+              <connect nodeField='defaultSpeed' protoField='defaultSpeed'/>
+              <connect nodeField='turningRate' protoField='turningRate'/>
+              <connect nodeField='totalDuration' protoField='totalDuration'/>
+              <connect nodeField='set_fraction' protoField='set_fraction'/>
+              <connect nodeField='heightLabel' protoField='heightLabel'/>
+              <connect nodeField='labelDisplayMode' protoField='labelDisplayMode'/>
+              <connect nodeField='labelOffset' protoField='labelOffset'/>
+              <connect nodeField='labelFontSize' protoField='labelFontSize'/>
+              <connect nodeField='labelColor' protoField='labelColor'/>
+              <connect nodeField='traceEnabled' protoField='traceEnabled'/>
+              <connect nodeField='outputInitializationComputations' protoField='outputInitializationComputations'/>
+            </IS>
+            <![CDATA[ecmascript:
+
+function tracePrint (outputValue)
+{
+	if (traceEnabled) forcePrint (outputValue);
+}
+function forcePrint (outputValue)
+{
+	// try to ensure outputValue is converted to string despite browser idiosyncracies
+    outputString = outputValue.toString(); // utility function according to spec
+    if (outputString == null) outputString = outputValue; // direct cast
+
+    Browser.print ('[WaypointInterpolator ' + description + '] ' + outputString + '\n');
+}
+
+function distance (p1, p2)
+{
+	return Math.sqrt (
+		(p2.x - p1.x) * (p2.x - p1.x) +
+		(p2.y - p1.y) * (p2.y - p1.y) +
+		(p2.z - p1.z) * (p2.z - p1.z));
+}
+
+function normalize2Pi (angle)
+{
+	twoPi = 2 * Math.PI;
+	x = angle;
+	while (x >= twoPi) x = x - twoPi;
+	while (x <  0)     x = x + twoPi;
+	return x;
+}
+
+function normalizePi (angle)
+{
+	twoPi = 2 * Math.PI;
+	x = angle;
+	while (x >=  Math.PI) x = x - twoPi;
+	while (x <  -Math.PI) x = x + twoPi;
+	return x;
+}
+
+function degrees (angle)
+{
+	return angle * 180.0 / Math.PI;
+}
+
+function radians (theta)
+{
+	return theta * Math.PI / 180.0;
+}
+
+function initialize ()
+{
+	saveTrace   = traceEnabled;
+        traceEnabled = true;                     // debug use
+        outputInitializationComputations = true; // debug use
+        
+	scriptError = false;
+	traceEnabled= false; // set traceEnabled=true for selective debug during initialization only
+
+	forcePrint ('initializing new ' + waypoints.length + '-point WaypointInterpolator ' + description);
+	tracePrint ('Browser.name       =' + Browser.name);
+	tracePrint ('WaypointPI.key     =' + WaypointPI.key.toString());
+	tracePrint ('WaypointPI.keyValue=' + WaypointPI.keyValue.toString());
+        
+// TODO forcePrint ('Returning, initialization trace complete.');
+// TODO return;
+
+	previousFractionIndex = -1;
+	tracePrint ('waypoints       =' + waypoints.toString());
+	if ((waypoints.length == 2) &&
+	    (waypoints[0].x == 0) && (waypoints[0].y == 0) && (waypoints[0].z == 0) &&
+	    (waypoints[1].x == 0) && (waypoints[1].y == 0) && (waypoints[1].z == 0))
+	{
+		tracePrint ('[default waypoints, no action needed]');
+		return;
+	}
+	if (waypoints.length < 2)
+	{
+		forcePrint ('*** error: insufficient waypoints, WaypointInterpolator ignored ***');
+		scriptError=true;
+		return;
+	}
+	if (	heightLabel.toLowerCase()!='altitude' &&
+		heightLabel.toLowerCase()!='depth' &&
+		heightLabel.toLowerCase()!='none')
+	{
+		forcePrint ('*** error, heightLabel =' + heightLabel + ', allowed values (none, altitude, depth) ***');
+		heightLabel ='none';
+	}
+
+	useDefaultSpeed = false; // initialize booleans
+	useLegSpeeds    = false;
+	useLegDurations = false;
+
+	if ((legSpeeds.length == 0) && (legDurations.length == 0)) // use defaultSpeed
+	{
+		tracePrint ('defaultSpeed    =' + defaultSpeed.toString() + ' meters/second');
+		if (defaultSpeed <= 0)
+		{
+			forcePrint ('*** error, defaultSpeed <= 0 ***');
+			scriptError=true;
+			return;
+		}
+		else
+		{
+			useDefaultSpeed = true;
+			tracePrint ('useDefaultSpeed = true');
+		}
+	}
+	else if (legSpeeds.length > 0)
+	{
+		tracePrint ('legSpeeds       =' + legSpeeds.toString() + ' meters/second');
+		if (legSpeeds.length != waypoints.length - 1)
+		{
+			forcePrint ('*** error, legSpeeds.length (' + legSpeeds.length + ' must be one less than waypoints.length (' + waypoints.length + ') ***');
+			scriptError=true;
+			return;
+		}
+		for (i = 0; i < legSpeeds.length; i++)
+		{
+			if (legSpeeds[i] <= 0)
+			{
+				forcePrint ('*** error, legSpeeds[' + i + '] zero or negative ***');
+				scriptError=true;
+				return;
+			}
+		}
+		if (legDurations.length > 0)
+			tracePrint ('warning: legDurations ignored, useLegSpeeds=true');
+		else	tracePrint ('useLegSpeeds=true');
+		useLegSpeeds=true;
+	}
+	else // legDurations.length > 0
+	{
+                // Xj3D X3DFieldreader.java line 1920: parse error fails to read MFTime values; PositionInterpolator.key destination uses MFFloat anyway
+		forcePrint ('legDurations    =' + legDurations.toString() + ' seconds');
+		if ((legDurations.length != 1) && (legDurations.length != waypoints.length - 1))
+		{
+			forcePrint ('*** error, legDurations.length must be one less than waypoints.length ***');
+			scriptError=true;
+			return;
+		}
+		for (i = 0; i < legDurations.length; i++)
+		{
+			if (legDurations[i] < 0)
+			{
+				legDurations[i] = Math.abs(legDurations[i]);
+				forcePrint ('*** error, legDurations[' + i + ']= -' + legDurations[i]
+					+ ' is less than zero ***');
+				scriptError=true;
+				return;
+			}
+			else if (legDurations[i] == 0)
+			{
+				forcePrint ('*** Warning, zero value encountered/ignored: ' +
+				'legDurations[' + i + '] =' + legDurations[i]);
+			}
+		}
+		tracePrint ('useLegDurations=true');
+		useLegDurations=true;
+	}
+	positionKeyValueArray = waypoints;
+
+	for (i = 0; i < (waypoints.length - 1); i++)
+	{
+		distances[i] = Math.sqrt (
+			(waypoints[i+1].x - waypoints[i].x) * (waypoints[i+1].x - waypoints[i].x) +
+			(waypoints[i+1].y - waypoints[i].y) * (waypoints[i+1].y - waypoints[i].y) +
+			(waypoints[i+1].z - waypoints[i].z) * (waypoints[i+1].z - waypoints[i].z));
+		totalDistance += distances[i];
+		pointIndicesAccumulator[i]= i;
+	}
+	forcePrint ('distances       =' + distances.toString() + ' meters');
+	forcePrint ('totalDistance   =' + Math.round (totalDistance * 10)/10 + ' meters');
+	pointIndicesAccumulator[waypoints.length - 1]= waypoints.length - 1;
+	pointIndicesAccumulator[waypoints.length]    = -1;
+
+	for (i = 0; i < (waypoints.length ); i++)
+	{
+		verticalDropLineIndicesAccumulator[3*i]    = 2*i;
+		verticalDropLineIndicesAccumulator[3*i+ 1] = 2*i + 1;
+		verticalDropLineIndicesAccumulator[3*i+ 2] = -1;
+		verticalDropLinePointsAccumulator[2*i]     = waypoints[i];
+		verticalDropLinePointsAccumulator[2*i+1]   = new SFVec3f(waypoints[i].x, 0.0, waypoints[i].z);
+	}
+	pointIndices = pointIndicesAccumulator;
+	tracePrint ('pointIndices    =' + pointIndices.toString());
+	verticalDropLineIndices = verticalDropLineIndicesAccumulator;
+	tracePrint ('verticalDropLineIndices  =' + verticalDropLineIndices.toString());
+	verticalDropLinePoints = verticalDropLinePointsAccumulator;
+	tracePrint ('verticalDropLinePoints =' + verticalDropLinePoints.toString());
+
+	totalDurationAccumulator = 0.0;
+	for (i = 0; i < (waypoints.length - 1); i++)
+	{
+		if      (useDefaultSpeed)
+		{
+			totalDurationAccumulator += distances[i] / defaultSpeed;
+		}
+		else if (useLegSpeeds)
+		{
+			totalDurationAccumulator += distances[i] / legSpeeds[i];
+		}
+		else //  useLegDurations
+		{
+			totalDurationAccumulator += legDurations[i];
+		//	forcePrint ('legDurations[' + i + ']=' + legDurations[i]);
+		//	forcePrint ('totalDurationAccumulator=' + totalDurationAccumulator + ' seconds');
+		}
+	}
+	totalDuration = new SFTime(totalDurationAccumulator); // send eventOut
+	hours   = Math.floor  (totalDuration / 3600.0); // % is modulo operator, provides remainder
+	minutes = Math.floor ((totalDuration - hours * 3600) / 60.0);
+	seconds = Math.round ((totalDuration - hours * 3600 - minutes * 60) * 10) / 10; // 0.1 sec resolution
+	if (totalDuration <= 0)
+	{
+		forcePrint ('*** error:  totalDuration=' + totalDuration + ' seconds (' +
+	  	  hours + ' hours,' + minutes + ' minutes,' + seconds + ' seconds)');
+		scriptError=true;
+		return;
+	}
+	else if (outputInitializationComputations)
+	    	 forcePrint ('totalDuration   =' + Math.round (totalDuration * 10)/10 + ' seconds (' +
+	  	 		hours + ' hours,' + minutes + ' minutes,' + seconds + ' seconds)');
+
+	positionKey[0] = 0;
+	for (i = 1; i < waypoints.length; i++)
+	{
+		if      (useDefaultSpeed)
+		{
+			positionKey[i] = i / (waypoints.length - 1); // simple fraction
+		}
+		else if (useLegSpeeds)
+		{
+			positionKey[i] = ((distances[i-1] / legSpeeds[i-1]) / totalDuration) + positionKey[i-1];
+		}
+		else //  useLegDurations
+		{
+			positionKey[i] = (legDurations[i-1] / totalDuration) + positionKey[i-1];
+		}
+	}
+	positionKey[waypoints.length-1] = 1.0; // avoid roundup greater than 1.0
+
+	tracePrint ('positionKey.length           =' + positionKey.length);
+	tracePrint ('positionKey                  =' + positionKey.toString());
+	tracePrint ('positionKeyValueArray.length =' + positionKeyValueArray.length);
+	tracePrint ('positionKeyValueArray        =' + positionKeyValueArray.toString());
+
+	// directly set event
+	WaypointPI.key      = positionKey;
+	WaypointPI.keyValue = positionKeyValueArray;
+	tracePrint ('WaypointPI.key               =' + WaypointPI.key.toString());
+	tracePrint ('WaypointPI.keyValue          =' + WaypointPI.keyValue.toString());
+
+	// ROUTE outputOnly event
+ 	finalPositionKey           = positionKey;
+	finalPositionKeyValueArray = positionKeyValueArray;
+	tracePrint ('finalPositionKey             =' + finalPositionKey.toString());
+	tracePrint ('finalPositionKeyValueArray   =' + finalPositionKeyValueArray.toString());
+	tracePrint ('WaypointPI.key               =' + WaypointPI.key.toString());
+	tracePrint ('WaypointPI.keyValue          =' + WaypointPI.keyValue.toString());
+
+	tracePrint ('pitchUpDownForVerticalWaypoints=' + pitchUpDownForVerticalWaypoints);
+
+	// different approaches to orientation calculations
+	whichRotationVersion ='FirstHeadingThenPitchStayVertical';
+				//'IndependentLegOrientations';
+				//'RelativeLegOrientations';
+				//'FirstHeadingThenPitchStayVertical';
+	tracePrint ('whichRotationVersion=' + whichRotationVersion);
+	// SFRotation constructor for two Vector3Arrays returns rotation from first to second
+	// default body axis is along X axis
+        // TODO avoid changing value if normalized vector has length 0 (meaning no direction change)
+        orientations = new MFRotation();
+	orientations[0] = new SFRotation (new SFVec3f (1, 0, 0),
+		waypoints[1].subtract(waypoints[0]).normalize()); // first leg
+	dx = waypoints[1].x - waypoints[0].x;
+	dy = waypoints[1].y - waypoints[0].y;
+	dz = waypoints[1].z - waypoints[0].z;
+	legDistance   = Math.sqrt (dx*dx + dy*dy + dz*dz);
+	levelDistance = Math.sqrt (dx*dx + dz*dz);
+	tracePrint ('dx=' + dx + ', dy=' + dy + ', dz=' + dz + ', legDistance=' + legDistance + ', levelDistance=' + levelDistance);
+	tracePrint ('orientations[0] =' + orientations[0].toString());
+
+	for (i = 1; i < (waypoints.length - 1); i++) // compute orientations array
+	{
+		dx = waypoints[i+1].x - waypoints[i].x;
+		dy = waypoints[i+1].y - waypoints[i].y;
+		dz = waypoints[i+1].z - waypoints[i].z;
+		legDistance   = Math.sqrt (dx*dx + dy*dy + dz*dz);
+		levelDistance = Math.sqrt (dx*dx + dz*dz);
+		tracePrint ('dx=' + dx + ', dy=' + dy + ', dz=' + dz +
+		', legDistance='   + Math.round (  legDistance*10)/10 +
+		', levelDistance=' + Math.round (levelDistance*10)/10);
+
+//		tracePrint ('waypoints[i  ].subtract(waypoints[i-1]) =' + waypoints[i  ].subtract(waypoints[i-1]).toString());
+//		tracePrint ('waypoints[i+1].subtract(waypoints[i])   =' + waypoints[i+1].subtract(waypoints[i]).toString());
+//		tracePrint ('dot product=' + waypoints[i+1].subtract(waypoints[i]).normalize().
+//					 dot(waypoints[i].subtract(waypoints[i-1]).normalize()).toString());
+
+		if (whichRotationVersion=='IndependentLegOrientations')
+                {
+                    tracePrint ('whichRotationVersion==IndependentLegOrientations');
+                    // using constructor SFRotation (SFVec3f fromVector, SFVec3f toVector)
+                    // see X3D ECMAScript binding Table 7.18 — SFRotation instance creation functions
+                    // buggy: can twist/roll unpredictably about relative-x axis
+                    // apparently a CosmoPlayer bug in SFRotation constructor when pointing (-1, 0, 0)
+                    // TODO test if difference vector is zero, if so maintain previous rotation
+                    orientations[i] = new SFRotation (
+                            new SFVec3f (1, 0, 0),
+                            waypoints[i+1].subtract(waypoints[i]).normalize());
+                }
+                else if (whichRotationVersion=='RelativeLegOrientations')
+                {
+                    tracePrint ('whichRotationVersion==IndependentLegOrientations');
+                    orientations[i] = new SFRotation (
+                            waypoints[i  ].subtract(waypoints[i-1]).normalize(),
+                            waypoints[i+1].subtract(waypoints[i]).normalize());
+                    // orientation multiplication (i.e. composition) is order dependent
+                    orientations[i] = orientations[i-1].multiply (orientations[i]); // relative to previous leg
+                }
+                else if (whichRotationVersion=='FirstHeadingThenPitchStayVertical')
+                {
+                    if ( (Math.abs(legDistance)   <= 0.00001) ||
+                        ((Math.abs(levelDistance) <= 0.00001) && (pitchUpDownForVerticalWaypoints == false)))
+                    {
+                            tracePrint ('whichRotationVersion==FirstHeadingThenPitchStayVertical, coincident');
+                            if (legDistance <= 0.00001)
+                                    tracePrint ('...staying in one place');
+                            else
+                                    tracePrint ('...maintaining orientation during vertical motion');
+                            orientations[i] = orientations[i-1];
+                    }
+                    else if (levelDistance <= 0.00001)  // pitch up/down along vertical axis
+                    {
+                            tracePrint ('whichRotationVersion==FirstHeadingThenPitchStayVertical, pitch up/down along vertical axis');
+                            // still twisting about roll axis, unfortunately...
+                            if (waypoints[i+1].y > waypoints[i].y)  // or test dy
+                            {
+                                    tracePrint ('...pitching up vertical axis');
+                                    orientations[i] = new SFRotation (
+                                            waypoints[i].subtract(waypoints[i-1]).normalize(),
+                                            new SFVec3f (0, 1, 0));  // relative
+                            }
+                            else
+                            {
+                                    tracePrint ('...pitching down vertical axis');
+                                    orientations[i] = new SFRotation (
+                                            waypoints[i].subtract(waypoints[i-1]).normalize(),
+                                            new SFVec3f (0, -1, 0));  // relative
+                            }
+                            orientations[i] = orientations[i-1].multiply (orientations[i]); // relative to previous leg
+                    }
+                    else // carefully rotate about Y axis then pitch up/down to avoid unpredictable twists/rolls
+                    {
+                            tracePrint ('whichRotationVersion==FirstHeadingThenPitchStayVertical, carefully rotate about Y axis etc.');
+                            heading = Math.atan2 (dz, dx); // atan2 returns arctangent in any of 4 quadrants
+                            orientations[i] = new SFRotation (0, 1, 0, -heading); // note negation
+                            // can go vertical if preferred, levelDistance == 0 cases handled above
+                            pitchAngle  = Math.atan (dy / levelDistance); // negative angle should pitch down, note no negation
+                            // orientation multiplication (i.e. composition) is order dependent
+                            // !! this is the step that causes a Cosmo/Cortona sign error !!
+                            // it is due to opposite responses to multiplication order.
+                            tempHold = orientations[i];  // not assuming that browser self-multiplication is safe
+                            if (Browser.name=='CosmoPlayer') // reverse multiplication order for old browser
+                                    orientations[i] = (new SFRotation (0, 0, 1, pitchAngle)).multiply (tempHold); // mod heading
+                            else	orientations[i] = tempHold.multiply (new SFRotation (0, 0, 1, pitchAngle));   // mod heading
+                            tracePrint ('heading='    + Math.round (degrees (heading)   *10)/10 + ' degrees,' +
+                                       ' pitchAngle=' + Math.round (degrees (pitchAngle)*10)/10 + ' degrees');
+                    }
+		}
+                else if      (Math.abs(legDistance)   <= 0.00001)
+                {
+                    tracePrint ('coincident waypoints, set orientations[' + i + '] = orientations[' + i-1 + ']');
+                    orientations[i] = orientations[i-1];
+                }
+		else 
+                {
+                        forcePrint ('*** unexpected case trapped, set orientations[' + i + '] = orientations[' + i-1 + ']');
+                        orientations[i] = orientations[i-1];
+                }
+		tracePrint ('orientations[' + i + '] =' + orientations[i].toString());
+	}
+//	traceEnabled = true; // debug
+
+	// full array trace
+	tracePrint ('orientations   =' + orientations.toString());
+
+	if (orientations.length != (waypoints.length - 1))
+	{
+		forcePrint ('** computation error: orientations.length=' + orientations.length + ' mismatch with waypoints.length=' + waypoints.length);
+	}
+
+	if (turningRate < 0)
+	{
+		forcePrint ('** error:  negative value for turningRate illegal, making turningRate positive');
+		turningRate = -turningRate;
+	}
+	tracePrint ('turningRate     =' + turningRate + ' degrees/second');
+
+	orientationKey = new MFFloat ();
+	orientationKey[0] = 0;
+	for (i = 1; i < (waypoints.length-1); i++)
+	{
+		deltaAngle = orientations[i].multiply(orientations[i-1].inverse()).angle;
+		deltaAngle = normalizePi (deltaAngle);
+		turnTime = Math.abs (deltaAngle) / radians (turningRate);
+		tracePrint ('deltaAngle[' + i + ']=' + degrees (deltaAngle) + ' degrees, turnTime=' + turnTime);
+
+		precedingLegDuration = (positionKey[i]   - positionKey[i-1]) * totalDuration;
+		followingLegDuration = (positionKey[i+1] - positionKey[i]  ) * totalDuration;
+		// turn for no more than 1/3 of preceding or following leg durations, respectively
+		precedingTurnKeyOffset = Math.min (turnTime/2, precedingLegDuration/3) / totalDuration;
+		followingTurnKeyOffset = Math.min (turnTime/2, followingLegDuration/3) / totalDuration;
+		tracePrint ('precedingTurnKeyOffset=' + (precedingTurnKeyOffset * totalDuration) + ' seconds');
+		tracePrint ('followingTurnKeyOffset=' + (followingTurnKeyOffset * totalDuration) + ' seconds');
+
+		orientationKey[3*i - 2] = positionKey[i] - precedingTurnKeyOffset;
+		orientationKey[3*i - 1] = positionKey[i];
+		orientationKey[3*i]     = positionKey[i] + followingTurnKeyOffset;
+		if (orientationKey[3*i - 2] <= positionKey[i-1]) // interpolate preceding key if needed
+		{
+			orientationKey[3*i - 2] = positionKey[i-1] + ((positionKey[i] - positionKey[i-1]) * 2 / 3);
+		}
+		if (orientationKey[3*i] >= positionKey[i+1]) // interpolate following key if needed
+		{
+			orientationKey[3*i]     = positionKey[i] + ((positionKey[i+1] - positionKey[i])   * 1 / 3);
+		}
+		if ((orientationKey[3*i - 2] > orientationKey[3*i - 1]) || (orientationKey[3*i - 1] > orientationKey[3*i]))
+		{
+			forcePrint ('** error computing orientationKey [' + (3*i - 2) + '..' + (3*i) + ']');
+		}
+	}
+	orientationKey[3*(waypoints.length-1)-2] = 1.0; // avoid roundup greater than 1
+	tracePrint ('orientationKey.length =' + orientationKey.length);
+	tracePrint ('orientationKey        =' + orientationKey.toString());
+
+	//
+	for (i = 2; i < (orientationKey.length-1); i++)
+	{
+	   if (orientationKey [i-1] > orientationKey [i])
+		forcePrint ('*** error,' +
+		'orientationKey [' + (i-1) + ']=' + orientationKey [i-1].toString() + ',' +
+		'orientationKey [' + (i) + ']='   + orientationKey [i].toString() +
+		' values are not monotonically increasing ***');
+	   if ((orientationKey [i] < 0) || (orientationKey [i] > 1))
+		forcePrint ('*** error, orientationKey [' + i + ']=' + orientationKey [i].toString() +
+		' value is out of range [0..1] ***');
+	}
+	tracePrint ('check orientationKey complete, dynamically building orientationKeyValueArray next');
+	orientationKeyValueArray = new MFRotation ();
+	orientationKeyValueArray[0] = orientations[0];
+	orientationKeyValueArray[1] = orientations[0];
+	for (i = 1; i < (waypoints.length - 1); i++)
+	{
+	//	spherical linear interpolation (slerp) 0.5 interpolates halfway between adjacent orientations
+		orientationKeyValueArray[3*i - 1] = orientations[i-1].slerp(orientations[i], 0.5);
+		orientationKeyValueArray[3*i]     = orientations[i];
+		orientationKeyValueArray[3*i + 1] = orientations[i]; // straight-line track, same orientation
+	}
+	tracePrint ('orientationKeyValueArray.length =' + orientationKeyValueArray.length);
+	tracePrint ('orientationKeyValueArray        =' + orientationKeyValueArray.toString());
+
+	// eliminate orientationKey triplicates (smaller arrays overcome CosmoPlayer overflow bug)
+	newKey      = new MFFloat ();
+	newKey      [0] = orientationKey [0];
+	newKey      [1] = orientationKey [1];
+	newKeyValue = new MFRotation ();
+	newKeyValue [0] = orientationKeyValueArray [0];
+	newKeyValue [1] = orientationKeyValueArray [1];
+	index = 2; // keep first two orientations identical, index is for next value
+        for (i = 2; i < (orientationKeyValueArray.length-3) ; i++)
+	{
+	   dotProductBA      =  orientationKeyValueArray [i-1].getAxis().dot(orientationKeyValueArray [i-2].getAxis());
+	   dotProductCB      =  orientationKeyValueArray [i].getAxis().dot(orientationKeyValueArray [i-1].getAxis());
+	   angleDifferenceBA = normalizePi(
+	   	normalize2Pi (orientationKeyValueArray [i-1].angle) -
+	   	normalize2Pi (orientationKeyValueArray [i-2].angle)) * 180 / Math.PI;
+	   angleDifferenceCB = normalizePi(
+	   	normalize2Pi (orientationKeyValueArray [i].angle) -
+	   	normalize2Pi (orientationKeyValueArray [i-1].angle)) * 180 / Math.PI;
+
+	   if (i < 10) // too many outputs clobbers the trace console
+	   {
+ 	     tracePrint ('orientationKeyValueArray [' + (i-2) + ']=' + orientationKeyValueArray [i-2].toString());
+ 	     tracePrint ('orientationKeyValueArray [' + (i-1) + ']=' + orientationKeyValueArray [i-1].toString());
+ 	     tracePrint ('orientationKeyValueArray [' + (i  ) + ']=' + orientationKeyValueArray [i  ].toString());
+	     tracePrint ('dotProductBA     =' + dotProductBA +     ', dotProductCB     =' + dotProductCB);
+	     tracePrint ('angleDifferenceBA=' + angleDifferenceBA + ', angleDifferenceBC=' + angleDifferenceCB + ' degrees');
+	   }
+
+//         // depth check also needed!  but positionKey is already optimized/compressed, so how to check?
+//	   if ((Math.abs (dotProductCB - 1)  < 0.01) &&
+//	       (Math.abs (dotProductBA - 1)  < 0.01) &&
+//	       (Math.abs (angleDifferenceCB) < 1.0 ) &&
+//	       (Math.abs (angleDifferenceBA) < 1.0 ))  // degrees
+//	   {
+//		// replace key time with later value
+//		tracePrint ('... matching this orientationKey time,' +
+//		'updating key' + newKey [index-1] + ' to' + orientationKey [i]);
+//		newKey      [index-1] = orientationKey [i];
+//		// don't update orientation in order to avoid creeping matches
+//	   }
+//	   else
+//	   {
+		newKey      [index] = orientationKey [i];
+		newKeyValue [index] = orientationKeyValueArray [i];
+		index ++;
+		tracePrint ('...  keeping this orientationKeyValue');
+//	   }
+	   if (newKey [index-2] > newKey [index-1])
+		forcePrint ('*** error,' +
+		'newKey [' + (index-2) + ']=' + newKey [index-2].toString() + ',' +
+		'newKey [' + (index-1) + ']=' + newKey [index-1].toString() +
+		' values are not monotonically increasing ***');
+	   if ((newKey [index-1] < 0) || (newKey [index-1] > 1))
+		forcePrint ('*** error, newKey [' + (index-1) + ']=' + newKey [index-1].toString() +
+		' value is out of range [0..1] ***');
+	}
+	newKey      [index] = orientationKey [orientationKeyValueArray.length-2]; // match finals values
+	newKeyValue [index] = orientationKeyValueArray [orientationKeyValueArray.length-2];
+	index++;
+	newKey      [index] = orientationKey [orientationKeyValueArray.length-1]; // match finals values
+	newKeyValue [index] = orientationKeyValueArray [orientationKeyValueArray.length-1];
+	tracePrint ('orientation newKey.length      =' + newKey.length);
+	tracePrint ('orientation newKey             =' + newKey.toString());
+	tracePrint ('orientation newKeyValue.length =' + newKeyValue.length);
+	tracePrint ('orientation newKeyValue        =' + newKeyValue.toString());
+
+	WaypointOI.key      = newKey;
+	WaypointOI.keyValue = newKeyValue;
+	tracePrint ('WaypointOI.key                 =' + WaypointOI.key.toString());
+	tracePrint ('WaypointOI.keyValue            =' + WaypointOI.keyValue.toString());
+
+	tracePrint ('labelDisplayMode=' + labelDisplayMode);
+	if (labelDisplayMode.toLowerCase() =='waypoints')
+	{
+	  // create text labels for each waypoint
+	  outputChild = new MFNode ();
+	  outputVrmlString ='';
+	  for (i = 0; i < waypoints.length; i++)
+	  {
+		textOffset = waypoints[i].add(labelOffset);
+		if ((i == waypoints.length-1) && (waypoints[i].x == waypoints[0].x) &&
+			(waypoints[i].y == waypoints[0].y) && (waypoints[i].z == waypoints[0].z))
+		    // double offset for endpoint when waypoints are a loop
+		    textOffset = textOffset.subtract(new SFVec3f (0, 3 * labelFontSize, 0));
+		hours   = Math.floor  (totalDuration * positionKey[i] / 3600.0); // % is modulo operator, provides remainder
+		minutes = Math.floor ((totalDuration * positionKey[i] - hours * 3600.0) / 60.0);
+		seconds = Math.round  (totalDuration * positionKey[i] - hours * 3600.0 - minutes * 60.0);
+		while (minutes >= 60)
+		{
+			minutes -= 60;
+			hours   += 1;
+		}
+		while (seconds >= 60)
+		{
+			seconds -= 60;
+			minutes += 1;
+		}
+		if (hours   < 10) hours   ='0' + hours;
+		if (minutes < 10) minutes ='0' + minutes;
+		if (seconds < 10) seconds ='0' + seconds;
+		locationX =  Math.round (waypoints[i].x);
+		depth     = -Math.round (waypoints[i].y * 10) / 10;
+		locationZ =  Math.round (waypoints[i].z);
+		if      (heightLabel.toLowerCase()=='altitude')
+			depthString = (-depth) + ' ';
+		else if (heightLabel.toLowerCase()=='depth')
+			depthString = depth + ' ';
+		else if (heightLabel.toLowerCase()=='none')
+			depthString =' ';
+		else	depthString =' ';
+		outputVrmlString +=
+			 'Transform { translation' + textOffset + '\n'
+			+ ' children LOD { range [' + 150 * labelFontSize + ' ]\n'
+			+ '  level [\n'
+			+ '   Billboard { axisOfRotation 0 1 0 \n'
+			+ '    children Shape {\n'
+			+ '	geometry Text {\n'
+			+ '	   string [ \"' + hours + ':' + minutes + ':' + seconds + '\"\n'
+			+ '	            \"' + locationX + ' ' + depthString +  locationZ + ' ' + '\" ]\n'
+			+ '	   fontStyle DEF WPIFontStyle FontStyle {\n'
+			+ '		size' + labelFontSize + '\n'
+			+ '		justify [ \"MIDDLE\" \"MIDDLE\" ]\n'
+			+ '	   }\n'
+			+ '	}\n'
+			+ '	appearance DEF WPIAppearance Appearance {\n'
+			+ '	   material Material { diffuseColor' + labelColor + ' }\n'
+			+ '	}\n'
+			+ '    }\n'
+			+ '   }\n'
+			+ '  WorldInfo { } ]\n'
+			+ ' }\n'
+			+ '}\n';
+	  }
+	  tracePrint ('outputVrmlString=' + outputVrmlString);
+
+	  outputChild = Browser.createVrmlFromString (outputVrmlString);
+	  OutputLabelsGroup.addChildren = outputChild;
+
+//	  tracePrint ('OutputLabelsGroup.children =');
+//	  tracePrint (outputChild + '  ' + OutputLabelsGroup.children.toString());
+	}
+	else if (labelDisplayMode.toLowerCase() =='interpolation')
+	{
+		// updates occur when fraction changes
+	}
+	else if ((labelDisplayMode.toLowerCase() !='none') && (labelDisplayMode !=''))
+	{
+	  forcePrint ('*** illegal value labelDisplayMode=' + labelDisplayMode + ', ignored');
+	}
+        
+	if (outputInitializationComputations)
+        {
+	     tracePrint ('initialization complete');
+	     forcePrint ('=======================================');
+        }
+        traceEnabled = saveTrace;
+        
+} // end of initialize() method
+
+function set_fraction (fractionValue, timeStamp)
+{
+	tracePrint ('fractionValue=' + fractionValue);
+	tracePrint ('previousFractionIndex=' + previousFractionIndex);
+	tracePrint ('WaypointPI.value_changed=' + WaypointPI.value_changed.toString());
+	tracePrint ('WaypointOI.value_changed=' + WaypointOI.value_changed.toString());
+
+	if (scriptError==true)
+    {
+        tracePrint ('scriptError==true, no response by set_fraction()');
+        return;
+    }
+	//	tracePrint ('WaypointPI.key               =' + WaypointPI.key.toString());
+	//	tracePrint ('WaypointPI.keyValue          =' + WaypointPI.keyValue.toString());
+
+//	wide input range supported by interpolators,
+//	usually no range check on fractionValue.
+//	however WaypointInterpolator input range is [0..1], so check
+	if ((fractionValue < 0) || (fractionValue > 1))
+	{
+		forcePrint ('*** error:  set_fraction=' + fractionValue + ' out of range [0..1], ignored');
+		return;
+	}
+
+	if (previousFractionIndex == -1)
+	{
+		previousFractionIndex = 0; // start
+		while (fractionValue >= positionKey[previousFractionIndex+1])
+		{
+			previousFractionIndex ++;
+			if (previousFractionIndex >= waypoints.length - 2) break;
+		}
+		highlightCoordinates = new MFVec3f (waypoints[previousFractionIndex],
+			waypoints[previousFractionIndex +1]);
+		tracePrint ('highlightCoordinates=' + highlightCoordinates.toString());
+	}
+	else if (waypoints.length == 2)
+	{
+		// only one segment, no action required
+	}
+	else if (previousFractionIndex == waypoints.length - 2) // last leg
+	{
+	  if (fractionValue < positionKey[previousFractionIndex]) // looped
+	  {
+		previousFractionIndex = 0; // start
+		while (fractionValue >= positionKey[previousFractionIndex+1])
+		{
+			previousFractionIndex ++;
+			if (previousFractionIndex >= waypoints.length - 2) break;
+		}
+		highlightCoordinates = new MFVec3f (waypoints[previousFractionIndex],
+			waypoints[previousFractionIndex +1]);
+		tracePrint ('highlightCoordinates=' + highlightCoordinates.toString());
+	  }
+	}
+	else if (fractionValue >= positionKey[previousFractionIndex+1])
+	{
+		previousFractionIndex++;
+		while (fractionValue >= positionKey[previousFractionIndex+1])
+		{
+			previousFractionIndex ++;
+			if (previousFractionIndex >= waypoints.length - 2) break;
+		}
+		if (previousFractionIndex > waypoints.length - 2) previousFractionIndex = 0;
+		highlightCoordinates = new MFVec3f (
+			waypoints[previousFractionIndex],
+			waypoints[previousFractionIndex+1]);
+		tracePrint ('highlightCoordinates=' + highlightCoordinates.toString());
+	}
+	// else previousFractionIndex ought to be OK
+
+	if (labelDisplayMode =='interpolation')
+	{
+		hours   = Math.floor  (totalDuration * fractionValue / 3600.0); // % is modulo operator, provides remainder
+		minutes = Math.floor ((totalDuration * fractionValue - hours * 3600) / 60.0);
+		seconds = Math.round  (totalDuration * fractionValue - hours * 3600 - minutes * 60);
+		while (minutes > 60)
+		{
+			minutes -= 60;
+			hours   += 1;
+		}
+		while (seconds > 60)
+		{
+			seconds -= 60;
+			minutes += 1;
+		}
+		if (hours   < 10) hours   ='0' + hours;
+		if (minutes < 10) minutes ='0' + minutes;
+		if (seconds < 10) seconds ='0' + seconds;
+
+		// compute course and pitch
+		currentAxis     = WaypointOI.value_changed.getAxis().normalize();
+		currentRotation = WaypointOI.value_changed;
+   //   forcePrint ('=====currentRotation=' + currentRotation.toString() + ', currentAxis=' + currentAxis.toString());
+
+		rotatedVector = currentRotation.multVec (new SFVec3f (1, 0, 0)); // rotate x-centered body
+		dx = rotatedVector.x;
+		dy = rotatedVector.y;
+		dz = rotatedVector.z;
+		levelDistance = Math.sqrt (dx*dx + dz*dz);
+		heading = Math.atan2 (dz, dx); // atan2 returns arctangent in any of 4 quadrants
+		if (levelDistance > 0)
+			pitchAngle =  Math.atan (dy / levelDistance); // negative angle should pitch down, note no negation
+		else if (dy > 0)
+			pitchAngle =  1.57;
+		else    pitchAngle = -1.57;
+
+	//	forcePrint ('rotatedVector=' + rotatedVector.toString());
+	//	forcePrint ('heading=' + degrees(heading) + ', pitchAngle=' + degrees(pitchAngle));
+
+		course = Math.round (normalize2Pi ( heading)    * 180 / Math.PI);
+		pitch  = Math.round (normalizePi  ( pitchAngle) * 180 / Math.PI);
+		// format angles in degrees
+		if      (course <  10) course = '0' + '0' + course;
+		else if (course < 100) course = '0' + course;
+
+	//	tracePrint ('course=' + course + ', pitch=' + pitch);
+
+		locationX =  Math.round (WaypointPI.value_changed.x);
+		depth     = -Math.round (WaypointPI.value_changed.y * 10) / 10;
+		locationZ =  Math.round (WaypointPI.value_changed.z);
+		if      (heightLabel.toLowerCase()=='altitude')
+			depthString =', altitude ' + (-depth) + 'm';
+		else if (heightLabel.toLowerCase()=='depth')
+			depthString =', depth '    + depth + 'm';
+		else if (heightLabel.toLowerCase()=='none')
+			depthString ='';
+		else	depthString ='';
+	  	labelInterpolation  = new MFString (
+			description,
+			(hours + ':' + minutes + ':' + seconds + ', course=' + course + ', pitch=' + pitch),
+			('location=(' + locationX + ' ' + locationZ + depthString + ')'));
+	//	tracePrint ('labelInterpolation=' + labelInterpolation);
+	}
+        tracePrint ('=====');
+	return;
+}
+
+function add_waypoint (newWaypointsArray, timeStamp)
+{
+	// EcmaScript automatically increases array size
+	// when setting an element one past final element
+	waypoints[waypoints.length] = newWaypointsArray;
+
+	// initialization code is complicated! so we won't try to shortcut/optimize it, instead just rerun it
+	initialize ();
+}
+
+function set_waypoints (newWaypointsArray, timeStamp)
+{
+	waypoints = newWaypointsArray;
+	initialize ();
+}]]>
+          </Script>
+          <ROUTE fromField='finalPositionKey' fromNode='WaypointTrackScript' toField='key' toNode='WaypointPI.instance'/>
+          <ROUTE fromField='finalPositionKeyValueArray' fromNode='WaypointTrackScript' toField='keyValue' toNode='WaypointPI.instance'/>
+          <!-- IndexedLineSet connects waypoints for easy visibility. Set transparency=1 to hide. -->
+          <Shape DEF='VerticalDropLineShape'>
+            <IndexedLineSet DEF='VerticalDropLine'>
+              <Coordinate DEF='VerticalDropLineCoordinates'/>
+            </IndexedLineSet>
+            <Appearance>
+              <Material DEF='VerticalDropLineMaterial'>
+                <IS>
+                  <connect nodeField='emissiveColor' protoField='verticalDropLineColor'/>
+                  <connect nodeField='transparency' protoField='verticalDropLineTransparency'/>
+                </IS>
+              </Material>
+            </Appearance>
+          </Shape>
+          <ROUTE fromField='verticalDropLineIndices' fromNode='WaypointTrackScript' toField='set_coordIndex' toNode='VerticalDropLine'/>
+          <ROUTE fromField='verticalDropLinePoints' fromNode='WaypointTrackScript' toField='point' toNode='VerticalDropLineCoordinates'/>
+          <Shape DEF='HighlightShape'>
+            <IndexedLineSet DEF='HighlightSegment' coordIndex='0 1 -1'>
+              <Coordinate DEF='HighlightSegmentCoordinates' point='0 0 0 0 0 0'/>
+            </IndexedLineSet>
+            <Appearance>
+              <Material DEF='HighlightSegmentMaterial' diffuseColor='0 0 0' emissiveColor='0.2 0.2 0.2'>
+                <IS>
+                  <connect nodeField='emissiveColor' protoField='highlightSegmentColor'/>
+                  <connect nodeField='transparency' protoField='transparency'/>
+                </IS>
+              </Material>
+            </Appearance>
+          </Shape>
+          <ROUTE fromField='highlightCoordinates' fromNode='WaypointTrackScript' toField='point' toNode='HighlightSegmentCoordinates'/>
+          <Shape DEF='WaypointLineShape'>
+            <IndexedLineSet DEF='WaypointLine'>
+              <Coordinate DEF='WaypointLineCoordinates'>
+                <IS>
+                  <connect nodeField='point' protoField='waypoints'/>
+                </IS>
+              </Coordinate>
+            </IndexedLineSet>
+            <Appearance>
+              <Material DEF='WaypointTrackMaterial' emissiveColor='0.8 0.8 0.8'>
+                <IS>
+                  <connect nodeField='emissiveColor' protoField='lineColor'/>
+                  <connect nodeField='transparency' protoField='transparency'/>
+                </IS>
+              </Material>
+            </Appearance>
+          </Shape>
+          <ROUTE fromField='pointIndices' fromNode='WaypointTrackScript' toField='set_coordIndex' toNode='WaypointLine'/>
+          <!-- Draw highlight segment before and after waypoint lines in case of order dependency -->
+          <!-- TODO!! throws Xj3D exception! <Shape USE='HighlightShape'/> -->
+          <Transform DEF='MovingVehicleLabel'>
+            <!-- no need to externally ROUTE position and orientation interpolator key/keyValue results, since prototype is using pass-by-reference node update -->
+            <!-- Nevertheless, must ROUTE position and orientation interpolated text label -->
+            <ROUTE fromField='value_changed' fromNode='WaypointPI.instance' toField='translation' toNode='MovingVehicleLabel'/>
+            <ROUTE fromField='value_changed' fromNode='WaypointOI.instance' toField='rotation' toNode='MovingVehicleLabel'/>
+            <Transform DEF='MovingVehicleLabelOffset'>
+              <IS>
+                <connect nodeField='translation' protoField='labelOffset'/>
+              </IS>
+              <Billboard axisOfRotation='0 1 0'>
+                <Shape>
+                  <Text DEF='MovingVehicleLabelText'>
+                    <FontStyle DEF='MovingVehicleLabelFont' justify='"MIDDLE" "MIDDLE"'>
+                      <IS>
+                        <connect nodeField='size' protoField='labelFontSize'/>
+                      </IS>
+                    </FontStyle>
+                  </Text>
+                  <Appearance>
+                    <Material DEF='MovingVehicleLabelMaterial'>
+                      <IS>
+                        <connect nodeField='diffuseColor' protoField='labelColor'/>
+                      </IS>
+                    </Material>
+                  </Appearance>
+                </Shape>
+                <ROUTE fromField='labelInterpolation' fromNode='WaypointTrackScript' toField='string' toNode='MovingVehicleLabelText'/>
+              </Billboard>
+            </Transform>
+          </Transform>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ====================================== -->
+    <Anchor description='WaypointInterpolator Example' url='"WaypointInterpolatorExample.x3d" "https://savage.nps.edu/Savage/Tools/Animation/WaypointInterpolatorExample.x3d" "WaypointInterpolatorExample.wrl" "https://savage.nps.edu/Savage/Tools/Animation/WaypointInterpolatorExample.wrl"'>
+      <Shape>
+        <Text string='"WaypointInterpolatorPrototype" "defines a prototype" "" "Click on this text to see" "WaypointInterpolatorExample" " scene"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 1 0.2'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

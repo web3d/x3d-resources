@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='WrapperTagsExample.x3d' name='title'/>
+    <meta content='Demonstrate and test field-name wrapper tags. Links to document "Wrapper Tags Considered Harmful." Scene includes 21 nodes, 34 open/close element tags, 44 wrapper tags, producing 78 scene-graph tags total if wrapper tags are required.' name='description'/>
+    <meta content='21 April 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='WrapperTagsExampleWrapped.html' name='reference'/>
+    <meta content='WrapperTagsExampleUnwrapped.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/WrapperTagsExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- <children> *** wrapper tag *** -->
+    <WorldInfo title='WrapperTagsExample.x3d'/>
+    <Transform translation='0 -3 0'>
+      <!-- <children> *** wrapper tag *** -->
+      <Shape>
+        <!-- <geometry> *** wrapper tag *** -->
+        <Cylinder height='1.5' radius='.75'/>
+        <!-- </geometry> *** wrapper tag *** -->
+        <!-- <appearance> *** wrapper tag *** -->
+        <Appearance>
+          <!-- <texture> *** wrapper tag *** -->
+          <ImageTexture url='"earth-topo-small.png" "earth-topo-small.gif" "https://www.web3d.org/x3d/content/examples/Basic/development/earth-topo-small.png" "https://www.web3d.org/x3d/content/examples/Basic/development/earth-topo-small.gif"'/>
+          <!-- </texture> *** wrapper tag *** -->
+          <!-- <textureTransform> *** wrapper tag *** -->
+          <TextureTransform rotation='-2.356'/>
+          <!-- </textureTransform> *** wrapper tag *** -->
+        </Appearance>
+        <!-- </appearance> *** wrapper tag *** -->
+      </Shape>
+      <!-- </children> *** wrapper tag *** -->
+    </Transform>
+    <!-- </children> *** wrapper tag *** -->
+    <!-- <children> *** wrapper tag *** -->
+    <LOD>
+      <!-- <children> *** wrapper tag *** -->
+      <Anchor description='Click to read explanation page' parameter='"target=_blank"' url='"WrapperTagsConsideredHarmful.html" "https://www.web3d.org/x3d/content/examples/Basic/development/WrapperTagsConsideredHarmful.html"'>
+        <!-- <children> *** wrapper tag *** -->
+        <Shape>
+          <!-- <appearance> *** wrapper tag *** -->
+          <Appearance>
+            <!-- <material> *** wrapper tag *** -->
+            <Material diffuseColor='.6 .1 .1'/>
+            <!-- </material> *** wrapper tag *** -->
+          </Appearance>
+          <!-- <appearance> *** wrapper tag *** -->
+          <!-- <geometry> *** wrapper tag *** -->
+          <Text string='"wrapper tags are " "field container names" "that hold nodes"'>
+            <!-- <fontStyle> *** wrapper tag *** -->
+            <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+            <!-- </fontStyle> *** wrapper tag *** -->
+          </Text>
+          <!-- </geometry> *** wrapper tag *** -->
+        </Shape>
+        <!-- </children> *** wrapper tag *** -->
+      </Anchor>
+      <!-- </children> *** wrapper tag *** -->
+      <!-- <children> *** wrapper tag *** -->
+      <Sound>
+        <!-- <source> *** wrapper tag *** -->
+        <AudioClip description='empty audio clip'/>
+        <!-- </source> *** wrapper tag *** -->
+      </Sound>
+      <!-- </children> *** wrapper tag *** -->
+    </LOD>
+    <!-- </children> *** wrapper tag *** -->
+    <!-- <children> *** wrapper tag *** -->
+    <Switch whichChoice='0'>
+      <!-- <children> *** wrapper tag *** -->
+      <Shape>
+        <!-- <geometry> *** wrapper tag *** -->
+        <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+          <!-- <color> *** wrapper tag *** -->
+          <Color color='0 0 1 0 1 0 1 0 0 1 1 1'/>
+          <!-- </color> *** wrapper tag *** -->
+          <!-- <coord> *** wrapper tag *** -->
+          <Coordinate point='-5 -3 -2 5 -3 -2 5 1 -2 -5 1 -2'/>
+          <!-- </coord> *** wrapper tag *** -->
+          <!-- <normal> *** wrapper tag *** -->
+          <Normal vector='0 0 -1 0 0 -1 0 0 -1 0 0 -1'/>
+          <!-- </normal> *** wrapper tag *** -->
+          <!-- <texcoord> *** wrapper tag *** -->
+          <TextureCoordinate point='-1 -1 -1 1 1 1 1 -1'/>
+          <!-- </texcoord> *** wrapper tag *** -->
+        </IndexedFaceSet>
+        <!-- </geometry> *** wrapper tag *** -->
+      </Shape>
+      <!-- </children> *** wrapper tag *** -->
+    </Switch>
+    <!-- </children> *** wrapper tag *** -->
+  </Scene>
+</X3D>

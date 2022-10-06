@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Cut.x3d' name='title'/>
+    <meta content='Cutting plane parts: this file contains two prototype declarations used in creating a cutting plane. The example scene TexturePlane uses these for external prototype instances and creates a plane with one of a set of textures mapped to it. The texture choice is controlled by a fraction eventIn. SlidingPlane creates a texture plane that slides back and forth along the X axis, changing the texture based upon the X position.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='CutPlane.x3d' name='reference'/>
+    <meta content='TexturePlane.x3d' name='reference'/>
+    <meta content='originals/cut.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0497.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Cut.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Cutting Plane parts'/>
+    <ProtoDeclare name='TexturePlane'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='textures' type='MFNode'>
+          <!-- initialized with ImageTexture nodes upon use -->
+        </field>
+        <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Shape>
+            <Appearance DEF='App'/>
+            <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+              <TextureCoordinate point='0.0 0.0 1.0 0.0 1.0 1.0 0.0 1.0'/>
+              <Coordinate point='-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance/>
+            <IndexedLineSet coordIndex='0 1 2 3 0'>
+              <Coordinate point='-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0'/>
+            </IndexedLineSet>
+          </Shape>
+        </Group>
+        <Script DEF='Selector' directOutput='true'>
+          <field accessType='initializeOnly' name='textures' type='MFNode'/>
+          <field accessType='outputOnly' name='texture_changed' type='SFNode'/>
+          <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+          <IS>
+            <connect nodeField='textures' protoField='textures'/>
+            <connect nodeField='set_fraction' protoField='set_fraction'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+    function initialize( ) {
+        texture_changed = textures[0];
+        Browser.println ('[Cut Selector] initialize(): textures.length=' + textures.length); // debug
+    }
+    function set_fraction( f, tm ) {
+        i = Math.floor(f * 10);
+        if ( i == 10 ) { i = 9; }
+        Browser.println ('[Cut Selector] set_fraction(): i=' + i); // debug
+        texture_changed = textures[i];
+    }
+]]>
+        </Script>
+        <ROUTE fromField='texture_changed' fromNode='Selector' toField='set_texture' toNode='App'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='SlidingPlane'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='textures' type='MFNode'>
+          <!-- initialized with ImageTexture nodes upon use -->
+        </field>
+        <field accessType='initializeOnly' name='minMaxX' type='SFVec2f' value='0.0 1.0'/>
+        <field accessType='initializeOnly' name='initialX' type='SFFloat' value='0.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Transform rotation='0.0 1.0 0.0 1.571'>
+          <PlaneSensor DEF='Slider' description='drag to see cross-section slices'/>
+          <Transform DEF='PlanePosition' rotation='0.0 1.0 0.0 -1.571'>
+            <ProtoInstance DEF='Plane' name='TexturePlane'>
+              <IS>
+                <connect nodeField='textures' protoField='textures'/>
+              </IS>
+            </ProtoInstance>
+            <Transform rotation='0.0 1.0 0.0 1.571' translation='1.05 -1.2 0.0'>
+              <Shape>
+                <Appearance/>
+                <Text DEF='Label' string='""'>
+                  <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+                </Text>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+        <Script DEF='Translator'>
+          <field accessType='inputOnly' name='set_translation' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='minMaxX' type='SFVec2f'/>
+          <field accessType='outputOnly' name='minPosition_changed' type='SFVec2f'/>
+          <field accessType='outputOnly' name='fraction_changed' type='SFFloat'/>
+          <field accessType='initializeOnly' name='initialX' type='SFFloat'/>
+          <field accessType='outputOnly' name='offset_changed' type='SFVec3f'/>
+          <field accessType='outputOnly' name='maxPosition_changed' type='SFVec2f'/>
+          <field accessType='outputOnly' name='label_changed' type='MFString'/>
+          <IS>
+            <connect nodeField='minMaxX' protoField='minMaxX'/>
+            <connect nodeField='initialX' protoField='initialX'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+        function translate( x ) {
+        // compute the fraction using the given X position
+            f = (x-minMaxX[0]) / (minMaxX[1] - minMaxX[0]);
+        // send a fraction event
+            fraction_changed = f;
+        // send a new label string with 1 digit after decimal
+            label_changed[0] = Math.floor(f*10.0)/10.0;
+        }
+
+        function initialize( ) {
+        // set the plane sensor bounds
+            minPosition_changed[0] = minMaxX[0];
+            minPosition_changed[1] = 0.0;
+            maxPosition_changed[0] = minMaxX[1];
+            maxPosition_changed[1] = 0.0;
+        // set the plane sensor initial position
+            offset_changed[0] = initialX;
+            offset_changed[1] = 0.0;
+            offset_changed[2] = 0.0;
+        // compute the initial values
+            translate( initialX );
+        }
+
+        function set_translation( t, tm ) {
+        // compute the new values
+            translate( t[0] );
+        }
+]]>
+        </Script>
+        <ROUTE fromField='translation_changed' fromNode='Slider' toField='set_translation' toNode='PlanePosition'/>
+        <ROUTE fromField='translation_changed' fromNode='Slider' toField='set_translation' toNode='Translator'/>
+        <ROUTE fromField='fraction_changed' fromNode='Translator' toField='set_fraction' toNode='Plane'/>
+        <ROUTE fromField='label_changed' fromNode='Translator' toField='set_string' toNode='Label'/>
+        <ROUTE fromField='minPosition_changed' fromNode='Translator' toField='set_minPosition' toNode='Slider'/>
+        <ROUTE fromField='maxPosition_changed' fromNode='Translator' toField='set_maxPosition' toNode='Slider'/>
+        <ROUTE fromField='offset_changed' fromNode='Translator' toField='set_offset' toNode='Slider'/>
+        <ROUTE fromField='offset_changed' fromNode='Translator' toField='set_translation' toNode='PlanePosition'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- Display scene instructions for viewing an example scene with a corresponding prototype instance -->
+    <Background skyColor='0 0.333333 0.66667'/>
+    <Transform translation='0 2.5 0'>
+      <Anchor description='select text to view parent scene' url='"CutPlane.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/CutPlane.x3d" "CutPlane.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/CutPlane.wrl"'>
+        <Shape>
+          <Text string='"The Cut.x3d scene holds" "prototype declarations" "Select this text to view example usage" "in CutPlane.x3d scene"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='1 0.9 0.4'/>
+          </Appearance>
+        </Shape>
+        <!-- Invisible box behind text makes selection easier -->
+        <Shape>
+          <Box size='12 5 0.1'/>
+          <Appearance>
+            <Material transparency='1'/>
+          </Appearance>
+        </Shape>
+      </Anchor>
+    </Transform>
+    <Transform translation='0 -2.5 0'>
+      <Anchor description='select text to view parent scene' url='"TexturePlane.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TexturePlane.x3d" "TexturePlane.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TexturePlane.wrl"'>
+        <Shape>
+          <Text string='"or select this text to view example usage" "in TexturePlane.x3d scene"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='1 0.9 0.4'/>
+          </Appearance>
+        </Shape>
+        <!-- Invisible box behind text makes selection easier -->
+        <Shape>
+          <Box size='12 5 0.1'/>
+          <Appearance>
+            <Material transparency='1'/>
+          </Appearance>
+        </Shape>
+      </Anchor>
+    </Transform>
+  </Scene>
+</X3D>

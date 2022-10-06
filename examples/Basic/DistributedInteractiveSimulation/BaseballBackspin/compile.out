@@ -1,0 +1,138 @@
+> cd C:\www.web3D.org\TaskGroups\x3d\translation\examples\DIS\BaseballBackspin
+> compile
+
+
+C:\www.web3D.org\TaskGroups\x3d\translation\examples\DIS\BaseballBackspin>compile
+A subdirectory or file doc already exists.
+[parsing started BackspinPhysics.java]
+[parsing completed 140ms]
+[parsing started BaseballBackspinConsole.java]
+[parsing completed 30ms]
+[parsing started BaseballDisSender.java]
+[parsing completed 10ms]
+[parsing started JFileFilter.java]
+[parsing completed 0ms]
+[parsing started ScenePicker.java]
+[parsing completed 10ms]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Math.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Thread.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Object.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Runnable.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/event/AdjustmentEvent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/String.class)]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/EntityStatePdu.class)]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/CreateEntityPdu.class)]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/BehaviorStreamBufferUDP.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JFrame.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Frame.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Window.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Container.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Component.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/image/ImageObserver.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/MenuContainer.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/io/Serializable.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/accessibility/Accessible.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/WindowConstants.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/RootPaneContainer.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/event/AdjustmentListener.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/event/ActionListener.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/EventListener.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JPanel.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JButton.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JTextField.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JScrollBar.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JLabel.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Exception.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/event/WindowEvent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/event/ActionEvent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/io/File.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/filechooser/FileFilter.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/ArrayList.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JFileChooser.class)]
+[checking BackspinPhysics]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/StringBuffer.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/InterruptedException.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Throwable.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/System.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/io/PrintStream.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/io/FilterOutputStream.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/io/OutputStream.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Error.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/RuntimeException.class)]
+[wrote BackspinPhysics.class]
+[checking BaseballDisSender]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/SimulationManagementFamily.class)]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/ProtocolDataUnit.class)]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/PduElement.class)]
+[loading C:\vrtp\dis-java-vrml.jar(org/web3d/vrtp/net/DatagramStreamBuffer.class)]
+[loading C:\vrtp\dis-java-vrml.jar(mil/navy/nps/dis/BehaviorStreamBuffer.class)]
+[wrote BaseballDisSender.class]
+[checking BaseballBackspinConsole]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/JComponent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/AbstractButton.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/text/JTextComponent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/AWTEvent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/FlowLayout.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/LayoutManager.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Color.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Dimension.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/geom/Dimension2D.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Font.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/Map.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Comparable.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Rectangle.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/geom/Rectangle2D.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/geom/RectangularShape.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/Adjustable.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/Scrollable.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(javax/swing/SwingConstants.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/PopupMenu.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Double.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Number.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/EventObject.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/awt/event/ComponentEvent.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/NumberFormatException.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/IllegalArgumentException.class)]
+[wrote BaseballBackspinConsole$1.class]
+[wrote BaseballBackspinConsole$2.class]
+[wrote BaseballBackspinConsole$3.class]
+[wrote BaseballBackspinConsole$4.class]
+[wrote BaseballBackspinConsole.class]
+[checking JFileFilter]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/AbstractList.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/AbstractCollection.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/util/Iterator.class)]
+[wrote JFileFilter.class]
+[checking ScenePicker]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/lang/Runtime.class)]
+[loading c:\jdk1.3.1\jre\lib\rt.jar(java/io/IOException.class)]
+[wrote ScenePicker.class]
+[total 1252ms]
+Loading source file BackspinPhysics.java...
+Loading source file BaseballBackspinConsole.java...
+Loading source file BaseballDisSender.java...
+Loading source file JFileFilter.java...
+Loading source file ScenePicker.java...
+Constructing Javadoc information...
+Building tree for all the packages and classes...
+Building index for all the packages and classes...
+Generating doc\overview-tree.html...
+Generating doc\index-all.html...
+Generating doc\deprecated-list.html...
+Building index for all classes...
+Generating doc\allclasses-frame.html...
+Generating doc\index.html...
+Generating doc\packages.html...
+Generating doc\BackspinPhysics.html...
+Generating doc\BaseballBackspinConsole.html...
+Generating doc\BaseballDisSender.html...
+Generating doc\JFileFilter.html...
+Generating doc\ScenePicker.html...
+Generating doc\serialized-form.html...
+javadoc: warning - jPanel1: jPanel1 - the Top portion of the TB gui tag not on method.
+javadoc: warning - jPanel2: jPanel2 - the bottom portion of the gui,has 2-D map of scene tag not on method.
+javadoc: warning - pitchBall: pitchBall - pitches the ball tag not on method.
+Generating doc\package-list...
+Generating doc\help-doc.html...
+Generating doc\stylesheet.css...
+3 warnings

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <component level='4' name='NURBS'/>
+    <meta content='HoleCentered.x3d' name='title'/>
+    <meta content='A NurbsTrimmedSurface node rendering a square centered on the origin in the x-y plane; with sides 8 units length. A trimming curve is used to cut out a circle of radius 1 unit centered on the origin. Red (x), Green (y) and Blue (z) line segments represent the x-y-z unit axes.' name='description'/>
+    <meta content='HoleCentered.jpg' name='Image'/>
+    <meta content='Vincent Marchetti' name='creator'/>
+    <meta content='10 February 2012' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='images/HoleCenteredInstantReality.png' name='Image'/>
+    <meta content='images/HoleCenteredXj3D.png' name='Image'/>
+    <meta content='http://www.kshell.com/pages/trimmed_nurbs_demo' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/NURBS/HoleCentered.x3d' name='identifier'/>
+    <meta content='Python language scripting' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='HoleCentered.x3d'/>
+    <Viewpoint description='NurbsTrimmedSurface Hole Centered' position='0 0 12'/>
+    <Background skyColor='1 1 1'/>
+    <Group>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 1 0 0'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='1 0 0'/>
+          <LineProperties linewidthScaleFactor='2'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 0 1 0'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='0 1 0'/>
+          <LineProperties linewidthScaleFactor='2'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 0 0 1'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='0 0 1'/>
+          <LineProperties linewidthScaleFactor='2'/>
+        </Appearance>
+      </Shape>
+    </Group>
+    <Shape>
+      <NurbsTrimmedSurface solid='false' uDimension='2' uKnot='-4 -4 4 4' uOrder='2' vDimension='2' vKnot='-4 -4 4 4' vOrder='2' weight='1 1 1 1'>
+        <Coordinate containerField='controlPoint' point='-4 -4 0 4 -4 0 -4 4 0 4 4 0'/>
+        <Contour2D>
+          <NurbsCurve2D controlPoint='-4 -4 4 -4 4 4 -4 4 -4 -4' knot='0 0 0.25 0.5 0.75 1 1' order='2' weight='1 1 1 1 1'/>
+        </Contour2D>
+        <Contour2D>
+          <NurbsCurve2D controlPoint='1 0 0.7071 -0.7071 0 -1 -0.7071 -0.7071 -1 0 -0.7071 0.7071 0 1 0.7071 0.7071 1 0' knot='0 0 0 0.25 0.25 0.5 0.5 0.75 0.75 1 1 1' weight='1 0.7071 1 0.7071 1 0.7071 1 0.7071 1'/>
+        </Contour2D>
+      </NurbsTrimmedSurface>
+      <Appearance DEF='ksh_appearance_1'>
+        <Material diffuseColor='0 0 1'/>
+      </Appearance>
+    </Shape>
+  </Scene>
+</X3D>

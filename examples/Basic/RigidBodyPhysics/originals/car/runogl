@@ -1,0 +1,2 @@
+#/bin/bash
+java -Xmx128M -Xms128M -Dsun.java2d.noddraw=true -Djinput.plugins=net.java.games.input.DirectInputEnvironmentPlugin -Dorg.web3d.vrml.renderer.common.nodes.shape.useMipMaps=true -Dorg.web3d.vrml.renderer.common.nodes.shape.anisotropicDegree=2 xj3d.browser.Xj3DBrowser -ogl -nice main.x3dv

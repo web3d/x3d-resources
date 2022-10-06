@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Spheres.x3d' name='title'/>
+    <meta content='Spherical geometry cluster to support illustration of lighting effects by other test scenes.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/spheres.wrl' name='reference'/>
+    <meta content='DirectionalLight.x3d' name='reference'/>
+    <meta content='PointLight.x3d' name='reference'/>
+    <meta content='SpotLight.x3d' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0305.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0306.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0307.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Spheres.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Spheres.x3d'/>
+    <Transform translation='-7.5 -7.5 0.0'>
+      <Group DEF='BallRow'>
+        <Shape DEF='Ball'>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+        <Transform translation='3.0 0.0 0.0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='6.0 0.0 0.0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='9.0 0.0 0.0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='12.0 0.0 0.0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='15.0 0.0 0.0'>
+          <Shape USE='Ball'/>
+        </Transform>
+      </Group>
+      <Transform translation='0.0 3.0 0.0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0.0 6.0 0.0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0.0 9.0 0.0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0.0 12.0 0.0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0.0 15.0 0.0'>
+        <Group USE='BallRow'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

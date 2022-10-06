@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 1995-2016 held by the author(s).  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer
+      in the documentation and/or other materials provided with the
+      distribution.
+    * Neither the names of the Naval Postgraduate School (NPS)
+      Modeling Virtual Environments and Simulation (MOVES) Institute
+      (https://www.nps.edu and https://MovesInstitute.nps.edu)
+      nor the names of its contributors may be used to endorse or
+      promote products derived from this software without specific
+      prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<project name="X3D ScriptConformance examples" default="build" basedir=".">
+    <description>Builds and tests Java sources used in the X3D Examples Basic archive ScriptConformance scenes using Ant.</description>
+	
+	<!-- Warning: ScriptNodeEventOutControl.java,ScriptNodeFieldControl.java use VRML97 scripting, not X3D Scene Authoring Interface -->
+
+	<!-- Users can modify to match local installation -->
+    <property name="xj3d.dir" value="C:\xj3d-code\trunk"/>
+    <property name="xj3d.jar" value="xj3d-2.1-nps.jar"/>
+	<!-- Further information on latest Xj3D available at
+		 https://savage.nps.edu/Savage/developers.html#Xj3D
+		 https://sourceforge.net/p/xj3d/code/HEAD/tree/trunk/jars
+	-->
+	<!-- Users can modify to match local installation -->
+    <property name="X3dJsai.dir" value="C:\x3d-code\www.web3d.org\x3d\stylesheets"/>
+    <property name="X3dJsai.jar" value="X3dJavaSceneAccessInterface3.3.classes.jar"/>
+	<!--
+    <property name="X3dJsai.jar" value="X3dJavaSceneAccessInterface3.3.full.jar"/>
+	-->
+
+    <target name="compile.Xj3D" depends="" description="use Xj3D to compile Java Scene Authoring Interface (SAI) classes used by Script nodes in example scenes" >
+        <length property="xj3d.jar.length" file="${xj3d.dir}/jars/${xj3d.jar}"/>
+		<echo message="Xj3D jar:  ${xj3d.dir}/jars/${xj3d.jar}  (${xj3d.jar.length} bytes)"/>
+		<javac srcdir="." includes="SAIExample*.java" excludes="ScriptNodeEventOutControl.java,ScriptNodeFieldControl.java" verbose="true" includeantruntime="false">
+            <classpath>
+                <fileset dir="${xj3d.dir}/jars">
+                    <include name="${xj3d.jar}"/>
+                </fileset>
+            </classpath>
+            <exclude name="vrml/**/*.java"/>
+            <exclude name="Vrml97ScriptNodePackages.jar"/>
+        </javac>
+    </target>
+
+    <target name="compile.JSAI" depends="" description="use X3dJavaSceneAccessInterface3.3 to compile Java Scene Authoring Interface (SAI) classes used by Script nodes in example scenes" >
+        <length property="X3dJsai.jar.length" file="${X3dJsai.dir}/${X3dJsai.jar}"/>
+		<echo message="Xj3D jar:  ${X3dJsai.dir}/${X3dJsai.jar}  (${X3dJsai.jar.length} bytes)"/>
+		<javac srcdir="." includes="SAIExample*.java" excludes="ScriptNodeEventOutControl.java,ScriptNodeFieldControl.java" verbose="true" includeantruntime="false">
+            <classpath>
+                <fileset dir="${X3dJsai.dir}">
+                    <include name="${X3dJsai.jar}"/>
+                </fileset>
+            </classpath>
+            <exclude name="vrml/**/*.java"/>
+            <exclude name="Vrml97ScriptNodePackages.jar"/>
+        </javac>
+    </target>
+     
+     <target name="all" depends="clean,compile.Xj3D,javadoc" description="perform all tasks">
+     </target>
+     
+     <target name="test" depends="clean,compile.Xj3D" description="clean and compile">
+     </target>
+     
+     <target name="clean" depends="" description="clean compiled classes" >
+         <delete verbose="true">
+             <fileset dir="." includes="SAIExample*.class"/>
+         </delete>
+     </target>
+     
+     <target name="javadoc" depends="" description="create javadoc for example Java Scene Authoring Interface (SAI) classes used by Script nodes" >
+         <javadoc sourcepath="." destdir="javadoc" verbose="true" access="private" excludepackagenames="vrml.*">
+			<!-- TODO update this invocation -->
+		 </javadoc>
+     </target>
+        
+</project>

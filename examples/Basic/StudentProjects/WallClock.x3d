@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='WallClock.x3d' name='title'/>
+    <meta content='A file describing a wall clock' name='description'/>
+    <meta content='Frederic Roussille' name='creator'/>
+    <meta content='1 April 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/WallClock.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='WallClock.x3d'/>
+    <Group>
+      <Shape>
+        <Appearance>
+          <Material DEF='blue' diffuseColor='0.3 0.2 0.8'/>
+        </Appearance>
+        <Extrusion beginCap='false' creaseAngle='1' crossSection='0 0 4 0 4 0.7 3.6 0.7 3.6 0.2 0 0.2' endCap='false' spine='1 0 0 0.92 -0.38 0 0.71 -0.71 0 0.38 -0.92 0 0 -1 0 -0.38 -0.92 0 -0.71 -0.71 0 -0.92 -0.38 0 -1 0 0 -0.92 0.38 0 -0.71 0.71 0 -0.38 0.92 0 0 1 0 0.38 0.92 0 0.71 0.71 0 0.92 0.38 0 1 0 0'/>
+      </Shape>
+      <Transform rotation='1 0 0 1.57' translation='0 0 0.2'>
+        <Shape>
+          <Cylinder height='0.2' radius='2.8'/>
+        </Shape>
+      </Transform>
+      <Group>
+        <Transform center='0 0 0.4' rotation='0 0 1 -0.5233'>
+          <Transform DEF='mark1' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m1' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -1.0466'>
+          <Transform DEF='mark2' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m2' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -1.57'>
+          <Transform DEF='mark3' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m3' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -2.0933'>
+          <Transform DEF='mark4' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m4' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -2.6166'>
+          <Transform DEF='mark5' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m5' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -3.1399'>
+          <Transform DEF='mark6' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m6' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -3.6632'>
+          <Transform DEF='mark7' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m7' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -4.1865'>
+          <Transform DEF='mark8' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m8' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -4.7098'>
+          <Transform DEF='mark9' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m9' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -5.2331'>
+          <Transform DEF='mark10' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m10' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -5.7564'>
+          <Transform DEF='mark11' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m11' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform center='0 0 0.4' rotation='0 0 1 -6.2797'>
+          <Transform DEF='mark12' translation='0 2.2 0.4'>
+            <Shape>
+              <Appearance>
+                <Material DEF='m12' diffuseColor='0.3 0.2 0.8'/>
+              </Appearance>
+              <Box size='0.25 0.5 0.15'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Group>
+      <Transform DEF='small' center='0 0 0.4'>
+        <Transform rotation='1 0 0 -1.57' translation='0 0 0.5'>
+          <Shape>
+            <Appearance>
+              <Material USE='blue'/>
+            </Appearance>
+            <Extrusion crossSection='-0.15 0 0.15 0 0 1.4 -0.15 0' spine='0 0 0 0 0.15 0'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='medium' center='0 0 0.4'>
+        <Transform rotation='1 0 0 -1.57' translation='0 0 0.5'>
+          <Shape>
+            <Appearance>
+              <Material USE='blue'/>
+            </Appearance>
+            <Extrusion crossSection='-0.11 0 0.15 0 0 1.65 -0.11 0' spine='0 0 0 0 0.15 0'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='tall' center='0 0 0.4'>
+        <Transform translation='0 0 0.4'>
+          <Shape>
+            <Appearance>
+              <Material USE='blue'/>
+            </Appearance>
+            <IndexedLineSet coordIndex='0 1 -1'>
+              <Coordinate point='0 0 0 0 1.8 0'/>
+            </IndexedLineSet>
+          </Shape>
+        </Transform>
+      </Transform>
+      <TimeSensor DEF='cm' enabled='false' loop='true'/>
+      <TimeSensor DEF='refresh' cycleInterval='0.1' loop='true'/>
+      <ColorInterpolator DEF='cm1p' key='0 0.0833 0.0833 0.167 0.167 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm2p' key='0 0.167 0.167 0.25 0.25 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm3p' key='0 0.25 0.25 0.333 0.333 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm4p' key='0 0.333 0.333 0.417 0.417 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm5p' key='0 0.417 0.417 0.5 0.5 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm6p' key='0 0.5 0.5 0.583 0.583 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm7p' key='0 0.583 0.583 0.667 0.667 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm8p' key='0 0.667 0.667 0.75 0.75 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm9p' key='0 0.75 0.75 0.833 0.833 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm10p' key='0 0.833 0.833 0.917 0.917 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm11p' key='0 0.917 0.917 1 1' keyValue='0.3 0.2 0.8 0.3 0.2 0.8 1 1 0 1 1 0 0.3 0.2 0.8'/>
+      <ColorInterpolator DEF='cm12p' key='0 0.0833 0.0833 1' keyValue='1 1 0 1 1 0 0.3 0.2 0.8 0.3 0.2 0.8'/>
+      <Script DEF='writing'>
+        <field accessType='inputOnly' name='set_float' type='SFTime'/>
+        <field accessType='outputOnly' name='string_changed' type='MFString'/>
+        <field accessType='initializeOnly' name='g' type='SFFloat' value='0'/>
+        <![CDATA[
+ecmascript:
+function set_float () {
+ var today = new Date();
+ var date = today.toLocaleString();
+ string_changed[0]= date;
+}
+]]>
+      </Script>
+      <Transform translation='0 1.2 0.3'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.3 0.2 0.8'/>
+          </Appearance>
+          <Text DEF='text'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.3'/>
+          </Text>
+        </Shape>
+      </Transform>
+      <Script DEF='more_time'>
+        <field accessType='outputOnly' name='second_changed' type='SFRotation'/>
+        <field accessType='inputOnly' name='set_second' type='SFTime'/>
+        <field accessType='outputOnly' name='minute_changed' type='SFRotation'/>
+        <field accessType='outputOnly' name='hour_changed' type='SFRotation'/>
+        <![CDATA[
+ecmascript:
+function initialize(){
+}
+
+
+function set_second () {
+ var today = new Date();
+ var seconds = today.getSeconds();
+ var minutes =  -(Math.PI/30)*today.getMinutes();
+ var hours = -(Math.PI/6)*today.getHours();
+ second_changed[3] = -(Math.PI/30)*seconds ;
+ minute_changed[3]= minutes -(Math.PI/30)*seconds/60; 
+ hour_changed[3]= hours -(Math.PI/6)*today.getMinutes()/60;
+}
+]]>
+      </Script>
+      <Script DEF='cm_enabled'>
+        <field accessType='outputOnly' name='start' type='SFBool'/>
+        <field accessType='inputOnly' name='set_milli' type='SFTime'/>
+        <![CDATA[
+ecmascript:
+function set_milli () {
+ var today = new Date();
+ var milli = today.getTime();
+ var milli_changed= (milli/1000) - Math.floor(milli/1000);
+ Browser.print (milli_changed);
+ if (milli_changed>0 && milli_changed<0.1) {start=true;}
+}
+]]>
+      </Script>
+    </Group>
+    <ROUTE fromField='cycleTime' fromNode='refresh' toField='set_milli' toNode='cm_enabled'/>
+    <ROUTE fromField='start' fromNode='cm_enabled' toField='set_enabled' toNode='cm'/>
+    <ROUTE fromField='cycleTime' fromNode='refresh' toField='set_second' toNode='more_time'/>
+    <ROUTE fromField='second_changed' fromNode='more_time' toField='set_rotation' toNode='tall'/>
+    <ROUTE fromField='minute_changed' fromNode='more_time' toField='set_rotation' toNode='medium'/>
+    <ROUTE fromField='hour_changed' fromNode='more_time' toField='set_rotation' toNode='small'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm1p'/>
+    <ROUTE fromField='value_changed' fromNode='cm1p' toField='set_diffuseColor' toNode='m1'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm2p'/>
+    <ROUTE fromField='value_changed' fromNode='cm2p' toField='set_diffuseColor' toNode='m2'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm3p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm4p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm5p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm6p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm7p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm8p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm9p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm10p'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm12p'/>
+    <ROUTE fromField='value_changed' fromNode='cm3p' toField='set_diffuseColor' toNode='m3'/>
+    <ROUTE fromField='value_changed' fromNode='cm4p' toField='set_diffuseColor' toNode='m4'/>
+    <ROUTE fromField='value_changed' fromNode='cm5p' toField='set_diffuseColor' toNode='m5'/>
+    <ROUTE fromField='value_changed' fromNode='cm6p' toField='set_diffuseColor' toNode='m6'/>
+    <ROUTE fromField='value_changed' fromNode='cm7p' toField='set_diffuseColor' toNode='m7'/>
+    <ROUTE fromField='value_changed' fromNode='cm8p' toField='set_diffuseColor' toNode='m8'/>
+    <ROUTE fromField='value_changed' fromNode='cm9p' toField='set_diffuseColor' toNode='m9'/>
+    <ROUTE fromField='value_changed' fromNode='cm10p' toField='set_diffuseColor' toNode='m10'/>
+    <ROUTE fromField='value_changed' fromNode='cm12p' toField='set_diffuseColor' toNode='m12'/>
+    <ROUTE fromField='fraction_changed' fromNode='cm' toField='set_fraction' toNode='cm11p'/>
+    <ROUTE fromField='value_changed' fromNode='cm11p' toField='set_diffuseColor' toNode='m11'/>
+    <ROUTE fromField='cycleTime' fromNode='refresh' toField='set_float' toNode='writing'/>
+    <ROUTE fromField='string_changed' fromNode='writing' toField='set_string' toNode='text'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='RoboBill.x3d' name='title'/>
+    <meta content='RoboBill is a Robot Billboard that illustrates the use of Group, Transform, and Billboard groups - navigate around, here&apos;s looking at you! The left robot&apos;s head rotates in the horizontal plane, the right robot&apos;s head rotates in any direction.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/robobill.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0093.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/RoboBill.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Two robots are built with their heads in Billboard groups, but their torsos left out of it. As the viewer walks about the robot, the heads always turn to face the viewer. The left robot's head is constrained to rotate about the Y axis, while the right robot's head can rotate freely. -->
+    <!-- To make it clear what is, and is not moving to track the viewer, the torso of the robot remains fixed, as does a background of blue slabs. -->
+    <!-- Things to experiment with: -->
+    <!-- Place the entire robot in the Billboard group so that the whole robot tracks the viewer, not just the robot's head. -->
+    <!-- Add textures to the environment. -->
+    <!-- Add light sources, such as one placed in the lower ball of the robot. Make that ball emissive as well so that it looks like the ball is the source of light. Remember to put the light source inside the robot's transform group so that as the robot moves, the light source moves with it. -->
+    <!-- Add behavior to the robot. Make it move on its own! -->
+    <!-- -->
+    <WorldInfo info='"Copyright (c) 1998, David R. Nadeau"' title='Robot Billboard'/>
+    <Viewpoint DEF='Entry' description='Entry view' position='0.0 3.0 12.0'/>
+    <NavigationInfo/>
+    <Background/>
+    <Transform scale='2.0 2.0 2.0' translation='-2.0 1.0 0.0'>
+      <Inline DEF='RoboBody' url='"robobody.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/robobody.x3d" "robobody.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/robobody.wrl"'/>
+      <Transform translation='0.0 1.4 0.0'>
+        <Billboard>
+          <Inline DEF='RoboHead' url='"robohead.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/robohead.x3d" "robohead.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/robohead.wrl"'/>
+        </Billboard>
+      </Transform>
+    </Transform>
+    <Transform scale='2.0 2.0 2.0' translation='2.0 1.0 0.0'>
+      <Inline USE='RoboBody'/>
+      <Transform translation='0.0 1.4 0.0'>
+        <Billboard axisOfRotation='0.0 0.0 0.0'>
+          <Inline USE='RoboHead'/>
+        </Billboard>
+      </Transform>
+    </Transform>
+    <Transform translation='0.0 2.0 -6.0'>
+      <Shape DEF='Slab'>
+        <Appearance>
+          <Material diffuseColor='0.0 0.1 0.5' emissiveColor='0.0 0.3 0.5'/>
+        </Appearance>
+        <Box size='2.0 4.0 0.3'/>
+      </Shape>
+    </Transform>
+    <Transform translation='-6.0 2.0 0.0'>
+      <Shape USE='Slab'/>
+    </Transform>
+    <Transform translation='6.0 2.0 0.0'>
+      <Shape USE='Slab'/>
+    </Transform>
+    <Transform translation='-4.3 2.0 -4.3'>
+      <Shape USE='Slab'/>
+    </Transform>
+    <Transform translation='4.3 2.0 -4.3'>
+      <Shape USE='Slab'/>
+    </Transform>
+  </Scene>
+</X3D>

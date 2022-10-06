@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<molecule convention="MDLMol" title="Glycerol Diacetate">
+
+  <formula>C7 H12 O5</formula>
+  <float title="molecule weight">176.17</float>
+  <float title="melting point" units="degC">-30</float>
+  <float title="boiling point" units="degC">259</float>
+  <float title="specific gravity">1.18</float>
+  <atomArray>
+    <atom id="glycerol_diacetate_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.2922</float>
+      <float builtin="y3">1.7366</float>
+      <float builtin="z3">0.9637</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">30.0</float>
+    </atom>
+    <atom id="glycerol_diacetate_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.2046</float>
+      <float builtin="y3">1.2077</float>
+      <float builtin="z3">1.9255</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">11.682550269259512</float>
+      <float builtin="y2">57.63182982008655</float>
+    </atom>
+    <atom id="glycerol_diacetate_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.2922</float>
+      <float builtin="y3">2.3736</float>
+      <float builtin="z3">2.3677</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">41.45369198113262</float>
+      <float builtin="y2">61.33035941596236</float>
+    </atom>
+    <atom id="glycerol_diacetate_a4">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">1.4655</float>
+      <float builtin="y3">0.1545</float>
+      <float builtin="z3">1.3504</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-6.406041173354083</float>
+      <float builtin="y2">81.56513004429729</float>
+    </atom>
+    <atom id="glycerol_diacetate_a5">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">4.3235</float>
+      <float builtin="y3">0.8189</float>
+      <float builtin="z3">0.7374</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="glycerol_diacetate_a6">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.4626</float>
+      <float builtin="y3">2.0481</float>
+      <float builtin="z3">3.4462</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">70.31500462307666</float>
+      <float builtin="y2">53.14350210781528</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="glycerol_diacetate_b1">
+      <string builtin="atomRef">glycerol_diacetate_a1</string>
+      <string builtin="atomRef">glycerol_diacetate_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="glycerol_diacetate_b2">
+      <string builtin="atomRef">glycerol_diacetate_a1</string>
+      <string builtin="atomRef">glycerol_diacetate_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="glycerol_diacetate_b5">
+      <string builtin="atomRef">glycerol_diacetate_a2</string>
+      <string builtin="atomRef">glycerol_diacetate_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="glycerol_diacetate_b6">
+      <string builtin="atomRef">glycerol_diacetate_a2</string>
+      <string builtin="atomRef">glycerol_diacetate_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="glycerol_diacetate_b8">
+      <string builtin="atomRef">glycerol_diacetate_a3</string>
+      <string builtin="atomRef">glycerol_diacetate_a6</string>
+      <string builtin="order">1</string>
+    </bond>
+  </bondArray>
+</molecule>

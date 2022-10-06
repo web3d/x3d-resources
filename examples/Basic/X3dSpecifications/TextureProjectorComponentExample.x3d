@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta content='TextureProjectorComponentExample.x3d' name='title'/>
+    <meta content='Texture projector component example' name='description'/>
+    <meta content='Kwan Hee Yoo, Dick Puk and Don Brutzman' name='creator'/>
+    <meta content='*if manually translating VRML-to-X3D, enter name of person translating here*' name='translator'/>
+    <meta content='1 January 2019' name='created'/>
+    <meta content='14 May 2022' name='modified'/>
+    <meta content='https://www.web3d.org/member-only/mantis/view.php?id=1255' name='reference'/>
+    <meta content='X3D encodings, ISO/IEC 19775-1, Part 1: Architecture and base components, Clause 42 Texture projector component, subclause 42.4.1 TextureProjector' name='specificationSection'/>
+    <meta content='https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-CD1/Part01/components/textureProjector.html#TextureProjector' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/TextureProjectorComponentExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <TextureProjector description='Project a red delicious texture' direction='-1 0 -1' farDistance='10' fieldOfView='0.26' global='true' location='3 3 3' nearDistance='1' on='true' upVector='0 1 0'>
+      <ImageTexture url='"image/Red_Delicious.jpg" "https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/image/Red_Delicious.jpg" "https://upload.wikimedia.org/wikipedia/commons/f/fb/Red_Delicious.jpg"'/>
+    </TextureProjector>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='0.5 0.5 0.5'/>
+      </Appearance>
+      <IndexedFaceSet coordIndex='3 2 1 0 -1 4 5 2 3-1 5 6 1 2 -1' solid='false'>
+        <Coordinate point='1 0 1 -1 0 1 -1 0 -1 1 0 -1 1 1 -1 -1 1 -1 -1 1 1'/>
+      </IndexedFaceSet>
+    </Shape>
+  </Scene>
+</X3D>

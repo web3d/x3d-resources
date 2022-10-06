@@ -1,0 +1,939 @@
+x3pCom\source\x3pRoot.java:21: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+              ^
+x3pCom\source\x3pRoot.java:21: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                     ^
+x3pCom\source\x3pRoot.java:21: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                      ^
+x3pCom\source\x3pRoot.java:21: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                              ^
+x3pCom\source\x3pRoot.java:27: warning: unmappable character for encoding Cp1252
+	/** ƒOƒ??[ƒoƒ‹ƒf?[ƒ^‚ð“ü—Í‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^	*/
+               ^
+x3pCom\source\x3pRoot.java:27: warning: unmappable character for encoding Cp1252
+	/** ƒOƒ??[ƒoƒ‹ƒf?[ƒ^‚ð“ü—Í‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^	*/
+                ^
+x3pCom\source\x3pRoot.java:27: warning: unmappable character for encoding Cp1252
+	/** ƒOƒ??[ƒoƒ‹ƒf?[ƒ^‚ð“ü—Í‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^	*/
+                        ^
+x3pCom\source\x3pRoot.java:33: warning: unmappable character for encoding Cp1252
+	/** lvEps.eps—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                            ^
+x3pCom\source\x3pRoot.java:33: warning: unmappable character for encoding Cp1252
+	/** lvEps.eps—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                             ^
+x3pCom\source\x3pRoot.java:33: warning: unmappable character for encoding Cp1252
+	/** lvEps.eps—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                                     ^
+x3pCom\source\x3pRoot.java:39: warning: unmappable character for encoding Cp1252
+	/** lvError.err—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                              ^
+x3pCom\source\x3pRoot.java:39: warning: unmappable character for encoding Cp1252
+	/** lvError.err—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                               ^
+x3pCom\source\x3pRoot.java:39: warning: unmappable character for encoding Cp1252
+	/** lvError.err—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                                       ^
+x3pCom\source\x3pComGblElm.java:15: warning: unmappable character for encoding Cp1252
+ * static•Ï?”‚Ì‘ã—pƒNƒ‰ƒX
+           ^
+x3pCom\source\x3pGlobal.java:15: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX?B																						<br>
+      ^
+x3pCom\source\x3pGlobal.java:15: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX?B																						<br>
+       ^
+x3pCom\source\x3pGlobal.java:15: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX?B																						<br>
+               ^
+x3pCom\source\x3pGlobal.java:15: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX?B																						<br>
+                           ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+     ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+             ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                       ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                 ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                   ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                     ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                       ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                                         ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                                                    ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                                                                   ^
+x3pCom\source\x3pGlobal.java:16: warning: unmappable character for encoding Cp1252
+ * ƒm?[ƒhƒcƒŠ?[‚âƒ‚ƒfƒ‹?iƒVƒFƒ‹‚Ì?W?‡?j?î•ñ‚Í x3pGlobalƒf?[ƒ^“à‚É•ÛŽ?‚³‚ê‚Ä‚¢‚é‚Ì‚Å?Ax3pWorld.Init()‚ð•¡?”‰ñ		<br>
+                                                                                                        ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+   ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                 ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                     ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                             ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                               ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                         ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                           ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                             ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                 ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                         ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                             ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                                     ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                                       ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                                                   ^
+x3pCom\source\x3pGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ?s‚¤‚±‚Æ‚É‚æ‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚Ì?Ä?ì?¬‚ð?s‚Á‚½‚è?Aƒm?[ƒhƒcƒŠ?[?•ƒ‚ƒfƒ‹‚ð•¡?”ŒÂ‚Æ‚·‚é‚±‚Æ‚à‚Å‚«‚é?B			<br>
+                                                                                                         ^
+x3pCom\source\x3pGlobal.java:19: warning: unmappable character for encoding Cp1252
+ * lvGlobal ‚ðŒp?³‚µ‚Ä‚¢‚é‚Ì‚Å?A																					<br>
+                ^
+x3pCom\source\x3pGlobal.java:19: warning: unmappable character for encoding Cp1252
+ * lvGlobal ‚ðŒp?³‚µ‚Ä‚¢‚é‚Ì‚Å?A																					<br>
+                              ^
+x3pCom\source\x3pGlobal.java:20: warning: unmappable character for encoding Cp1252
+ *		lvError.Message( ??? ) ‚Ìˆø?”?i???‚Ì•”•ª?j																	<br>
+                                           ^
+x3pCom\source\x3pGlobal.java:20: warning: unmappable character for encoding Cp1252
+ *		lvError.Message( ??? ) ‚Ìˆø?”?i???‚Ì•”•ª?j																	<br>
+                                             ^
+x3pCom\source\x3pGlobal.java:20: warning: unmappable character for encoding Cp1252
+ *		lvError.Message( ??? ) ‚Ìˆø?”?i???‚Ì•”•ª?j																	<br>
+                                                        ^
+x3pCom\source\x3pGlobal.java:21: warning: unmappable character for encoding Cp1252
+ * ‚Æ‚·‚é‚±‚Æ‚ª‰Â”\‚Å‚ ‚é?B																							<br>
+                         ^
+x3pCom\source\x3pGlobal.java:23: warning: unmappable character for encoding Cp1252
+ * ‚½‚¾‚µŒ»?Ý‚Ì‚Æ‚±‚ë?A x3pGlobal ‚ð lvError.Message() ˆÈŠO‚Ì Java Lattice Kernel ‚Ìƒ?ƒ\ƒbƒh?iƒRƒ“ƒXƒgƒ‰ƒNƒ^		<br>
+           ^
+x3pCom\source\x3pGlobal.java:23: warning: unmappable character for encoding Cp1252
+ * ‚½‚¾‚µŒ»?Ý‚Ì‚Æ‚±‚ë?A x3pGlobal ‚ð lvError.Message() ˆÈŠO‚Ì Java Lattice Kernel ‚Ìƒ?ƒ\ƒbƒh?iƒRƒ“ƒXƒgƒ‰ƒNƒ^		<br>
+                     ^
+x3pCom\source\x3pGlobal.java:23: warning: unmappable character for encoding Cp1252
+ * ‚½‚¾‚µŒ»?Ý‚Ì‚Æ‚±‚ë?A x3pGlobal ‚ð lvError.Message() ˆÈŠO‚Ì Java Lattice Kernel ‚Ìƒ?ƒ\ƒbƒh?iƒRƒ“ƒXƒgƒ‰ƒNƒ^		<br>
+                                                                                     ^
+x3pCom\source\x3pGlobal.java:23: warning: unmappable character for encoding Cp1252
+ * ‚½‚¾‚µŒ»?Ý‚Ì‚Æ‚±‚ë?A x3pGlobal ‚ð lvError.Message() ˆÈŠO‚Ì Java Lattice Kernel ‚Ìƒ?ƒ\ƒbƒh?iƒRƒ“ƒXƒgƒ‰ƒNƒ^		<br>
+                                                                                            ^
+x3pCom\source\x3pGlobal.java:24: warning: unmappable character for encoding Cp1252
+ * ŠÜ‚Þ?j‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í?A•Û?Ø‚µ‚È‚¢?B“Á‚É lvToKernelƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í‹Ö‚¶‚é
+       ^
+x3pCom\source\x3pGlobal.java:24: warning: unmappable character for encoding Cp1252
+ * ŠÜ‚Þ?j‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í?A•Û?Ø‚µ‚È‚¢?B“Á‚É lvToKernelƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í‹Ö‚¶‚é
+             ^
+x3pCom\source\x3pGlobal.java:24: warning: unmappable character for encoding Cp1252
+ * ŠÜ‚Þ?j‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í?A•Û?Ø‚µ‚È‚¢?B“Á‚É lvToKernelƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í‹Ö‚¶‚é
+                           ^
+x3pCom\source\x3pGlobal.java:24: warning: unmappable character for encoding Cp1252
+ * ŠÜ‚Þ?j‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í?A•Û?Ø‚µ‚È‚¢?B“Á‚É lvToKernelƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í‹Ö‚¶‚é
+                               ^
+x3pCom\source\x3pGlobal.java:24: warning: unmappable character for encoding Cp1252
+ * ŠÜ‚Þ?j‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í?A•Û?Ø‚µ‚È‚¢?B“Á‚É lvToKernelƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í‹Ö‚¶‚é
+                                       ^
+x3pCom\source\x3pGlobal.java:24: warning: unmappable character for encoding Cp1252
+ * ŠÜ‚Þ?j‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í?A•Û?Ø‚µ‚È‚¢?B“Á‚É lvToKernelƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø?”‚Æ‚·‚é‚±‚Æ‚Í‹Ö‚¶‚é
+                                                                          ^
+x3pCom\source\x3pGblCoreNull.java:15: warning: unmappable character for encoding Cp1252
+ * static•Ï?”‚Ì‘ã—pƒNƒ‰ƒX
+           ^
+x3pCom\source\x3pMatrix.java:17: warning: unmappable character for encoding Cp1252
+ * 4 x 4 ƒ}ƒgƒŠƒNƒXŒ^‚Ì?”’l‰‰ŽZ—pƒNƒ‰ƒX
+                       ^
+x3pCom\source\x3pMatrix.java:23: warning: unmappable character for encoding Cp1252
+//	ƒ?ƒ“ƒo
+         ^
+x3pCom\source\x3pMatrix.java:27: warning: unmappable character for encoding Cp1252
+	 *	ƒ}ƒgƒŠƒNƒX‚Ìƒf?[ƒ^?B4 x 4 ‚Ì”z—ñ‚Å‚ ‚é		<br>
+                              ^
+x3pCom\source\x3pMatrix.java:27: warning: unmappable character for encoding Cp1252
+	 *	ƒ}ƒgƒŠƒNƒX‚Ìƒf?[ƒ^?B4 x 4 ‚Ì”z—ñ‚Å‚ ‚é		<br>
+                                  ^
+x3pCom\source\x3pMatrix.java:29: warning: unmappable character for encoding Cp1252
+	 *	i?_j	0		1		2		3
+                 ^
+x3pCom\source\x3pMatrix.java:42: warning: unmappable character for encoding Cp1252
+	 * static•Ï?”‘ã—p‚Ì‚½‚ß‚Ì“à•”ƒNƒ‰ƒX
+                   ^
+x3pCom\source\x3pMatrix.java:48: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                   ^
+x3pCom\source\x3pMatrix.java:48: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                    ^
+x3pCom\source\x3pMatrix.java:48: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                            ^
+x3pCom\source\x3pMatrix.java:55: warning: unmappable character for encoding Cp1252
+		/** ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@ƒGƒŠƒA		*/
+                     ^
+x3pCom\source\x3pMatrix.java:55: warning: unmappable character for encoding Cp1252
+		/** ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@ƒGƒŠƒA		*/
+                      ^
+x3pCom\source\x3pMatrix.java:55: warning: unmappable character for encoding Cp1252
+		/** ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@ƒGƒŠƒA		*/
+                              ^
+x3pCom\source\x3pMatrix.java:67: warning: unmappable character for encoding Cp1252
+		 * ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@?‰Šú‰»?iƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŽg—p?j
+                    ^
+x3pCom\source\x3pMatrix.java:67: warning: unmappable character for encoding Cp1252
+		 * ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@?‰Šú‰»?iƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŽg—p?j
+                     ^
+x3pCom\source\x3pMatrix.java:67: warning: unmappable character for encoding Cp1252
+		 * ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@?‰Šú‰»?iƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŽg—p?j
+                             ^
+x3pCom\source\x3pMatrix.java:67: warning: unmappable character for encoding Cp1252
+		 * ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@?‰Šú‰»?iƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŽg—p?j
+                                                    ^
+x3pCom\source\x3pMatrix.java:67: warning: unmappable character for encoding Cp1252
+		 * ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@?‰Šú‰»?iƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŽg—p?j
+                                                          ^
+x3pCom\source\x3pMatrix.java:67: warning: unmappable character for encoding Cp1252
+		 * ƒ??[ƒJƒ‹•Ï?”—p‚Ì new ‘ã—pƒoƒbƒtƒ@?‰Šú‰»?iƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŽg—p?j
+                                                                                ^
+x3pCom\source\x3pMatrix.java:68: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                   ^
+x3pCom\source\x3pMatrix.java:68: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                    ^
+x3pCom\source\x3pMatrix.java:68: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                            ^
+x3pCom\source\x3pMatrix.java:85: warning: unmappable character for encoding Cp1252
+	/** “–ƒNƒ‰ƒX—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                           ^
+x3pCom\source\x3pMatrix.java:85: warning: unmappable character for encoding Cp1252
+	/** “–ƒNƒ‰ƒX—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                            ^
+x3pCom\source\x3pMatrix.java:85: warning: unmappable character for encoding Cp1252
+	/** “–ƒNƒ‰ƒX—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                                    ^
+x3pCom\source\x3pMatrix.java:117: warning: unmappable character for encoding Cp1252
+//	ƒ?ƒ\ƒbƒh
+         ^
+x3pCom\source\x3pMatrix.java:133: warning: unmappable character for encoding Cp1252
+     *	•½?sˆÚ“®
+          ^
+x3pCom\source\x3pMatrix.java:391: warning: unmappable character for encoding Cp1252
+     *	?æŽZ
+        ^
+x3pCom\source\x3pMatrix.java:412: warning: unmappable character for encoding Cp1252
+     *	?æŽZ
+        ^
+x3pCom\source\x3pMatrix.java:436: warning: unmappable character for encoding Cp1252
+	 * @return			•K‚¸?”’lŠÖ?”‚© AssignŒnŠÖ?”‚Å•ï‚Þ‚±‚Æ
+                                            ^
+x3pCom\source\x3pMatrix.java:436: warning: unmappable character for encoding Cp1252
+	 * @return			•K‚¸?”’lŠÖ?”‚© AssignŒnŠÖ?”‚Å•ï‚Þ‚±‚Æ
+                                                  ^
+x3pCom\source\x3pMatrix.java:436: warning: unmappable character for encoding Cp1252
+	 * @return			•K‚¸?”’lŠÖ?”‚© AssignŒnŠÖ?”‚Å•ï‚Þ‚±‚Æ
+                                                                 ^
+x3pCom\source\x3pMatrix.java:488: warning: unmappable character for encoding Cp1252
+    /		Œ»?Ý‚Ìƒ??[ƒe?[ƒVƒ‡ƒ“ƒ}ƒgƒŠƒNƒX‚ð
+                  ^
+x3pCom\source\x3pMatrix.java:488: warning: unmappable character for encoding Cp1252
+    /		Œ»?Ý‚Ìƒ??[ƒe?[ƒVƒ‡ƒ“ƒ}ƒgƒŠƒNƒX‚ð
+                       ^
+x3pCom\source\x3pMatrix.java:488: warning: unmappable character for encoding Cp1252
+    /		Œ»?Ý‚Ìƒ??[ƒe?[ƒVƒ‡ƒ“ƒ}ƒgƒŠƒNƒX‚ð
+                        ^
+x3pCom\source\x3pMatrix.java:488: warning: unmappable character for encoding Cp1252
+    /		Œ»?Ý‚Ìƒ??[ƒe?[ƒVƒ‡ƒ“ƒ}ƒgƒŠƒNƒX‚ð
+                            ^
+x3pCom\source\x3pMatrix.java:508: warning: unmappable character for encoding Cp1252
+       // ‚xŽ²‚Ü‚í‚è?¬•ª‚ðŒvŽZ
+                    ^
+x3pCom\source\x3pMatrix.java:526: warning: unmappable character for encoding Cp1252
+    	// ‚xŽ²‚Ü‚í‚è?¬•ª‚ð?Á‚·	
+                     ^
+x3pCom\source\x3pMatrix.java:526: warning: unmappable character for encoding Cp1252
+    	// ‚xŽ²‚Ü‚í‚è?¬•ª‚ð?Á‚·	
+                           ^
+x3pCom\source\x3pMatrix.java:532: warning: unmappable character for encoding Cp1252
+        // ‚wŽ²‚Ü‚í‚è‚Ì?¬•ª‚ðŒvŽZ
+                       ^
+100 warnings
+x3pNode\source\x3pNodeGblElm.java:16: warning: unmappable character for encoding Cp1252
+ * static•Ï?”‚Ì‘ã—pƒNƒ‰ƒX
+           ^
+x3pNode\source\x3pTraverse.java:15: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+              ^
+x3pNode\source\x3pTraverse.java:15: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+                  ^
+x3pNode\source\x3pTraverse.java:16: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“‚ðƒgƒbƒv‚©‚ç‚½‚Ç‚é	
+          ^
+x3pNode\source\x3pTraverse.java:17: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“ƒtƒBƒ‹ƒ^?[?AƒV?[ƒ“ƒŒƒ“ƒ_ƒ‰?[‚È‚Ç‚Ì
+          ^
+x3pNode\source\x3pTraverse.java:17: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“ƒtƒBƒ‹ƒ^?[?AƒV?[ƒ“ƒŒƒ“ƒ_ƒ‰?[‚È‚Ç‚Ì
+                      ^
+x3pNode\source\x3pTraverse.java:17: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“ƒtƒBƒ‹ƒ^?[?AƒV?[ƒ“ƒŒƒ“ƒ_ƒ‰?[‚È‚Ç‚Ì
+                        ^
+x3pNode\source\x3pTraverse.java:17: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“ƒtƒBƒ‹ƒ^?[?AƒV?[ƒ“ƒŒƒ“ƒ_ƒ‰?[‚È‚Ç‚Ì
+                            ^
+x3pNode\source\x3pTraverse.java:17: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“ƒtƒBƒ‹ƒ^?[?AƒV?[ƒ“ƒŒƒ“ƒ_ƒ‰?[‚È‚Ç‚Ì
+                                        ^
+x3pNode\source\x3pTraverse.java:18: warning: unmappable character for encoding Cp1252
+	?eƒNƒ‰ƒX
+        ^
+x3pNode\source\x3pTraverse.java:45: warning: unmappable character for encoding Cp1252
+	//		ƒgƒ‰ƒo?[ƒX
+                              ^
+11 warnings
+x3pParse\source\x3pParse.java:34: warning: unmappable character for encoding Cp1252
+	protected Hashtable     xmlIdTable;					// XML IDƒe?[ƒuƒ‹
+                                                                                           ^
+x3pParse\source\x3pParse.java:51: warning: unmappable character for encoding Cp1252
+	 *	‰ð?Í’†‚Ì?s”Ô?†‚ðŽæ“¾‚·‚é
+                  ^
+x3pParse\source\x3pParse.java:51: warning: unmappable character for encoding Cp1252
+	 *	‰ð?Í’†‚Ì?s”Ô?†‚ðŽæ“¾‚·‚é
+                        ^
+x3pParse\source\x3pParse.java:51: warning: unmappable character for encoding Cp1252
+	 *	‰ð?Í’†‚Ì?s”Ô?†‚ðŽæ“¾‚·‚é
+                            ^
+x3pParse\source\x3pParse.java:52: warning: unmappable character for encoding Cp1252
+	 *	@return	?s”Ô?†
+                        ^
+x3pParse\source\x3pParse.java:52: warning: unmappable character for encoding Cp1252
+	 *	@return	?s”Ô?†
+                            ^
+x3pParse\source\x3pParse.java:65: warning: unmappable character for encoding Cp1252
+	 *	ƒp?[ƒX‚ðŠJŽn‚·‚é
+                  ^
+x3pParse\source\x3pParse.java:86: warning: unmappable character for encoding Cp1252
+	 *	Lexer‚©‚çƒg?[ƒNƒ“‚ðŽæ‚è?o‚·
+                           ^
+x3pParse\source\x3pParse.java:86: warning: unmappable character for encoding Cp1252
+	 *	Lexer‚©‚çƒg?[ƒNƒ“‚ðŽæ‚è?o‚·
+                                       ^
+x3pParse\source\x3pParse.java:103: warning: unmappable character for encoding Cp1252
+	//		‰ð?ÍŠÖ?”ŒQ
+                          ^
+x3pParse\source\x3pParse.java:103: warning: unmappable character for encoding Cp1252
+	//		‰ð?ÍŠÖ?”ŒQ
+                              ^
+x3pParse\source\x3pParse.java:118: warning: unmappable character for encoding Cp1252
+			if( te == null ) {	// ?I—¹
+                                                   ^
+x3pParse\source\x3pParse.java:1098: warning: unmappable character for encoding Cp1252
+	//	ƒtƒB?[ƒ‹ƒh
+                    ^
+x3pParse\source\x3pParse.java:1119: warning: unmappable character for encoding Cp1252
+						if( id == parentId ) {		// ?I—¹
+                                                                                   ^
+x3pParse\source\x3pParse.java:1161: warning: unmappable character for encoding Cp1252
+		// ƒTƒCƒY•â?³
+                           ^
+x3pParse\source\x3pParse.java:1196: warning: unmappable character for encoding Cp1252
+			PsSfVec3f( vecs[ cnt ] );			// ?ÅŒã‚Ì getToken() ‚Í ","
+                                                                           ^
+x3pParse\source\x3pParse.java:1216: warning: unmappable character for encoding Cp1252
+		// ƒTƒCƒY•â?³
+                           ^
+x3pParse\source\x3pParse.java:1251: warning: unmappable character for encoding Cp1252
+			PsSfUV( uvs[ cnt ] );			// ?ÅŒã‚Ì getToken() ‚Í ","
+                                                                   ^
+x3pParse\source\x3pParse.java:1271: warning: unmappable character for encoding Cp1252
+		// ƒTƒCƒY•â?³
+                           ^
+x3pParse\source\x3pParse.java:1324: warning: unmappable character for encoding Cp1252
+		// ƒTƒCƒY•â?³
+                           ^
+x3pParse\source\x3pParse.java:1472: warning: unmappable character for encoding Cp1252
+				if( id == parentId ) {			// ?I—¹
+                                                                           ^
+x3pParse\source\x3pParse.java:1480: warning: unmappable character for encoding Cp1252
+		// ƒTƒCƒY•â?³
+                           ^
+x3pParse\source\x3pParse.java:1519: warning: unmappable character for encoding Cp1252
+		int cnt = 1;	//“¯nameƒ^ƒO‚Ì?”‚ÌƒJƒEƒ“ƒg
+                                              ^
+x3pParse\source\x3pParse.java:1561: warning: unmappable character for encoding Cp1252
+		int cnt = 1;	//“¯nameƒ^ƒO‚Ì?”‚ÌƒJƒEƒ“ƒg
+                                              ^
+x3pParse\source\x3pLex.java:10: warning: unmappable character for encoding Cp1252
+	?‰Šú‰»
+        ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                      ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                         ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                          ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                              ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                                  ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                                        ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                                              ^
+x3pParse\source\x3pLex.java:11: warning: unmappable character for encoding Cp1252
+		ŒÅ’èƒL?[ƒ??[ƒh?iƒm?[ƒh–¼?AƒtƒB?[ƒ‹ƒh–¼‚È‚Ç‚Ì—\–ñŒê?j‚Ì
+                                                                  ^
+x3pParse\source\x3pLex.java:12: warning: unmappable character for encoding Cp1252
+		ƒnƒbƒVƒ…ƒe?[ƒuƒ‹‚Ö‚Ì“o˜^
+                          ^
+x3pParse\source\x3pLex.java:14: warning: unmappable character for encoding Cp1252
+	Žš‹å‰ð?Í
+              ^
+x3pParse\source\x3pLex.java:15: warning: unmappable character for encoding Cp1252
+		‚P?jƒg?[ƒNƒ“‚Ì?Ø‚è?o‚µ
+                  ^
+x3pParse\source\x3pLex.java:15: warning: unmappable character for encoding Cp1252
+		‚P?jƒg?[ƒNƒ“‚Ì?Ø‚è?o‚µ
+                      ^
+x3pParse\source\x3pLex.java:15: warning: unmappable character for encoding Cp1252
+		‚P?jƒg?[ƒNƒ“‚Ì?Ø‚è?o‚µ
+                              ^
+x3pParse\source\x3pLex.java:15: warning: unmappable character for encoding Cp1252
+		‚P?jƒg?[ƒNƒ“‚Ì?Ø‚è?o‚µ
+                                  ^
+x3pParse\source\x3pLex.java:16: warning: unmappable character for encoding Cp1252
+		‚Q?jƒL?[ƒ??[ƒh‚Ì‚h‚c‰»
+                  ^
+x3pParse\source\x3pLex.java:16: warning: unmappable character for encoding Cp1252
+		‚Q?jƒL?[ƒ??[ƒh‚Ì‚h‚c‰»
+                      ^
+x3pParse\source\x3pLex.java:16: warning: unmappable character for encoding Cp1252
+		‚Q?jƒL?[ƒ??[ƒh‚Ì‚h‚c‰»
+                         ^
+x3pParse\source\x3pLex.java:16: warning: unmappable character for encoding Cp1252
+		‚Q?jƒL?[ƒ??[ƒh‚Ì‚h‚c‰»
+                          ^
+x3pParse\source\x3pLex.java:18: warning: unmappable character for encoding Cp1252
+	?”’l
+        ^
+x3pParse\source\x3pLex.java:48: warning: unmappable character for encoding Cp1252
+		private int		rsize   = 0;			    // ƒoƒbƒtƒ@‚É“Ç‚Ý?ž‚ñ‚¾ƒTƒCƒY
+                                                                                             ^
+x3pParse\source\x3pLex.java:51: warning: unmappable character for encoding Cp1252
+		private InputStream  inStream;      		// ƒXƒgƒŠ?[ƒ€“ü—Í
+                                                                         ^
+x3pParse\source\x3pLex.java:69: warning: unmappable character for encoding Cp1252
+	private	int		   lineNo   = 0;		// Œ»?Ý“Ç?ž‚Ý’†‚Ì?s
+                                                                     ^
+x3pParse\source\x3pLex.java:69: warning: unmappable character for encoding Cp1252
+	private	int		   lineNo   = 0;		// Œ»?Ý“Ç?ž‚Ý’†‚Ì?s
+                                                                         ^
+x3pParse\source\x3pLex.java:69: warning: unmappable character for encoding Cp1252
+	private	int		   lineNo   = 0;		// Œ»?Ý“Ç?ž‚Ý’†‚Ì?s
+                                                                                 ^
+x3pParse\source\x3pLex.java:70: warning: unmappable character for encoding Cp1252
+	private	char	   c        = '\0';		// “Ç‚Ý?ž‚ñ‚¾•¶Žš
+                                                               ^
+x3pParse\source\x3pLex.java:71: warning: unmappable character for encoding Cp1252
+	private byte       byteChar = 0;		// “Ç‚Ý?ž‚ñ‚¾•¶Žš(byte‚Ì‚Ü‚Ü?BGetStringToken()—p)
+                                                               ^
+x3pParse\source\x3pLex.java:71: warning: unmappable character for encoding Cp1252
+	private byte       byteChar = 0;		// “Ç‚Ý?ž‚ñ‚¾•¶Žš(byte‚Ì‚Ü‚Ü?BGetStringToken()—p)
+                                                                                    ^
+x3pParse\source\x3pLex.java:73: warning: unmappable character for encoding Cp1252
+	private	double	   floatValue;			// ƒJƒŒƒ“ƒgƒtƒ??[ƒg’l
+                                                                      ^
+x3pParse\source\x3pLex.java:73: warning: unmappable character for encoding Cp1252
+	private	double	   floatValue;			// ƒJƒŒƒ“ƒgƒtƒ??[ƒg’l
+                                                                       ^
+x3pParse\source\x3pLex.java:74: warning: unmappable character for encoding Cp1252
+	private	int		   intValue;			// ƒJƒŒƒ“ƒgƒtƒ??[ƒg’l
+                                                                              ^
+x3pParse\source\x3pLex.java:74: warning: unmappable character for encoding Cp1252
+	private	int		   intValue;			// ƒJƒŒƒ“ƒgƒtƒ??[ƒg’l
+                                                                               ^
+x3pParse\source\x3pLex.java:78: warning: unmappable character for encoding Cp1252
+	private int        encodingId		= ID_TY_UTF8;	// •¶Žš•„?†‰»Œ`Ž®	( ID_TY_UTF8 or ID_TY_SJIS )
+                                                                         ^
+x3pParse\source\x3pLex.java:93: warning: unmappable character for encoding Cp1252
+		// ƒL?[ƒ??[ƒhƒe?[ƒuƒ‹‚ð?ì?¬
+                     ^
+x3pParse\source\x3pLex.java:93: warning: unmappable character for encoding Cp1252
+		// ƒL?[ƒ??[ƒhƒe?[ƒuƒ‹‚ð?ì?¬
+                        ^
+x3pParse\source\x3pLex.java:93: warning: unmappable character for encoding Cp1252
+		// ƒL?[ƒ??[ƒhƒe?[ƒuƒ‹‚ð?ì?¬
+                         ^
+x3pParse\source\x3pLex.java:93: warning: unmappable character for encoding Cp1252
+		// ƒL?[ƒ??[ƒhƒe?[ƒuƒ‹‚ð?ì?¬
+                               ^
+x3pParse\source\x3pLex.java:93: warning: unmappable character for encoding Cp1252
+		// ƒL?[ƒ??[ƒhƒe?[ƒuƒ‹‚ð?ì?¬
+                                       ^
+x3pParse\source\x3pLex.java:93: warning: unmappable character for encoding Cp1252
+		// ƒL?[ƒ??[ƒhƒe?[ƒuƒ‹‚ð?ì?¬
+                                         ^
+x3pParse\source\x3pLex.java:96: warning: unmappable character for encoding Cp1252
+		// ElementNameƒL?[ƒ??[ƒh“o˜^
+                                ^
+x3pParse\source\x3pLex.java:96: warning: unmappable character for encoding Cp1252
+		// ElementNameƒL?[ƒ??[ƒh“o˜^
+                                   ^
+x3pParse\source\x3pLex.java:96: warning: unmappable character for encoding Cp1252
+		// ElementNameƒL?[ƒ??[ƒh“o˜^
+                                    ^
+x3pParse\source\x3pLex.java:102: warning: unmappable character for encoding Cp1252
+		// AttributeNameƒL?[ƒ??[ƒh“o˜^
+                                  ^
+x3pParse\source\x3pLex.java:102: warning: unmappable character for encoding Cp1252
+		// AttributeNameƒL?[ƒ??[ƒh“o˜^
+                                     ^
+x3pParse\source\x3pLex.java:102: warning: unmappable character for encoding Cp1252
+		// AttributeNameƒL?[ƒ??[ƒh“o˜^
+                                      ^
+x3pParse\source\x3pLex.java:108: warning: unmappable character for encoding Cp1252
+		// TypeNameƒL?[ƒ??[ƒh“o˜^
+                             ^
+x3pParse\source\x3pLex.java:108: warning: unmappable character for encoding Cp1252
+		// TypeNameƒL?[ƒ??[ƒh“o˜^
+                                ^
+x3pParse\source\x3pLex.java:108: warning: unmappable character for encoding Cp1252
+		// TypeNameƒL?[ƒ??[ƒh“o˜^
+                                 ^
+x3pParse\source\x3pLex.java:114: warning: unmappable character for encoding Cp1252
+		GetChar();	    // ?Å?‰‚Ìˆê•¶Žš
+                                       ^
+x3pParse\source\x3pLex.java:114: warning: unmappable character for encoding Cp1252
+		GetChar();	    // ?Å?‰‚Ìˆê•¶Žš
+                                         ^
+x3pParse\source\x3pLex.java:118: warning: unmappable character for encoding Cp1252
+	 *	ƒg?[ƒNƒ“Žæ‚è?o‚µ
+                  ^
+x3pParse\source\x3pLex.java:118: warning: unmappable character for encoding Cp1252
+	 *	ƒg?[ƒNƒ“Žæ‚è?o‚µ
+                            ^
+x3pParse\source\x3pLex.java:119: warning: unmappable character for encoding Cp1252
+	 *	@return	ƒg?[ƒNƒ“‚h‚c
+                          ^
+x3pParse\source\x3pLex.java:126: warning: unmappable character for encoding Cp1252
+		// ƒzƒ?ƒCƒgƒXƒy?[ƒX( ' ', \n, \t ?j
+                      ^
+x3pParse\source\x3pLex.java:126: warning: unmappable character for encoding Cp1252
+		// ƒzƒ?ƒCƒgƒXƒy?[ƒX( ' ', \n, \t ?j
+                               ^
+x3pParse\source\x3pLex.java:126: warning: unmappable character for encoding Cp1252
+		// ƒzƒ?ƒCƒgƒXƒy?[ƒX( ' ', \n, \t ?j
+                                                 ^
+x3pParse\source\x3pLex.java:132: warning: unmappable character for encoding Cp1252
+		else if( ( '0'<=c && c<='9' ) || c=='+' || c=='-' || c=='.' ) {    // ?”Žš?i’l?j
+                                                                                      ^
+x3pParse\source\x3pLex.java:132: warning: unmappable character for encoding Cp1252
+		else if( ( '0'<=c && c<='9' ) || c=='+' || c=='-' || c=='.' ) {    // ?”Žš?i’l?j
+                                                                                          ^
+x3pParse\source\x3pLex.java:132: warning: unmappable character for encoding Cp1252
+		else if( ( '0'<=c && c<='9' ) || c=='+' || c=='-' || c=='.' ) {    // ?”Žš?i’l?j
+                                                                                              ^
+x3pParse\source\x3pLex.java:138: warning: unmappable character for encoding Cp1252
+		else if( c == '<' ) {                                           // ƒZƒpƒŒ?[ƒ^
+                                                                                         ^
+x3pParse\source\x3pLex.java:188: warning: unmappable character for encoding Cp1252
+	 *	—v‘f‚©?H
+                      ^
+x3pParse\source\x3pLex.java:201: warning: unmappable character for encoding Cp1252
+	 *	ƒtƒ??[ƒg’l‚ðŽæ“¾
+                   ^
+x3pParse\source\x3pLex.java:201: warning: unmappable character for encoding Cp1252
+	 *	ƒtƒ??[ƒg’l‚ðŽæ“¾
+                    ^
+x3pParse\source\x3pLex.java:210: warning: unmappable character for encoding Cp1252
+	 *	?®?”’l‚ðŽæ“¾
+                ^
+x3pParse\source\x3pLex.java:210: warning: unmappable character for encoding Cp1252
+	 *	?®?”’l‚ðŽæ“¾
+                  ^
+x3pParse\source\x3pLex.java:219: warning: unmappable character for encoding Cp1252
+	 *	?s”Ô?†‚ðŽæ“¾
+                ^
+x3pParse\source\x3pLex.java:219: warning: unmappable character for encoding Cp1252
+	 *	?s”Ô?†‚ðŽæ“¾
+                    ^
+x3pParse\source\x3pLex.java:228: warning: unmappable character for encoding Cp1252
+	 *	–¢’è‹`ƒ??[ƒh‚ðŽæ“¾
+                       ^
+x3pParse\source\x3pLex.java:228: warning: unmappable character for encoding Cp1252
+	 *	–¢’è‹`ƒ??[ƒh‚ðŽæ“¾
+                        ^
+x3pParse\source\x3pLex.java:238: warning: unmappable character for encoding Cp1252
+	 * •¶Žš•„?†‰»Œ`Ž®‚ðƒZƒbƒg
+                 ^
+x3pParse\source\x3pLex.java:304: warning: unmappable character for encoding Cp1252
+		// ƒzƒ?ƒCƒgƒXƒy?[ƒX( ' ', \n, \t ?j
+                      ^
+x3pParse\source\x3pLex.java:304: warning: unmappable character for encoding Cp1252
+		// ƒzƒ?ƒCƒgƒXƒy?[ƒX( ' ', \n, \t ?j
+                               ^
+x3pParse\source\x3pLex.java:304: warning: unmappable character for encoding Cp1252
+		// ƒzƒ?ƒCƒgƒXƒy?[ƒX( ' ', \n, \t ?j
+                                                 ^
+x3pParse\source\x3pLex.java:351: warning: unmappable character for encoding Cp1252
+	 *	‚P•¶Žš“Ç?ž‚Ý
+                        ^
+x3pParse\source\x3pLex.java:392: warning: unmappable character for encoding Cp1252
+	 *	ƒzƒ?ƒCƒgƒXƒy?[ƒX‚ðƒXƒLƒbƒv
+                   ^
+x3pParse\source\x3pLex.java:392: warning: unmappable character for encoding Cp1252
+	 *	ƒzƒ?ƒCƒgƒXƒy?[ƒX‚ðƒXƒLƒbƒv
+                            ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+x3pBase\source\x3pShellInfo.java:18: warning: unmappable character for encoding Cp1252
+ * 1ŒÂ‚ÌƒVƒFƒ‹‚ÉŠÖ‚·‚é?uJava XVL3 Processor ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚ÌƒNƒ‰ƒX
+                      ^
+x3pBase\source\x3pShellInfo.java:18: warning: unmappable character for encoding Cp1252
+ * 1ŒÂ‚ÌƒVƒFƒ‹‚ÉŠÖ‚·‚é?uJava XVL3 Processor ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚ÌƒNƒ‰ƒX
+                                                ^
+x3pBase\source\x3pShellInfo.java:18: warning: unmappable character for encoding Cp1252
+ * 1ŒÂ‚ÌƒVƒFƒ‹‚ÉŠÖ‚·‚é?uJava XVL3 Processor ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚ÌƒNƒ‰ƒX
+                                                                    ^
+x3pBase\source\x3pShellInfo.java:18: warning: unmappable character for encoding Cp1252
+ * 1ŒÂ‚ÌƒVƒFƒ‹‚ÉŠÖ‚·‚é?uJava XVL3 Processor ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚ÌƒNƒ‰ƒX
+                                                                        ^
+x3pBase\source\x3pShellInfo.java:25: warning: unmappable character for encoding Cp1252
+	 * fromKernel[]“à‚Ì’¸“_ˆÊ’u?A–@?üƒxƒNƒgƒ‹‚Í?A‚»‚Ì‚Ü‚Ü‚Å‚ÍŽg—p‚¹‚¸?A		<br>
+                                   ^
+x3pBase\source\x3pShellInfo.java:25: warning: unmappable character for encoding Cp1252
+	 * fromKernel[]“à‚Ì’¸“_ˆÊ’u?A–@?üƒxƒNƒgƒ‹‚Í?A‚»‚Ì‚Ü‚Ü‚Å‚ÍŽg—p‚¹‚¸?A		<br>
+                                       ^
+x3pBase\source\x3pShellInfo.java:25: warning: unmappable character for encoding Cp1252
+	 * fromKernel[]“à‚Ì’¸“_ˆÊ’u?A–@?üƒxƒNƒgƒ‹‚Í?A‚»‚Ì‚Ü‚Ü‚Å‚ÍŽg—p‚¹‚¸?A		<br>
+                                                   ^
+x3pBase\source\x3pShellInfo.java:25: warning: unmappable character for encoding Cp1252
+	 * fromKernel[]“à‚Ì’¸“_ˆÊ’u?A–@?üƒxƒNƒgƒ‹‚Í?A‚»‚Ì‚Ü‚Ü‚Å‚ÍŽg—p‚¹‚¸?A		<br>
+                                                                         ^
+x3pBase\source\x3pShellInfo.java:26: warning: unmappable character for encoding Cp1252
+	 * ‚±‚Ì’†‚Ì?î•ñ?i—á‚¦‚Î’¸“_ˆÊ’uƒ}ƒgƒŠƒNƒX?j‚Æ‘g‚Ý?‡‚í‚¹‚ÄŽg—p‚·‚é
+                   ^
+x3pBase\source\x3pShellInfo.java:26: warning: unmappable character for encoding Cp1252
+	 * ‚±‚Ì’†‚Ì?î•ñ?i—á‚¦‚Î’¸“_ˆÊ’uƒ}ƒgƒŠƒNƒX?j‚Æ‘g‚Ý?‡‚í‚¹‚ÄŽg—p‚·‚é
+                       ^
+x3pBase\source\x3pShellInfo.java:26: warning: unmappable character for encoding Cp1252
+	 * ‚±‚Ì’†‚Ì?î•ñ?i—á‚¦‚Î’¸“_ˆÊ’uƒ}ƒgƒŠƒNƒX?j‚Æ‘g‚Ý?‡‚í‚¹‚ÄŽg—p‚·‚é
+                                                 ^
+x3pBase\source\x3pShellInfo.java:26: warning: unmappable character for encoding Cp1252
+	 * ‚±‚Ì’†‚Ì?î•ñ?i—á‚¦‚Î’¸“_ˆÊ’uƒ}ƒgƒŠƒNƒX?j‚Æ‘g‚Ý?‡‚í‚¹‚ÄŽg—p‚·‚é
+                                                         ^
+x3pBase\source\x3pShellInfo.java:31: warning: unmappable character for encoding Cp1252
+		 * m = posMat.m;?im[4][4]‚Ì”z—ñ?j‚Æ‚¨‚­‚Æ?A					<br>
+                                ^
+x3pBase\source\x3pShellInfo.java:31: warning: unmappable character for encoding Cp1252
+		 * m = posMat.m;?im[4][4]‚Ì”z—ñ?j‚Æ‚¨‚­‚Æ?A					<br>
+                                               ^
+x3pBase\source\x3pShellInfo.java:31: warning: unmappable character for encoding Cp1252
+		 * m = posMat.m;?im[4][4]‚Ì”z—ñ?j‚Æ‚¨‚­‚Æ?A					<br>
+                                                         ^
+x3pBase\source\x3pShellInfo.java:39: warning: unmappable character for encoding Cp1252
+		 * –@?üƒxƒNƒgƒ‹ƒ}ƒgƒŠƒNƒX								<br>
+                     ^
+x3pBase\source\x3pShellInfo.java:40: warning: unmappable character for encoding Cp1252
+		 * m = noramlMat.m;?im[4][4]‚Ì”z—ñ?j‚Æ‚¨‚­‚Æ?A			<br>
+                                   ^
+x3pBase\source\x3pShellInfo.java:40: warning: unmappable character for encoding Cp1252
+		 * m = noramlMat.m;?im[4][4]‚Ì”z—ñ?j‚Æ‚¨‚­‚Æ?A			<br>
+                                                  ^
+x3pBase\source\x3pShellInfo.java:40: warning: unmappable character for encoding Cp1252
+		 * m = noramlMat.m;?im[4][4]‚Ì”z—ñ?j‚Æ‚¨‚­‚Æ?A			<br>
+                                                            ^
+x3pBase\source\x3pShellInfo.java:44: warning: unmappable character for encoding Cp1252
+		 * normalMat‚Í?A										<br>
+                              ^
+x3pBase\source\x3pShellInfo.java:45: warning: unmappable character for encoding Cp1252
+		 * 		posMat‚Ìm[3][i]?ii=0?`2)‚ð0‚Æ‚µ?A				<br>
+                                               ^
+x3pBase\source\x3pShellInfo.java:45: warning: unmappable character for encoding Cp1252
+		 * 		posMat‚Ìm[3][i]?ii=0?`2)‚ð0‚Æ‚µ?A				<br>
+                                                    ^
+x3pBase\source\x3pShellInfo.java:45: warning: unmappable character for encoding Cp1252
+		 * 		posMat‚Ìm[3][i]?ii=0?`2)‚ð0‚Æ‚µ?A				<br>
+                                                               ^
+x3pBase\source\x3pShellInfo.java:46: warning: unmappable character for encoding Cp1252
+		 * 		‹t“]’u?s—ñ(inverse transpose Matrix)‚É•ÏŠ·		<br>
+                                      ^
+x3pBase\source\x3pShellInfo.java:48: warning: unmappable character for encoding Cp1252
+		 * ‚Å‚ ‚é?i•ÏŠ·Œã‚Ì’·‚³‚Í1.0‚Æ‚ÍŒÀ‚ç‚È‚¢?j
+                         ^
+x3pBase\source\x3pShellInfo.java:48: warning: unmappable character for encoding Cp1252
+		 * ‚Å‚ ‚é?i•ÏŠ·Œã‚Ì’·‚³‚Í1.0‚Æ‚ÍŒÀ‚ç‚È‚¢?j
+                                                        ^
+x3pBase\source\x3pShellInfo.java:52: warning: unmappable character for encoding Cp1252
+		/** •\Ž¦?^”ñ•\Ž¦  false: ”ñ•\Ž¦?Atrue: •\Ž¦		*/
+                        ^
+x3pBase\source\x3pShellInfo.java:52: warning: unmappable character for encoding Cp1252
+		/** •\Ž¦?^”ñ•\Ž¦  false: ”ñ•\Ž¦?Atrue: •\Ž¦		*/
+                                               ^
+x3pBase\source\x3pShellInfo.java:57: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                   ^
+x3pBase\source\x3pShellInfo.java:57: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                    ^
+x3pBase\source\x3pShellInfo.java:57: warning: unmappable character for encoding Cp1252
+		 * @param  dt		(( I )) ƒOƒ??[ƒoƒ‹ƒf?[ƒ^
+                                                            ^
+x3pBase\source\x3pShellInfo.java:69: warning: unmappable character for encoding Cp1252
+		 * ?uJava Lattice Kernel ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚Ì”z—ñ		<br>
+                   ^
+x3pBase\source\x3pShellInfo.java:69: warning: unmappable character for encoding Cp1252
+		 * ?uJava Lattice Kernel ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚Ì”z—ñ		<br>
+                                             ^
+x3pBase\source\x3pShellInfo.java:69: warning: unmappable character for encoding Cp1252
+		 * ?uJava Lattice Kernel ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚Ì”z—ñ		<br>
+                                                                 ^
+x3pBase\source\x3pShellInfo.java:69: warning: unmappable character for encoding Cp1252
+		 * ?uJava Lattice Kernel ‚©‚ç?ãˆÊŠK‘w‚Éˆø‚«“n‚·ƒf?[ƒ^?v‚Ì”z—ñ		<br>
+                                                                     ^
+x3pBase\source\x3pShellInfo.java:70: warning: unmappable character for encoding Cp1252
+		 *  	--- ?uFaces“à‚ÌFace?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                            ^
+x3pBase\source\x3pShellInfo.java:70: warning: unmappable character for encoding Cp1252
+		 *  	--- ?uFaces“à‚ÌFace?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                           ^
+x3pBase\source\x3pShellInfo.java:70: warning: unmappable character for encoding Cp1252
+		 *  	--- ?uFaces“à‚ÌFace?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                               ^
+x3pBase\source\x3pShellInfo.java:70: warning: unmappable character for encoding Cp1252
+		 *  	--- ?uFaces“à‚ÌFace?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                                       ^
+x3pBase\source\x3pShellInfo.java:75: warning: unmappable character for encoding Cp1252
+		 * Face?î•ñ‚Ì”z—ñ?i”z—ñ’·‚Í?AfromKernel‚Æ“™‚µ‚­‚È‚é?j
+                       ^
+x3pBase\source\x3pShellInfo.java:75: warning: unmappable character for encoding Cp1252
+		 * Face?î•ñ‚Ì”z—ñ?i”z—ñ’·‚Í?AfromKernel‚Æ“™‚µ‚­‚È‚é?j
+                                 ^
+x3pBase\source\x3pShellInfo.java:75: warning: unmappable character for encoding Cp1252
+		 * Face?î•ñ‚Ì”z—ñ?i”z—ñ’·‚Í?AfromKernel‚Æ“™‚µ‚­‚È‚é?j
+                                           ^
+x3pBase\source\x3pShellInfo.java:75: warning: unmappable character for encoding Cp1252
+		 * Face?î•ñ‚Ì”z—ñ?i”z—ñ’·‚Í?AfromKernel‚Æ“™‚µ‚­‚È‚é?j
+                                                                   ^
+x3pBase\source\x3pShellInfo.java:82: warning: unmappable character for encoding Cp1252
+		/** ƒeƒNƒXƒ`ƒƒ‚Ì‘¶?Ý‚Ì—L–³ –³:false, —L:true --- ?‰Šú’l?Ffalse */
+                                  ^
+x3pBase\source\x3pShellInfo.java:82: warning: unmappable character for encoding Cp1252
+		/** ƒeƒNƒXƒ`ƒƒ‚Ì‘¶?Ý‚Ì—L–³ –³:false, —L:true --- ?‰Šú’l?Ffalse */
+                                                                 ^
+x3pBase\source\x3pShellInfo.java:82: warning: unmappable character for encoding Cp1252
+		/** ƒeƒNƒXƒ`ƒƒ‚Ì‘¶?Ý‚Ì—L–³ –³:false, —L:true --- ?‰Šú’l?Ffalse */
+                                                                       ^
+x3pBase\source\x3pShellInfo.java:92: warning: unmappable character for encoding Cp1252
+		 * ƒeƒNƒXƒ`ƒƒ‚ÌUV?À•W’l?BƒeƒNƒXƒ`ƒƒ‚ª‘¶?Ý‚µ‚È‚¢Žž‚Í?Anull			<br>
+                                 ^
+x3pBase\source\x3pShellInfo.java:92: warning: unmappable character for encoding Cp1252
+		 * ƒeƒNƒXƒ`ƒƒ‚ÌUV?À•W’l?BƒeƒNƒXƒ`ƒƒ‚ª‘¶?Ý‚µ‚È‚¢Žž‚Í?Anull			<br>
+                                       ^
+x3pBase\source\x3pShellInfo.java:92: warning: unmappable character for encoding Cp1252
+		 * ƒeƒNƒXƒ`ƒƒ‚ÌUV?À•W’l?BƒeƒNƒXƒ`ƒƒ‚ª‘¶?Ý‚µ‚È‚¢Žž‚Í?Anull			<br>
+                                                       ^
+x3pBase\source\x3pShellInfo.java:92: warning: unmappable character for encoding Cp1252
+		 * ƒeƒNƒXƒ`ƒƒ‚ÌUV?À•W’l?BƒeƒNƒXƒ`ƒƒ‚ª‘¶?Ý‚µ‚È‚¢Žž‚Í?Anull			<br>
+                                                                   ^
+x3pBase\source\x3pShellInfo.java:93: warning: unmappable character for encoding Cp1252
+		 * ?i”z—ñ’·‚Í?AlvFromKernel.vertex ‚Æ“™‚µ‚­‚È‚é?j--- ?‰Šú’l null
+                   ^
+x3pBase\source\x3pShellInfo.java:93: warning: unmappable character for encoding Cp1252
+		 * ?i”z—ñ’·‚Í?AlvFromKernel.vertex ‚Æ“™‚µ‚­‚È‚é?j--- ?‰Šú’l null
+                             ^
+x3pBase\source\x3pShellInfo.java:93: warning: unmappable character for encoding Cp1252
+		 * ?i”z—ñ’·‚Í?AlvFromKernel.vertex ‚Æ“™‚µ‚­‚È‚é?j--- ?‰Šú’l null
+                                                               ^
+x3pBase\source\x3pShellInfo.java:93: warning: unmappable character for encoding Cp1252
+		 * ?i”z—ñ’·‚Í?AlvFromKernel.vertex ‚Æ“™‚µ‚­‚È‚é?j--- ?‰Šú’l null
+                                                                     ^
+x3pBase\source\x3pShellInfo.java:100: warning: unmappable character for encoding Cp1252
+	 * ?uƒCƒ“ƒXƒ^ƒ“ƒX‚ÉŠÖ‚·‚é?î•ñ?v‚Ì”z—ñ														<br>
+           ^
+x3pBase\source\x3pShellInfo.java:100: warning: unmappable character for encoding Cp1252
+	 * ?uƒCƒ“ƒXƒ^ƒ“ƒX‚ÉŠÖ‚·‚é?î•ñ?v‚Ì”z—ñ														<br>
+                                 ^
+x3pBase\source\x3pShellInfo.java:100: warning: unmappable character for encoding Cp1252
+	 * ?uƒCƒ“ƒXƒ^ƒ“ƒX‚ÉŠÖ‚·‚é?î•ñ?v‚Ì”z—ñ														<br>
+                                     ^
+x3pBase\source\x3pShellInfo.java:101: warning: unmappable character for encoding Cp1252
+	 *		ƒCƒ“ƒXƒ^ƒ“ƒX‚Í1ŒÂ‚Æ‚ÍŒÀ‚ç‚¸?A•¡?”‘¶?Ý‚·‚é‚Æ‚«‚Í?A‚»‚Ì?”‚¾‚¯•\Ž¦‚³‚ê‚é‚±‚Æ‚É‚È‚é		<br>
+                                                   ^
+x3pBase\source\x3pShellInfo.java:101: warning: unmappable character for encoding Cp1252
+	 *		ƒCƒ“ƒXƒ^ƒ“ƒX‚Í1ŒÂ‚Æ‚ÍŒÀ‚ç‚¸?A•¡?”‘¶?Ý‚·‚é‚Æ‚«‚Í?A‚»‚Ì?”‚¾‚¯•\Ž¦‚³‚ê‚é‚±‚Æ‚É‚È‚é		<br>
+                                                       ^
+x3pBase\source\x3pShellInfo.java:101: warning: unmappable character for encoding Cp1252
+	 *		ƒCƒ“ƒXƒ^ƒ“ƒX‚Í1ŒÂ‚Æ‚ÍŒÀ‚ç‚¸?A•¡?”‘¶?Ý‚·‚é‚Æ‚«‚Í?A‚»‚Ì?”‚¾‚¯•\Ž¦‚³‚ê‚é‚±‚Æ‚É‚È‚é		<br>
+                                                           ^
+x3pBase\source\x3pShellInfo.java:101: warning: unmappable character for encoding Cp1252
+	 *		ƒCƒ“ƒXƒ^ƒ“ƒX‚Í1ŒÂ‚Æ‚ÍŒÀ‚ç‚¸?A•¡?”‘¶?Ý‚·‚é‚Æ‚«‚Í?A‚»‚Ì?”‚¾‚¯•\Ž¦‚³‚ê‚é‚±‚Æ‚É‚È‚é		<br>
+                                                                       ^
+x3pBase\source\x3pShellInfo.java:101: warning: unmappable character for encoding Cp1252
+	 *		ƒCƒ“ƒXƒ^ƒ“ƒX‚Í1ŒÂ‚Æ‚ÍŒÀ‚ç‚¸?A•¡?”‘¶?Ý‚·‚é‚Æ‚«‚Í?A‚»‚Ì?”‚¾‚¯•\Ž¦‚³‚ê‚é‚±‚Æ‚É‚È‚é		<br>
+                                                                             ^
+x3pBase\source\x3pShellInfo.java:102: warning: unmappable character for encoding Cp1252
+	 *		--- ?uƒgƒbƒvƒm?[ƒh‚©‚ç“–ƒVƒFƒ‹‚ÉŽŠ‚éƒ‹?[ƒg?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                            ^
+x3pBase\source\x3pShellInfo.java:102: warning: unmappable character for encoding Cp1252
+	 *		--- ?uƒgƒbƒvƒm?[ƒh‚©‚ç“–ƒVƒFƒ‹‚ÉŽŠ‚éƒ‹?[ƒg?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                      ^
+x3pBase\source\x3pShellInfo.java:102: warning: unmappable character for encoding Cp1252
+	 *		--- ?uƒgƒbƒvƒm?[ƒh‚©‚ç“–ƒVƒFƒ‹‚ÉŽŠ‚éƒ‹?[ƒg?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                                              ^
+x3pBase\source\x3pShellInfo.java:102: warning: unmappable character for encoding Cp1252
+	 *		--- ?uƒgƒbƒvƒm?[ƒh‚©‚ç“–ƒVƒFƒ‹‚ÉŽŠ‚éƒ‹?[ƒg?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                                                  ^
+x3pBase\source\x3pShellInfo.java:102: warning: unmappable character for encoding Cp1252
+	 *		--- ?uƒgƒbƒvƒm?[ƒh‚©‚ç“–ƒVƒFƒ‹‚ÉŽŠ‚éƒ‹?[ƒg?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                                                      ^
+x3pBase\source\x3pShellInfo.java:102: warning: unmappable character for encoding Cp1252
+	 *		--- ?uƒgƒbƒvƒm?[ƒh‚©‚ç“–ƒVƒFƒ‹‚ÉŽŠ‚éƒ‹?[ƒg?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é
+                                                                              ^
+x3pBase\source\x3pShellInfo.java:106: warning: unmappable character for encoding Cp1252
+	/** Faces ‚Ì”z—ñ --- ?u“–ƒVƒFƒ‹“à‚ÌFaces?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é */
+                             ^
+x3pBase\source\x3pShellInfo.java:106: warning: unmappable character for encoding Cp1252
+	/** Faces ‚Ì”z—ñ --- ?u“–ƒVƒFƒ‹“à‚ÌFaces?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é */
+                                                ^
+x3pBase\source\x3pShellInfo.java:106: warning: unmappable character for encoding Cp1252
+	/** Faces ‚Ì”z—ñ --- ?u“–ƒVƒFƒ‹“à‚ÌFaces?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é */
+                                                    ^
+x3pBase\source\x3pShellInfo.java:106: warning: unmappable character for encoding Cp1252
+	/** Faces ‚Ì”z—ñ --- ?u“–ƒVƒFƒ‹“à‚ÌFaces?v‚Ì?”‚¾‚¯‘¶?Ý‚·‚é */
+                                                            ^
+x3pBase\source\x3pTrvNewVtxNo.java:12: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+              ^
+x3pBase\source\x3pTrvNewVtxNo.java:12: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+                  ^
+x3pBase\source\x3pTrvNewVtxNo.java:13: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“‚ðƒgƒbƒv‚©‚ç‚½‚Ç‚é	
+          ^
+x3pBase\source\x3pTrvNewVtxNo.java:20: warning: unmappable character for encoding Cp1252
+//ƒ‰ƒeƒBƒXƒJ?[ƒlƒ‹
+            ^
+x3pBase\source\x3pTrvNewVtxNo.java:53: warning: unmappable character for encoding Cp1252
+		TraverseMFElement( elm, dmyTrvData );				// ƒV?[ƒ“ƒcƒŠ?[‚ð’Ç‚¤
+                                                                                     ^
+x3pBase\source\x3pTrvNewVtxNo.java:53: warning: unmappable character for encoding Cp1252
+		TraverseMFElement( elm, dmyTrvData );				// ƒV?[ƒ“ƒcƒŠ?[‚ð’Ç‚¤
+                                                                                             ^
+x3pBase\source\x3pTrvNewVtxNo.java:57: warning: unmappable character for encoding Cp1252
+	//		ƒgƒ‰ƒo?[ƒX
+                              ^
+x3pBase\source\x3pGblCore.java:21: warning: unmappable character for encoding Cp1252
+ * static•Ï?”‚Ì‘ã—pƒNƒ‰ƒX
+           ^
+x3pBase\source\x3pTmpDtTrv.java:20: warning: unmappable character for encoding Cp1252
+ 		/** –Ê?ã‚Ì’¸“_‚©?H false:–Ê?ã‚É–³‚¢?Atrue:–Ê?ã‚É—L‚é	*/
+                      ^
+x3pBase\source\x3pTmpDtTrv.java:20: warning: unmappable character for encoding Cp1252
+ 		/** –Ê?ã‚Ì’¸“_‚©?H false:–Ê?ã‚É–³‚¢?Atrue:–Ê?ã‚É—L‚é	*/
+                                ^
+x3pBase\source\x3pTmpDtTrv.java:20: warning: unmappable character for encoding Cp1252
+ 		/** –Ê?ã‚Ì’¸“_‚©?H false:–Ê?ã‚É–³‚¢?Atrue:–Ê?ã‚É—L‚é	*/
+                                           ^
+x3pBase\source\x3pTmpDtTrv.java:20: warning: unmappable character for encoding Cp1252
+ 		/** –Ê?ã‚Ì’¸“_‚©?H false:–Ê?ã‚É–³‚¢?Atrue:–Ê?ã‚É—L‚é	*/
+                                                   ^
+x3pBase\source\x3pTmpDtTrv.java:20: warning: unmappable character for encoding Cp1252
+ 		/** –Ê?ã‚Ì’¸“_‚©?H false:–Ê?ã‚É–³‚¢?Atrue:–Ê?ã‚É—L‚é	*/
+                                                            ^
+x3pBase\source\x3pTmpDtTrv.java:23: warning: unmappable character for encoding Cp1252
+		/** ?V‚µ‚­?U‚ç‚ê‚½’¸“_No.		*/
+                    ^
+x3pBase\source\x3pTmpDtTrv.java:23: warning: unmappable character for encoding Cp1252
+		/** ?V‚µ‚­?U‚ç‚ê‚½’¸“_No.		*/
+                          ^
+x3pBase\source\x3pTmpDtTrv.java:26: warning: unmappable character for encoding Cp1252
+		/** XYZƒf?[ƒ^					*/
+                         ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                   ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                           ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                       ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                         ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                                 ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                                                    ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                                                                   ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                                                                        ^
+x3pBase\source\x3pTmpDtTrv.java:33: warning: unmappable character for encoding Cp1252
+		 * ?u‚»‚Ì’¸“_‚ª‘®‚·‚éUV‹óŠÔ?iƒeƒNƒXƒ`ƒƒ?j?v‚Ì’†‚Å?u‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚éUV‹óŠÔ?v‚Ì‘??”‚ª	<br>
+                                                                                                         ^
+x3pBase\source\x3pTmpDtTrv.java:34: warning: unmappable character for encoding Cp1252
+		 * “ü‚é?BUV‹óŠÔ‚ª‘¶?Ý‚µ‚È‚¢?ê?‡‚â‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚È‚¢?ê?‡‚Í?A0 ‚Æ‚·‚é?B					<br>
+                       ^
+x3pBase\source\x3pTmpDtTrv.java:34: warning: unmappable character for encoding Cp1252
+		 * “ü‚é?BUV‹óŠÔ‚ª‘¶?Ý‚µ‚È‚¢?ê?‡‚â‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚È‚¢?ê?‡‚Í?A0 ‚Æ‚·‚é?B					<br>
+                                   ^
+x3pBase\source\x3pTmpDtTrv.java:34: warning: unmappable character for encoding Cp1252
+		 * “ü‚é?BUV‹óŠÔ‚ª‘¶?Ý‚µ‚È‚¢?ê?‡‚â‚»‚Ì’¸“_‚ªUV’l‚ðŽ?‚Á‚Ä‚¢‚È‚¢?ê?‡‚Í?A0 ‚Æ‚·‚é?B					<br>
+                                           ^
+100 warnings

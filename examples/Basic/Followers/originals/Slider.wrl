@@ -1,0 +1,540 @@
+#VRML V2.0 utf8
+
+ 
+WorldInfo
+{
+    title "Copyright (C) 2002 by Herbert Stocker (AKA hersto)"
+
+    info 
+    [
+"       The original versions of the PROTO Slider was written
+        by me, Herbert Stocker. 
+
+        The original versions and some test and demonstration Worlds
+        can be found at http://www.hersto.de/ .
+"
+
+"       You can use and modify the PROTO in this file if you keep the
+        credit information valid and if you don't remove the link to
+        the originating site http://www.hersto.de/ .
+
+        In brief, keep this WorldInfo node along with the Proto.
+"
+
+"       Please send a message to hersto@hersto.de where you describe
+        how you use or improved the nodes. Especially if you included
+        the improved versions.
+"
+    ]
+}
+
+
+
+#
+#EXTERNPROTO Slider
+#[
+#    exposedField SFFloat min                            # 0
+#    exposedField SFFloat max                            # 1
+#    exposedField SFFloat pageSize                       # .2
+#
+#    eventIn  SFFloat     set_position
+#    field    SFFloat initial_position                   # .5
+#    eventOut SFFloat         position_changed 
+#    eventOut SFInt32         positionInt_changed
+#
+#    eventIn  SFFloat            silently_set_position
+#    eventIn  SFFloat silently_set_unfiltered_position
+#    eventIn  SFFloat          set_unfiltered_position
+#    eventOut SFFloat              unfiltered_position_changed
+#
+#    exposedField SFFloat height                         # 2
+#    exposedField SFFloat radiusKnob                     # .3
+#    exposedField SFFloat radiusStick                    # .2
+#
+#    exposedField SFBool smoothMovements                 # TRUE
+#
+#    exposedField SFNode appearance                      #  Appearance { material Material {} }
+#]
+#  "Slider.wrl#Slider"
+#
+
+
+
+
+PROTO Slider 
+[
+    exposedField SFFloat min           0
+    exposedField SFFloat max           1
+    exposedField SFFloat pageSize      .2
+#    field        SFBool  snapToInt     FALSE   # not tested, probably doesn't work.
+
+    eventIn  SFFloat     set_position
+    field    SFFloat initial_position  .5
+    eventOut SFFloat         position_changed 
+    eventOut SFInt32         positionInt_changed # TBD: Didn't test this.
+
+    eventIn  SFFloat            silently_set_position   # like set_position, but without updates on position_changed.  To be used if an object is modified by the slider, but also modifies the slider.
+    eventIn  SFFloat silently_set_unfiltered_position   
+    eventIn  SFFloat          set_unfiltered_position
+    eventOut SFFloat              unfiltered_position_changed # like position_changed but without any filtering.       To be used if the receiving object has its own filtering.
+
+    exposedField SFFloat height        2
+    exposedField SFFloat radiusKnob    .3
+    exposedField SFFloat radiusStick   .2
+
+    exposedField SFBool smoothMovements TRUE
+
+    exposedField SFNode appearance Appearance { material Material {} }
+
+
+    field MFString credits "Initial idea and copyright by Herbert Stocker, http://www.hersto.com/"
+]
+{
+            
+    Billboard
+    {
+        children
+        [
+            DEF TrStickAbove Transform 
+            {
+               children 
+               [ 
+                   DEF TchPgUp TouchSensor {}
+                   
+                   Shape
+                   {
+                       appearance IS appearance
+
+                       geometry Cylinder 
+                       { 
+                           height 1 
+                           radius 1 
+                       }
+                   }
+               ]
+            }
+
+            DEF TrStickBelow Transform 
+            { 
+                children 
+                [ 
+                    DEF TchPgDown TouchSensor {} 
+
+                    Shape
+                    {
+                        appearance IS appearance
+
+                        geometry Cylinder 
+                        { 
+                            height 1 
+                            radius 1 
+                        } 
+                    }
+                ] 
+            }
+            
+            Group 
+            { 
+                children 
+                [ 
+                    DEF SensKnob PlaneSensor 
+                    { 
+                        autoOffset FALSE  
+                        maxPosition 0 -1 
+                    } 
+
+                    DEF TrKnob Transform 
+                    {
+
+                        children Shape
+                        {
+                            appearance IS appearance
+
+                            geometry Cylinder 
+                            { 
+                                height 1 
+                                radius 1 
+                            } 
+                        }
+                    } 
+                ] 
+            }
+           
+#            DEF TrLineUp    Transform { children Cone     {  } }
+#            DEF TrLineDown  Transform { children Cone     {  } }
+        ]
+    }
+
+
+    PROTO EFFS 
+    [
+        exposedField SFFloat min          0
+        exposedField SFFloat max          1
+        exposedField SFFloat pageSize     .2
+        exposedField SFFloat height       2
+        exposedField SFFloat radiusKnob   .5
+        exposedField SFFloat radiusStick  .25
+        exposedField SFBool  smoothMovements TRUE
+    ]
+      { Group {} }
+
+
+    DEF EFFS EFFS
+    {
+        min          IS min
+        max          IS max
+        pageSize     IS pageSize
+        height       IS height
+        radiusKnob   IS radiusKnob
+        radiusStick  IS radiusStick 
+        smoothMovements IS smoothMovements
+    }
+
+    DEF Timer TimeSensor { loop TRUE }
+
+    DEF Worker Script
+    {
+        directOutput TRUE
+
+        field SFNode EFFS USE EFFS
+        field SFFloat min         0        eventIn SFFloat set_min        
+        field SFFloat max         1        eventIn SFFloat set_max        
+        field SFFloat pageSize    .2       eventIn SFFloat set_pageSize   
+		field SFFloat height	  2		   eventIn SFFloat set_height		
+        field SFFloat radiusKnob  .5       eventIn SFFloat set_radiusKnob 
+        field SFFloat radiusStick .25      eventIn SFFloat set_radiusStick
+        field SFBool  smoothMovements TRUE eventIn SFBool  set_smooothMovements
+        field SFBool  snapToInt  FALSE # IS snapToInt
+
+        eventIn  SFFloat     set_position            IS     set_position
+        field    SFFloat         position            IS initial_position
+        field    SFFloat         positionSmo1        0
+        field    SFFloat         positionSmo2        0
+        field    SFFloat         positionSmo3        0
+
+         
+        eventOut SFFloat              position_changed     IS      position_changed
+        eventOut SFInt32              positionInt_changed  IS      positionInt_changed
+        eventIn  SFFloat silently_set_position             IS      silently_set_position
+        eventIn  SFFloat silently_set_unfiltered_position  IS      silently_set_unfiltered_position
+        eventIn  SFFloat          set_unfiltered_position  IS      set_unfiltered_position
+        eventOut SFFloat   unfiltered_position_changed     IS      unfiltered_position_changed
+
+
+        field SFNode TrStickAbove  USE TrStickAbove
+        field SFNode TrStickBelow  USE TrStickBelow
+        field SFNode TrKnob        USE TrKnob
+#        field SFNode TrLineUp      USE TrLineUp
+#        field SFNode TrLineDown    USE TrLineDown
+    
+        field SFNode TchPgUp      USE TchPgUp      
+        field SFNode TchPgDown    USE TchPgDown
+        eventIn SFTime  incPage     
+        eventIn SFTime  decPage   
+
+
+          eventIn SFVec3f SensKnob_translationChanged  
+        eventIn SFBool  SensKnob_isActive         
+
+        field SFFloat SensKnobOrigin  0
+
+        field   SFNode Timer        USE Timer 
+        eventIn SFTime Tick         
+        field   SFTime lastTick     0
+
+        field SFFloat KnobSize      0 
+        field SFFloat KnobCenterPos 0
+
+
+        field SFFloat SmoothTau1     .05
+        field SFFloat SmoothTau2     .05
+        field SFFloat SmoothTau3     .05
+
+        field SFBool initialUpdate   TRUE         # achieves that            position_changed is sent initially.
+        field SFBool initialUnfilteredUpdate TRUE # achieves that unfiltered_position_changed is sent initially.
+
+
+        field SFBool silent FALSE
+        field SFTime snapTime 0
+
+#        field SFVec3f last_SensKnob_translationChange  0 0 0
+
+
+        url "vrmlscript:
+
+        function initialize()
+        {            
+            positionSmo1= position;
+            positionSmo2= position;
+            positionSmo3= position;
+
+            min=             EFFS.min;
+            max=             EFFS.max;
+            pageSize=        EFFS.pageSize;
+            height=          EFFS.height;
+            radiusKnob=      EFFS.radiusKnob;
+            radiusStick=     EFFS.radiusStick;
+            smoothMovements= EFFS.smoothMovements;
+
+            // work around the initialization bug in Contact 5.
+            if(   Browser.getName() == 'blaxxunCC3D'
+               && Browser.getVersion() <= 5.104
+               && !position && !min && !max && !pageSize && !height && !radiusKnob && !radiusStick
+              )
+            {
+                position= .5;
+                min= 0;
+                max= 1;
+                pageSize= .2;
+                height= 2;
+                radiusKnob= .3;
+                radiusStick= .2;
+
+                positionSmo1= 
+                positionSmo2= 
+                positionSmo3=
+                    position;
+            }
+
+
+            Update();
+
+            Timer.enabled= true; // TBD: Shouldn't we start with false?
+
+        }
+
+        function set_min(m)           {          min= m;  Update();          }
+        function set_max(m)           {          max= m;  Update();          }
+        function set_pageSize(s)      {     pageSize= s;  Update();          }
+        function set_height(h)        {       height= h;  UpdateGeometry();  }
+        function set_radiusKnob(r)    {   radiusKnob= r;  UpdateGeometry();  }
+        function set_radiusStick(r)   {  radiusStick= r;  UpdateGeometry();  }
+        function set_position(p) 
+        { 
+            silent= false; 
+            snapTime= 0; 
+            position= snapToInt? Math.floor(p + .5) : p;
+            Update();
+        }
+
+        function set_smooothMovements(s)
+        {
+            smoothMovements= s;
+            Update();
+        }
+      
+        function silently_set_position(p) 
+        { 
+            silent= true;
+            snapTime= 0;
+            position= snapToInt? Math.floor(p + .5) : p;
+            Update();        
+        }
+        
+        function silently_set_unfiltered_position(p, now)  
+        { 
+            silent= true; 
+            snapTime= 0;
+            position= positionSmo1= positionSmo2= positionSmo3= p;
+            snapTime= now + .1;
+            Update(); 
+        }
+
+         function set_unfiltered_position(p, now)  
+        { 
+            snapTime= 0;
+            position= positionSmo1= positionSmo2= positionSmo3= p;
+            snapTime= now + .1;
+            Update(); 
+        }
+
+        function incPage(t, now)
+        {
+            silent= false;
+            position+= pageSize;
+            snapTime= now + .3;
+            Update();
+        }
+
+        function decPage(t, now)
+        {
+            silent= false;
+            position-= pageSize;
+            snapTime= now + .3;
+            Update();
+        }
+
+        function SensKnob_isActive(a, now)
+        {
+            if(a)
+            {
+                SensKnobOrigin= smoothMovements? positionSmo3 : position;  // TBD: Da stimmt noch was nicht.
+                SmoothTau1= .07;
+                SmoothTau2= .001;
+                SmoothTau3= .001;
+//                last_SensKnob_translationChange= SensKnob_translationChanged;
+            }else{
+                SmoothTau1= .06;
+                SmoothTau2= .06;
+                SmoothTau3= .06;
+                snapTime=   now;
+            }
+        }
+
+
+        function SensKnob_translationChanged(t, now)
+        {
+            silent= false;
+//            if(t.subtract(last_SensKnob_translationChange).length() > .0001 )
+//            {
+                position= SensKnobOrigin + ( height? t.y * (max - min) / (height - KnobSize)
+                                                   : 0
+                                           );
+//                snapTime= now + .3;
+
+//                last_SensKnob_translationChange= t;
+//            }
+            Update();
+        }
+
+
+
+        function Update()
+        {
+            UpdateLogic();
+            
+            UpdateGeometry();
+            
+            if(smoothMovements) 
+            {
+                setUPC(position);
+            }else{
+                setUPC(position);
+                positionSmo1= position;
+                positionSmo2= position;
+                positionSmo3= position;
+                setPC(position);
+            }
+        }
+
+        function UpdateLogic()
+        {
+            if(max < min)
+                max= min;
+
+            if(position     > max)    position=     max;
+            if(positionSmo1 > max)    positionSmo1= max;
+            if(positionSmo2 > max)    positionSmo2= max;
+            if(positionSmo3 > max)    positionSmo3= max;
+
+            if(position     < min)    position=     min;
+            if(positionSmo1 < min)    positionSmo1= min;
+            if(positionSmo2 < min)    positionSmo2= min;
+            if(positionSmo3 < min)    positionSmo3= min;
+        }
+
+        function UpdateGeometry()
+        {
+            KnobSize= max - min? pageSize / (max - min) * height
+                               : height
+                               ;
+
+            KnobCenterPos= max - min? ( ( smoothMovements? positionSmo3
+                                                         : position
+                                        )
+                                      - (max + min)/2
+                                      ) / (max - min) * (height - KnobSize)
+                                    : 0
+                                    ;
+
+            TrKnob.scale=             new SFVec3f(radiusKnob,   KnobSize,                     radiusKnob);
+            TrKnob.translation=       new SFVec3f(0,            KnobCenterPos,                0);
+
+            TrStickAbove.scale=       new SFVec3f(radiusStick,  (height/2 - KnobCenterPos),   radiusStick);
+            TrStickAbove.translation= new SFVec3f(0,           (height/2 + KnobCenterPos)/2, 0          );
+
+            TrStickBelow.scale=       new SFVec3f(radiusStick, (KnobCenterPos - -height/2),   radiusStick);
+            TrStickBelow.translation= new SFVec3f(0,           (KnobCenterPos + -height/2)/2, 0          );
+        }
+
+
+        function Tick(now)
+        {
+            if(!lastTick)
+            {
+                lastTick= now;
+        return;
+            }
+
+            var Delta= now - lastTick;
+
+            if(smoothMovements)  // TBD: The timer should be completely off if !Smoothmovements.
+            {
+                positionSmo1= position     + (positionSmo1 - position    ) * Math.exp(-Delta/SmoothTau1);
+                positionSmo2= positionSmo1 + (positionSmo2 - positionSmo1) * Math.exp(-Delta/SmoothTau2);
+                positionSmo3= positionSmo2 + (positionSmo3 - positionSmo2) * Math.exp(-Delta/SmoothTau3);
+
+                UpdateGeometry();
+
+                setPC(positionSmo3);
+            }
+
+            if(snapToInt)
+                if(snapTime && now >= snapTime)
+                {
+                    var newPos= Math.floor(position + .5);
+                    SensKnobOrigin+= newPos - position;
+                    position= newPos;
+                    snapTime= 0;
+                }
+
+
+            //TBD: Set Timer.enabled
+
+            lastTick= now;
+        }
+
+        function setUPC(value)
+        {
+            if(unfiltered_position_changed != value || initialUnfilteredUpdate)
+                if(!silent) unfiltered_position_changed= value;
+
+            initialUnfilteredUpdate= false;
+        }
+
+
+        function setPC(value)
+        {
+            if(position_changed != value || initialUpdate) 
+                if(!silent) position_changed= value;
+
+            if(Math.floor(position_changed + .5) != positionInt_changed || initialUpdate)
+                if(!silent) positionInt_changed= Math.floor(position_changed + .5);
+
+            initialUpdate= false;
+        }
+
+        "
+
+
+    }
+
+
+    ROUTE EFFS.min         TO Worker.set_min
+    ROUTE EFFS.max         TO Worker.set_max
+    ROUTE EFFS.pageSize    TO Worker.set_pageSize
+    ROUTE EFFS.height      TO Worker.set_height
+    ROUTE EFFS.radiusKnob  TO Worker.set_radiusKnob
+    ROUTE EFFS.radiusStick TO Worker.set_radiusStick
+    ROUTE EFFS.smoothMovements TO Worker.set_smooothMovements
+
+    ROUTE TchPgUp.touchTime            TO Worker.incPage
+    ROUTE TchPgDown.touchTime          TO Worker.decPage
+    ROUTE SensKnob.translation_changed TO Worker.SensKnob_translationChanged          
+    ROUTE SensKnob.isActive            TO Worker.SensKnob_isActive
+    ROUTE Timer.time TO Worker.Tick
+
+
+}
+
+     

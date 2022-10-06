@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure17_12bWoodTextures.x3d' name='title'/>
+    <meta content='Figure 17.12b, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch17/17fig12b.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='28 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Six different wood types created by coloring a grayscale wood texture.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter17Textures/Figure17_12bWoodTextures.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure17_12bWoodTextures.x3d'/>
+    <Viewpoint description='Wood greyscale texture with different colors' position='1.75 0 5'/>
+    <Group>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1 0.35 0.23'/>
+          <ImageTexture DEF='WOOD' url='"wood_g.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter17Textures/wood_g.jpg"'/>
+        </Appearance>
+        <IndexedFaceSet DEF='SQUARE' coordIndex='0 1 2 3'>
+          <Coordinate point='0 1 0 0 0 0 1.1 0 0 1.1 1 0'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Transform translation='1.25 0 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 0.45 0.23'/>
+            <ImageTexture USE='WOOD'/>
+          </Appearance>
+          <IndexedFaceSet USE='SQUARE'/>
+        </Shape>
+      </Transform>
+      <Transform translation='2.5 0 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 0.55 0.23'/>
+            <ImageTexture USE='WOOD'/>
+          </Appearance>
+          <IndexedFaceSet USE='SQUARE'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -1.25 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 0.65 0.53'/>
+            <ImageTexture USE='WOOD'/>
+          </Appearance>
+          <IndexedFaceSet USE='SQUARE'/>
+        </Shape>
+      </Transform>
+      <Transform translation='1.25 -1.25 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 0.55 0.43'/>
+            <ImageTexture USE='WOOD'/>
+          </Appearance>
+          <IndexedFaceSet USE='SQUARE'/>
+        </Shape>
+      </Transform>
+      <Transform translation='2.5 -1.25 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 0.55 0.53'/>
+            <ImageTexture USE='WOOD'/>
+          </Appearance>
+          <IndexedFaceSet USE='SQUARE'/>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

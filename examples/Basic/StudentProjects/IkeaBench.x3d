@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='IkeaBench.x3d' name='title'/>
+    <meta content='X3D example Model of an Ikea Bench' name='description'/>
+    <meta content='3 March 2004' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Vaughn Pangelinan' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBench.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='IkeaBench.x3d'/>
+    <Transform>
+      <Group DEF='IkeaBench'>
+        <Shape>
+          <Box size='.7 .02 .3'/>
+          <Appearance DEF='Yellow'>
+            <Material diffuseColor='.8 .8 0'/>
+          </Appearance>
+        </Shape>
+        <Transform translation='.33 -.16 .13'>
+          <Shape DEF='BenchFrontLeg'>
+            <Box size='.034 .3 .034'/>
+            <Appearance DEF='Red'>
+              <Material diffuseColor='0.75 0 0'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-.33 -.16 .13'>
+          <Shape USE='BenchFrontLeg'/>
+        </Transform>
+        <Transform translation='-.325 .04 -.16'>
+          <Shape DEF='BenchRearLeg'>
+            <Box size='.05 .7 .02'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='.325 .04 -.16'>
+          <Shape USE='BenchRearLeg'/>
+        </Transform>
+        <Transform translation='0 -.038 .13'>
+          <Shape DEF='FrontBenchBeam'>
+            <Box size='.626 .056 .02'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -.185 0'>
+          <Shape DEF='LowCenterBenchBeam'>
+            <Box size='.64 .05 .02'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='.33 -.038 -.01'>
+          <Shape DEF='HighShortBenchBeam'>
+            <Box size='.02 .056 .28'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='-.33 -.038 -.01'>
+          <Shape USE='HighShortBenchBeam'/>
+        </Transform>
+        <Transform translation='.33 -.185 -.01'>
+          <Shape DEF='LowShortBenchBeam'>
+            <Box size='.02 .05 .28'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='-.33 -.185 -.01'>
+          <Shape USE='LowShortBenchBeam'/>
+        </Transform>
+        <Transform DEF='LowerBenchBackBeamTranslation' translation='0 .13 -.16'>
+          <Shape DEF='BenchBackBeam'>
+            <Box size='.6 .05 .016'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0 .36 -.16'>
+          <Shape USE='BenchBackBeam'/>
+        </Transform>
+        <Transform DEF='BenchBackUprightBeamTranslation' translation='0 .245 -.16'>
+          <Shape DEF='BenchBackUprightBeam'>
+            <Box size='.05 .18 .014'/>
+            <Appearance USE='Red'/>
+          </Shape>
+        </Transform>
+        <Transform translation='.25 .245 -.16'>
+          <Shape USE='BenchBackUprightBeam'/>
+        </Transform>
+        <Transform translation='-.25 .245 -.16'>
+          <Shape USE='BenchBackUprightBeam'/>
+        </Transform>
+        <Transform scale='.2 .18 1' translation='.125 .245 -.16'>
+          <Group DEF='DoggyBackPiece'>
+            <Shape>
+              <Appearance>
+                <ImageTexture url='"DoggyTransparent.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/DoggyTransparent.png"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                <Coordinate point='-0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Group>
+        </Transform>
+        <Transform scale='.2 .18 1' translation='-.125 .245 -.16'>
+          <Group DEF='KittyBackPiece'>
+            <Shape>
+              <Appearance>
+                <ImageTexture url='"KittyTransparent.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/KittyTransparent.png"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                <Coordinate point='-0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Group>
+        </Transform>
+        <Transform rotation='1 0 0 .45'>
+          <Viewpoint DEF='BenchView' description='From Bench' fieldOfView='1.4' orientation='0 1 0 3.14' position='0 .5 -.9'/>
+        </Transform>
+      </Group>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TemplePretty.x3d' name='title'/>
+    <meta content='Temple with nice Background.' name='description'/>
+    <meta content='Martin Reddy SRI authored the original temple scene.' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='22 April 2003' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://www.geovrml.org/examples' name='reference'/>
+    <meta content='X3D geospatial example' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/TemplePretty.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TemplePretty.x3d'/>
+    <Viewpoint description='Temple' position='0.0 0.0 30.0'/>
+    <Background groundAngle='1.25 1.37' groundColor='0.01 0.09 0.2 0.05 0.65 0.47 0.4 0.95 0.85' skyAngle='1.3 1.37' skyColor='0.0 0.0 0.2 0.1 0.1 0.8 0.7 0.7 1.0'/>
+    <Transform translation='-11.0 2.5 -11.0'>
+      <Shape DEF='COLUMN'>
+        <Appearance>
+          <Material diffuseColor='1.0 0.9 0.8'/>
+          <ImageTexture DEF='stone6' url='"images/stone6.png" "images/stone6.gif" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/stone6.png" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/stone6.gif" "http://www.ai.sri.com/~reddy/geovrml/examples/temple/stone6.gif"'/>
+        </Appearance>
+        <Cylinder height='5.0' radius='0.6'/>
+      </Shape>
+    </Transform>
+    <Transform translation='-9.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-7.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-5.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-3.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-1.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='1.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='3.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='5.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 -11.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-7.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-5.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-3.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-1.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='1.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='3.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='5.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 -9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 -7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 -7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 -7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 -7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 -5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 -5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 -5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 -5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 -3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 -3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 -3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 -3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 -1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 -1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 -1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 -1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 1.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 3.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 5.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-7.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-5.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-3.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-1.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='1.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='3.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='5.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 7.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-11.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-9.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-7.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-5.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-3.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-1.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='1.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='3.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='5.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='7.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='9.0 2.5 9.0'>
+      <Shape USE='COLUMN'/>
+    </Transform>
+    <Transform translation='-1.0 -0.5 -1.0'>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1.0 1.0 1.0'/>
+            <ImageTexture DEF='stone5' url='"images/stone5.png" "images/stone5.gif" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/stone5.png" "https://www.web3d.org/x3d/content/examples/Basic/Geospatial/images/stone5.gif" "http://www.ai.sri.com/~reddy/geovrml/examples/temple/stone5.gif"'/>
+          </Appearance>
+          <Box size='22.0 1.0 22.0'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform translation='-1.0 -1.5 -1.0'>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1.0 1.0 1.0'/>
+            <ImageTexture USE='stone5'/>
+          </Appearance>
+          <Box size='24.0 1.0 24.0'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform translation='-1.0 -2.5 -1.0'>
+      <Transform>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1.0 1.0 1.0'/>
+            <ImageTexture USE='stone5'/>
+          </Appearance>
+          <Box size='26.0 1.0 26.0'/>
+        </Shape>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

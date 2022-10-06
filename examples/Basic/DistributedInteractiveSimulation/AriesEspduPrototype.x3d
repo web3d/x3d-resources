@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <component level='1' name='DIS'/>
+    <meta content='AriesEspduPrototype.x3d' name='title'/>
+    <meta content='Prototype for a DIS enabled (including articulated parameters) for inclusion in a VRML Scene. Articulation parameters are in AUV Dynamics (AUV Workbench) order.' name='description'/>
+    <meta content='Duane Davis' name='creator'/>
+    <meta content='Vrml97ToX3dNist' name='translator'/>
+    <meta content='15 November 2003' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Distributed Interactive Simulation DIS ESPDU Aries AUV' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/DistributedInteractiveSimulation/AriesEspduPrototype.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='AriesEspduPrototype.x3d'/>
+    <ExternProtoDeclare appinfo='Acoustic Radio Interactive Exploratory Server (ARIES) is an operational NPS-designed Unmanned Underwater Vehicle (AUV)' name='Aries' url='"../../Savage/Robots/UnmannedUnderwaterVehicles/AriesPrototype.x3d#Aries" "https://savage.nps.edu/Savage/Robots/UnmannedUnderwaterVehicles/AriesPrototype.x3d#Aries" "../../Savage/Robots/UnmannedUnderwaterVehicles/AriesPrototype.wrl#Aries" "https://savage.nps.edu/Savage/Robots/UnmannedUnderwaterVehicles/AriesPrototype.wrl#Aries"'>
+      <field accessType='inputOutput' name='translation' type='SFVec3f'/>
+      <field accessType='inputOutput' name='rotation' type='SFRotation'/>
+      <field accessType='inputOnly' name='portRpm' type='SFFloat'/>
+      <field accessType='inputOnly' name='stbdRpm' type='SFFloat'/>
+      <field accessType='inputOnly' name='forwardRudders' type='SFFloat'/>
+      <field accessType='inputOnly' name='afterRudders' type='SFFloat'/>
+      <field accessType='inputOnly' name='forwardPlanes' type='SFFloat'/>
+      <field accessType='inputOnly' name='afterPlanes' type='SFFloat'/>
+      <field accessType='inputOnly' name='forwardVerticalThruster' type='SFFloat'/>
+      <field accessType='inputOnly' name='afterVerticalThruster' type='SFFloat'/>
+      <field accessType='inputOnly' name='forwardLateralThruster' type='SFFloat'/>
+      <field accessType='inputOnly' name='afterLateralThruster' type='SFFloat'/>
+      <field accessType='inputOnly' name='ST725Range' type='SFFloat'/>
+      <field accessType='inputOnly' name='ST1000Range' type='SFFloat'/>
+      <field accessType='inputOnly' name='ST725Bearing' type='SFFloat'/>
+      <field accessType='inputOnly' name='ST1000Bearing' type='SFFloat'/>
+      <field accessType='inputOnly' name='ST725Intensity' type='SFFloat'/>
+      <field accessType='inputOnly' name='ST1000Intensity' type='SFFloat'/>
+      <field accessType='inputOutput' appinfo='hull color for this UUV instance' name='hullColor' type='SFColor'/>
+      <field accessType='inputOutput' appinfo='can be overridden at instantiation time only' name='hullName' type='SFString'/>
+      <field accessType='inputOnly' appinfo='signal-to-noise ratio decibels' name='set_ST725Intensity' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_forwardLateralThruster' type='SFFloat'/>
+      <field accessType='inputOnly' appinfo='degrees about vertical axis' name='set_ST1000Bearing' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_forwardVerticalThruster' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_afterVerticalThruster' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_afterRudders' type='SFFloat'/>
+      <field accessType='inputOnly' appinfo='signal-to-noise ratio decibels' name='set_ST1000Intensity' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_forwardPlanes' type='SFFloat'/>
+      <field accessType='inputOnly' appinfo='meters along sonar axis' name='set_ST725Range' type='SFFloat'/>
+      <field accessType='inputOnly' appinfo='degrees about vertical axis' name='set_ST725Bearing' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_afterLateralThruster' type='SFFloat'/>
+      <field accessType='inputOnly' appinfo='meters along sonar axis' name='set_ST1000Range' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_stbdRpm' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_forwardRudders' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_portRpm' type='SFFloat'/>
+      <field accessType='inputOutput' appinfo='plane color for this UUV instance' name='planeColor' type='SFColor'/>
+      <field accessType='inputOnly' name='set_afterPlanes' type='SFFloat'/>
+    </ExternProtoDeclare>
+    <ProtoDeclare name='AriesEspdu'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='marking' type='SFString' value='AriesAUV'/>
+        <field accessType='inputOutput' name='siteID' type='SFInt32' value='0'/>
+        <field accessType='inputOutput' name='applicationID' type='SFInt32' value='1'/>
+        <field accessType='inputOutput' name='entityID' type='SFInt32' value='2'/>
+        <field accessType='inputOutput' name='readInterval' type='SFTime' value='0.1'/>
+        <field accessType='inputOutput' name='writeInterval' type='SFTime' value='1.0'/>
+        <field accessType='inputOutput' name='networkMode' type='SFString' value='standAlone'/>
+        <field accessType='inputOutput' name='address' type='SFString' value='224.2.181.145'/>
+        <field accessType='inputOutput' name='port' type='SFInt32' value='62040'/>
+        <field accessType='inputOutput' name='translation' type='SFVec3f' value='0 0 0'/>
+        <field accessType='inputOutput' name='rotation' type='SFRotation' value='0 0 1 0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- ============================= -->
+        <EspduTransform DEF='ET'>
+          <IS>
+            <connect nodeField='marking' protoField='marking'/>
+            <connect nodeField='siteID' protoField='siteID'/>
+            <connect nodeField='applicationID' protoField='applicationID'/>
+            <connect nodeField='entityID' protoField='entityID'/>
+            <connect nodeField='readInterval' protoField='readInterval'/>
+            <connect nodeField='writeInterval' protoField='writeInterval'/>
+            <connect nodeField='networkMode' protoField='networkMode'/>
+            <connect nodeField='address' protoField='address'/>
+            <connect nodeField='port' protoField='port'/>
+            <connect nodeField='translation' protoField='translation'/>
+            <connect nodeField='rotation' protoField='rotation'/>
+          </IS>
+          <!-- applet 0 1 2, auv dynamics 36 1 1 -->
+          <Switch whichChoice='0'>
+            <ProtoInstance DEF='AriesAUV' name='Aries'>
+              <fieldValue name='hullColor' value='.9 .9 .9'/>
+              <fieldValue name='hullName' value='Aries AUV'/>
+            </ProtoInstance>
+          </Switch>
+          <Group>
+            <Script DEF='ArticulationParameterControl'>
+              <field accessType='inputOnly' name='set_articulationParameters' type='MFFloat'/>
+              <field accessType='outputOnly' name='portRpm' type='SFFloat'/>
+              <field accessType='outputOnly' name='stbdRpm' type='SFFloat'/>
+              <field accessType='outputOnly' name='forwardVerticalThruster' type='SFFloat'/>
+              <field accessType='outputOnly' name='afterVerticalThruster' type='SFFloat'/>
+              <field accessType='outputOnly' name='forwardLateralThruster' type='SFFloat'/>
+              <field accessType='outputOnly' name='afterLateralThruster' type='SFFloat'/>
+              <field accessType='outputOnly' name='forwardRudders' type='SFFloat'/>
+              <field accessType='outputOnly' name='afterRudders' type='SFFloat'/>
+              <field accessType='outputOnly' name='forwardPlanes' type='SFFloat'/>
+              <field accessType='outputOnly' name='afterPlanes' type='SFFloat'/>
+              <field accessType='outputOnly' name='ST725Range' type='SFFloat'/>
+              <field accessType='outputOnly' name='ST725Bearing' type='SFFloat'/>
+              <field accessType='outputOnly' name='ST1000Range' type='SFFloat'/>
+              <field accessType='outputOnly' name='ST1000Bearing' type='SFFloat'/>
+              <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   portRpm                 = 0;
+   stbdRpm                 = 0;
+   forwardVerticalThruster = 0;
+   afterVerticalThruster   = 0;
+   forwardLateralThruster  = 0;
+   afterLateralThruster    = 0;
+   forwardRudders          = 0;
+   afterRudders            = 0;
+   forwardPlanes           = 0;
+   afterPlanes             = 0;
+   ST725Range              = 30;
+   ST725Bearing            = 0;
+   ST1000Range             = 30;
+   ST1000Bearing           = 0;
+}
+
+function set_articulationParameters( value, timestamp )
+{
+   // TODO:  what about value[0] ?
+   portRpm                 = value[1];
+   stbdRpm                 = value[2];
+   forwardRudders          = value[3];
+   afterRudders            = value[4];
+   forwardPlanes           = value[5];
+   afterPlanes             = value[6];
+   forwardVerticalThruster = value[7];
+   afterVerticalThruster   = value[8];
+   forwardLateralThruster  = value[9];
+   afterLateralThruster    = value[10];
+   ST725Range              = value[11];
+   ST725Bearing            = value[12];
+   ST1000Range             = value[13];
+   ST1000Bearing           = value[14];
+}
+]]>
+            </Script>
+            <ROUTE fromField='articulationParameterArray' fromNode='ET' toField='set_articulationParameters' toNode='ArticulationParameterControl'/>
+            <ROUTE fromField='portRpm' fromNode='ArticulationParameterControl' toField='portRpm' toNode='AriesAUV'/>
+            <ROUTE fromField='stbdRpm' fromNode='ArticulationParameterControl' toField='stbdRpm' toNode='AriesAUV'/>
+            <ROUTE fromField='forwardVerticalThruster' fromNode='ArticulationParameterControl' toField='forwardVerticalThruster' toNode='AriesAUV'/>
+            <ROUTE fromField='afterVerticalThruster' fromNode='ArticulationParameterControl' toField='afterVerticalThruster' toNode='AriesAUV'/>
+            <ROUTE fromField='forwardLateralThruster' fromNode='ArticulationParameterControl' toField='forwardLateralThruster' toNode='AriesAUV'/>
+            <ROUTE fromField='afterLateralThruster' fromNode='ArticulationParameterControl' toField='afterLateralThruster' toNode='AriesAUV'/>
+            <ROUTE fromField='forwardRudders' fromNode='ArticulationParameterControl' toField='forwardRudders' toNode='AriesAUV'/>
+            <ROUTE fromField='afterRudders' fromNode='ArticulationParameterControl' toField='afterRudders' toNode='AriesAUV'/>
+            <ROUTE fromField='forwardPlanes' fromNode='ArticulationParameterControl' toField='forwardPlanes' toNode='AriesAUV'/>
+            <ROUTE fromField='afterPlanes' fromNode='ArticulationParameterControl' toField='afterPlanes' toNode='AriesAUV'/>
+            <ROUTE fromField='ST725Range' fromNode='ArticulationParameterControl' toField='ST725Range' toNode='AriesAUV'/>
+            <ROUTE fromField='ST725Bearing' fromNode='ArticulationParameterControl' toField='ST725Bearing' toNode='AriesAUV'/>
+            <ROUTE fromField='ST1000Range' fromNode='ArticulationParameterControl' toField='ST1000Range' toNode='AriesAUV'/>
+            <ROUTE fromField='ST1000Bearing' fromNode='ArticulationParameterControl' toField='ST1000Bearing' toNode='AriesAUV'/>
+          </Group>
+        </EspduTransform>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Group>
+      <ProtoInstance name='AriesEspdu'>
+        <fieldValue name='networkMode' value='networkReader'/>
+      </ProtoInstance>
+    </Group>
+  </Scene>
+</X3D>

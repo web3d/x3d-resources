@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='NetworkReroutingRoutes.x3d' name='title'/>
+    <meta content='This file contains a pattern of three routes for a network: a primary, alternate and second-alternate (tertiary). By pushing the buttons, the packets move forward along their predetermined routes for one iteration. Routing and interpolators are pre-wired to move left-to-right only.' name='description'/>
+    <meta content='Bill Fischer' name='creator'/>
+    <meta content='22 March 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='NetworkReroutingAlternateRoutes.x3d' name='reference'/>
+    <meta content='NetworkReroutingAlternateRoutes.png' name='Image'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Networking/NetworkReroutingRoutes.x3d' name='identifier'/>
+    <meta content='NetworkReroutingAlternateRoutes.x3d' name='reference'/>
+    <meta content='NetworkReroutingNetwork.x3d' name='reference'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='NetworkReroutingRoutes.x3d'/>
+    <Group DEF='packets_group'>
+      <Transform DEF='packet1_transmit'>
+        <Transform rotation='0 0 1 1.57' translation='-6 -.5 0'>
+          <Shape DEF='prim_packet'>
+            <Appearance>
+              <Material emissiveColor='.8 .2 .2'/>
+            </Appearance>
+            <Cylinder height='.5' radius='.075'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet1_2transmit'>
+        <Transform rotation='0 0 1 1.57' translation='-6 -.5 0'>
+          <Shape USE='prim_packet'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_transmit'>
+        <Transform rotation='0 1 0 -.785' translation='-4 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_2transmit'>
+        <Transform rotation='0 1 0 -.785' translation='-4 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_transmit'>
+        <Transform rotation='0 1 0 .785' translation='-2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_2transmit'>
+        <Transform rotation='0 1 0 .785' translation='-2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet4_transmit'>
+        <Transform rotation='0 1 0 -.785' translation='0 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet4_2transmit'>
+        <Transform rotation='0 1 0 -.785' translation='0 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet5_transmit'>
+        <Transform rotation='0 1 0 .785' translation='2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet5_2transmit'>
+        <Transform rotation='0 1 0 .785' translation='2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='prim_packet'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet6_transmit'>
+        <Transform rotation='0 0 1 1.57' translation='4 -.5 0'>
+          <Shape USE='prim_packet'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet6_2transmit'>
+        <Transform rotation='0 0 1 1.57' translation='4 -.5 0'>
+          <Shape USE='prim_packet'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_1'>
+        <Transform rotation='0 0 1 1.57' translation='-6 -.5 0'>
+          <Shape DEF='packet2'>
+            <Appearance>
+              <Material emissiveColor='.2 .2 1'/>
+            </Appearance>
+            <Cylinder height='.5' radius='.075'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_1a'>
+        <Transform rotation='0 0 1 1.57' translation='-6 -.5 0'>
+          <Shape USE='packet2'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_2'>
+        <Transform rotation='0 1 0 -.785' translation='-4 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_2a'>
+        <Transform rotation='0 1 0 -.785' translation='-4 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_3'>
+        <Transform rotation='0 1 0 .785' translation='-2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_3a'>
+        <Transform rotation='0 1 0 .785' translation='-2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_3b'>
+        <Transform rotation='0 0 1 1.57' translation='-4 -.5 4'>
+          <Shape USE='packet2'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_3b2'>
+        <Transform rotation='0 0 1 1.57' translation='-4 -.5 4'>
+          <Shape USE='packet2'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_4'>
+        <Transform rotation='0 1 0 .785' translation='0 -.5 4'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_4a'>
+        <Transform rotation='0 1 0 .785' translation='0 -.5 4'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_5'>
+        <Transform rotation='0 1 0 .785' translation='2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_5a'>
+        <Transform rotation='0 1 0 .785' translation='2 -.5 2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet2'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_6'>
+        <Transform rotation='0 0 1 1.57' translation='4 -.5 0'>
+          <Shape USE='packet2'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet2_6a'>
+        <Transform rotation='0 0 1 1.57' translation='4 -.5 0'>
+          <Shape USE='packet2'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_1'>
+        <Transform rotation='0 0 1 1.57' translation='-6 -.5 0'>
+          <Shape DEF='packet3'>
+            <Appearance>
+              <Material emissiveColor='.2 1 .2'/>
+            </Appearance>
+            <Cylinder height='.5' radius='.075'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_1a'>
+        <Transform rotation='0 0 1 1.57' translation='-6 -.5 0'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_2'>
+        <Transform rotation='0 1 0 .785' translation='-4 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_2a'>
+        <Transform rotation='0 1 0 .785' translation='-4 -.5 0'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_3'>
+        <Transform rotation='0 1 0 -.785' translation='-2 -.5 -2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_3a'>
+        <Transform rotation='0 1 0 -.785' translation='-2 -.5 -2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_3b'>
+        <Transform rotation='0 0 1 1.57' translation='-4 -.5 -4'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_3b2'>
+        <Transform rotation='0 0 1 1.57' translation='-4 -.5 -4'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_4'>
+        <Transform rotation='0 0 1 1.57' translation='0 -.5 -4'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_4a'>
+        <Transform rotation='0 0 1 1.57' translation='0 -.5 -4'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_4b'>
+        <Transform rotation='0 1 0 .785' translation='4 -.5 -4'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_4b2'>
+        <Transform rotation='0 1 0 .785' translation='4 -.5 -4'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_5'>
+        <Transform rotation='0 1 0 -.785' translation='2 -.5 -2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_5a'>
+        <Transform rotation='0 1 0 -.785' translation='2 -.5 -2'>
+          <Transform rotation='0 0 1 1.57'>
+            <Shape USE='packet3'/>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_6'>
+        <Transform rotation='0 0 1 1.57' translation='4 -.5 0'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='packet3_6a'>
+        <Transform rotation='0 0 1 1.57' translation='4 -.5 0'>
+          <Shape USE='packet3'/>
+        </Transform>
+      </Transform>
+      <Transform scale='.4 .4 .4' translation='-5 -.5 -6'>
+        <Group>
+          <Shape>
+            <Appearance>
+              <Material emissiveColor='.8 .2 .2'/>
+            </Appearance>
+            <Cylinder height='2.5' radius='.75'/>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='.5 .5 .5'/>
+            </Appearance>
+            <Box/>
+          </Shape>
+          <TouchSensor DEF='primaryTouch' description='primary TouchSensor'/>
+          <Transform translation='0 10.5 0'>
+            <Billboard>
+              <Shape>
+                <Text string='"Primary"'>
+                  <FontStyle horizontal='false' style='BOLD'/>
+                </Text>
+                <Appearance>
+                  <Material emissiveColor='1 .2 .2'/>
+                </Appearance>
+              </Shape>
+            </Billboard>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform scale='.4 .4 .4' translation='-4 -.5 -6'>
+        <Group>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='.5 .5 .5'/>
+            </Appearance>
+            <Box/>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material emissiveColor='.2 .2 .8'/>
+            </Appearance>
+            <Cylinder height='2.5' radius='.75'/>
+          </Shape>
+          <TouchSensor DEF='secondaryTouch' description='secondary TouchSensor'/>
+        </Group>
+        <Transform translation='0 10.5 0'>
+          <Billboard>
+            <Shape>
+              <Text string='"Secondary"'>
+                <FontStyle horizontal='false' style='BOLD'/>
+              </Text>
+              <Appearance>
+                <Material emissiveColor='.2 .2 1'/>
+              </Appearance>
+            </Shape>
+          </Billboard>
+        </Transform>
+      </Transform>
+      <Transform scale='.4 .4 .4' translation='-3 -.5 -6'>
+        <Group>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='.5 .5 .5'/>
+            </Appearance>
+            <Box/>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material emissiveColor='.2 .8 .2'/>
+            </Appearance>
+            <Cylinder height='2.5' radius='.75'/>
+          </Shape>
+          <TouchSensor DEF='tertiaryTouch' description='tertiary TouchSensor'/>
+        </Group>
+        <Transform translation='0 10.5 0'>
+          <Billboard>
+            <Shape>
+              <Text string='"Tertiary"'>
+                <FontStyle horizontal='false' style='BOLD'/>
+              </Text>
+              <Appearance>
+                <Material emissiveColor='.2 1 .2'/>
+              </Appearance>
+            </Shape>
+          </Billboard>
+        </Transform>
+      </Transform>
+      <Transform scale='2 .4 .4' translation='-4 -.75 -6'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='.5 .5 .5'/>
+          </Appearance>
+          <Box/>
+        </Shape>
+      </Transform>
+      <Transform scale='.4 .4 .4' translation='-.25 2 -6'>
+        <Billboard>
+          <Shape>
+            <Text string='"Hop Count:"'>
+              <FontStyle style='BOLD'/>
+            </Text>
+            <Appearance>
+              <Material/>
+            </Appearance>
+          </Shape>
+        </Billboard>
+      </Transform>
+      <Transform translation='-.5 1 -6'>
+        <Billboard>
+          <Shape>
+            <Text string='"6"'>
+              <FontStyle style='BOLD'/>
+            </Text>
+            <Appearance>
+              <Material DEF='numberSix' diffuseColor='.4 .2 .2' emissiveColor='.4 0 0' transparency='1'/>
+            </Appearance>
+          </Shape>
+        </Billboard>
+      </Transform>
+      <Transform translation='.5 1 -6'>
+        <Billboard>
+          <Shape>
+            <Text string='"7"'>
+              <FontStyle style='BOLD'/>
+            </Text>
+            <Appearance>
+              <Material DEF='numberSeven' diffuseColor='.2 .2 .4' emissiveColor='0 0 .4' transparency='1'/>
+            </Appearance>
+          </Shape>
+        </Billboard>
+      </Transform>
+      <Transform translation='1.5 1 -6'>
+        <Billboard>
+          <Shape>
+            <Text string='"8"'>
+              <FontStyle style='BOLD'/>
+            </Text>
+            <Appearance>
+              <Material DEF='numberEight' diffuseColor='.2 .4 .2' emissiveColor='0 .4 0' transparency='1'/>
+            </Appearance>
+          </Shape>
+        </Billboard>
+      </Transform>
+      <TimeSensor DEF='clock' cycleInterval='2.0'/>
+      <TimeSensor DEF='clock2' cycleInterval='2.0'/>
+      <TimeSensor DEF='clock3' cycleInterval='2.0'/>
+      <PositionInterpolator DEF='node_path' key='0 .284' keyValue='0 0 0 2 0 0'/>
+      <PositionInterpolator DEF='node_patha' key='0 .284' keyValue='0 0 0 4 0 0'/>
+      <PositionInterpolator DEF='node_path2' key='0 .284' keyValue='0 0 0 2 0 2'/>
+      <PositionInterpolator DEF='node_path2a' key='0 .284' keyValue='0 0 0 -2 0 2'/>
+      <PositionInterpolator DEF='node_path3' key='0 .284' keyValue='0 0 0 2 0 -2'/>
+      <PositionInterpolator DEF='node_path3a' key='0 .284' keyValue='0 0 0 -2 0 -2'/>
+      <PositionInterpolator DEF='node_path4' key='.426 .71' keyValue='0 0 0 2 0 0'/>
+      <PositionInterpolator DEF='node_path4a' key='.426 .71' keyValue='0 0 0 4 0 0'/>
+      <PositionInterpolator DEF='node_path5' key='.426 .71' keyValue='0 0 0 2 0 2'/>
+      <PositionInterpolator DEF='node_path5a' key='.426 .71' keyValue='0 0 0 -2 0 2'/>
+      <PositionInterpolator DEF='node_path6' key='.426 .71' keyValue='0 0 0 2 0 -2'/>
+      <PositionInterpolator DEF='node_path6a' key='.426 .71' keyValue='0 0 0 -2 0 -2'/>
+      <PositionInterpolator DEF='path2' key='.142 .426' keyValue='0 0 0 2 0 0'/>
+      <PositionInterpolator DEF='path2a' key='.142 .426' keyValue='0 0 0 4 0 0'/>
+      <PositionInterpolator DEF='path2_2' key='.142 .426' keyValue='0 0 0 2 0 2'/>
+      <PositionInterpolator DEF='path2_2a' key='.142 .426' keyValue='0 0 0 -2 0 2'/>
+      <PositionInterpolator DEF='path2_3' key='.142 .426' keyValue='0 0 0 2 0 -2'/>
+      <PositionInterpolator DEF='path2_3a' key='.142 .426' keyValue='0 0 0 -2 0 -2'/>
+      <PositionInterpolator DEF='path2_4' key='.568 .852' keyValue='0 0 0 2 0 0'/>
+      <PositionInterpolator DEF='path2_4a' key='.568 .852' keyValue='0 0 0 4 0 0'/>
+      <PositionInterpolator DEF='path2_5' key='.568 .852' keyValue='0 0 0 2 0 2'/>
+      <PositionInterpolator DEF='path2_5a' key='.568 .852' keyValue='0 0 0 -2 0 2'/>
+      <PositionInterpolator DEF='path2_6' key='.568 .852' keyValue='0 0 0 2 0 -2'/>
+      <PositionInterpolator DEF='path2_6a' key='.568 .852' keyValue='0 0 0 -2 0 -2'/>
+      <PositionInterpolator DEF='path3' key='.284 .568' keyValue='0 0 0 2 0 0'/>
+      <PositionInterpolator DEF='path3a' key='.284 .568' keyValue='0 0 0 4 0 0'/>
+      <PositionInterpolator DEF='path3_2' key='.284 .568' keyValue='0 0 0 2 0 2'/>
+      <PositionInterpolator DEF='path3_2a' key='.284 .568' keyValue='0 0 0 -2 0 2'/>
+      <PositionInterpolator DEF='path3_3' key='.284 .568' keyValue='0 0 0 2 0 -2'/>
+      <PositionInterpolator DEF='path3_3a' key='.284 .568' keyValue='0 0 0 -2 0 -2'/>
+      <PositionInterpolator DEF='path3_4' key='.71 1' keyValue='0 0 0 2 0 0'/>
+      <PositionInterpolator DEF='path3_4a' key='.71 1' keyValue='0 0 0 4 0 0'/>
+      <PositionInterpolator DEF='path3_5' key='.71 1' keyValue='0 0 0 2 0 2'/>
+      <PositionInterpolator DEF='path3_5a' key='.71 1' keyValue='0 0 0 -2 0 2'/>
+      <PositionInterpolator DEF='path3_6' key='.71 1' keyValue='0 0 0 2 0 -2'/>
+      <PositionInterpolator DEF='path3_6a' key='.71 1' keyValue='0 0 0 -2 0 -2'/>
+      <Script DEF='toggleScript1'>
+        <field accessType='inputOnly' name='toggle' type='SFBool'/>
+        <field accessType='initializeOnly' name='state' type='SFBool' value='false'/>
+        <field accessType='outputOnly' name='toggleValue' type='SFBool'/>
+        <field accessType='initializeOnly' name='transState' type='SFFloat' value='1'/>
+        <field accessType='outputOnly' name='transparency' type='SFFloat'/>
+        <![CDATA[
+ecmascript:
+
+function toggle ( value, ts ) {
+ if(value == true){
+   state = !state;
+   toggleValue = state;
+   }
+   if(state){
+      transState = 0;
+      transparency = transState;
+   }
+   else{
+      transState = 1;
+      transparency = transState;
+   }
+}
+]]>
+      </Script>
+      <Script DEF='toggleScript2'>
+        <field accessType='inputOnly' name='toggle' type='SFBool'/>
+        <field accessType='initializeOnly' name='state' type='SFBool' value='false'/>
+        <field accessType='outputOnly' name='toggleValue' type='SFBool'/>
+        <field accessType='initializeOnly' name='transState' type='SFFloat' value='1'/>
+        <field accessType='outputOnly' name='transparency' type='SFFloat'/>
+        <![CDATA[
+ecmascript:
+
+function toggle ( value, ts ) {
+ if(value == true){
+   state = !state;
+   toggleValue = state;
+   }
+   if(state){
+      transState = 0;
+      transparency = transState;
+   }
+   else{
+      transState = 1;
+      transparency = transState;
+   }
+}
+]]>
+      </Script>
+      <Script DEF='toggleScript3'>
+        <field accessType='inputOnly' name='toggle' type='SFBool'/>
+        <field accessType='initializeOnly' name='state' type='SFBool' value='false'/>
+        <field accessType='outputOnly' name='toggleValue' type='SFBool'/>
+        <field accessType='initializeOnly' name='transState' type='SFFloat' value='1'/>
+        <field accessType='outputOnly' name='transparency' type='SFFloat'/>
+        <![CDATA[
+ecmascript:
+
+function toggle ( value, ts ) {
+ if(value == true){
+   state = !state;
+   toggleValue = state;
+   }
+   if(state){
+      transState = 0;
+      transparency = transState;
+   }
+   else{
+      transState = 1;
+      transparency = transState;
+   }
+}
+]]>
+      </Script>
+    </Group>
+    <ROUTE fromField='isActive' fromNode='primaryTouch' toField='toggle' toNode='toggleScript1'/>
+    <ROUTE fromField='toggleValue' fromNode='toggleScript1' toField='loop' toNode='clock'/>
+    <ROUTE fromField='isActive' fromNode='secondaryTouch' toField='toggle' toNode='toggleScript2'/>
+    <ROUTE fromField='toggleValue' fromNode='toggleScript2' toField='loop' toNode='clock2'/>
+    <ROUTE fromField='isActive' fromNode='tertiaryTouch' toField='toggle' toNode='toggleScript3'/>
+    <ROUTE fromField='toggleValue' fromNode='toggleScript3' toField='loop' toNode='clock3'/>
+    <ROUTE fromField='transparency' fromNode='toggleScript1' toField='transparency' toNode='numberSix'/>
+    <ROUTE fromField='transparency' fromNode='toggleScript2' toField='transparency' toNode='numberSeven'/>
+    <ROUTE fromField='transparency' fromNode='toggleScript3' toField='transparency' toNode='numberEight'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_patha'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path2'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path2a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path3'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path3a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path4'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path4a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path5'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path5a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path6'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock' toField='set_fraction' toNode='node_path6a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_2'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_2a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_3'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_3a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_4'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_4a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_5'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_5a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_6'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock2' toField='set_fraction' toNode='path2_6a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_2'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_2a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_3'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_3a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_4'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_4a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_5'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_5a'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_6'/>
+    <ROUTE fromField='fraction_changed' fromNode='clock3' toField='set_fraction' toNode='path3_6a'/>
+    <ROUTE fromField='value_changed' fromNode='node_path' toField='set_translation' toNode='packet1_transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path4' toField='set_translation' toNode='packet1_2transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path2' toField='set_translation' toNode='packet2_transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path5' toField='set_translation' toNode='packet2_2transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path3' toField='set_translation' toNode='packet3_transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path6' toField='set_translation' toNode='packet3_2transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path2' toField='set_translation' toNode='packet4_transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path5' toField='set_translation' toNode='packet4_2transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path3' toField='set_translation' toNode='packet5_transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path6' toField='set_translation' toNode='packet5_2transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path' toField='set_translation' toNode='packet6_transmit'/>
+    <ROUTE fromField='value_changed' fromNode='node_path4' toField='set_translation' toNode='packet6_2transmit'/>
+    <ROUTE fromField='value_changed' fromNode='path2' toField='set_translation' toNode='packet2_1'/>
+    <ROUTE fromField='value_changed' fromNode='path2_4' toField='set_translation' toNode='packet2_1a'/>
+    <ROUTE fromField='value_changed' fromNode='path2_2' toField='set_translation' toNode='packet2_2'/>
+    <ROUTE fromField='value_changed' fromNode='path2_5' toField='set_translation' toNode='packet2_2a'/>
+    <ROUTE fromField='value_changed' fromNode='path2_3' toField='set_translation' toNode='packet2_2'/>
+    <ROUTE fromField='value_changed' fromNode='path2_6' toField='set_translation' toNode='packet2_2a'/>
+    <ROUTE fromField='value_changed' fromNode='path2_2a' toField='set_translation' toNode='packet2_3'/>
+    <ROUTE fromField='value_changed' fromNode='path2_5a' toField='set_translation' toNode='packet2_3a'/>
+    <ROUTE fromField='value_changed' fromNode='path2_4a' toField='set_translation' toNode='packet2_3b2'/>
+    <ROUTE fromField='value_changed' fromNode='path2a' toField='set_translation' toNode='packet2_3b'/>
+    <ROUTE fromField='value_changed' fromNode='path2_3' toField='set_translation' toNode='packet2_4'/>
+    <ROUTE fromField='value_changed' fromNode='path2_6' toField='set_translation' toNode='packet2_4a'/>
+    <ROUTE fromField='value_changed' fromNode='path2_3' toField='set_translation' toNode='packet2_5'/>
+    <ROUTE fromField='value_changed' fromNode='path2_6' toField='set_translation' toNode='packet2_5a'/>
+    <ROUTE fromField='value_changed' fromNode='path2' toField='set_translation' toNode='packet2_6'/>
+    <ROUTE fromField='value_changed' fromNode='path2_4' toField='set_translation' toNode='packet2_6a'/>
+    <ROUTE fromField='value_changed' fromNode='path3' toField='set_translation' toNode='packet3_1'/>
+    <ROUTE fromField='value_changed' fromNode='path3_4' toField='set_translation' toNode='packet3_1a'/>
+    <ROUTE fromField='value_changed' fromNode='path3_3' toField='set_translation' toNode='packet3_2'/>
+    <ROUTE fromField='value_changed' fromNode='path3_6' toField='set_translation' toNode='packet3_2a'/>
+    <ROUTE fromField='value_changed' fromNode='path3_3a' toField='set_translation' toNode='packet3_3'/>
+    <ROUTE fromField='value_changed' fromNode='path3_6a' toField='set_translation' toNode='packet3_3a'/>
+    <ROUTE fromField='value_changed' fromNode='path3a' toField='set_translation' toNode='packet3_3b'/>
+    <ROUTE fromField='value_changed' fromNode='path3_4a' toField='set_translation' toNode='packet3_3b2'/>
+    <ROUTE fromField='value_changed' fromNode='path3a' toField='set_translation' toNode='packet3_4'/>
+    <ROUTE fromField='value_changed' fromNode='path3_4a' toField='set_translation' toNode='packet3_4a'/>
+    <ROUTE fromField='value_changed' fromNode='path3_2a' toField='set_translation' toNode='packet3_4b'/>
+    <ROUTE fromField='value_changed' fromNode='path3_5a' toField='set_translation' toNode='packet3_4b2'/>
+    <ROUTE fromField='value_changed' fromNode='path3_2' toField='set_translation' toNode='packet3_5'/>
+    <ROUTE fromField='value_changed' fromNode='path3_5' toField='set_translation' toNode='packet3_5a'/>
+    <ROUTE fromField='value_changed' fromNode='path3' toField='set_translation' toNode='packet3_6'/>
+    <ROUTE fromField='value_changed' fromNode='path3_4' toField='set_translation' toNode='packet3_6a'/>
+  </Scene>
+</X3D>

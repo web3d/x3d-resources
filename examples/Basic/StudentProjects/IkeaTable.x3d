@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='IkeaTable.x3d' name='title'/>
+    <meta content='X3D example Model of an Ikea Table' name='description'/>
+    <meta content='3 March 2004' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Vaughn Pangelinan' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaTable.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='IkeaTable.x3d'/>
+    <Transform>
+      <Group DEF='IkeaTable'>
+        <Viewpoint DEF='AboveTable' description='Above Table' orientation='1 0 0 -.65' position='0 1.1 1.2'/>
+        <Shape>
+          <Box size='.9 .02 .6'/>
+          <Appearance DEF='Green'>
+            <Material diffuseColor='0 .6 0'/>
+          </Appearance>
+        </Shape>
+        <Transform translation='.4 -.31 .25'>
+          <Shape DEF='TableLeg'>
+            <Box size='.05 .6 .05'/>
+            <Appearance DEF='Yellow'>
+              <Material diffuseColor='.8 .8 0'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-.4 -.31 .25'>
+          <Shape USE='TableLeg'/>
+        </Transform>
+        <Transform translation='.4 -.31 -.25'>
+          <Shape USE='TableLeg'/>
+        </Transform>
+        <Transform translation='-.4 -.31 -.25'>
+          <Shape USE='TableLeg'/>
+        </Transform>
+        <Transform translation='0 -.05 .25'>
+          <Shape DEF='LongBeam'>
+            <Box size='.75 .08 .02'/>
+            <Appearance USE='Yellow'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -.05 -.25'>
+          <Shape USE='LongBeam'/>
+        </Transform>
+        <Transform translation='.4 -.05 0'>
+          <Shape DEF='ShortBeam'>
+            <Box size='.02 .08 .45'/>
+            <Appearance USE='Yellow'/>
+          </Shape>
+        </Transform>
+        <Transform translation='-.4 -.05 0'>
+          <Shape USE='ShortBeam'/>
+        </Transform>
+      </Group>
+    </Transform>
+  </Scene>
+</X3D>

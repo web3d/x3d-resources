@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TextureMapComparisonsCylinder.x3d' name='title'/>
+    <meta content='Compare ImageTexture mapping for a variety of geometry nodes. This is an excellent test scene for different X3D browsers.' name='description'/>
+    <meta content='Sungmin Kwon and Don Brutzman' name='creator'/>
+    <meta content='17 December 2017' name='created'/>
+    <meta content='21 January 2020' name='modified'/>
+    <meta content='TextureMapTesting.pdf' name='reference'/>
+    <meta content='TextureMapComparisonsCylinderX_ITE.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderX3DOM.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderBSContact.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderFreeWrl.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderH3DViewer.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderInstantReality.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderView3dScene.png' name='Image'/>
+    <meta content='TextureMapComparisonsCylinderXj3D.png' name='Image'/>
+    <meta content='TextureMapComparisonsRectangle.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#Images' name='reference'/>
+    <meta content='X3D Abstract Specification, 18.2.3 Texture coordinates' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#Texturecoordinates' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Images/ImageTexture.gif' name='Image'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/TextureMapComparisonsCylinder.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TextureMapComparisonsCylinder.x3d'/>
+    <Viewpoint DEF='Viewpoint1' description='default view' position='0 0 21'/>
+    <!-- == === ==== 1st row -->
+    <Transform translation='0 0.2 0'>
+      <!-- Cylinder -->
+      <Transform translation='0 3 0'>
+        <Transform translation='-6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureAppearance'>
+              <ImageTexture DEF='SpecificationTexture' url='"ImageTextureSpecificationSquare.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/ImageTextureSpecificationSquare.png"'/>
+            </Appearance>
+            <Cylinder/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Face Set -->
+        <Transform translation='-3.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureAppearance'/>
+            <IndexedFaceSet DEF='BaseIFS' coordIndex='0 1 9 8 -1 1 2 10 9 -1 2 3 11 10 -1 3 4 12 11 -1 4 5 13 12 -1 5 6 14 13 -1 6 7 15 14 -1 7 0 8 15 -1 8 9 17 16 -1 9 10 18 17 -1 10 11 19 18 -1 11 12 20 19 -1 12 13 21 20 -1 13 14 22 21 -1 14 15 23 22 -1 15 8 16 23 -1'>
+              <Coordinate DEF='CsForCylinder' point='0 -1 1 0.707 -1 0.707 1 -1 0 0.707 -1 -0.707 0 -1 -1 -0.707 -1 -0.707 -1 -1 0 -0.707 -1 0.707 0 0.5 1 0.707 0.5 0.707 1 0.5 0 0.707 0.5 -0.707 0 0.5 -1 -0.707 0.5 -0.707 -1 0.5 0 -0.707 0.5 0.707 0 1 1 0.707 1 0.707 1 1 0 0.707 1 -0.707 0 1 -1 -0.707 1 -0.707 -1 1 0 -0.707 1 0.707'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- Indexed Triangle Strip Set -->
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Appearance USE='TextureAppearance'/>
+            <IndexedTriangleStripSet DEF='BaseITSS' ccw='true' colorPerVertex='true' index='8 0 9 1 10 2 11 3 12 4 13 5 14 6 15 7 8 0 -1 16 8 17 9 18 10 19 11 20 12 21 13 22 14 23 15 16 8 -1' normalPerVertex='true' solid='true'>
+              <Coordinate USE='CsForCylinder'/>
+            </IndexedTriangleStripSet>
+          </Shape>
+        </Transform>
+        <!-- Extrusion -->
+        <Transform translation='1.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureAppearance'/>
+            <Extrusion DEF='BaseExtrusionShape' crossSection='0 -1 -0.707 -0.707 -1 0 -0.707 0.707 0 1 0.707 0.707 1 0 0.707 -0.707 0 -1' spine='0 -1 0 0 0.5 0 0 1 0'>
+              <!-- spine is open, crossSection is closed -->
+            </Extrusion>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 2nd row -->
+      <!-- Cylinder -->
+      <Transform translation='0 0.5 0'>
+        <Transform translation='-6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureRotate'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform rotation='0.8'/>
+            </Appearance>
+            <Cylinder/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Face Set -->
+        <Transform translation='-3.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <IndexedFaceSet USE='BaseIFS'/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Triangle Strip Set -->
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <IndexedTriangleStripSet USE='BaseITSS' ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'/>
+          </Shape>
+        </Transform>
+        <!-- Extrusion -->
+        <Transform translation='1.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureRotate'/>
+            <Extrusion USE='BaseExtrusionShape'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 3rd row -->
+      <!-- Cylinder -->
+      <Transform translation='0 -2 0'>
+        <Transform translation='-6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureTranslate'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform rotation='0.8' translation='0.2 -0.5'/>
+            </Appearance>
+            <Cylinder/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Face Set -->
+        <Transform translation='-3.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureTranslate'/>
+            <IndexedFaceSet USE='BaseIFS'/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Triangle Strip Set -->
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Appearance USE='TextureTranslate'/>
+            <IndexedTriangleStripSet USE='BaseITSS' ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'/>
+          </Shape>
+        </Transform>
+        <!-- Extrusion -->
+        <Transform translation='1.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureTranslate'/>
+            <Extrusion USE='BaseExtrusionShape'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 4th row -->
+      <!-- Cylinder -->
+      <Transform translation='0 -4.5 0'>
+        <Transform translation='-6 0 0'>
+          <Shape>
+            <Appearance DEF='TextureScale'>
+              <ImageTexture USE='SpecificationTexture'/>
+              <TextureTransform rotation='0.8' scale='2 2' translation='0.2 -0.5'/>
+            </Appearance>
+            <Cylinder/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Face Set -->
+        <Transform translation='-3.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <IndexedFaceSet USE='BaseIFS'/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Triangle Strip Set -->
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <IndexedTriangleStripSet USE='BaseITSS'/>
+          </Shape>
+        </Transform>
+        <!-- Extrusion -->
+        <Transform translation='1.5 0 0'>
+          <Shape>
+            <Appearance USE='TextureScale'/>
+            <Extrusion USE='BaseExtrusionShape'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- == === ==== 5th row -->
+      <!-- Cylinder -->
+      <Transform translation='0 -7 0'>
+        <Transform translation='-6 0 0'>
+          <Shape>
+            <Appearance DEF='AppearanceNoTexture'>
+              <Material diffuseColor='0.6 1 1'/>
+            </Appearance>
+            <Cylinder/>
+          </Shape>
+        </Transform>
+        <!-- Indexed Face Set -->
+        <Transform translation='-3.5 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <IndexedFaceSet coordIndex='0 1 9 8 -1 1 2 10 9 -1 2 3 11 10 -1 3 4 12 11 -1 4 5 13 12 -1 5 6 14 13 -1 6 7 15 14 -1 7 0 8 15 -1 8 9 17 16 -1 9 10 18 17 -1 10 11 19 18 -1 11 12 20 19 -1 12 13 21 20 -1 13 14 22 21 -1 14 15 23 22 -1 15 8 16 23 -1'>
+              <Coordinate USE='CsForCylinder'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <!-- Indexed Triangle Strip Set -->
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <IndexedTriangleStripSet ccw='true' colorPerVertex='true' index='8 0 9 1 10 2 11 3 12 4 13 5 14 6 15 7 8 0 -1 16 8 17 9 18 10 19 11 20 12 21 13 22 14 23 15 16 8 -1' normalPerVertex='true' solid='true'>
+              <Coordinate USE='CsForCylinder'/>
+            </IndexedTriangleStripSet>
+          </Shape>
+        </Transform>
+        <!-- Extrusion -->
+        <Transform translation='1.5 0 0'>
+          <Shape>
+            <Appearance USE='AppearanceNoTexture'/>
+            <Extrusion USE='BaseExtrusionShape'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- == === ==== Text -->
+      <!-- Title -->
+      <Transform translation='0 7 0'>
+        <Shape>
+          <Text DEF='Title' string='"Texture Map Comparisons for Cylinders!"'>
+            <FontStyle justify='"MIDDLE" "FIRST"'/>
+          </Text>
+          <Appearance DEF='DefaultAppearance'>
+            <Material DEF='DefaultMaterial'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <!-- X axis : Geometry Index -->
+      <Transform translation='0 5.2 0'>
+        <!-- Cylinder -->
+        <Transform translation='-6 0 0'>
+          <Shape>
+            <Text string='"Cylinder"'>
+              <FontStyle DEF='CenterFontStyle' justify='"MIDDLE" "MIDDLE"' size='0.75' style='BOLD'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- Indexed Face Set -->
+        <Transform translation='-3.5 0 0'>
+          <Shape>
+            <Text string='"IFS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- Indexed Triangle Strip Set -->
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Text string='"ITSS"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <!-- Extrusion -->
+        <Transform translation='1.5 0 0'>
+          <Shape>
+            <Text string='"Extrusion"'>
+              <FontStyle USE='CenterFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+      </Transform>
+      <!-- Y axis : Texture Description -->
+      <Transform translation='3 3.5 0'>
+        <Transform>
+          <Shape>
+            <Text string='"Default Texture"'>
+              <FontStyle DEF='LeftFontStyle' justify='"BEGIN" "MIDDLE"' size='0.75'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -2.5 0'>
+          <Shape>
+            <Text string='"Rotate Texture"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -5 0'>
+          <Shape>
+            <Text string='"Rotate, Translate Texture"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -7.5 0'>
+          <Shape>
+            <Text string='"Rotate, Translate, Scale"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -10 0'>
+          <Shape>
+            <Text string='"No Texture"'>
+              <FontStyle USE='LeftFontStyle'/>
+            </Text>
+            <Appearance>
+              <Material diffuseColor='0.6 1 1'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='AutumnExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='AutumnExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn00' url='"AutumnPrototypes.x3d#Autumn00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn00" "AutumnPrototypes.wrl#Autumn00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn01' url='"AutumnPrototypes.x3d#Autumn01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn01" "AutumnPrototypes.wrl#Autumn01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn02' url='"AutumnPrototypes.x3d#Autumn02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn02" "AutumnPrototypes.wrl#Autumn02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn03' url='"AutumnPrototypes.x3d#Autumn03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn03" "AutumnPrototypes.wrl#Autumn03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn04' url='"AutumnPrototypes.x3d#Autumn04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn04" "AutumnPrototypes.wrl#Autumn04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn05' url='"AutumnPrototypes.x3d#Autumn05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn05" "AutumnPrototypes.wrl#Autumn05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn06' url='"AutumnPrototypes.x3d#Autumn06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn06" "AutumnPrototypes.wrl#Autumn06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn07' url='"AutumnPrototypes.x3d#Autumn07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn07" "AutumnPrototypes.wrl#Autumn07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn08' url='"AutumnPrototypes.x3d#Autumn08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn08" "AutumnPrototypes.wrl#Autumn08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn09' url='"AutumnPrototypes.x3d#Autumn09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn09" "AutumnPrototypes.wrl#Autumn09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn10' url='"AutumnPrototypes.x3d#Autumn10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn10" "AutumnPrototypes.wrl#Autumn10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn11' url='"AutumnPrototypes.x3d#Autumn11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn11" "AutumnPrototypes.wrl#Autumn11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn12' url='"AutumnPrototypes.x3d#Autumn12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn12" "AutumnPrototypes.wrl#Autumn12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn13' url='"AutumnPrototypes.x3d#Autumn13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn13" "AutumnPrototypes.wrl#Autumn13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn14' url='"AutumnPrototypes.x3d#Autumn14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn14" "AutumnPrototypes.wrl#Autumn14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn15' url='"AutumnPrototypes.x3d#Autumn15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn15" "AutumnPrototypes.wrl#Autumn15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn16' url='"AutumnPrototypes.x3d#Autumn16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn16" "AutumnPrototypes.wrl#Autumn16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn17' url='"AutumnPrototypes.x3d#Autumn17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn17" "AutumnPrototypes.wrl#Autumn17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn18' url='"AutumnPrototypes.x3d#Autumn18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn18" "AutumnPrototypes.wrl#Autumn18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn19' url='"AutumnPrototypes.x3d#Autumn19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn19" "AutumnPrototypes.wrl#Autumn19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn20' url='"AutumnPrototypes.x3d#Autumn20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn20" "AutumnPrototypes.wrl#Autumn20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn21' url='"AutumnPrototypes.x3d#Autumn21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn21" "AutumnPrototypes.wrl#Autumn21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn22' url='"AutumnPrototypes.x3d#Autumn22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn22" "AutumnPrototypes.wrl#Autumn22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn23' url='"AutumnPrototypes.x3d#Autumn23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn23" "AutumnPrototypes.wrl#Autumn23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn24' url='"AutumnPrototypes.x3d#Autumn24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn24" "AutumnPrototypes.wrl#Autumn24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn25' url='"AutumnPrototypes.x3d#Autumn25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn25" "AutumnPrototypes.wrl#Autumn25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn26' url='"AutumnPrototypes.x3d#Autumn26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn26" "AutumnPrototypes.wrl#Autumn26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn27' url='"AutumnPrototypes.x3d#Autumn27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn27" "AutumnPrototypes.wrl#Autumn27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn28' url='"AutumnPrototypes.x3d#Autumn28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn28" "AutumnPrototypes.wrl#Autumn28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn29' url='"AutumnPrototypes.x3d#Autumn29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn29" "AutumnPrototypes.wrl#Autumn29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn30' url='"AutumnPrototypes.x3d#Autumn30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn30" "AutumnPrototypes.wrl#Autumn30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn31' url='"AutumnPrototypes.x3d#Autumn31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn31" "AutumnPrototypes.wrl#Autumn31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn32' url='"AutumnPrototypes.x3d#Autumn32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn32" "AutumnPrototypes.wrl#Autumn32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn33' url='"AutumnPrototypes.x3d#Autumn33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn33" "AutumnPrototypes.wrl#Autumn33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Autumn34' url='"AutumnPrototypes.x3d#Autumn34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.x3d#Autumn34" "AutumnPrototypes.wrl#Autumn34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.wrl#Autumn34"'/>
+    <Group>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Autumn00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Autumn00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn00' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Autumn00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Autumn01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Autumn01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn01' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Autumn02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Autumn02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn02' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Autumn03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Autumn03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn03' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Autumn04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Autumn04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn04' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Autumn05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Autumn05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn05' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Autumn06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Autumn06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn06' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Autumn07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Autumn07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn07' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Autumn08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Autumn08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn08' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Autumn09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Autumn09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn09' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Autumn10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Autumn10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn10' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Autumn11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Autumn11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn11' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Autumn12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Autumn12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn12' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Autumn13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Autumn13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn13' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Autumn14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Autumn14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn14' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Autumn15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Autumn15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn15' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Autumn16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Autumn16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn16' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Autumn17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Autumn17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn17' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Autumn18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Autumn18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn18' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn8" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Autumn19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Autumn19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn19' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Autumn20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Autumn20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn20' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Autumn21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Autumn21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn21' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Autumn22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Autumn22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn22' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Autumn23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Autumn23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn23' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Autumn24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Autumn24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn24' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn4" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Autumn25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Autumn25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn25' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Autumn26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Autumn26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn26' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn6" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Autumn27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Autumn27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn27' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Autumn28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Autumn28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn28' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Autumn29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Autumn29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn29' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Autumn30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Autumn30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn30' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Autumn31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Autumn31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn31' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Autumn32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Autumn32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn32' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Autumn33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Autumn33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn33' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Autumn34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Autumn34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Autumn34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Autumn34' parameter='"target=_source"' url='"AutumnPrototypes.html#ProtoDeclare_Autumn34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/AutumnPrototypes.html#ProtoDeclare_Autumn34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Autumn34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

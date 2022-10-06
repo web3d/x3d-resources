@@ -1,0 +1,266 @@
+#VRML V2.0 utf8
+#
+# QuadLOD.wrl - written by Martin Reddy, 13 April 1998.
+#
+# This file contains the definition for a new node that aims to
+# 
+# but with more flexibility over when the inlined file should be
+# loaded and unloaded.
+#
+# The code is written in JavaScript and Java. N.B. CosmoPlayer
+# under IRIX does not support Java in the Script node. It also
+# does not support JavaScript, but this at least should be
+# included in the 1.03 release (whenever that may be).
+#
+# Because we can't associate an exposedField with a script node, we
+# emulate exposedField behaviour by defining triples of
+# (field, eventIn, eventOut):
+#
+#	exposedField MFString url  => (url, set_url, url_changed)
+#	exposedField SFBool   load => (load, set_load, load_changed)
+#
+# The only slight variation on the exposedField emulation is that the
+# timestamp of the eventOuts is not the same as the eventIns.
+#
+# $Id: QuadLOD.wrl,v 1.7 1998/05/04 23:13:29 reddy Exp $
+#
+
+# Insert the QuadLODInline node defintion in situ. This is done so
+# that we can do some QuadLOD specific tweaking of the Inlining routing
+# and also cuts out an extra http request. For info on the QuadLODInline
+# node please refer to http://www.ai.sri.com/~reddy/geovrml/new_inline
+
+PROTO QuadLODInline [
+  field        MFString url 		[]
+  eventIn      MFString set_url
+  eventOut     MFString url_changed
+
+  field        SFBool   load   		TRUE
+  eventIn      SFBool   set_load
+  eventOut     SFBool   load_changed
+
+  field        SFVec3f  bboxCenter 	0 0 0
+  eventIn      SFVec3f  set_bboxCenter
+  eventOut     SFVec3f  bboxCenter_changed
+
+  field        SFVec3f  bboxSize   	-1 -1 -1
+  eventIn      SFVec3f  set_bboxSize
+  eventOut     SFVec3f  bboxSize_changed
+
+  eventOut     MFNode   children
+
+  field        SFBool   debug           FALSE
+] {
+
+   # Only the first node of a PROTO is rendered. Here we set this up
+   # to be a Group node which contains a Switch (for any loaded geometry)
+   # and a VisibilitySensor (to switch out the geometry when not visible)
+
+   Group { 
+      children [
+         DEF VizInline_Switch Switch {
+	    whichChoice 0
+	    choice [
+	       DEF VizInline_GROUP Group {
+		  children []
+	       }
+	   ]
+	 }
+	 DEF VizInline_Sensor VisibilitySensor {
+	    center IS bboxCenter
+	    size IS bboxSize
+	 }
+      ]
+   }
+
+   # Here is the biggie! This script manages the loading and 
+   # unloading of the specified url, the changing of the url
+   # string, the changing of the bounding box, and the conversion
+   # of isActive boolean events into values for the Switch node.
+
+   DEF VizInline_SCRIPT Script {
+      field    SFNode   myself USE VizInline_SCRIPT
+      field    SFNode   group USE VizInline_GROUP
+
+      field    MFString geourl IS url
+      eventIn  MFString set_geourl IS set_url
+      eventOut MFString geourl_changed IS url_changed
+
+      field    SFBool   load IS load
+      eventIn  SFBool   set_load IS set_load
+      eventOut SFBool   load_changed IS load_changed
+
+      field    MFNode   empty_node []
+      field    MFString empty_string []
+      eventIn  MFNode   nodesLoaded
+      eventOut MFNode   children IS children
+
+      field    SFVec3f  bboxCenter IS bboxCenter
+      eventIn  SFVec3f  set_bboxCenter IS set_bboxCenter
+      eventOut SFVec3f  bboxCenter_changed IS bboxCenter_changed
+
+      field    SFVec3f  bboxSize IS bboxSize
+      eventIn  SFVec3f  set_bboxSize IS set_bboxSize
+      eventOut SFVec3f  bboxSize_changed IS bboxSize_changed
+
+      field    SFNode   VizSensor USE VizInline_Sensor
+
+      # value fields are used to convert the boolean isActive
+      # event from the VisibilitySensor into a Switch node value.
+
+      eventIn  SFBool   set_value
+      eventOut SFInt32  value_changed
+
+      field    SFBool   debug IS debug
+
+      directOutput TRUE
+      url "../../QuadLODInline.class"
+	  
+   }
+
+   # Route the visiblity sensor into the switch node so that we
+   # switch off any loaded nodes when they are not visible
+
+   ROUTE VizInline_Sensor.isActive TO VizInline_SCRIPT.set_value
+   ROUTE VizInline_SCRIPT.value_changed TO VizInline_Switch.set_whichChoice
+}
+
+PROTO QuadLOD [
+  field        MFString parentUrl 	[]
+  field        SFVec3f  parentCenter 	0 0 0
+  field        SFVec3f  parentSize   	-1 -1 -1
+
+  field        MFString child1Url 	[]
+  field        MFString child2Url 	[]
+  field        MFString child3Url 	[]
+  field        MFString child4Url 	[]
+
+  field        SFVec3f  switchSize   	-1 -1 -1
+
+  field        SFBool   enabled         TRUE
+  eventIn      SFBool   set_enabled
+  eventOut     SFBool   enabled_changed
+
+  eventOut     MFNode   children
+] {
+   DEF QuadLOD_GROUP Group {
+      children [
+         DEF QuadLOD_Switch Switch {
+	    whichChoice 0
+	    choice [
+   	       DEF QuadLOD_Parent QuadLODInline {
+		  url IS parentUrl
+		  bboxCenter IS parentCenter
+		  bboxSize IS parentSize
+	       }
+	       Group {
+		  children [
+		     DEF QuadLOD_Child1 QuadLODInline {
+			url IS child1Url
+			load FALSE
+		     }
+		     DEF QuadLOD_Child2 QuadLODInline {
+			url IS child2Url
+			load FALSE
+		     }
+		     DEF QuadLOD_Child3 QuadLODInline {
+			url IS child3Url
+			load FALSE
+		     }
+		     DEF QuadLOD_Child4 QuadLODInline {
+			url IS child4Url
+			load FALSE
+		     }
+		  ]
+		  bboxCenter IS parentCenter
+		  bboxSize IS parentSize
+	       }
+	    ]
+         }
+	 DEF QuadLOD_Prox ProximitySensor {
+	    center IS parentCenter
+	    size IS switchSize
+            enabled IS enabled
+	 }
+         # We seem to need to put this transparent box in
+         # in order to make the proximity sensor work correctly
+         # whenever we nest QuadLOD nodes - don't know why!
+	 Collision { 
+	    collide FALSE
+	    children [
+	       Transform {
+		  translation IS parentCenter
+		  children [
+		     Shape {
+			appearance Appearance {
+			   material Material { transparency 1.0 }
+			}
+			geometry Box { size IS switchSize }
+		     }
+		 ]
+	    }
+	  ]
+	 }
+      ]
+      bboxCenter IS parentCenter
+      bboxSize IS parentSize
+   }
+
+   DEF QuadLOD_SCRIPT Script {
+      eventOut MFNode   children IS children
+      field    SFNode   group USE QuadLOD_GROUP
+      field    SFNode   prox_node USE QuadLOD_Prox
+      field    SFVec3f  parentCenter IS parentCenter
+      field    SFVec3f  parentSize IS parentSize
+      field    SFNode   child1 USE QuadLOD_Child1
+      field    SFNode   child2 USE QuadLOD_Child2
+      field    SFNode   child3 USE QuadLOD_Child3
+      field    SFNode   child4 USE QuadLOD_Child4
+
+      # exposedField emulation for the enabled flag
+
+      field    SFBool   enabled IS enabled
+      eventIn  SFBool   set_enabled IS set_enabled
+      eventOut SFBool   enabled_changed IS enabled_changed
+
+      # when we have received loaded_changed events from all
+      # 4 children Inlines, then we can set the bounding boxes
+
+      field    SFInt32  loaded_events 0
+
+      # The following fields are used to delay switching to the next
+      # LOD until all of the files have been loaded for that level
+
+      field    SFNode   switch_node USE QuadLOD_Switch
+      eventIn  SFBool   set_value1
+      eventIn  SFBool   set_value2
+      eventIn  SFBool   set_value3
+      eventIn  SFBool   set_value4
+      field    SFBool   value1       FALSE
+      field    SFBool   value2       FALSE
+      field    SFBool   value3       FALSE
+      field    SFBool   value4       FALSE
+
+      directOutput TRUE
+
+      url  "../../QuadLOD.class"
+	  
+   }
+
+   # Route the result of the Proximity sensor to all children Inlines
+
+   ROUTE QuadLOD_Prox.isActive TO QuadLOD_Child1.set_load
+   ROUTE QuadLOD_Prox.isActive TO QuadLOD_Child2.set_load
+   ROUTE QuadLOD_Prox.isActive TO QuadLOD_Child3.set_load
+   ROUTE QuadLOD_Prox.isActive TO QuadLOD_Child4.set_load
+
+   # Route the result of the each child load to the 4-way AND script
+
+   ROUTE QuadLOD_Child1.load_changed TO QuadLOD_SCRIPT.set_value1
+   ROUTE QuadLOD_Child2.load_changed TO QuadLOD_SCRIPT.set_value2
+   ROUTE QuadLOD_Child3.load_changed TO QuadLOD_SCRIPT.set_value3
+   ROUTE QuadLOD_Child4.load_changed TO QuadLOD_SCRIPT.set_value4
+
+}
+
+

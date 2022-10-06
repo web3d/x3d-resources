@@ -1,0 +1,27 @@
+#VRML V2.0 utf8
+
+PROTO Selection [
+    field SFVec3f bboxSize         -1 -1 -1
+    field SFVec3f bboxCenter       0 0 0
+    exposedField SFBool collide    TRUE
+    exposedField SFBool select     TRUE
+    field SFNode proxy             NULL
+    exposedField MFNode children   []
+    eventIn MFNode addChildren
+    eventIn MFNode removeChildren
+]
+{
+    Collision
+    {
+        bboxCenter IS bboxCenter
+        bboxSize IS bboxSize
+        collide IS collide
+       #selection IS selection
+        proxy IS proxy
+        children IS children
+        addChildren IS addChildren
+        removeChildren IS removeChildren
+    }
+}
+
+

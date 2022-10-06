@@ -1,0 +1,97 @@
+#VRML V2.0 utf8
+#written by GLView 4.3 http://www.snafu.de/~hg
+
+DEF _Group Group {
+	children [
+		WorldInfo {info "Inventor file generated from Alias wire file with:
+	 /usr/sbin/AliasToIv trim_kreis_innen_cw trim_kreis_innen_cw.iv
+	with AliasToIv version 1.0, on Sun Oct 24 21:44:55 1999
+"},
+		DEF plane9 Group {
+			children DEF _Group_1 Group {
+				children DEF _Shape Shape {
+					appearance Appearance {material Material {
+							ambientIntensity 1
+							diffuseColor 0 0.588235 1
+							shininess 0
+						}}
+					geometry EXTERNPROTO TrimmedSurface[
+						exposedField MFNode trimmingContour
+						exposedField SFNode surface
+						]
+					["urn:inet:blaxxun.com:node:TrimmedSurface","http://www.blaxxun.com/vrml/protos/nodes.wrl#TrimmedSurface","nodes.wrl#TrimmedSurface"]
+					TrimmedSurface {
+						trimmingContour EXTERNPROTO Contour2D[
+							exposedField SFVec3f bboxSize
+							exposedField SFVec3f bboxCenter
+							exposedField SFBool fill
+							exposedField MFNode children
+							eventIn MFNode addChildren
+							eventIn MFNode removeChildren
+							]
+						["urn:inet:blaxxun.com:node:Contour2D","http://www.blaxxun.com/vrml/protos/nodes.wrl#Contour2D","nodes.wrl#Contour2D"]
+						Contour2D {
+							children EXTERNPROTO NurbsCurve2D[
+								exposedField SFInt32 tessellation
+								exposedField MFFloat knot
+								exposedField SFInt32 order
+								exposedField MFVec2f controlPoint
+								exposedField MFFloat weight
+								]
+							["urn:inet:blaxxun.com:node:NurbsCurve2D","http://www.blaxxun.com/vrml/protos/nodes.wrl#NurbsCurve2D","nodes.wrl#NurbsCurve2D"]
+							NurbsCurve2D {
+								knot [
+									-1.71941,-1.71941,-1.71941,-1.71941,
+									-1.50449,-1.28956,-1.28956,-1.28956,
+									-1.1821,-1.07463,-0.859706,-0.859706,
+									-0.859706,-0.752243,-0.64478,-0.429853,
+									-0.429853,-0.429853,-0.32239,-0.214926,
+									0,0,0,0]
+								order 4
+								controlPoint [
+									-0.233055 0.5,-0.233055 0.569727,-0.290818 0.709181,-0.430273 0.766945,
+									-0.5 0.766945,-0.534864 0.766945,-0.604591 0.752504,-0.723623 0.674318,
+									-0.766945 0.569727,-0.766945 0.5,-0.766945 0.465136,-0.752504 0.395409,
+									-0.674318 0.276377,-0.569727 0.233055,-0.5 0.233055,-0.465136 0.233055,
+									-0.395409 0.247496,-0.276377 0.325682,-0.233055 0.430273,-0.233055 0.5]
+							}
+						}
+						surface EXTERNPROTO NurbsSurface[
+							exposedField SFInt32 uDimension
+							exposedField SFInt32 vDimension
+							exposedField MFVec3f controlPoint
+							exposedField MFFloat weight
+							exposedField SFNode texCoord
+							exposedField SFInt32 uOrder
+							exposedField SFInt32 vOrder
+							exposedField MFFloat uKnot
+							exposedField MFFloat vKnot
+							exposedField SFInt32 uTessellation
+							exposedField SFInt32 vTessellation
+							exposedField SFBool solid
+							exposedField SFBool ccw
+							]
+						["urn:inet:blaxxun.com:node:NurbsSurface","http://www.blaxxun.com/vrml/protos/nodes.wrl#NurbsSurface","nodes.wrl#NurbsSurface"]
+						NurbsSurface {
+							uDimension 4
+							vDimension 4
+							controlPoint [
+								-0.5 -0.5 0,-0.166667 -0.5 0,0.166667 -0.5 0,0.5 -0.5 0,
+								-0.5 -0.166667 0,-0.166667 -0.166667 0,0.166667 -0.166667 0,0.5 -0.166667 0,
+								-0.5 0.166667 0,-0.166667 0.166667 0,0.166667 0.166667 0,0.5 0.166667 0,
+								-0.5 0.5 0,-0.166667 0.5 0,0.166667 0.5 0,0.5 0.5 0]
+							uOrder 4
+							vOrder 4
+							uKnot [
+								-1,-1,-1,-1,
+								0,0,0,0]
+							vKnot [
+								0,0,0,0,
+								1,1,1,1]
+						}
+					}
+				}
+			}
+		}
+	]
+}

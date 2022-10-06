@@ -1,0 +1,83 @@
+#X3D V3.1 utf8
+
+PROFILE Interactive
+COMPONENT Shaders:1
+
+PROTO myP [initializeOnly SFVec3f myInputRange 0.95 0.44 0.22 ] {
+DEF TR Transform { children Shape {
+	geometry Sphere {radius 1.75 }
+	appearance Appearance {
+        shaders [
+
+	ComposedShader { 
+		field SFVec3f decis IS myInputRange 
+		language "GLSL" parts [ 
+			ShaderPart { 
+				type "VERTEX" 
+
+				# the vertex shader is small enough we can uri it here
+				# but the test zip file contains a "toon.vs" for those interested
+				#url "toon.vs" 
+				url "data:text/plain,varying vec3 normal;void main(){normal=gl_NormalMatrix*gl_Normal;gl_Position=ftransform();}" 
+
+			} 
+			ShaderPart { 
+				type "FRAGMENT" 
+				url "toon.fs" 
+			} 
+		] 
+	}
+
+        ]
+	material Material {
+		diffuseColor  0.5 0.5 0.9
+	}
+	}
+}
+}
+
+}
+
+# 4 proto invocations; pointing slightly down, and we'll rotate them later
+ 
+DEF BOX Transform {
+children Transform {
+        rotation 1 0 0 0.4
+	children [
+		DirectionalLight {}
+		Transform {translation -2 -2 0 children [
+			myP {}
+		]}
+		Transform {translation 2 -2 0 children [
+			myP{myInputRange 0.4 0.2 0.1}
+		]}
+		Transform {translation -2 2 0 children [
+			myP {myInputRange 0.6 0.5 0.2}
+		]}
+		Transform {translation 2 2 0 children [
+			myP{myInputRange 0.8 0.4 0.1}
+		]}
+        ]
+}}
+
+
+# Animation clock
+        DEF Clock TimeSensor {
+                cycleInterval 4.0
+                loop TRUE
+        },
+
+# Animation path
+
+        DEF ColumnPath OrientationInterpolator {
+                key [ 0.0 0.5 1.0 ]
+                keyValue [
+                        0.0 1.0 0.0 6.28,
+                        0.0 1.0 0.0 3.14,
+                        0.0 1.0 0.0 0.0,
+                ]
+}
+
+ROUTE Clock.fraction_changed TO ColumnPath.set_fraction
+ROUTE ColumnPath.value_changed TO BOX.set_rotation
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure24_7VirtualTV.x3d' name='title'/>
+    <meta content='Figure 24.7, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch24/24fig07.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='3 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A virtual television.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter24Sound/Figure24_7VirtualTV.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure24_7VirtualTV.x3d'/>
+    <Viewpoint description='Mandelbrot zoom video by San Diego Supercomputer Center' position='0 0 8'/>
+    <NavigationInfo type='"WALK" "EXAMINE" "ANY"'/>
+    <Group>
+      <Shape>
+        <Box size='5 3.5 2'/>
+        <Appearance>
+          <Material diffuseColor='0.3 0.3 0.3'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <ImageTexture repeatS='false' repeatT='false' url='"tvcntrl.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter24Sound/tvcntrl.jpg"'/>
+        </Appearance>
+        <IndexedFaceSet coordIndex='0 1 2 3'>
+          <Coordinate point='1.75 -1.5 1.01 2.40 -1.5 1.01 2.40 1.5 1.01 1.75 1.5 1.01'/>
+          <TextureCoordinate DEF='SquareTexCoordMapping' point='0 0 1 0 1 1 0 1'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <MovieTexture DEF='TV' description='Mandelbrot Zoom video' loop='true' repeatS='false' repeatT='false' url='"tv.mpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter24Sound/tv.mpg"'/>
+        </Appearance>
+        <IndexedFaceSet coordIndex='0 1 2 3'>
+          <Coordinate point='-2.35 -1.5 1.01 1.65 -1.5 1.01 1.65 1.5 1.01 -2.35 1.5 1.01'/>
+          <TextureCoordinate USE='SquareTexCoordMapping'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Sound maxBack='100' maxFront='100' minBack='30' minFront='30'>
+        <MovieTexture USE='TV' containerField='source'/>
+      </Sound>
+      <TouchSensor DEF='Touch' description='Touch TV to begin playing'/>
+    </Group>
+    <ROUTE fromField='touchTime' fromNode='Touch' toField='set_startTime' toNode='TV'/>
+  </Scene>
+</X3D>

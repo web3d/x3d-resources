@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Pedestal.x3d' name='title'/>
+    <meta content='This file builds a pedestal, such as might be found in gothic architecture. This pedestal is made of primitive geometry nodes, and is used as an Inline node for the Primitives scene.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='14 September 2017' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Primitives.x3d' name='reference'/>
+    <meta content='originals/pedestal.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0030.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0469.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Pedestal.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Gothic pedestal'/>
+    <!-- Pedestal base -->
+    <Transform translation='0.0 0.05 0.0'>
+      <Shape>
+        <Appearance>
+          <TextureTransform rotation='0.1' scale='1.0 0.1' translation='0.2 0.2'/>
+          <Material DEF='MarbleMaterial'/>
+          <ImageTexture DEF='MarbleImage' url='"marble_g.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/marble_g.jpg"'/>
+        </Appearance>
+        <Box size='1.1 0.1 1.1'/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.0 0.15 0.0'>
+      <Shape>
+        <Appearance>
+          <TextureTransform rotation='0.2' scale='1.0 0.1' translation='0.1 0.1'/>
+          <Material USE='MarbleMaterial'/>
+          <ImageTexture USE='MarbleImage'/>
+        </Appearance>
+        <Cylinder bottom='false' height='0.1' radius='0.43'/>
+      </Shape>
+    </Transform>
+    <!-- Main pedestal -->
+    <Transform translation='0.0 0.95 0.0'>
+      <Shape>
+        <Appearance>
+          <Material USE='MarbleMaterial'/>
+          <ImageTexture USE='MarbleImage'/>
+        </Appearance>
+        <Cylinder bottom='false' height='1.5' radius='0.35' top='false'/>
+      </Shape>
+    </Transform>
+    <!-- Pedestal top -->
+    <Transform translation='0.0 1.75 0.0'>
+      <Shape>
+        <Appearance>
+          <TextureTransform rotation='0.3' scale='1.0 0.1' translation='0.3 0.1'/>
+          <Material USE='MarbleMaterial'/>
+          <ImageTexture USE='MarbleImage'/>
+        </Appearance>
+        <Cylinder height='0.1' radius='0.43' top='false'/>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <TextureTransform rotation='0.3' translation='0.3 0.1'/>
+          <Material USE='MarbleMaterial'/>
+          <ImageTexture USE='MarbleImage'/>
+        </Appearance>
+        <Cylinder bottom='false' height='0.1' radius='0.43' side='false'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

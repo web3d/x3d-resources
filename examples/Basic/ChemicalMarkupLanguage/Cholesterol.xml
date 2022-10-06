@@ -1,0 +1,859 @@
+<?xml version="1.0"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--<?xml-stylesheet type="text/xsl" href="generic.xsl" ?>-->
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<!-- CML document - cholesterol - karne - 7/8/00 -->
+<!-- file converted from: MDL .mol -->
+	<molecule title="Cholesterol" id="mol_cholesterol_karne">
+		<formula>C27 H46 O</formula>
+     		<!-- molecule specific information -->
+     		<string title="CAS">57-88-5</string>
+     		<string title="ACX">I1001660</string>
+     	 	<string title="RTECS">FZ8400000</string>
+     		<float title="molecule weight">386.6598</float>
+     		<float title="melting point" units="degC">148.5</float>
+	 	<float title="boiling point" units="degC">360</float>
+     	 	<float title="specific gravity">1.067</float>
+	  	<list title="alternate names">
+	  		<string title="name">Cholesterin</string>
+			<string title="name">(3beta)-Cholest-5-en-3-ol</string>
+			<string title="name">Cholest-5-en-3-ol (3beta)-</string>
+			<string title="name">cholest-5-ene-3beta-ol</string>
+			<string title="name">3beta-hydroxycholest-5-ene</string>
+		</list>
+		<atomArray>
+			<atom id="cholesterol_karne_a_1">
+				<float builtin="x3" units="A">-1.9901</float>
+				<float builtin="y3" units="A">2.1889</float>
+				<float builtin="z3" units="A">-1.8776</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_2">
+				<float builtin="x3" units="A">-2.1059</float>
+				<float builtin="y3" units="A">1.6157</float>
+				<float builtin="z3" units="A">-0.9459</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_3">
+				<float builtin="x3" units="A">-3.5787</float>
+				<float builtin="y3" units="A">1.7234</float>
+				<float builtin="z3" units="A">-0.4719</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_4">
+				<float builtin="x3" units="A">-3.7797</float>
+				<float builtin="y3" units="A">1.0607</float>
+				<float builtin="z3" units="A">0.8120</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_5">
+				<float builtin="x3" units="A">-2.8482</float>
+				<float builtin="y3" units="A">1.6003</float>
+				<float builtin="z3" units="A">1.9235</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_6">
+				<float builtin="x3" units="A">-1.3720</float>
+				<float builtin="y3" units="A">1.5412</float>
+				<float builtin="z3" units="A">1.5004</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_7">
+				<float builtin="x3" units="A">-0.4702</float>
+				<float builtin="y3" units="A">1.0060</float>
+				<float builtin="z3" units="A">2.3207</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_8">
+				<float builtin="x3" units="A">1.0043</float>
+				<float builtin="y3" units="A">1.0283</float>
+				<float builtin="z3" units="A">1.9762</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_9">
+				<float builtin="x3" units="A">1.3614</float>
+				<float builtin="y3" units="A">1.8701</float>
+				<float builtin="z3" units="A">0.8105</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_10">
+				<float builtin="x3" units="A">0.3215</float>
+				<float builtin="y3" units="A">1.7261</float>
+				<float builtin="z3" units="A">-0.3221</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_11">
+				<float builtin="x3" units="A">-1.0963</float>
+				<float builtin="y3" units="A">2.1783</float>
+				<float builtin="z3" units="A">0.1259</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_12">
+				<float builtin="x3" units="A">0.7503</float>
+				<float builtin="y3" units="A">2.4279</float>
+				<float builtin="z3" units="A">-1.6345</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_13">
+				<float builtin="x3" units="A">2.1677</float>
+				<float builtin="y3" units="A">2.0593</float>
+				<float builtin="z3" units="A">-2.0888</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_14">
+				<float builtin="x3" units="A">3.1972</float>
+				<float builtin="y3" units="A">2.3720</float>
+				<float builtin="z3" units="A">-0.9408</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_15">
+				<float builtin="x3" units="A">2.7895</float>
+				<float builtin="y3" units="A">1.5563</float>
+				<float builtin="z3" units="A">0.2449</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_16">
+				<float builtin="x3" units="A">3.9663</float>
+				<float builtin="y3" units="A">1.6453</float>
+				<float builtin="z3" units="A">1.2237</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_17">
+				<float builtin="x3" units="A">5.1354</float>
+				<float builtin="y3" units="A">1.5087</float>
+				<float builtin="z3" units="A">0.2960</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_18">
+				<float builtin="x3" units="A">4.6487</float>
+				<float builtin="y3" units="A">1.7527</float>
+				<float builtin="z3" units="A">-1.1872</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_19">
+				<float builtin="x3" units="A">3.2450</float>
+				<float builtin="y3" units="A">3.8521</float>
+				<float builtin="z3" units="A">-0.6813</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_20">
+				<float builtin="x3" units="A">-1.3066</float>
+				<float builtin="y3" units="A">3.6419</float>
+				<float builtin="z3" units="A">0.2349</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_21">
+				<float builtin="x3" units="A">5.6329</float>
+				<float builtin="y3" units="A">2.5278</float>
+				<float builtin="z3" units="A">-2.0553</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_22">
+				<float builtin="x3" units="A">5.1180</float>
+				<float builtin="y3" units="A">2.8440</float>
+				<float builtin="z3" units="A">-3.4537</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_23">
+				<float builtin="x3" units="A">7.0185</float>
+				<float builtin="y3" units="A">1.8022</float>
+				<float builtin="z3" units="A">-2.1116</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_24">
+				<float builtin="x3" units="A">8.1314</float>
+				<float builtin="y3" units="A">2.6591</float>
+				<float builtin="z3" units="A">-2.5153</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_25">
+				<float builtin="x3" units="A">9.4748</float>
+				<float builtin="y3" units="A">1.9697</float>
+				<float builtin="z3" units="A">-2.5572</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_26">
+				<float builtin="x3" units="A">10.6837</float>
+				<float builtin="y3" units="A">2.8620</float>
+				<float builtin="z3" units="A">-2.8793</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_27">
+				<float builtin="x3" units="A">10.5656</float>
+				<float builtin="y3" units="A">3.6361</float>
+				<float builtin="z3" units="A">-4.1508</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_28">
+				<float builtin="x3" units="A">11.9428</float>
+				<float builtin="y3" units="A">2.0228</float>
+				<float builtin="z3" units="A">-2.7290</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cholesterol_karne_a_29">
+				<float builtin="x3" units="A">-1.8702</float>
+				<float builtin="y3" units="A">0.5579</float>
+				<float builtin="z3" units="A">-1.1345</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_30">
+				<float builtin="x3" units="A">-4.2306</float>
+				<float builtin="y3" units="A">1.2525</float>
+				<float builtin="z3" units="A">-1.2225</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_31">
+				<float builtin="x3" units="A">-3.8443</float>
+				<float builtin="y3" units="A">2.7860</float>
+				<float builtin="z3" units="A">-0.3705</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_32">
+				<float builtin="x3" units="A">-3.5980</float>
+				<float builtin="y3" units="A">-0.0166</float>
+				<float builtin="z3" units="A">0.6840</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_33">
+				<float builtin="x3" units="A">-2.9845</float>
+				<float builtin="y3" units="A">0.9926</float>
+				<float builtin="z3" units="A">2.8302</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_34">
+				<float builtin="x3" units="A">-3.1166</float>
+				<float builtin="y3" units="A">2.6452</float>
+				<float builtin="z3" units="A">2.1386</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_35">
+				<float builtin="x3" units="A">-0.7974</float>
+				<float builtin="y3" units="A">0.5460</float>
+				<float builtin="z3" units="A">3.2519</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_36">
+				<float builtin="x3" units="A">-5.1826</float>
+				<float builtin="y3" units="A">1.2861</float>
+				<float builtin="z3" units="A">1.2631</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="cholesterol_karne_a_37">
+				<float builtin="x3" units="A">1.3205</float>
+				<float builtin="y3" units="A">-0.0033</float>
+				<float builtin="z3" units="A">1.7620</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_38">
+				<float builtin="x3" units="A">1.5536</float>
+				<float builtin="y3" units="A">1.4060</float>
+				<float builtin="z3" units="A">2.8511</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_39">
+				<float builtin="x3" units="A">1.3568</float>
+				<float builtin="y3" units="A">2.9171</float>
+				<float builtin="z3" units="A">1.1476</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_40">
+				<float builtin="x3" units="A">0.2550</float>
+				<float builtin="y3" units="A">0.6517</float>
+				<float builtin="z3" units="A">-0.5486</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_41">
+				<float builtin="x3" units="A">0.7064</float>
+				<float builtin="y3" units="A">3.5158</float>
+				<float builtin="z3" units="A">-1.4783</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_42">
+				<float builtin="x3" units="A">0.0447</float>
+				<float builtin="y3" units="A">2.1427</float>
+				<float builtin="z3" units="A">-2.4288</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_43">
+				<float builtin="x3" units="A">2.4284</float>
+				<float builtin="y3" units="A">2.6460</float>
+				<float builtin="z3" units="A">-2.9820</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_44">
+				<float builtin="x3" units="A">2.2058</float>
+				<float builtin="y3" units="A">0.9869</float>
+				<float builtin="z3" units="A">-2.3304</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_45">
+				<float builtin="x3" units="A">2.7354</float>
+				<float builtin="y3" units="A">0.5091</float>
+				<float builtin="z3" units="A">-0.0874</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_46">
+				<float builtin="x3" units="A">3.9396</float>
+				<float builtin="y3" units="A">0.8285</float>
+				<float builtin="z3" units="A">1.9599</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_47">
+				<float builtin="x3" units="A">3.9804</float>
+				<float builtin="y3" units="A">2.6119</float>
+				<float builtin="z3" units="A">1.7486</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_48">
+				<float builtin="x3" units="A">5.5588</float>
+				<float builtin="y3" units="A">0.4972</float>
+				<float builtin="z3" units="A">0.3832</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_49">
+				<float builtin="x3" units="A">5.9031</float>
+				<float builtin="y3" units="A">2.2515</float>
+				<float builtin="z3" units="A">0.5587</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_50">
+				<float builtin="x3" units="A">4.5225</float>
+				<float builtin="y3" units="A">0.7794</float>
+				<float builtin="z3" units="A">-1.6839</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_51">
+				<float builtin="x3" units="A">3.5516</float>
+				<float builtin="y3" units="A">4.3755</float>
+				<float builtin="z3" units="A">-1.5989</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_52">
+				<float builtin="x3" units="A">3.9698</float>
+				<float builtin="y3" units="A">4.0607</float>
+				<float builtin="z3" units="A">0.1194</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_53">
+				<float builtin="x3" units="A">2.2486</float>
+				<float builtin="y3" units="A">4.2030</float>
+				<float builtin="z3" units="A">-0.3745</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_54">
+				<float builtin="x3" units="A">-2.3393</float>
+				<float builtin="y3" units="A">3.8408</float>
+				<float builtin="z3" units="A">0.5573</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_55">
+				<float builtin="x3" units="A">-1.1313</float>
+				<float builtin="y3" units="A">4.1114</float>
+				<float builtin="z3" units="A">-0.7442</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_56">
+				<float builtin="x3" units="A">-0.6054</float>
+				<float builtin="y3" units="A">4.0592</float>
+				<float builtin="z3" units="A">0.9725</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_57">
+				<float builtin="x3" units="A">5.7945</float>
+				<float builtin="y3" units="A">3.4951</float>
+				<float builtin="z3" units="A">-1.5571</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_58">
+				<float builtin="x3" units="A">5.8860</float>
+				<float builtin="y3" units="A">3.4016</float>
+				<float builtin="z3" units="A">-4.0098</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_59">
+				<float builtin="x3" units="A">4.2048</float>
+				<float builtin="y3" units="A">3.4527</float>
+				<float builtin="z3" units="A">-3.3792</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_60">
+				<float builtin="x3" units="A">4.8914</float>
+				<float builtin="y3" units="A">1.9061</float>
+				<float builtin="z3" units="A">-3.9818</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_61">
+				<float builtin="x3" units="A">6.9441</float>
+				<float builtin="y3" units="A">0.9731</float>
+				<float builtin="z3" units="A">-2.8306</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_62">
+				<float builtin="x3" units="A">7.2381</float>
+				<float builtin="y3" units="A">1.4013</float>
+				<float builtin="z3" units="A">-1.1111</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_63">
+				<float builtin="x3" units="A">8.1969</float>
+				<float builtin="y3" units="A">3.4944</float>
+				<float builtin="z3" units="A">-1.8026</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_64">
+				<float builtin="x3" units="A">7.9155</float>
+				<float builtin="y3" units="A">3.0506</float>
+				<float builtin="z3" units="A">-3.5203</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_65">
+				<float builtin="x3" units="A">9.4247</float>
+				<float builtin="y3" units="A">1.1825</float>
+				<float builtin="z3" units="A">-3.3239</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_66">
+				<float builtin="x3" units="A">9.6484</float>
+				<float builtin="y3" units="A">1.5118</float>
+				<float builtin="z3" units="A">-1.5723</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_67">
+				<float builtin="x3" units="A">10.7271</float>
+				<float builtin="y3" units="A">3.6239</float>
+				<float builtin="z3" units="A">-2.0872</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_68">
+				<float builtin="x3" units="A">11.4721</float>
+				<float builtin="y3" units="A">4.2419</float>
+				<float builtin="z3" units="A">-4.2967</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_69">
+				<float builtin="x3" units="A">9.6877</float>
+				<float builtin="y3" units="A">4.2967</float>
+				<float builtin="z3" units="A">-4.0977</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_70">
+				<float builtin="x3" units="A">10.4502</float>
+				<float builtin="y3" units="A">2.9399</float>
+				<float builtin="z3" units="A">-4.9946</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_71">
+				<float builtin="x3" units="A">11.9217</float>
+				<float builtin="y3" units="A">1.5002</float>
+				<float builtin="z3" units="A">-1.7613</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_72">
+				<float builtin="x3" units="A">12.8265</float>
+				<float builtin="y3" units="A">2.6762</float>
+				<float builtin="z3" units="A">-2.7736</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_73">
+				<float builtin="x3" units="A">11.9910</float>
+				<float builtin="y3" units="A">1.2847</float>
+				<float builtin="z3" units="A">-3.5432</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="cholesterol_karne_a_74">
+				<float builtin="x3" units="A">-5.7836</float>
+				<float builtin="y3" units="A">0.9649</float>
+				<float builtin="z3" units="A">0.6011</float>
+				<string builtin="elementType">H</string>
+			</atom>
+		</atomArray>
+		<bondArray>
+			<bond id="cholesterol_karne_b_1">
+				<string builtin="atomRef">cholesterol_karne_a_2</string>
+				<string builtin="atomRef">cholesterol_karne_a_1</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_2">
+				<string builtin="atomRef">cholesterol_karne_a_3</string>
+				<string builtin="atomRef">cholesterol_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_3">
+				<string builtin="atomRef">cholesterol_karne_a_2</string>
+				<string builtin="atomRef">cholesterol_karne_a_11</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_4">
+				<string builtin="atomRef">cholesterol_karne_a_4</string>
+				<string builtin="atomRef">cholesterol_karne_a_3</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_5">
+				<string builtin="atomRef">cholesterol_karne_a_4</string>
+				<string builtin="atomRef">cholesterol_karne_a_5</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_6">
+				<string builtin="atomRef">cholesterol_karne_a_36</string>
+				<string builtin="atomRef">cholesterol_karne_a_4</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_7">
+				<string builtin="atomRef">cholesterol_karne_a_5</string>
+				<string builtin="atomRef">cholesterol_karne_a_6</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_8">
+				<string builtin="atomRef">cholesterol_karne_a_6</string>
+				<string builtin="atomRef">cholesterol_karne_a_7</string>
+				<string builtin="order" convention="MDL">2</string>
+			</bond>
+			<bond id="cholesterol_karne_b_9">
+				<string builtin="atomRef">cholesterol_karne_a_6</string>
+				<string builtin="atomRef">cholesterol_karne_a_11</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_10">
+				<string builtin="atomRef">cholesterol_karne_a_7</string>
+				<string builtin="atomRef">cholesterol_karne_a_8</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_11">
+				<string builtin="atomRef">cholesterol_karne_a_8</string>
+				<string builtin="atomRef">cholesterol_karne_a_9</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_12">
+				<string builtin="atomRef">cholesterol_karne_a_10</string>
+				<string builtin="atomRef">cholesterol_karne_a_9</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_13">
+				<string builtin="atomRef">cholesterol_karne_a_9</string>
+				<string builtin="atomRef">cholesterol_karne_a_15</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_14">
+				<string builtin="atomRef">cholesterol_karne_a_11</string>
+				<string builtin="atomRef">cholesterol_karne_a_10</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_15">
+				<string builtin="atomRef">cholesterol_karne_a_10</string>
+				<string builtin="atomRef">cholesterol_karne_a_12</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_16">
+				<string builtin="atomRef">cholesterol_karne_a_11</string>
+				<string builtin="atomRef">cholesterol_karne_a_20</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_17">
+				<string builtin="atomRef">cholesterol_karne_a_12</string>
+				<string builtin="atomRef">cholesterol_karne_a_13</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_18">
+				<string builtin="atomRef">cholesterol_karne_a_13</string>
+				<string builtin="atomRef">cholesterol_karne_a_14</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_19">
+				<string builtin="atomRef">cholesterol_karne_a_14</string>
+				<string builtin="atomRef">cholesterol_karne_a_18</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_20">
+				<string builtin="atomRef">cholesterol_karne_a_14</string>
+				<string builtin="atomRef">cholesterol_karne_a_19</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_21">
+				<string builtin="atomRef">cholesterol_karne_a_15</string>
+				<string builtin="atomRef">cholesterol_karne_a_14</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_22">
+				<string builtin="atomRef">cholesterol_karne_a_15</string>
+				<string builtin="atomRef">cholesterol_karne_a_16</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_23">
+				<string builtin="atomRef">cholesterol_karne_a_16</string>
+				<string builtin="atomRef">cholesterol_karne_a_17</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_24">
+				<string builtin="atomRef">cholesterol_karne_a_18</string>
+				<string builtin="atomRef">cholesterol_karne_a_17</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_25">
+				<string builtin="atomRef">cholesterol_karne_a_18</string>
+				<string builtin="atomRef">cholesterol_karne_a_21</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_26">
+				<string builtin="atomRef">cholesterol_karne_a_21</string>
+				<string builtin="atomRef">cholesterol_karne_a_22</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_27">
+				<string builtin="atomRef">cholesterol_karne_a_21</string>
+				<string builtin="atomRef">cholesterol_karne_a_23</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_28">
+				<string builtin="atomRef">cholesterol_karne_a_23</string>
+				<string builtin="atomRef">cholesterol_karne_a_24</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_29">
+				<string builtin="atomRef">cholesterol_karne_a_24</string>
+				<string builtin="atomRef">cholesterol_karne_a_25</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_30">
+				<string builtin="atomRef">cholesterol_karne_a_25</string>
+				<string builtin="atomRef">cholesterol_karne_a_26</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_31">
+				<string builtin="atomRef">cholesterol_karne_a_26</string>
+				<string builtin="atomRef">cholesterol_karne_a_27</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_32">
+				<string builtin="atomRef">cholesterol_karne_a_26</string>
+				<string builtin="atomRef">cholesterol_karne_a_28</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_33">
+				<string builtin="atomRef">cholesterol_karne_a_2</string>
+				<string builtin="atomRef">cholesterol_karne_a_29</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_34">
+				<string builtin="atomRef">cholesterol_karne_a_3</string>
+				<string builtin="atomRef">cholesterol_karne_a_30</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_35">
+				<string builtin="atomRef">cholesterol_karne_a_3</string>
+				<string builtin="atomRef">cholesterol_karne_a_31</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_36">
+				<string builtin="atomRef">cholesterol_karne_a_4</string>
+				<string builtin="atomRef">cholesterol_karne_a_32</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_37">
+				<string builtin="atomRef">cholesterol_karne_a_5</string>
+				<string builtin="atomRef">cholesterol_karne_a_33</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_38">
+				<string builtin="atomRef">cholesterol_karne_a_5</string>
+				<string builtin="atomRef">cholesterol_karne_a_34</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_39">
+				<string builtin="atomRef">cholesterol_karne_a_7</string>
+				<string builtin="atomRef">cholesterol_karne_a_35</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_40">
+				<string builtin="atomRef">cholesterol_karne_a_8</string>
+				<string builtin="atomRef">cholesterol_karne_a_37</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_41">
+				<string builtin="atomRef">cholesterol_karne_a_8</string>
+				<string builtin="atomRef">cholesterol_karne_a_38</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_42">
+				<string builtin="atomRef">cholesterol_karne_a_9</string>
+				<string builtin="atomRef">cholesterol_karne_a_39</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_43">
+				<string builtin="atomRef">cholesterol_karne_a_10</string>
+				<string builtin="atomRef">cholesterol_karne_a_40</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_44">
+				<string builtin="atomRef">cholesterol_karne_a_12</string>
+				<string builtin="atomRef">cholesterol_karne_a_41</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_45">
+				<string builtin="atomRef">cholesterol_karne_a_12</string>
+				<string builtin="atomRef">cholesterol_karne_a_42</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_46">
+				<string builtin="atomRef">cholesterol_karne_a_13</string>
+				<string builtin="atomRef">cholesterol_karne_a_43</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_47">
+				<string builtin="atomRef">cholesterol_karne_a_13</string>
+				<string builtin="atomRef">cholesterol_karne_a_44</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_48">
+				<string builtin="atomRef">cholesterol_karne_a_15</string>
+				<string builtin="atomRef">cholesterol_karne_a_45</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_49">
+				<string builtin="atomRef">cholesterol_karne_a_16</string>
+				<string builtin="atomRef">cholesterol_karne_a_46</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_50">
+				<string builtin="atomRef">cholesterol_karne_a_16</string>
+				<string builtin="atomRef">cholesterol_karne_a_47</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_51">
+				<string builtin="atomRef">cholesterol_karne_a_17</string>
+				<string builtin="atomRef">cholesterol_karne_a_48</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_52">
+				<string builtin="atomRef">cholesterol_karne_a_17</string>
+				<string builtin="atomRef">cholesterol_karne_a_49</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_53">
+				<string builtin="atomRef">cholesterol_karne_a_18</string>
+				<string builtin="atomRef">cholesterol_karne_a_50</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_54">
+				<string builtin="atomRef">cholesterol_karne_a_19</string>
+				<string builtin="atomRef">cholesterol_karne_a_51</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_55">
+				<string builtin="atomRef">cholesterol_karne_a_19</string>
+				<string builtin="atomRef">cholesterol_karne_a_52</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_56">
+				<string builtin="atomRef">cholesterol_karne_a_19</string>
+				<string builtin="atomRef">cholesterol_karne_a_53</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_57">
+				<string builtin="atomRef">cholesterol_karne_a_20</string>
+				<string builtin="atomRef">cholesterol_karne_a_54</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_58">
+				<string builtin="atomRef">cholesterol_karne_a_20</string>
+				<string builtin="atomRef">cholesterol_karne_a_55</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_59">
+				<string builtin="atomRef">cholesterol_karne_a_20</string>
+				<string builtin="atomRef">cholesterol_karne_a_56</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_60">
+				<string builtin="atomRef">cholesterol_karne_a_21</string>
+				<string builtin="atomRef">cholesterol_karne_a_57</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_61">
+				<string builtin="atomRef">cholesterol_karne_a_22</string>
+				<string builtin="atomRef">cholesterol_karne_a_58</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_62">
+				<string builtin="atomRef">cholesterol_karne_a_22</string>
+				<string builtin="atomRef">cholesterol_karne_a_59</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_63">
+				<string builtin="atomRef">cholesterol_karne_a_22</string>
+				<string builtin="atomRef">cholesterol_karne_a_60</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_64">
+				<string builtin="atomRef">cholesterol_karne_a_23</string>
+				<string builtin="atomRef">cholesterol_karne_a_61</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_65">
+				<string builtin="atomRef">cholesterol_karne_a_23</string>
+				<string builtin="atomRef">cholesterol_karne_a_62</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_66">
+				<string builtin="atomRef">cholesterol_karne_a_24</string>
+				<string builtin="atomRef">cholesterol_karne_a_63</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_67">
+				<string builtin="atomRef">cholesterol_karne_a_24</string>
+				<string builtin="atomRef">cholesterol_karne_a_64</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_68">
+				<string builtin="atomRef">cholesterol_karne_a_25</string>
+				<string builtin="atomRef">cholesterol_karne_a_65</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_69">
+				<string builtin="atomRef">cholesterol_karne_a_25</string>
+				<string builtin="atomRef">cholesterol_karne_a_66</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_70">
+				<string builtin="atomRef">cholesterol_karne_a_26</string>
+				<string builtin="atomRef">cholesterol_karne_a_67</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_71">
+				<string builtin="atomRef">cholesterol_karne_a_27</string>
+				<string builtin="atomRef">cholesterol_karne_a_68</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_72">
+				<string builtin="atomRef">cholesterol_karne_a_27</string>
+				<string builtin="atomRef">cholesterol_karne_a_69</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_73">
+				<string builtin="atomRef">cholesterol_karne_a_27</string>
+				<string builtin="atomRef">cholesterol_karne_a_70</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_74">
+				<string builtin="atomRef">cholesterol_karne_a_28</string>
+				<string builtin="atomRef">cholesterol_karne_a_71</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_75">
+				<string builtin="atomRef">cholesterol_karne_a_28</string>
+				<string builtin="atomRef">cholesterol_karne_a_72</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_76">
+				<string builtin="atomRef">cholesterol_karne_a_28</string>
+				<string builtin="atomRef">cholesterol_karne_a_73</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cholesterol_karne_b_77">
+				<string builtin="atomRef">cholesterol_karne_a_36</string>
+				<string builtin="atomRef">cholesterol_karne_a_74</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+		</bondArray>
+	</molecule>

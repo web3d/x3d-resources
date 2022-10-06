@@ -1,0 +1,18 @@
+#VRML V2.0 utf8
+
+Anchor { 
+  url "http://somehost/somefile.html"
+  parameter [ "target=name_of_frame" ]
+  children Shape { geometry Cylinder {} }
+}
+
+Anchor { 
+  url "http://www.school.edu/vrml/someScene.wrl#OverView"
+  children Shape { geometry Box {} }
+}
+
+Anchor { 
+  url "#Doorway"
+  children Shape { geometry Sphere {} }
+}
+

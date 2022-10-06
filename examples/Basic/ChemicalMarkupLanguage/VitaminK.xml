@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<molecule convention="MDLMol" title="Vitamin K">
+
+  <formula>C6 H4 O2</formula>
+  <float title="molecule weight">108.09</float>
+  <float title="melting point" units="degC">115.7</float>
+  <float title="boiling point" units="degC">293</float>
+  <float title="specific gravity">1.318</float>
+  <atomArray>
+    <atom id="vitamin_k_a1">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.0</float>
+      <float builtin="y3">0.8435</float>
+      <float builtin="z3">1.207</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">30.00000000000002</float>
+      <float builtin="y2">51.96152422706631</float>
+    </atom>
+    <atom id="vitamin_k_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.0807</float>
+      <float builtin="y3">0.7866</float>
+      <float builtin="z3">1.764</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">15.000000000000005</float>
+      <float builtin="y2">25.98076211353316</float>
+    </atom>
+    <atom id="vitamin_k_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.2015</float>
+      <float builtin="y3">0.3731</float>
+      <float builtin="z3">3.1873</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">30.000000000000004</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="vitamin_k_a4">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.3417</float>
+      <float builtin="y3">1.1235</float>
+      <float builtin="z3">1.0512</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-14.999999999999995</float>
+      <float builtin="y2">25.980762113533167</float>
+    </atom>
+    <atom id="vitamin_k_a5">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.3882</float>
+      <float builtin="y3">0.308</float>
+      <float builtin="z3">3.7965</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">14.999999999999982</float>
+      <float builtin="y2">-25.980762113533174</float>
+    </atom>
+    <atom id="vitamin_k_a6">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.5268</float>
+      <float builtin="y3">1.0604</float>
+      <float builtin="z3">1.6634</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-30.000000000000004</float>
+      <float builtin="y2">5.4502972368423104E-15</float>
+    </atom>
+    <atom id="vitamin_k_a7">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.6493</float>
+      <float builtin="y3">0.6491</float>
+      <float builtin="z3">3.0867</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-15.000000000000016</float>
+      <float builtin="y2">-25.980762113533153</float>
+    </atom>
+    <atom id="vitamin_k_a8">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">4.7298</float>
+      <float builtin="y3">0.5952</float>
+      <float builtin="z3">3.6443</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-30.00000000000003</float>
+      <float builtin="y2">-51.961524227066306</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="vitamin_k_b1">
+      <string builtin="atomRef">vitamin_k_a1</string>
+      <string builtin="atomRef">vitamin_k_a2</string>
+      <string builtin="order">2</string>
+    </bond>
+    <bond id="vitamin_k_b2">
+      <string builtin="atomRef">vitamin_k_a3</string>
+      <string builtin="atomRef">vitamin_k_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="vitamin_k_b3">
+      <string builtin="atomRef">vitamin_k_a2</string>
+      <string builtin="atomRef">vitamin_k_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="vitamin_k_b4">
+      <string builtin="atomRef">vitamin_k_a5</string>
+      <string builtin="atomRef">vitamin_k_a3</string>
+      <string builtin="order">2</string>
+      <string builtin="stereo">null</string>
+    </bond>
+    <bond id="vitamin_k_b6">
+      <string builtin="atomRef">vitamin_k_a4</string>
+      <string builtin="atomRef">vitamin_k_a6</string>
+      <string builtin="order">2</string>
+      <string builtin="stereo">null</string>
+    </bond>
+    <bond id="vitamin_k_b8">
+      <string builtin="atomRef">vitamin_k_a7</string>
+      <string builtin="atomRef">vitamin_k_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="vitamin_k_b10">
+      <string builtin="atomRef">vitamin_k_a6</string>
+      <string builtin="atomRef">vitamin_k_a7</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="vitamin_k_b12">
+      <string builtin="atomRef">vitamin_k_a7</string>
+      <string builtin="atomRef">vitamin_k_a8</string>
+      <string builtin="order">2</string>
+    </bond>
+  </bondArray>
+</molecule>

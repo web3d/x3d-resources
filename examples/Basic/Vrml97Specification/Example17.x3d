@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Example17.x3d' name='title'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='X3D working group' name='creator'/>
+    <meta content='VRML 97 specification example: VRML provides control of the viewer&apos;s camera through use of a script. This is useful for things such as guided tours, merry-go-round rides, and transportation devices such as buses and elevators. These next two examples show a couple of ways to use this feature. This example is a simple guided tour through the world. Upon entry, a guide orb hovers in front of the viewer. Click on this and a tour through the world begins. The orb follows the user around on his tour. A ProximitySensor ensures that the tour is started only if the user is close to the initial starting point. Note that this is done without scripts thanks to the touchTime output of the TouchSensor.' name='description'/>
+    <meta content='originals/exampleD_17.wrl' name='reference'/>
+    <meta content='VRML 97, ISO/IEC 14772-1, Part 1: Functional specification and UTF-8 encoding, D.17 Guided tour' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/14772/V2.0/part1/examples.html#D.17' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/Example17.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Example17.x3d'/>
+    <Group>
+      <Transform translation='0.0 -1.0 0.0'>
+        <Shape>
+          <Box size='30.0 0.2 30.0'/>
+          <Appearance>
+            <Material/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform translation='-1.0 0.0 0.0'>
+        <Shape>
+          <Cone/>
+          <Appearance>
+            <Material diffuseColor='0.5 0.8 0.0'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform translation='1.0 0.0 0.0'>
+        <Shape>
+          <Cylinder/>
+          <Appearance>
+            <Material diffuseColor='0.0 0.2 0.7'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform DEF='GuideTransform'>
+        <Viewpoint DEF='TourGuide' description='Tour Guide' jump='false'/>
+        <ProximitySensor DEF='ProxSensor' size='50.0 50.0 50.0'/>
+        <TouchSensor DEF='StartTour' description='touch to start guided tour'/>
+        <Transform translation='0.6 0.4 8.0'>
+          <Shape>
+            <Sphere radius='0.2'/>
+            <Appearance>
+              <Material diffuseColor='1.0 0.6 0.0'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Group>
+    <PositionInterpolator DEF='GuidePI' key='0.0 0.2 0.3 0.5 0.6 0.8 0.9 1.0' keyValue='0.0 0.0 0.0 0.0 0.0 -5.0 2.0 0.0 -5.0 2.0 6.0 -15.0 -4.0 6.0 -15.0 -4.0 0.0 -5.0 0.0 0.0 -5.0 0.0 0.0 0.0'/>
+    <OrientationInterpolator DEF='GuideRI' key='0.0 0.2 0.3 0.5 0.6 0.8 0.9 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 1.2 0.0 1.0 0.0 3.0 0.0 1.0 0.0 3.5 0.0 1.0 0.0 5.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0'/>
+    <TimeSensor DEF='TS' cycleInterval='30.0'/>
+    <ROUTE fromField='isActive' fromNode='ProxSensor' toField='enabled' toNode='StartTour'/>
+    <ROUTE fromField='touchTime' fromNode='StartTour' toField='startTime' toNode='TS'/>
+    <ROUTE fromField='isActive' fromNode='TS' toField='set_bind' toNode='TourGuide'/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='GuidePI'/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='GuideRI'/>
+    <ROUTE fromField='value_changed' fromNode='GuidePI' toField='translation' toNode='GuideTransform'/>
+    <ROUTE fromField='value_changed' fromNode='GuideRI' toField='rotation' toNode='GuideTransform'/>
+  </Scene>
+</X3D>

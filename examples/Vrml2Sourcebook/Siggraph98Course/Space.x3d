@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Space.x3d' name='title'/>
+    <meta content='Multiple shapes building a more complex object.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/space.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0046.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0047.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Space.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Space.x3d'/>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Box size='1.0 1.0 1.0'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Sphere radius='0.7'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Cylinder height='0.05' radius='1.25'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Cylinder radius='0.4'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Cylinder height='3.0' radius='0.3'/>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Cylinder height='6.0' radius='0.1'/>
+    </Shape>
+  </Scene>
+</X3D>

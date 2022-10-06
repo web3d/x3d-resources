@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='5' name='Rendering'/>
+    <meta content='ClipPlaneExample.x3d' name='title'/>
+    <meta content='Nicholas Polys, Don Brutzman' name='creator'/>
+    <meta content='20 February 2013' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Illustrate use of two ClipPlane intersections across four sets of primitive geometry. Line indicators are outside the scope of the ClipPlane transformation hierarchy and so are not clipped.' name='description'/>
+    <meta content='ClipPlaneExample.x3d' name='reference'/>
+    <meta content='ClipPlaneExampleFront.png' name='Image'/>
+    <meta content='ClipPlaneExampleOblique.png' name='Image'/>
+    <meta content='ClipPlaneExampleOverhead.png' name='Image'/>
+    <meta content='ClipPlaneExampleSide.png' name='Image'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/CAD/ClipPlaneExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='Vivaty Studio' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- TODO Schematron error for orientation='0 0 0 0' -->
+    <Viewpoint description='ClipPlanes front view' position='0 1 10'/>
+    <Viewpoint description='ClipPlanes oblique view' orientation='1 0 0 -0.851966' position='0 8 7'/>
+    <Viewpoint description='ClipPlanes overhead view' orientation='1 0 0 -1.570796' position='0 12 0'/>
+    <Viewpoint description='ClipPlanes side view' orientation='-0.03326 0.99889 0.03326 1.571904' position='15 1 0'/>
+    <Background DEF='WhiteBackground' groundColor='1 1 1' skyColor='1 1 1'/>
+    <Group DEF='ClipPlaneGroup'>
+      <!-- ClipPlane nodes affect peers and children -->
+      <ClipPlane DEF='ClipPlaneHorizontal'/>
+      <ClipPlane DEF='ClipPlaneVertical' plane='0 0 -1 0'/>
+      <!-- Non-standard scripting animation test for ClipPlane <PythonScript DEF="PS" url="OpacityMapStyle.py" /> <ROUTE fromNode='timer_pos0' fromField='value_changed' toNode='PS' toField='planeEquation'/> <ROUTE fromNode='PS' fromField='planeEquation' toNode='CP' toField='plane'/> -->
+      <!-- <TimeSensor DEF='timer' cycleInterval='13.000' loop='true' startTime='0.000'/> <ROUTE fromNode='timer' fromField='fraction_changed' toNode='timer_pos0' toField='set_fraction'/> <ROUTE fromNode='timer_pos0' fromField='value_changed' toNode='move' toField='set_translation'/> -->
+      <Group DEF='PrimitiveShapes'>
+        <WorldInfo info='"This Web3D Content was created with Vivaty Studio, a Web3D authoring tool" "www.mediamachines.com"' title='primitives'/>
+        <Transform DEF='dad_Box1' translation='-3 0 0'>
+          <Shape DEF='Box1'>
+            <Appearance>
+              <Material DEF='Red' ambientIntensity='.2' diffuseColor='1 0 0' shininess='.2'/>
+            </Appearance>
+            <Box DEF='GeoBox1' solid='false'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='dad_Cylinder1' translation='-1 0 0'>
+          <Shape DEF='Cylinder1'>
+            <Appearance>
+              <Material DEF='Green' ambientIntensity='.2' diffuseColor='0 1 0' shininess='.2'/>
+            </Appearance>
+            <Cylinder DEF='GeoCylinder1' solid='false'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='dad_Cone1' translation='1 0 0'>
+          <Shape DEF='Cone1'>
+            <Appearance>
+              <Material DEF='Blue' ambientIntensity='.2' diffuseColor='0 0 1' shininess='.2'/>
+            </Appearance>
+            <Cone DEF='GeoCone1' solid='false'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='dad_Sphere1' translation='3 0 0'>
+          <Shape DEF='Sphere1'>
+            <Appearance>
+              <Material DEF='Shiny_Yellow' ambientIntensity='.2' diffuseColor='1 1 0' shininess='.1' specularColor='1 1 0'/>
+            </Appearance>
+            <Sphere DEF='GeoSphere1' solid='false'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='dad_Light1' translation='0 5 0'>
+          <PointLight DEF='Light1'/>
+        </Transform>
+        <Transform DEF='dad_Background1' translation='-.73213 4.14112 0'>
+          <Background DEF='Background1' groundColor='1 1 1' skyColor='1 1 1'/>
+        </Transform>
+      </Group>
+      <Transform translation='0 3 0'>
+        <Group USE='PrimitiveShapes'/>
+      </Transform>
+    </Group>
+    <!-- Keep boundary lines outside of scope of the two clipping planes so that they can illustrate boundaries without being cut off -->
+    <Group DEF='BoundaryLines'>
+      <Transform DEF='move' translation='0 .00001 0'>
+        <Shape DEF='PlaneOutlineHorizontal'>
+          <Appearance DEF='BoundaryLineAppearance'>
+            <Material ambientIntensity='.2' emissiveColor='0.1 0.1 0.1'/>
+          </Appearance>
+          <IndexedLineSet coordIndex='0 1 2 3 0 -1'>
+            <Coordinate point='5 0 -2 5 0 2 -5 0 2 -5 0 -2'/>
+          </IndexedLineSet>
+        </Shape>
+      </Transform>
+      <PositionInterpolator DEF='timer_pos0' key='0 .5 1' keyValue='0 2 0 0 -2 0 0 2 0'/>
+      <Transform rotation='1 0 0 -1.578'>
+        <Transform DEF='move2' translation='0 .00001 0'>
+          <Shape DEF='PlaneOutlineVertical'>
+            <Appearance USE='BoundaryLineAppearance'/>
+            <!-- also includes center line -->
+            <IndexedLineSet coordIndex='0 1 2 3 0 -1 4 5 -1'>
+              <Coordinate point='5 0 -2 5 0 4 -5 0 4 -5 0 -2 5 0 0 -5 0 0'/>
+            </IndexedLineSet>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

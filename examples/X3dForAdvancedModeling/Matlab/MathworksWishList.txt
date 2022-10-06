@@ -1,0 +1,34 @@
+16 October 2014
+
+X3D Recommendations for Mathworks
+
+Matlab is a tremendous tool for mathematics, science and engineering.  Adding
+full support for X3D Graphics will make it even better.
+
+1.  Upgrade from VRML to also include support for Extensible 3D (X3D) Graphics
+International Standard, with no loss of backwards compatibility.
+
+2.  More examples showing X3D usage, both HTML5/X3D and video demonstrations.
+
+3.  Updated examples using X3DOM as a plugin-free approach for publishing user
+projects to the Web.  Consider releasing Javascript library to allow Simulink
+to drive *any* X3D player and Web browser, in addition to the bundled VR Sink
+module that comes with the Matlab Simulink 3D Animation toolbox. 
+
+4.  Update scene authoring support, and add connections to utilize the many
+X3D Quality Assurance (QA) tools for content correctness and validity.
+
+5. Mathworks needs to join the Web3D Consortium to ensure that Matlab users
+have the best possible support from Web standards.
+
+6. The X3D Community will be happy to provide help and support.
+
+Additional suggestions and questions are always welcome.
+
+Very respectfully,
+
+Don Brutzman Ph.D.
+brutzman@nps.edu
+
+This list of recommendations is maintained at
+http://x3dGraphics.com/examples/X3dForAdvancedModeling/Matlab/MathworksWishList.txt

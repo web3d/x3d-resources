@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure15_10ExtrudedRoom.x3d' name='title'/>
+    <meta content='Figure 15.10, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch15/15fig10.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='20 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='An extruded room using a floor plan as the cross section.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter15Extrusion/Figure15_10ExtrudedRoom.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Computational cost of Extrusion compared to IndexedFaceSet: quicker to download, takes time to calculate polygonal faces and normals during initial loading, equally fast at run time. -->
+    <!-- Authoring capabilities of Extrusion compared to IndexedFaceSet: can be more complicated to express, but also can provide great detail with much less effort. -->
+    <!-- First position and rotate viewpoint into positive-X-Y-Z octant using a Transform -->
+    <WorldInfo title='Figure15_10ExtrudedRoom.x3d'/>
+    <Viewpoint description='Extruded room with a doorway' orientation='-0.48712 0.83351 0.2607 1.141576' position='6 5 4'/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='1 0.9 0.7'/>
+      </Appearance>
+      <Extrusion convex='false' creaseAngle='0.785' crossSection='-0.5 1.0 -0.5 0.8 -1.8 0.8 -1.8 -0.8 1.8 -0.8 1.8 0.8 0.5 0.8 0.5 1.0 2.0 1.0 2.0 -1.0 -2.0 -1.0 -2.0 1.0 -0.5 1.0' solid='false' spine='0 0 0 0 2 0'/>
+    </Shape>
+  </Scene>
+</X3D>

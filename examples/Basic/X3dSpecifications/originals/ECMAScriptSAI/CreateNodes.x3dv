@@ -1,0 +1,33 @@
+#X3D V3.0 utf8
+
+PROFILE Immersive
+
+DEF HOLDER Transform { translation -2 0 0 }
+
+DEF SC Script {
+    outputOnly MFNode children
+
+    url ["ecmascript:
+        function initialize() {
+            // Create nodes directly in the parent scene
+            shape = Browser.currentScene.createNode('Shape');
+            box = Browser.currentScene.createNode('Box');
+            shape.geometry = box;
+            Browser.currentScene.rootNodes[0] = shape;
+
+            // Create children using the createX3DFromString service
+            vrmlCmd = 'PROFILE Interchange  Shape { geometry Sphere{} }'
+            tmpScene = Browser.createX3DFromString(vrmlCmd);
+            nodes = tmpScene.rootNodes;
+
+            // Nodes must be removed before adding to another scene
+            for(i=0; i < nodes.length; i++) {
+                tmpScene.removeRootNode(nodes[i]);
+            }
+
+            children = nodes;
+        }
+    "]
+}
+
+ROUTE SC.children TO HOLDER.children

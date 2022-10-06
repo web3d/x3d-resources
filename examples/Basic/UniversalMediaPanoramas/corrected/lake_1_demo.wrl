@@ -1,0 +1,22 @@
+#VRML V2.0 utf8
+
+NavigationInfo{
+type [ "EXAMINE" "ANY" ]
+avatarSize [ .25 1.75 .25 ]
+},
+	
+Background {	
+frontUrl  "lake_1_front.jpg"	
+backUrl   "lake_1_back.jpg"	
+leftUrl   "lake_1_left.jpg"	
+rightUrl  "lake_1_right.jpg"	
+topUrl    "lake_1_top.jpg"	
+bottomUrl "lake_1_bottom.jpg"
+}
+
+
+Viewpoint { 
+  position 0 0 20
+ fieldOfView    0.9
+ orientation    0 1 0 2.5
+}

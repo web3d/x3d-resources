@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "https://www.web3d.org/specifications/x3d-3.1.dtd">
+<X3D profile='Immersive' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.1.xsd'>
+  <head>
+    <meta content='CreateNodesFromPrototypeECMAScript.x3d' name='title'/>
+    <meta content='This example shows creation of nodes from a prototype' name='description'/>
+    <meta content='X3D Specification' name='creator'/>
+    <meta content='23 February 2005' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='X3D ECMAScript Script Authoring Interface (SAI)' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/ScriptConformance/CreateNodesFromPrototypeECMAScript.x3d' name='identifier'/>
+    <meta content='https://www.web3d.org/x3d/specifications/ISO-IEC-19777-1-X3DLanguageBindings-ECMAScript/Part1/examples.html#CreateNodesFromAPrototype' name='reference'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='CreateNodesFromPrototypeECMAScript.x3d'/>
+    <ProtoDeclare name='ColoredSphere'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='color' type='SFColor' value='0.0 0.0 0.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Shape>
+          <Appearance>
+            <Material>
+              <IS>
+                <connect nodeField='diffuseColor' protoField='color'/>
+              </IS>
+            </Material>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Script DEF='SC'>
+      <![CDATA[
+ecmascript:
+
+// Create nodes directly in the parent scene
+
+function initialize()
+{
+    scene = Browser.currentScene;
+
+    // Look through proto declarations for ColoredSphere
+    protoDecls = scene.protoDeclarations;
+
+    var protoDecl;
+
+    for(i=0; i < protoDecls.length; i++) {
+        if (protoDecls[i].name == 'ColoredSphere')
+            protoDecl = protoDecls[i];
+    }
+
+    // Create an instance of RedSphere
+    instance = protoDecl.newInstance();
+
+    // Set the color field to Red
+    instance.color = new SFColor(1,0,0);
+
+    // Add the created proto to the scene
+    scene.rootNodes[0] = instance;
+}
+]]>
+    </Script>
+  </Scene>
+</X3D>

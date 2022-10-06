@@ -1,0 +1,34 @@
+ScriptNodeFieldControl initialize():
+sceneText.string =  [ Java ScriptNodeFieldControl.class , has reinitialized the sceneText node ,  , Please click text for processEvent results. ] 
+sceneTransform.translation =  [ 0.000000 3.000000 0.000000 ] 
+sceneMaterial.diffuseColor =  [ 0.800000 0.800000 0.200000 ] 
+
+==============================
+ScriptNodeFieldControl processEvent (touchEvent):
+touchEvent startTime =  [ 989792126.505635 ] 
+mode = 2
+sceneText.string =  [ User click on text seen by Java , processEvent via Script node eventIn. , Text & position successfully changed , via Field control.  Test passed. ] 
+sceneTransform.translation =  [ 0.000000 -1.000000 0.000000 ] 
+sceneMaterial.diffuseColor =  [ 0.200000 0.800000 0.200000 ] 
+
+==============================
+ScriptNodeFieldControl processEvent (touchEvent):
+touchEvent startTime =  [ 989792128.817265 ] 
+mode = 0
+sceneText.string =  [ Default text in VRML scene will be replaced by , Java initialize() in Script using Field control. , This text appears first, if Java initialization fails. ,  ] 
+sceneTransform.translation =  [ 0.000000 1.000000 0.000000 ] 
+sceneMaterial.diffuseColor =  [ 0.800000 0.200000 0.200000 ] 
+
+==============================
+ScriptNodeFieldControl processEvent (touchEvent):
+touchEvent startTime =  [ 989792131.953136 ] 
+mode = 1
+ScriptNodeFieldControl initialize():
+sceneText.string =  [ Java ScriptNodeFieldControl.class , has reinitialized the sceneText node ,  , Please click text for processEvent results. ] 
+sceneTransform.translation =  [ 0.000000 3.000000 0.000000 ] 
+sceneMaterial.diffuseColor =  [ 0.800000 0.800000 0.200000 ] 
+
+==============================
+ScriptNodeFieldControl script shutdown.
+==============================
+

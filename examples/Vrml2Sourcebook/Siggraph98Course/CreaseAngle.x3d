@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='CreaseAngle.x3d' name='title'/>
+    <meta content='creaseAngle demonstration: select and drag upper halves of quadrilaterals to change creaseAngle and shading.' name='description'/>
+    <meta content='John L. Moreland' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/creangle.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0243.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/CreaseAngle.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"copyright (c) 1997, John L. Moreland"' title='Crease angle demonstration'/>
+    <Viewpoint centerOfRotation='0 0.85 0' description='Front Face' orientation='0 1 0 -0.62' position='-2 0.85 3'/>
+    <Viewpoint centerOfRotation='0 0.85 0' description='Back Face' orientation='0.0 1.0 0.0 0.62' position='2.4 0.85 3.0'/>
+    <NavigationInfo/>
+    <DirectionalLight color='1.0 0.0 0.0' direction='0.0 -1.0 0.1'/>
+    <DirectionalLight color='0.0 0.0 1.0' direction='0.0 1.0 -0.1'/>
+    <Transform translation='-1.1 0.0 0.0'>
+      <Shape>
+        <Appearance DEF='White'>
+          <Material ambientIntensity='0.5' diffuseColor='1.0 1.0 1.0'/>
+        </Appearance>
+        <IndexedFaceSet coordIndex='0 1 4 5 0 -1 1 2 3 4 1 -1' solid='false'>
+          <Coordinate DEF='Crd1' point='0.0 0.0 1.0 0.0 1.0 1.0 0.0 2.0 1.0 0.0 2.0 -1.0 0.0 1.0 -1.0 0.0 0.0 -1.0'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Transform translation='0.0 1.0 1.2'>
+        <Billboard>
+          <Shape>
+            <Appearance DEF='FntColor'>
+              <Material diffuseColor='1.0 0.0 0.0'/>
+            </Appearance>
+            <Text string='"0.0"'>
+              <FontStyle DEF='FntStyle' justify='"BEGIN" "MIDDLE"' size='0.1' style='BOLD'/>
+            </Text>
+          </Shape>
+          <Transform DEF='bendAngleLabel' translation='0.0 -0.1 0.0'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='0.0 0.5 0.0'/>
+              </Appearance>
+              <Text DEF='bendAngle' string='"0.0"'>
+                <FontStyle USE='FntStyle'/>
+              </Text>
+            </Shape>
+          </Transform>
+        </Billboard>
+      </Transform>
+    </Transform>
+    <Transform>
+      <Shape>
+        <Appearance USE='White'/>
+        <IndexedFaceSet coordIndex='0 1 4 5 0 -1 1 2 3 4 1 -1' creaseAngle='0.785' solid='false'>
+          <Coordinate DEF='Crd2' point='0.0 0.0 1.0 0.0 1.0 1.0 0.0 2.0 1.0 0.0 2.0 -1.0 0.0 1.0 -1.0 0.0 0.0 -1.0'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Transform translation='0.0 1.0 1.2'>
+        <Billboard>
+          <Shape>
+            <Appearance USE='FntColor'/>
+            <Text string='"0.785"'>
+              <FontStyle USE='FntStyle'/>
+            </Text>
+          </Shape>
+          <Transform USE='bendAngleLabel'/>
+        </Billboard>
+      </Transform>
+    </Transform>
+    <Transform translation='1.1 0.0 0.0'>
+      <Shape>
+        <Appearance USE='White'/>
+        <IndexedFaceSet coordIndex='0 1 4 5 0 -1 1 2 3 4 1 -1' creaseAngle='1.57' solid='false'>
+          <Coordinate DEF='Crd3' point='0.0 0.0 1.0 0.0 1.0 1.0 0.0 2.0 1.0 0.0 2.0 -1.0 0.0 1.0 -1.0 0.0 0.0 -1.0'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Transform translation='0.0 1.0 1.2'>
+        <Billboard>
+          <Shape>
+            <Appearance USE='FntColor'/>
+            <Text string='"1.57"'>
+              <FontStyle USE='FntStyle'/>
+            </Text>
+          </Shape>
+          <Transform USE='bendAngleLabel'/>
+        </Billboard>
+      </Transform>
+    </Transform>
+    <PlaneSensor DEF='PS' description='Select and drag upper halves of quads to change creaseAngle and shading' maxPosition='6.283 1.57'/>
+    <Script DEF='Scr'>
+      <field accessType='outputOnly' name='label_changed' type='MFString'/>
+      <field accessType='inputOnly' name='set_translation' type='SFVec3f'/>
+      <field accessType='outputOnly' name='fraction_changed' type='SFFloat'/>
+      <![CDATA[
+ecmascript:
+        function set_translation( tran, et )
+        {
+            tempCA = tran[0] / 4.0;
+            if ( tempCA < 0.00 ) tempCA = 0.0;
+            if ( tempCA > 1.57 ) tempCA = 1.57;
+            fraction_changed = tempCA;
+            // Hacks to get truncation/formatting
+            tempCA = (Math.floor(tempCA*1000)/1000.0);
+            if ( (tempCA > 0.1) && (tempCA < 1.0) )
+                tempCA = '0' + tempCA;
+            if ( tempCA <= 0.0 )
+                tempCA = tempCA + '.' + '0';
+            label_changed[0] = tempCA;
+        }
+]]>
+    </Script>
+    <CoordinateInterpolator DEF='CI' key='0.0 1.57' keyValue='0.0 0.0 1.0 0.0 1.0 1.0 0.0 2.0 1.0 0.0 2.0 -1.0 0.0 1.0 -1.0 0.0 0.0 -1.0 0.0 0.0 1.0 0.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 -1.0 0.0 1.0 -1.0 0.0 0.0 -1.0'/>
+    <ROUTE fromField='translation_changed' fromNode='PS' toField='set_translation' toNode='Scr'/>
+    <ROUTE fromField='fraction_changed' fromNode='Scr' toField='set_fraction' toNode='CI'/>
+    <ROUTE fromField='label_changed' fromNode='Scr' toField='set_string' toNode='bendAngle'/>
+    <ROUTE fromField='value_changed' fromNode='CI' toField='set_point' toNode='Crd1'/>
+    <ROUTE fromField='value_changed' fromNode='CI' toField='set_point' toNode='Crd2'/>
+    <ROUTE fromField='value_changed' fromNode='CI' toField='set_point' toNode='Crd3'/>
+  </Scene>
+</X3D>

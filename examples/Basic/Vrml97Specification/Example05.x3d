@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Example05.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='24 May 2000' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='X3D working group' name='creator'/>
+    <meta content='VRML 97 specification example: This Script node decides whether or not to open a bank vault given openVault and combinationEntered messages. To do this, it remembers whether or not the correct combination has been entered. The Script node combined with a Sphere, a TouchSensor and a Sound node to show how is works. When the pointing device is over the sphere, the combinationEntered eventIn of the Script is sent. Then, when the Sphere is touched (typically when the mouse button is pressed) the Script is sent the openVault eventIn. This generates the vaultUnlocked eventOut which starts a &apos;click&apos; sound.' name='description'/>
+    <meta content='originals/exampleD_5.wrl' name='specificationUrl'/>
+    <meta content='VRML 97, ISO/IEC 14772-1, Part 1: Functional specification and UTF-8 encoding, D.5 Scripting example' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/14772/V2.0/part1/examples.html#D.5' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/Example05.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Warning: VRML97-style scripting, not X3D Scene Authoring Interface (SAI) -->
+    <WorldInfo title='Example05.x3d'/>
+    <Script DEF='OpenVault'>
+      <!-- field tags are declarations of what interfaces are in this Script node -->
+      <field accessType='inputOnly' name='openVault' type='SFTime'/>
+      <field accessType='inputOnly' name='combinationEntered' type='SFBool'/>
+      <field accessType='outputOnly' name='vaultUnlocked' type='SFTime'/>
+      <field accessType='initializeOnly' name='unlocked' type='SFBool' value='false'/>
+      <![CDATA[
+ecmascript:
+function combinationEntered (value)
+{
+	unlocked = value;
+}
+function openVault(value)
+{
+	if (unlocked) vaultUnlocked = value;
+}
+]]>
+    </Script>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='1 0 0'/>
+      </Appearance>
+      <Sphere/>
+    </Shape>
+    <Sound maxBack='1000' maxFront='1000' minBack='1000' minFront='1000'>
+      <AudioClip DEF='Click' description='click' stopTime='1' url='"click.wav" "https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/click.wav"'/>
+    </Sound>
+    <TouchSensor DEF='TS' description='touch ball to hear a click'/>
+    <ROUTE fromField='isOver' fromNode='TS' toField='combinationEntered' toNode='OpenVault'/>
+    <ROUTE fromField='touchTime' fromNode='TS' toField='openVault' toNode='OpenVault'/>
+    <ROUTE fromField='vaultUnlocked' fromNode='OpenVault' toField='startTime' toNode='Click'/>
+  </Scene>
+</X3D>

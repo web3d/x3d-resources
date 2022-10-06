@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="X3D Basic VolumeRendering examples: download all datasets" default="download.savage.nps.edu" basedir=".">
+    
+    <target name="download.vt.edu"
+     description="retrieve local copies of volume datasets that are too large to include in regular distribution">
+        <property name="datasetsUrl" value="http://snoid.sv.vt.edu/medical/X3DVolumes/examples/datasets"/>
+        <echo message="TODO supine.nrrd missing from .zip file, so retrieve it separately"/>
+        <mkdir  dir="datasets/nrrd"/>
+        <get     src="${datasetsUrl}/nrrd/supine.nrrd"
+                dest="datasets/nrrd" verbose="true"/>
+	<antcall target="finish.download"/>
+	</target>
+    
+    <target name="download.savage.nps.edu"
+     description="retrieve local copies of volume datasets that are too large to include in regular distribution">
+        <property name="datasetsUrl" value="https://savage.nps.edu/Savage/VolumeRendering/datasets/nrrd"/>
+	<antcall target="finish.download"/>
+	</target>
+    
+    <target name="finish.download">
+        <mkdir  dir="datasets/nrrd"/>
+        <get     src="${datasetsUrl}/datasets.zip"
+                dest="datasets.zip" verbose="true"/>
+        <unzip  dest="datasets/nrrd" src="datasets.zip"/>
+        <delete                     file="datasets.zip"/>
+    </target>
+</project>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure31_6DonutPrototype.x3d' name='title'/>
+    <meta content='Figure 31.6, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch31/31fig06.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='30 March 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A donut (torus) node prototype. Also see Figures 30.5 and 31.7 for comparison.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_6DonutPrototype.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure31_6DonutPrototype.x3d'/>
+    <ProtoDeclare name='Donut'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='crossSectionRadius' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' name='spineRadius' type='SFFloat' value='2'/>
+        <field accessType='initializeOnly' name='crossSectionResolution' type='SFInt32' value='16'/>
+        <field accessType='initializeOnly' name='spineResolution' type='SFInt32' value='16'/>
+        <field accessType='inputOnly' name='set_crossSectionRadius' type='SFFloat'/>
+        <field accessType='inputOnly' name='set_spineRadius' type='SFFloat'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Extrusion DEF='DonutExtrusion' beginCap='false' creaseAngle='1.57' endCap='false'/>
+        <!-- Donut maker creates torus on initialization - external script. Modified script to add endpoints matching startpoints. -->
+        <Script DEF='DonutMakerInternalScript'>
+          <field accessType='initializeOnly' name='crossSectionRadius' type='SFFloat'/>
+          <field accessType='initializeOnly' name='spineRadius' type='SFFloat'/>
+          <field accessType='initializeOnly' name='crossSectionResolution' type='SFInt32'/>
+          <field accessType='initializeOnly' name='spineResolution' type='SFInt32'/>
+          <field accessType='inputOnly' name='set_crossSectionRadius' type='SFFloat'/>
+          <field accessType='inputOnly' name='set_spineRadius' type='SFFloat'/>
+          <field accessType='outputOnly' name='crossSection_changed' type='MFVec2f'/>
+          <field accessType='outputOnly' name='spine_changed' type='MFVec3f'/>
+          <IS>
+            <connect nodeField='crossSectionRadius' protoField='crossSectionRadius'/>
+            <connect nodeField='spineRadius' protoField='spineRadius'/>
+            <connect nodeField='crossSectionResolution' protoField='crossSectionResolution'/>
+            <connect nodeField='spineResolution' protoField='spineResolution'/>
+            <connect nodeField='set_crossSectionRadius' protoField='set_crossSectionRadius'/>
+            <connect nodeField='set_spineRadius' protoField='set_spineRadius'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize( ) {
+    generateCrossSection( );
+    generateSpine( );
+}
+
+function set_crossSectionRadius( csr, ts )
+{
+    crossSectionRadius = csr;
+//  Browser.print ('crossSectionRadius =' + crossSectionRadius);
+    generateCrossSection( );
+}
+
+function set_spineRadius( sr, ts )
+{
+    spineRadius = sr;
+//  Browser.print ('spineRadius =' + spineRadius);
+    generateSpine( );
+}
+
+function generateCrossSection( )
+{
+    newCrossSection = new MFVec2f(); // temporary hold variable
+    angle = 0.0;
+    delta = 6.28 / crossSectionResolution;
+    for ( i = 0; i <= crossSectionResolution + 1; i++ ) {
+        newCrossSection[i][0] =  crossSectionRadius * Math.cos( angle );
+        newCrossSection[i][1] = -crossSectionRadius * Math.sin( angle );
+        angle += delta;
+    }
+    // make ends meet
+    newCrossSection[crossSectionResolution + 1][0] = newCrossSection[0][0];
+    newCrossSection[crossSectionResolution + 1][1] = newCrossSection[0][1];
+
+    crossSection_changed = newCrossSection;
+}
+
+function generateSpine( )
+{
+    newSpine = new MFVec3f(); // temporary hold variable
+    angle = 0.0;
+    delta = (2 * 3.141592653) / spineResolution;
+    for ( i = 0; i <= spineResolution; i++ ) {
+        newSpine[i][0] = spineRadius * Math.cos( angle );
+        newSpine[i][1] = 0.0;
+        newSpine[i][2] = -spineRadius * Math.sin( angle );
+        angle += delta;
+    }
+    // make ends meet
+    newSpine[spineResolution + 1][0] = newSpine[0][0];
+    newSpine[spineResolution + 1][1] = 0.0;
+    newSpine[spineResolution + 1][2] = newSpine[0][2];
+
+    spine_changed = newSpine;
+}
+]]>
+        </Script>
+        <ROUTE fromField='spine_changed' fromNode='DonutMakerInternalScript' toField='set_spine' toNode='DonutExtrusion'/>
+        <ROUTE fromField='crossSection_changed' fromNode='DonutMakerInternalScript' toField='set_crossSection' toNode='DonutExtrusion'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- It is a good practice to include default message linking to an example scene, in case a user tries to view this Prototype library directly. -->
+    <Anchor description='Figure31_7DonutExternalPrototype example' parameter='"target=_blank"' url='"Figure31_7DonutExternalPrototype.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_7DonutExternalPrototype.x3d" "Figure31_7DonutExternalPrototype.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_7DonutExternalPrototype.wrl"'>
+      <Shape>
+        <Text string='"Figure31_6DonutPrototype" "contains a prototype definition" "" "Click on text to see a Donut in" "Figure31_7DonutExternalPrototype"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.8'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0 0.6 0.6'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

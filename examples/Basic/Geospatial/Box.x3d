@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='BoxSimple.x3d' name='title'/>
+    <meta content='Simple Box shape used as test scene for GeoInline/Inline loading and unloading.' name='description'/>
+    <meta content='Xeena VRML importer, X3D-Edit 3.1, https://www.web3d.org/x3d/content/README.X3D-Edit.html' name='translator'/>
+    <meta content='22 April 2003' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='GeoVRML Working Group' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/A3_GeoInline.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/BoxSimple.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='BoxSimple.x3d'/>
+    <Transform translation='-1.0 0.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.0 1.0 0.0'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,107 @@
+#VRML V2.0 utf8
+
+WorldInfo {
+	title 	"VRML:		ScriptNodeFieldControl.wrl"
+	
+	info [	"Author:	Don Brutzman"
+			"Revised:	30 November 97"
+			"Script:	ScriptNodeFieldControl.java, .class"
+			"Location:	http://www.stl.nps.navy.mil/~brutzman/vmrl/examples/course"
+			"Purpose:	Experiment with SFNodes as Script node fields"
+		 ]
+}
+
+Group {
+	children [
+
+		DEF FirstViewpoint Viewpoint {
+			# keep Viewpoint inside scene graph hierarchy in case of Inline later
+			position	0 0 10
+			orientation	0 0  1 0
+			description "First Viewpoint"
+		}
+		DEF ClickTextToTest TouchSensor { }
+
+		DEF TextPosition Transform {
+  			translation 0 0 0		# node fields directly modified by Java
+  			children [
+  				Shape {
+					appearance DEF MyGreen Appearance {
+						material Material {
+							diffuseColor .2 .9 .2
+							shininess .9
+						}
+					}
+	  				geometry DEF MessageToUser Text {
+  						string [	"Text node default in VRML scene,"
+  									"to be replaced by Java initialize"
+  									"via Script node using Field control"
+  									""
+  									"If you see this text, Java via"
+  									"Script node is not working..."
+  							   ]
+  						fontStyle FontStyle {
+  							size 0.8
+  							justify [ "MIDDLE" ]
+  						}
+  					}
+				}
+			]
+  		}
+		DEF InterfaceScriptNode Script {
+
+			eventIn	SFTime  startTime
+
+			# using Nodes as Script fields gives direct access to Node fields
+			field	SFNode	ChangedText		USE MessageToUser
+			field	SFNode	ChangedPosition	USE TextPosition
+			
+			url		[ "ScriptNodeFieldControl.class"
+"http://devo.stl.nps.navy.mil/~brutzman/vrml/examples/course/ScriptNodeFieldControl.class" ]
+
+			mustEvaluate	TRUE	# Browser can't delay (optimize) event exchange
+			directOutput	TRUE	# Modifying VRML nodes directly, instead of eventOuts
+		}
+# 
+		# The VRML 2.0 Sourcebook #######################################
+		# Copyright [1997] By
+		# Andrea L. Ames, David R. Nadeau, and John L. Moreland
+		# Debugger script excerpt modified from 30fig04.wrl, pp. 595..598
+		DEF DebugScript Script {
+			url "javascript:
+				function initalize( ) {
+					string_changed[0] = label + ':';
+				}
+				function set_SFVec3f ( translation, ts ) {
+					string_changed[0] = label + ': ' + translation;
+				}"
+			field    SFString label "TextPosition Trace"
+			eventIn  SFVec3f  set_SFVec3f
+			eventOut MFString string_changed
+		},
+		Transform {
+			translation 0.0 0.5 -0.15
+			children Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor  1.0 1.0 1.0
+						emissiveColor 1.0 1.0 1.0
+					}
+				}
+				geometry DEF DebugMessage Text {
+					fontStyle FontStyle {
+						size 0.5
+						justify "MIDDLE"
+					}
+				}
+			}
+		}
+		# end Debugger script excerpt ###################################
+	]
+	
+	ROUTE ClickTextToTest.touchTime			TO InterfaceScriptNode.startTime
+
+	ROUTE TextPosition.translation_changed	TO DebugScript.set_SFVec3f
+	ROUTE DebugScript.string_changed		TO DebugMessage.set_string
+}
+

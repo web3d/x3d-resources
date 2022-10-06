@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Chair.x3d' name='title'/>
+    <meta content='This chair is inlined into the dinette scene to illustrate inline groups.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Dinette.x3d' name='reference'/>
+    <meta content='originals/chair.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0098.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Chair.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Chair.x3d'/>
+    <Transform translation='0.0 0.5 0.0'>
+      <Shape>
+        <Appearance DEF='Brown'>
+          <Material diffuseColor='0.6 0.35 0.0'/>
+        </Appearance>
+        <Box size='0.39 0.03 0.41'/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.1575 0.2485 0.1575'>
+      <Shape DEF='Leg'>
+        <Appearance USE='Brown'/>
+        <Box size='0.03 0.497 0.03'/>
+      </Shape>
+    </Transform>
+    <Transform translation='-0.1575 0.2485 0.1575'>
+      <Shape USE='Leg'/>
+    </Transform>
+    <Transform translation='-0.1575 0.2485 -0.1575'>
+      <Shape USE='Leg'/>
+    </Transform>
+    <Transform translation='0.1575 0.2485 -0.1575'>
+      <Shape USE='Leg'/>
+    </Transform>
+    <Transform rotation='0.0 0.0 1.0 -0.17' translation='0.1875 0.5 0.0'>
+      <Transform translation='0.0 0.54 0.0'>
+        <Shape>
+          <Appearance USE='Brown'/>
+          <Box size='0.06 0.17 0.43'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0.0 0.2275 0.0'>
+        <Shape DEF='BackPole'>
+          <Appearance USE='Brown'/>
+          <Box size='0.02 0.455 0.02'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0.0 0.2275 -0.083'>
+        <Shape USE='BackPole'/>
+      </Transform>
+      <Transform translation='0.0 0.2275 0.083'>
+        <Shape USE='BackPole'/>
+      </Transform>
+      <Transform translation='0.0 0.2275 -0.166'>
+        <Shape USE='BackPole'/>
+      </Transform>
+      <Transform translation='0.0 0.2275 0.166'>
+        <Shape USE='BackPole'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

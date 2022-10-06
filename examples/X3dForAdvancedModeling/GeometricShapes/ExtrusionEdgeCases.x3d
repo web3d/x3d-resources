@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='ExtrusionEdgeCases.x3d' name='title'/>
+    <meta content='Scene incorporating extrusion edge cases' name='description'/>
+    <meta content='Roy Walmsley' name='creator'/>
+    <meta content='29 January 2016' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/wiki/index.php/Extrusion_Edge_Cases' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/ExtrusionEdgeCases.x3d' name='identifier'/>
+    <meta content='XML Spy, http://www.altova.com' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ExtrusionEdgeCases.x3d'/>
+    <Viewpoint description='Extrusion Edge Cases' position='10 5 50'/>
+    <Transform translation='2 10 0'>
+      <Viewpoint description='Extrusion Edge Case 1' position='2 0 20'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 0.1 0.05'/>
+        </Appearance>
+        <Extrusion crossSection='-1 0 0 1 1 0 -1 0' scale='1 1 1 1 1 1 2 2 3 3 3 3' spine='-5 0 0 0 0 0 4 4 0 4 4 0 4 4 0 8 0 0'/>
+      </Shape>
+    </Transform>
+    <Transform scale='2 2 2' translation='-2 -2 0'>
+      <Viewpoint description='Extrusion Edge Case 2a' position='0 0 6'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0 0.8 0.1'/>
+        </Appearance>
+        <Extrusion crossSection='-1 0 0 2 1 0 -1 0' solid='false'/>
+      </Shape>
+    </Transform>
+    <Transform scale='2 2 2' translation='4 -2 0'>
+      <Viewpoint description='Extrusion Edge Case 2b' position='0 0 4'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0 0.8 0.1'/>
+        </Appearance>
+        <Extrusion crossSection='-1 0 0 2 1 0 -1 0' solid='false' spine='0 1 0 0 0 0'/>
+      </Shape>
+    </Transform>
+    <Transform scale='1.5 1.5 1.5' translation='20 0 0'>
+      <Viewpoint description='Extrusion Edge Case 3' position='0 0 6'/>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.1 0 0.8'/>
+        </Appearance>
+        <Extrusion beginCap='false' endCap='false' scale='1 1 1.2 1.2 1.4 1.4' solid='false' spine='0 0 0 0 1 0 0 0 0'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

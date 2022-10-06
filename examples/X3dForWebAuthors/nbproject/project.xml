@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.ant.freeform</type>
+    <configuration>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <name>X3D examples: X3dForWebAuthors</name>
+        </general-data>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/2">
+            <!-- Do not use Project Properties customizer when editing this file manually. 
+ To prevent the customizer from showing, create nbproject/project.properties file and enter 
+auxiliary.show.customizer=false 
+property there. Adding 
+auxiliary.show.customizer.message=<message>
+ will show your customized message when someone attempts to open the customizer.  -->
+            <name>X3D examples: X3dForWebAuthors</name>
+            <properties/>
+            <folders>
+                <source-folder>
+                    <label>X3D examples: X3dForWebAuthors</label>
+                    <type>java</type>
+                    <location>.</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+            </folders>
+            <ide-actions>
+                <action name="build">
+                    <target>build</target>
+                </action>
+                <action name="clean">
+                    <target>clean.all</target>
+                </action>
+                <action name="javadoc">
+                    <target>processScenes.javadoc</target>
+                </action>
+                <action name="run">
+                    <target>java.run</target>
+                </action>
+                <action name="rebuild">
+                    <target>clean.all</target>
+                    <target>build</target>
+                </action>
+                <action name="debug.single">
+                    <script>nbproject/ide-file-targets.xml</script>
+                    <target>debug-selected-file-in-examples</target>
+                    <context>
+                        <property>debug.class</property>
+                        <folder>..</folder>
+                        <pattern>\.java$</pattern>
+                        <format>java-name</format>
+                        <arity>
+                            <one-file-only/>
+                        </arity>
+                    </context>
+                </action>
+                <action name="run.single">
+                    <script>nbproject/ide-file-targets.xml</script>
+                    <target>run-selected-file-in-examples</target>
+                    <context>
+                        <property>run.class</property>
+                        <folder>..</folder>
+                        <pattern>\.java$</pattern>
+                        <format>java-name</format>
+                        <arity>
+                            <one-file-only/>
+                        </arity>
+                    </context>
+                </action>
+                <action name="compile.single">
+                    <script>nbproject/ide-file-targets.xml</script>
+                    <target>compile-selected-files-in-examples</target>
+                    <context>
+                        <property>files</property>
+                        <folder>..</folder>
+                        <pattern>\.java$</pattern>
+                        <format>relative-path</format>
+                        <arity>
+                            <separated-files>,</separated-files>
+                        </arity>
+                    </context>
+                </action>
+            </ide-actions>
+            <export>
+                <type>folder</type>
+                <location>classes</location>
+                <build-target>build</build-target>
+            </export>
+            <view>
+                <items>
+                    <source-folder style="packages">
+                        <label>X3D examples: X3dForWebAuthors</label>
+                        <location>.</location>
+                    </source-folder>
+                    <source-file>
+                        <location>build.xml</location>
+                    </source-file>
+                </items>
+                <context-menu>
+                    <ide-action name="build"/>
+                    <ide-action name="rebuild"/>
+                    <ide-action name="clean"/>
+                    <ide-action name="javadoc"/>
+                    <ide-action name="run"/>
+                    <action>
+                        <label>catalog</label>
+                        <target>catalog</target>
+                    </action>
+                    <action>
+                        <label>catalog.generateHtmlPages</label>
+                        <target>catalog.generateHtmlPages</target>
+                    </action>
+                    <action>
+                        <label>regexes</label>
+                        <target>processScenes.regularExpressionChecks</target>
+                    </action>
+                    <action>
+                        <label>view.examples.local</label>
+                        <target>view.examples.local</target>
+                    </action>
+                    <action>
+                        <label>view.examples.online</label>
+                        <target>view.examples.online</target>
+                    </action>
+                    <action>
+                        <label>view.javadoc.local</label>
+                        <target>view.javadoc.local</target>
+                    </action>
+                    <action>
+                        <label>view.javadoc.online</label>
+                        <target>view.javadoc.online</target>
+                    </action>
+                </context-menu>
+            </view>
+            <subprojects/>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/5">
+            <compilation-unit>
+                <package-root>..</package-root>
+                <classpath mode="compile">lib/CreateContentCatalog.jar;lib/X3DJSAIL.4.0.full.jar;lib/ant-contrib-1.0b3.jar;lib/json-schema-validator-2.2.6-lib.jar;lib/jslint4java-2.0.5.jar;lib/log4j-api-2.17.1.jar;lib/log4j-core-2.17.1.jar</classpath>
+                <built-to>classes</built-to>
+                <source-level>15</source-level>
+            </compilation-unit>
+        </java-data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>accessType</word>
+            <word>AEC</word>
+            <word>ArcClose</word>
+            <word>archivally</word>
+            <word>AudioClip</word>
+            <word>autogenerated</word>
+            <word>BOLDITALIC</word>
+            <word>BooleanFilter</word>
+            <word>BooleanSequencer</word>
+            <word>BooleanToggle</word>
+            <word>brutzman</word>
+            <word>CGEMS</word>
+            <word>CircleLines</word>
+            <word>ClassicVRML</word>
+            <word>ColorInterpolator</word>
+            <word>ColorRGB</word>
+            <word>ColorRGBA</word>
+            <word>containerField</word>
+            <word>CoordinateDouble</word>
+            <word>CoordinateInterpolator</word>
+            <word>CylinderSensor</word>
+            <word>DEF</word>
+            <word>diffuseColor</word>
+            <word>DirectionalLight</word>
+            <word>DOCTYPE</word>
+            <word>DTD</word>
+            <word>ElevationGrid</word>
+            <word>emoticon</word>
+            <word>ExternProtoDeclare</word>
+            <word>EXWC</word>
+            <word>FillProperties</word>
+            <word>FontStyle</word>
+            <word>groundColor</word>
+            <word>Hackathon</word>
+            <word>HelloWorld</word>
+            <word>href</word>
+            <word>html</word>
+            <word>http</word>
+            <word>https</word>
+            <word>Hueneme</word>
+            <word>ImageTexture</word>
+            <word>Immersive</word>
+            <word>IndexedLineSet</word>
+            <word>IndexedQuadSet</word>
+            <word>IndexedTriangleFanSet</word>
+            <word>IndexedTriangleSet</word>
+            <word>IndexedTriangleStripSet</word>
+            <word>initializeOnly</word>
+            <word>Inline</word>
+            <word>inputOnly</word>
+            <word>inputOutput</word>
+            <word>IntegerSequencer</word>
+            <word>IntegerTrigger</word>
+            <word>interpolators</word>
+            <word>javadoc</word>
+            <word>JavaScript</word>
+            <word>jsail</word>
+            <word>KeySensor</word>
+            <word>leftToRight</word>
+            <word>LineProperties</word>
+            <word>LineSet</word>
+            <word>LoadSensor</word>
+            <word>LocalFog</word>
+            <word>metadata</word>
+            <word>MetadataBoolean</word>
+            <word>MetadataDouble</word>
+            <word>MetadataFloat</word>
+            <word>MetadataInformation</word>
+            <word>MetadataInteger</word>
+            <word>MetadataSet</word>
+            <word>MetadataString</word>
+            <word>MFBool</word>
+            <word>MFFloat</word>
+            <word>MFNode</word>
+            <word>MFString</word>
+            <word>mobius</word>
+            <word>MOCAP</word>
+            <word>movesinstitute</word>
+            <word>MovieTexture</word>
+            <word>MultiTexture</word>
+            <word>MultiTextureCoordinate</word>
+            <word>MultiTextureTransform</word>
+            <word>Nagamura</word>
+            <word>NAVFAC</word>
+            <word>NavigationInfo</word>
+            <word>nbsp</word>
+            <word>noNamespaceSchemaLocation</word>
+            <word>NormalInterpolator</word>
+            <word>org</word>
+            <word>OrientationInterpolator</word>
+            <word>outputOnly</word>
+            <word>pdf</word>
+            <word>PixelTexture</word>
+            <word>PlaneSensor</word>
+            <word>PointLight</word>
+            <word>PointSet</word>
+            <word>Polyline</word>
+            <word>Polypoint</word>
+            <word>PositionInterpolator</word>
+            <word>ProtoBody</word>
+            <word>ProtoDeclare</word>
+            <word>ProtoInstance</word>
+            <word>ProtoInterface</word>
+            <word>ProximitySensor</word>
+            <word>QuadSet</word>
+            <word>Redistributions</word>
+            <word>saxon</word>
+            <word>Saxonica</word>
+            <word>ScalarInterpolator</word>
+            <word>SFNode</word>
+            <word>SFString</word>
+            <word>SIGGRAPH</word>
+            <word>slideset</word>
+            <word>slidesets</word>
+            <word>soundtrack</word>
+            <word>SphereSensor</word>
+            <word>StaticGroup</word>
+            <word>StringSensor</word>
+            <word>stylesheet</word>
+            <word>stylesheets</word>
+            <word>TextureBackground</word>
+            <word>TextureCoordinate</word>
+            <word>TextureCoordinateGenerator</word>
+            <word>TextureProperties</word>
+            <word>TextureTransform</word>
+            <word>TimeSensor</word>
+            <word>TimeTrigger</word>
+            <word>TODO</word>
+            <word>Tooltips</word>
+            <word>TouchSensor</word>
+            <word>TriangleFanSet</word>
+            <word>TriangleSet</word>
+            <word>TriangleStripSet</word>
+            <word>TwoSidedMaterial</word>
+            <word>untagged</word>
+            <word>url</word>
+            <word>utf</word>
+            <word>Validator</word>
+            <word>ViewpointGroup</word>
+            <word>VisibilitySensor</word>
+            <word>VRML</word>
+            <word>Wikipedia</word>
+            <word>WorldInfo</word>
+            <word>wrl</word>
+            <word>wrz</word>
+            <word>X3dChapterSlideset</word>
+            <word>X3dChapterVideos</word>
+            <word>X3dChapterYouTubeVideos</word>
+            <word>X3dForWebAuthors</word>
+            <word>X3dForWebAuthorsVideo</word>
+            <word>X3dGraphics</word>
+            <word>X3DMetadataObject</word>
+            <word>X3dNode</word>
+            <word>xml</word>
+            <word>XmlElement</word>
+            <word>xsd</word>
+            <word>xslt</word>
+        </spellchecker-wordlist>
+    </configuration>
+</project>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TexturePlane.x3d' name='title'/>
+    <meta content='Animating textured plane: this world illustrates the use of the TexturePlane prototype node defined in an external file. That node creates a textured square whose texture changes based upon an input fraction. This world animates that fraction to cause the texture to animate.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='TexturePlane.png' name='Image'/>
+    <meta content='originals/texplane.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0497.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TexturePlane.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <ExternProtoDeclare name='TexturePlane' url='"Cut.x3d#TexturePlane" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Cut.x3d#TexturePlane" "Cut.wrl#TexturePlane" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Cut.wrl#TexturePlane"'>
+      <field accessType='initializeOnly' name='textures' type='MFNode'/>
+      <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+    </ExternProtoDeclare>
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Animating textured plane'/>
+    <Viewpoint description='Entry view' position='0.0 0.0 3.0'/>
+    <NavigationInfo/>
+    <Background skyAngle='1.57 1.87' skyColor='0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.3'/>
+    <Shape>
+      <Appearance>
+        <TextureTransform translation='0.5 0.5'/>
+        <ImageTexture url='"grill.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/grill.png"'/>
+      </Appearance>
+      <IndexedFaceSet coordIndex='0 1 2 3 -1' solid='false' texCoordIndex='0 1 2 3 -1'>
+        <TextureCoordinate point='0.0 0.0 4.0 0.0 4.0 4.0 0.0 4.0'/>
+        <Coordinate point='-1.0 -1.0 -0.05 1.0 -1.0 -0.05 1.0 1.0 -0.05 -1.0 1.0 -0.05'/>
+      </IndexedFaceSet>
+    </Shape>
+    <ProtoInstance DEF='Plane' name='TexturePlane'>
+      <fieldValue name='textures'>
+        <ImageTexture url='"cp1.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp1.png"'/>
+        <ImageTexture url='"cp2.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp2.png"'/>
+        <ImageTexture url='"cp3.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp3.png"'/>
+        <ImageTexture url='"cp4.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp4.png"'/>
+        <ImageTexture url='"cp5.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp5.png"'/>
+        <ImageTexture url='"cp6.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp6.png"'/>
+        <ImageTexture url='"cp7.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp7.png"'/>
+        <ImageTexture url='"cp8.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp8.png"'/>
+        <ImageTexture url='"cp9.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp9.png"'/>
+        <ImageTexture url='"cp10.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cp10.png"'/>
+      </fieldValue>
+    </ProtoInstance>
+    <TimeSensor DEF='Clock' cycleInterval='3.0' loop='true' startTime='1.0'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='Plane'/>
+  </Scene>
+</X3D>

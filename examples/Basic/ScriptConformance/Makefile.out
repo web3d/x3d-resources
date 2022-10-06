@@ -1,0 +1,656 @@
+> cd C:\www.web3d.org\TaskGroups\x3d\translation
+> make ScriptConformance
+
+
+C:\www.web3d.org\TaskGroups\x3d\translation>make ScriptConformance 
+
+[After updating source, save output as examples/ScriptConformance/Makefile.out]
+cd examples/ScriptConformance; make -i all
+make[1]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make -i verbose
+make[2]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+Makefile verbose mode setting:
+make[2]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make -i clean
+make[2]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+rm -f  *.class
+rm -rf vrml/*.class
+rm -f  *.'$$$'
+rm -rf vrml/*.'$$$'
+rm -f  _new_result.wrl
+rm -f  _new_pretty_print.html
+rm -f  Vrml97ScriptNodePackages.jar
+rm -f  ../ScriptConformance.zip
+make[2]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make -i java
+make[2]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+javac  -deprecation -classpath . *.java vrml/*.java vrml/*/*.java
+make[2]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make -i examples
+make[2]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+-------------------------------------------------------------------------
+cd ../..; X3dToVrml97.bat 'examples\ScriptConformance\ScriptNodeEventOutControl-Java'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d
+examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d
+- - - - -
+Translate examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeEventOutControl-JavaStyled.wrl examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\ScriptConformance\ScriptNodeEventOutControl-JavaStyled.wrl ">" examples\ScriptConformance\ScriptNodeEventOutControl-Java.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\ScriptConformance\ScriptNodeEventOutControl-Java.wrl -nowarnings
+Could not load runtime library: C:\Program Files\Insight JVA V3ijre\\\bin\javai.dll
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM             3,114 ScriptNodeEventOutControl-Java.wrl
+               1 File(s)          3,114 bytes
+               0 Dir(s)  23,672,410,112 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+cd ../..; X3dToHtml.bat   'examples\ScriptConformance\ScriptNodeEventOutControl-Java'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d
+examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d
+- - - - -
+Pretty print examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeEventOutControl-JavaStyled.html examples\ScriptConformance\ScriptNodeEventOutControl-Java.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM            14,333 ScriptNodeEventOutControl-Java.html
+05/13/2001  07:28 AM               422 ScriptNodeEventOutControl-JavaSnapshots.html
+               2 File(s)         14,755 bytes
+               0 Dir(s)  23,672,410,112 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+cd ../..; X3dToVrml97.bat 'examples\ScriptConformance\ScriptNodeFieldControl-Java'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d
+examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d
+- - - - -
+Translate examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeFieldControl-JavaStyled.wrl examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\ScriptConformance\ScriptNodeFieldControl-JavaStyled.wrl ">" examples\ScriptConformance\ScriptNodeFieldControl-Java.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\ScriptConformance\ScriptNodeFieldControl-Java.wrl -nowarnings
+Could not load runtime library: C:\Program Files\Insight JVA V3ijre\\\bin\javai.dll
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM             2,941 ScriptNodeFieldControl-Java.wrl
+               1 File(s)          2,941 bytes
+               0 Dir(s)  23,672,406,016 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+cd ../..; X3dToHtml.bat   'examples\ScriptConformance\ScriptNodeFieldControl-Java'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d
+examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d
+- - - - -
+Pretty print examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeFieldControl-JavaStyled.html examples\ScriptConformance\ScriptNodeFieldControl-Java.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM            13,224 ScriptNodeFieldControl-Java.html
+05/13/2001  08:21 PM               410 ScriptNodeFieldControl-JavaSnapshots.html
+               2 File(s)         13,634 bytes
+               0 Dir(s)  23,672,406,016 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+cd ../..; X3dToVrml97.bat 'examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript'	-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d
+examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d
+- - - - -
+Translate examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScriptStyled.wrl examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScriptStyled.wrl ">" examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.wrl -nowarnings
+Could not load runtime library: C:\Program Files\Insight JVA V3ijre\\\bin\javai.dll
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM             4,878 ScriptNodeEventOutControl-EcmaScript.wrl
+               1 File(s)          4,878 bytes
+               0 Dir(s)  23,672,397,824 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+cd ../..; X3dToHtml.bat   'examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript'	-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d
+examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d
+- - - - -
+Pretty print examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScriptStyled.html examples\ScriptConformance\ScriptNodeEventOutControl-EcmaScript.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM            14,849 ScriptNodeEventOutControl-EcmaScript.html
+05/13/2001  08:21 PM               448 ScriptNodeEventOutControl-EcmaScriptSnapshots.html
+               2 File(s)         15,297 bytes
+               0 Dir(s)  23,672,397,824 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+cd ../..; X3dToVrml97.bat 'examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript'	-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d
+examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d
+- - - - -
+Translate examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeFieldControl-EcmaScriptStyled.wrl examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\ScriptConformance\ScriptNodeFieldControl-EcmaScriptStyled.wrl ">" examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.wrl -nowarnings
+Could not load runtime library: C:\Program Files\Insight JVA V3ijre\\\bin\javai.dll
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM             4,915 ScriptNodeFieldControl-EcmaScript.wrl
+               1 File(s)          4,915 bytes
+               0 Dir(s)  23,672,397,824 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+cd ../..; X3dToHtml.bat   'examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript'	-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d
+examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d
+- - - - -
+Pretty print examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\ScriptConformance\ScriptNodeFieldControl-EcmaScriptStyled.html examples\ScriptConformance\ScriptNodeFieldControl-EcmaScript.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 74DD-0759
+
+ Directory of c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance
+
+08/12/2002  06:01 AM            13,963 ScriptNodeFieldControl-EcmaScript.html
+05/13/2001  03:53 PM               436 ScriptNodeFieldControl-EcmaScriptSnapshots.html
+               2 File(s)         14,399 bytes
+               0 Dir(s)  23,672,397,824 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+make[2]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make -i documentation
+make[2]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+javadoc -version -author -package						\
+-windowtitle      "VRML 97 Specification, Script Node Annex:  vrml.* Packages for Java"			\
+	-doctitle "<center>VRML 97 Specification, Script Node Annex:  vrml.* Packages for Java</center>"	\
+	-d javadoc								\
+	-classpath .								\
+	*.java									\
+	vrml									\
+	vrml.node								\
+	vrml.field
+Loading source file ScriptNodeEventOutControl.java...
+Loading source file ScriptNodeFieldControl.java...
+Loading source files for package vrml...
+Loading source files for package vrml.node...
+Loading source files for package vrml.field...
+Constructing Javadoc information...
+Standard Doclet version 1.4.0
+
+Generating javadoc\constant-values.html...
+Building tree for all the packages and classes...
+Building index for all the packages and classes...
+Generating javadoc\overview-tree.html...
+Generating javadoc\index-all.html...
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance\.\vrml\field\MFColor.java:53: warning - The first sentence is interpreted to be:
+"color[0] ..."
+This sentence is different from what will be interpreted as the first sentence in the
+next major release (when that interpretation will be internationalized), which is:
+"color[0] ... color[size - 1] are used as color data
+     in the way that color[0], color[1], and color[2] 
+     represent the first color. "
+To avoid this note, change the doc comment to make this a proper first sentence, then
+use -breakiterator from that point forward, which will output this new sentence.
+Generating javadoc\deprecated-list.html...
+Building index for all classes...
+Generating javadoc\allclasses-frame.html...
+Generating javadoc\allclasses-noframe.html...
+Generating javadoc\index.html...
+Generating javadoc\packages.html...
+Generating javadoc\overview-summary.html...
+Generating javadoc\overview-frame.html...
+Generating javadoc\package-frame.html...
+Generating javadoc\vrml\package-frame.html...
+Generating javadoc\vrml\package-summary.html...
+Generating javadoc\vrml\package-tree.html...
+Generating javadoc\vrml\field\package-frame.html...
+Generating javadoc\vrml\field\package-summary.html...
+Generating javadoc\vrml\field\package-tree.html...
+Generating javadoc\vrml\node\package-frame.html...
+Generating javadoc\vrml\node\package-summary.html...
+Generating javadoc\vrml\node\package-tree.html...
+Generating javadoc\ScriptNodeEventOutControl.html...
+ScriptNodeEventOutControl.java:22: warning - @url is an unknown tag.
+Generating javadoc\ScriptNodeFieldControl.html...
+ScriptNodeFieldControl.java:22: warning - @url is an unknown tag.
+Generating javadoc\vrml\BaseNode.html...
+Generating javadoc\vrml\Browser.html...
+Generating javadoc\vrml\ConstField.html...
+Generating javadoc\vrml\ConstMField.html...
+Generating javadoc\vrml\Event.html...
+Generating javadoc\vrml\Field.html...
+Generating javadoc\vrml\MField.html...
+Generating javadoc\vrml\InvalidEventInException.html...
+Generating javadoc\vrml\InvalidEventOutException.html...
+Generating javadoc\vrml\InvalidExposedFieldException.html...
+Generating javadoc\vrml\InvalidFieldChangeException.html...
+Generating javadoc\vrml\InvalidFieldException.html...
+Generating javadoc\vrml\InvalidRouteException.html...
+Generating javadoc\vrml\InvalidVRMLSyntaxException.html...
+Generating javadoc\vrml\node\Node.html...
+Generating javadoc\vrml\node\Script.html...
+Generating javadoc\vrml\field\ConstMFColor.html...
+Generating javadoc\vrml\field\ConstMFFloat.html...
+Generating javadoc\vrml\field\ConstMFInt32.html...
+Generating javadoc\vrml\field\ConstMFNode.html...
+Generating javadoc\vrml\field\ConstMFRotation.html...
+Generating javadoc\vrml\field\ConstMFString.html...
+Generating javadoc\vrml\field\ConstMFTime.html...
+Generating javadoc\vrml\field\ConstMFVec2f.html...
+Generating javadoc\vrml\field\ConstMFVec3f.html...
+Generating javadoc\vrml\field\ConstSFBool.html...
+Generating javadoc\vrml\field\ConstSFColor.html...
+Generating javadoc\vrml\field\ConstSFFloat.html...
+Generating javadoc\vrml\field\ConstSFImage.html...
+Generating javadoc\vrml\field\ConstSFInt32.html...
+Generating javadoc\vrml\field\ConstSFNode.html...
+Generating javadoc\vrml\field\ConstSFRotation.html...
+Generating javadoc\vrml\field\ConstSFString.html...
+Generating javadoc\vrml\field\ConstSFTime.html...
+Generating javadoc\vrml\field\ConstSFVec2f.html...
+Generating javadoc\vrml\field\ConstSFVec3f.html...
+Generating javadoc\vrml\field\MFColor.html...
+c:\www.web3d.org\TaskGroups\x3d\translation\examples\ScriptConformance\.\vrml\field\MFColor.java:53: warning - The first sentence is interpreted to be:
+"color[0] ..."
+This sentence is different from what would be generated using -breakiterator: 
+"color[0] ... color[size - 1] are used as color data
+     in the way that color[0], color[1], and color[2] 
+     represent the first color. "
+Generating javadoc\vrml\field\MFFloat.html...
+Generating javadoc\vrml\field\MFInt32.html...
+Generating javadoc\vrml\field\MFNode.html...
+Generating javadoc\vrml\field\MFRotation.html...
+Generating javadoc\vrml\field\MFString.html...
+Generating javadoc\vrml\field\MFTime.html...
+Generating javadoc\vrml\field\MFVec2f.html...
+Generating javadoc\vrml\field\MFVec3f.html...
+Generating javadoc\vrml\field\SFBool.html...
+Generating javadoc\vrml\field\SFColor.html...
+Generating javadoc\vrml\field\SFFloat.html...
+Generating javadoc\vrml\field\SFImage.html...
+Generating javadoc\vrml\field\SFInt32.html...
+Generating javadoc\vrml\field\SFNode.html...
+Generating javadoc\vrml\field\SFRotation.html...
+Generating javadoc\vrml\field\SFString.html...
+Generating javadoc\vrml\field\SFTime.html...
+Generating javadoc\vrml\field\SFVec2f.html...
+Generating javadoc\vrml\field\SFVec3f.html...
+Generating javadoc\serialized-form.html...
+Generating javadoc\package-list...
+Generating javadoc\help-doc.html...
+Generating javadoc\stylesheet.css...
+4 warnings
+make[2]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make -i zip
+make[2]: Entering directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+jar -cvf Vrml97ScriptNodePackages.jar	\
+ 	 vrml/*.class 			\
+	 vrml/*/*.class
+added manifest
+adding: vrml/BaseNode.class(in = 340) (out= 228)(deflated 32%)
+adding: vrml/Browser.class(in = 1277) (out= 523)(deflated 59%)
+adding: vrml/ConstField.class(in = 193) (out= 153)(deflated 20%)
+adding: vrml/ConstMField.class(in = 224) (out= 175)(deflated 21%)
+adding: vrml/Event.class(in = 545) (out= 294)(deflated 46%)
+adding: vrml/Field.class(in = 287) (out= 203)(deflated 29%)
+adding: vrml/InvalidEventInException.class(in = 329) (out= 233)(deflated 29%)
+adding: vrml/InvalidEventOutException.class(in = 331) (out= 235)(deflated 29%)
+adding: vrml/InvalidExposedFieldException.class(in = 339) (out= 236)(deflated 30%)
+adding: vrml/InvalidFieldChangeException.class(in = 337) (out= 235)(deflated 30%)
+adding: vrml/InvalidFieldException.class(in = 325) (out= 232)(deflated 28%)
+adding: vrml/InvalidRouteException.class(in = 325) (out= 233)(deflated 28%)
+adding: vrml/InvalidVRMLSyntaxException.class(in = 320) (out= 225)(deflated 29%)
+adding: vrml/MField.class(in = 249) (out= 196)(deflated 21%)
+adding: vrml/field/ConstMFColor.class(in = 669) (out= 332)(deflated 50%)
+adding: vrml/field/ConstMFFloat.class(in = 516) (out= 302)(deflated 41%)
+adding: vrml/field/ConstMFInt32.class(in = 516) (out= 301)(deflated 41%)
+adding: vrml/field/ConstMFNode.class(in = 556) (out= 308)(deflated 44%)
+adding: vrml/field/ConstMFRotation.class(in = 678) (out= 334)(deflated 50%)
+adding: vrml/field/ConstMFString.class(in = 569) (out= 302)(deflated 46%)
+adding: vrml/field/ConstMFTime.class(in = 514) (out= 302)(deflated 41%)
+adding: vrml/field/ConstMFVec2f.class(in = 669) (out= 333)(deflated 50%)
+adding: vrml/field/ConstMFVec3f.class(in = 669) (out= 333)(deflated 50%)
+adding: vrml/field/ConstSFBool.class(in = 348) (out= 242)(deflated 30%)
+adding: vrml/field/ConstSFColor.class(in = 509) (out= 290)(deflated 43%)
+adding: vrml/field/ConstSFFloat.class(in = 350) (out= 241)(deflated 31%)
+adding: vrml/field/ConstSFImage.class(in = 521) (out= 306)(deflated 41%)
+adding: vrml/field/ConstSFInt32.class(in = 350) (out= 244)(deflated 30%)
+adding: vrml/field/ConstSFNode.class(in = 376) (out= 246)(deflated 34%)
+adding: vrml/field/ConstSFRotation.class(in = 360) (out= 250)(deflated 30%)
+adding: vrml/field/ConstSFString.class(in = 363) (out= 234)(deflated 35%)
+adding: vrml/field/ConstSFTime.class(in = 348) (out= 243)(deflated 30%)
+adding: vrml/field/ConstSFVec2f.class(in = 452) (out= 272)(deflated 39%)
+adding: vrml/field/ConstSFVec3f.class(in = 500) (out= 284)(deflated 43%)
+adding: vrml/field/MFColor.class(in = 1562) (out= 512)(deflated 67%)
+adding: vrml/field/MFFloat.class(in = 1393) (out= 484)(deflated 65%)
+adding: vrml/field/MFInt32.class(in = 1386) (out= 474)(deflated 65%)
+adding: vrml/field/MFNode.class(in = 1455) (out= 493)(deflated 66%)
+adding: vrml/field/MFRotation.class(in = 1588) (out= 512)(deflated 67%)
+adding: vrml/field/MFString.class(in = 1486) (out= 486)(deflated 67%)
+adding: vrml/field/MFTime.class(in = 1385) (out= 487)(deflated 64%)
+adding: vrml/field/MFVec2f.class(in = 1560) (out= 506)(deflated 67%)
+adding: vrml/field/MFVec3f.class(in = 1562) (out= 511)(deflated 67%)
+adding: vrml/field/SFBool.class(in = 563) (out= 293)(deflated 47%)
+adding: vrml/field/SFColor.class(in = 765) (out= 341)(deflated 55%)
+adding: vrml/field/SFFloat.class(in = 567) (out= 291)(deflated 48%)
+adding: vrml/field/SFImage.class(in = 738) (out= 355)(deflated 51%)
+adding: vrml/field/SFInt32.class(in = 567) (out= 294)(deflated 48%)
+adding: vrml/field/SFNode.class(in = 591) (out= 291)(deflated 50%)
+adding: vrml/field/SFRotation.class(in = 622) (out= 300)(deflated 51%)
+adding: vrml/field/SFString.class(in = 582) (out= 281)(deflated 51%)
+adding: vrml/field/SFTime.class(in = 563) (out= 297)(deflated 47%)
+adding: vrml/field/SFVec2f.class(in = 708) (out= 325)(deflated 54%)
+adding: vrml/field/SFVec3f.class(in = 756) (out= 335)(deflated 55%)
+adding: vrml/node/Node.class(in = 503) (out= 283)(deflated 43%)
+adding: vrml/node/Script.class(in = 766) (out= 364)(deflated 52%)
+cd ..; jar -cvf ScriptConformance.zip ScriptConformance/*
+added manifest
+adding: ScriptConformance/Makefile(in = 4577) (out= 1325)(deflated 71%)
+adding: ScriptConformance/Makefile.out(in = 45698) (out= 5558)(deflated 87%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScript-VrmlConsoleOutput.txt(in = 1333) (out= 429)(deflated 67%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScript.html(in = 14849) (out= 2358)(deflated 84%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScript.wrl(in = 4878) (out= 1565)(deflated 67%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScript.x3d(in = 5554) (out= 1733)(deflated 68%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScriptSnapshot0.png(in = 6805) (out= 5583)(deflated 17%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScriptSnapshot1.png(in = 5039) (out= 3895)(deflated 22%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScriptSnapshot2.png(in = 5551) (out= 4469)(deflated 19%)
+adding: ScriptConformance/ScriptNodeEventOutControl-EcmaScriptSnapshots.html(in = 448) (out= 207)(deflated 53%)
+adding: ScriptConformance/ScriptNodeEventOutControl-Java.html(in = 14333) (out= 1952)(deflated 86%)
+adding: ScriptConformance/ScriptNodeEventOutControl-Java.wrl(in = 3114) (out= 1183)(deflated 62%)
+adding: ScriptConformance/ScriptNodeEventOutControl-Java.x3d(in = 4079) (out= 1317)(deflated 67%)
+adding: ScriptConformance/ScriptNodeEventOutControl-JavaConsoleOutput.txt(in = 1656) (out= 441)(deflated 73%)
+adding: ScriptConformance/ScriptNodeEventOutControl-JavaSnapshot0.png(in = 6466) (out= 5253)(deflated 18%)
+adding: ScriptConformance/ScriptNodeEventOutControl-JavaSnapshot1.png(in = 4959) (out= 3819)(deflated 22%)
+adding: ScriptConformance/ScriptNodeEventOutControl-JavaSnapshot2.png(in = 5431) (out= 4357)(deflated 19%)
+adding: ScriptConformance/ScriptNodeEventOutControl-JavaSnapshots.html(in = 422) (out= 211)(deflated 50%)
+adding: ScriptConformance/ScriptNodeEventOutControl.class(in = 3854) (out= 1996)(deflated 48%)
+adding: ScriptConformance/ScriptNodeEventOutControl.java(in = 8293) (out= 2502)(deflated 69%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScript-VrmlConsoleOutput.txt(in = 1467) (out= 452)(deflated 69%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScript.html(in = 13963) (out= 2318)(deflated 83%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScript.wrl(in = 4915) (out= 1562)(deflated 68%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScript.x3d(in = 5432) (out= 1703)(deflated 68%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScriptSnapshot0.png(in = 6300) (out= 5145)(deflated 18%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScriptSnapshot1.png(in = 5503) (out= 4280)(deflated 22%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScriptSnapshot2.png(in = 5396) (out= 4319)(deflated 19%)
+adding: ScriptConformance/ScriptNodeFieldControl-EcmaScriptSnapshots.html(in = 436) (out= 209)(deflated 52%)
+adding: ScriptConformance/ScriptNodeFieldControl-Java.html(in = 13224) (out= 1892)(deflated 85%)
+adding: ScriptConformance/ScriptNodeFieldControl-Java.wrl(in = 2941) (out= 1151)(deflated 60%)
+adding: ScriptConformance/ScriptNodeFieldControl-Java.x3d(in = 3745) (out= 1268)(deflated 66%)
+adding: ScriptConformance/ScriptNodeFieldControl-JavaConsoleOutput.txt(in = 1768) (out= 461)(deflated 73%)
+adding: ScriptConformance/ScriptNodeFieldControl-JavaSnapshot0.png(in = 6500) (out= 5297)(deflated 18%)
+adding: ScriptConformance/ScriptNodeFieldControl-JavaSnapshot1.png(in = 5467) (out= 4249)(deflated 22%)
+adding: ScriptConformance/ScriptNodeFieldControl-JavaSnapshot2.png(in = 5366) (out= 4301)(deflated 19%)
+adding: ScriptConformance/ScriptNodeFieldControl-JavaSnapshots.html(in = 410) (out= 213)(deflated 48%)
+adding: ScriptConformance/ScriptNodeFieldControl.class(in = 4134) (out= 2133)(deflated 48%)
+adding: ScriptConformance/ScriptNodeFieldControl.java(in = 9024) (out= 2625)(deflated 70%)
+adding: ScriptConformance/Vrml97ScriptNodePackages.jar(in = 26080) (out= 19494)(deflated 25%)
+adding: ScriptConformance/VrmlJavaPaper.pdf(in = 1126817) (out= 869955)(deflated 22%)
+adding: ScriptConformance/_pages/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/_pages/page01.html(in = 760) (out= 389)(deflated 48%)
+adding: ScriptConformance/_pages/page01Body.html(in = 2487) (out= 705)(deflated 71%)
+adding: ScriptConformance/_pages/page02.html(in = 747) (out= 386)(deflated 48%)
+adding: ScriptConformance/_pages/page02Body.html(in = 2418) (out= 691)(deflated 71%)
+adding: ScriptConformance/_pages/page03.html(in = 753) (out= 386)(deflated 48%)
+adding: ScriptConformance/_pages/page03Body.html(in = 2448) (out= 693)(deflated 71%)
+adding: ScriptConformance/_pages/page04.html(in = 740) (out= 381)(deflated 48%)
+adding: ScriptConformance/_pages/page04Body.html(in = 2427) (out= 693)(deflated 71%)
+adding: ScriptConformance/chapter.html(in = 2961) (out= 614)(deflated 79%)
+adding: ScriptConformance/javadoc/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/javadoc/allclasses-frame.html(in = 5292) (out= 933)(deflated 82%)
+adding: ScriptConformance/javadoc/allclasses-noframe.html(in = 4712) (out= 929)(deflated 80%)
+adding: ScriptConformance/javadoc/constant-values.html(in = 4553) (out= 957)(deflated 78%)
+adding: ScriptConformance/javadoc/deprecated-list.html(in = 4577) (out= 983)(deflated 78%)
+adding: ScriptConformance/javadoc/help-doc.html(in = 8096) (out= 2290)(deflated 71%)
+adding: ScriptConformance/javadoc/index-all.html(in = 109057) (out= 9295)(deflated 91%)
+adding: ScriptConformance/javadoc/index.html(in = 818) (out= 472)(deflated 42%)
+adding: ScriptConformance/javadoc/overview-frame.html(in = 1452) (out= 601)(deflated 58%)
+adding: ScriptConformance/javadoc/overview-summary.html(in = 5558) (out= 1222)(deflated 78%)
+adding: ScriptConformance/javadoc/overview-tree.html(in = 10659) (out= 1702)(deflated 84%)
+adding: ScriptConformance/javadoc/package-frame.html(in = 1048) (out= 557)(deflated 46%)
+adding: ScriptConformance/javadoc/package-list(in = 31) (out= 24)(deflated 22%)
+adding: ScriptConformance/javadoc/package-summary.html(in = 4135) (out= 842)(deflated 79%)
+adding: ScriptConformance/javadoc/package-tree.html(in = 4246) (out= 890)(deflated 79%)
+adding: ScriptConformance/javadoc/packages.html(in = 892) (out= 479)(deflated 46%)
+adding: ScriptConformance/javadoc/ScriptNodeEventOutControl.html(in = 16493) (out= 2904)(deflated 82%)
+adding: ScriptConformance/javadoc/ScriptNodeFieldControl.html(in = 16418) (out= 2902)(deflated 82%)
+adding: ScriptConformance/javadoc/serialized-form.html(in = 7273) (out= 1176)(deflated 83%)
+adding: ScriptConformance/javadoc/stylesheet.css(in = 1328) (out= 442)(deflated 66%)
+adding: ScriptConformance/javadoc/vrml/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/javadoc/vrml/BaseNode.html(in = 9515) (out= 1863)(deflated 80%)
+adding: ScriptConformance/javadoc/vrml/Browser.html(in = 17065) (out= 2536)(deflated 85%)
+adding: ScriptConformance/javadoc/vrml/ConstField.html(in = 9063) (out= 1812)(deflated 80%)
+adding: ScriptConformance/javadoc/vrml/ConstMField.html(in = 9948) (out= 1894)(deflated 80%)
+adding: ScriptConformance/javadoc/vrml/Event.html(in = 10924) (out= 1890)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFColor.html(in = 13579) (out= 2094)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFFloat.html(in = 11944) (out= 2038)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFInt32.html(in = 11914) (out= 2028)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFNode.html(in = 12297) (out= 2053)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFRotation.html(in = 13850) (out= 2109)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFString.html(in = 12107) (out= 2034)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFTime.html(in = 11929) (out= 2037)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFVec2f.html(in = 13673) (out= 2112)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/ConstMFVec3f.html(in = 13673) (out= 2111)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFBool.html(in = 10116) (out= 1877)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFColor.html(in = 11722) (out= 2009)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFFloat.html(in = 10119) (out= 1875)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFImage.html(in = 11841) (out= 2023)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFInt32.html(in = 10105) (out= 1871)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFNode.html(in = 10292) (out= 1882)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFRotation.html(in = 10487) (out= 1922)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFString.html(in = 10204) (out= 1864)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFTime.html(in = 10110) (out= 1873)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFVec2f.html(in = 11132) (out= 1958)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/ConstSFVec3f.html(in = 11649) (out= 1984)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/field/MFColor.html(in = 24481) (out= 2737)(deflated 88%)
+adding: ScriptConformance/javadoc/vrml/field/MFFloat.html(in = 21457) (out= 2486)(deflated 88%)
+adding: ScriptConformance/javadoc/vrml/field/MFInt32.html(in = 21387) (out= 2474)(deflated 88%)
+adding: ScriptConformance/javadoc/vrml/field/MFNode.html(in = 22283) (out= 2494)(deflated 88%)
+adding: ScriptConformance/javadoc/vrml/field/MFRotation.html(in = 24942) (out= 2627)(deflated 89%)
+adding: ScriptConformance/javadoc/vrml/field/MFString.html(in = 21863) (out= 2470)(deflated 88%)
+adding: ScriptConformance/javadoc/vrml/field/MFTime.html(in = 21443) (out= 2487)(deflated 88%)
+adding: ScriptConformance/javadoc/vrml/field/MFVec2f.html(in = 23907) (out= 2574)(deflated 89%)
+adding: ScriptConformance/javadoc/vrml/field/MFVec3f.html(in = 24131) (out= 2598)(deflated 89%)
+adding: ScriptConformance/javadoc/vrml/field/package-frame.html(in = 3603) (out= 819)(deflated 77%)
+adding: ScriptConformance/javadoc/vrml/field/package-summary.html(in = 11059) (out= 1515)(deflated 86%)
+adding: ScriptConformance/javadoc/vrml/field/package-tree.html(in = 9544) (out= 1467)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/SFBool.html(in = 11995) (out= 1976)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/SFColor.html(in = 14272) (out= 2137)(deflated 85%)
+adding: ScriptConformance/javadoc/vrml/field/SFFloat.html(in = 12003) (out= 1976)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/SFImage.html(in = 13946) (out= 2149)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/SFInt32.html(in = 11989) (out= 1973)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/SFNode.html(in = 12281) (out= 1982)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/SFRotation.html(in = 13212) (out= 2065)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/SFString.html(in = 12153) (out= 1966)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/SFTime.html(in = 12003) (out= 1977)(deflated 83%)
+adding: ScriptConformance/javadoc/vrml/field/SFVec2f.html(in = 13597) (out= 2089)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/field/SFVec3f.html(in = 14079) (out= 2114)(deflated 84%)
+adding: ScriptConformance/javadoc/vrml/Field.html(in = 9491) (out= 1876)(deflated 80%)
+adding: ScriptConformance/javadoc/vrml/InvalidEventInException.html(in = 10485) (out= 1979)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/InvalidEventOutException.html(in = 10633) (out= 1990)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/InvalidExposedFieldException.html(in = 10731) (out= 1999)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/InvalidFieldChangeException.html(in = 10703) (out= 1993)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/InvalidFieldException.html(in = 10555) (out= 1983)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/InvalidRouteException.html(in = 10553) (out= 1987)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/InvalidVRMLSyntaxException.html(in = 10340) (out= 1950)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/MField.html(in = 10550) (out= 1950)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/node/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/javadoc/vrml/node/Node.html(in = 11292) (out= 1939)(deflated 82%)
+adding: ScriptConformance/javadoc/vrml/node/package-frame.html(in = 1023) (out= 558)(deflated 45%)
+adding: ScriptConformance/javadoc/vrml/node/package-summary.html(in = 5773) (out= 1264)(deflated 78%)
+adding: ScriptConformance/javadoc/vrml/node/package-tree.html(in = 5362) (out= 1146)(deflated 78%)
+adding: ScriptConformance/javadoc/vrml/node/Script.html(in = 17663) (out= 3231)(deflated 81%)
+adding: ScriptConformance/javadoc/vrml/package-frame.html(in = 2177) (out= 700)(deflated 67%)
+adding: ScriptConformance/javadoc/vrml/package-summary.html(in = 8397) (out= 1646)(deflated 80%)
+adding: ScriptConformance/javadoc/vrml/package-tree.html(in = 6741) (out= 1340)(deflated 80%)
+adding: ScriptConformance/originalExamples/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/originalExamples/ScriptNodeEventOutControl.class(in = 2247) (out= 1173)(deflated 47%)
+adding: ScriptConformance/originalExamples/ScriptNodeEventOutControl.html(in = 8638) (out= 1410)(deflated 83%)
+adding: ScriptConformance/originalExamples/ScriptNodeEventOutControl.java(in = 3403) (out= 989)(deflated 70%)
+adding: ScriptConformance/originalExamples/ScriptNodeEventOutControl.wrl(in = 3208) (out= 1324)(deflated 58%)
+adding: ScriptConformance/originalExamples/ScriptNodeFieldControl.class(in = 2698) (out= 1378)(deflated 48%)
+adding: ScriptConformance/originalExamples/ScriptNodeFieldControl.html(in = 8596) (out= 1411)(deflated 83%)
+adding: ScriptConformance/originalExamples/ScriptNodeFieldControl.java(in = 3985) (out= 1130)(deflated 71%)
+adding: ScriptConformance/originalExamples/ScriptNodeFieldControl.wrl(in = 3032) (out= 1287)(deflated 57%)
+adding: ScriptConformance/vrml/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/vrml/BaseNode.class(in = 340) (out= 228)(deflated 32%)
+adding: ScriptConformance/vrml/BaseNode.java(in = 375) (out= 202)(deflated 46%)
+adding: ScriptConformance/vrml/Browser.class(in = 1277) (out= 523)(deflated 59%)
+adding: ScriptConformance/vrml/Browser.java(in = 1716) (out= 630)(deflated 63%)
+adding: ScriptConformance/vrml/ConstField.class(in = 193) (out= 153)(deflated 20%)
+adding: ScriptConformance/vrml/ConstField.java(in = 67) (out= 65)(deflated 2%)
+adding: ScriptConformance/vrml/ConstMField.class(in = 224) (out= 175)(deflated 21%)
+adding: ScriptConformance/vrml/ConstMField.java(in = 106) (out= 86)(deflated 18%)
+adding: ScriptConformance/vrml/Event.class(in = 545) (out= 294)(deflated 46%)
+adding: ScriptConformance/vrml/Event.java(in = 352) (out= 173)(deflated 50%)
+adding: ScriptConformance/vrml/field/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/vrml/field/ConstMFColor.class(in = 669) (out= 332)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFColor.java(in = 579) (out= 224)(deflated 61%)
+adding: ScriptConformance/vrml/field/ConstMFFloat.class(in = 516) (out= 302)(deflated 41%)
+adding: ScriptConformance/vrml/field/ConstMFFloat.java(in = 421) (out= 209)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFInt32.class(in = 516) (out= 301)(deflated 41%)
+adding: ScriptConformance/vrml/field/ConstMFInt32.java(in = 413) (out= 207)(deflated 49%)
+adding: ScriptConformance/vrml/field/ConstMFNode.class(in = 556) (out= 308)(deflated 44%)
+adding: ScriptConformance/vrml/field/ConstMFNode.java(in = 427) (out= 210)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFRotation.class(in = 678) (out= 334)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFRotation.java(in = 615) (out= 228)(deflated 62%)
+adding: ScriptConformance/vrml/field/ConstMFString.class(in = 569) (out= 302)(deflated 46%)
+adding: ScriptConformance/vrml/field/ConstMFString.java(in = 421) (out= 202)(deflated 52%)
+adding: ScriptConformance/vrml/field/ConstMFTime.class(in = 514) (out= 302)(deflated 41%)
+adding: ScriptConformance/vrml/field/ConstMFTime.java(in = 419) (out= 208)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFVec2f.class(in = 669) (out= 333)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFVec2f.java(in = 571) (out= 226)(deflated 60%)
+adding: ScriptConformance/vrml/field/ConstMFVec3f.class(in = 669) (out= 333)(deflated 50%)
+adding: ScriptConformance/vrml/field/ConstMFVec3f.java(in = 571) (out= 226)(deflated 60%)
+adding: ScriptConformance/vrml/field/ConstSFBool.class(in = 348) (out= 242)(deflated 30%)
+adding: ScriptConformance/vrml/field/ConstSFBool.java(in = 272) (out= 164)(deflated 39%)
+adding: ScriptConformance/vrml/field/ConstSFColor.class(in = 509) (out= 290)(deflated 43%)
+adding: ScriptConformance/vrml/field/ConstSFColor.java(in = 425) (out= 207)(deflated 51%)
+adding: ScriptConformance/vrml/field/ConstSFFloat.class(in = 350) (out= 241)(deflated 31%)
+adding: ScriptConformance/vrml/field/ConstSFFloat.java(in = 266) (out= 160)(deflated 39%)
+adding: ScriptConformance/vrml/field/ConstSFImage.class(in = 521) (out= 306)(deflated 41%)
+adding: ScriptConformance/vrml/field/ConstSFImage.java(in = 446) (out= 216)(deflated 51%)
+adding: ScriptConformance/vrml/field/ConstSFInt32.class(in = 350) (out= 244)(deflated 30%)
+adding: ScriptConformance/vrml/field/ConstSFInt32.java(in = 262) (out= 163)(deflated 37%)
+adding: ScriptConformance/vrml/field/ConstSFNode.class(in = 376) (out= 246)(deflated 34%)
+adding: ScriptConformance/vrml/field/ConstSFNode.java(in = 272) (out= 162)(deflated 40%)
+adding: ScriptConformance/vrml/field/ConstSFRotation.class(in = 360) (out= 250)(deflated 30%)
+adding: ScriptConformance/vrml/field/ConstSFRotation.java(in = 315) (out= 187)(deflated 40%)
+adding: ScriptConformance/vrml/field/ConstSFString.class(in = 363) (out= 234)(deflated 35%)
+adding: ScriptConformance/vrml/field/ConstSFString.java(in = 273) (out= 154)(deflated 43%)
+adding: ScriptConformance/vrml/field/ConstSFTime.class(in = 348) (out= 243)(deflated 30%)
+adding: ScriptConformance/vrml/field/ConstSFTime.java(in = 265) (out= 160)(deflated 39%)
+adding: ScriptConformance/vrml/field/ConstSFVec2f.class(in = 452) (out= 272)(deflated 39%)
+adding: ScriptConformance/vrml/field/ConstSFVec2f.java(in = 355) (out= 187)(deflated 47%)
+adding: ScriptConformance/vrml/field/ConstSFVec3f.class(in = 500) (out= 284)(deflated 43%)
+adding: ScriptConformance/vrml/field/ConstSFVec3f.java(in = 406) (out= 198)(deflated 51%)
+adding: ScriptConformance/vrml/field/MFColor.class(in = 1562) (out= 512)(deflated 67%)
+adding: ScriptConformance/vrml/field/MFColor.java(in = 1792) (out= 439)(deflated 75%)
+adding: ScriptConformance/vrml/field/MFFloat.class(in = 1393) (out= 484)(deflated 65%)
+adding: ScriptConformance/vrml/field/MFFloat.java(in = 1158) (out= 297)(deflated 74%)
+adding: ScriptConformance/vrml/field/MFInt32.class(in = 1386) (out= 474)(deflated 65%)
+adding: ScriptConformance/vrml/field/MFInt32.java(in = 1140) (out= 296)(deflated 74%)
+adding: ScriptConformance/vrml/field/MFNode.class(in = 1455) (out= 493)(deflated 66%)
+adding: ScriptConformance/vrml/field/MFNode.java(in = 1191) (out= 296)(deflated 75%)
+adding: ScriptConformance/vrml/field/MFRotation.class(in = 1588) (out= 512)(deflated 67%)
+adding: ScriptConformance/vrml/field/MFRotation.java(in = 1611) (out= 327)(deflated 79%)
+adding: ScriptConformance/vrml/field/MFString.class(in = 1486) (out= 486)(deflated 67%)
+adding: ScriptConformance/vrml/field/MFString.java(in = 1149) (out= 286)(deflated 75%)
+adding: ScriptConformance/vrml/field/MFTime.class(in = 1385) (out= 487)(deflated 64%)
+adding: ScriptConformance/vrml/field/MFTime.java(in = 1177) (out= 296)(deflated 74%)
+adding: ScriptConformance/vrml/field/MFVec2f.class(in = 1560) (out= 506)(deflated 67%)
+adding: ScriptConformance/vrml/field/MFVec2f.java(in = 1386) (out= 314)(deflated 77%)
+adding: ScriptConformance/vrml/field/MFVec3f.class(in = 1562) (out= 511)(deflated 67%)
+adding: ScriptConformance/vrml/field/MFVec3f.java(in = 1413) (out= 318)(deflated 77%)
+adding: ScriptConformance/vrml/field/package.html(in = 214) (out= 154)(deflated 28%)
+adding: ScriptConformance/vrml/field/SFBool.class(in = 563) (out= 293)(deflated 47%)
+adding: ScriptConformance/vrml/field/SFBool.java(in = 413) (out= 189)(deflated 54%)
+adding: ScriptConformance/vrml/field/SFColor.class(in = 765) (out= 341)(deflated 55%)
+adding: ScriptConformance/vrml/field/SFColor.java(in = 649) (out= 231)(deflated 64%)
+adding: ScriptConformance/vrml/field/SFFloat.class(in = 567) (out= 291)(deflated 48%)
+adding: ScriptConformance/vrml/field/SFFloat.java(in = 404) (out= 181)(deflated 55%)
+adding: ScriptConformance/vrml/field/SFImage.class(in = 738) (out= 355)(deflated 51%)
+adding: ScriptConformance/vrml/field/SFImage.java(in = 641) (out= 243)(deflated 62%)
+adding: ScriptConformance/vrml/field/SFInt32.class(in = 567) (out= 294)(deflated 48%)
+adding: ScriptConformance/vrml/field/SFInt32.java(in = 402) (out= 186)(deflated 53%)
+adding: ScriptConformance/vrml/field/SFNode.class(in = 591) (out= 291)(deflated 50%)
+adding: ScriptConformance/vrml/field/SFNode.java(in = 423) (out= 183)(deflated 56%)
+adding: ScriptConformance/vrml/field/SFRotation.class(in = 622) (out= 300)(deflated 51%)
+adding: ScriptConformance/vrml/field/SFRotation.java(in = 573) (out= 214)(deflated 62%)
+adding: ScriptConformance/vrml/field/SFString.class(in = 582) (out= 281)(deflated 51%)
+adding: ScriptConformance/vrml/field/SFString.java(in = 415) (out= 174)(deflated 58%)
+adding: ScriptConformance/vrml/field/SFTime.class(in = 563) (out= 297)(deflated 47%)
+adding: ScriptConformance/vrml/field/SFTime.java(in = 414) (out= 182)(deflated 56%)
+adding: ScriptConformance/vrml/field/SFVec2f.class(in = 708) (out= 325)(deflated 54%)
+adding: ScriptConformance/vrml/field/SFVec2f.java(in = 556) (out= 216)(deflated 61%)
+adding: ScriptConformance/vrml/field/SFVec3f.class(in = 756) (out= 335)(deflated 55%)
+adding: ScriptConformance/vrml/field/SFVec3f.java(in = 616) (out= 224)(deflated 63%)
+adding: ScriptConformance/vrml/Field.class(in = 287) (out= 203)(deflated 29%)
+adding: ScriptConformance/vrml/Field.java(in = 116) (out= 95)(deflated 18%)
+adding: ScriptConformance/vrml/InvalidEventInException.class(in = 329) (out= 233)(deflated 29%)
+adding: ScriptConformance/vrml/InvalidEventInException.java(in = 483) (out= 213)(deflated 55%)
+adding: ScriptConformance/vrml/InvalidEventOutException.class(in = 331) (out= 235)(deflated 29%)
+adding: ScriptConformance/vrml/InvalidEventOutException.java(in = 488) (out= 215)(deflated 55%)
+adding: ScriptConformance/vrml/InvalidExposedFieldException.class(in = 339) (out= 236)(deflated 30%)
+adding: ScriptConformance/vrml/InvalidExposedFieldException.java(in = 513) (out= 222)(deflated 56%)
+adding: ScriptConformance/vrml/InvalidFieldChangeException.class(in = 337) (out= 235)(deflated 30%)
+adding: ScriptConformance/vrml/InvalidFieldChangeException.java(in = 508) (out= 222)(deflated 56%)
+adding: ScriptConformance/vrml/InvalidFieldException.class(in = 325) (out= 232)(deflated 28%)
+adding: ScriptConformance/vrml/InvalidFieldException.java(in = 473) (out= 212)(deflated 55%)
+adding: ScriptConformance/vrml/InvalidRouteException.class(in = 325) (out= 233)(deflated 28%)
+adding: ScriptConformance/vrml/InvalidRouteException.java(in = 473) (out= 213)(deflated 54%)
+adding: ScriptConformance/vrml/InvalidVRMLSyntaxException.class(in = 320) (out= 225)(deflated 29%)
+adding: ScriptConformance/vrml/InvalidVRMLSyntaxException.java(in = 483) (out= 209)(deflated 56%)
+adding: ScriptConformance/vrml/MField.class(in = 249) (out= 196)(deflated 21%)
+adding: ScriptConformance/vrml/MField.java(in = 170) (out= 105)(deflated 38%)
+adding: ScriptConformance/vrml/node/(in = 0) (out= 0)(stored 0%)
+adding: ScriptConformance/vrml/node/Node.class(in = 503) (out= 283)(deflated 43%)
+adding: ScriptConformance/vrml/node/Node.java(in = 974) (out= 350)(deflated 64%)
+adding: ScriptConformance/vrml/node/package.html(in = 212) (out= 153)(deflated 27%)
+adding: ScriptConformance/vrml/node/Script.class(in = 766) (out= 364)(deflated 52%)
+adding: ScriptConformance/vrml/node/Script.java(in = 3615) (out= 1181)(deflated 67%)
+adding: ScriptConformance/vrml/package.html(in = 679) (out= 371)(deflated 45%)
+ls -l Vrml97ScriptNodePackages.jar ../ScriptConformance.zip
+-rw-r--r--    1 brutzman None      1237733 Aug 12 06:02 ../ScriptConformance.zip
+-rw-r--r--    1 brutzman None        26080 Aug 12 06:01 Vrml97ScriptNodePackages.jar
+make[2]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'
+make[1]: Leaving directory `/cygdrive/c/www.web3d.org/TaskGroups/x3d/translation/examples/ScriptConformance'

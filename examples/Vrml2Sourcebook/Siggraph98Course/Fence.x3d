@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Fence.x3d' name='title'/>
+    <meta content='Chain-link fence illustrates the use of rotation and scaling within texture transforms.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/fence.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0297.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Fence.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Fence.x3d'/>
+    <Viewpoint description='Entry view' position='0.0 0.0 5.0'/>
+    <NavigationInfo/>
+    <Shape>
+      <Appearance>
+        <TextureTransform center='0.5 0.5' rotation='0.7853982' scale='8.5 8.5'/>
+        <Material/>
+        <ImageTexture url='"grill.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/grill.png"'/>
+      </Appearance>
+      <IndexedFaceSet coordIndex='0 1 2 3 -1 4 5 6 7 -1 8 9 10 11 -1 12 13 14 15' solid='false' texCoordIndex='0 1 2 3 -1 0 1 2 3 -1 0 1 2 3 -1 0 1 2 3'>
+        <TextureCoordinate point='0.0 0.0 1.0 0.0 1.0 1.0 0.0 1.0'/>
+        <Coordinate point='-4.0 -1.0 0.1 -2.0 -1.0 0.1 -2.0 1.0 0.1 -4.0 1.0 0.1 -2.0 -1.0 0.1 0.0 -1.0 0.1 0.0 1.0 0.1 -2.0 1.0 0.1 0.0 -1.0 0.1 2.0 -1.0 0.1 2.0 1.0 0.1 0.0 1.0 0.1 2.0 -1.0 0.1 4.0 -1.0 0.1 4.0 1.0 0.1 2.0 1.0 0.1'/>
+      </IndexedFaceSet>
+    </Shape>
+    <Shape DEF='Post'>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <Cylinder radius='0.1'/>
+    </Shape>
+    <Transform translation='-4.0 0.0 0.0'>
+      <Shape USE='Post'/>
+    </Transform>
+    <Transform translation='4.0 0.0 0.0'>
+      <Shape USE='Post'/>
+    </Transform>
+  </Scene>
+</X3D>

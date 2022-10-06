@@ -1,0 +1,66 @@
+<molecule convention="MDLMol" title="Acetic Acid" type="3D">
+
+  <formula>C2 H4 O2</formula>
+  <float title="molecule weight">60.05</float>
+  <float title="melting point" units="degC">16.6</float>
+  <float title="boiling point" units="degC">117.9</float>
+  <float title="specific gravity">1.0492</float>
+
+  <date day="05" month="02" year="2010"/>
+  <comment>Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.</comment>
+  <atomArray>
+    <atom id="acetic_acid_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">0.7649</float>
+      <float builtin="y3">0.9627</float>
+      <float builtin="z3">1.0051</float>
+      <integer builtin="nonHydrogenCount">3</integer>
+      <float builtin="x2">-25.98076211353316</float>
+      <float builtin="y2">45.0</float>
+    </atom>
+    <atom id="acetic_acid_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.0422</float>
+      <float builtin="y3">1.7381</float>
+      <float builtin="z3">0.9144</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">30.0</float>
+    </atom>
+    <atom id="acetic_acid_a3">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">3.1225</float>
+      <float builtin="y3">1.026</float>
+      <float builtin="z3">0.5122</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">25.980762113533153</float>
+      <float builtin="y2">45.000000000000014</float>
+    </atom>
+    <atom id="acetic_acid_a4">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">2.2424</float>
+      <float builtin="y3">2.9166</float>
+      <float builtin="z3">1.1481</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="acetic_acid_b1">
+      <string builtin="atomRef">acetic_acid_a1</string>
+      <string builtin="atomRef">acetic_acid_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="acetic_acid_b5">
+      <string builtin="atomRef">acetic_acid_a2</string>
+      <string builtin="atomRef">acetic_acid_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="acetic_acid_b6">
+      <string builtin="atomRef">acetic_acid_a2</string>
+      <string builtin="atomRef">acetic_acid_a4</string>
+      <string builtin="order">2</string>
+    </bond>
+  </bondArray>
+</molecule>

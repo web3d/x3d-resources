@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='RotationCalculatorExample.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='30 December 2015' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Demonstrate composition of rotation values using X3D-Edit RotationCalculator.' name='description'/>
+    <meta content='https://savage.nps.edu/X3D-Edit/images/RotationCalculator.png' name='drawing'/>
+    <meta content='../HumanoidAnimation/RotationTests.x3d' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/RotationCalculatorExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='RotationCalculatorExample.x3d'/>
+    <Background skyColor='0.8 0.8 0.9'/>
+    <NavigationInfo/>
+    <Viewpoint description='Rotation Calculator Example' position='0 0 12'/>
+    <Viewpoint description='Left side direct view' position='-3 0 12'/>
+    <Viewpoint description='Right side direct view' position='3 0 12'/>
+    <Transform DEF='LeftSide' translation='-3 0 0'>
+      <!-- Individual nested rotations follow -->
+      <Transform DEF='OuterRotationXaxis135degrees' rotation='1 0 0 2.356194'>
+        <Transform DEF='CenterRotationYaxis45Degrees' rotation='0 1 0 0.785398'>
+          <Transform DEF='InnerRotationZaxis-30degrees' rotation='0 0 1 -0.523599'>
+            <Inline DEF='CubeWithLabeledSides' url='"../GeometricShapes/CubeWithLabeledSides.x3d" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CubeWithLabeledSides.x3d" "../GeometricShapes/CubeWithLabeledSides.wrl" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CubeWithLabeledSides.wrl"'>
+              <MetadataString name='profile' value='"Interchange"'/>
+            </Inline>
+            <Shape DEF='AxisLinesShape'>
+              <IndexedLineSet colorIndex='0 1 2' colorPerVertex='false' coordIndex='0 1 -1 0 2 -1 0 3 -1'>
+                <Coordinate point='0 0 0 1.78 0 0 0 1.78 0 0 0 1.78'/>
+                <Color color='1 0 0 0 0.6 0 0 0 1'/>
+              </IndexedLineSet>
+              <Appearance>
+                <Material diffuseColor='0.9 0.9 0.9'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform translation='0 3 0'>
+        <Shape>
+          <Text string='"Multiple single-axis" "Transform rotations"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.5' style='BOLD'/>
+          </Text>
+          <Appearance DEF='TextAppearance'>
+            <Material diffuseColor='0.1 0.2 0.9'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -3 0'>
+        <Shape>
+          <Text string='"using multiple" "nested Transform nodes"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.5' style='BOLD'/>
+          </Text>
+          <Appearance USE='TextAppearance'/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Transform DEF='RightSide' translation='3 0 0'>
+      <!-- Composed equivalent rotation follows, X3D-Edit can reload rotation array values from embedded comment -->
+      <Transform DEF='ComposedRotation' rotation='0.87262 0.40202 0.27735 2.24592'>
+        <!-- RotationCalculator composed rotation: 1.0 0.0 0.0 2.35619, 0.0 1.0 0.0 0.785398, 0.0 0.0 1.0 -0.523599 -->
+        <Inline USE='CubeWithLabeledSides'/>
+        <Shape USE='AxisLinesShape'/>
+      </Transform>
+      <Transform translation='0 3 0'>
+        <Shape>
+          <Text string='"Single composed" "Transform rotation"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.5' style='BOLD'/>
+          </Text>
+          <Appearance USE='TextAppearance'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -3 0'>
+        <Shape>
+          <Text string='"computed with X3D-Edit" "Rotation Calculator"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.5' style='BOLD'/>
+          </Text>
+          <Appearance USE='TextAppearance'/>
+        </Shape>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

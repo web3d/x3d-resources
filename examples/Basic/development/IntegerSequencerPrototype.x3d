@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='IntegerSequencerPrototype.x3d' name='title'/>
+    <meta content='This proto, modeled after a ScalarInterpolator, generates an array of integer values based on the input fraction and keys.' name='description'/>
+    <meta content='MFInt32 keyValue accessType is listed as initializeOnly/field, since inputOutput cannot be translated to exposedField in VRML97 scripting.' name='warning'/>
+    <meta content='Don Brutzman, Estuko Lippi, Jeff Weekley, Jane Wu, Matthew Braun' name='creator'/>
+    <meta content='20 August 2001' name='created'/>
+    <meta content='21 January 2020' name='modified'/>
+    <meta content='https://www.web3d.org/technicalinfo/specifications/vrml97/part1/nodesRef.html#ScalarInterpolator' name='reference'/>
+    <meta content='integer sequencer' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/IntegerSequencerPrototype.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='IntegerSequencerPrototype.x3d'/>
+    <ProtoDeclare name='IntegerSequencer'>
+      <ProtoInterface>
+        <field accessType='inputOnly' appinfo='Regular interpolator-style input, range [0..1]' name='set_fraction' type='SFFloat'/>
+        <field accessType='inputOnly' appinfo='Array sequentially increasing typically [0..1]. Must have the same number of keys as keyValues.' name='set_key' type='MFFloat'/>
+        <field accessType='inputOutput' appinfo='Array sequentially increasing typically [0..1]. Must have the same number of keys as keyValues.' name='key' type='MFFloat'/>
+        <field accessType='outputOnly' appinfo='Array sequentially increasing typically [0..1]. Must have the same number of keys as keyValues.' name='key_changed' type='MFFloat'/>
+        <field accessType='inputOnly' appinfo='Array of integer values. Must have the same number of keys as keyValues.' name='set_keyValue' type='MFInt32'/>
+        <field accessType='initializeOnly' appinfo='Array of integer values. Must have the same number of keys as keyValues.' name='keyValue' type='MFInt32'/>
+        <field accessType='outputOnly' appinfo='Array of integer values. Must have the same number of keys as keyValues.' name='keyValue_changed' type='MFInt32'/>
+        <field accessType='outputOnly' appinfo='Regular interpolator-style input' name='value_changed' type='SFInt32'/>
+        <field accessType='inputOnly' appinfo='Utility method' name='previous' type='SFBool'/>
+        <field accessType='inputOnly' appinfo='Utility method' name='next' type='SFBool'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Switch whichChoice='-1'>
+            <ScalarInterpolator DEF='KeyHolder'>
+              <IS>
+                <connect nodeField='key' protoField='key'/>
+              </IS>
+            </ScalarInterpolator>
+          </Switch>
+          <Script DEF='SequencerScript' directOutput='true'>
+            <!-- Regular interpolator-style input -->
+            <field accessType='inputOnly' appinfo='range [0..1]' name='set_fraction' type='SFFloat'/>
+            <field accessType='inputOnly' appinfo='Array sequentially increasing [0..1]. Must have the same number of keys as keyValues.' name='set_key' type='MFFloat'/>
+            <field accessType='initializeOnly' name='keyHolderNode' type='SFNode'>
+              <ScalarInterpolator USE='KeyHolder'/>
+            </field>
+            <field accessType='outputOnly' appinfo='Array sequentially increasing [0..1]. Must have the same number of keys as keyValues.' name='key_changed' type='MFFloat'/>
+            <field accessType='inputOnly' appinfo='Array of integer values. Must have the same number of keys as keyValues.' name='set_keyValue' type='MFInt32'/>
+            <field accessType='initializeOnly' name='keyValue' type='MFInt32'/>
+            <field accessType='outputOnly' appinfo='Array of integer values. Must have the same number of keys as keyValues.' name='keyValue_changed' type='MFInt32'/>
+            <!-- Regular interpolator-style output -->
+            <field accessType='outputOnly' name='value_changed' type='SFInt32'/>
+            <!-- Utility methods -->
+            <field accessType='inputOnly' name='previous' type='SFBool'/>
+            <field accessType='inputOnly' name='next' type='SFBool'/>
+            <field accessType='initializeOnly' appinfo='For development use only not for inclusion in specification implementations.' name='traceEnabled' type='SFBool' value='true'/>
+            <!-- Script-specific interfaces, not needed for node definition -->
+            <field accessType='initializeOnly' name='previousFraction' type='SFFloat' value='0.0'/>
+            <field accessType='initializeOnly' name='nextIndex' type='SFInt32' value='0'/>
+            <field accessType='initializeOnly' name='isValid' type='SFBool' value='true'/>
+            <field accessType='initializeOnly' name='recheckValidity' type='SFBool' value='false'/>
+            <IS>
+              <connect nodeField='set_fraction' protoField='set_fraction'/>
+              <connect nodeField='set_key' protoField='set_key'/>
+              <connect nodeField='key_changed' protoField='key_changed'/>
+              <connect nodeField='set_keyValue' protoField='set_keyValue'/>
+              <connect nodeField='keyValue' protoField='keyValue'/>
+              <connect nodeField='keyValue_changed' protoField='keyValue_changed'/>
+              <connect nodeField='value_changed' protoField='value_changed'/>
+              <connect nodeField='previous' protoField='previous'/>
+              <connect nodeField='next' protoField='next'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+var leftToRight;
+
+function initialize()
+{
+	key      = keyHolderNode.key;
+	tracePrint('Initializing a new IntegerSequencer.  key.length=' + key.length + '; keyValue.length=' + keyValue.length);
+	tracePrint('key =' + key);
+	tracePrint('keyValue =' + keyValue);
+
+	validityCheck();
+	setHalfKeyRange();
+
+	// assume we start at first key, going left to right
+	leftToRight = true;
+	previousFraction = key[0];
+	nextIndex = 1;  //validityCheck ensures minimum of 2 keys exist
+}
+
+function set_fraction(newFraction, timeStamp)
+{
+	if (recheckValidity) validityCheck();
+
+	if (!isValid) return; //IntegerSequencer ignored
+
+	//Bounds checking
+	if (newFraction < key[0])
+	{
+		tracePrint('*** warning: fraction is less than first key.  fraction set to first key ***');
+		newFraction = key[0];
+	}
+	else if (newFraction > key[key.length-1])
+	{
+		tracePrint('*** warning: fraction is greater than last key.  fraction set to last key ***');
+		newFraction = key[key.length -1];
+	}
+
+	//Check animation direction
+	if (newFraction < previousFraction && leftToRight == true)
+	{
+		if ((previousFraction - newFraction) > halfKeyRange) //looped around
+		{
+			nextIndex = 1;
+		}
+		else //just changed direction
+		{
+			leftToRight = false;
+			nextIndex = nextIndex - 1;
+            }
+	}
+	else if (newFraction > previousFraction && leftToRight == false)
+	{
+		if ((newFraction - previousFraction) < halfKeyRange) //looped around
+		{
+			nextIndex = key.length - 2;
+		}
+		else //just changed direction
+		{
+			leftToRight = true;
+			nextIndex = nextIndex + 1;
+            }
+	}
+	else if (newFraction == previousFraction)
+	{ //no change, so no processing required
+		return;
+	}
+	previousFraction = newFraction;
+
+	if (leftToRight) // moving left to right
+	{
+		while (newFraction > key[nextIndex]) nextIndex++;
+
+		if (newFraction == key[nextIndex])
+			value_changed = keyValue[nextIndex];
+		else	value_changed = keyValue[nextIndex -1];
+
+		tracePrint('forward animation, fraction =' + newFraction);
+		tracePrint('value_changed eventOut is:' + value_changed);
+	}
+	else // moving right to left
+	{
+		while (newFraction < key[nextIndex]) nextIndex--;
+
+		if (newFraction == key[nextIndex])
+			value_changed = keyValue[nextIndex];
+		else	value_changed = keyValue[nextIndex + 1];
+
+		tracePrint('backward animation, fraction =' + newFraction);
+		tracePrint('value_changed eventOut is:' + value_changed);
+	}
+}
+
+function set_key(newKey, timeStamp)
+{
+	key = newKey;
+	keyHolderNode.key = newKey;
+	setHalfKeyWidth();
+	recheckValidity = true;
+}
+
+function set_keyValue(newKeyValue, timeStamp)
+{
+	keyValue = newKeyValue;
+	recheckValidity = true;
+}
+
+function setHalfKeyRange()
+{
+	halfKeyRange = (key[key.length - 1] - key[0])/2.0;
+}
+
+function previous (value, timeStamp)
+{
+  if (value==true) // trigger on true events only
+  {
+	leftToRight = true;
+	nextIndex = nextIndex - 2; // reset to previous
+	if (nextIndex < 0) nextIndex = nextIndex + key.length;
+	value_changed = keyValue[nextIndex];
+	previousFraction = key[nextIndex];
+	nextIndex++; // setup for next time, leftToRight
+	if (nextIndex > key.length - 1) nextIndex = 0;
+  }
+}
+function next (value, timeStamp)
+{
+  if (value==true) // trigger on true events only
+  {
+	leftToRight = true;
+	value_changed = keyValue[nextIndex];
+	previousFraction = key[nextIndex];
+	nextIndex++; // setup for next time,leftToRight
+	if (nextIndex > key.length - 1) nextIndex = 0;
+  }
+}
+
+function validityCheck()
+{
+	//Check if lengths of key & keyValue arrays match
+	if (key.length != keyValue.length)
+	{
+		alwaysPrint('*** error: key and keyValue arrays must be of the same length.  IntegerSequencer ignored ***');
+		isValid = false;
+		return;
+	}
+	//check to ensure minimum of 2 keys have been specified
+	if (key.length < 2)
+	{
+		alwaysPrint('*** error: must contain at least 2 keys.  IntegerSequencer ignored ***');
+		isValid = false;
+		return;
+	}
+
+	//Check if key array has values in an non-decreasing order
+	for (i = 1; i < key.length; i++)
+	{
+		tracePrint('i=' + i);
+
+		if (key[i] < key [i-1])
+		{
+			alwaysPrint('*** error: key array values must be listed in a non-decreasing order.  IntegerSequencer ignored ***');
+			isValid = false;
+			return;
+		}
+	}
+	isValid = true
+	recheckValidity = false;
+	key_changed = key;
+	keyValue_changed = keyValue;
+	return;
+}
+
+function tracePrint(outputString)
+{
+	if (traceEnabled) Browser.print ('[IntegerSequencer]' + outputString);
+}
+
+function alwaysPrint(outputString)
+{
+	Browser.print ('[IntegerSequencer]' + outputString);
+}
+]]>
+          </Script>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ===============Example============== -->
+    <Anchor description='IntegerSequencerExample' parameter='"target=_blank"' url='"IntegerSequencerExample.x3d" "https://savage.nps.edu/Savage/Tools/Animation/IntegerSequencerExample.x3d" "IntegerSequencerExample.wrl" "https://savage.nps.edu/Savage/Tools/Animation/IntegerSequencerExample.wrl"'>
+      <Shape>
+        <Text string='"IntegerSequencerPrototype" "defines a prototype" "" "Click text to see example scene" "IntegerSequencerExample"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.9'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 1 0.2'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

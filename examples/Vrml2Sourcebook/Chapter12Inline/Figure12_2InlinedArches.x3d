@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure12_2InlinedArches.x3d' name='title'/>
+    <meta content='Figure 12.2, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch12/12fig02.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='16 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A row of archways built by inlining one archway from Figure 12.1 and repeatedly instancing it. Also see Figures 12.1, 12.2 and 12.3 for comparison.' name='description'/>
+    <meta content='Figure12_1SimpleArch.x3d' name='reference'/>
+    <meta content='Figure12_3TempleOfInlinedArches.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter12Inline/Figure12_2InlinedArches.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Having NavigationInfo here is usually OK since it will get superceded by NavigationInfo nodes in parent scenes -->
+    <WorldInfo title='Figure12_2InlinedArches.x3d'/>
+    <Viewpoint description='Arches arches arches' orientation='1 0 0 -0.2' position='0 6 10'/>
+    <Group>
+      <Inline DEF='ARCH' bboxCenter='1 4 0' bboxSize='5 8 2' url='"Figure12_1SimpleArch.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter12Inline/Figure12_1SimpleArch.x3d" "Figure12_1SimpleArch.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter12Inline/Figure12_1SimpleArch.wrl"'/>
+      <Transform translation='0 0 -2'>
+        <!-- There is no USE node in .x3d XML encoding!! Employ the USE=name attribute instead, to retain strong typing of nodes. -->
+        <Inline USE='ARCH'/>
+      </Transform>
+      <Transform translation='0 0 -4'>
+        <Inline USE='ARCH'/>
+      </Transform>
+      <Transform translation='0 0 -6'>
+        <Inline USE='ARCH'/>
+      </Transform>
+      <Transform translation='0 0 -8'>
+        <Inline USE='ARCH'/>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

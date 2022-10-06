@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Table.x3d' name='title'/>
+    <meta content='This table is inlined into the dinette scene to illustrate inline groups.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Dinette.x3d' name='reference'/>
+    <meta content='originals/table.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0098.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Table.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Table.x3d'/>
+    <Viewpoint description='Table front' orientation='1 0 0 -0.260602' position='0 1.6 3'/>
+    <Viewpoint description='Table right side' orientation='-0.12885 0.98326 0.12885 1.58768' position='3 1.6 0'/>
+    <Viewpoint description='Table back' orientation='0 0.99152 0.12993 -3.141593' position='0 1.6 -3'/>
+    <Viewpoint description='Table left side' orientation='0.12885 0.98326 0.12885 -1.58768' position='-3 1.6 0'/>
+    <Viewpoint description='Table from above' orientation='1 0 0 -1.570796' position='0 3 0'/>
+    <!-- Table top -->
+    <Transform translation='0.0 0.615 0.0'>
+      <Shape>
+        <Appearance DEF='Brown'>
+          <Material diffuseColor='0.6 0.35 0.0'/>
+        </Appearance>
+        <Cylinder height='0.03' radius='0.7'/>
+      </Shape>
+    </Transform>
+    <!-- Table leg -->
+    <Transform translation='0.0 0.3075 0.0'>
+      <Shape>
+        <Appearance USE='Brown'/>
+        <Box size='0.09 0.57 0.09'/>
+      </Shape>
+    </Transform>
+    <!-- Table leg base -->
+    <Transform translation='0.0 0.015 0.0'>
+      <Shape>
+        <Appearance USE='Brown'/>
+        <Box size='0.5 0.03 0.5'/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.0 0.045 0.0'>
+      <Shape>
+        <Appearance USE='Brown'/>
+        <Box size='0.35 0.03 0.35'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

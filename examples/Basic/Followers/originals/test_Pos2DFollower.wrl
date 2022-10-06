@@ -1,0 +1,578 @@
+#VRML V2.0 utf8
+
+
+
+
+
+EXTERNPROTO Position2fDamper
+[
+    eventIn      SFVec2f      set_destination
+    field        SFVec2f  initial_destination     # 0 0 0
+
+    eventOut     SFVec2f          value_changed
+    field        SFVec2f  initial_value           # 0 0 0
+    eventIn      SFVec2f      set_value
+
+    exposedField SFFloat  tau                     # 1
+
+    field        SFInt32  order                   # 1        # allowed: [1..5]
+
+    field        SFFloat  eps                     # .001     # not yet testet
+
+    eventOut     SFBool   isActive
+
+    eventOut     SFBool   isLoaded
+
+]
+[
+    "urn:inet:hersto.net:node:Position2fDamper"
+    "Dampers.wrl#Position2fDamper"
+    "http://www.hersto.net/Followers/Dampers.wrl#Position2fDamper"
+]
+
+
+
+EXTERNPROTO Position2fChaser
+[
+    eventIn  SFVec2f     set_destination
+    eventOut SFVec2f         value_changed
+
+    field    SFVec2f initial_destination  # 0 0 0
+    field    SFVec2f initial_value        # 0 0 0
+    eventIn  SFVec2f     set_value
+
+    field    SFTime          duration     # 1
+
+    eventOut SFBool          isActive
+]
+[
+    "urn:inet:hersto.net:node:Position2fChaser"
+    "Chasers.wrl#Position2fChaser"
+    "http://www.hersto.net/Followers/Chasers.wrl#Position2fChaser"
+]
+
+
+
+Viewpoint 
+{
+    position     0 0 15
+    fieldOfView  0.716
+}
+
+NavigationInfo
+{
+    type "NONE"
+}
+
+
+Group
+{
+    children
+    [
+        DEF TchPos TouchSensor {}
+
+        Transform
+        {
+            translation 0 0 -.05 # to more the front plane to zero Z.
+
+            children Shape
+            {
+                appearance Appearance {
+                    material Material {
+                        diffuseColor 0 0 0
+                        emissiveColor .28 .27 .24
+                    }
+                }
+                geometry Box
+                {
+                    size 10 10 .1
+                }
+            }
+        }
+    ]
+}
+
+
+
+DEF TrObjectDirect Transform
+{
+    scale .8 .8 .8 
+        
+    children Shape
+    {
+        appearance Appearance {
+            material Material {
+                diffuseColor .02 .24 .53
+                specularColor .32 .4 .4
+                emissiveColor .01 .12 .27
+                ambientIntensity .0333
+                shininess .54
+            }
+        }
+
+        geometry DEF GeomObject Sphere
+        {
+            radius .3
+        }
+    }
+}
+
+DEF ScrTexCoordTo3D Script
+{
+    eventIn SFVec2f A_in
+    eventIn SFVec2f B_in
+    eventIn SFVec2f C_in
+
+    eventOut SFVec3f A_ot
+    eventOut SFVec3f B_ot
+    eventOut SFVec3f C_ot
+
+    url "vrmlscript:
+
+    function A_in(a)   { A_ot= (new SFVec3f(a.x, a.y, 0)).multiply(10).subtract(new SFVec3f(5, 5, 0)); }
+    function B_in(b)   { B_ot= (new SFVec3f(b.x, b.y, 0)).multiply(10).subtract(new SFVec3f(5, 5, 0)); }
+    function C_in(c)   { C_ot= (new SFVec3f(c.x, c.y, 0)).multiply(10).subtract(new SFVec3f(5, 5, 0)); }
+
+    "
+}
+
+
+
+
+ROUTE TchPos.hitTexCoord_changed TO ScrTexCoordTo3D.A_in
+ROUTE                               ScrTexCoordTo3D.A_ot TO TrObjectDirect.translation
+
+
+
+
+
+DEF SwObjectDampered Switch
+{
+    whichChoice 0
+
+    choice DEF TrObjectDampered Transform
+    {
+        children Shape
+        {
+            appearance DEF AppObjectDampered Appearance {
+                material Material {
+                    diffuseColor .53 .02 .24 
+                    specularColor  .4 .32 .4
+                    emissiveColor .27 .01 .12 
+                    ambientIntensity .0333
+                    shininess .54
+                }
+            }
+
+            geometry USE GeomObject
+        }
+    }
+}
+
+
+
+DEF DampObject Position2fDamper { tau .3 order 3 }
+
+ROUTE TchPos.hitTexCoord_changed TO DampObject.set_destination
+ROUTE                               DampObject.value_changed TO ScrTexCoordTo3D.B_in
+ROUTE                                                           ScrTexCoordTo3D.B_ot TO TrObjectDampered.translation
+
+
+
+
+
+DEF SwObjectFollowed Switch 
+{
+    whichChoice 0
+
+    choice DEF TrObjectFollowed Transform
+    {
+        children Shape
+        {
+            appearance DEF AppObjectFollowed Appearance {
+                material Material {
+                    diffuseColor .24 .53 .02 
+                    specularColor  .4 .4 .32
+                    emissiveColor .12 .27 .01 
+                    ambientIntensity .0333
+                    shininess .54
+                }
+            }
+
+            geometry USE GeomObject
+        }
+    }
+}
+
+
+DEF FlwObject Position2fChaser { duration 1.5 }
+
+
+ROUTE TchPos.hitTexCoord_changed TO FlwObject.set_destination
+ROUTE                               FlwObject.value_changed TO ScrTexCoordTo3D.C_in
+ROUTE                                                          ScrTexCoordTo3D.C_ot TO TrObjectFollowed.translation
+
+
+
+
+############################################
+
+PROTO ToggleButton 
+[
+    eventOut SFBool isOn
+    field SFColor ColdColor .2 .2 0
+    field SFColor HottColor  .8 .8 .3
+
+    field SFBool initiallyOn FALSE
+]
+{
+
+    EXTERNPROTO ColorDamper
+    [
+        eventIn      SFColor      set_destination
+        field        SFColor  initial_destination     # 0 0 0
+
+        eventOut     SFColor          value_changed
+        field        SFColor  initial_value           # 0 0 0
+        eventIn      SFColor      set_value
+
+        exposedField SFFloat  tau                     #  1
+        exposedField SFFloat  negTau                  # -1       # not yet testet
+
+        field        SFInt32  order                   #  1       # allowed: [1..5]
+
+        eventOut     SFBool   isActive
+
+        eventOut     SFBool   isLoaded
+    ]
+    [
+        "urn:inet:hersto.net:node:ColorDamper"
+        "Dampers.wrl#ColorDamper"
+        "http://www.hersto.net/Followers/Dampers.wrl#ColorDamper"
+    ]
+
+
+    Transform
+    {
+        scale .4 .4 .4
+        
+        children
+        [
+            DEF Tch TouchSensor {}
+            
+            DEF ShRect Shape
+            {
+                appearance Appearance {
+                    material DEF Mat Material {
+                        diffuseColor 0 0 0
+                        ambientIntensity .04
+                        shininess .11
+                    }
+                }
+
+                geometry IndexedFaceSet
+                {
+                    coord Coordinate
+                    {
+                        point 
+                        [
+                            -1 -1 0
+                             1 -1 0
+                             1  1 0
+                            -1  1 0
+                        ]
+                    }
+
+                    coordIndex [ 0 1 2 3 -1 ]
+                }
+            }
+        ]
+    }
+
+    DEF ScrToggleButton Script
+    {
+        eventOut SFBool isOn IS isOn
+
+        eventIn  SFBool DamperSThere
+
+        eventOut SFColor Color 
+        eventOut SFFloat Tau 
+
+
+        eventIn  SFTime TS_Touched
+
+        field SFBool  initiallyOn IS initiallyOn
+
+        field SFColor ColdColor IS ColdColor
+        field SFColor HottColor IS HottColor
+
+        url "vrmlscript:
+
+        function DamperSThere()
+        {
+            activate(initiallyOn);
+        }
+
+
+        function activate(a)
+        {
+            isOn= a;
+            Tau=  a? .1 : .2;
+            Color= a? HottColor : ColdColor;
+        }
+
+        function set_id(i)
+        {
+            id= i;
+        }
+
+        function TS_Touched()
+        {
+            activate(!isOn);
+        }
+
+
+        "
+    }
+
+    DEF Damp ColorDamper { tau .3 order 1 } 
+    ROUTE ScrToggleButton.Tau TO Damp.tau
+
+    ROUTE ScrToggleButton.Color TO Damp.set_destination
+    ROUTE Damp.value_changed TO Mat.diffuseColor
+    ROUTE Damp.value_changed TO Mat.emissiveColor
+
+    ROUTE Tch.touchTime TO ScrToggleButton.TS_Touched
+
+    ROUTE Damp.isLoaded TO ScrToggleButton.DamperSThere
+}                                          
+
+
+
+Transform
+{
+    translation -5.7 4 0 
+
+    children DEF BtnDamper ToggleButton
+    {
+        initiallyOn TRUE
+
+        ColdColor .2 .008 .09
+        HottColor .8 .03 .36
+    }
+}
+
+Transform
+{
+    translation -8 3.9 0
+
+    children Shape
+    {
+        appearance DEF AppLabels Appearance {
+            material Material {
+                diffuseColor 0 0 0
+                emissiveColor .8 .8 .8
+            }
+        }
+        geometry Text
+        {
+            fontStyle DEF FntLabels FontStyle
+            {
+                family [ "Arial" "SANS" ]
+                size .5
+            }
+
+            string "Damper"
+        }
+    }
+    
+}
+
+Transform
+{
+    translation -5.7 2.8 0
+
+    children DEF BtnChaser ToggleButton
+    {
+        initiallyOn TRUE
+
+        ColdColor .09 .2 .008
+        HottColor .36 .8 .03
+    }
+}
+
+Transform
+{
+    translation -8 2.7 0 
+
+    children Shape
+    {
+        appearance USE AppLabels
+
+        geometry Text
+        {
+            fontStyle USE FntLabels
+
+            string "Chaser"
+        }
+    }
+}
+
+
+
+DEF ScrBtnMgr Script
+{
+    eventIn SFBool BtnDamperIsOn
+    eventIn SFBool BtnChaserIsOn
+
+    eventOut SFInt32 WcDamper
+    eventOut SFInt32 WcChaser
+
+    url "vrmlscript:
+
+
+    function BtnDamperIsOn(on)
+    {
+        WcDamper= on? 0:-1;
+    }
+
+    function BtnChaserIsOn(on)
+    {
+        WcChaser= on? 0:-1;
+    }
+
+
+    "
+}
+
+
+ROUTE BtnDamper.isOn TO ScrBtnMgr.BtnDamperIsOn
+ROUTE BtnChaser.isOn TO ScrBtnMgr.BtnChaserIsOn
+
+ROUTE ScrBtnMgr.WcDamper TO SwObjectDampered.whichChoice
+ROUTE ScrBtnMgr.WcChaser TO SwObjectFollowed.whichChoice
+
+
+
+##################################################################
+
+DEF SwDamperTrail Switch
+{
+    whichChoice 0 
+
+    choice DEF GrDamperTrail Group
+    {
+    }
+}
+
+
+DEF SwChaserTrail Switch
+{
+    whichChoice 0 
+
+    choice DEF GrChaserTrail Group
+    {
+    }
+}
+
+DEF TmrTrail TimeSensor
+{
+    loop TRUE
+    cycleInterval .02
+}
+
+DEF ScrTrailer Script
+{
+    #interface
+    eventIn SFVec3f DamperPos
+    eventIn SFVec3f ChaserPos 
+    eventIn SFTime Tick 
+
+    #config
+    field SFInt32 cNumTrailPoints   35
+
+    #internal
+
+    field  SFVec3f lastDamperPos 0 0 0
+    field  SFVec3f lastChaserPos 0 0 0
+
+
+    field SFNode GrDamperTrail USE GrDamperTrail
+    field SFNode GrChaserTrail USE GrChaserTrail
+
+    field MFNode DamperTrails  []
+    field MFNode ChaserTrails  []
+
+    field SFNode cShapeDamperTrailPoint Shape
+    {
+        appearance USE AppObjectDampered
+
+        geometry DEF GeomTrail Sphere { radius .1 }
+    }
+
+    field SFNode cShapeChaserTrailPoint Shape
+    {
+        appearance USE AppObjectFollowed
+        geometry   USE GeomTrail
+    }
+
+    
+    directOutput TRUE
+
+    url "vrmlscript:
+
+    function initialize()
+    {
+        DamperTrails.length=
+        ChaserTrails.length= cNumTrailPoints;
+
+        for(var C= 0; C<cNumTrailPoints; C++ )
+        {
+            DamperTrails[C]= new SFNode('Transform{}');
+            ChaserTrails[C]= new SFNode('Transform{}');
+
+            DamperTrails[C].children[0]= cShapeDamperTrailPoint;
+            ChaserTrails[C].children[0]= cShapeChaserTrailPoint;
+        }
+
+        GrDamperTrail.children= DamperTrails;
+        GrChaserTrail.children= ChaserTrails;
+    }
+
+    function DamperPos(Pos)
+    {
+        lastDamperPos= Pos;
+    }
+
+    function ChaserPos(Pos)
+    {
+        lastChaserPos= Pos;
+    }
+
+
+    function Tick()
+    {
+        for(var C= cNumTrailPoints - 1; C>0; C-- )
+        {
+            DamperTrails[C].translation= DamperTrails[  C - 1].translation;
+            ChaserTrails[C].translation= ChaserTrails[C - 1].translation;
+        }
+
+        DamperTrails[0].translation= lastDamperPos;
+        ChaserTrails[0].translation= lastChaserPos;
+    }
+
+
+    "
+}
+
+ROUTE TmrTrail.cycleTime TO ScrTrailer.Tick
+
+ROUTE TrObjectDampered.translation TO ScrTrailer.DamperPos
+ROUTE TrObjectFollowed.translation TO ScrTrailer.ChaserPos
+
+
+
+ROUTE ScrBtnMgr.WcDamper TO SwDamperTrail.whichChoice
+ROUTE ScrBtnMgr.WcChaser TO SwChaserTrail.whichChoice
+

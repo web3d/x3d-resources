@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "https://www.web3d.org/specifications/x3d-3.0.dtd"
+                     "file:///www.web3d.org/TaskGroups/x3d/translation/x3d-3.0.dtd">
+<X3D profile="Immersive" version="3.0">
+  <head>
+    <meta content="PerFrameNotification.x3d" name="filename"/>
+    <meta content="Xeena VRML importer" name="translator"/>
+    <meta content="23 February 2005" name="imported"/>
+    <meta content="23 February 2005" name="revised"/>
+    <meta
+      content="X3D-Edit, https://www.web3d.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+    <meta content="Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html" name="generator"/>
+  </head>
+  <Scene>
+    <Script DEF="SC" url="&quot;SAIExample3.class&quot; "/>
+  </Scene>
+</X3D>

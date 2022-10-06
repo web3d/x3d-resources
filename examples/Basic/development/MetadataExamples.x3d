@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='MetadataExamples.x3d' name='title'/>
+    <meta content='Examples showing use of new X3D Metadata nodes in Core component (MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString). Also provided: external prototype definitions for backwards compatibility with VRML 97.' name='description'/>
+    <meta content='Metadata nodes may be repositioned by a few lines if VRML97 parent node does not support the children field.' name='hint'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='17 November 2003' name='created'/>
+    <meta content='20 January 2020' name='modified'/>
+    <meta content='The external prototype declarations in this file are only intended for use with browsers that do not already support the Metadata nodes.' name='warning'/>
+    <meta content='MetadataPrototypes.x3d' name='reference'/>
+    <meta content='Metadata nodes, X3D Core component (MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString)' name='subject'/>
+    <meta content='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#Metadata' name='reference'/>
+    <meta content='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#X3DMetadataObject' name='reference'/>
+    <meta content='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#Nodereference' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/MetadataExamples.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ==================== -->
+    <!-- Do not copy these ExternProtoDeclare statements, they are only included for preparation of X3dToVrml97.xslt stylesheet mappings for backwards compatibility. -->
+    <!-- ==================== -->
+    <ExternProtoDeclare appinfo='MetadataBoolean contains a list of booleans in the value field.' name='MetadataBoolean' url='"MetadataPrototypes.x3d#MetadataBoolean" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.x3d#MetadataBoolean" "MetadataPrototypes.wrl#MetadataBoolean" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.wrl#MetadataBoolean"'>
+      <field accessType='inputOutput' appinfo='default value' name='name' type='SFString'/>
+      <field accessType='inputOutput' appinfo='default value' name='value' type='MFBool'/>
+      <field accessType='inputOutput' appinfo='default value' name='reference' type='SFString'/>
+      <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare appinfo='MetadataDouble contains a list of double-precision floating-point numbers in the value field.' name='MetadataDouble' url='"MetadataPrototypes.x3d#MetadataDouble" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.x3d#MetadataDouble" "MetadataPrototypes.wrl#MetadataDouble" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.wrl#MetadataDouble"'>
+      <field accessType='inputOutput' name='name' type='SFString'/>
+      <field accessType='inputOutput' name='value' type='MFDouble'/>
+      <field accessType='inputOutput' name='reference' type='SFString'/>
+      <field accessType='inputOutput' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare appinfo='MetadataFloat contains a list of floating-point numbers in the value field.' name='MetadataFloat' url='"MetadataPrototypes.x3d#MetadataFloat" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.x3d#MetadataFloat" "MetadataPrototypes.wrl#MetadataFloat" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.wrl#MetadataFloat"'>
+      <field accessType='inputOutput' name='name' type='SFString'/>
+      <field accessType='inputOutput' name='value' type='MFFloat'/>
+      <field accessType='inputOutput' name='reference' type='SFString'/>
+      <field accessType='inputOutput' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare appinfo='MetadataInteger contains a list of 32-bit integer numbers in the value field.' name='MetadataInteger' url='"MetadataPrototypes.x3d#MetadataInteger" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.x3d#MetadataInteger" "MetadataPrototypes.wrl#MetadataInteger" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.wrl#MetadataInteger"'>
+      <field accessType='inputOutput' name='name' type='SFString'/>
+      <field accessType='initializeOnly' name='value' type='MFInt32'/>
+      <field accessType='inputOnly' name='set_value' type='MFInt32'/>
+      <field accessType='inputOutput' name='reference' type='SFString'/>
+      <field accessType='inputOutput' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare appinfo='MetadataSet contains a list of nodes in the value field.' name='MetadataSet' url='"MetadataPrototypes.x3d#MetadataSet" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.x3d#MetadataSet" "MetadataPrototypes.wrl#MetadataSet" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.wrl#MetadataSet"'>
+      <field accessType='inputOutput' name='name' type='SFString'/>
+      <field accessType='inputOutput' name='value' type='MFNode'/>
+      <field accessType='inputOutput' name='reference' type='SFString'/>
+      <field accessType='inputOutput' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare appinfo='MetadataString contains a set of strings in the value field.' name='MetadataString' url='"MetadataPrototypes.x3d#MetadataString" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.x3d#MetadataString" "MetadataPrototypes.wrl#MetadataString" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataPrototypes.wrl#MetadataString"'>
+      <field accessType='inputOutput' name='name' type='SFString'/>
+      <field accessType='inputOutput' name='value' type='MFString'/>
+      <field accessType='inputOutput' name='reference' type='SFString'/>
+      <field accessType='inputOutput' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <!-- =========================== -->
+    <!-- Example Metadata node usage -->
+    <!-- =========================== -->
+    <Group>
+      <MetadataBoolean DEF='MetadataBooleanInstance' name='sample boolean data' reference='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataBoolean' value='true false true'/>
+      <Transform>
+        <MetadataDouble DEF='MetadataDoubleInstance' name='sample double data' reference='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataDouble' value='1.0 2.0 3.0'/>
+      </Transform>
+      <Transform>
+        <MetadataFloat name='sample float data' reference='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataFloat' value='1.0 2.0 3.0'>
+          <MetadataDouble USE='MetadataDoubleInstance'/>
+          <!-- metadata child of metadata node (also note nested PROTO here, when translated) -->
+        </MetadataFloat>
+      </Transform>
+      <Transform>
+        <MetadataInteger name='sample integer data' reference='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataInteger' value='1 2 3'/>
+      </Transform>
+      <Transform>
+        <MetadataSet name='sample data' reference='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataSet'>
+          <MetadataString name='containerFieldDefaultTest' value='"This initial node is containerField=metadata on the MetadataSet, not part of the containerField=value set"'/>
+          <!-- be sure to set containerField='value' for all members of the contained set! -->
+          <MetadataBoolean containerField='value' name='MetadataSetValue1' value='true false true'/>
+          <MetadataDouble containerField='value' name='MetadataSetValue2' value='0 1 2'/>
+          <MetadataFloat containerField='value' name='MetadataSetValue3' value='3 4 5'/>
+          <MetadataInteger containerField='value' name='MetadataSetValue4' value='6 7 8'/>
+          <MetadataString containerField='value' name='MetadataSetValue5' value='"string1" "string2"'/>
+        </MetadataSet>
+      </Transform>
+      <Transform>
+        <MetadataString name='sample string data' reference='https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/core.html#MetadataString' value='"one two three" "four five six"'/>
+      </Transform>
+      <Group>
+        <WorldInfo DEF='TestMetadataChild'>
+          <MetadataString name='Backwards compatibility note' value='"Metadata nodes are converted into comments when children [ ] field is not available in parent node"'/>
+        </WorldInfo>
+      </Group>
+    </Group>
+    <!-- ==================== -->
+    <Anchor DEF='LinkToExamples' description='link to examples' parameter='"target=_blank"' url='"MetadataExamples.html" "https://www.web3d.org/x3d/content/examples/Basic/development/MetadataExamplesIndex.html"'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 0.6 0.2'/>
+        </Appearance>
+        <Text string='"MetadataExamples is a developmental file to define" "EXTERNPROTO signatures in VRML 97 syntax" "Example usage of Metadata nodes also included." "" "Click text to view source"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.5'/>
+        </Text>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

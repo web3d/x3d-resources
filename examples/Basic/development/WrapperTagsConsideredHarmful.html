@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Wrapper Tags Considered Harmful</title>
+<style type="text/css">
+<!--
+li { border-top: thick solid white }
+li.unspaced { border-top: medium }
+-->
+</style>
+</head>
+
+<body>
+
+<h2 align="center">Wrapper Tags Considered Harmful</h2>
+
+<p align="center"><a href="mailto:brutzman@nps.navy.mil(Don Brutzman)?subject=Wrapper Tags Considered Harmful feedback ">Don Brutzman</a>, 6 February 2000</p>
+
+<h3>Problem statement</h3>
+
+<p>
+Tags in the
+<a href="../x3d-draft.dtd.txt">x3d-draft.dtd</a>
+map VRML nodes to XML tags.  
+Parent-child relationships among VRML nodes 
+correspond to parent-child relationships among XML tags.
+"Wrapper tags" inserts an explicit tag for labeling each field name.
+This means that the wrapper tags create new nodes in the scene graph
+when instantiated as an object model.
+</p>
+
+<p>
+Here is an implemented
+<a href="WrapperTagsExampleStyled.html">WrapperTagsExample.xml</a>
+and a 
+<a href="WrapperTagsExampleTranslated.wrl">VRML translation</a>
+to show the nodes used.
+</p>
+
+<p>A link to the opposing arguments will be added when provided.</p>
+
+<h3>Implementation and evaluation background</h3>
+<p> 
+This technical analysis of wrapper tags is based on 
+implementing and evaluating X3D using multiple languages and representations:  
+DTD tagset definitions and XML tags,
+closely observing development of Xj3D browser written in Java3D,
+<a href="../X3D-EditSampleScreenSnapshot.png">scene graph visualization</a>
+ using the X3D-Edit authoring tool,
+using half a dozen (of 27+ available) XML parsers,
+Extensible Stylesheet Language (XSL) parsing &amp; translation
+from XML to VRML/HTML,
+and (perhaps most importantly) the VRML source which results from translation</li>
+
+</p>
+
+<h3>Reasons why wrapper tags are harmful</h3>
+
+<ol>
+<li>  <b>Wrapper tags do not fix any real problem</b>.  
+Solutions are demonstrated for all examples that have been proposed.
+
+</li>
+
+<li>  <b>Wrapper tags add no information to a scene</b>.  
+	Example: the fixed-pair tagset <code><font color="RED">&lt;appearance&gt;&lt;Appearance&gt;...&lt;/Appearance&gt;&lt;/appearance&gt;</font></code>
+	is functionally identical to the tagset 
+	<code><font color="BLUE">&lt;Appearance&gt;...&lt;/Appearance&gt;</font></code>, 
+	as search/replace using any text editor quickly shows.
+	Evidence:  the X3D->VRML
+    stylesheet translates the full VRML scene graph satisfactorily and identically,
+	 with or without wrappers, by trapping and immediately discarding wrapper tags whenever found.
+</li>
+
+<li>  <b>Unnecessarily verbose</b>.
+	Adding superfluous wrapper tags make X3D scene graph files harder to read, harder to
+    author, and thus more error prone.  These problems harm X3D deployment.
+</li>
+
+<li>  <b>Wrapper tags bloat every scene subgraph and increase all file sizes</b>.
+    To date, three estimates have been made on the severity of this problem.
+	 Given tokenization capabilities of compression tools, wrapper tags are not
+	 expected to make significant difference in compressed scenes.
+	 <ul>
+	 	<li>Chris Marrin's "Statistics on file sizes..." message of 1/26/00 (link needed)
+		examines a heavily structured scene and a heavily numeric scene, comparing sizes 
+		compressed/uncompressed using a variety of DTDs.  Differences range from 0.5% to 41.0%.</li>
+	 	<li><a href="WrapperTagsExampleStyled.html">WrapperTagsExample.xml</a> shows
+		that use of wrapper tags doubles the number of tags wherever they occur.</li>
+	 </ul>
+</li>
+
+<li>  <b>No valid counterexamples have been proposed or demonstrated</b>.  A wide variety of 
+	<a href="examples.html">valid examples</a>
+	 have been demonstrated in equivalent VRML and X3D without wrappers.
+	 Next step is to translate every example in the 
+	 VRML&nbsp;97 specification.
+	 There is no problem case made for wrapper tags.
+</li>
+
+<li>  <b>Disambiguation of children nodes without wrapper tags has been demonstrated</b>.
+	Detecting and disambiguating children takes 2-3 case statements with ~15
+    cases, all of which are needed anyway when building a VRML 97 scene graph.
+</li>
+
+<li>  <b>Making multiple children into multiple grandchildren doesn't solve node
+    disambiguation</b>.  Case statements matching node names disambiguates nodes.
+</li>
+
+<li>  <b>Future extensions are not a lurking problem</b>.
+The number of case statements needed for disambiguation is bounded to match VRML 97 semantics.
+    Future X3D extensions must map node types to VRML, and thus must explicitly 
+    define contained nodes just as PROTO declarations do.  PROTO examples are
+    already demonstrated to work without wrapper tags.
+</li>
+
+<li>  <b>Working alternative to wrapper tags implemented and demonstrated</b>. 
+<a href="examples.html#WrapperTagsExample"></a>WrapperTagsExample shows four
+separate solutions - be sure to view the
+<a href="WrapperTagsExampleTranslated.wrl">VRML result</a>
+PROTO declarations using PROTO tags and new native XML tags have each been 
+    demonstrated to perform equivalently and interoperably.  Thus there are
+    no downstream problems for new X3D extensions when we choose to avoid wrapper tags.    
+</li>
+
+<li><b> VRML 97 nodes strictly map to XML tags in x3d-draft.dtd</b>.  Scene graph 
+    relationships are unambiguously preserved with a one-to-one correspondence 
+    by tag relationships.  Wrappers insert relationship labels as nodes/tags,
+    which is incorrect semantics and incorrect topology for graph instances
+    that are reflecting VRML 97 scene graphs.  Incorrect topology is a major
+    indicator of incompatibility problems.  Related note: traversing a
+    'this-grandchild-is-one-of-this-parents-children' wrapper doesn't render.
+</li>
+
+<li> <b>Mixed, mismatched semantics are error-prone representations</b>.  Errors
+    occurring in such designs are typically subtle and difficult to debug.
+</li>
+
+<li> <b>A scene graph with wrapper tags has a different topology than the VRML 97
+    scene graph</b>.  This means that tree algorithms must be modified prior to
+    being able run on X3D-based scene graphs.  This opposes requirements to
+    map X3D to VRML 97.
+</li>
+
+<li> <b>Parser testing</b>.  All X3D parsers originally placed under public 
+scrutiny have worked.  The Blendo parser needs to be tested.  This was made
+available 4 February 2000 following a long-standing claim that it was unable
+to parse X3D without wrapper tags.  Further scrutiny regarding its capabilities
+is now warranted.
+</li>
+
+<li> <b>Numerous tests satisfactory without wrapper tags</b>.
+About a dozen public XML parsers have been tested out of 27+ available.
+    All work satisfactorily without wrapper tags.  Smallest parsers to date 
+    include XPAT (44 KB Windows executable) and Internet Explorer 5.01 (0 KB).
+    Parser instances smaller than 44 KB are likely soon, using customized 
+    Java or C++ classes autogenerated directly from the DTD.
+</li>
+
+<li> <b>Demonstrated validity without wrapper tags</b>.
+Translating VRML -> X3D -> VRML correctly and exhaustively has 
+    demonstrated DTD validity for all VRML 97 nodes without wrapper tags.
+</li>
+
+<li> <b>Routing events to/from wrapper tags produces a VRML error</b>.  This is because
+    such tags perform no function, and the events needed to be routed to
+    the intended scene node regardless.  Such new errors are eliminated when
+    wrapper tags are eliminated.  Examples have shown that routing to
+    child nodes (such as sending an Appearance node as an event to a Shape's
+    SFNode appearance field) occurs using identical syntax in X3D and VRML.
+</li>
+
+<li> <b>Creation of nonfunctional classes in autogenerated code</b>.
+Wrapper tags add a significant number of wrapper classes which must be
+    instantiated and supported.  This is because a DTD is not a suggestion
+    about how to interpret a tagset - a DTD directly and strictly instantiates
+    classes and functionality in software.  Thus wrapper tags also cause
+    code bloat, increased code complexity for implementers, and increased
+    possibility of run-time error for developers.  
+</li>
+
+<li> <b>Performance reductions on every render cycle</b>.
+Because they have no functionality, adding intermediate wrapper classes
+    only reduces run-time performance by a tiny amount.  However this
+    performance reduction occurs on every traversal of every parent-child-
+    relationship during every rendering cycle of every scene graph, forever.
+	 To avoid this, browsers must be hand modified ignore the classes defined
+	 by wrapper tags.
+</li>
+
+<li> <b>Unwrapping/rewrapping required</b>.  
+Implementations that do manually re-optimize the scene graph by
+    collapsing intermediate wrapper classes are no longer compliant with
+    the DOM API for the X3D DTD.  Left that way, they will not be able to receive events
+    from the web browser's Document Object Model (DOM) or from a remote/networked SMIL event stream.
+	 Thus they would have to further remap DOM events to internal classes,
+	 rather than sending them directly in the first place.  Rephrase:  browsers must
+	 rewrap a wrapper API around the unwrapped internal classes to correct
+	 mismatches produced from optimizing the performance reduction of wrapper-tag classes
+</li>
+
+<li> <b>Wrappers are a different scene graph, untested and unverified</b>.
+Changing the VRML scene graph and corresponding class hierarchy to 
+    include nonfunctional wrapper-relationship nodes may well
+    prevent the forthcoming Script Authoring Interface (SAI) from
+    compatibly reconciling Java/ECMAScript JSAI, EAI and DOM APIs.  This
+    is because a DTD allows no interpretation variations, it is strict.
+    Thus authors will need different algorithms when traversing wrapped
+    X3D scene graphs.  This problem also makes translation of existing
+    scripts into DOM-compatible versions more error prone.
+</li>
+
+<li> <b>Wrappers for repeating values unnecessary</b>.
+Allowing wrapper tags to appear multiple times as siblings to preserve 
+    a permitted VRML ambiguity is of questionable value, is not a unique
+    capability of wrapper tags, weakens XML type-checking strengths,
+    enables logical errors in content that are otherwise flagged for
+    authors, and provides no difference in the resulting scene graph 
+    (since excess-identical-sibling definitions are ignored anyway by 
+    VRML 97 rules).
+</li>
+
+<li> <b>Further testing of implementations is possible</b>.
+The x3d-draft.dtd is extensible to interoperably permit children tags
+    as an alternative encoding.  Such an approach enables further testing
+    of content with respect to wrapper-tag pros and cons, if desired. 
+    Demonstrating results is a necessary prerequisite for
+    making an informed, grounded evaluation about DTD alternatives.
+</li>
+
+<li> <b>Wrappers remain redundant</b>.
+The fact that the multi-profile X3D DTD is further modifiable to compatibly
+    enable or ignore wrapper tags (as indicated by a simple authoring flag in
+    scenes) is in itself further evidence that the DTD is already complete
+    and correct without needing the addition of wrapper tags.
+</li>
+
+<li> <b>Wrappers permit writing a context-free parser</b>.
+Producing a context-free parser (i.e. a special class of finite state
+    machine) is not an identified X3D requirement.  Whether or not a formally
+    context-free parser can even parse the full semantic complexities VRML 97
+    is of questionable merit and has not been demonstrated.  Multiple fast
+    and small parsers (e.g. 44K Windows executable, zero bytes when in 
+	 browser, others available) are already suitable for support of small-footprint core-profile browsers.
+</li>
+
+<li> <b>Naming collisions threaten extensibility</b>.
+Having duplicate names like <code>&lt;appearance&gt; &lt;Appearance&gt;</code> 
+prevents generation of uniquely named accessor methods (e.g. getAppearance), setAppearance)
+for component classes generated from the DTD.  Precluding the component interface model
+precludes implementing extensibility - this wrapper-ambiguity problem must be resolved. 
+</li>
+
+<p>In conclusion:</p>
+
+<li> <b>Overwhelming evidence against wrapper tags without demonstrated counterexamples</b>.
+The large number of strong technical arguments against wrapper tags,
+    combined with the large number of undemonstrated implementation questions,
+    makes wrapper tag incorporation into the X3D DTD inadvisable and harmful.
+    Failing to make such a major decision, without implementation evidence regarding most of these points, rejects
+	 the <a href="../../X3dSpecificationProcess.html#Implementation">"implement and evaluate" requirements of the X3D process</a>.
+</li>
+
+</ol>
+
+
+
+</body>
+</html>

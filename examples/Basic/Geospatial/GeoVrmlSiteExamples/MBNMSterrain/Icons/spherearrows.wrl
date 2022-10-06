@@ -1,0 +1,176 @@
+#VRML V2.0 utf8
+Transform {
+     translation 0 0 0
+   # rotation    1 0 0 -1.57
+     scale   1 1 1   
+ 	children [
+		DEF Arrow Transform {
+			translation 0 0 0
+			rotation  0 0 1 -1.57
+			children [
+			Transform {
+     				translation 0 13 0
+		 #   		rotation    1 0 0 1.57
+  				scale   1 2 1   
+ 				children 
+					DEF ArrowTip Shape {
+							appearance Appearance {
+								material Material {
+								emissiveColor 0.0 1.0 0.0
+								diffuseColor  0.0 0.0 0.0
+								}
+							}
+					  	geometry 
+							Cone { 		
+								bottomRadius 1.0
+								height 2.0
+								side TRUE
+								bottom TRUE
+							}
+					}
+			},
+			Transform {
+     				translation 0 6 0
+		 #   		rotation    1 0 0 1.57
+     				scale   .5 10 .5   
+   				children 
+					Shape {
+		 			 	appearance Appearance {
+		    				 	material Material {
+							emissiveColor 1.0 1.0 1.0
+							diffuseColor  0.0 0.0 0.0
+							}
+						}
+		 			 	geometry 
+							Cylinder { 
+							radius 1.0
+							height 1.0
+							side TRUE
+							top TRUE
+							bottom TRUE
+						}
+					}	
+			}
+			]
+		},
+		Transform {
+			translation 0 0 0
+			rotation 0 1 0 1.57
+			children 
+				USE Arrow
+		},
+		Transform {
+			translation 0 0 0
+			rotation 0 1 0 3.14
+			children 
+				USE Arrow
+		},
+		
+		Transform {
+			translation 0 0 0
+			rotation 0 1 0 -1.57
+			children 
+				USE Arrow
+		},
+		Transform {
+		translation 0 0 0
+		rotation 0 0 1 -1.57
+		children 
+			Transform {
+			translation 0 0 0
+			rotation  0 0 1 -1.57
+			children [
+				Transform {
+     				translation 0 13 0
+		 #   		rotation    1 0 0 1.57
+  				scale   1 2 1   
+ 				children 
+					DEF ArrowTip Shape {
+							appearance Appearance {
+								material Material {
+								emissiveColor 0.0 0.0 1.0
+								diffuseColor  0.0 0.0 0.0
+								}
+							}
+					  	geometry 
+							Cone { 		
+								bottomRadius 1.0
+								height 2.0
+								side TRUE
+								bottom TRUE
+							}
+					}
+				},
+				Transform {
+     				translation 0 6 0
+		 #   		rotation    1 0 0 1.57
+     				scale   .5 10 .5   
+   				children 
+					Shape {
+		 			 	appearance Appearance {
+		    				 	material Material {
+							emissiveColor 1.0 1.0 1.0
+							diffuseColor  0.0 0.0 0.0
+							}
+						}
+		 			 	geometry 
+							Cylinder { 
+							radius 1.0
+							height 1.0
+							side TRUE
+							top TRUE
+							bottom TRUE
+						}
+					}	
+				}
+			]
+			}
+		}
+		Transform {
+     				translation 0 10 0
+		    		rotation    1 0 0 3.14
+  				scale   1 2 1   
+ 				children 
+					Shape {
+						appearance Appearance {
+					     		material Material {
+							emissiveColor 0.0 0.0 1.0
+							diffuseColor  0.0 0.0 0.0
+							}
+						}
+
+					  	geometry 
+							Cone { 		
+								bottomRadius 1.0
+								height 2.0
+								side TRUE
+								bottom TRUE
+							}
+					}
+		},
+		Transform {
+     				translation 0 6 0
+		    	#	rotation    0 0 1 -1.57
+     				scale   .5 10 .5   
+   				children 
+					Shape {
+		 			 	appearance Appearance {
+		    				 	material Material {
+							emissiveColor 1.0 1.0 1.0
+							diffuseColor  0.0 0.0 0.0
+							}
+						}
+		 			 	geometry 
+							Cylinder { 
+							radius 1.0
+							height 1.0
+							side TRUE
+							top TRUE
+							bottom TRUE
+						}
+					}	
+		}
+	
+
+	]
+}

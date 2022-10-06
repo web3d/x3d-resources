@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='HelloGermany.x3d' name='title'/>
+    <meta content='HelloGermany example scene to show German special characters, built for NPS course MV3204 X3D for Web Authors.' name='description'/>
+    <meta content='Tobias Brennenstuhl' name='creator'/>
+    <meta content='7 January 2020' name='created'/>
+    <meta content='8 April 2020' name='modified'/>
+    <meta content='Hello World, Germany' name='subject'/>
+    <meta content='images/HelloGermany.freeWRL.png' name='Image'/>
+    <meta content='images/HelloGermany.H3DViewer.png' name='Image'/>
+    <meta content='images/HelloGermany.InstantReality.png' name='Image'/>
+    <meta content='images/HelloGermany.Octaga.png' name='Image'/>
+    <meta content='images/HelloGermany.view3DScene.png' name='Image'/>
+    <meta content='images/HelloGermany.Xj3dPlugin.png' name='Image'/>
+    <meta content='images/HelloGermanyX_ITE.png' name='Image'/>
+    <meta content='images/HelloGermanyX3DOM.png' name='Image'/>
+    <meta content='https://www.w3.org/International' name='reference'/>
+    <meta content='https://de.wikipedia.org/wiki/Liste_von_Hallo-Welt-Programmen/H%C3%B6here_Programmiersprachen' name='reference'/>
+    <meta content='https://en.wikipedia.org/wiki/Percent-encoding' name='reference'/>
+    <meta content='https://helloworldcollection.de/#VRML' name='reference'/>
+    <meta content='https://en.wiktionary.org/wiki/Hello_World' name='reference'/>
+    <meta content='https://en.wikipedia.org/wiki/%22Hello,%20World!%22_program' name='reference'/>
+    <meta content='https://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world' name='reference'/>
+    <meta content='https://gitlab.nps.edu/Savage/mv3204x3dforwebauthors/blob/master/assignments/DirectedStudy/Tobias/Scenes/HelloWorldFromGermany.x3d' name='reference'/>
+    <meta content='https://www.youtube.com/channel/UCSOnGlgAFxkWg8ilg-JEbAQ' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloGermany.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='HelloGermany.x3d'/>
+    <Background skyColor='0 0.458824 0.941176'/>
+    <Viewpoint description='Hallo Deutschland! Viel Spaß mit X3D!'/>
+    <Anchor description='List of Hello World example programs in German' url='"https://de.wikipedia.org/wiki/Liste_von_Hallo-Welt-Programmen/H%C3%B6here_Programmiersprachen"'>
+      <Transform translation='0 -2 0'>
+        <Transform translation='0 4.8 0'>
+          <Shape>
+            <Text string='"Hallo Deutschland!"'>
+              <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+            </Text>
+            <Appearance DEF='BlackAppearance'>
+              <Material diffuseColor='0.01 0.01 0.01'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Shape>
+          <Text string='"Viel Spaß mit X3D!" "Have fun with X3D!"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+          </Text>
+          <Appearance USE='BlackAppearance'/>
+        </Shape>
+        <Transform DEF='GermanFlag' translation='0 0.7 0'>
+          <Transform translation='0 3 0'>
+            <Shape>
+              <Box size='6 1 0.1'/>
+              <Appearance USE='BlackAppearance'/>
+            </Shape>
+          </Transform>
+          <Transform translation='0 2 0'>
+            <Shape>
+              <Box size='6 1 0.1'/>
+              <Appearance>
+                <Material diffuseColor='0.678431 0.039216 0' shininess='0.5'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+          <Transform translation='0 1 0'>
+            <Shape>
+              <Box size='6 1 0.1'/>
+              <Appearance>
+                <Material diffuseColor='0.921569 0.854902 0'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+    </Anchor>
+  </Scene>
+</X3D>

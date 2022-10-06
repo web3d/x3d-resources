@@ -1,0 +1,491 @@
+#VRML V2.0 utf8  
+
+WorldInfo 
+{
+	title "FFD sample"
+	info ["Given a NurbsSurface, its controlPoint bounding box, and the dimensions of the FFD grid"
+		  "Fields for a CoordinateDeformer are computed, optionally a IndexedLineSet for visualation of the defom grid"
+		  "Animation is done by applying a simple time dependent transformation of the deform grid in javascript"
+		  "holger@blaxxun.com"
+		 ]
+}
+
+NavigationInfo {
+	type ["EXAMINE","ANY"]
+}
+
+Background {
+		skyColor 0.3 0.1 0.7
+		backUrl "../rings.png"
+		frontUrl "../rings.png"
+		leftUrl "../rings.png"
+		rightUrl "../rings.png"
+		bottomUrl "../rings.png"
+		topUrl "../rings.png"
+}
+
+
+Transform {
+rotation 0 1 0 3.1414 
+children [
+	 DEF nurb 
+		CoordinateDeformer { ## the FFD node
+			uOrder 3 	vOrder 3 wOrder 3 
+			## currently order *2, otherwise strange results
+			uDimension 6 vDimension 9	wDimension 6 
+
+		
+			## will be computed 
+			uKnot [ ]
+			vKnot [ ]
+			wKnot [  ]
+			
+			controlPoint[]
+			
+			#input 
+			inputCoord [ Coordinate { ## original controlpoint  of NurbsSurface
+			point [ 
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0.102341 -0.5 0.102341,
+				  0.144732 -0.5 0,
+				  0.102341 -0.5 -0.102341,
+				  0 -0.5 -0.144732,
+				  -0.102341 -0.5 -0.102341,
+				  -0.144732 -0.5 0,
+				  -0.102341 -0.5 0.102341,
+				  0 -0.5 0.144732,
+				  0.102341 -0.5 0.102341,
+				  0.144732 -0.5 0,
+				  0.102341 -0.5 -0.102341,
+				  0.307024 -0.391806 0.307024,
+				  0.434197 -0.391806 0,
+				  0.307024 -0.391806 -0.307024,
+				  0 -0.391806 -0.434197,
+				  -0.307024 -0.391806 -0.307024,
+				  -0.434197 -0.391806 0,
+				  -0.307024 -0.391806 0.307024,
+				  0 -0.391806 0.434197,
+				  0.307024 -0.391806 0.307024,
+				  0.434197 -0.391806 0,
+				  0.307024 -0.391806 -0.307024,
+				  0.434197 0 0.434197,
+				  0.614047 0 0,
+				  0.434197 0 -0.434197,
+				  0 0 -0.614047,
+				  -0.434197 0 -0.434197,
+				  -0.614047 0 0,
+				  -0.434197 0 0.434197,
+				  0 0 0.614047,
+				  0.434197 0 0.434197,
+				  0.614047 0 0,
+				  0.434197 0 -0.434197,
+				  0.307024 0.391806 0.307024,
+				  0.434197 0.391806 0,
+				  0.307024 0.391806 -0.307024,
+				  0 0.391806 -0.434197,
+				  -0.307024 0.391806 -0.307024,
+				  -0.434197 0.391806 0,
+				  -0.307024 0.391806 0.307024,
+				  0 0.391806 0.434197,
+				  0.307024 0.391806 0.307024,
+				  0.434197 0.391806 0,
+				  0.307024 0.391806 -0.307024,
+				  0.102341 0.5 0.102341,
+				  0.144732 0.5 0,
+				  0.102341 0.5 -0.102341,
+				  0 0.5 -0.144732,
+				  -0.102341 0.5 -0.102341,
+				  -0.144732 0.5 0,
+				  -0.102341 0.5 0.102341,
+				  0 0.5 0.144732,
+				  0.102341 0.5 0.102341,
+				  0.144732 0.5 0,
+				  0.102341 0.5 -0.102341,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0 ] 
+				  }
+			]
+			outputCoord 
+			[ 
+				DEF outCoord Coordinate { point [ ] }	## will be computed by FFD
+			]
+ 	
+			children [
+
+	DEF _Shape Shape {
+
+		appearance Appearance {
+			texture ImageTexture {url "../redpat1blur.png" 
+					}
+		material Material {
+			ambientIntensity 0.416667
+			diffuseColor 0.6 0.6 1
+			specularColor 1 0.1 0.9
+			emissiveColor 0.2 0 0
+			shininess 0.2
+			transparency 0.0
+		}}
+
+		geometry DEF nurbsSphere NurbsSurface {
+		#solid FALSE # if transparent
+		controlPoint	[ # initial control point, but will be updated by animation
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0 -0.5 0,
+				  0.102341 -0.5 0.102341,
+				  0.144732 -0.5 0,
+				  0.102341 -0.5 -0.102341,
+				  0 -0.5 -0.144732,
+				  -0.102341 -0.5 -0.102341,
+				  -0.144732 -0.5 0,
+				  -0.102341 -0.5 0.102341,
+				  0 -0.5 0.144732,
+				  0.102341 -0.5 0.102341,
+				  0.144732 -0.5 0,
+				  0.102341 -0.5 -0.102341,
+				  0.307024 -0.391806 0.307024,
+				  0.434197 -0.391806 0,
+				  0.307024 -0.391806 -0.307024,
+				  0 -0.391806 -0.434197,
+				  -0.307024 -0.391806 -0.307024,
+				  -0.434197 -0.391806 0,
+				  -0.307024 -0.391806 0.307024,
+				  0 -0.391806 0.434197,
+				  0.307024 -0.391806 0.307024,
+				  0.434197 -0.391806 0,
+				  0.307024 -0.391806 -0.307024,
+				  0.434197 0 0.434197,
+				  0.614047 0 0,
+				  0.434197 0 -0.434197,
+				  0 0 -0.614047,
+				  -0.434197 0 -0.434197,
+				  -0.614047 0 0,
+				  -0.434197 0 0.434197,
+				  0 0 0.614047,
+				  0.434197 0 0.434197,
+				  0.614047 0 0,
+				  0.434197 0 -0.434197,
+				  0.307024 0.391806 0.307024,
+				  0.434197 0.391806 0,
+				  0.307024 0.391806 -0.307024,
+				  0 0.391806 -0.434197,
+				  -0.307024 0.391806 -0.307024,
+				  -0.434197 0.391806 0,
+				  -0.307024 0.391806 0.307024,
+				  0 0.391806 0.434197,
+				  0.307024 0.391806 0.307024,
+				  0.434197 0.391806 0,
+				  0.307024 0.391806 -0.307024,
+				  0.102341 0.5 0.102341,
+				  0.144732 0.5 0,
+				  0.102341 0.5 -0.102341,
+				  0 0.5 -0.144732,
+				  -0.102341 0.5 -0.102341,
+				  -0.144732 0.5 0,
+				  -0.102341 0.5 0.102341,
+				  0 0.5 0.144732,
+				  0.102341 0.5 0.102341,
+				  0.144732 0.5 0,
+				  0.102341 0.5 -0.102341,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0,
+				  0 0.5 0 ]
+				uOrder 4
+				vOrder 4 
+		uDimension	11
+		vDimension	7
+		#uKnot	[ 0, 0, 0, 1, 2,   3, 4, 5, 6,   7, 8, 9 , 9 9 	  ]
+		uKnot	[ -1, 0, 1,  2,  3, 4, 5, 6,   7, 8, 9 , 10, 11, 12, 13   ]
+		vKnot	[ 2, 2, 2, 2,  3, 4, 5, 6,  6, 6, 6 ]
+	    }
+
+}
+]
+}
+
+
+DEF theGridIfNeed Shape {
+	geometry DEF gridIls IndexedLineSet { ## will be computed by script
+		coord DEF gridCoord Coordinate { }
+	
+	}
+}
+
+]
+}
+
+## route any change on outCoord to nurbs control points
+ROUTE outCoord.point_changed TO nurbsSphere.set_controlPoint
+
+# the script
+
+DEF Gridder Script
+{
+	field SFNode ffd USE nurb		# the CoordinateDeformer to setup read/write
+	
+	field SFVec3f bboxSize 1.02 1.001 1.001 # the bbox of the grid with a little epsilon
+	field SFVec3f bboxCenter 0.01 0 0
+
+	field SFBool showGrid FALSE ##FALSE TRUE	# to view the deformer grid 
+	field SFNode gridIls USE gridIls	# the ILS for visualization 
+
+	## animation test	
+	eventIn SFFloat animGrid ## animation fraction
+
+	field MFVec3f ptsIn []		## orignial controlPoints
+	field MFVec3f ptsOut []     ## new computed controlPoints from original
+	
+	
+	url "javascript:
+	
+	// compute equal spaced 3D grid coordinates, based on bbox
+	function computeGridCoord(nu,nv,nw) 
+	{ var u,v,w;
+	  var x,y,z;
+	  
+	  var bmin = bboxCenter.subtract(bboxSize.multiply(0.5));
+	  
+	  var pts = new MFVec3f();
+	  var ptsi=0;
+	
+	  pts.length = nw*nv*nu;
+	  
+	  for(w=0; w<nw;w++) {
+		z=bmin.z + bboxSize.z * w/(nw-1);
+		
+	  	for(v=0; v<nv;v++) {
+			y=bmin.y + bboxSize.y * v/(nv-1);
+			for(u=0; u<nu;u++) {
+				x=bmin.x + bboxSize.x * u/(nu-1);
+				pts[ptsi++] = new SFVec3f(x,y,z);
+			}
+	  	}
+	  }
+	  return pts;
+	}  
+	
+	// compute a equal space knot vector, serving the parameter range [umin .. umax ]
+	function computeKnotVector(dim,order,umin,umax)
+	{
+	 	 var k = new MFFloat();
+		 var ki=0;
+		 var i;
+
+		 k.length=dim+order;
+
+		 for(i=0;i<order;i++) k[i]=umin;
+		 ki=order;
+		 
+		 var du = (umax-umin) /( dim-1);
+		 
+		 for(i=1; i<dim-2;i++) {
+		 	k[ki++] = umin + i*du;
+		 }
+		 for(i=0;i<order;i++)  k[ki++]=umax;
+		 return k; // else crash 
+	
+	}
+	// computed coordIndex for 3D grid ILS
+	function computeGridLines(nu,nv,nw) 
+	{ var u,v,w;
+	  
+	  var ind = new MFInt32();
+	  var ptsi=0;
+	  var indi=0;
+	
+	  ind.length = nw*nv*(nu+1);
+	  
+	  for(w=0; w<nw;w++) {
+		ptsi=w*(nv*nu);
+	  	for(v=0; v<nv;v++) {
+			for(u=0; u<nu;u++) {
+				ind[indi++] = ptsi;
+				ptsi++;
+			}
+			ind[indi++] = -1;
+	  	}
+		ptsi=w*(nv*nu);
+		
+		for(u=0; u<nu;u++) {
+			ptsi=w*(nv*nu)+u;
+		  	for(v=0; v<nv;v++) {
+				
+				ind[indi++] = ptsi;
+				ptsi+=nu;
+			}
+			ind[indi++] = -1;
+		}
+		
+	  }
+
+		ptsi=w*(nv*nu);
+	  	for(v=0; v<nv;v++) {
+			for(u=0; u<nu;u++) {
+	  			for(w=0; w<nw;w++) {
+					ptsi=w*(nv*nu)+v*nu+u;
+					ind[indi++] = ptsi;
+				}	
+			ind[indi++] = -1;
+			}
+	  	}
+	  
+	  return ind;
+	}  
+	
+	// setup everything 
+	function initialize() {
+		var u,v,w;
+		u = ffd.uDimension;
+		v = ffd.vDimension;
+		w = ffd.wDimension;
+		var pts;
+		
+		pts = ffd.controlPoint;
+		if (1) { // compute FFD from bbox
+			pts = computeGridCoord(u,v,w);
+			ffd.set_controlPoint = pts;	
+		    var bmin = bboxCenter.subtract(bboxSize.multiply(0.5));
+			ffd.uKnot=computeKnotVector(u,ffd.uOrder,bmin.x,bmin.x+bboxSize.x);
+			ffd.vKnot=computeKnotVector(v,ffd.vOrder,bmin.y,bmin.y+bboxSize.y);
+			ffd.wKnot=computeKnotVector(w,ffd.wOrder,bmin.z,bmin.z+bboxSize.z);
+	
+		}			
+		if (showGrid) { // compute ILS grid 	
+			gridIls.coord.set_point = pts;
+			gridIls.set_coordIndex = computeGridLines(u,v,w);
+		}			
+		// animation buffers
+		ptsIn = pts;
+		ptsOut = pts; 
+	}		
+
+	// animation test	
+	function animGrid(fraction) 
+	{
+	
+		//return;
+		var t =Math.sin(fraction*Math.PI*2);
+		
+		var u,v,w;
+		var nu,nv,nw;
+		nu = ffd.uDimension;
+		nv = ffd.vDimension;
+		nw = ffd.wDimension;
+
+		var m = new VrmlMatrix();
+		var translation=new SFVec3f(0,0,0); 
+		
+		var maxw=-0.3*Math.PI*t;
+		var rotation=new SFRotation(0,0,1,maxw);
+		
+		
+		var scaleFactor = new SFVec3f(1,1,1); 
+		var scaleOrientation= new SFRotation(0,0,1, 0);
+		var center=new SFVec3f(0,0,0); 
+		w = nw/2;
+		v = nv/2;
+		u = nu/2;
+		
+		//center = ptsIn[(w*nv*nu)+v*nu+u]; // rotation center
+		center = bboxCenter;
+		
+		
+		var ptsi=0;
+
+		// modulate in y by sin
+		rotation.angle = 0;
+		
+	  	for(v=0; v<nv;v++) {
+		
+			xx= (v/(nv-1));
+			xx=xx*3*Math.PI;
+			xx = 1.0+Math.sin(xx);
+			xx = Math.pow(xx,2);
+			xx = xx*Math.abs(t);
+			xx = 0.5*xx + 0.2;
+			
+			scaleFactor.x = scaleFactor.z = xx;
+			
+			m.setTransform(translation, rotation, scaleFactor, scaleOrientation, center);
+			
+			// apply transform
+		  	for(w=0; w<nw;w++) {
+			ptsi=(w*nv+v)*nu;
+			for(u=0; u<nu;u++) {
+				ptsOut[ptsi]= m.multMatrixVec(ptsIn[ptsi]); 
+				ptsi++;
+			}
+	  		}
+		}					
+		scaleFactor.x = scaleFactor.z = 1.0;
+
+		// rotate a sub slice of control point grid
+		v=nv-3;
+		//v=nv;
+		if (v<0) v=0;
+	  	for(v=v; v<nv;v++) {
+		
+			rotation.angle = v/(nv-1) * maxw;
+			//scaleFactor.x = scaleFactor.z = 1.0+ v/(nv-1)*0.5; // just for testing scale
+			
+			m.setTransform(translation, rotation, scaleFactor, scaleOrientation, center);
+			
+			// apply transform
+		  	for(w=0; w<nw;w++) {
+			ptsi=(w*nv+v)*nu;
+			for(u=0; u<nu;u++) {
+				ptsOut[ptsi]= m.multMatrixVec(ptsIn[ptsi]); 
+				ptsi++;
+			}
+	  		}
+		}			
+		// trigger updates
+		ffd.set_controlPoint = ptsOut;	
+		if (showGrid) gridIls.coord.set_point = ptsOut;
+		
+	}	
+	"
+	
+}
+
+
+
+DEF TimeSource TimeSensor { cycleInterval 2.0 loop TRUE} 
+ROUTE TimeSource.fraction_changed TO Gridder.animGrid
+
+

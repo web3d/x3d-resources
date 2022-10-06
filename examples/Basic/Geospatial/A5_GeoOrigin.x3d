@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='Geospatial'/>
+    <meta content='A5_GeoOrigin.x3d' name='title'/>
+    <meta content='Martin Reddy SRI, original example' name='creator'/>
+    <meta content='Don Brutzman NPS, X3D encoding' name='creator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='20 January 2020' name='modified'/>
+    <meta content='Specification example shows use of GeoOrigin node to provide accurate geospatial positioning. When zooming, removes object jitter from reduced-precision floating point values.' name='description'/>
+    <meta content='Note that GeoOrigin has been deprecated in version 3.3 of X3D Geospatial component and will no longer be needed in X3D scenes.' name='hint'/>
+    <meta content='http://www.geovrml.org/1.0/doc/examples.html' name='reference'/>
+    <meta content='originals/geooriginTest.wrl' name='reference'/>
+    <meta content='VRML 97 encoding http://www.geovrml.org/1.0/doc/examples/geoorigin.wrl' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/A5_GeoOrigin.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='A5_GeoOrigin.x3d'/>
+    <Background groundColor='0 0 0' skyColor='1 1 1'/>
+    <NavigationInfo type='"FLY" "ANY"'/>
+    <!-- location (0,0,10) -->
+    <GeoViewpoint description='Adjacent Spheres' geoSystem='"UTM" "Z11"' orientation='1 0 0 -1.57' position='8167769.0 258117.0 10'>
+      <GeoOrigin DEF='ORIGIN' geoCoords='8167769.0 258117.0 0' geoSystem='"UTM" "Z11"'/>
+      <!-- location (0,0,0) -->
+    </GeoViewpoint>
+    <GeoLocation geoCoords='8167769.0 258115.0 0' geoSystem='"UTM" "Z11"'>
+      <GeoOrigin USE='ORIGIN'/>
+      <!-- location (0,-2,0) -->
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1 0 0'/>
+        </Appearance>
+        <Sphere radius='2'/>
+      </Shape>
+    </GeoLocation>
+    <GeoLocation geoCoords='8167769.0 258119.0 0' geoSystem='"UTM" "Z11"'>
+      <GeoOrigin USE='ORIGIN'/>
+      <!-- location (0,2,0) -->
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0 0 1'/>
+        </Appearance>
+        <Sphere radius='2'/>
+      </Shape>
+    </GeoLocation>
+  </Scene>
+</X3D>

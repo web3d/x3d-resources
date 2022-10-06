@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='ECMAScriptSaiTouchSensorIsOverEvent.x3d' name='title'/>
+    <meta content='Java Scene Authoring Interface (JSAI) scene and source code example that demonstrate a scripted response to a TouchSensor isOver event by changing the color of a Box from blue to red.' name='description'/>
+    <meta content='X3D Working Group' name='creator'/>
+    <meta content='23 February 2005' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#Scripts' name='reference'/>
+    <meta content='X3D Abstract Specification, Scripting Component, 9.2.3 Scripting language protocols https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/networking.html#ScriptingLanguageProtocols' name='reference'/>
+    <meta content='https://www.web3d.org/files/specifications/19777-1/V3.3/Part1/X3D_ECMAScript.html' name='reference'/>
+    <meta content='X3D language bindings, ISO/IEC 19777-1, Part 1: ECMAScript, B.2 touchSensor isOver event' name='specificationSection'/>
+    <meta content='https://www.web3d.org/files/specifications/19777-1/V3.3/Part1/examples.html#TouchSensorIsOverEvent' name='specificationUrl'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/ECMAScriptSaiTouchSensorIsOverEvent.x3d' name='identifier'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ECMAScriptSaiTouchSensorIsOverEvent.x3d'/>
+    <Group>
+      <Shape>
+        <Appearance>
+          <Material DEF='MAT' diffuseColor='0 0 1'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+      <TouchSensor DEF='TS'/>
+    </Group>
+    <!-- Note that external url takes precedence, but will fall back to contained CDATA source if no external script is found. -->
+    <Script DEF='SC' url='"ECMAScriptSaiTouchSensorIsOverEventScript.js" "https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/ECMAScriptSaiTouchSensorIsOverEventScript.js"'>
+      <field accessType='inputOnly' name='isOver' type='SFBool'/>
+      <field accessType='outputOnly' name='diffuseColor_changed' type='SFColor'/>
+      <![CDATA[
+ecmascript:
+function initialize() { }
+function isOver(val) {
+    if (val == true) {
+        diffuseColor_changed = new SFColor(1,0,0);
+    } else {
+        diffuseColor_changed = new SFColor(0,0,1);
+    }
+}
+]]>
+    </Script>
+    <ROUTE fromField='isOver' fromNode='TS' toField='isOver' toNode='SC'/>
+    <ROUTE fromField='diffuseColor_changed' fromNode='SC' toField='set_diffuseColor' toNode='MAT'/>
+  </Scene>
+</X3D>

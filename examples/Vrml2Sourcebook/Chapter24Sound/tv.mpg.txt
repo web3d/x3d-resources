@@ -1,0 +1,6 @@
+tv.mpg is used by Figure24.7VirtualTV.xml
+but it is not included in the X3D-Examples distribution because it is pretty big:  5MB
+
+tv.mpg is available at
+http://www.web3D.org/x3d/examples/Vrml2.0Sourcebook/Chapter24Sound/tv.mpg
+

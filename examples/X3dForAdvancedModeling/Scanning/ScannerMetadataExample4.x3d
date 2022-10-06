@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <unit category='length' conversionFactor='1' name='meter'/>
+    <meta content='ScannerMetadataExample4.x3d' name='title'/>
+    <meta content='Embed example metadata associated with a scanned 3D model using X3D version 4.' name='description'/>
+    <meta content='11 November 2019' name='created'/>
+    <meta content='20 February 2024' name='modified'/>
+    <meta content='If approved for X3D4, apply modified containerField=value defaults for Metadata* nodes' name='TODO'/>
+    <meta content='https://docs.google.com/spreadsheets/d/1RKvh6oEsyIgEIFfjDQNgu1U6QoAmsduvHx3ki18Z06A/htmlview#' name='reference'/>
+    <meta content='Bill Gutelius, Qntfi https://www.qntfii.com' name='creator'/>
+    <meta content='Nicholas Polys, VT' name='translator'/>
+    <meta content='ScannerMetadataExample33.x3d' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/ScannerMetadataExample4.x3d' name='identifier'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ScannerMetadataExample4.x3d'/>
+    <MetadataSet name='Scan Information' reference='Web3D proposed vocabulary: version 0.1'>
+      <MetadataSet containerField='value' name='Acquisition' reference='Hardware'>
+        <MetadataString containerField='value' name='Scanner' value='Emesent HOVERMAP'/>
+        <MetadataString containerField='value' name='ScannerModel' value='Model: HF-1'/>
+        <MetadataFloat containerField='value' name='Pulse rate (kHz)' value='300'/>
+        <MetadataFloat containerField='value' name='Wavelength (nm)' value='903'/>
+        <MetadataFloat containerField='value' name='Max range (m)' value='100'/>
+      </MetadataSet>
+      <MetadataSet containerField='value' name='Scan Session'>
+        <MetadataString containerField='value' name='acquisition_timestamp' value='"2019-11-05T10:15:32.3+0500"'/>
+      </MetadataSet>
+      <MetadataSet containerField='value' name='LAS Fields' reference='http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf'>
+        <MetadataString containerField='value' name='number of points' value='18102106'/>
+        <MetadataInteger containerField='value' name='point_format' value='1'/>
+        <MetadataSet containerField='value' name='LAS.scalar fields'>
+          <MetadataInteger containerField='value' name='num.fields' value='3'/>
+          <MetadataString containerField='value' name='scalar1' value='Intensity'/>
+          <MetadataString containerField='value' name='scalar2' value='ReturnNumber'/>
+          <MetadataString containerField='value' name='scalar3' value='GpsTime'/>
+        </MetadataSet>
+        <!-- we should have a double precision version too <MetadataSFVec3f containerField="value" name="Global shift" value='131.45, 91.94, 3.18'/> -->
+        <MetadataFloat containerField='value' name='LAS.Global_shift.x' value='131.45'/>
+        <MetadataFloat containerField='value' name='LAS.Global_shift.y' value='91.94'/>
+        <MetadataFloat containerField='value' name='LAS.Global_shift.z' value='3.18'/>
+        <MetadataInteger containerField='value' name='Scalar.fields' value='3'/>
+        <MetadataInteger containerField='value' name='Version.Major' value='1'/>
+        <MetadataInteger containerField='value' name='Version.Minor' value='4'/>
+        <MetadataFloat containerField='value' name='LAS.scale.x' value='2.13564e-7'/>
+        <MetadataFloat containerField='value' name='LAS.scale.y' value='2.35058e-7'/>
+        <MetadataFloat containerField='value' name='LAS.scale.z' value='5.6171e-8'/>
+      </MetadataSet>
+      <MetadataSet containerField='value' name='Scene Provenance'>
+        <MetadataSet containerField='value' name='Provenance'>
+          <!-- omitted value="this" -->
+          <MetadataSet containerField='value' name='this-1'>
+            <MetadataString containerField='value' name='Last Modified' value='"Jan 1 2019"'/>
+            <MetadataString containerField='value' name='Institution' value='"Virginia Tech Visionarium"'/>
+            <MetadataString containerField='value' name='Authors' value='"Nicholas Polys"'/>
+            <MetadataString containerField='value' name='Tools' value='"LAS2X3D.py"'/>
+            <MetadataString containerField='value' name='Algorithms' value='"lexical sampling by interval stride"'/>
+          </MetadataSet>
+        </MetadataSet>
+      </MetadataSet>
+    </MetadataSet>
+    <Anchor description='ScannerMetadataExample4 model page' parameter='"target=blank"' url='"https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/ScannerMetadataExample4Index.html"'>
+      <Shape>
+        <Text string='"ScannerMetadataExample4" "embed metadata in X3D4"'>
+          <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.75' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0 0.501961 0.109804'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+    <!-- NFP: Scene node can also take a MetadataSet (?) ... Here considered as a value-added scene from the acquisition the default containerField='value' -->
+    <Transform translation='131.45 91.94 3.18'>
+      <!-- by global shift value above -->
+      <!-- could be an LOD -->
+      <Switch bboxCenter='106.781 117.532 28.0086' bboxSize='213.564 235.058 56.171' whichChoice='0'>
+        <Group>
+          <Shape DEF='Highest_Resolution'>
+            <MetadataSet containerField='metadata' name='holder1'>
+              <MetadataSet containerField='value' name='LAS Fields' reference='http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf'>
+                <MetadataString containerField='value' name='number of points' value='1810210'/>
+              </MetadataSet>
+              <MetadataSet containerField='value' name='Permissions'>
+                <MetadataBoolean containerField='value' name='recording' value='false'/>
+                <MetadataBoolean containerField='value' name='systematization' value='false'/>
+                <MetadataBoolean containerField='value' name='accumulation' value='false'/>
+              </MetadataSet>
+            </MetadataSet>
+          </Shape>
+        </Group>
+        <Group>
+          <Shape DEF='Medium_Resolution'>
+            <MetadataSet containerField='metadata' name='holder3'>
+              <MetadataSet containerField='value' name='LAS Fields' reference='http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf'>
+                <MetadataString containerField='value' name='number of points' value='181021'/>
+              </MetadataSet>
+              <MetadataSet containerField='value' name='Permissions'>
+                <MetadataBoolean containerField='value' name='recording' value='false'/>
+                <MetadataBoolean containerField='value' name='systematization' value='true'/>
+                <MetadataBoolean containerField='value' name='accumulation' value='true'/>
+              </MetadataSet>
+            </MetadataSet>
+          </Shape>
+        </Group>
+        <Group>
+          <Shape DEF='Low_Resolution'>
+            <MetadataSet containerField='metadata' name='holder3'>
+              <MetadataSet containerField='value' name='LAS Fields' reference='http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf'>
+                <MetadataString containerField='value' name='number of points' value='72408'/>
+              </MetadataSet>
+              <MetadataSet containerField='value' name='Permissions'>
+                <MetadataBoolean containerField='value' name='recording' value='true'/>
+                <MetadataBoolean containerField='value' name='systematization' value='true'/>
+                <MetadataBoolean containerField='value' name='accumulation' value='true'/>
+              </MetadataSet>
+            </MetadataSet>
+          </Shape>
+        </Group>
+      </Switch>
+    </Transform>
+  </Scene>
+</X3D>

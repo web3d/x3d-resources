@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet type="text/xsl" href="generic.xsl" ?>-->
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!-- CML document - trans_dce - karne - 7/8/00 -->
+<!-- file converted from: MDL .mol -->
+	<molecule title="TransDCE" id="mol_trans_dce_karne">
+		<atomArray>
+			<atom id="trans_dce_karne_a_1">
+				<float builtin="x3" units="A">0.0000</float>
+				<float builtin="y3" units="A">0.6640</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="trans_dce_karne_a_2">
+				<float builtin="x3" units="A">0.0000</float>
+				<float builtin="y3" units="A">-0.6640</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="trans_dce_karne_a_3">
+				<float builtin="x3" units="A">0.9000</float>
+				<float builtin="y3" units="A">1.2600</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="trans_dce_karne_a_4">
+				<float builtin="x3" units="A">-1.4680</float>
+				<float builtin="y3" units="A">1.5680</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">Cl</string>
+			</atom>
+			<atom id="trans_dce_karne_a_5">
+				<float builtin="x3" units="A">1.4680</float>
+				<float builtin="y3" units="A">-1.5680</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">Cl</string>
+			</atom>
+			<atom id="trans_dce_karne_a_6">
+				<float builtin="x3" units="A">-0.9000</float>
+				<float builtin="y3" units="A">-1.2600</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">H</string>
+			</atom>
+		</atomArray>
+		<bondArray>
+			<bond id="trans_dce_karne_b_1">
+				<string builtin="atomRef">trans_dce_karne_a_6</string>
+				<string builtin="atomRef">trans_dce_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="trans_dce_karne_b_2">
+				<string builtin="atomRef">trans_dce_karne_a_5</string>
+				<string builtin="atomRef">trans_dce_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="trans_dce_karne_b_3">
+				<string builtin="atomRef">trans_dce_karne_a_4</string>
+				<string builtin="atomRef">trans_dce_karne_a_1</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="trans_dce_karne_b_4">
+				<string builtin="atomRef">trans_dce_karne_a_3</string>
+				<string builtin="atomRef">trans_dce_karne_a_1</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="trans_dce_karne_b_5">
+				<string builtin="atomRef">trans_dce_karne_a_2</string>
+				<string builtin="atomRef">trans_dce_karne_a_1</string>
+				<string builtin="order" convention="MDL">2</string>
+			</bond>
+		</bondArray>
+	</molecule>

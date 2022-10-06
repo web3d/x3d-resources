@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='WoodColor.x3d' name='title'/>
+    <meta content='Wood coloring: illustrate the use of material colors and a grayscale texture to colorize the texture as it is applied to a shape.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/woodclr.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides//mt0271.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/WoodColor.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='WoodColor.x3d'/>
+    <Viewpoint description='Entry view' position='1.75 -0.25 6.0'/>
+    <NavigationInfo/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='1.0 0.35 0.23'/>
+        <ImageTexture DEF='wood' url='"wood_g.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/wood_g.jpg"'/>
+      </Appearance>
+      <IndexedFaceSet DEF='square' coordIndex='0 1 2 3' solid='false'>
+        <Coordinate point='0.0 1.0 0.0 0.0 0.0 0.0 1.1 0.0 0.0 1.1 1.0 0.0'/>
+      </IndexedFaceSet>
+    </Shape>
+    <Transform translation='1.25 0.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 0.45 0.23'/>
+          <ImageTexture USE='wood'/>
+        </Appearance>
+        <IndexedFaceSet USE='square'/>
+      </Shape>
+    </Transform>
+    <Transform translation='2.5 0.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 0.55 0.23'/>
+          <ImageTexture USE='wood'/>
+        </Appearance>
+        <IndexedFaceSet USE='square'/>
+      </Shape>
+    </Transform>
+    <Transform translation='0.0 -1.25 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 0.65 0.53'/>
+          <ImageTexture USE='wood'/>
+        </Appearance>
+        <IndexedFaceSet USE='square'/>
+      </Shape>
+    </Transform>
+    <Transform translation='1.25 -1.25 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 0.55 0.43'/>
+          <ImageTexture USE='wood'/>
+        </Appearance>
+        <IndexedFaceSet USE='square'/>
+      </Shape>
+    </Transform>
+    <Transform translation='2.5 -1.25 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 0.55 0.53'/>
+          <ImageTexture USE='wood'/>
+        </Appearance>
+        <IndexedFaceSet USE='square'/>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

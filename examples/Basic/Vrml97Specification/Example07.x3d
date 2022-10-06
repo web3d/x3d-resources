@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Example07.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='X3D working group' name='creator'/>
+    <meta content='originals/exampleD_7.wrl' name='reference'/>
+    <meta content='VRML 97 specification example: Prototypes and alternate representations' name='description'/>
+    <meta content='VRML 97, ISO/IEC 14772-1, Part 1: Functional specification and UTF-8 encoding, D.7 Prototypes and alternate representations' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/14772/V2.0/part1/examples.html#D.7' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/Example07.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- external protype definition (capitalization error in 3rd URL of original example) -->
+    <WorldInfo title='Example07.x3d'/>
+    <ExternProtoDeclare name='RefractiveMaterial' url='"urn:inet:foo.com:types:RefractiveMaterial#RefractiveMaterial" "RefractiveMaterial.x3d#RefractiveMaterial" "https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/RefractiveMaterial.x3d#RefractiveMaterial" "RefractiveMaterial.wrl#RefractiveMaterial" "https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/RefractiveMaterial.wrl#RefractiveMaterial"'>
+      <!-- field tags are declarations of what interfaces are in this Proto node -->
+      <field accessType='inputOutput' name='ambientIntensity' type='SFFloat'/>
+      <field accessType='inputOutput' name='diffuseColor' type='SFColor'/>
+      <field accessType='inputOutput' name='specularColor' type='SFColor'/>
+      <field accessType='inputOutput' name='emissiveColor' type='SFColor'/>
+      <field accessType='inputOutput' name='shininess' type='SFFloat'/>
+      <field accessType='inputOutput' name='transparency' type='SFFloat'/>
+      <field accessType='inputOutput' name='indexOfRefraction' type='SFFloat'/>
+    </ExternProtoDeclare>
+    <Shape>
+      <Sphere/>
+      <Appearance>
+        <ProtoInstance containerField='material' name='RefractiveMaterial'>
+          <fieldValue name='ambientIntensity' value='0.2'/>
+          <fieldValue name='diffuseColor' value='1 0 0'/>
+          <fieldValue name='indexOfRefraction' value='0.3'/>
+        </ProtoInstance>
+      </Appearance>
+    </Shape>
+  </Scene>
+</X3D>

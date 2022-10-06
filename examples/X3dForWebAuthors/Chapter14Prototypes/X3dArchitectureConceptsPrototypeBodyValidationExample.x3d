@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta content='X3dArchitectureConceptsPrototypeBodyValidationExample.x3d' name='title'/>
+    <meta content='Prototype example to illustrate why additional non-rendering nodes might be needed after first node in ProtoBody' name='description'/>
+    <meta content='*Don Brutzman' name='creator'/>
+    <meta content='10 September 2021' name='created'/>
+    <meta content='19 September 2021' name='version'/>
+    <meta content='X3dArchitectureConceptsPrototypeBodyValidationDiagram.png' name='drawing'/>
+    <meta content='X3dArchitectureConceptsPrototypeBodyValidationDiagram.vsdx' name='drawing'/>
+    <meta content='X3dArchitectureConceptsPrototypeBodyValidationExampleX_ITE.png' name='Image'/>
+    <meta content='https://www.web3d.org/member-only/mantis/view.php?id=1372' name='reference'/>
+    <meta content='X3D Architecture, ISO/IEC 19775-1: 202x, Clause 4 Concepts, 4.4.4.3 PROTO definition semantics' name='specificationSection'/>
+    <meta content='https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-CD1/Part01/concepts.html#PROTOdefinitionsemantics' name='specificationUrl'/>
+    <meta content='(c) Web3D Consortium Inc. 2021' name='rights'/>
+    <meta content='X3D prototype specification' name='subject'/>
+    <meta content='https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/X3dArchitectureConceptsPrototypeBodyValidationExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <Background skyColor='0.058824 0.886275 1'/>
+    <NavigationInfo/>
+    <ProtoDeclare name='PulsingBoxShape'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='boxColor' type='SFColor' value='1 0 0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- First node in ProtoBody determines node type of this Prototype -->
+        <Shape DEF='PrototypeRootNode'>
+          <Appearance>
+            <Material DEF='BoxMaterial' diffuseColor='0.980392 0 0'>
+              <IS>
+                <connect nodeField='diffuseColor' protoField='boxColor'/>
+              </IS>
+            </Material>
+          </Appearance>
+          <Box DEF='PulsingBox' size='4 4 4'/>
+        </Shape>
+        <!-- ====================================================================== -->
+        <!-- Subsequent nodes do not render, but still must be a valid X3D subgraph -->
+        <!-- Note if these move into the Shape node, scene graph is no longer valid -->
+        <ScalarInterpolator DEF='TransparencyInterpolator' key='0 0.5 1' keyValue='1 0 1'/>
+        <TimeSensor DEF='Timer' cycleInterval='10' enabled='true' loop='true'/>
+        <!-- ROUTEs -->
+        <ROUTE fromField='fraction_changed' fromNode='Timer' toField='set_fraction' toNode='TransparencyInterpolator'/>
+        <ROUTE fromField='value_changed' fromNode='TransparencyInterpolator' toField='transparency' toNode='BoxMaterial'/>
+        <!-- ====================================================================== -->
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoInstance DEF='MyBox' name='PulsingBoxShape'>
+      <!-- NavyBlue TODO need appinfo/documentation fields on fieldValue to match field expressivity -->
+      <fieldValue name='boxColor' value='0 0 0.5'/>
+    </ProtoInstance>
+  </Scene>
+</X3D>

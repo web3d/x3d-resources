@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE X3D PUBLIC
+	"http://www.web3D.org/TaskGroups/x3d/translation/x3d-compact.dtd"
+	"file:///C:/www.web3D.org/TaskGroups/x3d/translation/x3d-compact.dtd" [
+ <!ENTITY % BaseProfile    "INCLUDE">
+ <!ENTITY % CoreProfile        "IGNORE">
+ <!ENTITY % DisJavaVrmlProfile "INCLUDE">
+ <!ENTITY % GeoVrmlProfile     "INCLUDE">
+ <!ENTITY % HAnimProfile       "INCLUDE">
+]>
+<X3D>
+   <head><meta name='image' content='texturetransform-front.jpg'/>
+      <meta content="http://www.itl.nist.gov/div897/ctg/vrml/members.html" name="author"/>
+      <meta content="texturetransform.xml " name="filename"/>
+      <meta content="This file was provided by the National Institute of Standards and Technology, and is part of the    X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html  The information contained within this file   is provided for use in establishing comformance to the ISO VRML97 Specification.    Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology.   This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are    derived from it, and any modified versions bear some notice that they have been modified. " name="disclaimer"/>
+      <meta content="Michael Kass, NIST" name="translator"/>
+      <meta content="21 January 2001" name="revised"/>
+      <meta content="Test of the textureTransform field of the Appearance node by applying rotations of 
+( left to right ) -180, -90, 0, 90 and
+180 degrees to an ImageTexture mapped to the faces of primitive geometry.
+The result is ( for all geometry faces ):  the first column of geometry should show the VTS
+logo with the horizontal texture direction corresponding to the -X coordinate direction, and
+the vertical texture direction corresponding to -Y direction. The second column of geometry 
+should map the VTS logo with the positive horizontal direction corresponding to the -Y direction,
+and the positive vertical axis in the +X direction.  The third column should show the positive
+horizontal axis at +45 degrees ( counterclockwise ) from the +X direction, and the vertical texture direction
+corresponding to +45 degrees ( counterclockwise ) from the Y direction.  The fourth column 
+should show the positive horizontal texture axis in the +Y direction, and the positive 
+vertical axis in the -X direction.  The fifth  column should show the VTS logo with the
+horizontal texture direction corresponding to the -X coordinate direction, and the vertical 
+texture direction corresponding to -Y direction." name="description"/>                                                                                   " name="description"/>
+      <meta content="http://www.web3D.org/TaskGroups/x3d/translation/examples/Conformance/Appearance/Appearance/texturetransform.xml " name="url"/>
+      <meta content="X3D-Edit, http://www.web3D.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+   </head>
+   <Scene>
+      <Group>
+         <Viewpoint description="&#34;Front View&#34;" orientation="0 1 0 0" position="0 0 15"/>
+         <Viewpoint description="&#34;Rear View&#34;" orientation="0 1 0 3.14" position="0 0 -15"/>
+         <Viewpoint description="&#34;Top View&#34;" orientation="1 0 0 -1.57" position="0 15 0"/>
+         <Viewpoint description="&#34;Bottom View&#34;" orientation="1 0 0 1.57" position="0 -15 0"/>
+         <Viewpoint description="&#34;Right View&#34;" orientation="0 1 0 1.57" position="15 0 0"/>
+         <Viewpoint description="&#34;Left View&#34;" orientation="0 1 0 -1.57" position="-15 0 0"/>
+      </Group>
+      <NavigationInfo type="&#34;EXAMINE&#34; &#34;WALK&#34; &#34;FLY&#34; &#34;ANY&#34;"/>
+      <DirectionalLight ambientIntensity="1" intensity="0.2"/>
+      <DirectionalLight ambientIntensity="1" direction="0 0 1" intensity="0.2"/>
+      <Transform translation="-4 -0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Sphere radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-2 -0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Sphere radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="0 -0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Sphere radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="2 -0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Sphere radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="4 -0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Sphere radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-4 -2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Box size="1 1 1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-2 -2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Box size="1 1 1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="0 -2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Box size="1 1 1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="2 -2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Box size="1 1 1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="4 -2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Box size="1 1 1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-4 2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cone bottomRadius="0.5" height="1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-2 2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cone bottomRadius="0.5" height="1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="0 2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cone bottomRadius="0.5" height="1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="2 2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cone bottomRadius="0.5" height="1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="4 2.5 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cone bottomRadius="0.5" height="1"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-4 0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cylinder height="1" radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="-2 0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cylinder height="1" radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="0 0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cylinder height="1" radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="2 0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cylinder height="1" radius="0.5"/>
+         </Shape>
+      </Transform>
+      <Transform translation="4 0.75 0">
+         <Shape>
+            <Appearance>
+               <ImageTexture url="&#34;vts.jpg&#34;"/>
+               <TextureTransform rotation="1.57" scale="2 2"/>
+               <Material/>
+            </Appearance>
+            <Cylinder height="1" radius="0.5"/>
+         </Shape>
+      </Transform>
+   </Scene>
+</X3D>

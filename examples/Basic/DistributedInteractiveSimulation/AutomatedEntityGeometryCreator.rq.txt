@@ -1,0 +1,28 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX x3d:  <https://www.web3d.org/specifications/x3d-4.0.xsd#>
+PREFIX x3do: <https://www.web3d.org/specifications/X3dOntology4.0#>
+
+# X3dHelloWorldQuery_03.rq    Query HelloWorld.ttl to show title given to model within a WorldInfo node.
+
+###############################################
+
+SELECT ?WorldInfoNode ?title ?parentNode
+WHERE
+{
+    ?WorldInfo rdf:type       x3do:WorldInfo ;
+               x3do:title     ?title         ;
+               x3do:hasParent ?parent .
+
+    BIND (strafter(xsd:string(?WorldInfo),"#") AS ?WorldInfoNode)
+    BIND (strafter(xsd:string(?parent),"#")    AS ?parentNode)
+}
+
+###############################################
+-----------------------------------------------------------------------
+| WorldInfoNode   | title                                | parentNode |
+=======================================================================
+| "WorldInfo_2_1" | "AutomatedEntityGeometryCreator.x3d" | "Scene"    |
+-----------------------------------------------------------------------

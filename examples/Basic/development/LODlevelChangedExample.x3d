@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='LODlevelChangedExample.x3d' name='title'/>
+    <meta content='Example use of (proposed) LOD level_changed outputOnly field to trigger loading of Inline nodes in subsequent levels.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='Chris Thorne' name='motivation'/>
+    <meta content='26 May 2004' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='under development, evaluating a proposed specification change' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/LODlevelChangedExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='LODlevelChangedExample.x3d'/>
+    <LOD DEF='activeLOD' range='6 10'>
+      <Shape DEF='ShapeLevel0'>
+        <Text string='"developmental test scene" "LODlevelChangedExample"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+        </Text>
+      </Shape>
+      <Inline DEF='InlineLevel1' load='false'/>
+      <Inline DEF='InlineLevel2' load='false'/>
+      <!-- etc. -->
+    </LOD>
+    <Group DEF='PreloadActivationGroup'>
+      <Script DEF='PreloadLevelsScript'>
+        <field accessType='inputOnly' name='level_changed' type='SFInt32'/>
+        <field accessType='outputOnly' name='activateLevel1' type='SFBool'/>
+        <field accessType='outputOnly' name='activateLevel2' type='SFBool'/>
+        <![CDATA[
+ecmascript:
+
+function level_changed (value, timestamp)
+{
+	Browser.print ('level=' + value);
+	if      (value == 1) activateLevel1 = true;
+	else if (value == 2) activateLevel2 = true;
+	// etc.
+}
+]]>
+      </Script>
+      <ROUTE fromField='level_changed' fromNode='activeLOD' toField='level_changed' toNode='PreloadLevelsScript'/>
+      <ROUTE fromField='activateLevel1' fromNode='PreloadLevelsScript' toField='load' toNode='InlineLevel1'/>
+      <ROUTE fromField='activateLevel2' fromNode='PreloadLevelsScript' toField='load' toNode='InlineLevel2'/>
+    </Group>
+    <Group DEF='ViewpointGroup'>
+      <Viewpoint description='level 0' position='0 0 4'/>
+      <Viewpoint description='level 1' position='0 0 8'/>
+      <Viewpoint description='level 2' position='0 0 12'/>
+    </Group>
+  </Scene>
+</X3D>

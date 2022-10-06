@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "http://www.web3d.org/specifications/x3d-3.0.dtd" "file:///www.web3d.org/TaskGroups/x3d/translation/x3d-3.0.dtd">
+
+<X3D profile='Immersive'>
+  <head>
+    <meta content="SelectMasterGhostPrototype.x3d" name="filename"/>
+    <meta
+      content="Selector for switching DIS EspduTransforms between Master (write PDUs) and Ghost (read PDUs)." name="description"/>
+    <meta content="Curt Blais, Don Brutzman, Doug Horner" name="author"/>
+    <meta content="23 July 2001" name="created"/>
+    <meta content="27 December 2002" name="revised"/>
+    <meta content="under development" name="warning"/>
+    <meta content="DIS" name="keywords"/>
+    <meta
+      content="http://www.web3d.org/TaskGroups/x3d/translation/examples/DistributedInteractiveSimulation//SelectMasterGhostPrototype.x3d" name="url"/>
+    <meta
+      content="X3D-Edit, http://www.web3d.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+  </head>
+  <Scene>
+    <ProtoDeclare name="SelectMasterGhost">
+      <ProtoInterface>
+        <field accessType="inputOnly"
+          appInfo="Set makeMaster true in order to make the associated DIS entity a Master."
+          name="makeMaster" type="SFBool"/>
+        <field accessType="inputOnly"
+          appInfo="Set makeGhost true  in order to make the associated DIS entity a Ghost."
+          name="makeGhost" type="SFBool"/>
+        <field accessType="inputOnly"
+          appInfo="Set makeLocal true  in order to make the associated DIS entity locally controlled (no networking)."
+          name="makeLocal" type="SFBool"/>
+        <field accessType="outputOnly" name="isMaster" type="SFBool"/>
+        <field accessType="outputOnly" name="isGhost" type="SFBool"/>
+        <field accessType="outputOnly" name="isLocal" type="SFBool"/>
+        <field accessType="initializeOnly" name="defaultWriteInterval"
+          type="SFFloat" value="1.0"/><!--add other fields here--></ProtoInterface>
+      <ProtoBody>
+        <Script DEF="SelectionScript">
+          <field accessType="inputOnly" name="makeMaster" type="SFBool"/>
+          <field accessType="inputOnly" name="makeGhost" type="SFBool"/>
+          <field accessType="inputOnly" name="makeLocal" type="SFBool"/>
+          <field accessType="outputOnly" name="isMaster" type="SFBool"/>
+          <field accessType="outputOnly" name="isGhost" type="SFBool"/>
+          <field accessType="outputOnly" name="isLocal" type="SFBool"/>
+          <field accessType="initializeOnly" name="defaultWriteInterval" type="SFFloat"/>
+          <IS>
+            <connect nodeField="makeMaster" protoField="makeMaster"/>
+            <connect nodeField="makeGhost" protoField="makeGhost"/>
+            <connect nodeField="makeLocal" protoField="makeLocal"/>
+            <connect nodeField="isMaster" protoField="isMaster"/>
+            <connect nodeField="isGhost" protoField="isGhost"/>
+            <connect nodeField="isLocal" protoField="isLocal"/>
+            <connect nodeField="defaultWriteInterval" protoField="defaultWriteInterval"/>
+</IS><!--add other fields here--><![CDATA[javascript:
+
+function initialize (timestamp)
+{
+}
+
+function makeMaster (value, timestamp)
+{
+  if (value == true)
+  {
+	// set state and send eventOut values
+	isMaster = true;
+	isLocal  = false;
+	isGhost  = false;
+	// other stuff goes here
+  }
+}]]></Script>
+      </ProtoBody>
+    </ProtoDeclare>
+  </Scene>
+</X3D>

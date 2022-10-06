@@ -1,0 +1,29 @@
+
+Xj3D Version: 2-0_RC1_20130614 (utilizing NPS OpenDIS)
+
+Initializing OpenGL X3D browser.
+
+Graphics architecture will support 2 samples of full screen antialiasing.
+Warning: Native image loaders not available
+
+Main scene: file:///C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter04ViewingNavigation/BindingOperations.x3d loaded.
+Timing script initialized and ready for activation, view1Bound false
+
+===========
+ time t0, view1Bound true
+===========
+ time t1, view1Bound false, view2Bound true
+===========
+ time t2, view2Bound false, view3Bound true
+===========
+ time t3, view3Bound false, view2Bound true, view1Bound false
+===========
+ time t4, view1Bound true, view2Bound false
+===========
+ time t5, view2Bound false
+===========
+ time t6
+===========
+ time t7, view4Bound true
+===========
+ time t8, no action, all done

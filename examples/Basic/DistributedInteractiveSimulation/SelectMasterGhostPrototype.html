@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:saxon="http://icl.com/saxon">
+   <head>
+      <title>SelectMasterGhostPrototype.x3d (X3dToXhtml)</title>
+      <style type="text/css">
+span.element {color: navy}
+span.attribute {color: green}
+span.value {color: teal}
+span.prototype {color: purple}
+a.prototype {color: purple, visited: black}
+span.route {color: red}
+span.nodeName {color: maroon}
+a.nodeName {color: maroon}
+div.center {text-align: center}
+div.indent {margin-left:25}
+b.warning {color: #CC5500}
+b.error {color: #CC0000}
+	</style>
+      <meta name="generator" content="http://www.web3D.org/TaskGroups/x3d/translation/X3dToXhtml.xsl"/>
+   </head>
+   <body>
+      <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE X3D PUBLIC "http://www.web3d.org/specifications/x3d-3.0.dtd" "file:///www.web3d.org/TaskGroups/x3d/translation/x3d-3.0.dtd"&gt;
+</pre>&lt;<span class="element">X3D</span>
+	
+      <span class="attribute">profile</span>='<span class="value">Immersive</span>'
+	<span class="attribute">noNamespaceSchemaLocation</span>='<a href="http://www.web3d.org/specifications/x3d-3.0.xsd" target="_blank">http://www.web3d.org/specifications/x3d-3.0.xsd</a>'&gt;
+<div class="indent">&lt;<span class="element">head</span>&gt;
+<div class="indent">&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">filename</span>'
+	<span class="attribute">content</span>='<a href="SelectMasterGhostPrototype.x3d" target="_blank">SelectMasterGhostPrototype.x3d</a>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">description</span>'
+	<span class="attribute">content</span>='<span class="value">Selector for switching DIS EspduTransforms between Master (write PDUs) and Ghost (read PDUs).</span>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">author</span>'
+	<span class="attribute">content</span>='<span class="value">Curt Blais, Don Brutzman, Doug Horner</span>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">created</span>'
+	<span class="attribute">content</span>='<span class="value">23 July 2001</span>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">revised</span>'
+	<span class="attribute">content</span>='<span class="value">27 December 2002</span>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<b class="warning">warning</b>'
+	<span class="attribute">content</span>='<b class="warning">under development</b>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">keywords</span>'
+	<span class="attribute">content</span>='<span class="value">DIS</span>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">url</span>'
+	<span class="attribute">content</span>='<a href="http://www.web3d.org/TaskGroups/x3d/translation/examples/DistributedInteractiveSimulation//SelectMasterGhostPrototype.x3d" target="_blank">http://www.web3d.org/TaskGroups/x3d/translation/examples/DistributedInteractiveSimulation//SelectMasterGhostPrototype.x3d</a>'/&gt;
+<br />&lt;<span class="element">meta</span>
+	
+            <span class="attribute">name</span>='<span class="value">generator</span>'
+	<span class="attribute">content</span>='<span class="value">X3D-Edit, </span>
+            <a href="http://www.web3d.org/TaskGroups/x3d/translation/README.X3D-Edit.html" target="_blank">http://www.web3d.org/TaskGroups/x3d/translation/README.X3D-Edit.html</a>'/&gt;
+</div>&lt;/<span class="element">head</span>&gt;
+<br />
+&lt;!--
+<div class="center">
+            <hr width="100%"/>
+
+            <i>Index for ProtoDeclare</i>: 
+<a href="#ProtoDeclare_SelectMasterGhost" class="prototype">SelectMasterGhost</a>
+<br />
+<i>Index for DEF node</i>: 
+<a href="#SelectionScript" class="nodeName">SelectionScript</a>
+
+            <hr width="100%"/>
+         </div>
+--&gt;
+<br />&lt;<span class="element">Scene</span>&gt;
+<div class="indent">
+            <a name="ProtoDeclare_SelectMasterGhost"> </a> &lt;<span class="prototype">ProtoDeclare</span>
+	
+            <span class="attribute">name</span>='<span class="prototype">SelectMasterGhost</span>'&gt;
+<div class="indent">&lt;<span class="prototype">ProtoInterface</span>&gt;
+<div class="indent">&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">makeMaster</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">inputOnly</span>'
+	<span class="attribute">appInfo</span>='<span class="value">Set makeMaster true in order to make the associated DIS entity a Master.</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">makeGhost</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">inputOnly</span>'
+	<span class="attribute">appInfo</span>='<span class="value">Set makeGhost true  in order to make the associated DIS entity a Ghost.</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">makeLocal</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">inputOnly</span>'
+	<span class="attribute">appInfo</span>='<span class="value">Set makeLocal true  in order to make the associated DIS entity locally controlled (no networking).</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">isMaster</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">outputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">isGhost</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">outputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">isLocal</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">outputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                  <span class="attribute">name</span>='<span class="prototype">defaultWriteInterval</span>'
+	<span class="attribute">type</span>='<span class="value">SFFloat</span>'
+	<span class="attribute">value</span>='<span class="value">1.0</span>'
+	<span class="attribute">accessType</span>='<span class="value">initializeOnly</span>'/&gt;
+<br />&lt;!-- add other fields here --&gt;
+</div>&lt;/<span class="prototype">ProtoInterface</span>&gt;
+<br />&lt;<span class="prototype">ProtoBody</span>&gt;
+<div class="indent">
+                  <a name="SelectionScript"> </a> &lt;<span class="element">Script</span>
+	
+                  <span class="attribute">DEF</span>='<span class="nodeName">SelectionScript</span>'&gt;
+<div class="indent">&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">makeMaster</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">inputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">makeGhost</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">inputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">makeLocal</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">inputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">isMaster</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">outputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">isGhost</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">outputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">isLocal</span>'
+	<span class="attribute">type</span>='<span class="value">SFBool</span>'
+	<span class="attribute">accessType</span>='<span class="value">outputOnly</span>'/&gt;
+<br />&lt;<span class="prototype">field</span>
+	
+                     <span class="attribute">name</span>='<span class="prototype">defaultWriteInterval</span>'
+	<span class="attribute">type</span>='<span class="value">SFFloat</span>'
+	<span class="attribute">accessType</span>='<span class="value">initializeOnly</span>'/&gt;
+<br />&lt;<span class="element">IS</span>&gt;
+<div class="indent">&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">makeMaster</span>'
+	<span class="attribute">protoField</span>='<span class="value">makeMaster</span>'/&gt;
+<br />&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">makeGhost</span>'
+	<span class="attribute">protoField</span>='<span class="value">makeGhost</span>'/&gt;
+<br />&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">makeLocal</span>'
+	<span class="attribute">protoField</span>='<span class="value">makeLocal</span>'/&gt;
+<br />&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">isMaster</span>'
+	<span class="attribute">protoField</span>='<span class="value">isMaster</span>'/&gt;
+<br />&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">isGhost</span>'
+	<span class="attribute">protoField</span>='<span class="value">isGhost</span>'/&gt;
+<br />&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">isLocal</span>'
+	<span class="attribute">protoField</span>='<span class="value">isLocal</span>'/&gt;
+<br />&lt;<span class="element">connect</span>
+	
+                        <span class="attribute">nodeField</span>='<span class="value">defaultWriteInterval</span>'
+	<span class="attribute">protoField</span>='<span class="value">defaultWriteInterval</span>'/&gt;
+</div>&lt;/<span class="element">IS</span>&gt;
+<br />&lt;!-- add other fields here --&gt;
+
+<br /><code>
+                        <b>&lt;![CDATA[</b>
+                     </code>
+
+                     <pre>javascript:
+
+function initialize (timestamp)
+{
+}
+
+function makeMaster (value, timestamp)
+{
+  if (value == true)
+  {
+	// set state and send eventOut values
+	isMaster = true;
+	isLocal  = false;
+	isGhost  = false;
+	// other stuff goes here
+  }
+}</pre>
+                     <code>
+                        <b>]]&gt;</b>
+                     </code>
+
+                  </div>&lt;/<span class="element">Script</span>&gt;
+</div>&lt;/<span class="prototype">ProtoBody</span>&gt;
+</div>&lt;/<span class="prototype">ProtoDeclare</span>&gt;
+</div>&lt;/<span class="element">Scene</span>&gt;
+</div>&lt;/<span class="element">X3D</span>&gt;
+<br />
+&lt;!--
+<div class="center">
+         <hr width="100%"/>
+
+         <i>Index for ProtoDeclare</i>: 
+<a href="#ProtoDeclare_SelectMasterGhost" class="prototype">SelectMasterGhost</a>
+<br />
+<i>Index for DEF node</i>: 
+<a href="#SelectionScript" class="nodeName">SelectionScript</a>
+
+         <hr width="100%"/>
+      </div>
+--&gt;
+<p>
+&lt;!-- Tag color codes:
+&lt;<span class="element">Node</span>
+         <span class="nodeName"> DEF</span>='<span class="nodeName">NodeName</span>' <span class="attribute">attribute</span>='<span class="value">value</span>'/&gt;
+&lt;<span class="prototype">Prototype</span> 
+         <span class="attribute">name</span>='<span class="prototype">ProtoName</span>'&gt;
+	&lt;<span class="prototype">field</span>
+         <span class="attribute">name</span>='<span class="prototype">fieldName</span>'/&gt; &lt;/<span class="prototype">Prototype</span>&gt; --&gt;
+</p>
+   </body>
+</html>

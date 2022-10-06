@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='IkeaBlueChair.x3d' name='title'/>
+    <meta content='X3D example Model of an Ikea Blue Chair' name='description'/>
+    <meta content='3 March 2004' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Vaughn Pangelinan' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBlueChair.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='IkeaBlueChair.x3d'/>
+    <Transform DEF='BlueChairTransform'>
+      <Group DEF='IkeaBlueChair'>
+        <Shape>
+          <Box size='.3 .02 .3'/>
+          <Appearance DEF='Red'>
+            <Material diffuseColor='0.75 0 0'/>
+          </Appearance>
+        </Shape>
+        <Transform translation='.13 -.16 .13'>
+          <Shape DEF='ChairFrontLeg'>
+            <Box size='.034 .3 .034'/>
+            <Appearance DEF='Blue'>
+              <Material diffuseColor='0 0 0.8'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-.13 -.16 .13'>
+          <Shape USE='ChairFrontLeg'/>
+        </Transform>
+        <Transform translation='-.125 .04 -.16'>
+          <Shape DEF='ChairRearLeg'>
+            <Box size='.05 .7 .02'/>
+            <Appearance USE='Blue'/>
+          </Shape>
+        </Transform>
+        <Transform translation='.125 .04 -.16'>
+          <Shape USE='ChairRearLeg'/>
+        </Transform>
+        <Transform translation='0 -.038 .13'>
+          <Shape DEF='FrontChairBeam'>
+            <Box size='.226 .056 .02'/>
+            <Appearance USE='Blue'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -.185 0'>
+          <Shape DEF='LowCenterBeam'>
+            <Box size='.24 .05 .02'/>
+            <Appearance USE='Blue'/>
+          </Shape>
+        </Transform>
+        <Transform translation='.13 -.038 -.01'>
+          <Shape DEF='HighShortBeam'>
+            <Box size='.02 .056 .28'/>
+            <Appearance USE='Blue'/>
+          </Shape>
+        </Transform>
+        <Transform translation='-.13 -.038 -.01'>
+          <Shape USE='HighShortBeam'/>
+        </Transform>
+        <Transform translation='.13 -.185 -.01'>
+          <Shape DEF='LowShortBeam'>
+            <Box size='.02 .05 .28'/>
+            <Appearance USE='Blue'/>
+          </Shape>
+        </Transform>
+        <Transform translation='-.13 -.185 -.01'>
+          <Shape USE='LowShortBeam'/>
+        </Transform>
+        <Transform DEF='LowerBackBeamTranslation' translation='0 .13 -.16'>
+          <Shape DEF='BackBeam'>
+            <Box size='.2 .05 .016'/>
+            <Appearance USE='Blue'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0 .36 -.16'>
+          <Shape USE='BackBeam'/>
+        </Transform>
+        <Transform scale='.2 .18 1' translation='0 .245 -.16'>
+          <Group DEF='DoggyBackPiece'>
+            <Shape>
+              <Appearance>
+                <ImageTexture url='"DoggyTransparent.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/DoggyTransparent.png"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                <Coordinate point='-0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Group>
+        </Transform>
+      </Group>
+    </Transform>
+  </Scene>
+</X3D>

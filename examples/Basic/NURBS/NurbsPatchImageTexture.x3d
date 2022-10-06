@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <component level='1' name='NURBS'/>
+    <meta content='NurbsPatchImageTexture.x3d' name='title'/>
+    <meta content='A NURBS patch representing a segment of a cylinder. An applied image texture depicts the u-v axes of the parametric coordinate system. Defined Viewpoints show the inner and outer sides of the cylindrical surface' name='description'/>
+    <meta content='Vincent Marchetti' name='creator'/>
+    <meta content='31 August 2011' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='NurbsPatchImageTexture1.jpg' name='Image'/>
+    <meta content='NurbsPatchImageTexture2.jpg' name='Image'/>
+    <meta content='Currently only Octaga 2.0 properly implements the X3D NURBS component, see the following page for status.' name='warning'/>
+    <meta content='http://www.kshell.com/pages/nurbs_surface_demo' name='warning'/>
+    <meta content='images/NurbsPatchImageTextureBSContact.png' name='Image'/>
+    <meta content='images/NurbsPatchImageTextureH3dViewer.png' name='Image'/>
+    <meta content='images/NurbsPatchImageTextureInstantReality.png' name='Image'/>
+    <meta content='images/NurbsPatchImageTextureOctagaVS.png' name='Image'/>
+    <meta content='images/NurbsPatchImageTextureView3dscene.png' name='Image'/>
+    <meta content='images/NurbsPatchImageTextureXj3d.png' name='Image'/>
+    <meta content='http://www.kshell.com/pages/nurbs_surface_demo' name='reference'/>
+    <meta content='AxesTexture.png' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/NURBS/NurbsPatchImageTexture.x3d' name='identifier'/>
+    <meta content='Python language scripting' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='NurbsPatchImageTexture.x3d'/>
+    <Background skyColor='0.5 0.5 0.5'/>
+    <Viewpoint description='view outer surface' fieldOfView='0.16628' orientation='0.166 0.465 0.87 2.538' position='10.55 12.855 11.111'/>
+    <Viewpoint description='view inner surface' fieldOfView='0.16628' orientation='0.797 -0.285 -0.533 1.182' position='-10.55 -12.855 11.111'/>
+    <Shape>
+      <NurbsPatchSurface solid='false' uDimension='5' uKnot='0 0 0 0.5 0.5 1 1 1' vDimension='2' vKnot='0 0 1 1' vOrder='2' weight='1 0.92388 1 0.92388 1 1 0.92388 1 0.92388 1'>
+        <Coordinate containerField='controlPoint' point='1 0 0 0.92388 0.38268 0 0.70711 0.70711 0 0.38268 0.92388 0 -0.000004 1 0 1 0 1 0.92388 0.38268 0.92388 0.70711 0.70711 1 0.38268 0.92388 0.92388 -0.000004 1 1'/>
+      </NurbsPatchSurface>
+      <Appearance>
+        <ImageTexture url='"AxesTexture.png" "https://www.web3d.org/x3d/content/examples/Basic/NURBS/AxesTexture.png"'/>
+      </Appearance>
+    </Shape>
+    <Group>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 1 0 0'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='1 0 0'/>
+          <LineProperties linewidthScaleFactor='2'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 0 1 0'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='0 1 0'/>
+          <LineProperties linewidthScaleFactor='2'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 0 0 1'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='0 0 1'/>
+          <LineProperties linewidthScaleFactor='2'/>
+        </Appearance>
+      </Shape>
+    </Group>
+  </Scene>
+</X3D>

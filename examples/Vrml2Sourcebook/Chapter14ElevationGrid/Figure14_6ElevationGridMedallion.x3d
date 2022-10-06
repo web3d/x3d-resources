@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure14_6ElevationGridMedallion.x3d' name='title'/>
+    <meta content='Figure 14.6, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch14/14fig06.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='19 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A medallion built from 12 ElevationGrid ribbons.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter14ElevationGrid/Figure14_6ElevationGridMedallion.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure14_6ElevationGridMedallion.x3d'/>
+    <Viewpoint description='Medallion' orientation='1 0 0 -0.6' position='0 60 120'/>
+    <Group>
+      <Group DEF='ThreeRibbon'>
+        <Transform DEF='OneRibbon' translation='0 0 -2'>
+          <Inline url='"Figure14_3ElevationGridRibbon.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter14ElevationGrid/Figure14_3ElevationGridRibbon.x3d" "Figure14_3ElevationGridRibbon.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter14ElevationGrid/Figure14_3ElevationGridRibbon.wrl"'/>
+        </Transform>
+        <Transform rotation='0 1 0 0.52'>
+          <Transform USE='OneRibbon'/>
+        </Transform>
+        <Transform rotation='0 1 0 1.05'>
+          <Transform USE='OneRibbon'/>
+        </Transform>
+      </Group>
+      <Transform rotation='0 1 0 1.57'>
+        <Group USE='ThreeRibbon'/>
+      </Transform>
+      <Transform rotation='0 1 0 3.14'>
+        <Group USE='ThreeRibbon'/>
+      </Transform>
+      <Transform rotation='0 1 0 4.71'>
+        <Group USE='ThreeRibbon'/>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

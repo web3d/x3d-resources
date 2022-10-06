@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure10_09ThreeBlinkingShapes.x3d' name='title'/>
+    <meta content='Figure 10.9, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch10/10fig09.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='15 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Three blinking shapes, each controlled using independent ColorInterpolator nodes.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter10Materials/Figure10_09ThreeBlinkingShapes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure10_09ThreeBlinkingShapes.x3d'/>
+    <Viewpoint description='Blinking shapes' position='0 0 8'/>
+    <Group>
+      <Transform translation='-2 0 0'>
+        <Shape>
+          <Appearance>
+            <Material DEF='BALL_COLOR_1' diffuseColor='0.4 0.4 0.4'/>
+          </Appearance>
+          <Box size='1.5 1.5 1.5'/>
+        </Shape>
+      </Transform>
+      <Shape>
+        <Appearance>
+          <Material DEF='BALL_COLOR_2' diffuseColor='0.4 0.4 0.4'/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <Transform translation='2 0 0'>
+        <Shape>
+          <Appearance>
+            <Material DEF='BALL_COLOR_3' diffuseColor='0.4 0.4 0.4'/>
+          </Appearance>
+          <Cone/>
+        </Shape>
+      </Transform>
+      <TimeSensor DEF='CLOCK_1' cycleInterval='2' loop='true'/>
+      <TimeSensor DEF='CLOCK_2' cycleInterval='3.6' loop='true'/>
+      <TimeSensor DEF='CLOCK_3' cycleInterval='5' loop='true'/>
+      <ColorInterpolator DEF='COLOR_PATH_1' key='0.0 0.5 0.5 1.0' keyValue='1 1 0 1 1 0 0 0 1 0 0 1'/>
+      <ColorInterpolator DEF='COLOR_PATH_2' key='0.0 0.5 0.5 1.0' keyValue='0.5 0.5 0.5 0.5 0.5 0.5 1 1 1 1 1 1'/>
+      <ColorInterpolator DEF='COLOR_PATH_3' key='0.0 0.5 0.5 1.0' keyValue='0 1 0 0 1 0 1 0 0 1 0 0'/>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK_1' toField='set_fraction' toNode='COLOR_PATH_1'/>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK_2' toField='set_fraction' toNode='COLOR_PATH_2'/>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK_3' toField='set_fraction' toNode='COLOR_PATH_3'/>
+    <ROUTE fromField='value_changed' fromNode='COLOR_PATH_1' toField='set_emissiveColor' toNode='BALL_COLOR_1'/>
+    <ROUTE fromField='value_changed' fromNode='COLOR_PATH_2' toField='set_emissiveColor' toNode='BALL_COLOR_2'/>
+    <ROUTE fromField='value_changed' fromNode='COLOR_PATH_3' toField='set_emissiveColor' toNode='BALL_COLOR_3'/>
+  </Scene>
+</X3D>

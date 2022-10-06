@@ -1,0 +1,115 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO GeoViewpoint [
+  field        SFNode     geoOrigin
+  field        MFString   geoSystem
+  field        SFString   position
+  field        SFRotation orientation
+  field        SFString   description
+  exposedField SFFloat    fieldOfView
+  exposedField SFBool     jump
+  exposedField MFString   navType
+  eventIn      SFBool     set_bind
+  eventIn      SFString   set_position
+  eventOut     SFTime     bindTime
+  eventOut     SFBool     isBound
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoViewpoint.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoViewpoint.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoViewpoint.wrl"
+]
+
+EXTERNPROTO GeoPositionInterpolator [
+  field        SFNode   geoOrigin
+  field        MFString geoSystem
+  field        MFFloat  key
+  field        MFString keyValue
+  eventIn      SFFloat  set_fraction
+  eventOut     SFVec3f  value_changed
+  eventOut     SFString geovalue_changed
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoPositionInterpolator.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoPositionInterpolator.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoPositionInterpolator.wrl"
+]
+
+EXTERNPROTO GeoElevationGrid [
+  field        SFNode   geoOrigin
+  field        MFString geoSystem
+  field        SFString geoGridOrigin
+  field        SFInt32  xDimension
+  field        SFString xSpacing
+  field        SFInt32  zDimension
+  field        SFString zSpacing
+  field        MFFloat  height
+  exposedField SFNode   color
+  exposedField SFNode   texCoord
+  exposedField SFNode   normal
+  field        SFBool   normalPerVertex
+  field        SFBool   ccw
+  field        SFBool   colorPerVertex
+  field        SFFloat  creaseAngle
+  field        SFBool   solid
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoElevationGrid.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoElevationGrid.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoElevationGrid.wrl"
+]
+
+Group {
+  children [
+     DEF V GeoViewpoint {
+	geoSystem [ "GDC" ]
+	position "51.5122 -0.065 10000000"
+	orientation 1 0 0 -1.57
+	description "Animating GeoViewpoint"
+     }
+     
+     Shape {
+	appearance Appearance {
+	   material Material { diffuseColor 0.8 1.0 0.3 }
+	   texture ImageTexture { url "earth.jpg" }
+	}
+	geometry GeoElevationGrid {
+	   geoSystem [ "GDC" ]
+	   geoGridOrigin "-90 -180 0"
+	   xDimension 11
+	   zDimension 11
+	   xSpacing "36"
+	   zSpacing "18"
+	   height [
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0
+		   0 0 0 0 0 0 0 0 0 0 0 
+		   0 0 0 0 0 0 0 0 0 0 0 ]
+	}
+     }
+     
+     DEF PI GeoPositionInterpolator {
+	geoSystem "GDC"
+	key [ 0.0  0.1  0.55  1.0 ]
+	keyValue [ 
+		  "51.5122 -0.065     10000000",       # London
+		  "48.865   2.35      10000000",       # Paris
+		  "40.6698 -73.943849 10000000",       # New York
+		  "51.5122 -0.065     10000000",       # Back to London
+		 ]
+     }
+     DEF TS TimeSensor { 
+	cycleInterval 8.0
+	loop TRUE
+     }
+     
+     Background { skyColor 1 1 1 groundColor 1 1 1 }
+    ]
+}
+
+ROUTE TS.fraction_changed TO PI.set_fraction
+ROUTE PI.geovalue_changed TO V.set_position

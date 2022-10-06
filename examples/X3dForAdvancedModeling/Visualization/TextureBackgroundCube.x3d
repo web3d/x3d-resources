@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='3' name='EnvironmentalEffects'/>
+    <meta content='TextureBackgroundCube.x3d' name='title'/>
+    <meta content='TextureBackground containing ImageTexture nodes, with labeled side images and wide field-of-view (FOV) Viewpoints, suitable for scene-orientation testing. Includes transparency interpolator test and also LoadSensor Script console to log events of interest.' name='description'/>
+    <meta content='1 May 2017' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='BackgroundCube.x3d.' name='reference'/>
+    <meta content='../GeometricShapes/CubeWithLabeledSides.x3d' name='reference'/>
+    <meta content='../Animation/CubeWithLabeledSidesViewpointSequencer.x3d' name='reference'/>
+    <meta content='../Animation/CubeWithLabeledSidesViewpointSequencer.png' name='Image'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Visualization/BackgroundCube.x3d' name='identifier'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/license.html' name='license'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TextureBackgroundCube.x3d'/>
+    <TextureBackground DEF='TransparentBackground'>
+      <ImageTexture DEF='backTexture' containerField='backTexture' url='"../GeometricShapes/images/back.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/images/back.png"'/>
+      <ImageTexture DEF='bottomTexture' containerField='bottomTexture' url='"../GeometricShapes/images/bottom.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/images/bottom.png"'/>
+      <ImageTexture DEF='frontTexture' containerField='frontTexture' url='"../GeometricShapes/images/front.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/images/front.png"'/>
+      <ImageTexture DEF='leftTexture' containerField='leftTexture' url='"../GeometricShapes/images/left.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/images/left.png"'/>
+      <ImageTexture DEF='rightTexture' containerField='rightTexture' url='"../GeometricShapes/images/right.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/images/right.png"'/>
+      <ImageTexture DEF='topTexture' containerField='topTexture' url='"../GeometricShapes/images/top.png" "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/images/top.png"'/>
+    </TextureBackground>
+    <ScalarInterpolator DEF='TransparencyAnimator' key='0 0.5 1' keyValue='0 1 0'/>
+    <ROUTE fromField='value_changed' fromNode='TransparencyAnimator' toField='transparency' toNode='TransparentBackground'/>
+    <TimeSensor DEF='Clock' cycleInterval='6' loop='true'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='TransparencyAnimator'/>
+    <LoadSensor DEF='ImageLoadSensor'>
+      <ImageTexture USE='backTexture' containerField='watchList'/>
+      <ImageTexture USE='bottomTexture' containerField='watchList'/>
+      <ImageTexture USE='frontTexture' containerField='watchList'/>
+      <ImageTexture USE='leftTexture' containerField='watchList'/>
+      <ImageTexture USE='rightTexture' containerField='watchList'/>
+      <ImageTexture USE='topTexture' containerField='watchList'/>
+    </LoadSensor>
+    <Script DEF='LoadSensorReportScript'>
+      <field accessType='inputOnly' name='isActiveUpdate' type='SFBool'/>
+      <field accessType='inputOnly' name='isLoadedUpdate' type='SFBool'/>
+      <field accessType='inputOnly' name='progressUpdate' type='SFFloat'/>
+      <field accessType='inputOnly' name='loadTimeUpdate' type='SFTime'/>
+      <field accessType='inputOnly' name='transparencyUpdate' type='SFFloat'/>
+      <![CDATA[
+ecmascript:
+
+function isActiveUpdate (eventValue)
+{
+   Browser.println('TextureBackgroundCube LoadSensorReportScript: isActiveUpdate=' + eventValue);
+}
+
+function isLoadedUpdate (eventValue)
+{
+   Browser.println('TextureBackgroundCube LoadSensorReportScript: isLoadedUpdate=' + eventValue);
+}
+
+function loadTimeUpdate (eventValue)
+{
+   Browser.println('TextureBackgroundCube LoadSensorReportScript: loadTimeUpdate=' + eventValue);
+}
+
+function progressUpdate (eventValue)
+{
+   Browser.println('TextureBackgroundCube LoadSensorReportScript: progressUpdate=' + eventValue);
+}
+
+function transparencyUpdate (eventValue)
+{
+// pretty busy interpolator
+// Browser.println('TextureBackgroundCube LoadSensorReportScript: transparencyUpdate=' + eventValue);
+}
+]]>
+    </Script>
+    <ROUTE fromField='isActive' fromNode='ImageLoadSensor' toField='isActiveUpdate' toNode='LoadSensorReportScript'/>
+    <ROUTE fromField='isLoaded' fromNode='ImageLoadSensor' toField='isLoadedUpdate' toNode='LoadSensorReportScript'/>
+    <ROUTE fromField='loadTime' fromNode='ImageLoadSensor' toField='loadTimeUpdate' toNode='LoadSensorReportScript'/>
+    <ROUTE fromField='progress' fromNode='ImageLoadSensor' toField='progressUpdate' toNode='LoadSensorReportScript'/>
+    <ROUTE fromField='value_changed' fromNode='TransparencyAnimator' toField='transparencyUpdate' toNode='LoadSensorReportScript'/>
+    <Viewpoint description='Front image of TextureBackground seen from origin' fieldOfView='1.570796' position='0 0 0'/>
+    <Viewpoint description='Left image of TextureBackground seen from origin' fieldOfView='1.570796' orientation='0 1 0 -1.570796' position='0 0 0'/>
+    <Viewpoint description='Top image of TextureBackground seen from origin' fieldOfView='1.570796' orientation='1 0 0 1.570796' position='0 0 0'/>
+    <Viewpoint description='Back image of TextureBackground seen from origin' fieldOfView='1.570796' orientation='0 1 0 3.141593' position='0 0 0'/>
+    <Viewpoint description='Right image of TextureBackground seen from origin' fieldOfView='1.570796' orientation='0 1 0 1.570796' position='0 0 0'/>
+    <Viewpoint description='Bottom image of TextureBackground seen from origin' fieldOfView='1.570796' orientation='1 0 0 -1.570796' position='0 0 0'/>
+  </Scene>
+</X3D>

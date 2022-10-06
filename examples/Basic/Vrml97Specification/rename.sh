@@ -1,0 +1,33 @@
+mv chopperbodyTranslatedUnwrapped.x3d 	ChopperBody.x3d
+mv chopperrotorTranslatedUnwrapped.x3d	ChopperRotor.x3d
+mv exampleD_2TranslatedUnwrapped.x3d	Example2.x3d
+mv exampleD_3TranslatedUnwrapped.x3d	Example3.x3d
+mv exampleD_4AuthoredX3d.x3d		Example4.x3d
+mv exampleD_5AuthoredX3d.x3d		Example5.x3d
+mv exampleD_6AuthoredX3d.x3d		Example6.x3d
+mv exampleD_7AuthoredX3d.x3d		Example7.x3d
+mv exampleD_8AuthoredX3d.x3d		Example8.x3d
+mv exampleD_9TranslatedUnwrapped.x3d	Example9.x3d
+mv Example2.x3d				Example02.x3d
+mv Example3.x3d				Example03.x3d
+mv Example4.x3d				Example04.x3d
+mv Example5.x3d				Example05.x3d
+mv Example6.x3d				Example06.x3d
+mv Example7.x3d				Example07.x3d
+mv Example8.x3d				Example08.x3d
+mv Example9.x3d				Example09.x3d
+mv exampleD_10TranslatedUnwrapped.x3d	Example10.x3d
+mv exampleD_11TranslatedUnwrapped.x3d	Example11.x3d
+mv exampleD_12TranslatedUnwrapped.x3d	Example12.x3d
+mv exampleD_13_2TranslatedUnwrapped.x3d	Example13_2.x3d
+mv exampleD_13_3TranslatedUnwrapped.x3d	Example13_3.x3d
+mv exampleD_14AuthoredX3d.x3d		Example14.x3d
+mv exampleD_15AuthoredX3d.x3d		Example15.x3d
+mv exampleD_16AuthoredX3d.x3d		Example16.x3d
+mv exampleD_17TranslatedUnwrapped.x3d	Example17.x3d
+mv exampleD_18TranslatedUnwrapped.x3d	Example18.x3d
+mv exampleD_19AuthoredX3d.x3d		Example19.x3d
+mv refractivematerialAuthoredX3d.x3d	RefractiveMaterial.x3d
+mv rotorAuthoredX3d.x3d			Rotor.x3d
+ls *.x3d
+

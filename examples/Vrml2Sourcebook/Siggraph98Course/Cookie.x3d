@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Cookie.x3d' name='title'/>
+    <meta content='Cookie texture mapping using texture coordinates.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/cookie.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0283.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0293.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Cookie.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Cookie.x3d'/>
+    <Transform rotation='1.0 0.0 0.0 1.57' scale='2.5 2.5 2.5'>
+      <Shape>
+        <Appearance>
+          <Material/>
+          <ImageTexture url='"cookie.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/cookie.jpg"'/>
+        </Appearance>
+        <IndexedFaceSet convex='false' coordIndex='0 1 2 3 4 5 -1 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35' solid='false' texCoordIndex='0 28 29 30 31 32 -1 0 32 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28'>
+          <TextureCoordinate point='0.5 0.5 0.96 0.41 0.97 0.5 0.96 0.59 0.93 0.68 0.89 0.76 0.83 0.83 0.76 0.89 0.68 0.93 0.59 0.96 0.5 0.97 0.41 0.96 0.32 0.93 0.24 0.89 0.17 0.83 0.11 0.76 0.07 0.68 0.04 0.59 0.03 0.5 0.04 0.41 0.07 0.32 0.11 0.24 0.17 0.17 0.24 0.11 0.32 0.07 0.41 0.04 0.5 0.03 0.59 0.04 0.68 0.07 0.76 0.11 0.83 0.17 0.89 0.24 0.93 0.32'/>
+          <Coordinate point='0.5 0.0 0.5 0.88 0.0 1.42 1.06 0.0 1.33 1.21 0.0 1.21 1.33 0.0 1.06 1.42 0.0 0.88 0.0 0.0 0.0 0.92 0.0 0.38 0.98 0.0 0.2 1.0 0.0 0.0 0.98 0.0 -0.2 0.92 0.0 -0.38 0.83 0.0 -0.56 0.71 0.0 -0.71 0.56 0.0 -0.83 0.38 0.0 -0.92 0.2 0.0 -0.98 0.0 0.0 -1.0 -0.2 0.0 -0.98 -0.38 0.0 -0.92 -0.56 0.0 -0.83 -0.71 0.0 -0.71 -0.83 0.0 -0.56 -0.92 0.0 -0.38 -0.98 0.0 -0.2 -1.0 0.0 0.0 -0.98 0.0 0.2 -0.92 0.0 0.38 -0.83 0.0 0.56 -0.71 0.0 0.71 -0.56 0.0 0.83 -0.38 0.0 0.92 -0.2 0.0 0.98 0.0 0.0 1.0 0.2 0.0 0.98 0.38 0.0 0.92'/>
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component level='1' name='Text'/>
+    <component level='2' name='Grouping'/>
+    <component level='3' name='Navigation'/>
+    <meta content='X3dMeshDesignPattern.x3d' name='title'/>
+    <meta content='Candidate design pattern for 3D scanner outputs to consistently define the elements of an X3D mesh.' name='description'/>
+    <meta content='Don Brutzman, Vince Marchetti, Roy Walmsley, Nicholas Polys' name='creator'/>
+    <meta content='4 June 2017' name='created'/>
+    <meta content='20 August 2022' name='modified'/>
+    <meta content='Upgrade and verify X3D v4.0 XML DTD and Schema to validate' name='TODO'/>
+    <meta content='X3dMeshDesignPattern.txt' name='reference'/>
+    <meta content='X3dMeshDesignPattern.png' name='Image'/>
+    <meta content='Under development. Note that proposed design pattern for Normal inside PointSet or LineSet/IndexedLineSet is not allowed in X3D v3.3.' name='warning'/>
+    <meta content='Web3D 2017 Workshop on 3D Scanning: Use Cases, Workflow and Profile Requirements for X3D' name='reference'/>
+    <meta content='http://web3d2017.web3d.org/program' name='reference'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/X3dMeshDesignPattern.x3d' name='identifier'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='X3dMeshDesignPattern.x3d'/>
+    <Group>
+      <MetadataSet containerField='metadata' name='X3dMesh'>
+        <!-- enter other Metadata nodes and values here, vocabulary TBD -->
+      </MetadataSet>
+      <Switch whichChoice='2'>
+        <Shape>
+          <PointSet>
+            <!-- Currently invalid in X3D DTD: Normal node must be first to be allowed inside IndexedLineSet or LineSet -->
+            <!-- Of note: MeshLab allows assigning normals to a point cloud -->
+            <Normal DEF='VertexNormals'/>
+            <Color DEF='VertexColors' color='1 0 0 0 1 0 0 0 1 1 1 1'/>
+            <Coordinate DEF='VertexValues' point='1 1 0 1 -1 0 -1 -1 0 -1 1 0'/>
+            <!-- Currently invalid in X3D v3.3: Normal node not allowed inside PointSet -->
+          </PointSet>
+        </Shape>
+        <Shape>
+          <IndexedLineSet coordIndex='0 1 2 3 0 -1'>
+            <!-- Currently invalid in X3D DTD: Normal node must be first to be allowed inside IndexedLineSet or LineSet -->
+            <Normal USE='VertexNormals'/>
+            <Coordinate USE='VertexValues'/>
+            <Color USE='VertexColors'/>
+          </IndexedLineSet>
+        </Shape>
+        <Shape>
+          <IndexedFaceSet coordIndex='0 1 2 3 0 -1' solid='false'>
+            <Coordinate USE='VertexValues'/>
+            <Color USE='VertexColors'/>
+            <Normal USE='VertexNormals'/>
+          </IndexedFaceSet>
+        </Shape>
+      </Switch>
+      <ViewpointGroup description='Viewpoints at appropriate distance from model'>
+        <Viewpoint description='Front view' position='0 0 4'/>
+      </ViewpointGroup>
+    </Group>
+    <!-- Default scene display -->
+    <Background skyColor='1 1 1'/>
+    <Transform DEF='AvoidCoplanarAliasing' translation='0 0 0.1'>
+      <Shape>
+        <Text string='"X3D" "Mesh" "Design" "Pattern"'>
+          <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.4' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0.3 0.7 0.7'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

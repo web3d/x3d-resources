@@ -1,0 +1,775 @@
+--------------------------------------------------------------------------------------------
+Loading scene C:\x3d-code\www.web3d.org\x3d\content\examples\X3dForWebAuthors\Chapter14Prototypes\WhereAmIExample.x3d
+ 
+Position (x, y, z) = 0 0 10
+
+Orientation (x, y, z, r) = 0 0 1 0
+
+Position (x, y, z) = 0.01 0 10
+
+Orientation (x, y, z, r) = 0 1 0 0
+
+Position (x, y, z) = 0.03 0 10
+
+Orientation (x, y, z, r) = 0 1 0 0
+
+Position (x, y, z) = 0.1 0 10
+
+Orientation (x, y, z, r) = 0 1 0 0.01
+
+Position (x, y, z) = 0.22 0 10
+
+Orientation (x, y, z, r) = 0 1 0 0.02
+
+Position (x, y, z) = 0.33 0 9.99
+
+Orientation (x, y, z, r) = 0 1 0 0.03
+
+Position (x, y, z) = 0.51 0 9.99
+
+Orientation (x, y, z, r) = 0 1 0 0.05
+
+Position (x, y, z) = 0.76 0 9.970000000000001
+
+Orientation (x, y, z, r) = 0 1 0 0.08
+
+Position (x, y, z) = 0.9 0 9.960000000000001
+
+Orientation (x, y, z, r) = 0 1 0 0.09
+
+Position (x, y, z) = 1.22 0 9.92
+
+Orientation (x, y, z, r) = 0 1 0 0.12
+
+Position (x, y, z) = 1.58 0 9.869999999999999
+
+Orientation (x, y, z, r) = 0 1 0 0.16
+
+Position (x, y, z) = 1.83 0 9.83
+
+Orientation (x, y, z, r) = 0 1 0 0.18
+
+Position (x, y, z) = 2.2 0 9.76
+
+Orientation (x, y, z, r) = 0 1 0 0.22
+
+Position (x, y, z) = 2.64 0 9.640000000000001
+
+Orientation (x, y, z, r) = 0 1 0 0.27
+
+Position (x, y, z) = 2.91 0 9.57
+
+Orientation (x, y, z, r) = 0 1 0 0.3
+
+Position (x, y, z) = 3.37 0 9.41
+
+Orientation (x, y, z, r) = 0 1 0 0.34
+
+Position (x, y, z) = 3.87 0 9.220000000000001
+
+Orientation (x, y, z, r) = 0 1 0 0.4
+
+Position (x, y, z) = 4.2 0 9.07
+
+Orientation (x, y, z, r) = 0 1 0 0.43
+
+Position (x, y, z) = 4.65 0 8.85
+
+Orientation (x, y, z, r) = 0 1 0 0.48
+
+Position (x, y, z) = 5.17 0 8.560000000000001
+
+Orientation (x, y, z, r) = 0 1 0 0.54
+
+Position (x, y, z) = 5.44 0 8.390000000000001
+
+Orientation (x, y, z, r) = 0 1 0 0.58
+
+Position (x, y, z) = 5.95 0 8.039999999999999
+
+Orientation (x, y, z, r) = 0 1 0 0.64
+
+Position (x, y, z) = 6.44 0 7.65
+
+Orientation (x, y, z, r) = 0 1 0 0.7
+
+Position (x, y, z) = 6.72 0 7.4
+
+Orientation (x, y, z, r) = 0 1 0 0.74
+
+Position (x, y, z) = 7.15 0 6.99
+
+Orientation (x, y, z, r) = 0 1 0 0.8
+
+Position (x, y, z) = 7.58 0 6.52
+
+Orientation (x, y, z, r) = 0 1 0 0.86
+
+Position (x, y, z) = 7.81 0 6.24
+
+Orientation (x, y, z, r) = 0 1 0 0.9
+
+Position (x, y, z) = 8.16 0 5.77
+
+Orientation (x, y, z, r) = 0 1 0 0.96
+
+Position (x, y, z) = 8.5 0 5.26
+
+Orientation (x, y, z, r) = 0 1 0 1.02
+
+Position (x, y, z) = 8.66 0 4.99
+
+Orientation (x, y, z, r) = 0 1 0 1.05
+
+Position (x, y, z) = 8.94 0 4.48
+
+Orientation (x, y, z, r) = 0 1 0 1.11
+
+Position (x, y, z) = 9.18 0 3.96
+
+Orientation (x, y, z, r) = 0 1 0 1.16
+
+Position (x, y, z) = 9.289999999999999 0 3.7
+
+Orientation (x, y, z, r) = 0 1 0 1.19
+
+Position (x, y, z) = 9.470000000000001 0 3.2
+
+Orientation (x, y, z, r) = 0 1 0 1.25
+
+Position (x, y, z) = 9.619999999999999 0 2.72
+
+Orientation (x, y, z, r) = 0 1 0 1.3
+
+Position (x, y, z) = 9.699999999999999 0 2.43
+
+Orientation (x, y, z, r) = 0 1 0 1.33
+
+Position (x, y, z) = 9.789999999999999 0 2.05
+
+Orientation (x, y, z, r) = 0 1 0 1.36
+
+Position (x, y, z) = 9.859999999999999 0 1.65
+
+Orientation (x, y, z, r) = 0 1 0 1.41
+
+Position (x, y, z) = 9.9 0 1.43
+
+Orientation (x, y, z, r) = 0 1 0 1.43
+
+Position (x, y, z) = 9.94 0 1.11
+
+Orientation (x, y, z, r) = 0 1 0 1.46
+
+Position (x, y, z) = 9.970000000000001 0 0.8
+
+Orientation (x, y, z, r) = 0 1 0 1.49
+
+Position (x, y, z) = 9.98 0 0.63
+
+Orientation (x, y, z, r) = 0 1 0 1.51
+
+Position (x, y, z) = 9.99 0 0.43
+
+Orientation (x, y, z, r) = 0 1 0 1.53
+
+Position (x, y, z) = 10 0 0.25
+
+Orientation (x, y, z, r) = 0 1 0 1.55
+
+Position (x, y, z) = 10 0 0.17
+
+Orientation (x, y, z, r) = 0 1 0 1.55
+
+Position (x, y, z) = 10 0 0.07000000000000001
+
+Orientation (x, y, z, r) = 0 1 0 1.56
+
+Position (x, y, z) = 10 0 0.01
+
+Orientation (x, y, z, r) = 0 1 0 1.57
+
+Position (x, y, z) = 10 0 0
+
+Orientation (x, y, z, r) = 0 1 0 1.57
+
+Position (x, y, z) = 0 0 10
+
+Orientation (x, y, z, r) = 0 0 1 0
+
+Position (x, y, z) = 10 0 -0.01
+
+Orientation (x, y, z, r) = 0 1 0 1.57
+
+Position (x, y, z) = 10 0 -0.03
+
+Orientation (x, y, z, r) = 0 1 0 1.57
+
+Position (x, y, z) = 10 0 -0.11
+
+Orientation (x, y, z, r) = 0 1 0 1.58
+
+Position (x, y, z) = 10 0 -0.25
+
+Orientation (x, y, z, r) = 0 1 0 1.6
+
+Position (x, y, z) = 9.99 0 -0.36
+
+Orientation (x, y, z, r) = 0 1 0 1.61
+
+Position (x, y, z) = 9.99 0 -0.54
+
+Orientation (x, y, z, r) = 0 1 0 1.62
+
+Position (x, y, z) = 9.970000000000001 0 -0.8
+
+Orientation (x, y, z, r) = 0 1 0 1.65
+
+Position (x, y, z) = 9.949999999999999 0 -0.97
+
+Orientation (x, y, z, r) = 0 1 0 1.67
+
+Position (x, y, z) = 9.92 0 -1.27
+
+Orientation (x, y, z, r) = 0 1 0 1.7
+
+Position (x, y, z) = 9.869999999999999 0 -1.63
+
+Orientation (x, y, z, r) = 0 1 0 1.73
+
+Position (x, y, z) = 9.82 0 -1.88
+
+Orientation (x, y, z, r) = 0 1 0 1.76
+
+Position (x, y, z) = 9.74 0 -2.26
+
+Orientation (x, y, z, r) = 0 1 0 1.8
+
+Position (x, y, z) = 9.630000000000001 0 -2.71
+
+Orientation (x, y, z, r) = 0 1 0 1.84
+
+Position (x, y, z) = 9.550000000000001 0 -2.95
+
+Orientation (x, y, z, r) = 0 1 0 1.87
+
+Position (x, y, z) = 9.390000000000001 0 -3.44
+
+Orientation (x, y, z, r) = 0 1 0 1.92
+
+Position (x, y, z) = 9.19 0 -3.94
+
+Orientation (x, y, z, r) = 0 1 0 1.98
+
+Position (x, y, z) = 9.039999999999999 0 -4.28
+
+Orientation (x, y, z, r) = 0 1 0 2.01
+
+Position (x, y, z) = 8.810000000000001 0 -4.73
+
+Orientation (x, y, z, r) = 0 1 0 2.06
+
+Position (x, y, z) = 8.51 0 -5.25
+
+Orientation (x, y, z, r) = 0 1 0 2.12
+
+Position (x, y, z) = 8.35 0 -5.5
+
+Orientation (x, y, z, r) = 0 1 0 2.15
+
+Position (x, y, z) = 7.98 0 -6.02
+
+Orientation (x, y, z, r) = 0 1 0 2.22
+
+Position (x, y, z) = 7.59 0 -6.51
+
+Orientation (x, y, z, r) = 0 1 0 2.28
+
+Position (x, y, z) = 7.32 0 -6.81
+
+Orientation (x, y, z, r) = 0 1 0 2.32
+
+Position (x, y, z) = 6.93 0 -7.21
+
+Orientation (x, y, z, r) = 0 1 0 2.38
+
+Position (x, y, z) = 6.46 0 -7.63
+
+Orientation (x, y, z, r) = 0 1 0 2.44
+
+Position (x, y, z) = 6.21 0 -7.84
+
+Orientation (x, y, z, r) = 0 1 0 2.47
+
+Position (x, y, z) = 5.71 0 -8.210000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.53
+
+Position (x, y, z) = 5.19 0 -8.550000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.6
+
+Position (x, y, z) = 4.92 0 -8.699999999999999
+
+Orientation (x, y, z, r) = 0 1 0 2.63
+
+Position (x, y, z) = 4.4 0 -8.98
+
+Orientation (x, y, z, r) = 0 1 0 2.69
+
+Position (x, y, z) = 3.89 0 -9.210000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.74
+
+Position (x, y, z) = 3.64 0 -9.310000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.77
+
+Position (x, y, z) = 3.13 0 -9.5
+
+Orientation (x, y, z, r) = 0 1 0 2.82
+
+Position (x, y, z) = 2.66 0 -9.640000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.87
+
+Position (x, y, z) = 2.37 0 -9.720000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.9
+
+Position (x, y, z) = 1.99 0 -9.800000000000001
+
+Orientation (x, y, z, r) = 0 1 0 2.94
+
+Position (x, y, z) = 1.59 0 -9.869999999999999
+
+Orientation (x, y, z, r) = 0 1 0 2.98
+
+Position (x, y, z) = 1.4 0 -9.9
+
+Orientation (x, y, z, r) = 0 1 0 3
+
+Position (x, y, z) = 1.06 0 -9.94
+
+Orientation (x, y, z, r) = 0 1 0 3.03
+
+Position (x, y, z) = 0.77 0 -9.970000000000001
+
+Orientation (x, y, z, r) = 0 1 0 3.06
+
+Position (x, y, z) = 0.6 0 -9.98
+
+Orientation (x, y, z, r) = 0 1 0 3.08
+
+Position (x, y, z) = 0.41 0 -9.99
+
+Orientation (x, y, z, r) = 0 1 0 3.1
+
+Position (x, y, z) = 0.23 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.12
+
+Position (x, y, z) = 0.16 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.13
+
+Position (x, y, z) = 0.06 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.14
+
+Position (x, y, z) = 0.01 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.14
+
+Position (x, y, z) = 0 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.14
+
+Position (x, y, z) = 0 0 10
+
+Orientation (x, y, z, r) = 0 0 1 0
+
+Position (x, y, z) = -0.01 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.14
+
+Position (x, y, z) = -0.07000000000000001 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.15
+
+Position (x, y, z) = -0.13 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.15
+
+Position (x, y, z) = -0.25 0 -10
+
+Orientation (x, y, z, r) = 0 1 0 3.17
+
+Position (x, y, z) = -0.44 0 -9.99
+
+Orientation (x, y, z, r) = 0 1 0 3.19
+
+Position (x, y, z) = -0.5600000000000001 0 -9.98
+
+Orientation (x, y, z, r) = 0 1 0 3.2
+
+Position (x, y, z) = -0.8100000000000001 0 -9.970000000000001
+
+Orientation (x, y, z, r) = 0 1 0 3.22
+
+Position (x, y, z) = -1.12 0 -9.94
+
+Orientation (x, y, z, r) = 0 1 0 3.25
+
+Position (x, y, z) = -1.33 0 -9.91
+
+Orientation (x, y, z, r) = 0 1 0 3.28
+
+Position (x, y, z) = -1.66 0 -9.859999999999999
+
+Orientation (x, y, z, r) = 0 1 0 3.31
+
+Position (x, y, z) = -2.06 0 -9.789999999999999
+
+Orientation (x, y, z, r) = 0 1 0 3.35
+
+Position (x, y, z) = -2.27 0 -9.74
+
+Orientation (x, y, z, r) = 0 1 0 3.37
+
+Position (x, y, z) = -2.74 0 -9.619999999999999
+
+Orientation (x, y, z, r) = 0 1 0 3.42
+
+Position (x, y, z) = -3.21 0 -9.470000000000001
+
+Orientation (x, y, z, r) = 0 1 0 3.47
+
+Position (x, y, z) = -3.5 0 -9.369999999999999
+
+Orientation (x, y, z, r) = 0 1 0 3.5
+
+Position (x, y, z) = -3.97 0 -9.18
+
+Orientation (x, y, z, r) = 0 1 0 3.55
+
+Position (x, y, z) = -4.49 0 -8.94
+
+Orientation (x, y, z, r) = 0 1 0 3.61
+
+Position (x, y, z) = -4.76 0 -8.800000000000001
+
+Orientation (x, y, z, r) = 0 1 0 3.64
+
+Position (x, y, z) = -5.28 0 -8.49
+
+Orientation (x, y, z, r) = 0 1 0 3.7
+
+Position (x, y, z) = -5.79 0 -8.15
+
+Orientation (x, y, z, r) = 0 1 0 3.76
+
+Position (x, y, z) = -6.11 0 -7.91
+
+Orientation (x, y, z, r) = 0 1 0 3.8
+
+Position (x, y, z) = -6.54 0 -7.57
+
+Orientation (x, y, z, r) = 0 1 0 3.85
+
+Position (x, y, z) = -7.01 0 -7.14
+
+Orientation (x, y, z, r) = 0 1 0 3.92
+
+Position (x, y, z) = -7.22 0 -6.92
+
+Orientation (x, y, z, r) = 0 1 0 3.95
+
+Position (x, y, z) = -7.66 0 -6.43
+
+Orientation (x, y, z, r) = 0 1 0 4.01
+
+Position (x, y, z) = -8.050000000000001 0 -5.94
+
+Orientation (x, y, z, r) = 0 1 0 4.08
+
+Position (x, y, z) = -8.279999999999999 0 -5.61
+
+Orientation (x, y, z, r) = 0 1 0 4.12
+
+Position (x, y, z) = -8.57 0 -5.16
+
+Orientation (x, y, z, r) = 0 1 0 4.17
+
+Position (x, y, z) = -8.859999999999999 0 -4.64
+
+Orientation (x, y, z, r) = 0 -1 0 2.05
+
+Position (x, y, z) = -8.99 0 -4.37
+
+Orientation (x, y, z, r) = 0 -1 0 2.02
+
+Position (x, y, z) = -9.220000000000001 0 -3.88
+
+Orientation (x, y, z, r) = 0 -1 0 1.97
+
+Position (x, y, z) = -9.42 0 -3.36
+
+Orientation (x, y, z, r) = 0 -1 0 1.91
+
+Position (x, y, z) = -9.529999999999999 0 -3.04
+
+Orientation (x, y, z, r) = 0 -1 0 1.88
+
+Position (x, y, z) = -9.640000000000001 0 -2.65
+
+Orientation (x, y, z, r) = 0 -1 0 1.84
+
+Position (x, y, z) = -9.76 0 -2.18
+
+Orientation (x, y, z, r) = 0 -1 0 1.79
+
+Position (x, y, z) = -9.800000000000001 0 -1.98
+
+Orientation (x, y, z, r) = 0 -1 0 1.77
+
+Position (x, y, z) = -9.869999999999999 0 -1.58
+
+Orientation (x, y, z, r) = 0 -1 0 1.73
+
+Position (x, y, z) = -9.93 0 -1.21
+
+Orientation (x, y, z, r) = 0 -1 0 1.69
+
+Position (x, y, z) = -9.949999999999999 0 -1
+
+Orientation (x, y, z, r) = 0 -1 0 1.67
+
+Position (x, y, z) = -9.970000000000001 0 -0.76
+
+Orientation (x, y, z, r) = 0 -1 0 1.65
+
+Position (x, y, z) = -9.99 0 -0.5
+
+Orientation (x, y, z, r) = 0 -1 0 1.62
+
+Position (x, y, z) = -9.99 0 -0.39
+
+Orientation (x, y, z, r) = 0 -1 0 1.61
+
+Position (x, y, z) = -10 0 -0.23
+
+Orientation (x, y, z, r) = 0 -1 0 1.59
+
+Position (x, y, z) = -10 0 -0.14
+
+Orientation (x, y, z, r) = 0 -1 0 1.58
+
+Position (x, y, z) = -10 0 -0.05
+
+Orientation (x, y, z, r) = 0 -1 0 1.58
+
+Position (x, y, z) = -10 0 -0.01
+
+Orientation (x, y, z, r) = 0 -1 0 1.57
+
+Position (x, y, z) = -10 0 0
+
+Orientation (x, y, z, r) = 0 -1 0 1.57
+
+Position (x, y, z) = 0 0 10
+
+Orientation (x, y, z, r) = 0 0 1 0
+
+Position (x, y, z) = -10 0 0.01
+
+Orientation (x, y, z, r) = 0 -1 0 1.57
+
+Position (x, y, z) = -10 0 0.03
+
+Orientation (x, y, z, r) = 0 -1 0 1.57
+
+Position (x, y, z) = -10 0 0.1
+
+Orientation (x, y, z, r) = 0 -1 0 1.56
+
+Position (x, y, z) = -10 0 0.23
+
+Orientation (x, y, z, r) = 0 -1 0 1.55
+
+Position (x, y, z) = -9.99 0 0.32
+
+Orientation (x, y, z, r) = 0 -1 0 1.54
+
+Position (x, y, z) = -9.99 0 0.52
+
+Orientation (x, y, z, r) = 0 -1 0 1.52
+
+Position (x, y, z) = -9.970000000000001 0 0.78
+
+Orientation (x, y, z, r) = 0 -1 0 1.49
+
+Position (x, y, z) = -9.949999999999999 0 0.96
+
+Orientation (x, y, z, r) = 0 -1 0 1.47
+
+Position (x, y, z) = -9.92 0 1.24
+
+Orientation (x, y, z, r) = 0 -1 0 1.45
+
+Position (x, y, z) = -9.869999999999999 0 1.6
+
+Orientation (x, y, z, r) = 0 -1 0 1.41
+
+Position (x, y, z) = -9.84 0 1.81
+
+Orientation (x, y, z, r) = 0 -1 0 1.39
+
+Position (x, y, z) = -9.75 0 2.22
+
+Orientation (x, y, z, r) = 0 -1 0 1.35
+
+Position (x, y, z) = -9.640000000000001 0 2.67
+
+Orientation (x, y, z, r) = 0 -1 0 1.3
+
+Position (x, y, z) = -9.550000000000001 0 2.98
+
+Orientation (x, y, z, r) = 0 -1 0 1.27
+
+Position (x, y, z) = -9.4 0 3.4
+
+Orientation (x, y, z, r) = 0 -1 0 1.22
+
+Position (x, y, z) = -9.210000000000001 0 3.91
+
+Orientation (x, y, z, r) = 0 -1 0 1.17
+
+Position (x, y, z) = -9.07 0 4.2
+
+Orientation (x, y, z, r) = 0 -1 0 1.14
+
+Position (x, y, z) = -8.83 0 4.69
+
+Orientation (x, y, z, r) = 0 -1 0 1.08
+
+Position (x, y, z) = -8.539999999999999 0 5.21
+
+Orientation (x, y, z, r) = 0 -1 0 1.02
+
+Position (x, y, z) = -8.33 0 5.54
+
+Orientation (x, y, z, r) = 0 -1 0 0.98
+
+Position (x, y, z) = -8.01 0 5.98
+
+Orientation (x, y, z, r) = 0 -1 0 0.9300000000000001
+
+Position (x, y, z) = -7.62 0 6.47
+
+Orientation (x, y, z, r) = 0 -1 0 0.87
+
+Position (x, y, z) = -7.41 0 6.72
+
+Orientation (x, y, z, r) = 0 -1 0 0.83
+
+Position (x, y, z) = -6.96 0 7.18
+
+Orientation (x, y, z, r) = 0 -1 0 0.77
+
+Position (x, y, z) = -6.5 0 7.6
+
+Orientation (x, y, z, r) = 0 -1 0 0.71
+
+Position (x, y, z) = -6.18 0 7.86
+
+Orientation (x, y, z, r) = 0 -1 0 0.67
+
+Position (x, y, z) = -5.74 0 8.19
+
+Orientation (x, y, z, r) = 0 -1 0 0.61
+
+Position (x, y, z) = -5.23 0 8.52
+
+Orientation (x, y, z, r) = 0 -1 0 0.55
+
+Position (x, y, z) = -4.93 0 8.699999999999999
+
+Orientation (x, y, z, r) = 0 -1 0 0.52
+
+Position (x, y, z) = -4.44 0 8.960000000000001
+
+Orientation (x, y, z, r) = 0 -1 0 0.46
+
+Position (x, y, z) = -3.93 0 9.199999999999999
+
+Orientation (x, y, z, r) = 0 -1 0 0.4
+
+Position (x, y, z) = -3.6 0 9.33
+
+Orientation (x, y, z, r) = 0 -1 0 0.37
+
+Position (x, y, z) = -3.17 0 9.49
+
+Orientation (x, y, z, r) = 0 -1 0 0.32
+
+Position (x, y, z) = -2.69 0 9.630000000000001
+
+Orientation (x, y, z, r) = 0 -1 0 0.27
+
+Position (x, y, z) = -2.46 0 9.69
+
+Orientation (x, y, z, r) = 0 -1 0 0.25
+
+Position (x, y, z) = -2.02 0 9.789999999999999
+
+Orientation (x, y, z, r) = 0 -1 0 0.2
+
+Position (x, y, z) = -1.62 0 9.869999999999999
+
+Orientation (x, y, z, r) = 0 -1 0 0.16
+
+Position (x, y, z) = -1.41 0 9.9
+
+Orientation (x, y, z, r) = 0 -1 0 0.14
+
+Position (x, y, z) = -1.09 0 9.94
+
+Orientation (x, y, z, r) = 0 -1 0 0.11
+
+Position (x, y, z) = -0.79 0 9.970000000000001
+
+Orientation (x, y, z, r) = 0 -1 0 0.08
+
+Position (x, y, z) = -0.63 0 9.98
+
+Orientation (x, y, z, r) = 0 -1 0 0.06
+
+Position (x, y, z) = -0.42 0 9.99
+
+Orientation (x, y, z, r) = 0 -1 0 0.04
+
+Position (x, y, z) = -0.24 0 10
+
+Orientation (x, y, z, r) = 0 -1 0 0.02
+
+Position (x, y, z) = -0.17 0 10
+
+Orientation (x, y, z, r) = 0 -1 0 0.02
+
+Position (x, y, z) = -0.06 0 10
+
+Orientation (x, y, z, r) = 0 -1 0 0.01
+
+Position (x, y, z) = -0.01 0 10
+
+Orientation (x, y, z, r) = 0 -1 0 0
+
+Position (x, y, z) = 0 0 10
+
+Orientation (x, y, z, r) = 0 -1 0 0
+
+Position (x, y, z) = 0 0 10
+
+Orientation (x, y, z, r) = 0 0 1 0
+

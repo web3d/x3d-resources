@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Robots.x3d' name='title'/>
+    <meta content='Robot generator prototype to create multiple new nodes. For this example, we create a new "Robot" node type that has three fields, one each for setting the l color (robot body), its eye color, and its rod color (gadgets on the body). Those three fields are used within the body of the Prototype where the robot form is constructed. Each time a Prototype field (l, eye, and rod colors) is used within the Prototype body, use the "IS" syntax to say: "this field within the Prototype body IS equal to the argument in the Prototype interface."' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='RoboBill.x3d' name='reference'/>
+    <meta content='originals/robot.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0479.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Robots.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1998, David R. Nadeau"' title='Robot Generator'/>
+    <Viewpoint description='Entry view' orientation='1.0 0.0 0.0 -0.34' position='0.0 3.6 6.8'/>
+    <NavigationInfo/>
+    <Background skyAngle='1.77 1.87 1.97' skyColor='0.0 0.0 0.0 0.0 0.0 0.0 0.4 0.0 0.0 0.6 0.0 0.0'/>
+    <ProtoDeclare name='Robot'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='rodColor' type='SFColor' value='1.0 1.0 0.0'/>
+        <field accessType='initializeOnly' name='eyeColor' type='SFColor' value='0.6 0.0 0.0'/>
+        <field accessType='initializeOnly' name='lColor' type='SFColor' value='0.6 0.6 0.8'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group>
+          <Shape>
+            <Appearance DEF='RobotColor'>
+              <Material>
+                <IS>
+                  <connect nodeField='diffuseColor' protoField='lColor'/>
+                </IS>
+              </Material>
+            </Appearance>
+            <Sphere radius='0.5'/>
+          </Shape>
+          <Transform DEF='Rod' rotation='0.0 0.0 1.0 -0.785' translation='0.4 0.6 0.0'>
+            <Shape>
+              <Appearance DEF='RobotGlow'>
+                <Material diffuseColor='0.0 0.0 0.0'>
+                  <IS>
+                    <connect nodeField='emissiveColor' protoField='rodColor'/>
+                  </IS>
+                </Material>
+              </Appearance>
+              <Cylinder height='0.65' radius='0.04'/>
+            </Shape>
+          </Transform>
+          <Transform rotation='0.0 1.0 0.0 1.57'>
+            <Transform USE='Rod'/>
+          </Transform>
+          <Transform rotation='0.0 1.0 0.0 3.14'>
+            <Transform USE='Rod'/>
+          </Transform>
+          <Transform rotation='0.0 1.0 0.0 -1.57'>
+            <Transform USE='Rod'/>
+          </Transform>
+          <Transform translation='0.0 0.85 0.0'>
+            <Shape>
+              <Appearance USE='RobotColor'/>
+              <Cylinder height='0.1' radius='0.8'/>
+            </Shape>
+          </Transform>
+          <Transform translation='0.0 0.95 0.0'>
+            <Shape>
+              <Appearance USE='RobotColor'/>
+              <Cylinder height='0.1' radius='0.2'/>
+            </Shape>
+          </Transform>
+          <Billboard>
+            <Transform translation='0.0 1.4 0.0'>
+              <Shape>
+                <Appearance USE='RobotColor'/>
+                <Sphere radius='0.5'/>
+              </Shape>
+              <Transform translation='0.0 0.25 0.35'>
+                <Shape>
+                  <Appearance>
+                    <Material diffuseColor='0.2 0.2 0.2'/>
+                  </Appearance>
+                  <Box size='0.6 0.05 0.2'/>
+                </Shape>
+              </Transform>
+              <Transform translation='0.1 0.15 0.38'>
+                <Shape DEF='Eye'>
+                  <Appearance>
+                    <Material diffuseColor='0.0 0.0 0.0'>
+                      <IS>
+                        <connect nodeField='emissiveColor' protoField='eyeColor'/>
+                      </IS>
+                    </Material>
+                  </Appearance>
+                  <Sphere radius='0.09'/>
+                </Shape>
+              </Transform>
+              <Transform translation='-0.1 0.15 0.38'>
+                <Shape USE='Eye'/>
+              </Transform>
+              <Transform translation='0.85 0.1 0.0'>
+                <Transform rotation='0.0 0.0 1.0 1.57' translation='-0.2 0.0 0.0'>
+                  <Shape DEF='AntenaeBar'>
+                    <Appearance USE='RobotColor'/>
+                    <Cylinder height='0.4' radius='0.04'/>
+                  </Shape>
+                </Transform>
+                <Shape>
+                  <Appearance USE='RobotColor'/>
+                  <Sphere radius='0.09'/>
+                </Shape>
+                <Transform translation='0.0 0.58 0.0'>
+                  <Shape>
+                    <Appearance USE='RobotGlow'/>
+                    <Cone bottomRadius='0.02' height='1.0'/>
+                  </Shape>
+                </Transform>
+              </Transform>
+              <Transform translation='-0.85 0.1 0.0'>
+                <Transform rotation='0.0 0.0 1.0 -1.57' translation='0.2 0.0 0.0'>
+                  <Shape USE='AntenaeBar'/>
+                </Transform>
+                <Transform rotation='0.0 0.0 1.0 0.785'>
+                  <Shape>
+                    <Appearance USE='RobotColor'/>
+                    <Box size='0.2 0.2 0.2'/>
+                  </Shape>
+                  <Transform translation='0.0 0.58 0.0'>
+                    <Shape>
+                      <Appearance USE='RobotGlow'/>
+                      <Box size='0.02 1.0 0.02'/>
+                    </Shape>
+                  </Transform>
+                  <Transform translation='0.0 0.95 0.0'>
+                    <Shape>
+                      <Appearance USE='RobotGlow'/>
+                      <Box size='0.2 0.02 0.02'/>
+                    </Shape>
+                  </Transform>
+                  <Transform translation='0.0 0.85 0.0'>
+                    <Shape>
+                      <Appearance USE='RobotGlow'/>
+                      <Box size='0.4 0.02 0.02'/>
+                    </Shape>
+                  </Transform>
+                </Transform>
+              </Transform>
+            </Transform>
+          </Billboard>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoInstance name='Robot'>
+      <fieldValue name='eyeColor' value='1.0 0.0 0.0'/>
+      <fieldValue name='rodColor' value='1.0 1.0 0.0'/>
+      <fieldValue name='lColor' value='0.6 0.6 0.8'/>
+    </ProtoInstance>
+    <Transform translation='-2.0 0.0 0.0'>
+      <ProtoInstance name='Robot'>
+        <fieldValue name='eyeColor' value='0.0 1.0 0.0'/>
+        <fieldValue name='rodColor' value='1.0 0.5 0.0'/>
+        <fieldValue name='lColor' value='0.6 0.5 0.3'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='2.0 0.0 0.0'>
+      <ProtoInstance name='Robot'>
+        <fieldValue name='eyeColor' value='0.0 0.8 1.0'/>
+        <fieldValue name='rodColor' value='0.0 0.8 1.0'/>
+        <fieldValue name='lColor' value='0.6 0.3 0.8'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='4.5 0.0 -3.0'>
+      <ProtoInstance name='Robot'>
+        <fieldValue name='eyeColor' value='0.0 0.0 0.0'/>
+        <fieldValue name='rodColor' value='1.0 0.0 0.5'/>
+        <fieldValue name='lColor' value='0.0 0.4 0.9'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='1.5 0.0 -3.0'>
+      <ProtoInstance name='Robot'>
+        <fieldValue name='eyeColor' value='0.0 1.0 0.0'/>
+        <fieldValue name='rodColor' value='1.0 1.0 0.0'/>
+        <fieldValue name='lColor' value='0.6 0.6 0.5'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='-1.5 0.0 -3.0'>
+      <ProtoInstance name='Robot'>
+        <fieldValue name='eyeColor' value='1.0 1.0 0.0'/>
+        <fieldValue name='rodColor' value='1.0 0.0 1.0'/>
+        <fieldValue name='lColor' value='1.0 0.5 0.5'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='-4.5 0.0 -3.0'>
+      <ProtoInstance name='Robot'>
+        <fieldValue name='eyeColor' value='1.0 0.0 0.0'/>
+        <fieldValue name='rodColor' value='0.5 0.0 1.0'/>
+        <fieldValue name='lColor' value='0.0 0.5 1.0'/>
+      </ProtoInstance>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ENTITY, ELEMENT and ATTLIST definitions are listed in detail within the DOCTYPE declaration internal subset. -->
+<!-- You must view full source of the DTD declarations (SpinGroupInternalSubsetDeclaration.x3d.txt) to fully understand this file.  -->
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "http://www.web3d.org/specifications/x3d-3.1.dtd"[
+	<!-- SpinGroupInternalSubsetDeclaration.x3d:  an example scene demonstrating
+     how to extend the X3D DTD to accept and validate a new node.
+
+     The extension-node type declaration goes here in the internal subset.
+     It will override the null-string declaration in the external X3D DTD.
+-->
+	<!ENTITY % GroupingNodeExtensions "SpinGroupTag |">
+	<!-- Now define the node so that content and attribute types are valid.
+     This only works when child content is specified explicitly.
+     The author must carefully match the DTD patterns without error!
+     Complete examples for all node types are found in ProtoTagDtdDeclarationExamples.x3d
+-->
+	<!ELEMENT SpinGroupTag (fieldValue*)>
+	<!ATTLIST SpinGroupTag
+	translation NMTOKENS "0 0 0"
+		rotation NMTOKENS "0 0 1 0"
+		center NMTOKENS "0 0 0"
+		cycleInterval NMTOKEN "1"
+		nodeType NMTOKEN #FIXED "Group"
+		DEF ID #IMPLIED
+		USE IDREF #IMPLIED
+>
+	<!-- Detailed issues and variations regarding type declarations for nodes:
+
+    XML rules say that parameter entities cannot be used inside markup
+    declarations in an internal subset.  Also, &GeneralEntities; cannot
+    be used inside markup declarations in an internal subset.  This
+    unfortunately means that all node declarations must be fully and
+    explicitly enumerated, i.e. all of the parameter entity and
+    general entity declarations in the external DTD are not usable.
+    Bleah, too bad.  Be sure to also consider whether each of the
+    declared PROTOs should allow each other as child content. 
+    Example test-case node declarations follow.
+
+    Correctly enumerated case for a grouping node:
+
+<!ELEMENT SpinGroupTag (fieldValue*, children?) >
+
+    Simple nonvalidating/forgiving case (also good for multiple PROTOs):
+  
+<!ELEMENT SpinGroupTag ANY >
+
+    Nodes that contain no other content nodes are easily defined:
+  
+<!ELEMENT SpinGroupTag EMPTY >
+
+    Simple scene-specific case:
+  
+<!ELEMENT SpinGroupTag ( children ) >
+
+    The following two attempts fail regardless of entities definitions,
+    again because parameter entities are not allowed in the internal subset:
+  
+<!ELEMENT SpinGroupTag ( &percent;ChildrenNodes; )* >
+<!ELEMENT SpinGroupTag ( &ChildrenNodes; )* >
+
+    Actual scene follows which simultaneously and compatibly using a SpinGroup
+    prototype via <ProtoDeclare>, <ProtoInstance>, and <SpinGroupTag> tags.
+    
+-->
+]>
+<X3D version="3.1" profile="Immersive" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.1.xsd">
+	<head>
+		<meta name="title" content="SpinGroupInternalSubsetDeclaration.x3d"/>
+		<meta name="creator" content="Don Brutzman"/>
+		<meta name="created" content="18 September 2000"/>
+		<meta name="modified" content="17 July 2004"/>
+		<meta name="description" content="SpinGroup PROTO example content to test DTD modularization and extensibility - view XML source to see DTD internal-subset declarations."/>
+		<meta name="warning" content="You must view full source of the DTD declarations (SpinGroupInternalSubsetDeclaration.x3d.txt) to fully understand validation techniques in this file."/>
+		<meta name="reference" content="SpinGroupInternalSubsetDeclaration.x3d.txt"/>
+		<meta name="identifier"  content="http://www.web3d.org/x3d/content/examples/development/SpinGroupInternalSubsetDeclaration.x3d"/>
+		<meta name="generator" content="X3D-Edit, http://www.web3d.org/x3d/content/README.X3D-Edit.html"/>
+	</head>
+	<Scene>
+		<!-- Declaring the SpinGroupTag PROTO, so that translations of internally defined SpinGroupTag to VRML can work:  -->
+		<ProtoDeclare name="SpinGroupTag">
+			<ProtoInterface>
+				<field name="translation" type="SFVec3f" value="0 0 0" accessType="inputOutput"/>
+				<field name="rotation" type="SFRotation" value="0 0 1 0" accessType="inputOutput"/>
+				<field name="center" type="SFVec3f" value="0 0 0" accessType="inputOutput"/>
+				<field name="cycleInterval" type="SFTime" accessType="inputOutput" value="1"/>
+				<field name="children" type="MFNode" accessType="inputOutput">
+					<WorldInfo info="overridden at run time"/>
+				</field>
+			</ProtoInterface>
+			<ProtoBody>
+				<!--SpinGroupTransform is first node, which determines node type, and encloses children for instances.-->
+				<Transform DEF="SpinGroupTransform-TagVersion" rotation="1 0 0 0">
+					<IS>
+						<connect nodeField="translation" protoField="translation"/>
+						<connect nodeField="rotation" protoField="rotation"/>
+						<connect nodeField="center" protoField="center"/>
+						<connect nodeField="children" protoField="children"/>
+					</IS>
+					<OrientationInterpolator DEF="SpinGroupOrientationInterpolator-TagVersion" keyValue="0 1 0 0.0, 0 1 0 -3.14159, 0 1 0 -6.28318" key="0.0, 0.50, 1.0"/>
+					<TimeSensor DEF="SpinGroupTimeSensor-TagVersion" loop="true">
+						<IS>
+							<connect nodeField="cycleInterval" protoField="cycleInterval"/>
+						</IS>
+					</TimeSensor>
+					<ROUTE fromNode="SpinGroupTimeSensor-TagVersion" fromField="fraction_changed" toNode="SpinGroupOrientationInterpolator-TagVersion" toField="set_fraction"/>
+					<ROUTE fromNode="SpinGroupOrientationInterpolator-TagVersion" fromField="value_changed" toNode="SpinGroupTransform-TagVersion" toField="set_rotation"/>
+				</Transform>
+			</ProtoBody>
+		</ProtoDeclare>
+		<ProtoDeclare name="SpinGroup">
+			<ProtoInterface>
+				<field name="translation" type="SFVec3f" value="0 0 0" accessType="inputOutput"/>
+				<field name="rotation" type="SFRotation" value="0 0 1 0" accessType="inputOutput"/>
+				<field name="center" type="SFVec3f" value="0 0 0" accessType="inputOutput"/>
+				<field name="cycleInterval" type="SFTime" accessType="inputOutput" value="1"/>
+				<field name="children" type="MFNode" accessType="inputOutput">
+					<WorldInfo info="overridden at run time"/>
+				</field>
+			</ProtoInterface>
+			<ProtoBody>
+				<!--SpinGroupTransform is first node, which determines node type, and encloses children for instances.-->
+				<Transform DEF="SpinGroupTransform">
+					<IS>
+						<connect nodeField="translation" protoField="translation"/>
+						<connect nodeField="rotation" protoField="rotation"/>
+						<connect nodeField="center" protoField="center"/>
+						<connect nodeField="children" protoField="children"/>
+					</IS>
+					<OrientationInterpolator DEF="SpinGroupOrientationInterpolator" keyValue="0 1 0 0.0, 0 1 0 -3.14159, 0 1 0 -6.28318" key="0.0, 0.50, 1.0"/>
+					<TimeSensor DEF="SpinGroupTimeSensor" loop="true">
+						<IS>
+							<connect nodeField="cycleInterval" protoField="cycleInterval"/>
+						</IS>
+					</TimeSensor>
+					<ROUTE fromNode="SpinGroupTimeSensor" fromField="fraction_changed" toNode="SpinGroupOrientationInterpolator" toField="set_fraction"/>
+					<ROUTE fromNode="SpinGroupOrientationInterpolator" fromField="value_changed" toNode="SpinGroupTransform" toField="set_rotation"/>
+				</Transform>
+			</ProtoBody>
+		</ProtoDeclare>
+		<Viewpoint position="0 0 15" description="SpinGroup Examples"/>
+		<NavigationInfo type="EXAMINE"/>
+		<!-- Instantiating the SpinGroupTag using a customized tag:  -->
+		<SpinGroupTag DEF="instanceOne" translation="0 4 0" cycleInterval="8" center="0 0 0" rotation="0 0 1 0">
+			<fieldValue name="children">
+				<Shape>
+					<Appearance DEF="AQUAMARINE">
+						<Material diffuseColor="0.1 0.8 0.8"/>
+					</Appearance>
+					<Text string="SpinGroupTag example 1, single child">
+						<FontStyle DEF="CENTER_FONT" justify='"MIDDLE" "MIDDLE"' style="BOLD"/>
+					</Text>
+				</Shape>
+			</fieldValue>
+		</SpinGroupTag>
+		<!-- Instantiating the SpinGroup PROTO using a ProtoInstance tag:  -->
+		<ProtoInstance name="SpinGroup" DEF="instanceTwo">
+			<fieldValue name="translation" value="0 1 0"/>
+			<fieldValue name="cycleInterval" value="12"/>
+			<fieldValue name="children">
+				<Shape>
+					<Text string="SpinGroup ProtoInstance example 2, single child">
+						<FontStyle USE="CENTER_FONT"/>
+					</Text>
+				</Shape>
+			</fieldValue>
+		</ProtoInstance>
+		<!-- Instantiating the SpinGroup PROTO with multiple Node children:  -->
+		<ProtoInstance name="SpinGroup" DEF="instanceThree">
+			<fieldValue name="translation" value="0 -2 0"/>
+			<fieldValue name="cycleInterval" value="20"/>
+			<fieldValue name="children">
+				<Shape>
+					<Appearance USE="AQUAMARINE"/>
+					<Text string="&#34;SpinGroup ProtoInstance&#34; &#34;example 3, first child&#34;">
+						<FontStyle USE="CENTER_FONT"/>
+					</Text>
+				</Shape>
+				<Transform translation="0 -2 0">
+					<Shape>
+						<Text string="example 3, second child">
+							<FontStyle USE="CENTER_FONT"/>
+						</Text>
+					</Shape>
+				</Transform>
+			</fieldValue>
+		</ProtoInstance>
+	</Scene>
+</X3D>

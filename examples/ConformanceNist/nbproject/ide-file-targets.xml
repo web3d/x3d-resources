@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".." name="X3D examples: ConformanceNist-IDE">
+    <path id="classpath">
+        <pathelement path="classes;lib/CreateContentCatalog.jar;lib/X3DJSAIL.4.0.full.jar;lib/ant-contrib-1.0b3.jar;lib/jslint4java-2.0.5.jar;lib/json-schema-validator-2.2.6-lib.jar"/>
+    </path>
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://www.netbeans.org/kb/articles/freeform-config.html#runsingle) -->
+    <target name="debug-selected-file-in-examples">
+        <fail unless="debug.class">Must set property 'debug.class'</fail>
+        <nbjpdastart addressproperty="jpda.address" name="X3D examples: ConformanceNist" transport="dt_socket">
+            <classpath refid="classpath"/>
+        </nbjpdastart>
+        <java classname="${debug.class}" fork="true">
+            <classpath refid="classpath"/>
+            <jvmarg value="-Xdebug"/>
+            <jvmarg value="-Xrunjdwp:transport=dt_socket,address=${jpda.address}"/>
+        </java>
+    </target>
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://www.netbeans.org/kb/articles/freeform-config.html#runsingle) -->
+    <target name="run-selected-file-in-examples">
+        <fail unless="run.class">Must set property 'run.class'</fail>
+        <java classname="${run.class}" failonerror="true" fork="true">
+            <classpath refid="classpath"/>
+        </java>
+    </target>
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://www.netbeans.org/kb/articles/freeform-config.html#compilesingle) -->
+    <target name="compile-selected-files-in-examples">
+        <fail unless="files">Must set property 'files'</fail>
+        <mkdir dir="classes"/>
+        <javac destdir="classes" includes="${files}" source="1.8" srcdir=".."
+              debug="on"
+            verbose="false"
+            failonerror="false"
+            includeantruntime="false">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+</project>

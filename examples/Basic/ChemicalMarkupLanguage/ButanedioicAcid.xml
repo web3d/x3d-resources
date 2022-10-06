@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<molecule convention="MDLMol" title="Butanedioic Acid">
+  <formula>C4 H6 O4</formula>
+  <float title="molecule weight">118.09</float>
+  <float title="melting point" units="degC">185</float>
+  <float title="boiling point" units="degC">235</float>
+  <float title="specific gravity">1.6</float>
+  <atomArray>
+    <atom id="butanedioic_acid_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.1343</float>
+      <float builtin="y3">0.9978</float>
+      <float builtin="z3">1.7414</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">-55.751903825406266</float>
+      <float builtin="y2">48.698529595875804</float>
+    </atom>
+    <atom id="butanedioic_acid_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.966</float>
+      <float builtin="y3">2.1001</float>
+      <float builtin="z3">1.1065</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">-25.98076211353316</float>
+      <float builtin="y2">45.0</float>
+    </atom>
+    <atom id="butanedioic_acid_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.6854</float>
+      <float builtin="y3">1.0825</float>
+      <float builtin="z3">1.3399</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-81.73266593893942</float>
+      <float builtin="y2">63.698529595875804</float>
+    </atom>
+    <atom id="butanedioic_acid_a4">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">5.4133</float>
+      <float builtin="y3">2.0195</float>
+      <float builtin="z3">1.5145</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">30.0</float>
+    </atom>
+    <atom id="butanedioic_acid_a5">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.8984</float>
+      <float builtin="y3">0.1193</float>
+      <float builtin="z3">1.8759</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-107.71342805247258</float>
+      <float builtin="y2">48.698529595875804</float>
+    </atom>
+    <atom id="butanedioic_acid_a6">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">1.1213</float>
+      <float builtin="y3">1.8803</float>
+      <float builtin="z3">0.6125</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-81.73266593893943</float>
+      <float builtin="y2">93.6985295958758</float>
+    </atom>
+    <atom id="butanedioic_acid_a7">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">6.2033</float>
+      <float builtin="y3">2.9753</float>
+      <float builtin="z3">0.9693</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="butanedioic_acid_a8">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">5.9743</float>
+      <float builtin="y3">1.2314</float>
+      <float builtin="z3">2.2546</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">25.980762113533153</float>
+      <float builtin="y2">45.000000000000014</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="butanedioic_acid_b1">
+      <string builtin="atomRef">butanedioic_acid_a1</string>
+      <string builtin="atomRef">butanedioic_acid_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="butanedioic_acid_b2">
+      <string builtin="atomRef">butanedioic_acid_a1</string>
+      <string builtin="atomRef">butanedioic_acid_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="Butanedioic_Acid_b5">
+      <string builtin="atomRef">butanedioic_acid_a2</string>
+      <string builtin="atomRef">butanedioic_acid_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="butanedioic_acid_b8">
+      <string builtin="atomRef">butanedioic_acid_a3</string>
+      <string builtin="atomRef">butanedioic_acid_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="butanedioic_acid_b9">
+      <string builtin="atomRef">butanedioic_acid_a3</string>
+      <string builtin="atomRef">butanedioic_acid_a6</string>
+      <string builtin="order">2</string>
+    </bond>
+    <bond id="butanedioic_acid_b10">
+      <string builtin="atomRef">butanedioic_acid_a4</string>
+      <string builtin="atomRef">butanedioic_acid_a7</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="butanedioic_acid_b11">
+      <string builtin="atomRef">butanedioic_acid_a4</string>
+      <string builtin="atomRef">butanedioic_acid_a8</string>
+      <string builtin="order">2</string>
+    </bond>
+  </bondArray>
+</molecule>

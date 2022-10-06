@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='KeySensorActivationKeySwitchTest.x3d' name='title'/>
+    <meta content='A simple scene to show KeySensor functionality using Text nodes.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='22 June 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='This doesn&apos;t work because there is no KeySensor implementation yet! Prototype script (written in Java) or native node support for KeySensor is needed.' name='warning'/>
+    <meta content='enabled accessType needs to be changed to exposedField once supported by Script capabilities' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/specification-2000july/part1/nodesDef.html#KeySensor' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/sai/javadoc/org/web3d/x3d/sai/Core/KeySensor.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/development/KeySensorActivationKeySwitchTest.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/Sensors/Keyboard/KeySensorActivationKeySwitchTest.x3d' name='identifier'/>
+    <meta content='KeySensor' name='subject'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- The KeySensor prototype can be omitted if native-node Keysensor support is provided by the VRML browser. -->
+    <WorldInfo title='KeySensorActivationKeySwitchTest.x3d'/>
+    <ProtoDeclare name='KeySensor'>
+      <ProtoInterface>
+        <!-- warning: enabled needs to become an exposedField once Scripts support exposedField -->
+        <field accessType='initializeOnly' name='enabled' type='SFBool' value='true'/>
+        <field accessType='inputOnly' name='set_enabled' type='SFBool'/>
+        <field accessType='outputOnly' name='enabled_changed' type='SFBool'/>
+        <field accessType='outputOnly' name='isActive' type='SFBool'/>
+        <field accessType='outputOnly' name='keyPress' type='SFInt32'/>
+        <field accessType='outputOnly' name='keyRelease' type='SFInt32'/>
+        <field accessType='outputOnly' name='actionKeyPress' type='SFInt32'/>
+        <field accessType='outputOnly' name='actionKeyRelease' type='SFInt32'/>
+        <field accessType='outputOnly' name='altKey' type='SFBool'/>
+        <field accessType='outputOnly' name='controlKey' type='SFBool'/>
+        <field accessType='outputOnly' name='shiftKey' type='SFBool'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- First node in prototype indicates node type, use Group so that this sensor is ChildNodeType. -->
+        <Group>
+          <Script DEF='KeySensorScript'>
+            <field accessType='outputOnly' name='altKey' type='SFBool'/>
+            <field accessType='outputOnly' name='keyPress' type='SFInt32'/>
+            <field accessType='inputOnly' name='set_enabled' type='SFBool'/>
+            <field accessType='outputOnly' name='keyRelease' type='SFInt32'/>
+            <field accessType='initializeOnly' name='enabled' type='SFBool'/>
+            <field accessType='outputOnly' name='shiftKey' type='SFBool'/>
+            <field accessType='outputOnly' name='actionKeyRelease' type='SFInt32'/>
+            <field accessType='outputOnly' name='isActive' type='SFBool'/>
+            <field accessType='outputOnly' name='actionKeyPress' type='SFInt32'/>
+            <field accessType='outputOnly' name='enabled_changed' type='SFBool'/>
+            <field accessType='outputOnly' name='controlKey' type='SFBool'/>
+            <IS>
+              <connect nodeField='enabled' protoField='enabled'/>
+              <connect nodeField='set_enabled' protoField='set_enabled'/>
+              <connect nodeField='enabled_changed' protoField='enabled_changed'/>
+              <connect nodeField='isActive' protoField='isActive'/>
+              <connect nodeField='keyPress' protoField='keyPress'/>
+              <connect nodeField='keyRelease' protoField='keyRelease'/>
+              <connect nodeField='actionKeyPress' protoField='actionKeyPress'/>
+              <connect nodeField='actionKeyRelease' protoField='actionKeyRelease'/>
+              <connect nodeField='altKey' protoField='altKey'/>
+              <connect nodeField='controlKey' protoField='controlKey'/>
+              <connect nodeField='shiftKey' protoField='shiftKey'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+// Native support for KeySensor node
+// or keyboard-access code needed!
+]]>
+          </Script>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ============================================ -->
+    <!-- Enabling this KeySensor (from TouchSensor.isActive) disables all other KeySensors. -->
+    <KeySensor DEF='SingleKeySensor' enabled='false'/>
+    <Billboard>
+      <Transform translation='0 2 0'>
+        <Shape>
+          <Text string='"Touch this text to enable" "KeySensor activation keys then" "press activation keys to test"'>
+            <FontStyle DEF='MiddleMiddle' justify='"MIDDLE" "MIDDLE"'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.9 0.9 0.4'/>
+          </Appearance>
+        </Shape>
+        <TouchSensor DEF='StartMessageTouched' description='Touch this text to enable KeySensor activation keys then press activation keys to test'/>
+        <ROUTE fromField='isOver' fromNode='StartMessageTouched' toField='enabled' toNode='SingleKeySensor'/>
+      </Transform>
+      <Transform translation='0 -1 0'>
+        <Switch DEF='ActivationKeyMessageSwitch' whichChoice='0'>
+          <!-- ROUTE is not treated as a selectable child of Switch -->
+          <ROUTE fromField='actionKeyPress' fromNode='SingleKeySensor' toField='whichChoice' toNode='ActivationKeyMessageSwitch'/>
+          <Shape DEF='Zero'>
+            <Text string='"No activation keypress sensed..."'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance DEF='SelectionAppearance'>
+              <Material diffuseColor='0 1 0'/>
+            </Appearance>
+          </Shape>
+          <Shape DEF='One'>
+            <Text string='"F1"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Two'>
+            <Text string='"F2"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Three'>
+            <Text string='"F3"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Four'>
+            <Text string='"F4"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Five'>
+            <Text string='"F5"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Six'>
+            <Text string='"F6"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Seven'>
+            <Text string='"F7"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Eight'>
+            <Text string='"F8"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Nine'>
+            <Text string='"F9"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Ten'>
+            <Text string='"F10"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Eleven'>
+            <Text string='"F11"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Twelve'>
+            <Text string='"F12"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Thirteen'>
+            <Text string='"13: HOME"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Fourteen'>
+            <Text string='"14: END"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Fifteen'>
+            <Text string='"15: LEFT"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Sixteen'>
+            <Text string='"16: RIGHT"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Seventeen'>
+            <Text string='"17: UP"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Eighteen'>
+            <Text string='"18: DOWN"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Nineteen'>
+            <Text string='"19: PGUP"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+          <Shape DEF='Twenty'>
+            <Text string='"20: PGDN"'>
+              <FontStyle USE='MiddleMiddle'/>
+            </Text>
+            <Appearance USE='SelectionAppearance'/>
+          </Shape>
+        </Switch>
+      </Transform>
+    </Billboard>
+  </Scene>
+</X3D>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='NetworkReroutingAlternateRoutes.x3d' name='title'/>
+    <meta content='This scene demonstrates that even though a minimal interference secondary route has been identified in case of link failure, (a) both routes may be invalid due to an overlap at a critical link, and (b) some reasonable third path may exist to route packets. Note that the hop count is larger (by 1) for each successive route. By pushing the right rear button, the critical link that overlaps the primary and secondary route will turn red opaque.' name='description'/>
+    <meta content='Bill Fischer' name='creator'/>
+    <meta content='Xeena' name='translator'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='NetworkReroutingAlternateRoutes.png' name='Image'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Networking/NetworkReroutingAlternateRoutes.x3d' name='identifier'/>
+    <meta content='NetworkReroutingRoutes.x3d' name='reference'/>
+    <meta content='NetworkReroutingNetwork.x3d' name='reference'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='NetworkReroutingAlternateRoutes.x3d'/>
+    <Viewpoint DEF='default' description='Network Rerouting Alternate Routes' orientation='1 0 0 -.5' position='0 6 10'/>
+    <Group DEF='default_network'>
+      <Transform>
+        <Inline DEF='network' url='"NetworkReroutingNetwork.x3d" "https://www.web3d.org/x3d/content/examples/Basic/Networking/NetworkReroutingNetwork.x3d" "NetworkReroutingNetwork.wrl" "https://www.web3d.org/x3d/content/examples/Basic/Networking/NetworkReroutingNetwork.wrl"'/>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform>
+        <Inline DEF='routes' url='"NetworkReroutingRoutes.x3d" "https://www.web3d.org/x3d/content/examples/Basic/Networking/NetworkReroutingRoutes.x3d" "NetworkReroutingRoutes.wrl" "https://www.web3d.org/x3d/content/examples/Basic/Networking/NetworkReroutingRoutes.wrl"'/>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform rotation='0 1 0 -.785' translation='-3 -.5 1'>
+        <Transform rotation='0 0 1 1.57'>
+          <Shape>
+            <Appearance>
+              <Material DEF='pipe_material' diffuseColor='.8 0 0' transparency='1'/>
+            </Appearance>
+            <Cylinder radius='.1'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform rotation='0 1 0 .785' translation='-1 -.5 1'>
+        <Transform rotation='0 0 1 1.57'>
+          <Shape>
+            <Appearance>
+              <Material DEF='pipe_material2' diffuseColor='.8 0 0' transparency='1'/>
+            </Appearance>
+            <Cylinder radius='.1'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform rotation='0 1 0 .785' translation='-3 -.5 3'>
+        <Transform rotation='0 0 1 1.57'>
+          <Shape>
+            <Appearance>
+              <Material USE='pipe_material2'/>
+            </Appearance>
+            <Cylinder radius='.1'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform rotation='0 1 0 -.785' translation='-3 -.5 1'>
+        <Transform rotation='0 0 1 1.57'>
+          <Shape>
+            <Appearance>
+              <Material USE='pipe_material2'/>
+            </Appearance>
+            <Cylinder radius='.1'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform/>
+      <Transform scale='.4 .4 .4' translation='4 -.5 -6'>
+        <Group>
+          <Transform scale='1 1.5 1' translation='0 -.5 0'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='.5 .5 .5'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
+          <Shape>
+            <Appearance>
+              <Material emissiveColor='1 0 0'/>
+            </Appearance>
+            <Cylinder height='2.5' radius='.5'/>
+          </Shape>
+          <TouchSensor DEF='red_pipe' description='#1 red pipe touchsensor'/>
+          <Transform translation='0 11 0'>
+            <Billboard>
+              <Shape>
+                <Text string='"Link Error"'>
+                  <FontStyle horizontal='false' style='BOLD'/>
+                </Text>
+                <Appearance>
+                  <Material emissiveColor='1 0 0'/>
+                </Appearance>
+              </Shape>
+            </Billboard>
+          </Transform>
+        </Group>
+        <Group>
+          <Transform scale='1 1.5 1' translation='3 -.5 0'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='.5 .5 .5'/>
+              </Appearance>
+              <Box/>
+            </Shape>
+          </Transform>
+          <Transform translation='3 0 0'>
+            <Shape>
+              <Appearance>
+                <Material emissiveColor='1 0 0'/>
+              </Appearance>
+              <Cylinder height='2.5' radius='.5'/>
+            </Shape>
+            <TouchSensor DEF='red_pipe2' description='#2 red pipe touchsensor'/>
+          </Transform>
+          <Transform translation='3 11 0'>
+            <Billboard>
+              <Shape>
+                <Text string='"Node Error"'>
+                  <FontStyle horizontal='false' style='BOLD'/>
+                </Text>
+                <Appearance>
+                  <Material emissiveColor='1 0 0'/>
+                </Appearance>
+              </Shape>
+            </Billboard>
+          </Transform>
+        </Group>
+      </Transform>
+      <Script DEF='linkFailure'>
+        <field accessType='inputOnly' name='toggle' type='SFBool'/>
+        <field accessType='initializeOnly' name='state' type='SFBool' value='false'/>
+        <field accessType='outputOnly' name='toggleValue' type='SFFloat'/>
+        <field accessType='initializeOnly' name='transState' type='SFFloat' value='1'/>
+        <field accessType='outputOnly' name='transparency' type='SFFloat'/>
+        <![CDATA[
+ecmascript:
+
+function toggle ( value, ts ) {
+ if(value == true){
+   state = !state;
+   toggleValue = state;
+   }
+  if(state){
+      transState = 0;
+      transparency = transState;
+   }
+   else{
+      transState = 1;
+      transparency = transState;
+   }
+}
+]]>
+      </Script>
+      <Script DEF='nodeFailure'>
+        <field accessType='inputOnly' name='toggle' type='SFBool'/>
+        <field accessType='initializeOnly' name='state' type='SFBool' value='false'/>
+        <field accessType='outputOnly' name='toggleValue' type='SFFloat'/>
+        <field accessType='initializeOnly' name='transState' type='SFFloat' value='1'/>
+        <field accessType='outputOnly' name='transparency' type='SFFloat'/>
+        <![CDATA[
+ecmascript:
+
+function toggle ( value, ts ) {
+ if(value == true){
+   state = !state;
+   toggleValue = state;
+   }
+  if(state){
+      transState = 0;
+      transparency = transState;
+   }
+   else{
+      transState = 1;
+      transparency = transState;
+   }
+}
+]]>
+      </Script>
+    </Group>
+    <ROUTE fromField='isActive' fromNode='red_pipe' toField='toggle' toNode='linkFailure'/>
+    <ROUTE fromField='toggleValue' fromNode='linkFailure' toField='transparency' toNode='pipe_material'/>
+    <ROUTE fromField='transparency' fromNode='linkFailure' toField='transparency' toNode='pipe_material'/>
+    <ROUTE fromField='isActive' fromNode='red_pipe2' toField='toggle' toNode='nodeFailure'/>
+    <ROUTE fromField='toggleValue' fromNode='nodeFailure' toField='transparency' toNode='pipe_material2'/>
+    <ROUTE fromField='transparency' fromNode='nodeFailure' toField='transparency' toNode='pipe_material2'/>
+  </Scene>
+</X3D>

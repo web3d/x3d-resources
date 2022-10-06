@@ -1,0 +1,303 @@
+project\xvMain\xvShadeCore.java:29: warning: unmappable character for encoding Cp1252
+	// ?F(R/G/B)
+           ^
+project\xvMain\xvShadeCore.java:53: warning: unmappable character for encoding Cp1252
+	 *	ŒÅ’è?¬?”“_
+                    ^
+project\xvMain\xvShadeCore.java:53: warning: unmappable character for encoding Cp1252
+	 *	ŒÅ’è?¬?”“_
+                      ^
+project\xvMain\xvDraw.java:12: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+              ^
+project\xvMain\xvDraw.java:12: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+                  ^
+project\xvMain\xvDraw.java:13: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“‚ðƒgƒbƒv‚©‚ç‚½‚Ç‚é	
+          ^
+project\xvMain\xvDraw.java:59: warning: unmappable character for encoding Cp1252
+	/** lvError—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                          ^
+project\xvMain\xvDraw.java:59: warning: unmappable character for encoding Cp1252
+	/** lvError—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                           ^
+project\xvMain\xvDraw.java:59: warning: unmappable character for encoding Cp1252
+	/** lvError—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                                   ^
+project\xvMain\xvDraw.java:82: warning: unmappable character for encoding Cp1252
+	 *	ŠÖ˜A•t‚¯‚ç‚ê‚½ƒV?[ƒ“‚ð•`‰æ‚·‚é
+                                ^
+project\xvMain\xvDraw.java:224: warning: unmappable character for encoding Cp1252
+			xvUtil.Mul( v[ j ], vmat, v[ j ] );				//ƒ??[ƒJƒ‹•ÏŠ·
+                                                                                           ^
+project\xvMain\xvDraw.java:224: warning: unmappable character for encoding Cp1252
+			xvUtil.Mul( v[ j ], vmat, v[ j ] );				//ƒ??[ƒJƒ‹•ÏŠ·
+                                                                                            ^
+project\xvMain\xvDraw.java:228: warning: unmappable character for encoding Cp1252
+		// –@?ü•ÏŠ·?iŒõŒ¹ŒvŽZ‚Ì‚½‚ß?j
+                     ^
+project\xvMain\xvDraw.java:228: warning: unmappable character for encoding Cp1252
+		// –@?ü•ÏŠ·?iŒõŒ¹ŒvŽZ‚Ì‚½‚ß?j
+                           ^
+project\xvMain\xvDraw.java:228: warning: unmappable character for encoding Cp1252
+		// –@?ü•ÏŠ·?iŒõŒ¹ŒvŽZ‚Ì‚½‚ß?j
+                                           ^
+project\xvMain\xvBBox.java:12: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+              ^
+project\xvMain\xvBBox.java:12: warning: unmappable character for encoding Cp1252
+	ƒgƒ‰ƒo?[ƒX?B
+                  ^
+project\xvMain\xvBBox.java:13: warning: unmappable character for encoding Cp1252
+	ƒV?[ƒ“‚ðƒgƒbƒv‚©‚ç‚½‚Ç‚é	
+          ^
+project\xvMain\xvBBox.java:50: warning: unmappable character for encoding Cp1252
+	 *	@param	nd	ƒV?[ƒ“
+                                  ^
+project\xvMain\xvBBox.java:67: warning: unmappable character for encoding Cp1252
+	 *	ŠÖ˜A•t‚¯‚ç‚ê‚½ƒV?[ƒ“‚ð•`‰æ‚·‚é
+                                ^
+project\xvMain\xvShadeTexCoord.java:29: warning: unmappable character for encoding Cp1252
+	// ƒ??[ƒN
+            ^
+project\xvMain\xvShadeTexCoord.java:29: warning: unmappable character for encoding Cp1252
+	// ƒ??[ƒN
+             ^
+project\xvMain\xvShadeTexCoord.java:106: warning: unmappable character for encoding Cp1252
+		// ŒÅ’è?¬?”“_•ÏŠ·
+                       ^
+project\xvMain\xvShadeTexCoord.java:106: warning: unmappable character for encoding Cp1252
+		// ŒÅ’è?¬?”“_•ÏŠ·
+                         ^
+project\xvMain\xvShadeTexCoord.java:115: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                               ^
+project\xvMain\xvShadeTexCoord.java:115: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                                   ^
+project\xvMain\xvShadeTexCoord.java:115: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                                               ^
+project\xvMain\xvShadeTexCoord.java:115: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                                                   ^
+project\xvMain\xvShadeTexCoord.java:130: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                       ^
+project\xvMain\xvShadeTexCoord.java:130: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                             ^
+project\xvMain\xvShadeTexCoord.java:130: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                                   ^
+project\xvMain\xvShadeTexCoord.java:130: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                                         ^
+project\xvMain\xvShadeTexCoord.java:161: warning: unmappable character for encoding Cp1252
+		 * V0‚©‚çV1‚Ü‚Å‚Ì?…•½?ü‰‰ŽZ
+                                 ^
+project\xvMain\xvShadeTexCoord.java:161: warning: unmappable character for encoding Cp1252
+		 * V0‚©‚çV1‚Ü‚Å‚Ì?…•½?ü‰‰ŽZ
+                                     ^
+project\xvMain\xvShadeTexCoord.java:165: warning: unmappable character for encoding Cp1252
+		// ƒXƒ^?[ƒg?À•W
+                       ^
+project\xvMain\xvShadeTexCoord.java:165: warning: unmappable character for encoding Cp1252
+		// ƒXƒ^?[ƒg?À•W
+                           ^
+project\xvMain\xvShadeTexCoord.java:176: warning: unmappable character for encoding Cp1252
+		// ‚x•ûŒü‘?‰Á—Ê
+                          ^
+project\xvMain\xvShadeTexCoord.java:194: warning: unmappable character for encoding Cp1252
+		 * V1‚©‚çV2‚Ü‚Å‚Ì?…•½?ü‰‰ŽZ
+                                 ^
+project\xvMain\xvShadeTexCoord.java:194: warning: unmappable character for encoding Cp1252
+		 * V1‚©‚çV2‚Ü‚Å‚Ì?…•½?ü‰‰ŽZ
+                                     ^
+project\xvMain\xvShadeTexCoord.java:200: warning: unmappable character for encoding Cp1252
+		if( !cl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                               ^
+project\xvMain\xvShadeTexCoord.java:200: warning: unmappable character for encoding Cp1252
+		if( !cl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                     ^
+project\xvMain\xvShadeTexCoord.java:200: warning: unmappable character for encoding Cp1252
+		if( !cl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                       ^
+project\xvMain\xvShadeTexCoord.java:200: warning: unmappable character for encoding Cp1252
+		if( !cl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                         ^
+project\xvMain\xvShadeTexCoord.java:200: warning: unmappable character for encoding Cp1252
+		if( !cl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                                         ^
+project\xvMain\xvShadeTexCoord.java:200: warning: unmappable character for encoding Cp1252
+		if( !cl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                                           ^
+project\xvMain\xvShadeTexCoord.java:223: warning: unmappable character for encoding Cp1252
+	 * ƒ‰ƒCƒ“‰‰ŽZ—pƒf?[ƒ^?ì?¬
+                         ^
+project\xvMain\xvShadeTexCoord.java:223: warning: unmappable character for encoding Cp1252
+	 * ƒ‰ƒCƒ“‰‰ŽZ—pƒf?[ƒ^?ì?¬
+                             ^
+project\xvMain\xvShadeTexCoord.java:223: warning: unmappable character for encoding Cp1252
+	 * ƒ‰ƒCƒ“‰‰ŽZ—pƒf?[ƒ^?ì?¬
+                               ^
+project\xvMain\xvShadeTexCoord.java:229: warning: unmappable character for encoding Cp1252
+		// ŠJŽn?A?I—¹
+                       ^
+project\xvMain\xvShadeTexCoord.java:229: warning: unmappable character for encoding Cp1252
+		// ŠJŽn?A?I—¹
+                         ^
+project\xvMain\xvShadeTexCoord.java:240: warning: unmappable character for encoding Cp1252
+		// ‚x•ûŒü ‘?‰Á—¦
+                           ^
+project\xvMain\xvShadeTexCoord.java:259: warning: unmappable character for encoding Cp1252
+			// Žn“_?A?I“_‚Æ‚à?A‰æ–Ê?ãŠO ‚Ü‚½‚Í ‰æ–Ê‰ºŠO
+                               ^
+project\xvMain\xvShadeTexCoord.java:259: warning: unmappable character for encoding Cp1252
+			// Žn“_?A?I“_‚Æ‚à?A‰æ–Ê?ãŠO ‚Ü‚½‚Í ‰æ–Ê‰ºŠO
+                                 ^
+project\xvMain\xvShadeTexCoord.java:259: warning: unmappable character for encoding Cp1252
+			// Žn“_?A?I“_‚Æ‚à?A‰æ–Ê?ãŠO ‚Ü‚½‚Í ‰æ–Ê‰ºŠO
+                                         ^
+project\xvMain\xvShadeTexCoord.java:259: warning: unmappable character for encoding Cp1252
+			// Žn“_?A?I“_‚Æ‚à?A‰æ–Ê?ãŠO ‚Ü‚½‚Í ‰æ–Ê‰ºŠO
+                                               ^
+project\xvMain\xvShadeTexCoord.java:270: warning: unmappable character for encoding Cp1252
+			// Žn“_‚ª‰æ–Ê?ãŠO
+                                     ^
+project\xvMain\xvShadeTexCoord.java:280: warning: unmappable character for encoding Cp1252
+			// ?I“_‚ª‰æ–Ê‰ºŠO
+                           ^
+project\xvMain\xvShadeTexCoord.java:293: warning: unmappable character for encoding Cp1252
+		 * ?…•½?ü‰‰ŽZ
+                   ^
+project\xvMain\xvShadeTexCoord.java:293: warning: unmappable character for encoding Cp1252
+		 * ?…•½?ü‰‰ŽZ
+                       ^
+project\xvMain\xvShadeTexCoord.java:300: warning: unmappable character for encoding Cp1252
+			// ŒÅ’è?¬?”?Ø‚èŽÌ‚Ä
+                               ^
+project\xvMain\xvShadeTexCoord.java:300: warning: unmappable character for encoding Cp1252
+			// ŒÅ’è?¬?”?Ø‚èŽÌ‚Ä
+                                 ^
+project\xvMain\xvShadeTexCoord.java:300: warning: unmappable character for encoding Cp1252
+			// ŒÅ’è?¬?”?Ø‚èŽÌ‚Ä
+                                   ^
+project\xvMain\xvShadeTexCoord.java:321: warning: unmappable character for encoding Cp1252
+			// ?¶‰EƒNƒŠƒbƒv
+                           ^
+project\xvMain\xvShadeTexCoord.java:329: warning: unmappable character for encoding Cp1252
+			// ?…•½‘?‰Á—¦
+                           ^
+project\xvMain\xvShadeTexCoord.java:329: warning: unmappable character for encoding Cp1252
+			// ?…•½‘?‰Á—¦
+                                ^
+project\xvMain\xvRoot.java:22: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+              ^
+project\xvMain\xvRoot.java:22: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                     ^
+project\xvMain\xvRoot.java:22: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                      ^
+project\xvMain\xvRoot.java:22: warning: unmappable character for encoding Cp1252
+	/** Œp?³—pƒOƒ??[ƒoƒ‹ƒf?[ƒ^		*/
+                              ^
+project\xvMain\xvRoot.java:28: warning: unmappable character for encoding Cp1252
+	/** ƒOƒ??[ƒoƒ‹ƒf?[ƒ^‚ð“ü—Í‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^	*/
+               ^
+project\xvMain\xvRoot.java:28: warning: unmappable character for encoding Cp1252
+	/** ƒOƒ??[ƒoƒ‹ƒf?[ƒ^‚ð“ü—Í‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^	*/
+                ^
+project\xvMain\xvRoot.java:28: warning: unmappable character for encoding Cp1252
+	/** ƒOƒ??[ƒoƒ‹ƒf?[ƒ^‚ð“ü—Í‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^	*/
+                        ^
+project\xvMain\xvRoot.java:39: warning: unmappable character for encoding Cp1252
+	/** lvError.err—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                              ^
+project\xvMain\xvRoot.java:39: warning: unmappable character for encoding Cp1252
+	/** lvError.err—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                               ^
+project\xvMain\xvRoot.java:39: warning: unmappable character for encoding Cp1252
+	/** lvError.err—p‚ÌƒOƒ??[ƒoƒ‹ƒf?[ƒ^				*/
+                                       ^
+project\xvMain\xvGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX
+      ^
+project\xvMain\xvGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX
+       ^
+project\xvMain\xvGlobal.java:17: warning: unmappable character for encoding Cp1252
+ * ƒOƒ??[ƒoƒ‹•Ï?”—p‚ÌƒNƒ‰ƒX
+               ^
+project\xvMain\xvShade.java:22: warning: unmappable character for encoding Cp1252
+	// ƒ??[ƒN
+            ^
+project\xvMain\xvShade.java:22: warning: unmappable character for encoding Cp1252
+	// ƒ??[ƒN
+             ^
+project\xvMain\xvShade.java:70: warning: unmappable character for encoding Cp1252
+		// ŒÅ’è?¬?”“_•ÏŠ·
+                       ^
+project\xvMain\xvShade.java:70: warning: unmappable character for encoding Cp1252
+		// ŒÅ’è?¬?”“_•ÏŠ·
+                         ^
+project\xvMain\xvShade.java:79: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                               ^
+project\xvMain\xvShade.java:79: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                                   ^
+project\xvMain\xvShade.java:79: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                                               ^
+project\xvMain\xvShade.java:79: warning: unmappable character for encoding Cp1252
+		// ’¸“_•À‚Ñ‘Ö‚¦?i‚x?À•W‚ª‘å‚«‚¢?‡‚É?j
+                                                   ^
+project\xvMain\xvShade.java:95: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                       ^
+project\xvMain\xvShade.java:95: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                             ^
+project\xvMain\xvShade.java:95: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                                   ^
+project\xvMain\xvShade.java:95: warning: unmappable character for encoding Cp1252
+		// ƒ¢ŒW?”ŒvŽZ?iƒ¢‚Ž?^ƒ¢‚x?j
+                                         ^
+project\xvMain\xvShade.java:147: warning: unmappable character for encoding Cp1252
+		 * V0‚©‚çV1‚Ü‚Å‚Ì?…•½?ü•`‰æ
+                                 ^
+project\xvMain\xvShade.java:147: warning: unmappable character for encoding Cp1252
+		 * V0‚©‚çV1‚Ü‚Å‚Ì?…•½?ü•`‰æ
+                                     ^
+project\xvMain\xvShade.java:151: warning: unmappable character for encoding Cp1252
+		// ƒXƒ^?[ƒg?À•W
+                       ^
+project\xvMain\xvShade.java:151: warning: unmappable character for encoding Cp1252
+		// ƒXƒ^?[ƒg?À•W
+                           ^
+project\xvMain\xvShade.java:166: warning: unmappable character for encoding Cp1252
+		// ‚x•ûŒü‘?‰Á—Ê
+                          ^
+project\xvMain\xvShade.java:180: warning: unmappable character for encoding Cp1252
+		 * V1‚©‚çV2‚Ü‚Å‚Ì?…•½?ü•`‰æ
+                                 ^
+project\xvMain\xvShade.java:180: warning: unmappable character for encoding Cp1252
+		 * V1‚©‚çV2‚Ü‚Å‚Ì?…•½?ü•`‰æ
+                                     ^
+project\xvMain\xvShade.java:186: warning: unmappable character for encoding Cp1252
+		if( !dl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                               ^
+project\xvMain\xvShade.java:186: warning: unmappable character for encoding Cp1252
+		if( !dl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                     ^
+project\xvMain\xvShade.java:186: warning: unmappable character for encoding Cp1252
+		if( !dl.swap ) {			// x0‚ª?¬‚³‚¢?ê?‡?AŒðŠ·‚³‚ê‚Ä‚¢‚é?ê?‡‚ª‚ ‚é
+                                                                       ^
+Note: * uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+100 warnings

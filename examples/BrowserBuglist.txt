@@ -1,0 +1,96 @@
+Browser Buglist:  Top Interoperability Issues for Authors
+
+updated 17 August 2012
+http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/content/examples/BrowserBuglist.txt
+
+Player support:
+http://www.web3d.org/x3d/wiki/index.php/Player_support_for_X3D_components
+
+Authoring tool support:
+http://www.web3d.org/x3d/wiki/index.php/Tool_support_for_X3D_components
+
+===========================================================================
+
+BS Contact
+
+- Support for Geometry 2D nodes incomplete/missing
+- relative address for Script url embedded in ProtoDeclare doesn't look in directory of ProtoDeclare, 
+    rather it looks from directory of ProtoInstance
+- Default NavigationInfo type='"EXAMINE" "ANY"' but BS Contact uses incorrect VRML97 default of  type='"WALK" "ANY"'
+    (e.g. <NavigationInfo speed='4'/> is incorrectly).  Works OK if no NavInfo is provided.
+- Text MIDDLE MIDDLE vertical alignment position is ~15% different from InstantReality
+- Text string is not passed correctly within prototype (see Web3dTimeline.x3d)
+- Annoyance: no hotkey for reload (e.g. Ctrl-R)
+- Need to support 'class' attribute on all .x3d nodes, fails otherwise
+- Console buffer is too small (example: Torus in trace mode)
+
+===========================================================================
+
+InstantReality
+- Annoyance: default screen aspect ratio is atypical and can't be reset via a user preference
+- Text MIDDLE MIDDLE vertical alignment position is ~15% different from BS Contact
+- Mistaken ProtoDeclare error when IS/connect is defined:
+    Invalid Field dec, "value" missing for accessType inputOutput
+- Menu system with viewpoint list should call viewpoints Viewpoints, not Cameras
+- Viewpoint description display should be simple to help end users, without complicated diagnostics
+
+===========================================================================
+
+Xj3D
+- Improve default rendering quality (anisotropic default values)
+    TextureQuality, PrimitiveQuality Xj3D_AntialiasingQuality Xj3D_FPSShown 
+    Shading=Gouraud
+    http://www.xj3d.org/tutorials/xj3d_application.html
+    http://www.web3d.org/files/specifications/19775-1/V3.2/Part01/components/networking.html#t-BrowserProperties
+- Text MIDDLE MIDDLE alignment aligns to top rather than MIDDLE
+- Extrusion issues!!!
+- Can limited widget bar be shown for only Viewpoint names, selection?
+- ViewpointGroup support, both for node and user interface
+- Missing image loaders in initial startup console
+- Image load causes throttle warning (-numLoaderThreads ?)
+- Binary compression has many errors
+    - proto exceptions
+- offline rendering problems:
+    - doesn't always time out on error
+    - fails on audio or movie present
+- get volunteers on source javadoc
+- get volunteers on Xj3D.org documentation pages
+
+Xj3D common single trunk, eliminate need for branch(es)
+- finish merging NPS branch
+- current build.xml renamed as build_original.xml (uses nonstandard Ant practices)
+- build_nps.xml as default build.xml file (since it uses common Ant practices),
+    or common build.xml that imports either build_nps.xml and build_original.xml
+- nbproject subdirectory needs to be moved into root directory of Xj3D trunk,
+    fails otherwise - build task needed
+- merge Vince Marchettis NURBS modifications
+- merge HyoKwang Lee's PartDB modifications
+- establish SourceForge issues list
+- confirm/deny then merge NPS and Xj3D bugzilla lists with SourceForge list
+
+===========================================================================
+
+TODO
+
+Michele updates
+PoolMontereyPeninsulaCollege.x3d TextureTransform
+Schema changes for CAD
+Script field naming
+X3D v3.3 changes verified
+Regenerate Clause 6 of X3D Encoding
+Check Somalia model
+Prepare X3D-Edit 3.3
+Buglist review
+
+TODO X3D-Edit
+
+X3dToX3dom.xslt added to menu
+TextureTransform visual editor, negation buttons, image display, overlay
+List of missing nodes for 3.3
+
+
+TODO X3DOM
+
+Simple page on Web3D wiki, MOVES wiki, Wikipedia
+Renew stylesheet efforts
+

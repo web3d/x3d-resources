@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='UnderstandingSceneGraphsTouchToLight.x3d' name='title'/>
+    <meta content='Put mouse (or pointing device) over ball to turn on light. Demonstration example used in Doctor Dobb&apos;s Journal (DDJ) article.' name='description'/>
+    <meta content='Aaron Walsh, Mantiscorp Development' name='creator'/>
+    <meta content='aaron@mantiscorp.com(Aaron Walsh)?subject=Understanding Scene Graphs - example feedback' name='reference'/>
+    <meta content='http://www.mantiscorp.com/people/aew' name='reference'/>
+    <meta content='9 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://www.ddj.com' name='reference'/>
+    <meta content='UnderstandingSceneGraphs.pdf' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/UnderstandingSceneGraphs.pdf' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/UnderstandingSceneGraphsTouchToLight.x3d' name='identifier'/>
+    <meta content='Don Brutzman, NPS' name='translator'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='UnderstandingSceneGraphsTouchToLight.x3d'/>
+    <Group>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Sphere/>
+      </Shape>
+      <!-- define sensor -->
+      <TouchSensor DEF='TOUCH' description='hold pointing device over geometry to turn on light'/>
+      <!-- define light, R G B color -->
+      <DirectionalLight DEF='LIGHT' color='1.0 1.0 0.0' on='false'/>
+      <ROUTE fromField='isOver' fromNode='TOUCH' toField='set_on' toNode='LIGHT'/>
+    </Group>
+  </Scene>
+</X3D>

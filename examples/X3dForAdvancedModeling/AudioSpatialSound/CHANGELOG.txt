@@ -1,0 +1,226 @@
+CHANGELOG.txt for AudioSpatialSound example models
+
+* https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/CHANGELOG.txt
+
+Updates 20 April 2021
+
+a. split out duplicated ID audio_emit as audio_emitter1 and audio_emitter2
+
+---
+
+0. TODO: need appropriate meta credit for audio files saxophone.mp3 and violin.ogg
+
+---
+
+1. Spelling corrections:
+
+a. emmisiveColor as emissiveColor
+b. bind="true" not allowed, since set_bind is an input event
+c. Three instances of <Appearance DEF='audio_emit'> renamed as 1, 2, 3 
+   respectively to match parent
+d. Various occurrences, change id='NAV' to DEF='NAV' but avoid duplication
+e. PannerNode to SpatialSound
+f. BiquadFilterNode to BiquadFilter
+g. jump='TRUE' to jump='true'
+h. Viewpoint zNear to nearDistance, zFar to farDistance
+i. case sensitive: ambientintensity to ambientIntensity,
+   diffusecolor to diffuseColor,
+   emissivecolor to emissiveColor,
+   specularcolor to specularColor
+j. Text has no ccw field, lit field or usegeocache field
+k. fontstyle to FontStyle
+l. refDistance to referenceDistance
+m. SpatialSound position to location
+n. SpatialSound orientation (4-tuple) to direction (3-tuple)
+o. SpatialSound panningModel='HRTF' to enableHRTF='true'
+   SpatialSound enabledHRTF='true' corresponds to panningModelType HRTF,
+   enabledHRTF='false' corresponds to panningModelType equalpower. See
+   W3C Audio API https://www.w3.org/TR/webaudio/#enumdef-panningmodeltype
+p. AudioSource to BufferAudioSource
+q. Rename BiquadFilter field Q to qualityFactor
+r. Removed pitch='1.0' since we are leaving that solely with legacy nodes
+   AudioClip and MovieTexture, not adding further audio functionality to
+   existing W3C Audio API.
+
+---
+
+2. Units: angles in radians
+
+    coneInnerAngle='360' to coneInnerAngle='6.2832'
+    coneOuterAngle='360' to coneOuterAngle='6.2832'
+
+---
+
+3. Proposed X3D naming change:
+
+   X3D <AudioBufferSource/> corresponds to W3C Audio API "AudioSource"
+   X3D <StreamAudioSource/> corresponds to W3C Audio API "MediaStreamAudioSourceNode"
+
+Improved clarity: rename AudioBufferSource as BufferAudioSource so that we have
+
+   X3D <BufferAudioSource/>
+   X3D <StreamAudioSource/>
+
+... which seems like a pretty obvious improvement. Funny we didn't notice it before.
+Once again the power of "implement and evaluate!"
+
+Changes applied to XML Schema, DTD, X3DUOM, converters etc. since it is easiest
+to test this thoroughly.  If not desirable, we can roll back the rename.
+
+---
+
+4. Different addresses in a url list should point to the same logical resource,
+varying only in format or location.  Thus
+
+    <AudioSource loop='true' url='"sound/violin.mp3" "sound/violin.ogg"'/>
+
+is OK but
+
+    <AudioSource loop='true' url='"sound/saxophone.mp3" "sound/violin.ogg"'/>
+
+should instead be
+
+    <AudioSource loop='true' url='"sound/saxophone.mp3" "sound/saxophone.ogg"'/>
+
+---
+
+5. Not sure about this construct, what is the AudioSound node?  Found in
+Efi and Thanos please advise:
+
+    <AudioSound playbackRate='1.0'>
+      <Transform USE='Audio1'/>
+      <SpatialSound coneInnerAngle='360' coneOuterAngle='360' coneOuterGain='0' direction='1 0 0' distanceModel='inverse' enableHRTF='true' location='0 0 0' maxDistance='10000' referenceDistance='1' rolloffFactor='1'/>
+      <BufferAudioSource loop='true' url='"sound/violin.mp3" "sound/violin.ogg"'/>
+    </AudioSound>
+    <AudioSound playbackRate='1.0'>
+      <Transform USE='Audio2'/>
+      <SpatialSound coneInnerAngle='360' coneOuterAngle='360' coneOuterGain='0' direction='1 0 0' distanceModel='inverse' enableHRTF='true' location='0 0 0' maxDistance='10000' referenceDistance='1' rolloffFactor='1'/>
+      <BufferAudioSource loop='true' url='"sound/saxophone.mp3" "sound/saxophone.ogg"'/>
+    </AudioSound>
+
+TODO
+Based on playbackRate attribute, it looks like a AudioBufferSourceNode signature
+or perhaps a Panner node.  However neither of these wouldn contain another 
+SpatialSound as an input child, would it? Does your audio graph fragment need
+structuring or is it OK?
+
+---
+
+6. BufferAudioSource url field needed
+
+Also looking at your BufferAudioSource url field above, it appears as if this is
+an omission in our draft.  If I'm following logic in W3C Web Audio API, the list
+of dependencies is:
+
+- 1.9. The AudioBufferSourceNode Interface
+  https://www.w3.org/TR/webaudio/#AudioBufferSourceNode
+
+- 1.9.2. Attributes
+  buffer, of type AudioBuffer, nullable
+  Represents the audio asset to be played.
+
+- 1.4. The AudioBuffer Interface
+  https://www.w3.org/TR/webaudio/#AudioBuffer
+
+- copyFromChannel(destination, channelNumber, bufferOffset)
+  The copyFromChannel() method copies the samples from the specified channel
+  of the AudioBuffer to the destination array.
+
+Our interface starts with:
+
+16.4.5 BufferAudioSource
+BufferAudioSource : X3DSoundSourceNode {
+  MFFloat  [in,out] buffer                []NULL     [−1,1]
+  SFString [in,out] description           ""
+  etc.
+
+Seems reasonable that we would want to be able to load an audio file into an
+audio graph, and as you have shown, that this is the place to do it.  The only
+other node in Sound component which has a url field is the legacy AudioClip node.
+
+Suggest we add X3DUrlObject and first-draft prose:
+
+16.4.5 BufferAudioSource
+BufferAudioSource : X3DSoundSourceNode, X3DUrlObject {
+  MFFloat  [in,out] buffer                []    [−1,1]
+  MFString [in,out] url                   []    [URI]
+  SFString [in,out] description           ""
+  etc.
+
+"If a /url/ field is provided, then /buffer/ and related fields are initialized
+with the contents of the loaded file."
+
+and, copied from AudioClip:
+
+"The url field specifies the URL from which the sound is loaded.
+Browsers shall support at least the wavefile format in uncompressed PCM format
+(see [WAV]). It is recommended that browsers also support the 
+MIDI file type 1 sound format (see 2.[MIDI]) and the 
+MP3 compressed format (see 2.[I11172-1]). MIDI files are presumed to use the 
+General MIDI patch set. 9.2.1 URLs contains details on the url field."
+
+Pretty straightforward.  Author has option to define data /buffer/ directly in
+an X3D scene, or else simply load audio file via url (the usual case).
+
+Definitely deserves group discussion.
+
+---
+
+7. Not sure about this:  X3D SpatialSound (which maps to W3C PannerNode) having
+a velocity field?
+
+Presumably this is a way to compute doppler shift.  Not finding a direct
+parameter mapping in W3C Web Audio PannerNode itself:
+
+* W3C Web Audio API, PannerNode Interface https://www.w3.org/TR/webaudio/#pannernode
+
+Having a way to define doppler seems very helpful.  Authors would have to be
+careful that the defined value for velocity matched actual velocity, however.
+Perhaps best to leave doppler as a browser capability?
+
+Perhaps even better to define expectations in the X3D Architecture specification
+since full knowledge of relative motion exists already in scene graph animation.
+
+Existing summary and suggested change:
+=================
+16.4.18 SpatialSound
+
+SpatialSound represents a processing node which positions, emits and spatializes an audio stream in three-dimensional (3D) space.
+
+This node provides full spatialization of panner capabilities defined by
+W3C Web Audio API [W3C-WebAudio] within an X3D scene.
+
+(draft addition)
+SpatialSound sources which are moving spatially in the transformation hierarchy
+shall apply velocity-induced frequency shifts corresponding to Doppler effect.
+=================
+
+Reference:
+* Wikipedia, Doppler effect
+  https://en.wikipedia.org/wiki/Doppler_effect
+
+---
+
+8. Editors' review of Sound component cleanup
+
+Task: remove HTML markup for prior trial definitions and fields so that
+draft specification can be cleanly reviewed, better reflecting the team's intent.
+
+a. No need for acousticProxy field. For simple properties of complex geometry
+(e.g. floor wall ceiling acoustics) using simple transparent proxy geometry via
+Shape/Appearance/AcousticProperties is sufficient.
+
+b. X3DSoundNode doesn't need to include gain field, only derived types. Refactored.
+
+c. PeriodicWave can implement X3DSoundNode (rather than X3DNode) since it has 
+same field signature. No change in parent-child content model.
+
+d. Updated the interface hierarchy diagram, 4.4.2.3 Interface hierarchy
+Note rearrangement of tree for consistency.
+
+e. TODO Abstract class  X3DTimeDependentNode likely needs to be renamed as
+abstract interface X3DTimeDependentObject for consistency, clarity, and
+avoiding multiple inheritance in derived programming languages.
+
+f. Removed gain field from Sound node, since the legacy /intensity/ field is
+still there.

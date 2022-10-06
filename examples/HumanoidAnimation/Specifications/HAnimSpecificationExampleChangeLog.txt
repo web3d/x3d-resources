@@ -1,0 +1,50 @@
+HAnimSpecificationExampleChangeLog.txt
+
+http://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationExampleChangeLog.txt
+
+Initial translation converted VRML97 source in HAnim specification to .x3d source as follows.
+
+Scene reconstruction steps:
+- add DOCTYPE/schema information, delete ProtoDeclare node definitions, correctly rename nodes HAnimHumanoid etc.,
+- copy original diamond shape from original Joint prototype as a regular Shape to explicitly appear in each HAnimJoint,
+- changed first HAnimJoint containerField to skeleton, fixed other containerField values,
+- sort scene graph to put HAnimSegment before HAnimJoint, checked values, etc.
+- rename HAnimSpecificationLOA3ExampleWithDiamonds.x3d to HAnimSpecificationLOA3ExampleIllustrated.x3d
+- move copyright to ChangeLog file:
+    <!-- original info: "authorName=Matthew T. Beitler" "authorEmail=beitler@cis.upenn.edu or beitler@acm.org" "creationDate=05/12/99"
+    "copyright=Copyright 1999-2003 Matthew T. Beitler" "humanoidVersion=JointCenters 200x LOA3"
+    "usageRestrictions=PERMISSION TO FULLY USE THIS SCENE GRAPH IS GRANTED PROVIDED THIS COPYRIGHT INFORMATION AND DOCUMENTATION OF THE ORIGINAL AUTHOR IS INCLUDED. This humanoid scene graph is provided &apos;as-is&apos; and without warranty of any kind express implied or otherwise including without limitation any warranty of merchantability or fitness for a particular purpose."
+    "modificationDate=08/12/03" -->
+      
+Numerous validation rules created in X3D Schematron to confirm correctness and report warnings.
+Additional authoring-assist table added as part of X3dToXhtml.xslt stylesheet.
+
+TODO
+
+1. HAnimSpecificationLOA3ExampleWithDiamonds.x3dv ClassicVRML Encoding
+
+- BS Contact errors with .x3dv encoding:
+VRML syntax error: line   6 in http://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimSpecificationLOA3ExampleWithDiamonds.x3dv (C:\Users\brutzman\AppData\LocalLow\Bitmanagement Software\cache\www.web3d.org\x3d\content\examples\Basic\HumanoidAnimation\HAnimSpecificationLOA3ExampleWithDiamonds.x3dv):
+(PROFILE) Expected '{'; got 'I', non standard field ?
+
+this appears to be a bogus error by BS Contact, .x3dv file matches specification
+http://www.web3d.org/files/specifications/19776-2/V3.2/Part02/concepts.html#ProfileStatementSyntax
+http://www.web3d.org/files/specifications/19776-2/V3.2/Part02/examples.html#SimpleExample
+
+- OctagaVS errors with .x3dv encoding:
+Loading file: 'C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv'
+WARNING: VRMLParser: Error near line 1407 in file C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv : Parsed Illegal IS for field named elapsedTime. Field types not compatible.
+WARNING: VRMLParser: Error near line 1408 in file C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv : Parsed Illegal IS for field named time. Field types not compatible.
+WARNING: VRMLParser: Error near line 2641 in file C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv : String missing open-quote
+WARNING: VRMLParser: Error near line 2641 in file C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv : Parsed unknown field true, skipping....
+[HAnimBodyBehaviorChooser] addRouteSet (0, 0);
+WARNING: Invalid argument types in Browser.AddRoute() (in function addRouteSet in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+WARNING: Invalid argument types in Browser.AddRoute() (in function addRouteSet in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+WARNING: Invalid argument types in Browser.AddRoute() (in function initialize in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+WARNING: Invalid argument types in Browser.AddRoute() (in function initialize in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+WARNING: Invalid argument types in Browser.AddRoute() (in function initialize in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+WARNING: Invalid argument types in Browser.AddRoute() (in function initialize in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+[HAnimBodyBehaviorChooser] addRouteSet (0, 0);
+WARNING: Invalid argument types in Browser.AddRoute() (in function addRouteSet in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+WARNING: Invalid argument types in Browser.AddRoute() (in function addRouteSet in script starting at line 2623 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv, instansiated at line 2634 in C:\x3d-code/www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/HAnimBehaviorPrototypes.x3dv )
+

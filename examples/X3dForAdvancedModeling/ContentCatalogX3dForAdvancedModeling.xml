@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ContentCatalog
+ PUBLIC "http://svn.code.sf.net/p/x3d/code/www.web3d.org/x3d/tools/CreateContentCatalog/ContentCatalog.dtd"
+        "../../../tools/CreateContentCatalog/ContentCatalog.dtd">
+<ContentCatalog creationDate='10/1/2021' helpPage='X3dResources.html' name='X3dForAdvancedModeling'
+   title='X3D4AM, X3D for Advanced Modeling' toc='index.html'>
+  <meta content='ContentCatalogBuilder' name='generator'/>
+  <Chapter name='AdditiveManufacturing' title='Additive Manufacturing'>
+    <Page created='5 April 2015' creator='Darrell Hurt'
+       description='A methylxanthine naturally occurring in some beverages and also used as a pharmacological agent. Caffeine&apos;s most notable pharmacological effect is as a central nervous system stimulant, increasing alertness and producing agitation. It also relaxes SMOOTH MUSCLE, stimulates CARDIAC MUSCLE, stimulates DIURESIS, and appears to be useful in the treatment of some types of headache. Several cellular actions of caffeine have been observed, but it is not entirely clear how each contributes to its pharmacological profile. Among the most important are inhibition of cyclic nucleotide PHOSPHODIESTERASES, antagonism of ADENOSINE RECEPTORS, and modulation of intracellular calcium handling.'
+       modified='20 October 2019' name='CaffeinePubChem2519SticksColor'
+       subject='NIH 3DPX caffeine Methyltheobromine Guaranine Cafeina Koffein Mateina 1,3,7-Trimethylxanthine Thein'
+       thumbnail='_thumbnails/CaffeinePubChem2519SticksColorThumbnail.png'
+       title='Caffeine Pub Chem 2519 Sticks Color' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AdditiveManufacturing/CaffeinePubChem2519SticksColor.x3d'>
+      <Viewpoint description='[1] CaffeinePubChem2519SticksColor.x3d view 0'
+         fileName='CaffeinePubChem2519SticksColor.x3d._VP_view_0.png' found='true'/>
+      <Viewpoint description='[2] CaffeinePubChem2519SticksColor.x3d (default X3D view from 0 0 10)'
+         fileName='CaffeinePubChem2519SticksColor.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 August 2013' creator='Moritz the Maker, mx5, http://www.thingiverse.com/mx5'
+       description='Printable cleat clamp from MakerBot Thingiverse model archive, converted to X3D.'
+       modified='20 October 2019' name='CleatClamp' thumbnail='_thumbnails/CleatClampThumbnail.png'
+       title='Cleat Clamp' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AdditiveManufacturing/CleatClamp.x3d'
+       warning='Do not use for climbing or yachting.'>
+      <Viewpoint description='[3] CleatClamp.x3d default' fileName='CleatClamp.x3d._VP_default.png'
+         found='true'/>
+      <Viewpoint description='[4] CleatClamp.x3d oblique' fileName='CleatClamp.x3d._VP_oblique.png'
+         found='true'/>
+      <Viewpoint description='[5] CleatClamp.x3d (default X3D view from 0 0 10)'
+         fileName='CleatClamp.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='8 December 2016' creator='Don Brutzman and X3D Working Group'
+       description='X3D model metadata might be saved and reused via a separate file, is a Metadata node legal as the root node in a scene?'
+       modified='20 October 2019' name='MetadataRootNodeTest'
+       thumbnail='_thumbnails/MetadataRootNodeTestThumbnail.png' title='Metadata Root Node Test'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AdditiveManufacturing/MetadataRootNodeTest.x3d'>
+      <Viewpoint description='[6] MetadataRootNodeTest.x3d (default X3D view from 0 0 10)'
+         fileName='MetadataRootNodeTest.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='9 July 2016' description='Rocktopus is a popular Lulzbot model, converted to X3D.'
+       modified='20 October 2019' name='Rocktopus' thumbnail='_thumbnails/RocktopusThumbnail.png'
+       title='Rocktopus'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AdditiveManufacturing/Rocktopus.x3d'>
+      <Viewpoint description='[7] Rocktopus.x3d Roctopus from above'
+         fileName='Rocktopus.x3d._VP_Roctopus_from_above.png' found='true'/>
+      <Viewpoint description='[8] Rocktopus.x3d Rocktopus from ahead'
+         fileName='Rocktopus.x3d._VP_Rocktopus_from_ahead.png' found='true'/>
+      <Viewpoint description='[9] Rocktopus.x3d Rocktopus from below'
+         fileName='Rocktopus.x3d._VP_Rocktopus_from_below.png' found='true'/>
+      <Viewpoint description='[10] Rocktopus.x3d (default X3D view from 0 0 10)'
+         fileName='Rocktopus.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='14 July 2016' creator='Bernardo Luhr, Matt Friedell, Don Brutzman'
+       description='Beehive shelter designed for concrete printing to provide recharging and wireless communications support for unmanned aerial vehicles (UAVs). Concept of operations (CONOPS): UAV quadcopters are able to fly in and fly out through circular access at top. Side door lets operators place portable electrical generator inside for robot recharging. Wireless local-area network (LAN) provides airborne video back to protected radio-relay link for offshore/remote monitoring. Rounded concrete shape protects installation from wind, mortar attack and small-arms fire. Expeditionary manufacturing approach frees personnel from tedious sentry duties.'
+       modified='20 October 2019' name='UavBeehive'
+       subject='concrete printing, expeditionary manufacturing'
+       thumbnail='_thumbnails/UavBeehiveThumbnail.png' title='Uav Beehive' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AdditiveManufacturing/UavBeehive.x3d'>
+      <Viewpoint description='[11] UavBeehive.x3d UAV Beehive for unmanned aerial vehicles'
+         fileName='UavBeehive.x3d._VP_UAV_Beehive_for_unmanned_aerial_vehicles.png' found='true'/>
+      <Viewpoint description='[12] UavBeehive.x3d UAV Beehive from above'
+         fileName='UavBeehive.x3d._VP_UAV_Beehive_from_above.png' found='true'/>
+      <Viewpoint description='[13] UavBeehive.x3d (default X3D view from 0 0 10)'
+         fileName='UavBeehive.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Animation' title='Animation'>
+    <Page created='30 December 2015' creator='Don Brutzman'
+       description='Demonstrate simple Switch animation by sequencing through a set of Box nodes that are each covered by a different ImageTexture.'
+       modified='20 October 2019' name='BoxSwitch' thumbnail='_thumbnails/BoxSwitchThumbnail.png'
+       title='Box Switch'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/BoxSwitch.x3d'>
+      <Viewpoint description='[1] BoxSwitch.x3d Orbiting view'
+         fileName='BoxSwitch.x3d._VP_Orbiting_view.png' found='false'/>
+      <Viewpoint description='[2] BoxSwitch.x3d Front view' fileName='BoxSwitch.x3d._VP_Front_view.png'
+         found='true'/>
+      <Viewpoint description='[3] BoxSwitch.x3d Back view' fileName='BoxSwitch.x3d._VP_Back_view.png'
+         found='true'/>
+      <Viewpoint description='[4] BoxSwitch.x3d Left view' fileName='BoxSwitch.x3d._VP_Left_view.png'
+         found='true'/>
+      <Viewpoint description='[5] BoxSwitch.x3d Right view' fileName='BoxSwitch.x3d._VP_Right_view.png'
+         found='true'/>
+      <Viewpoint description='[6] BoxSwitch.x3d Top view' fileName='BoxSwitch.x3d._VP_Top_view.png'
+         found='true'/>
+      <Viewpoint description='[7] BoxSwitch.x3d Bottom view' fileName='BoxSwitch.x3d._VP_Bottom_view.png'
+         found='true'/>
+      <Viewpoint description='[8] BoxSwitch.x3d (default X3D view from 0 0 10)'
+         fileName='BoxSwitch.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='14 November 2014' creator='Don Brutzman'
+       description='ViewpointSequencer animation of a cube-shaped test model with faces on each side individually labeled.'
+       modified='20 October 2019' name='CubeWithLabeledSidesViewpointSequencer' subject='Viewpoint Tour'
+       thumbnail='_thumbnails/CubeWithLabeledSidesViewpointSequencerThumbnail.png'
+       title='Cube With Labeled Sides Viewpoint Sequencer'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/CubeWithLabeledSidesViewpointSequencer.x3d'>
+      <Viewpoint description='[9] CubeWithLabeledSidesViewpointSequencer.x3d Front view, sequenced'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Front_view,_sequenced.png'
+         found='false'/>
+      <Viewpoint description='[10] CubeWithLabeledSidesViewpointSequencer.x3d Left view, sequenced'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Left_view,_sequenced.png'
+         found='false'/>
+      <Viewpoint description='[11] CubeWithLabeledSidesViewpointSequencer.x3d Top view, sequenced'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Top_view,_sequenced.png' found='false'/>
+      <Viewpoint description='[12] CubeWithLabeledSidesViewpointSequencer.x3d Back view, sequenced'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Back_view,_sequenced.png'
+         found='false'/>
+      <Viewpoint description='[13] CubeWithLabeledSidesViewpointSequencer.x3d Right view, sequenced'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Right_view,_sequenced.png'
+         found='false'/>
+      <Viewpoint description='[14] CubeWithLabeledSidesViewpointSequencer.x3d Bottom view, sequenced'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Bottom_view,_sequenced.png'
+         found='false'/>
+      <Viewpoint description='[15] CubeWithLabeledSidesViewpointSequencer.x3d (default X3D view)'
+         fileName='CubeWithLabeledSidesViewpointSequencer.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='2 November 2014' creator='epicpopcorn'
+       description='Origami Cranes with black/white contrast as art work for Black Swan game.'
+       modified='20 October 2019' name='OrigamiCranes'
+       thumbnail='_thumbnails/OrigamiCranesThumbnail.png' title='Origami Cranes'
+       translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/OrigamiCranes.x3d'
+       warning='X3DJSAIL: NavigationInfo type newValue=""NONE"" has an unrecognized value not matching any of the optional string tokens.'>
+      <Viewpoint description='[16] OrigamiCranes.x3d Rotating Viewpoint'
+         fileName='OrigamiCranes.x3d._VP_Rotating_Viewpoint.png' found='false'/>
+      <Viewpoint description='[17] OrigamiCranes.x3d Origami Cranes, from ahead'
+         fileName='OrigamiCranes.x3d._VP_Origami_Cranes,_from_ahead.png' found='true'/>
+      <Viewpoint description='[18] OrigamiCranes.x3d Origami Cranes, mirror image'
+         fileName='OrigamiCranes.x3d._VP_Origami_Cranes,_mirror_image.png' found='true'/>
+      <Viewpoint description='[19] OrigamiCranes.x3d Origami Cranes, from behind'
+         fileName='OrigamiCranes.x3d._VP_Origami_Cranes,_from_behind.png' found='true'/>
+      <Viewpoint description='[20] OrigamiCranes.x3d (default X3D view from 0 0 10)'
+         fileName='OrigamiCranes.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='19 July 2021' creator='Nicholas Hittner'
+       description='12 Second Simulation Of The Game Pong' modified='20 July 2021' name='PongGame'
+       title='Pong Game'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/PongGame.x3d'>
+      <Viewpoint description='[21] PongGame.x3d Pong' fileName='PongGame.x3d._VP_Pong.png' found='false'/>
+      <Viewpoint description='[22] PongGame.x3d (default X3D view from 0 0 10)'
+         fileName='PongGame.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='30 December 2015' creator='Don Brutzman'
+       description='Demonstrate composition of rotation values using X3D-Edit RotationCalculator.'
+       modified='20 October 2019' name='RotationCalculatorExample'
+       thumbnail='_thumbnails/RotationCalculatorExampleThumbnail.png'
+       title='Rotation Calculator Example'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/RotationCalculatorExample.x3d'>
+      <Viewpoint description='[23] RotationCalculatorExample.x3d Rotation Calculator Example'
+         fileName='RotationCalculatorExample.x3d._VP_Rotation_Calculator_Example.png' found='true'/>
+      <Viewpoint description='[24] RotationCalculatorExample.x3d Left side direct view'
+         fileName='RotationCalculatorExample.x3d._VP_Left_side_direct_view.png' found='true'/>
+      <Viewpoint description='[25] RotationCalculatorExample.x3d Right side direct view'
+         fileName='RotationCalculatorExample.x3d._VP_Right_side_direct_view.png' found='true'/>
+      <Viewpoint description='[26] RotationCalculatorExample.x3d (default X3D view from 0 0 10)'
+         fileName='RotationCalculatorExample.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='10 December 2002' creator='Don Brutzman'
+       description='Animate through a set of Viewpoint or GeoViewpoint nodes and repeat'
+       modified='20 October 2019' name='ViewpointSequencerPrototype' subject='Viewpoint Tour'
+       thumbnail='_thumbnails/ViewpointSequencerPrototypeThumbnail.png'
+       title='Viewpoint Sequencer Prototype'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/ViewpointSequencerPrototype.x3d'>
+      <Viewpoint description='[27] ViewpointSequencerPrototype.x3d (default X3D view from 0 0 10)'
+         fileName='ViewpointSequencerPrototype.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='18 January 2020' creator='Don Brutzman'
+       description='Test scene for visible field on X3DBoundedObject nodes, which is new to X3Dv4.'
+       modified='18 January 2020' name='VisibleShapesTest'
+       thumbnail='_thumbnails/VisibleShapesTestThumbnail.png' title='Visible Shapes Test'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Animation/VisibleShapesTest.x3d'
+       warning='under development and testing for X3Dv4'>
+      <Viewpoint description='[28] VisibleShapesTest.x3d Visible Shapes Test'
+         fileName='VisibleShapesTest.x3d._VP_Visible_Shapes_Test.png' found='false'/>
+      <Viewpoint description='[29] VisibleShapesTest.x3d (default X3D view from 0 0 10)'
+         fileName='VisibleShapesTest.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='AudioSpatialSound' title='Audio Spatial Sound'>
+    <Page created='25 October 2020' creator='Don Brutzman'
+       description='List of all X3D4 audio graph nodes to test infrastructure and validation support. Absence of attributes means that checking and removal of default values is working.'
+       modified='4 August 2021' name='AllAudioGraphNodesTest' title='All Audio Graph Nodes Test'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/AllAudioGraphNodesTest.x3d'
+       warning='Developmental test, no actual 3D model expected'>
+      <Viewpoint description='[1] AllAudioGraphNodesTest.x3d (default X3D view from 0 0 10)'
+         fileName='AllAudioGraphNodesTest.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='28 October 2020' creator='Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman'
+       description='This X3D scene involves three sound sources. Each of them is visualized by a 3D object (in our case is a sphere) that depicts the sound effects. Specifically, we have added filters through of them we are able to manage the different sound effects in an impressive way. Filters can be composed of a number of attributes, frequency, detune, gain and the quality factor which also known as Q. Furthermore, the filters are classified in some specific types, depending on the sound effects that produce. In detail, there is the Low-pass filter which can create more muffled sound. Another one is the High-pass filter, which is used to generate tinny sound. Equally important is the Band-pass filter, which cuts off low and high frequencies and passes through only these within a certain range. On the contrary, the Notch filter has exactly the opposite operation of the Band-pass filter. Then is the Low-shelf filter, its role is to change the amount of bass in a sound, as a result the frequencies that are lower than the current frequency get a boost, while them that are over it remain unchanged. Next, the High-shelf filter is responsible for the quantity of treble in a sound. Moreover, Peaking filter is used in order to handle the amount of midrange in a sound. Lastly, there is the All-pass filter, whose role is to introduce phaser effects.'
+       modified='4 August 2021' name='Filters' title='Filters'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/Filters.x3d'>
+      <Viewpoint description='[2] Filters.x3d  (Viewpoint contains no description)'
+         fileName='Filters.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[3] Filters.x3d (default X3D view from 0 0 10)'
+         fileName='Filters.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='28 October 2020' creator='Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman'
+       description='This demo is the same with the Single Audio Demo, with the difference that it uses the Inline grouping node. Namely, the scene is an X3D file and all nodes are loaded by Inline node via the "url" of X3D file.'
+       modified='4 August 2021' name='InlineSoundSource' title='Inline Sound Source'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/InlineSoundSource.x3d'>
+      <Viewpoint description='[4] InlineSoundSource.x3d Camera001'
+         fileName='InlineSoundSource.x3d._VP_Camera001.png' found='false'/>
+      <Viewpoint description='[5] InlineSoundSource.x3d (default X3D view from 0 0 10)'
+         fileName='InlineSoundSource.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='28 October 2020' creator='Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman'
+       description='The first demo contains a concise X3D scene. The scenario here is the implementation of a single sound source, which is represented by a 3D object. The spatiality of the sound is expressed by a process, in which when the user approaching nearby to the sound source the volume is increased and accordingly when removed there from is reduced. In addition to this and depending on the side of the sound source that the user observes, the sound is emitted from the corresponding speaker. Apart from the 3D scene, we have also added an analyser slider. The analyser gives the possibility to receive real-time generated data, without any change from the input to output sound information. Through this process we achieved the audio visualization of the sound source.'
+       modified='4 August 2021' name='SingleAudio' title='Single Audio'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SingleAudio.x3d'>
+      <Viewpoint description='[6] SingleAudio.x3d Camera001' fileName='SingleAudio.x3d._VP_Camera001.png'
+         found='false'/>
+      <Viewpoint description='[7] SingleAudio.x3d (default X3D view from 0 0 10)'
+         fileName='SingleAudio.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='28 October 2020' creator='Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman'
+       description='In the last demo, there are two sound sources in different positions. Through the immersion in the X3D scene the user could attend a rational navigation. Whenever the camera moves in the direction of an existing sound source, the strength of this source increases, while the sound strength of the other (the second one) decreases and vice versa. Through this process, great realism of the scene is achieved, since it emulates the spatial sound in real world.'
+       modified='7 August 2021' name='SpatialAudioCameraAnimation'
+       title='Spatial Audio Camera Animation'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SpatialAudioCameraAnimation.x3d'>
+      <Viewpoint
+         description='[8] SpatialAudioCameraAnimation.x3d Viewpoint is like camera, prepositioned in locations (and directions) of interest. In this example the camera is the ears of the user. So, if the trackCurrentView field from ListenerPointSource is TRUE then position and orientation matches the users current view'
+         fileName='SpatialAudioCameraAnimation.x3d._VP_Viewpoint_is_like_camera,_prepositioned_in_locations_(and_directions)_of_interest._In_this_example_the_camera_is_the_ears_of_the_user._So,_if_the_trackCurrentView_field_from_ListenerPointSource_is_TRUE_then_position_and_orientation_matches_the_users_current_view.png'
+         found='false'/>
+      <Viewpoint description='[9] SpatialAudioCameraAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='SpatialAudioCameraAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='28 October 2020' creator='Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman'
+       description='This X3D scene includes a simple sound source which can be moved right and left. Depending on the position of the sound source, the user can hear the produced sound from the corresponding output speaker. Accordingly, there is a source that can be passed through a SpatialSound for the spatialization of the input audio. The approach is based on the relative position of the source and the listener, in comparison to the panner.'
+       modified='4 August 2021' name='SplitChannels' title='Split Channels'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SplitChannels.x3d'>
+      <Viewpoint description='[10] SplitChannels.x3d  (Viewpoint contains no description)'
+         fileName='SplitChannels.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[11] SplitChannels.x3d (default X3D view from 0 0 10)'
+         fileName='SplitChannels.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Buildings' title='Buildings'>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create an arch. Parameters are: clearSpanWidth=4; riseHeight=2; depth=3; topAbutmentHeight=0.5; pierWidth=0.5; pierHeight=1. Modify them with Transform scale or editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information.'
+       modified='20 October 2019' name='Arch' thumbnail='_thumbnails/ArchThumbnail.png' title='Arch'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/Arch.x3d'>
+      <Viewpoint description='[1] Arch.x3d (default X3D view from 0 0 10)'
+         fileName='Arch.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create a filled arch. Note it is an half cylinder. Parameters are: clearSpanWidth=4; riseHeight=2; depth=3p. Modify them with Transform scale or by editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information.'
+       modified='20 October 2019' name='ArchFilled' thumbnail='_thumbnails/ArchFilledThumbnail.png'
+       title='Arch Filled'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchFilled.x3d'>
+      <Viewpoint description='[2] ArchFilled.x3d (default X3D view from 0 0 10)'
+         fileName='ArchFilled.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create a half arch with parameters clearSpanWidth=4; riseHeight=2; depth=3; topAbutmentHeight=0.5; pierWidth=0.5; pierHeight=1. Parameter clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalf width. Modify them with Transform scale or by editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information.'
+       modified='20 October 2019' name='ArchHalf' thumbnail='_thumbnails/ArchHalfThumbnail.png'
+       title='Arch Half'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchHalf.x3d'>
+      <Viewpoint description='[3] ArchHalf.x3d (default X3D view from 0 0 10)'
+         fileName='ArchHalf.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create an half arch with an extension on top. See the reference file ArchModelingDiagrams.pdf to find further information on ArchHalfExtension. Parameters are: clearSpanWidth=4; riseHeight=2; depth=3; topAbutmentHeight=0.5; pierWidth=0.5; pierHeight=1; archHalfExtensionWidth=1. Modify them with Transform scale or by editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information'
+       modified='20 October 2019' name='ArchHalfExtension'
+       thumbnail='_thumbnails/ArchHalfExtensionThumbnail.png' title='Arch Half Extension'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchHalfExtension.x3d'>
+      <Viewpoint description='[4] ArchHalfExtension.x3d (default X3D view from 0 0 10)'
+         fileName='ArchHalfExtension.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create an half filled arch. Note it is a quarter cylinder. Parameters are: clearSpanWidth=4; riseHeight=2; depth=3p. clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalfFilled width. Modify them with Transform scale or by editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information.'
+       modified='20 October 2019' name='ArchHalfFilled'
+       thumbnail='_thumbnails/ArchHalfFilledThumbnail.png' title='Arch Half Filled'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchHalfFilled.x3d'>
+      <Viewpoint description='[5] ArchHalfFilled.x3d (default X3D view from 0 0 10)'
+         fileName='ArchHalfFilled.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js. Possibility to create shapes related to arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information.'
+       modified='16 June 2020' name='ArchPrototype' thumbnail='_thumbnails/ArchPrototypeThumbnail.png'
+       title='Arch Prototype'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchPrototype.x3d'>
+      <Viewpoint description='[6] ArchPrototype.x3d (default X3D view from 0 0 10)'
+         fileName='ArchPrototype.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='9 November 2013' creator='Don Brutzman'
+       description='Draw architectural forms by Rafael Guastavino' modified='20 October 2019'
+       name='CatalanArches' thumbnail='_thumbnails/CatalanArchesThumbnail.png' title='Catalan Arches'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/CatalanArches.x3d'
+       warning='Under development'>
+      <Viewpoint description='[7] CatalanArches.x3d (default X3D view from 0 0 10)'
+         fileName='CatalanArches.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='20 October 2015' creator='Patrick Brutzman'
+       description='Course project for building structural analysis, exported from ETABS design program and converted with Okino Nugraf.'
+       modified='28 November 2019' name='EtabsBuildingFrame'
+       thumbnail='_thumbnails/EtabsBuildingFrameThumbnail.png' title='Etabs Building Frame'
+       translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/kEtabsBuildingFrame.x3d'>
+      <Viewpoint description='[8] EtabsBuildingFrame.x3d ETABS Building Frame'
+         fileName='EtabsBuildingFrame.x3d._VP_ETABS_Building_Frame.png' found='true'/>
+      <Viewpoint description='[9] EtabsBuildingFrame.x3d (default X3D view from 0 0 10)'
+         fileName='EtabsBuildingFrame.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create the intrados, the interior and lower line or curve of an arch. Note it is a flat curved surface. Parameters are: clearSpanWidth=4; riseHeight=2; depth=3p. Modify them with Transform scale or by editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information.'
+       modified='20 October 2019' name='IntradosOnly' thumbnail='_thumbnails/IntradosOnlyThumbnail.png'
+       title='Intrados Only'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/IntradosOnly.x3d'>
+      <Viewpoint description='[10] IntradosOnly.x3d Intrados interior of arch'
+         fileName='IntradosOnly.x3d._VP_Intrados_interior_of_arch.png' found='true'/>
+      <Viewpoint description='[11] IntradosOnly.x3d (default X3D view from 0 0 10)'
+         fileName='IntradosOnly.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2014' creator='Michele Foti, Don Brutzman'
+       description='Create a lintel, which is a load-bearing building component, a decorative architectural element, or a combined ornamented structural item. It is often found over portals, doors, windows, and fireplaces. Parameters are: clearSpanWidth=4; depth=3; topAbutmentHeight=0.5; pierWidth=0.5; pierHeight=1. Total height is pierHeight + topAbutmentHeight. Modify them with Transform scale or by editing the IndexedFileSet node. See the reference file ArchModelingDiagrams.pdf and the ArchScript_more_readable.js script to find further information.'
+       modified='20 October 2019' name='Lintel' thumbnail='_thumbnails/LintelThumbnail.png'
+       title='Lintel' url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/Lintel.x3d'>
+      <Viewpoint description='[12] Lintel.x3d (default X3D view from 0 0 10)'
+         fileName='Lintel.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Conversions' title='Conversions'>
+    <Page created='19 March 2020' creator='Don Brutzman'
+       description='Blender default box exported to X3D, with adjustments and cleanups to illustrate best practices for authoring. After launching Blender use menu items File, Export, X3D.'
+       modified='20 March 2020' name='BlenderDefaultBox' title='Blender Default Box'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/BlenderDefaultBox.x3d'>
+      <Viewpoint description='[1] BlenderDefaultBox.x3d initial view, rotate to examine object'
+         fileName='BlenderDefaultBox.x3d._VP_initial_view,_rotate_to_examine_object.png' found='false'/>
+      <Viewpoint description='[2] BlenderDefaultBox.x3d (default X3D view from 0 0 10)'
+         fileName='BlenderDefaultBox.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='26 October 2017' creator='Vincent Marchetti'
+       description='Blender model import and export of Fish Head model.' modified='19 March 2020'
+       name='BlenderFishHead' thumbnail='_thumbnails/BlenderFishHeadThumbnail.png'
+       title='Blender Fish Head'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/BlenderFishHead.x3d'>
+      <Viewpoint description='[3] BlenderFishHead.x3d  (Viewpoint contains no description)'
+         fileName='BlenderFishHead.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[4] BlenderFishHead.x3d  (Viewpoint contains no description)'
+         fileName='BlenderFishHead.x3d._VP_Unnamed_2.png' found='false'/>
+      <Viewpoint description='[5] BlenderFishHead.x3d  (Viewpoint contains no description)'
+         fileName='BlenderFishHead.x3d._VP_Unnamed_3.png' found='false'/>
+      <Viewpoint description='[6] BlenderFishHead.x3d  (Viewpoint contains no description)'
+         fileName='BlenderFishHead.x3d._VP_Unnamed_4.png' found='false'/>
+      <Viewpoint description='[7] BlenderFishHead.x3d  (Viewpoint contains no description)'
+         fileName='BlenderFishHead.x3d._VP_Unnamed_5.png' found='false'/>
+      <Viewpoint description='[8] BlenderFishHead.x3d (default X3D view from 0 0 10)'
+         fileName='BlenderFishHead.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='30 December 2015' creator='Don Brutzman'
+       description='Export Blender Suzanne monkey.' modified='22 March 2020' name='BlenderMonkeySuzanne'
+       thumbnail='_thumbnails/BlenderMonkeySuzanneThumbnail.png' title='Blender Monkey Suzanne'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/BlenderMonkeySuzanne.x3d'>
+      <Viewpoint description='[9] BlenderMonkeySuzanne.x3d  (Viewpoint contains no description)'
+         fileName='BlenderMonkeySuzanne.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[10] BlenderMonkeySuzanne.x3d (default X3D view from 0 0 10)'
+         fileName='BlenderMonkeySuzanne.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 October 2017' creator='Vincent Marchetti'
+       description='Corrected version of exported model: test Netfabb import and export with simplest mesh closed solid.'
+       modified='19 March 2020' name='NetfabbFishHeadCorrected'
+       thumbnail='_thumbnails/NetfabbFishHeadCorrectedThumbnail.png' title='Netfabb Fish Head Corrected'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/NetfabbFishHeadCorrected.x3d'>
+      <Viewpoint description='[11] NetfabbFishHeadCorrected.x3d Oblique view'
+         fileName='NetfabbFishHeadCorrected.x3d._VP_Oblique_view.png' found='false'/>
+      <Viewpoint description='[12] NetfabbFishHeadCorrected.x3d Top'
+         fileName='NetfabbFishHeadCorrected.x3d._VP_Top.png' found='true'/>
+      <Viewpoint description='[13] NetfabbFishHeadCorrected.x3d Bottom'
+         fileName='NetfabbFishHeadCorrected.x3d._VP_Bottom.png' found='true'/>
+      <Viewpoint description='[14] NetfabbFishHeadCorrected.x3d Right side'
+         fileName='NetfabbFishHeadCorrected.x3d._VP_Right_side.png' found='true'/>
+      <Viewpoint description='[15] NetfabbFishHeadCorrected.x3d (default X3D view from 0 0 10)'
+         fileName='NetfabbFishHeadCorrected.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='10 September 2016' creator='Vincent Marchetti'
+       description='Exported model: test Netfabb import and export with a STEP part shape used to demonstrate computer-aided manufacturing processes.'
+       modified='19 March 2020' name='NetfabbFishHeadExported'
+       thumbnail='_thumbnails/NetfabbFishHeadExportedThumbnail.png' title='Netfabb Fish Head Exported'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/NetfabbFishHeadExported.x3d'>
+      <Viewpoint description='[16] NetfabbFishHeadExported.x3d (default X3D view from 0 0 10)'
+         fileName='NetfabbFishHeadExported.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 October 2017' creator='Vincent Marchetti'
+       description='Corrected version of exported model: test Netfabb import and export with simplest mesh closed solid.'
+       modified='19 March 2020' name='NetfabbTetrahedronCorrected'
+       thumbnail='_thumbnails/NetfabbTetrahedronCorrectedThumbnail.png'
+       title='Netfabb Tetrahedron Corrected'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/NetfabbTetrahedronCorrected.x3d'>
+      <Viewpoint description='[17] NetfabbTetrahedronCorrected.x3d (default X3D view from 0 0 10)'
+         fileName='NetfabbTetrahedronCorrected.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='4 October 2017' creator='Vincent Marchetti'
+       description='Exported model: test Netfabb import and export with simplest mesh closed solid.'
+       modified='19 March 2020' name='NetfabbTetrahedronExported'
+       thumbnail='_thumbnails/NetfabbTetrahedronExportedThumbnail.png'
+       title='Netfabb Tetrahedron Exported'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/NetfabbTetrahedronExported.x3d'>
+      <Viewpoint description='[18] NetfabbTetrahedronExported.x3d (default X3D view from 0 0 10)'
+         fileName='NetfabbTetrahedronExported.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 October 2017' creator='Vincent Marchetti'
+       description='Original model: test Netfabb import and export with simplest mesh closed solid.'
+       modified='19 March 2020' name='NetfabbTetrahedronOriginal'
+       thumbnail='_thumbnails/NetfabbTetrahedronOriginalThumbnail.png'
+       title='Netfabb Tetrahedron Original'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/NetfabbTetrahedronOriginal.x3d'>
+      <Viewpoint description='[19] NetfabbTetrahedronOriginal.x3d (default X3D view from 0 0 10)'
+         fileName='NetfabbTetrahedronOriginal.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 January 2013' creator='Rene K. Mueller'
+       description='OpenJSCAD logo model demonstrating programmatic scripting for solid modeling in Javascript with user-editable parametric models, Web-based editing and STL/X3D export.'
+       modified='19 March 2020' name='OpenJSCadLogo' thumbnail='_thumbnails/OpenJSCadLogoThumbnail.png'
+       title='Open JSCad Logo' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/OpenJSCadLogo.x3d'>
+      <Viewpoint description='[20] OpenJSCadLogo.x3d Hello JSCAD Logo'
+         fileName='OpenJSCadLogo.x3d._VP_Hello_JSCAD_Logo.png' found='false'/>
+      <Viewpoint description='[21] OpenJSCadLogo.x3d (default X3D view from 0 0 10)'
+         fileName='OpenJSCadLogo.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='10 September 2016' creator='Vincent Marchetti'
+       description='Original model: test tool import and export with a STEP part shape used to demonstrate computer-aided manufacturing processes.'
+       modified='19 March 2020' name='SpriFishHeadOriginal'
+       thumbnail='_thumbnails/SpriFishHeadOriginalThumbnail.png' title='Spri Fish Head Original'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/SpriFishHeadOriginal.x3d'>
+      <Viewpoint description='[22] SpriFishHeadOriginal.x3d Oblique view'
+         fileName='SpriFishHeadOriginal.x3d._VP_Oblique_view.png' found='false'/>
+      <Viewpoint description='[23] SpriFishHeadOriginal.x3d Top'
+         fileName='SpriFishHeadOriginal.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[24] SpriFishHeadOriginal.x3d Bottom'
+         fileName='SpriFishHeadOriginal.x3d._VP_Bottom.png' found='false'/>
+      <Viewpoint description='[25] SpriFishHeadOriginal.x3d Right side'
+         fileName='SpriFishHeadOriginal.x3d._VP_Right_side.png' found='false'/>
+      <Viewpoint description='[26] SpriFishHeadOriginal.x3d (default X3D view from 0 0 10)'
+         fileName='SpriFishHeadOriginal.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 October 2017' creator='Vincent Marchetti'
+       description='KShell Step Prolog Restful Interface (SPRI) model export of STEP reference file AS1-PE-203.'
+       modified='19 March 2020' name='SpriStepAS1PE203'
+       thumbnail='_thumbnails/SpriStepAS1PE203Thumbnail.png' title='Spri Step AS 1 PE 203'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Conversions/SpriStepAS1PE203.x3d'>
+      <Viewpoint description='[27] SpriStepAS1PE203.x3d Oblique view'
+         fileName='SpriStepAS1PE203.x3d._VP_Oblique_view.png' found='false'/>
+      <Viewpoint description='[28] SpriStepAS1PE203.x3d Top' fileName='SpriStepAS1PE203.x3d._VP_Top.png'
+         found='false'/>
+      <Viewpoint description='[29] SpriStepAS1PE203.x3d Bottom'
+         fileName='SpriStepAS1PE203.x3d._VP_Bottom.png' found='false'/>
+      <Viewpoint description='[30] SpriStepAS1PE203.x3d Right side'
+         fileName='SpriStepAS1PE203.x3d._VP_Right_side.png' found='false'/>
+      <Viewpoint description='[31] SpriStepAS1PE203.x3d (default X3D view from 0 0 10)'
+         fileName='SpriStepAS1PE203.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='GeometricShapes' title='Geometric Shapes'>
+    <Page created='30 December 2015' creator='Don Brutzman'
+       description='AxisLinesRGB shows 3 red-green-blue (RBB) perpendicular lines suitable as X-Y-Z axes.'
+       modified='20 October 2019' name='AxisLinesRGB' thumbnail='_thumbnails/AxisLinesRGBThumbnail.png'
+       title='Axis Lines RGB'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/AxisLinesRGB.x3d'>
+      <Viewpoint description='[1] AxisLinesRGB.x3d Axis Lines RGB XYZ'
+         fileName='AxisLinesRGB.x3d._VP_Axis_Lines_RGB_XYZ.png' found='true'/>
+      <Viewpoint description='[2] AxisLinesRGB.x3d (default X3D view from 0 0 10)'
+         fileName='AxisLinesRGB.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 October 2014' creator='Don Brutzman'
+       description='CapsuleComparison shows three capsules, using polygons/lines/points rendering, each a hollow cylinder with hemispherical end caps. These models were created by CapsuleGenerator.x3d (producing X3D source on the console) with 36 numberOfPoints around horizontal perimeter, 10 vertical levels, radius 0.5 and total height of 2.'
+       modified='20 October 2019' name='CapsuleComparison'
+       thumbnail='_thumbnails/CapsuleComparisonThumbnail.png' title='Capsule Comparison'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CapsuleComparison.x3d'>
+      <Viewpoint description='[3] CapsuleComparison.x3d Capsule Comparison'
+         fileName='CapsuleComparison.x3d._VP_Capsule_Comparison.png' found='true'/>
+      <Viewpoint description='[4] CapsuleComparison.x3d Polygons Capsule'
+         fileName='CapsuleComparison.x3d._VP_Polygons_Capsule.png' found='true'/>
+      <Viewpoint description='[5] CapsuleComparison.x3d Lines Capsule'
+         fileName='CapsuleComparison.x3d._VP_Lines_Capsule.png' found='true'/>
+      <Viewpoint description='[6] CapsuleComparison.x3d Points Capsule'
+         fileName='CapsuleComparison.x3d._VP_Points_Capsule.png' found='true'/>
+      <Viewpoint description='[7] CapsuleComparison.x3d (default X3D view from 0 0 10)'
+         fileName='CapsuleComparison.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 October 2014' creator='Don Brutzman'
+       description='Capsule has top and bottom hemispheres with connected sides, with adjustable parameters in the contained Script fields. A Script node computes all coordIndex and Coordinate point values. X3D source for the produced capsule also appears on the player console.'
+       modified='20 October 2019' name='CapsuleGenerator'
+       thumbnail='_thumbnails/CapsuleGeneratorThumbnail.png' title='Capsule Generator'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CapsuleGenerator.x3d'>
+      <Viewpoint description='[8] CapsuleGenerator.x3d Capsule Generator'
+         fileName='CapsuleGenerator.x3d._VP_Capsule_Generator.png' found='true'/>
+      <Viewpoint description='[9] CapsuleGenerator.x3d (default X3D view from 0 0 10)'
+         fileName='CapsuleGenerator.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='11 October 2016' creator='Don Brutzman'
+       description='A catenary is the curve that an idealized hanging chain or cable assumes under its own weight when supported only at its ends. The curve has a U-like shape, superficially similar in appearance to a parabola, but it is not a parabola: it is a (scaled, rotated) graph of the hyperbolic cosine.'
+       modified='25 October 2020' name='Catenary' subject='Catenary line shape'
+       thumbnail='_thumbnails/CatenaryThumbnail.png' title='Catenary'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Catenary.x3d'
+       warning='Under development'>
+      <Viewpoint description='[10] Catenary.x3d (default X3D view from 0 0 10)'
+         fileName='Catenary.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 November 2008' creator='Don Brutzman'
+       description='Cube-shaped test model with faces on each side individually labeled.'
+       modified='20 October 2019' name='CubeWithLabeledSides'
+       thumbnail='_thumbnails/CubeWithLabeledSidesThumbnail.png' title='Cube With Labeled Sides'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CubeWithLabeledSides.x3d'>
+      <Viewpoint description='[11] CubeWithLabeledSides.x3d Front view'
+         fileName='CubeWithLabeledSides.x3d._VP_Front_view.png' found='true'/>
+      <Viewpoint description='[12] CubeWithLabeledSides.x3d Left view'
+         fileName='CubeWithLabeledSides.x3d._VP_Left_view.png' found='true'/>
+      <Viewpoint description='[13] CubeWithLabeledSides.x3d Top view'
+         fileName='CubeWithLabeledSides.x3d._VP_Top_view.png' found='true'/>
+      <Viewpoint description='[14] CubeWithLabeledSides.x3d Back view'
+         fileName='CubeWithLabeledSides.x3d._VP_Back_view.png' found='true'/>
+      <Viewpoint description='[15] CubeWithLabeledSides.x3d Right view'
+         fileName='CubeWithLabeledSides.x3d._VP_Right_view.png' found='true'/>
+      <Viewpoint description='[16] CubeWithLabeledSides.x3d Bottom view'
+         fileName='CubeWithLabeledSides.x3d._VP_Bottom_view.png' found='true'/>
+      <Viewpoint description='[17] CubeWithLabeledSides.x3d (default X3D view from 0 0 10)'
+         fileName='CubeWithLabeledSides.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='7 May 2013' creator='Don Brutzman'
+       description='Construct a Cylinder using IndexedFaceSet. Top and bottom 24-point polygon (circle) created by X3D-Edit, sides computed manually.'
+       modified='20 October 2019' name='CylinderIndexedFaceSet' subject='Cylinder IndexedFaceSet'
+       thumbnail='_thumbnails/CylinderIndexedFaceSetThumbnail.png' title='Cylinder Indexed Face Set'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/CylinderIndexedFaceSet.x3d'>
+      <Viewpoint description='[18] CylinderIndexedFaceSet.x3d Cylinder built using IndexedFaceSet'
+         fileName='CylinderIndexedFaceSet.x3d._VP_Cylinder_built_using_IndexedFaceSet.png' found='true'/>
+      <Viewpoint description='[19] CylinderIndexedFaceSet.x3d (default X3D view from 0 0 10)'
+         fileName='CylinderIndexedFaceSet.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Ben Cheng and Don Brutzman'
+       description='Dodecahedron is a 12-sided polyhedron with 30 edges, 20 vertices and 12 pentagonal faces. A regular dodecahedron is a Platonic solid.'
+       modified='20 October 2019' name='Dodecahedron' thumbnail='_thumbnails/DodecahedronThumbnail.png'
+       title='Dodecahedron'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Dodecahedron.x3d'>
+      <Viewpoint description='[20] Dodecahedron.x3d Dodecahedron'
+         fileName='Dodecahedron.x3d._VP_Dodecahedron.png' found='true'/>
+      <Viewpoint description='[21] Dodecahedron.x3d (default X3D view from 0 0 10)'
+         fileName='Dodecahedron.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='29 January 2016' creator='Roy Walmsley'
+       description='Scene incorporating extrusion edge cases' modified='20 October 2019'
+       name='ExtrusionEdgeCases' thumbnail='_thumbnails/ExtrusionEdgeCasesThumbnail.png'
+       title='Extrusion Edge Cases'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/ExtrusionEdgeCases.x3d'>
+      <Viewpoint description='[22] ExtrusionEdgeCases.x3d Extrusion Edge Cases'
+         fileName='ExtrusionEdgeCases.x3d._VP_Extrusion_Edge_Cases.png' found='true'/>
+      <Viewpoint description='[23] ExtrusionEdgeCases.x3d Extrusion Edge Case 1'
+         fileName='ExtrusionEdgeCases.x3d._VP_Extrusion_Edge_Case_1.png' found='true'/>
+      <Viewpoint description='[24] ExtrusionEdgeCases.x3d Extrusion Edge Case 2a'
+         fileName='ExtrusionEdgeCases.x3d._VP_Extrusion_Edge_Case_2a.png' found='true'/>
+      <Viewpoint description='[25] ExtrusionEdgeCases.x3d Extrusion Edge Case 2b'
+         fileName='ExtrusionEdgeCases.x3d._VP_Extrusion_Edge_Case_2b.png' found='true'/>
+      <Viewpoint description='[26] ExtrusionEdgeCases.x3d Extrusion Edge Case 3'
+         fileName='ExtrusionEdgeCases.x3d._VP_Extrusion_Edge_Case_3.png' found='true'/>
+      <Viewpoint description='[27] ExtrusionEdgeCases.x3d (default X3D view from 0 0 10)'
+         fileName='ExtrusionEdgeCases.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='18 August 2012' creator='Don Brutzman'
+       description='Extrusion examples for testing and debugging' modified='20 October 2019'
+       name='ExtrusionExamplesTest' thumbnail='_thumbnails/ExtrusionExamplesTestThumbnail.png'
+       title='Extrusion Examples Test'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/ExtrusionExamplesTest.x3d'
+       warning='several tests (marked TODO) are failing under Xj3D but work satisfactorily on other X3D players'>
+      <Viewpoint description='[28] ExtrusionExamplesTest.x3d Extrusion examples'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion_examples.png' found='true'/>
+      <Viewpoint description='[29] ExtrusionExamplesTest.x3d Extrusion1 Default'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion1_Default.png' found='true'/>
+      <Viewpoint description='[30] ExtrusionExamplesTest.x3d Extrusion2 CircularCrossSection12'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion2_CircularCrossSection12.png' found='true'/>
+      <Viewpoint description='[31] ExtrusionExamplesTest.x3d Extrusion3 CircularCrossSection60'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion3_CircularCrossSection60.png' found='true'/>
+      <Viewpoint
+         description='[32] ExtrusionExamplesTest.x3d Extrusion4 CircularCrossSection12SemiCircularSpine'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion4_CircularCrossSection12SemiCircularSpine.png'
+         found='true'/>
+      <Viewpoint
+         description='[33] ExtrusionExamplesTest.x3d Extrusion5 CircularCrossSection12CircularSpine'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion5_CircularCrossSection12CircularSpine.png'
+         found='true'/>
+      <Viewpoint description='[34] ExtrusionExamplesTest.x3d Extrusion6 DefaultSideways'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion6_DefaultSideways.png' found='true'/>
+      <Viewpoint description='[35] ExtrusionExamplesTest.x3d Extrusion7 Right45DegreeBends'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion7_Right45DegreeBends.png' found='true'/>
+      <Viewpoint description='[36] ExtrusionExamplesTest.x3d Extrusion8 Right45DegreeBendsClosed'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion8_Right45DegreeBendsClosed.png' found='true'/>
+      <Viewpoint description='[37] ExtrusionExamplesTest.x3d Extrusion9 CircularSpineSquareCrossection'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion9_CircularSpineSquareCrossection.png'
+         found='true'/>
+      <Viewpoint
+         description='[38] ExtrusionExamplesTest.x3d Extrusion10 Right45DegreeBendsClosedCircularCrossection'
+         fileName='ExtrusionExamplesTest.x3d._VP_Extrusion10_Right45DegreeBendsClosedCircularCrossection.png'
+         found='true'/>
+      <Viewpoint description='[39] ExtrusionExamplesTest.x3d (default X3D view from 0 0 10)'
+         fileName='ExtrusionExamplesTest.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='David W. Laflam and Don Brutzman'
+       description='Hemisphere is a half sphere. Sphere tessellation algorithms might be insufficient since equatorial triangles may not align with the plane. The original tool or algorithm producing this mesh is not known, unfortunately.'
+       modified='20 October 2019' name='Hemisphere' thumbnail='_thumbnails/HemisphereThumbnail.png'
+       title='Hemisphere'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Hemisphere.x3d'>
+      <Viewpoint description='[40] Hemisphere.x3d Hemisphere'
+         fileName='Hemisphere.x3d._VP_Hemisphere.png' found='true'/>
+      <Viewpoint description='[41] Hemisphere.x3d (default X3D view from 0 0 10)'
+         fileName='Hemisphere.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Don Brutzman'
+       description='Icosahedron is a polyhedron with 12 vertices and, 20 faces, where a regular icosahedron is a Platonic solid. All faces are regular (equilateral) triangles. In comparison to the other icosahedra examples, this this default Icosahedron can be considered at level 0, meaning that no further subdivision has occurred from the platonic solid.'
+       modified='20 October 2019' name='Icosahedron' thumbnail='_thumbnails/IcosahedronThumbnail.png'
+       title='Icosahedron'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Icosahedron.x3d'>
+      <Viewpoint description='[42] Icosahedron.x3d Icosahedron'
+         fileName='Icosahedron.x3d._VP_Icosahedron.png' found='true'/>
+      <Viewpoint description='[43] Icosahedron.x3d (default X3D view from 0 0 10)'
+         fileName='Icosahedron.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Don Brutzman'
+       description='Icosahedron is a polyhedron with twenty faces, subdivided to level 1, where all 42 vertices and 80 faces produce regular (equilateral) triangles.'
+       modified='20 October 2019' name='IcosahedronSubdivisionLevel1'
+       thumbnail='_thumbnails/IcosahedronSubdivisionLevel1Thumbnail.png'
+       title='Icosahedron Subdivision Level 1'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel1.x3d'>
+      <Viewpoint description='[44] IcosahedronSubdivisionLevel1.x3d Icosahedron, subdivision level 1'
+         fileName='IcosahedronSubdivisionLevel1.x3d._VP_Icosahedron,_subdivision_level_1.png'
+         found='true'/>
+      <Viewpoint description='[45] IcosahedronSubdivisionLevel1.x3d (default X3D view from 0 0 10)'
+         fileName='IcosahedronSubdivisionLevel1.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Don Brutzman'
+       description='Icosahedron is a polyhedron with twenty faces, subdivided to level 2, where all 162 vertices and 320 faces produce regular (equilateral) triangles.'
+       modified='20 October 2019' name='IcosahedronSubdivisionLevel2'
+       thumbnail='_thumbnails/IcosahedronSubdivisionLevel2Thumbnail.png'
+       title='Icosahedron Subdivision Level 2'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel2.x3d'>
+      <Viewpoint description='[46] IcosahedronSubdivisionLevel2.x3d Icosahedron, subdivision level 2'
+         fileName='IcosahedronSubdivisionLevel2.x3d._VP_Icosahedron,_subdivision_level_2.png'
+         found='true'/>
+      <Viewpoint description='[47] IcosahedronSubdivisionLevel2.x3d (default X3D view from 0 0 10)'
+         fileName='IcosahedronSubdivisionLevel2.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Don Brutzman'
+       description='Icosahedron is a polyhedron with twenty faces, subdivided to level 3, where all 642 vertices and 1280 faces produce regular (equilateral) triangles.'
+       modified='20 October 2019' name='IcosahedronSubdivisionLevel3'
+       thumbnail='_thumbnails/IcosahedronSubdivisionLevel3Thumbnail.png'
+       title='Icosahedron Subdivision Level 3'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel3.x3d'>
+      <Viewpoint description='[48] IcosahedronSubdivisionLevel3.x3d Icosahedron, subdivision level 3'
+         fileName='IcosahedronSubdivisionLevel3.x3d._VP_Icosahedron,_subdivision_level_3.png'
+         found='true'/>
+      <Viewpoint description='[49] IcosahedronSubdivisionLevel3.x3d (default X3D view from 0 0 10)'
+         fileName='IcosahedronSubdivisionLevel3.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Don Brutzman'
+       description='Icosahedron is a polyhedron with twenty faces, subdivided to level 4, where all 2562 vertices and 3366 faces produce regular (equilateral) triangles.'
+       modified='20 October 2019' name='IcosahedronSubdivisionLevel4'
+       thumbnail='_thumbnails/IcosahedronSubdivisionLevel4Thumbnail.png'
+       title='Icosahedron Subdivision Level 4'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel4.x3d'>
+      <Viewpoint description='[50] IcosahedronSubdivisionLevel4.x3d Icosahedron, subdivision level 4'
+         fileName='IcosahedronSubdivisionLevel4.x3d._VP_Icosahedron,_subdivision_level_4.png'
+         found='true'/>
+      <Viewpoint description='[51] IcosahedronSubdivisionLevel4.x3d (default X3D view from 0 0 10)'
+         fileName='IcosahedronSubdivisionLevel4.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='13 September 2014' creator='Don Brutzman'
+       description='Icosahedron is a polyhedron with twenty faces, subdivided to level 5, where all 10242 vertices and 20480 faces produce regular (equilateral) triangles.'
+       modified='20 October 2019' name='IcosahedronSubdivisionLevel5'
+       thumbnail='_thumbnails/IcosahedronSubdivisionLevel5Thumbnail.png'
+       title='Icosahedron Subdivision Level 5'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel5.x3d'>
+      <Viewpoint description='[52] IcosahedronSubdivisionLevel5.x3d Icosahedron, subdivision level 5'
+         fileName='IcosahedronSubdivisionLevel5.x3d._VP_Icosahedron,_subdivision_level_5.png'
+         found='true'/>
+      <Viewpoint description='[53] IcosahedronSubdivisionLevel5.x3d (default X3D view from 0 0 10)'
+         fileName='IcosahedronSubdivisionLevel5.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='14 January 2012' creator='Don Brutzman'
+       description='Mobius (or Mobius) is a surface with only one side and only one boundary component.'
+       modified='20 October 2019' name='MobiusExtrusion' subject='Mobius strip modeled with Extrusion'
+       thumbnail='_thumbnails/MobiusExtrusionThumbnail.png' title='Mobius Extrusion'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/MobiusExtrusion.x3d'>
+      <Viewpoint description='[54] MobiusExtrusion.x3d Mobius strip extrusion, plus cross-sectional view'
+         fileName='MobiusExtrusion.x3d._VP_Mobius_strip_extrusion,_plus_cross-sectional_view.png'
+         found='true'/>
+      <Viewpoint description='[55] MobiusExtrusion.x3d Mobius strip from above'
+         fileName='MobiusExtrusion.x3d._VP_Mobius_strip_from_above.png' found='true'/>
+      <Viewpoint description='[56] MobiusExtrusion.x3d Mobius strip from side'
+         fileName='MobiusExtrusion.x3d._VP_Mobius_strip_from_side.png' found='true'/>
+      <Viewpoint description='[57] MobiusExtrusion.x3d (default X3D view from 0 0 10)'
+         fileName='MobiusExtrusion.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='26 September 2014' creator='Don Brutzman'
+       description='Octahedron is an 8-sided polyhedron with 6 vertices, 8 triangular faces and 12 edges. A regular octahedron contains equilateral triangles and is a Platonic solid. An Octahedron is equivalent to two contiguous Pyramids. The dual of the Octahedron is the cube.'
+       modified='20 October 2019' name='Octahedron' thumbnail='_thumbnails/OctahedronThumbnail.png'
+       title='Octahedron'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Octahedron.x3d'>
+      <Viewpoint description='[58] Octahedron.x3d Octahedron'
+         fileName='Octahedron.x3d._VP_Octahedron.png' found='true'/>
+      <Viewpoint description='[59] Octahedron.x3d (default X3D view from 0 0 10)'
+         fileName='Octahedron.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='10 December 2019' creator='Tobias Brennenstuhl'
+       description='Olympic Rings built for authoring course MV3204 using regulation colors, each approximately 5m radius. Debugging efforts showed difficulties with concave crossSection, important to set convex=false for proper rendering.'
+       modified='13 April 2020' name='OlympicRings' subject='Olympic Rings'
+       thumbnail='_thumbnails/OlympicRingsThumbnail.png' title='Olympic Rings'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/OlympicRings.x3d'>
+      <Viewpoint description='[60] OlympicRings.x3d Regulation color Olympic Rings'
+         fileName='OlympicRings.x3d._VP_Regulation_color_Olympic_Rings.png' found='false'/>
+      <Viewpoint description='[61] OlympicRings.x3d (default X3D view from 0 0 10)'
+         fileName='OlympicRings.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 April 2020' creator='Michalis Kamburelis'
+       description='Olympic Rings built using Blender for comparison.' modified='8 April 2020'
+       name='OlympicRingsBlender' subject='Olympic Rings' title='Olympic Rings Blender'
+       translator='Michalis Kamburelis'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/OlympicRingsBlender.x3d'>
+      <Viewpoint description='[62] OlympicRingsBlender.x3d  (Viewpoint contains no description)'
+         fileName='OlympicRingsBlender.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[63] OlympicRingsBlender.x3d (default X3D view from 0 0 10)'
+         fileName='OlympicRingsBlender.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='25 November 2011' creator='Don Brutzman'
+       description='Example use of external prototype declaration for Parallelepiped, which is a 3D figure formed by six parallelograms.'
+       modified='20 October 2019' name='ParallelepipedExamples'
+       subject='parallelopiped rhomboid geometry polyhedron'
+       thumbnail='_thumbnails/ParallelepipedExamplesThumbnail.png' title='Parallelepiped Examples'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/ParallelepipedExamples.x3d'>
+      <Viewpoint description='[64] ParallelepipedExamples.x3d Parellelopiped examples'
+         fileName='ParallelepipedExamples.x3d._VP_Parellelopiped_examples.png' found='true'/>
+      <Viewpoint description='[65] ParallelepipedExamples.x3d (default X3D view from 0 0 10)'
+         fileName='ParallelepipedExamples.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='25 November 2011' creator='Don Brutzman'
+       description='Reusable prototype for creating a Parallelepiped, which is a 3D figure formed by six parallelograms; also sometimes referred to as a rhomboid.'
+       modified='20 October 2019' name='ParallelepipedPrototype'
+       subject='parallelopiped rhomboid geometry polyhedron'
+       thumbnail='_thumbnails/ParallelepipedPrototypeThumbnail.png' title='Parallelepiped Prototype'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/ParallelepipedPrototype.x3d'>
+      <Viewpoint description='[66] ParallelepipedPrototype.x3d (default X3D view from 0 0 10)'
+         fileName='ParallelepipedPrototype.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='8 November 2014' creator='Don Brutzman'
+       description='RoundedRectangle2D shows and IndexedFaceSet shape for a flat RoundedRectangle.'
+       modified='20 October 2019' name='RoundedRectangle2D'
+       thumbnail='_thumbnails/RoundedRectangle2DThumbnail.png' title='Rounded Rectangle 2D'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/RoundedRectangle2D.x3d'>
+      <Viewpoint description='[67] RoundedRectangle2D.x3d RoundedRectangle2D example'
+         fileName='RoundedRectangle2D.x3d._VP_RoundedRectangle2D_example.png' found='true'/>
+      <Viewpoint description='[68] RoundedRectangle2D.x3d (default X3D view from 0 0 10)'
+         fileName='RoundedRectangle2D.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='8 November 2014' creator='Don Brutzman'
+       description='RoundedRectangleComparison shows three RoundedRectangle shapes using polygons/lines/points rendering. Note that reuse of RoundedRectangle geometry requires only Interchange profile, but Text requires Immersive profile.'
+       modified='20 October 2019' name='RoundedRectangleComparison'
+       thumbnail='_thumbnails/RoundedRectangleComparisonThumbnail.png'
+       title='Rounded Rectangle Comparison'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/RoundedRectangleComparison.x3d'>
+      <Viewpoint description='[69] RoundedRectangleComparison.x3d RoundedRectangle Comparison'
+         fileName='RoundedRectangleComparison.x3d._VP_RoundedRectangle_Comparison.png' found='true'/>
+      <Viewpoint description='[70] RoundedRectangleComparison.x3d Polygons RoundedRectangle'
+         fileName='RoundedRectangleComparison.x3d._VP_Polygons_RoundedRectangle.png' found='true'/>
+      <Viewpoint description='[71] RoundedRectangleComparison.x3d Lines RoundedRectangle'
+         fileName='RoundedRectangleComparison.x3d._VP_Lines_RoundedRectangle.png' found='true'/>
+      <Viewpoint description='[72] RoundedRectangleComparison.x3d Points RoundedRectangle'
+         fileName='RoundedRectangleComparison.x3d._VP_Points_RoundedRectangle.png' found='true'/>
+      <Viewpoint description='[73] RoundedRectangleComparison.x3d (default X3D view from 0 0 10)'
+         fileName='RoundedRectangleComparison.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='23 October 2014' creator='Marlon Heron and Don Brutzman'
+       description='Illustrates how to build rounded rectangle using only primitive nodes.'
+       modified='20 October 2019' name='RoundedRectanglePrimitives'
+       subject='Rounded Rectangle Primitive Geometry'
+       thumbnail='_thumbnails/RoundedRectanglePrimitivesThumbnail.png'
+       title='Rounded Rectangle Primitives'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/RoundedRectanglePrimitives.x3d'>
+      <Viewpoint description='[74] RoundedRectanglePrimitives.x3d Top Down View'
+         fileName='RoundedRectanglePrimitives.x3d._VP_Top_Down_View.png' found='true'/>
+      <Viewpoint description='[75] RoundedRectanglePrimitives.x3d (default X3D view from 0 0 10)'
+         fileName='RoundedRectanglePrimitives.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='10 May 2013' creator='Don Brutzman'
+       description='Semitransparent Sphere with circumference circles on x-y-z planes to facilitate user rotation of an object, suitable for use as rotation widget. Labeled box also inserted as Inline.'
+       modified='20 October 2019' name='SphereWithThreeCircumferenceRings'
+       subject='TouchSensor Interface'
+       thumbnail='_thumbnails/SphereWithThreeCircumferenceRingsThumbnail.png'
+       title='Sphere With Three Circumference Rings'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/SphereWithThreeCircumferenceRings.x3d'>
+      <Viewpoint
+         description='[76] SphereWithThreeCircumferenceRings.x3d Sphere with 3 circumferences around labeled cube'
+         fileName='SphereWithThreeCircumferenceRings.x3d._VP_Sphere_with_3_circumferences_around_labeled_cube.png'
+         found='true'/>
+      <Viewpoint description='[77] SphereWithThreeCircumferenceRings.x3d (default X3D view from 0 0 10)'
+         fileName='SphereWithThreeCircumferenceRings.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='25 January 2012' creator='Don Brutzman, Michele Foti, Chad Hutchins'
+       description='Build one or more stair steps, in a straight line' modified='20 October 2019'
+       name='StairStepPrototype' thumbnail='_thumbnails/StairStepPrototypeThumbnail.png'
+       title='Stair Step Prototype'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/StairStepPrototype.x3d'
+       warning='under development'>
+      <Viewpoint description='[78] StairStepPrototype.x3d hey step'
+         fileName='StairStepPrototype.x3d._VP_hey_step.png' found='true'/>
+      <Viewpoint description='[79] StairStepPrototype.x3d (default X3D view from 0 0 10)'
+         fileName='StairStepPrototype.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='20 March 2016' creator='Pyarelal Knowles'
+       description='A watertight (solid) Utah Teapot Model converted from obj format.'
+       modified='20 October 2019' name='Teapot' thumbnail='_thumbnails/TeapotThumbnail.png'
+       title='Teapot' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Teapot.x3d'>
+      <Viewpoint description='[80] Teapot.x3d Newell Teapot' fileName='Teapot.x3d._VP_Newell_Teapot.png'
+         found='true'/>
+      <Viewpoint description='[81] Teapot.x3d (default X3D view from 0 0 10)'
+         fileName='Teapot.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='20 March 2016' creator='Pyarelal Knowles'
+       description='Four watertight (solid) Utah Teapot Models converted from obj format.'
+       modified='20 October 2019' name='Teapots' thumbnail='_thumbnails/TeapotsThumbnail.png'
+       title='Teapots' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Teapots.x3d'>
+      <Viewpoint description='[82] Teapots.x3d Newell Teapots'
+         fileName='Teapots.x3d._VP_Newell_Teapots.png' found='true'/>
+      <Viewpoint description='[83] Teapots.x3d (default X3D view from 0 0 10)'
+         fileName='Teapots.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='27 September 2014' creator='Don Brutzman'
+       description='Tetrahedron is an 8-sided pyramidal polyhedron with 4 vertices, 4 triangular faces and 6 edges. A regular tetrahedron contains equilateral triangles and is a Platonic solid. Tetrahedron is the simplest of all the ordinary convex polyhedra and the only one that has fewer than 5 faces. Tetrahedron is also known as a triangular pyramid.'
+       modified='20 October 2019' name='Tetrahedron' thumbnail='_thumbnails/TetrahedronThumbnail.png'
+       title='Tetrahedron'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Tetrahedron.x3d'>
+      <Viewpoint description='[84] Tetrahedron.x3d Tetrahedron from Z axis'
+         fileName='Tetrahedron.x3d._VP_Tetrahedron_from_Z_axis.png' found='true'/>
+      <Viewpoint description='[85] Tetrahedron.x3d Tetrahedron from X axis'
+         fileName='Tetrahedron.x3d._VP_Tetrahedron_from_X_axis.png' found='true'/>
+      <Viewpoint description='[86] Tetrahedron.x3d Tetrahedron from above'
+         fileName='Tetrahedron.x3d._VP_Tetrahedron_from_above.png' found='true'/>
+      <Viewpoint description='[87] Tetrahedron.x3d (default X3D view from 0 0 10)'
+         fileName='Tetrahedron.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='5 July 2014' creator='Don Brutzman'
+       description='Simple Triangle with black lines, illustrating default line rendering.'
+       modified='20 October 2019' name='TriangleBlackLines'
+       thumbnail='_thumbnails/TriangleBlackLinesThumbnail.png' title='Triangle Black Lines'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/TriangleBlackLines.x3d'>
+      <Viewpoint description='[88] TriangleBlackLines.x3d Triangle using black lines'
+         fileName='TriangleBlackLines.x3d._VP_Triangle_using_black_lines.png' found='true'/>
+      <Viewpoint description='[89] TriangleBlackLines.x3d (default X3D view from 0 0 10)'
+         fileName='TriangleBlackLines.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 January 2012' creator='Chad R. Hutchins, Michele Foti and Don Brutzman'
+       description='Simple Triangle with labeled points, where labels always face the user and stay in place with the triangle.'
+       modified='20 October 2019' name='TriangleWithNumbers'
+       thumbnail='_thumbnails/TriangleWithNumbersThumbnail.png' title='Triangle With Numbers'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/TriangleWithNumbers.x3d'>
+      <Viewpoint description='[90] TriangleWithNumbers.x3d Triangle annotated with coordinate indices'
+         fileName='TriangleWithNumbers.x3d._VP_Triangle_annotated_with_coordinate_indices.png'
+         found='true'/>
+      <Viewpoint description='[91] TriangleWithNumbers.x3d (default X3D view from 0 0 10)'
+         fileName='TriangleWithNumbers.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='GltfSampleModels' title='Gltf Sample Models'>
+    <Page created='17 July 2021' creator='Ed Mackey'
+       description='This model tests the various alpha modes available in glTF 2.0. There are three settings for alphaMode: "OPAQUE" (the default), "BLEND", and "MASK". Of these, "MASK" takes an additional alphaCutoff value that modifies it.'
+       modified='30 September 2021' name='AlphaBlendModeTest' title='Alpha Blend Mode Test'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/AlphaBlendModeTest.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[1] AlphaBlendModeTest.x3d (default X3D view from 0 0 10)'
+         fileName='AlphaBlendModeTest.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Maximilian Kamps, UX3D' description='Old camera model.'
+       modified='30 September 2021' name='AntiqueCamera' title='Antique Camera'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/AntiqueCamera.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[2] AntiqueCamera.x3d (default X3D view from 0 0 10)'
+         fileName='AntiqueCamera.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Ed Mackey, Analytical Graphics, Inc.'
+       description='This model tests interactions between attenuation color, attenuation distance, and thickness in the KHR_materials_volume extension.'
+       modified='30 September 2021' name='AttenuationTest' title='Attenuation Test'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/AttenuationTest.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[3] AttenuationTest.x3d (default X3D view from 0 0 10)'
+         fileName='AttenuationTest.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='theblueturtle'
+       description='Battle Damaged Sci-fi Helmet. The original model was built on an early draft of glTF 2.0 that did not become final. This new model has been imported and re-exported from Blender to bring it into alignment with the final release glTF 2.0 specification.'
+       modified='30 September 2021' name='DamagedHelmet' title='Damaged Helmet'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/DamagedHelmet.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[4] DamagedHelmet.x3d (default X3D view from 0 0 10)'
+         fileName='DamagedHelmet.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Ed Mackey'
+       description='This model demonstrates the use of the KHR_materials_transmission and KHR_materials_volume extensions to specify an object that appears to be made from colored glass.'
+       modified='30 September 2021' name='DragonAttenuation' title='Dragon Attenuation'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/DragonAttenuation.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[5] DragonAttenuation.x3d (default X3D view from 0 0 10)'
+         fileName='DragonAttenuation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Eric Chadwick, Wayfair LLC'
+       description='This model represents a real product, a velvet sofa bed being sold on the Wayfair website. The model is made of three parts, each with their own materials. Two 1024x1024 PNG textures are used for the whole model, an ambient occlusion map and a normal bump map. All UVs are arranged between 0 and 1, and KHR_texture_transform is used to repeat the normal map for the fabric.'
+       modified='30 September 2021' name='GlamVelvetSofa' title='Glam Velvet Sofa'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/GlamVelvetSofa.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[6] GlamVelvetSofa.x3d (default X3D view from 0 0 10)'
+         fileName='GlamVelvetSofa.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Saurabh Bhatia sbtron Microsoft' description='Lantern model'
+       modified='30 September 2021' name='Lantern' title='Lantern'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/Lantern.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[7] Lantern.x3d (default X3D view from 0 0 10)'
+         fileName='Lantern.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Norbert Nopper' description='Logo 3D model used by Blender.'
+       modified='30 September 2021' name='Suzanne' title='Suzanne'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/Suzanne.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[8] Suzanne.x3d (default X3D view from 0 0 10)'
+         fileName='Suzanne.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Guido Odendahl'
+       description='his model demonstrates the usage of KHR_materials_sheen, KHR_materials_transmission and KHR_materials_clearcoat. This model also includes eight sample cameras, featuring different angles on the car and its materials. In software packages that represent camera locations with 3D markers, it may be beneficial to reduce the size of these markers, as marker size is not specified in glTF.'
+       modified='30 September 2021' name='ToyCar' title='Toy Car'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/ToyCar.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[9] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[10] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_2.png' found='false'/>
+      <Viewpoint description='[11] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_3.png' found='false'/>
+      <Viewpoint description='[12] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_4.png' found='false'/>
+      <Viewpoint description='[13] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_5.png' found='false'/>
+      <Viewpoint description='[14] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_6.png' found='false'/>
+      <Viewpoint description='[15] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_7.png' found='false'/>
+      <Viewpoint description='[16] ToyCar.x3d  (Viewpoint contains no description)'
+         fileName='ToyCar.x3d._VP_Unnamed_8.png' found='false'/>
+      <Viewpoint description='[17] ToyCar.x3d (default X3D view from 0 0 10)'
+         fileName='ToyCar.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='MiiBond Adobe'
+       description='This model demonstrates the usage of the KHR_materials_transmission. The grid of spheres demonstrate different combinations of uniform transmission and textured transmission and how they should render in conjunction with opacity (baseColor.a) and surface roughness/metalicity.'
+       modified='30 September 2021' name='TransmissionTest' title='Transmission Test'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/TransmissionTest.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[18] TransmissionTest.x3d  (Viewpoint contains no description)'
+         fileName='TransmissionTest.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[19] TransmissionTest.x3d (default X3D view from 0 0 10)'
+         fileName='TransmissionTest.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Okino Computer Graphics'
+       description='Data conversion from original JT to COLLADA.' modified='30 September 2021'
+       name='TwoCylinderEngine' title='Two Cylinder Engine'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/TwoCylinderEngine.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[20] TwoCylinderEngine.x3d  (Viewpoint contains no description)'
+         fileName='TwoCylinderEngine.x3d._VP_Unnamed_1.png' found='false'/>
+      <Viewpoint description='[21] TwoCylinderEngine.x3d (default X3D view from 0 0 10)'
+         fileName='TwoCylinderEngine.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 July 2021' creator='Gary Hsu bghgary Microsoft'
+       description='This glTF model is so beautiful on the outside and so wet on the inside, etc.'
+       modified='30 September 2021' name='WaterBottle' title='Water Bottle'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/GltfSampleModels/WaterBottle.x3d'
+       warning='commented out Tangent nodes, removed flipVertically=true, removed gravityTransform=false since those constructs are not valid X3D4'>
+      <Viewpoint description='[22] WaterBottle.x3d (default X3D view from 0 0 10)'
+         fileName='WaterBottle.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='HelloWorldScenes' title='Hello World Scenes'>
+    <Page created='3 July 2015' creator='Don Brutzman and Sarah Brutzman'
+       description='Hello World: ¡Pura vida! Hello Costa Rica in Spanish, Hola Costa Rica en español'
+       modified='20 October 2019' name='HelloCostaRica' subject='Hello World Example Costa Rica Spanish'
+       thumbnail='_thumbnails/HelloCostaRicaThumbnail.png' title='Hello Costa Rica'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloCostaRica.x3d'>
+      <Viewpoint description='[1] HelloCostaRica.x3d ¡Hola Costa Rica Pura Vida!'
+         fileName='HelloCostaRica.x3d._VP_¡Hola_Costa_Rica_Pura_Vida!.png' found='true'/>
+      <Viewpoint description='[2] HelloCostaRica.x3d (default X3D view from 0 0 10)'
+         fileName='HelloCostaRica.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='7 January 2020' creator='Tobias Brennenstuhl'
+       description='HelloGermany example scene to show German special characters, built for NPS course MV3204 X3D for Web Authors.'
+       modified='8 April 2020' name='HelloGermany' subject='Hello World, Germany'
+       thumbnail='_thumbnails/HelloGermanyThumbnail.png' title='Hello Germany'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloGermany.x3d'>
+      <Viewpoint description='[3] HelloGermany.x3d Hallo Deutschland! Viel Spaß mit X3D!'
+         fileName='HelloGermany.x3d._VP_Hallo_Deutschland!_Viel_Spaß_mit_X3D!.png' found='false'/>
+      <Viewpoint description='[4] HelloGermany.x3d (default X3D view from 0 0 10)'
+         fileName='HelloGermany.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='22 January 2014' creator='Byounghyun Yoo'
+       description='Hello World: Hello Seoul in Korean, 안녕 서울' modified='20 October 2019'
+       name='HelloSeoul' subject='Hello World Example' thumbnail='_thumbnails/HelloSeoulThumbnail.png'
+       title='Hello Seoul'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloSeoul.x3d'>
+      <Viewpoint description='[5] HelloSeoul.x3d Hello Seoul!! 안녕 서울!!'
+         fileName='HelloSeoul.x3d._VP_Hello_Seoul!!_안녕_서울!!.png' found='true'/>
+      <Viewpoint description='[6] HelloSeoul.x3d (default X3D view from 0 0 10)'
+         fileName='HelloSeoul.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='7 June 2013' creator='Ben Cheng and Don Brutzman'
+       description='Hello World: Hello Taiwan in Traditional Chinese, æ‚¨å¥½ï¼Œè‡ºç?£!!'
+       modified='15 March 2020' name='HelloTaiwan' subject='Hello World Example'
+       thumbnail='_thumbnails/HelloTaiwanThumbnail.png' title='Hello Taiwan'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloTaiwan.x3d'>
+      <Viewpoint description='[7] HelloTaiwan.x3d Hello Taiwan!! æ‚¨å¥½ï¼Œè‡ºç?£!!'
+         fileName='HelloTaiwan.x3d._VP_Hello_Taiwan!!_æ‚¨å¥½ï¼Œè‡ºç?£!!.png' found='false'/>
+      <Viewpoint description='[8] HelloTaiwan.x3d (default X3D view from 0 0 10)'
+         fileName='HelloTaiwan.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='30 October 2000' creator='Don Brutzman'
+       description='Simple X3D model example: Hello World!' modified='11 June 2021' name='HelloWorld'
+       thumbnail='_thumbnails/HelloWorldThumbnail.png' title='Hello World'
+       url='https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloWorld.x3d'>
+      <Viewpoint description='[9] HelloWorld.x3d Hello world!'
+         fileName='HelloWorld.x3d._VP_Hello_world!.png' found='true'/>
+      <Viewpoint description='[10] HelloWorld.x3d (default X3D view from 0 0 10)'
+         fileName='HelloWorld.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='19 December 2015' creator='Don Brutzman'
+       description='Numerous comments added to simple X3D scene example for testing JSON encoding alternatives.'
+       modified='16 May 2021' name='HelloWorldCommented'
+       thumbnail='_thumbnails/HelloWorldCommentedThumbnail.png' title='Hello World Commented'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldCommented.x3d'>
+      <Viewpoint description='[11] HelloWorldCommented.x3d Hello world!'
+         fileName='HelloWorldCommented.x3d._VP_Hello_world!.png' found='true'/>
+      <Viewpoint description='[12] HelloWorldCommented.x3d (default X3D view from 0 0 10)'
+         fileName='HelloWorldCommented.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='19 January 2020' creator='Don Brutzman'
+       description='Hello World minimal example scene.' modified='24 January 2020'
+       name='HelloWorldMinimal' thumbnail='_thumbnails/HelloWorldMinimalThumbnail.png'
+       title='Hello World Minimal'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldMinimal.x3d'>
+      <Viewpoint description='[13] HelloWorldMinimal.x3d (default X3D view from 0 0 10)'
+         fileName='HelloWorldMinimal.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='10 June 2021' creator='Don Brutzman'
+       description='Test X3D version 4 with simple X3D model example: Hello World!'
+       modified='27 September 2021' name='HelloWorldX3D4' title='Hello World X3D 4'
+       url='https://X3dGraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes/HelloWorldX3D4.x3d'>
+      <Viewpoint description='[14] HelloWorldX3D4.x3d Hello world!'
+         fileName='HelloWorldX3D4.x3d._VP_Hello_world!.png' found='false'/>
+      <Viewpoint description='[15] HelloWorldX3D4.x3d (default X3D view from 0 0 10)'
+         fileName='HelloWorldX3D4.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Inspiration' title='Inspiration'>
+    <Page created='3 November 2013' creator='Don Brutzman, John Kelly, Ben Cheng'
+       description='Text scripting and animation example using Oblique Strategies card set by Brian Eno.'
+       modified='10 November 2019' name='ObliqueStrategies' subject='Brian Eno, Oblique Strategies'
+       thumbnail='_thumbnails/ObliqueStrategiesThumbnail.png' title='Oblique Strategies'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategies.x3d'
+       warning='TODO resolve potential error in Script node TextScript: parse problem line 15 " var strategy = [];'>
+      <Viewpoint description='[1] ObliqueStrategies.x3d (default X3D view from 0 0 10)'
+         fileName='ObliqueStrategies.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Matlab' title='Matlab'>
+    <Page created='1 October 2014' creator='Ben Cheng and Don Brutzman'
+       description='Bounce a flexible Box up and down by adapting an example from Mathworks Matlab using Simulink for animation.'
+       modified='20 October 2019' name='BouncingBoxSimulink'
+       thumbnail='_thumbnails/BouncingBoxSimulinkThumbnail.png' title='Bouncing Box Simulink'
+       translator='Ben Cheng'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Matlab/BouncingBoxSimulink.x3d'>
+      <Viewpoint description='[1] BouncingBoxSimulink.x3d Hello Matlab Simulink bouncing box!'
+         fileName='BouncingBoxSimulink.x3d._VP_Hello_Matlab_Simulink_bouncing_box!.png' found='true'/>
+      <Viewpoint description='[2] BouncingBoxSimulink.x3d Closeup view Simulink bouncing box!'
+         fileName='BouncingBoxSimulink.x3d._VP_Closeup_view_Simulink_bouncing_box!.png' found='true'/>
+      <Viewpoint description='[3] BouncingBoxSimulink.x3d (default X3D view from 0 0 10)'
+         fileName='BouncingBoxSimulink.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 February 2015' creator='Dr. David Jenn, Matlab plot author'
+       description='Conversion Matlab figure to x3d using conversion method number 2.'
+       modified='20 October 2019' name='PhasedArrayBeamExample'
+       thumbnail='_thumbnails/PhasedArrayBeamExampleThumbnail.png' title='Phased Array Beam Example'
+       translator='Ben Cheng'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Matlab/PhasedArrayBeamExample.x3d'>
+      <Viewpoint description='[4] PhasedArrayBeamExample.x3d Oblique view'
+         fileName='PhasedArrayBeamExample.x3d._VP_Oblique_view.png' found='true'/>
+      <Viewpoint description='[5] PhasedArrayBeamExample.x3d View along Z axis'
+         fileName='PhasedArrayBeamExample.x3d._VP_View_along_Z_axis.png' found='true'/>
+      <Viewpoint description='[6] PhasedArrayBeamExample.x3d View along X axis'
+         fileName='PhasedArrayBeamExample.x3d._VP_View_along_X_axis.png' found='true'/>
+      <Viewpoint description='[7] PhasedArrayBeamExample.x3d View along Y axis'
+         fileName='PhasedArrayBeamExample.x3d._VP_View_along_Y_axis.png' found='true'/>
+      <Viewpoint description='[8] PhasedArrayBeamExample.x3d (default X3D view from 0 0 10)'
+         fileName='PhasedArrayBeamExample.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='SanCarlosCathedral' title='San Carlos Cathedral'>
+    <Page created='8 March 2012' creator='Michele Foti' description='Altar for San Carlos Cathedral'
+       modified='14 November 2019' name='Altar' thumbnail='_thumbnails/AltarThumbnail.png' title='Altar'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Altar.x3d'>
+      <Viewpoint description='[1] Altar.x3d (default X3D view from 0 0 10)'
+         fileName='Altar.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='8 March 2012' creator='Michele Foti' description='Bell for San Carlos Cathedral'
+       modified='20 October 2019' name='Bell' thumbnail='_thumbnails/BellThumbnail.png' title='Bell'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Bell.x3d'
+       warning='under development'>
+      <Viewpoint description='[2] Bell.x3d (default X3D view from 0 0 10)'
+         fileName='Bell.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='19 December 2012' creator='Michele Foti'
+       description='Bell for San Carlos Cathedral in mid 19th century' modified='20 October 2019'
+       name='BellOld' thumbnail='_thumbnails/BellOldThumbnail.png' title='Bell Old'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/BellOld.x3d'>
+      <Viewpoint description='[3] BellOld.x3d (default X3D view from 0 0 10)'
+         fileName='BellOld.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='8 March 2012' creator='Michele Foti' description='Bench for San Carlos Cathedral'
+       modified='20 October 2019' name='Bench' thumbnail='_thumbnails/BenchThumbnail.png' title='Bench'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Bench.x3d'>
+      <Viewpoint description='[4] Bench.x3d (default X3D view from 0 0 10)'
+         fileName='Bench.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='6 April 2012' creator='Michele Foti'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='20 October 2019' name='Century19thModel'
+       thumbnail='_thumbnails/Century19thModelThumbnail.png' title='Century 19th Model'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Century19thModel.x3d'
+       warning='under development'>
+      <Viewpoint description='[5] Century19thModel.x3d (default X3D view from 0 0 10)'
+         fileName='Century19thModel.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='6 April 2012' creator='Michele Foti'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='20 October 2019' name='Century19thModel2'
+       thumbnail='_thumbnails/Century19thModel2Thumbnail.png' title='Century 19th Model 2'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Century19thModel2.x3d'
+       warning='under development'>
+      <Viewpoint description='[6] Century19thModel2.x3d (default X3D view from 0 0 10)'
+         fileName='Century19thModel2.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='16 April 2012' creator='Michele Foti'
+       description='Overhead chandelier, used multiple times' modified='20 October 2019'
+       name='Chandelier' thumbnail='_thumbnails/ChandelierThumbnail.png' title='Chandelier'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Chandelier.x3d'
+       warning='under development'>
+      <Viewpoint description='[7] Chandelier.x3d (default X3D view from 0 0 10)'
+         fileName='Chandelier.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2011' creator='Michele Foti'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='20 October 2019' name='Church' thumbnail='_thumbnails/ChurchThumbnail.png'
+       title='Church'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/Church.x3d'
+       warning='under development'>
+      <Viewpoint description='[8] Church.x3d (default X3D view from 0 0 10)'
+         fileName='Church.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2011' creator='Michele Foti'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='20 October 2019' name='ChurchModel' thumbnail='_thumbnails/ChurchModelThumbnail.png'
+       title='Church Model'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/ChurchModel.x3d'
+       warning='under development'>
+      <Viewpoint description='[9] ChurchModel.x3d (default X3D view from 0 0 10)'
+         fileName='ChurchModel.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2011' creator='Michele Foti'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='20 October 2019' name='ChurchRoof' thumbnail='_thumbnails/ChurchRoofThumbnail.png'
+       title='Church Roof'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/ChurchRoof.x3d'
+       warning='under development'>
+      <Viewpoint description='[10] ChurchRoof.x3d (default X3D view from 0 0 10)'
+         fileName='ChurchRoof.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='19 March 2012' creator='Michele Foti and Don Brutzman'
+       description='Lighting alternatives for best rendering the cathedral.' modified='20 October 2019'
+       name='LightingAlternatives' thumbnail='_thumbnails/LightingAlternativesThumbnail.png'
+       title='Lighting Alternatives'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/LightingAlternatives.x3d'
+       warning='under development'>
+      <Viewpoint description='[11] LightingAlternatives.x3d (default X3D view from 0 0 10)'
+         fileName='LightingAlternatives.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2011' creator='Michele Foti, Don Brutzman'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='20 October 2019' name='SanCarlosCathedral'
+       thumbnail='_thumbnails/SanCarlosCathedralThumbnail.png' title='San Carlos Cathedral'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/SanCarlosCathedral.x3d'
+       warning='under development'>
+      <Viewpoint description='[12] SanCarlosCathedral.x3d San Carlos Cathedral, front from ground'
+         fileName='SanCarlosCathedral.x3d._VP_San_Carlos_Cathedral,_front_from_ground.png' found='true'/>
+      <Viewpoint description='[13] SanCarlosCathedral.x3d San Carlos Cathedral, front'
+         fileName='SanCarlosCathedral.x3d._VP_San_Carlos_Cathedral,_front.png' found='true'/>
+      <Viewpoint description='[14] SanCarlosCathedral.x3d San Carlos Cathedral, front above'
+         fileName='SanCarlosCathedral.x3d._VP_San_Carlos_Cathedral,_front_above.png' found='true'/>
+      <Viewpoint description='[15] SanCarlosCathedral.x3d Oblique outside view, left'
+         fileName='SanCarlosCathedral.x3d._VP_Oblique_outside_view,_left.png' found='true'/>
+      <Viewpoint description='[16] SanCarlosCathedral.x3d Overhead view'
+         fileName='SanCarlosCathedral.x3d._VP_Overhead_view.png' found='true'/>
+      <Viewpoint description='[17] SanCarlosCathedral.x3d Oblique outside view right'
+         fileName='SanCarlosCathedral.x3d._VP_Oblique_outside_view_right.png' found='true'/>
+      <Viewpoint description='[18] SanCarlosCathedral.x3d Facade details'
+         fileName='SanCarlosCathedral.x3d._VP_Facade_details.png' found='true'/>
+      <Viewpoint description='[19] SanCarlosCathedral.x3d Right outside'
+         fileName='SanCarlosCathedral.x3d._VP_Right_outside.png' found='true'/>
+      <Viewpoint description='[20] SanCarlosCathedral.x3d Sacristy outside'
+         fileName='SanCarlosCathedral.x3d._VP_Sacristy_outside.png' found='true'/>
+      <Viewpoint description='[21] SanCarlosCathedral.x3d Back outside'
+         fileName='SanCarlosCathedral.x3d._VP_Back_outside.png' found='true'/>
+      <Viewpoint description='[22] SanCarlosCathedral.x3d Tower, back'
+         fileName='SanCarlosCathedral.x3d._VP_Tower,_back.png' found='true'/>
+      <Viewpoint description='[23] SanCarlosCathedral.x3d Interior Left rear balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Interior_Left_rear_balcony.png' found='true'/>
+      <Viewpoint description='[24] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[25] SanCarlosCathedral.x3d Entrance, confessional'
+         fileName='SanCarlosCathedral.x3d._VP_Entrance,_confessional.png' found='true'/>
+      <Viewpoint description='[26] SanCarlosCathedral.x3d Right side wall, looking north west'
+         fileName='SanCarlosCathedral.x3d._VP_Right_side_wall,_looking_north_west.png' found='true'/>
+      <Viewpoint description='[27] SanCarlosCathedral.x3d Right side wall, window'
+         fileName='SanCarlosCathedral.x3d._VP_Right_side_wall,_window.png' found='true'/>
+      <Viewpoint description='[28] SanCarlosCathedral.x3d Right side wall, picture'
+         fileName='SanCarlosCathedral.x3d._VP_Right_side_wall,_picture.png' found='true'/>
+      <Viewpoint description='[29] SanCarlosCathedral.x3d Right side wall, looking south west'
+         fileName='SanCarlosCathedral.x3d._VP_Right_side_wall,_looking_south_west.png' found='true'/>
+      <Viewpoint description='[30] SanCarlosCathedral.x3d Front view'
+         fileName='SanCarlosCathedral.x3d._VP_Front_view.png' found='true'/>
+      <Viewpoint description='[31] SanCarlosCathedral.x3d Behind the altar'
+         fileName='SanCarlosCathedral.x3d._VP_Behind_the_altar.png' found='true'/>
+      <Viewpoint description='[32] SanCarlosCathedral.x3d Right transept'
+         fileName='SanCarlosCathedral.x3d._VP_Right_transept.png' found='true'/>
+      <Viewpoint description='[33] SanCarlosCathedral.x3d Right transept, lateral entrance'
+         fileName='SanCarlosCathedral.x3d._VP_Right_transept,_lateral_entrance.png' found='true'/>
+      <Viewpoint description='[34] SanCarlosCathedral.x3d Left transept'
+         fileName='SanCarlosCathedral.x3d._VP_Left_transept.png' found='true'/>
+      <Viewpoint description='[35] SanCarlosCathedral.x3d Altar, crucifix'
+         fileName='SanCarlosCathedral.x3d._VP_Altar,_crucifix.png' found='true'/>
+      <Viewpoint description='[36] SanCarlosCathedral.x3d Sacristy'
+         fileName='SanCarlosCathedral.x3d._VP_Sacristy.png' found='true'/>
+      <Viewpoint description='[37] SanCarlosCathedral.x3d Sacristy interior and back room'
+         fileName='SanCarlosCathedral.x3d._VP_Sacristy_interior_and_back_room.png' found='true'/>
+      <Viewpoint description='[38] SanCarlosCathedral.x3d Nave, view'
+         fileName='SanCarlosCathedral.x3d._VP_Nave,_view.png' found='true'/>
+      <Viewpoint description='[39] SanCarlosCathedral.x3d Nave and Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_and_Balcony.png' found='true'/>
+      <Viewpoint description='[40] SanCarlosCathedral.x3d Left side wall, picture'
+         fileName='SanCarlosCathedral.x3d._VP_Left_side_wall,_picture.png' found='true'/>
+      <Viewpoint
+         description='[41] SanCarlosCathedral.x3d Left side wall, picture, portrait of the man who commissioned the stations of the cross'
+         fileName='SanCarlosCathedral.x3d._VP_Left_side_wall,_picture,_portrait_of_the_man_who_commissioned_the_stations_of_the_cross.png'
+         found='true'/>
+      <Viewpoint description='[42] SanCarlosCathedral.x3d Left side wall, looking north est'
+         fileName='SanCarlosCathedral.x3d._VP_Left_side_wall,_looking_north_est.png' found='true'/>
+      <Viewpoint description='[43] SanCarlosCathedral.x3d Entrance, stairs to tower and balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Entrance,_stairs_to_tower_and_balcony.png' found='true'/>
+      <Viewpoint description='[44] SanCarlosCathedral.x3d Stairs to tower and balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Stairs_to_tower_and_balcony.png' found='true'/>
+      <Viewpoint description='[45] SanCarlosCathedral.x3d Landing'
+         fileName='SanCarlosCathedral.x3d._VP_Landing.png' found='true'/>
+      <Viewpoint description='[46] SanCarlosCathedral.x3d Stairs to balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Stairs_to_balcony.png' found='true'/>
+      <Viewpoint description='[47] SanCarlosCathedral.x3d Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Balcony.png' found='true'/>
+      <Viewpoint description='[48] SanCarlosCathedral.x3d Balcony, window'
+         fileName='SanCarlosCathedral.x3d._VP_Balcony,_window.png' found='true'/>
+      <Viewpoint description='[49] SanCarlosCathedral.x3d Left rear balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Left_rear_balcony.png' found='true'/>
+      <Viewpoint description='[50] SanCarlosCathedral.x3d Organ'
+         fileName='SanCarlosCathedral.x3d._VP_Organ.png' found='true'/>
+      <Viewpoint description='[51] SanCarlosCathedral.x3d Balcony, doors'
+         fileName='SanCarlosCathedral.x3d._VP_Balcony,_doors.png' found='true'/>
+      <Viewpoint description='[52] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[53] SanCarlosCathedral.x3d Top stairs to tower, closer'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower,_closer.png' found='true'/>
+      <Viewpoint description='[54] SanCarlosCathedral.x3d Top stairs to tower and bells'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower_and_bells.png' found='true'/>
+      <Viewpoint description='[55] SanCarlosCathedral.x3d Bells'
+         fileName='SanCarlosCathedral.x3d._VP_Bells.png' found='true'/>
+      <Viewpoint description='[56] SanCarlosCathedral.x3d Tower, Bells'
+         fileName='SanCarlosCathedral.x3d._VP_Tower,_Bells.png' found='true'/>
+      <Viewpoint description='[57] SanCarlosCathedral.x3d Tower, arcs'
+         fileName='SanCarlosCathedral.x3d._VP_Tower,_arcs.png' found='true'/>
+      <Viewpoint description='[58] SanCarlosCathedral.x3d Tower, entrance'
+         fileName='SanCarlosCathedral.x3d._VP_Tower,_entrance.png' found='true'/>
+      <Viewpoint description='[59] SanCarlosCathedral.x3d View from the tower'
+         fileName='SanCarlosCathedral.x3d._VP_View_from_the_tower.png' found='true'/>
+      <Viewpoint description='[60] SanCarlosCathedral.x3d San Carlos Cathedral, front from ground'
+         fileName='SanCarlosCathedral.x3d._VP_San_Carlos_Cathedral,_front_from_ground.png' found='true'/>
+      <Viewpoint description='[61] SanCarlosCathedral.x3d San Carlos Cathedral, front'
+         fileName='SanCarlosCathedral.x3d._VP_San_Carlos_Cathedral,_front.png' found='true'/>
+      <Viewpoint description='[62] SanCarlosCathedral.x3d San Carlos Cathedral, front above'
+         fileName='SanCarlosCathedral.x3d._VP_San_Carlos_Cathedral,_front_above.png' found='true'/>
+      <Viewpoint description='[63] SanCarlosCathedral.x3d Oblique outside view'
+         fileName='SanCarlosCathedral.x3d._VP_Oblique_outside_view.png' found='false'/>
+      <Viewpoint description='[64] SanCarlosCathedral.x3d Overhead view'
+         fileName='SanCarlosCathedral.x3d._VP_Overhead_view.png' found='true'/>
+      <Viewpoint description='[65] SanCarlosCathedral.x3d Oblique outside view'
+         fileName='SanCarlosCathedral.x3d._VP_Oblique_outside_view.png' found='false'/>
+      <Viewpoint description='[66] SanCarlosCathedral.x3d Facade details'
+         fileName='SanCarlosCathedral.x3d._VP_Facade_details.png' found='true'/>
+      <Viewpoint description='[67] SanCarlosCathedral.x3d Right outside'
+         fileName='SanCarlosCathedral.x3d._VP_Right_outside.png' found='true'/>
+      <Viewpoint description='[68] SanCarlosCathedral.x3d Sacristy'
+         fileName='SanCarlosCathedral.x3d._VP_Sacristy.png' found='true'/>
+      <Viewpoint description='[69] SanCarlosCathedral.x3d Back outside'
+         fileName='SanCarlosCathedral.x3d._VP_Back_outside.png' found='true'/>
+      <Viewpoint description='[70] SanCarlosCathedral.x3d Back outside'
+         fileName='SanCarlosCathedral.x3d._VP_Back_outside.png' found='true'/>
+      <Viewpoint description='[71] SanCarlosCathedral.x3d Interior Left rear balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Interior_Left_rear_balcony.png' found='true'/>
+      <Viewpoint description='[72] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[73] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[74] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[75] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[76] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[77] SanCarlosCathedral.x3d Front doors, looking in'
+         fileName='SanCarlosCathedral.x3d._VP_Front_doors,_looking_in.png' found='true'/>
+      <Viewpoint description='[78] SanCarlosCathedral.x3d Interior Front2'
+         fileName='SanCarlosCathedral.x3d._VP_Interior_Front2.png' found='false'/>
+      <Viewpoint description='[79] SanCarlosCathedral.x3d Rear'
+         fileName='SanCarlosCathedral.x3d._VP_Rear.png' found='false'/>
+      <Viewpoint description='[80] SanCarlosCathedral.x3d Transept'
+         fileName='SanCarlosCathedral.x3d._VP_Transept.png' found='false'/>
+      <Viewpoint description='[81] SanCarlosCathedral.x3d Transept'
+         fileName='SanCarlosCathedral.x3d._VP_Transept.png' found='false'/>
+      <Viewpoint description='[82] SanCarlosCathedral.x3d Rear'
+         fileName='SanCarlosCathedral.x3d._VP_Rear.png' found='false'/>
+      <Viewpoint description='[83] SanCarlosCathedral.x3d Rear'
+         fileName='SanCarlosCathedral.x3d._VP_Rear.png' found='false'/>
+      <Viewpoint description='[84] SanCarlosCathedral.x3d Sacristy'
+         fileName='SanCarlosCathedral.x3d._VP_Sacristy.png' found='true'/>
+      <Viewpoint description='[85] SanCarlosCathedral.x3d Sacristy'
+         fileName='SanCarlosCathedral.x3d._VP_Sacristy.png' found='true'/>
+      <Viewpoint description='[86] SanCarlosCathedral.x3d Nave - View'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_-_View.png' found='false'/>
+      <Viewpoint description='[87] SanCarlosCathedral.x3d Nave - Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_-_Balcony.png' found='false'/>
+      <Viewpoint description='[88] SanCarlosCathedral.x3d Nave - Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_-_Balcony.png' found='false'/>
+      <Viewpoint description='[89] SanCarlosCathedral.x3d Nave - Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_-_Balcony.png' found='false'/>
+      <Viewpoint description='[90] SanCarlosCathedral.x3d Nave - Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_-_Balcony.png' found='false'/>
+      <Viewpoint description='[91] SanCarlosCathedral.x3d Nave - Balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Nave_-_Balcony.png' found='false'/>
+      <Viewpoint description='[92] SanCarlosCathedral.x3d Entrance - Stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Entrance_-_Stairs_to_tower.png' found='false'/>
+      <Viewpoint description='[93] SanCarlosCathedral.x3d Stairs to tower and balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Stairs_to_tower_and_balcony.png' found='true'/>
+      <Viewpoint description='[94] SanCarlosCathedral.x3d Stairs to tower and balcony'
+         fileName='SanCarlosCathedral.x3d._VP_Stairs_to_tower_and_balcony.png' found='true'/>
+      <Viewpoint description='[95] SanCarlosCathedral.x3d Left rear balcony1'
+         fileName='SanCarlosCathedral.x3d._VP_Left_rear_balcony1.png' found='false'/>
+      <Viewpoint description='[96] SanCarlosCathedral.x3d Left rear balcony1'
+         fileName='SanCarlosCathedral.x3d._VP_Left_rear_balcony1.png' found='false'/>
+      <Viewpoint description='[97] SanCarlosCathedral.x3d Left rear balcony1'
+         fileName='SanCarlosCathedral.x3d._VP_Left_rear_balcony1.png' found='false'/>
+      <Viewpoint description='[98] SanCarlosCathedral.x3d Left rear balcony2 - Organ'
+         fileName='SanCarlosCathedral.x3d._VP_Left_rear_balcony2_-_Organ.png' found='false'/>
+      <Viewpoint description='[99] SanCarlosCathedral.x3d Left rear balcony3'
+         fileName='SanCarlosCathedral.x3d._VP_Left_rear_balcony3.png' found='false'/>
+      <Viewpoint description='[100] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[101] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[102] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[103] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[104] SanCarlosCathedral.x3d Tower - Bells'
+         fileName='SanCarlosCathedral.x3d._VP_Tower_-_Bells.png' found='false'/>
+      <Viewpoint description='[105] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[106] SanCarlosCathedral.x3d Top stairs to tower'
+         fileName='SanCarlosCathedral.x3d._VP_Top_stairs_to_tower.png' found='true'/>
+      <Viewpoint description='[107] SanCarlosCathedral.x3d Tower - View'
+         fileName='SanCarlosCathedral.x3d._VP_Tower_-_View.png' found='false'/>
+      <Viewpoint description='[108] SanCarlosCathedral.x3d (default X3D view from 0 0 10)'
+         fileName='SanCarlosCathedral.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='6 April 2012' creator='Michele Foti'
+       description='San Carlos Cathedral is the oldest continuously functioning church and the first stone building in the State of California.'
+       modified='26 January 2020' name='SanCarlosChurchHistory'
+       thumbnail='_thumbnails/SanCarlosChurchHistoryThumbnail.png' title='San Carlos Church History'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/SanCarlosCathedral/SanCarlosChurchHistory.x3d'
+       warning='under development'>
+      <Viewpoint description='[109] SanCarlosChurchHistory.x3d (default X3D view from 0 0 10)'
+         fileName='SanCarlosChurchHistory.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Scanning' title='Scanning'>
+    <Page created='4 April 2016' creator='Don Brutzman'
+       description='3D scan of Hamming brick: mesh produced by DotProduct scanner, converted to X3D using Meshlab, and tuned for publication using X3D-Edit.'
+       modified='20 October 2019' name='HammingBrickPoissonMesh'
+       thumbnail='_thumbnails/HammingBrickPoissonMeshThumbnail.png' title='Hamming Brick Poisson Mesh'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/HammingBrickPoissonMesh.x3d'>
+      <Viewpoint description='[1] HammingBrickPoissonMesh.x3d Hamming brick'
+         fileName='HammingBrickPoissonMesh.x3d._VP_Hamming_brick.png' found='true'/>
+      <Viewpoint description='[2] HammingBrickPoissonMesh.x3d (default X3D view from 0 0 10)'
+         fileName='HammingBrickPoissonMesh.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='11 November 2019' creator='Bill Gutelius, Qntfi https://www.qntfii.com'
+       description='Embed example metadata associated with a scanned 3D model using X3D version 3.3.'
+       modified='1 April 2021' name='ScannerMetadataExample33' title='Scanner Metadata Example 33'
+       translator='Nicholas Polys, VT'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/ScannerMetadataExample33.x3d'>
+      <Viewpoint description='[3] ScannerMetadataExample33.x3d (default X3D view from 0 0 10)'
+         fileName='ScannerMetadataExample33.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='11 November 2019' creator='Bill Gutelius, Qntfi https://www.qntfii.com'
+       description='Embed example metadata associated with a scanned 3D model using X3D version 4.'
+       modified='1 April 2021' name='ScannerMetadataExample4' title='Scanner Metadata Example 4'
+       translator='Nicholas Polys, VT'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/ScannerMetadataExample4.x3d'>
+      <Viewpoint description='[4] ScannerMetadataExample4.x3d (default X3D view from 0 0 10)'
+         fileName='ScannerMetadataExample4.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 June 1994' creator='Mark Pesce and Tony Parisi'
+       description='Original Cyber Banana model by Mark Pesce and Tony Parisi, SIGGRAPH 1994, used for proposing the Virtual Reality Markup Language (VRML).'
+       modified='20 October 2019' name='VirtualBananaOriginal'
+       thumbnail='_thumbnails/VirtualBananaOriginalThumbnail.png' title='Virtual Banana Original'
+       translator='Roy Walmsley and Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/VirtualBananaOriginal.x3d'>
+      <Viewpoint description='[5] VirtualBananaOriginal.x3d Front'
+         fileName='VirtualBananaOriginal.x3d._VP_Front.png' found='true'/>
+      <Viewpoint description='[6] VirtualBananaOriginal.x3d Right'
+         fileName='VirtualBananaOriginal.x3d._VP_Right.png' found='true'/>
+      <Viewpoint description='[7] VirtualBananaOriginal.x3d Back'
+         fileName='VirtualBananaOriginal.x3d._VP_Back.png' found='true'/>
+      <Viewpoint description='[8] VirtualBananaOriginal.x3d Left'
+         fileName='VirtualBananaOriginal.x3d._VP_Left.png' found='true'/>
+      <Viewpoint description='[9] VirtualBananaOriginal.x3d Top'
+         fileName='VirtualBananaOriginal.x3d._VP_Top.png' found='true'/>
+      <Viewpoint description='[10] VirtualBananaOriginal.x3d Bottom'
+         fileName='VirtualBananaOriginal.x3d._VP_Bottom.png' found='true'/>
+      <Viewpoint description='[11] VirtualBananaOriginal.x3d (default X3D view from 0 0 10)'
+         fileName='VirtualBananaOriginal.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='3 June 2017' creator='Don Brutzman, Roy Walmsley, Vince Marchetti, Danny Todorov'
+       description='Banana scanned at VR Hackathon, Web3D 2017, Brisbane Australia with point cloud reduced by Meshlab using Filters, PointSet, Point Cloud Simplification.'
+       modified='20 October 2019' name='VirtualBananaReduced'
+       thumbnail='_thumbnails/VirtualBananaReducedThumbnail.png' title='Virtual Banana Reduced'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/VirtualBananaReduced.x3d'>
+      <Viewpoint description='[12] VirtualBananaReduced.x3d Scanned banana'
+         fileName='VirtualBananaReduced.x3d._VP_Scanned_banana.png' found='true'/>
+      <Viewpoint description='[13] VirtualBananaReduced.x3d (default X3D view from 0 0 10)'
+         fileName='VirtualBananaReduced.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='3 June 2017' creator='Don Brutzman, Roy Walmsley, Vince Marchetti, Danny Todorov'
+       description='Banana scanned at VR Hackathon, Web3D 2017, Brisbane Australia with point cloud reduced by Meshlab using Filters, PointSet, Point Cloud Simplification.'
+       modified='20 October 2019' name='VirtualBananaScanned'
+       thumbnail='_thumbnails/VirtualBananaScannedThumbnail.png' title='Virtual Banana Scanned'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/VirtualBananaScanned.x3d'>
+      <Viewpoint description='[14] VirtualBananaScanned.x3d Scanned banana'
+         fileName='VirtualBananaScanned.x3d._VP_Scanned_banana.png' found='true'/>
+      <Viewpoint description='[15] VirtualBananaScanned.x3d (default X3D view from 0 0 10)'
+         fileName='VirtualBananaScanned.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='4 June 2017' creator='Don Brutzman, Vince Marchetti, Roy Walmsley, Nicholas Polys'
+       description='Candidate design pattern for 3D scanner outputs to consistently define the elements of an X3D mesh.'
+       modified='20 October 2019' name='X3dMeshDesignPattern'
+       thumbnail='_thumbnails/X3dMeshDesignPatternThumbnail.png' title=' X3D Mesh Design Pattern'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Scanning/X3dMeshDesignPattern.x3d'
+       warning='Under development. Note that proposed design pattern for Normal inside PointSet or LineSet/IndexedLineSet is not allowed in X3D v3.3.'>
+      <Viewpoint description='[16] X3dMeshDesignPattern.x3d Front view'
+         fileName='X3dMeshDesignPattern.x3d._VP_Front_view.png' found='false'/>
+      <Viewpoint description='[17] X3dMeshDesignPattern.x3d (default X3D view from 0 0 10)'
+         fileName='X3dMeshDesignPattern.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Security' title='Security'>
+    <Page created='16 April 2011' creator='Don Brutzman'
+       description='This example illustrates possibility of message obfuscation by using polygonal and line-based geometry instead of native Text-node strings. Note that Text-node geometries become polygonal once rendered and might also be saved in geometric form.'
+       modified='20 October 2019' name='PlainTextHiddenMessage'
+       subject='X3D IndexedLineSet Text messages'
+       thumbnail='_thumbnails/PlainTextHiddenMessageThumbnail.png' title='Plain Text Hidden Message'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Security/PlainTextHiddenMessage.x3d'>
+      <Viewpoint description='[1] PlainTextHiddenMessage.x3d Plain Text Hidden Message'
+         fileName='PlainTextHiddenMessage.x3d._VP_Plain_Text_Hidden_Message.png' found='true'/>
+      <Viewpoint description='[2] PlainTextHiddenMessage.x3d (default X3D view from 0 0 10)'
+         fileName='PlainTextHiddenMessage.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='ShayDPixel' title='Shay D Pixel'>
+    <Page created='11 October 2017' creator='Don Brutzman'
+       description='BobbleHead Box for Shay D Pixel from SIGGRAPH 2017. Box measures 3.75 x 3.75 x 6.5 cubic inches overall. Thanks Mario for signature!'
+       modified='22 March 2020' name='ShayDPixelBobbleHeadBoxSiggraph2017'
+       thumbnail='_thumbnails/ShayDPixelBobbleHeadBoxSiggraph2017Thumbnail.png'
+       title='Shay D Pixel Bobble Head Box Siggraph 2017'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/ShayDPixel/ShayDPixelBobbleHeadBoxSiggraph2017.x3d'
+       warning='Some X3D players may still have difficulty with the unit element and need to be upgraded.'>
+      <Viewpoint description='[1] ShayDPixelBobbleHeadBoxSiggraph2017.x3d Front view'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Front_view.png' found='false'/>
+      <Viewpoint description='[2] ShayDPixelBobbleHeadBoxSiggraph2017.x3d Left side view'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Left_side_view.png' found='false'/>
+      <Viewpoint description='[3] ShayDPixelBobbleHeadBoxSiggraph2017.x3d Back view'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Back_view.png' found='false'/>
+      <Viewpoint description='[4] ShayDPixelBobbleHeadBoxSiggraph2017.x3d Right Side view'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Right_Side_view.png' found='false'/>
+      <Viewpoint description='[5] ShayDPixelBobbleHeadBoxSiggraph2017.x3d Bottom view'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Bottom_view.png' found='false'/>
+      <Viewpoint description='[6] ShayDPixelBobbleHeadBoxSiggraph2017.x3d Top view'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Top_view.png' found='false'/>
+      <Viewpoint description='[7] ShayDPixelBobbleHeadBoxSiggraph2017.x3d (default X3D view from 0 0 10)'
+         fileName='ShayDPixelBobbleHeadBoxSiggraph2017.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='6 November 2017' creator='Mario Nagumura'
+       description='Shay D Pixel standing in default pose from original real-time model for SIGGRAPH 2017, approximately 1m tall.'
+       modified='28 November 2019' name='ShayDPixelVersion2'
+       thumbnail='_thumbnails/ShayDPixelVersion2Thumbnail.png' title='Shay D Pixel Version 2'
+       translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/ShayDPixel/ShayDPixelVersion2.x3d'>
+      <Viewpoint description='[8] ShayDPixelVersion2.x3d Front view, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_Front_view,_Shay_D_Pixel.png' found='false'/>
+      <Viewpoint description='[9] ShayDPixelVersion2.x3d Oblique view, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_Oblique_view,_Shay_D_Pixel.png' found='true'/>
+      <Viewpoint description='[10] ShayDPixelVersion2.x3d View from left side, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_View_from_left_side,_Shay_D_Pixel.png' found='true'/>
+      <Viewpoint description='[11] ShayDPixelVersion2.x3d View from back, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_View_from_back,_Shay_D_Pixel.png' found='true'/>
+      <Viewpoint description='[12] ShayDPixelVersion2.x3d Over the shoulder view, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_Over_the_shoulder_view,_Shay_D_Pixel.png' found='true'/>
+      <Viewpoint description='[13] ShayDPixelVersion2.x3d View from overhead, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_View_from_overhead,_Shay_D_Pixel.png' found='true'/>
+      <Viewpoint description='[14] ShayDPixelVersion2.x3d View from right side, Shay D Pixel'
+         fileName='ShayDPixelVersion2.x3d._VP_View_from_right_side,_Shay_D_Pixel.png' found='true'/>
+      <Viewpoint description='[15] ShayDPixelVersion2.x3d (default X3D view from 0 0 10)'
+         fileName='ShayDPixelVersion2.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='TextureMapping' title='Texture Mapping'>
+    <Page created='5 March 2011' creator='Don Brutzman'
+       description='Design pattern for MultiTexture, MultiTextureCoordinate, MultiTextureTransform node correspondences'
+       modified='20 October 2019' name='MultiTextureDesignPattern'
+       subject='MultiTexture, MultiTextureCoordinate, MultiTextureTransform'
+       thumbnail='_thumbnails/MultiTextureDesignPatternThumbnail.png'
+       title='Multi Texture Design Pattern'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/MultiTextureDesignPattern.x3d'>
+      <Viewpoint description='[1] MultiTextureDesignPattern.x3d MultiTexture design pattern'
+         fileName='MultiTextureDesignPattern.x3d._VP_MultiTexture_design_pattern.png' found='true'/>
+      <Viewpoint description='[2] MultiTextureDesignPattern.x3d (default X3D view from 0 0 10)'
+         fileName='MultiTextureDesignPattern.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='23 May 2021' creator='Rick Lentz, Michalis Kamburelis'
+       description='MultiTextureTeapot X3D example uses texture, material and TextureCoordinateGenerator properties provided by Castle Game Engine example model, applied to the Newell Teapot geometry. Also added X3D logo for coolness!'
+       modified='28 September 2021' name='MultiTextureTeapot' title='Multi Texture Teapot'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/MultiTextureTeapot.x3d'
+       warning='ComposedCubeMapTexture, GeneratedCubeMapTexture, ImageCubeMapTexture not yet an allowed child for X3D4 validation of MultiTexture'>
+      <Viewpoint description='[3] MultiTextureTeapot.x3d X3D MultiTexture Teapot'
+         fileName='MultiTextureTeapot.x3d._VP_X3D_MultiTexture_Teapot.png' found='false'/>
+      <Viewpoint description='[4] MultiTextureTeapot.x3d Mode 1'
+         fileName='MultiTextureTeapot.x3d._VP_Mode_1.png' found='false'/>
+      <Viewpoint description='[5] MultiTextureTeapot.x3d Mode 2'
+         fileName='MultiTextureTeapot.x3d._VP_Mode_2.png' found='false'/>
+      <Viewpoint description='[6] MultiTextureTeapot.x3d Mode 3'
+         fileName='MultiTextureTeapot.x3d._VP_Mode_3.png' found='false'/>
+      <Viewpoint description='[7] MultiTextureTeapot.x3d Mode 4'
+         fileName='MultiTextureTeapot.x3d._VP_Mode_4.png' found='false'/>
+      <Viewpoint description='[8] MultiTextureTeapot.x3d (default X3D view from 0 0 10)'
+         fileName='MultiTextureTeapot.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='23 April 2013' creator='Don Brutzman'
+       description='View a given texture from different angles to judge readability, example use is a QR code.'
+       modified='20 April 2020' name='TextureAngleViewer'
+       thumbnail='_thumbnails/TextureAngleViewerThumbnail.png' title='Texture Angle Viewer'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/TextureAngleViewer.x3d'>
+      <Viewpoint description='[9] TextureAngleViewer.x3d Texture angle viewer'
+         fileName='TextureAngleViewer.x3d._VP_Texture_angle_viewer.png' found='true'/>
+      <Viewpoint description='[10] TextureAngleViewer.x3d (default X3D view from 0 0 10)'
+         fileName='TextureAngleViewer.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='17 December 2017' creator='Sungmin Kwon and Don Brutzman'
+       description='Compare ImageTexture mapping for a variety of geometry nodes. This is an excellent test scene for different X3D browsers.'
+       modified='21 January 2020' name='TextureMapComparisonsCylinder'
+       specificationSection='X3D Abstract Specification, 18.2.3 Texture coordinates'
+       specificationUrl='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#Texturecoordinates'
+       thumbnail='_thumbnails/TextureMapComparisonsCylinderThumbnail.png'
+       title='Texture Map Comparisons Cylinder'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/TextureMapComparisonsCylinder.x3d'>
+      <Viewpoint description='[11] TextureMapComparisonsCylinder.x3d default view'
+         fileName='TextureMapComparisonsCylinder.x3d._VP_default_view.png' found='true'/>
+      <Viewpoint description='[12] TextureMapComparisonsCylinder.x3d (default X3D view from 0 0 10)'
+         fileName='TextureMapComparisonsCylinder.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='15 December 2017' creator='Sungmin Kwon and Don Brutzman'
+       description='Compare ImageTexture mapping for a variety of geometry nodes. This is an excellent test scene for different X3D browsers.'
+       modified='20 October 2019' name='TextureMapComparisonsRectangle'
+       specificationSection='X3D Abstract Specification, 18.2.3 Texture coordinates'
+       specificationUrl='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#Texturecoordinates'
+       thumbnail='_thumbnails/TextureMapComparisonsRectangleThumbnail.png'
+       title='Texture Map Comparisons Rectangle'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/TextureMapping/TextureMapComparisonsRectangle.x3d'>
+      <Viewpoint description='[13] TextureMapComparisonsRectangle.x3d Texture map examples overview'
+         fileName='TextureMapComparisonsRectangle.x3d._VP_Texture_map_examples_overview.png'
+         found='true'/>
+      <Viewpoint description='[14] TextureMapComparisonsRectangle.x3d (default X3D view from 0 0 10)'
+         fileName='TextureMapComparisonsRectangle.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='UserExperienceUX' title='User Experience UX'>
+    <Page created='15 March 2014' creator='Don Brutzman'
+       description='This scene demonstrates how to receive a simple event and report it graphically, repeating every few seconds. Scene conversion from the XML encoding (.x3d) is then used to demonstrate X3DOM event handling within a web page (.xhtml).'
+       modified='27 October 2020' name='EventMonitorTest'
+       thumbnail='_thumbnails/EventMonitorTestThumbnail.png' title='Event Monitor Test'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserInterface/EventMonitorTest.x3d'>
+      <Viewpoint description='[1] EventMonitorTest.x3d Event Monitor Text'
+         fileName='EventMonitorTest.x3d._VP_Event_Monitor_Text.png' found='true'/>
+      <Viewpoint description='[2] EventMonitorTest.x3d (default X3D view from 0 0 10)'
+         fileName='EventMonitorTest.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='9 February 2014' creator='Don Brutzman'
+       description='Display Anchor-linked instructions as Text and include transparent Box to simplify user selection. Authors can change the Material transparency value to view the Box, which helps when resizing it to fit the Text.'
+       modified='20 October 2019' name='SelectableTextTransparentBox'
+       thumbnail='_thumbnails/SelectableTextTransparentBoxThumbnail.png'
+       title='Selectable Text Transparent Box'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserInterface/SelectableTextTransparentBox.x3d'>
+      <Viewpoint description='[3] SelectableTextTransparentBox.x3d (default X3D view from 0 0 10)'
+         fileName='SelectableTextTransparentBox.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Visualization' title='Visualization'>
+    <Page created='28 December 2014' creator='Don Brutzman'
+       description='Collection of example Background nodes for author reuse, browse by selecting corresponding viewpoints.'
+       modified='20 October 2019' name='BackgroundCollection'
+       thumbnail='_thumbnails/BackgroundCollectionThumbnail.png' title='Background Collection'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Visualization/BackgroundCollection.x3d'>
+      <Viewpoint description='[1] BackgroundCollection.x3d Blue Sky White Horizon Brown Land'
+         fileName='BackgroundCollection.x3d._VP_Blue_Sky_White_Horizon_Brown_Land.png' found='true'/>
+      <Viewpoint description='[2] BackgroundCollection.x3d Blue Ocean White Horizon'
+         fileName='BackgroundCollection.x3d._VP_Blue_Ocean_White_Horizon.png' found='true'/>
+      <Viewpoint description='[3] BackgroundCollection.x3d Overcast Sky Blue Ocean'
+         fileName='BackgroundCollection.x3d._VP_Overcast_Sky_Blue_Ocean.png' found='true'/>
+      <Viewpoint description='[4] BackgroundCollection.x3d Blue Sky Blue Ocean'
+         fileName='BackgroundCollection.x3d._VP_Blue_Sky_Blue_Ocean.png' found='true'/>
+      <Viewpoint description='[5] BackgroundCollection.x3d Simply White'
+         fileName='BackgroundCollection.x3d._VP_Simply_White.png' found='true'/>
+      <Viewpoint description='[6] BackgroundCollection.x3d Simply Grey'
+         fileName='BackgroundCollection.x3d._VP_Simply_Grey.png' found='true'/>
+      <Viewpoint description='[7] BackgroundCollection.x3d Simply Dark Grey'
+         fileName='BackgroundCollection.x3d._VP_Simply_Dark_Grey.png' found='true'/>
+      <Viewpoint description='[8] BackgroundCollection.x3d Simply Black'
+         fileName='BackgroundCollection.x3d._VP_Simply_Black.png' found='true'/>
+      <Viewpoint description='[9] BackgroundCollection.x3d Test1'
+         fileName='BackgroundCollection.x3d._VP_Test1.png' found='true'/>
+      <Viewpoint description='[10] BackgroundCollection.x3d Test2'
+         fileName='BackgroundCollection.x3d._VP_Test2.png' found='true'/>
+      <Viewpoint description='[11] BackgroundCollection.x3d Test3'
+         fileName='BackgroundCollection.x3d._VP_Test3.png' found='true'/>
+      <Viewpoint description='[12] BackgroundCollection.x3d Test4'
+         fileName='BackgroundCollection.x3d._VP_Test4.png' found='true'/>
+      <Viewpoint description='[13] BackgroundCollection.x3d Looking up at current Background zenith'
+         fileName='BackgroundCollection.x3d._VP_Looking_up_at_current_Background_zenith.png'
+         found='true'/>
+      <Viewpoint description='[14] BackgroundCollection.x3d Looking down at current Background nadir'
+         fileName='BackgroundCollection.x3d._VP_Looking_down_at_current_Background_nadir.png'
+         found='true'/>
+      <Viewpoint description='[15] BackgroundCollection.x3d (default X3D view from 0 0 10)'
+         fileName='BackgroundCollection.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='29 December 2014' creator='Don Brutzman'
+       description='Background with labeled side images and wide field-of-view (FOV) Viewpoints, suitable for scene-orientation testing.'
+       modified='20 October 2019' name='BackgroundCube'
+       thumbnail='_thumbnails/BackgroundCubeThumbnail.png' title='Background Cube'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Visualization/BackgroundCube.x3d'>
+      <Viewpoint description='[16] BackgroundCube.x3d Front image of Background seen from origin'
+         fileName='BackgroundCube.x3d._VP_Front_image_of_Background_seen_from_origin.png' found='true'/>
+      <Viewpoint description='[17] BackgroundCube.x3d Left image of Background seen from origin'
+         fileName='BackgroundCube.x3d._VP_Left_image_of_Background_seen_from_origin.png' found='true'/>
+      <Viewpoint description='[18] BackgroundCube.x3d Top image of Background seen from origin'
+         fileName='BackgroundCube.x3d._VP_Top_image_of_Background_seen_from_origin.png' found='true'/>
+      <Viewpoint description='[19] BackgroundCube.x3d Back image of Background seen from origin'
+         fileName='BackgroundCube.x3d._VP_Back_image_of_Background_seen_from_origin.png' found='true'/>
+      <Viewpoint description='[20] BackgroundCube.x3d Right image of Background seen from origin'
+         fileName='BackgroundCube.x3d._VP_Right_image_of_Background_seen_from_origin.png' found='true'/>
+      <Viewpoint description='[21] BackgroundCube.x3d Bottom image of Background seen from origin'
+         fileName='BackgroundCube.x3d._VP_Bottom_image_of_Background_seen_from_origin.png' found='true'/>
+      <Viewpoint description='[22] BackgroundCube.x3d (default X3D view from 0 0 10)'
+         fileName='BackgroundCube.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 May 2017' creator='Don Brutzman'
+       description='TextureBackground containing ImageTexture nodes, with labeled side images and wide field-of-view (FOV) Viewpoints, suitable for scene-orientation testing. Includes transparency interpolator test and also LoadSensor Script console to log events of interest.'
+       modified='20 October 2019' name='TextureBackgroundCube'
+       thumbnail='_thumbnails/TextureBackgroundCubeThumbnail.png' title='Texture Background Cube'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Visualization/BackgroundCube.x3d'>
+      <Viewpoint
+         description='[23] TextureBackgroundCube.x3d Front image of TextureBackground seen from origin'
+         fileName='TextureBackgroundCube.x3d._VP_Front_image_of_TextureBackground_seen_from_origin.png'
+         found='true'/>
+      <Viewpoint
+         description='[24] TextureBackgroundCube.x3d Left image of TextureBackground seen from origin'
+         fileName='TextureBackgroundCube.x3d._VP_Left_image_of_TextureBackground_seen_from_origin.png'
+         found='true'/>
+      <Viewpoint
+         description='[25] TextureBackgroundCube.x3d Top image of TextureBackground seen from origin'
+         fileName='TextureBackgroundCube.x3d._VP_Top_image_of_TextureBackground_seen_from_origin.png'
+         found='true'/>
+      <Viewpoint
+         description='[26] TextureBackgroundCube.x3d Back image of TextureBackground seen from origin'
+         fileName='TextureBackgroundCube.x3d._VP_Back_image_of_TextureBackground_seen_from_origin.png'
+         found='true'/>
+      <Viewpoint
+         description='[27] TextureBackgroundCube.x3d Right image of TextureBackground seen from origin'
+         fileName='TextureBackgroundCube.x3d._VP_Right_image_of_TextureBackground_seen_from_origin.png'
+         found='true'/>
+      <Viewpoint
+         description='[28] TextureBackgroundCube.x3d Bottom image of TextureBackground seen from origin'
+         fileName='TextureBackgroundCube.x3d._VP_Bottom_image_of_TextureBackground_seen_from_origin.png'
+         found='true'/>
+      <Viewpoint description='[29] TextureBackgroundCube.x3d (default X3D view from 0 0 10)'
+         fileName='TextureBackgroundCube.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+</ContentCatalog>
+
+

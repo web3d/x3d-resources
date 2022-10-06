@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ViewpointSequencerPrototype.x3d' name='title'/>
+    <meta content='Animate through a set of Viewpoint or GeoViewpoint nodes and repeat' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='10 December 2002' name='created'/>
+    <meta content='11 November 2014' name='modified'/>
+    <meta content='https://www.web3d.org/technicalinfo/specifications/vrml97/part1/nodesRef.html#ScalarInterpolator' name='reference'/>
+    <meta content='Viewpoint Tour' name='subject'/>
+    <meta content='https://savage.nps.edu/Savage/Tools/Animation/ViewpointSequencerPrototype.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.2, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <ProtoDeclare appinfo='Sequentially binds each Viewpoint in a set of Viewpoint USE nodes, creating an automatic tour for a scene' name='ViewpointSequencer'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' appinfo='Viewpoint USE nodes that are sequentially bound' name='viewpoints' type='MFNode'>
+          <!-- initialization nodes (if any) go here -->
+        </field>
+        <field accessType='inputOutput' appinfo='number of seconds between viewpoint shifts' name='interval' type='SFTime' value='5'/>
+        <field accessType='inputOutput' appinfo='whether ViewpointSequencer is enabled or not' name='enabled' type='SFBool' value='true'/>
+        <field accessType='inputOnly' appinfo='whether ViewpointSequencer is enabled or not' name='set_enabled' type='SFBool'/>
+        <field accessType='inputOnly' appinfo='bind previous Viewpoint in list' name='previous' type='SFBool'/>
+        <field accessType='inputOnly' appinfo='bind next Viewpoint in list' name='next' type='SFBool'/>
+        <field accessType='inputOutput' appinfo='Select message to toggle ViewpointSequencer' name='toggleMessage' type='MFString' value='"Click text to toggle" "ViewpointSequencer"'/>
+        <field accessType='initializeOnly' appinfo='Font size for toggleMessage text' name='toggleMessageFontSize' type='SFFloat' value='1'/>
+        <field accessType='inputOutput' appinfo='Color for toggleMessage text' name='toggleMessageColor' type='SFColor' value='0.6 0.4 0.13'/>
+        <field accessType='inputOutput' appinfo='enable console output' name='traceEnabled' type='SFBool' value='false'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group DEF='ProtoBodyGroup'>
+          <TimeSensor DEF='Trigger' loop='true'>
+            <IS>
+              <connect nodeField='enabled' protoField='enabled'/>
+              <connect nodeField='cycleInterval' protoField='interval'/>
+            </IS>
+          </TimeSensor>
+          <TimeSensor DEF='TraceHolder'>
+            <IS>
+              <connect nodeField='enabled' protoField='traceEnabled'/>
+            </IS>
+          </TimeSensor>
+          <Script DEF='SequencerScript' directOutput='true'>
+            <field accessType='initializeOnly' name='viewpoints' type='MFNode'/>
+            <field accessType='inputOnly' appinfo='whether ViewpointSequencer is enabled or not' name='set_enabled' type='SFBool'/>
+            <field accessType='initializeOnly' name='TriggerNode' type='SFNode'>
+              <TimeSensor USE='Trigger'/>
+            </field>
+            <field accessType='initializeOnly' name='TraceHolderNode' type='SFNode'>
+              <TimeSensor USE='TraceHolder'/>
+            </field>
+            <field accessType='inputOnly' name='triggerNext' type='SFTime'/>
+            <field accessType='inputOnly' name='previous' type='SFBool'/>
+            <field accessType='inputOnly' name='next' type='SFBool'/>
+            <!-- local Script variables needing persistent values -->
+            <field accessType='initializeOnly' name='index' type='SFInt32' value='0'/>
+            <field accessType='initializeOnly' name='viewpointCount' type='SFInt32' value='0'/>
+            <field accessType='initializeOnly' name='traceEnabled' type='SFBool' value='false'/>
+            <IS>
+              <connect nodeField='viewpoints' protoField='viewpoints'/>
+              <connect nodeField='previous' protoField='previous'/>
+              <connect nodeField='next' protoField='next'/>
+              <connect nodeField='set_enabled' protoField='set_enabled'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize ()
+{
+	index = 0;
+	viewpointCount = viewpoints.length;
+	traceEnabled = TraceHolderNode.loop;
+
+	tracePrint ('initialize: viewpoints.length=' + viewpointCount);
+	tracePrint ('initialize: Viewpoint [' + index + '] ' + viewpoints[index].description);
+
+	if (TriggerNode.enabled=='false') return;
+	if (viewpointCount > 0) viewpoints[index].set_bind = true;
+}
+
+function set_enabled (newValue, timeStamp)
+{
+	enabled = newValue;
+	tracePrint ('enabled=' + newValue);
+}
+
+function triggerNext(triggerTime, timeStamp)
+{
+	if ((TriggerNode.enabled=='false') || (viewpointCount==0)) return;
+	if (index < viewpointCount - 1)
+		index++;
+	else	index = 0;
+	if (viewpointCount > 1) viewpoints[index].set_bind = true;
+	tracePrint ('triggerNext: Viewpoint [' + index + '] ' + viewpoints[index].description);
+}
+
+function previous (value, timeStamp)
+{
+  if ((TriggerNode.enabled=='false') || (viewpointCount==0)) return;
+  if (value==true) // trigger on true events only
+  {
+	if (index > 0)
+		index--;
+	else	index = viewpointCount - 1;
+	if (viewpointCount > 1) viewpoints[index].set_bind = true;
+	tracePrint ('previous: Viewpoint [' + index + '] ' + viewpoints[index].description);
+  }
+}
+function next (value, timeStamp)
+{
+  if ((TriggerNode.enabled=='false') || (viewpointCount==0)) return;
+  if (value==true) // trigger on true events only
+  {
+	if (index < viewpointCount - 1)
+		index++;
+	else	index = 0;
+	if (viewpointCount > 1) viewpoints[index].set_bind = true;
+	tracePrint ('next: Viewpoint [' + index + '] ' + viewpoints[index].description);
+  }
+}
+
+function tracePrint(outputString)
+{
+	if (traceEnabled) Browser.print ('[ViewpointSequencer] ' + outputString + '\n');
+}
+
+function alwaysPrint(outputString)
+{
+	Browser.print ('[ViewpointSequencer] ' + outputString + '\n');
+}
+]]>
+          </Script>
+          <ROUTE fromField='cycleTime' fromNode='Trigger' toField='triggerNext' toNode='SequencerScript'/>
+          <Group DEF='TouchTextGroup'>
+            <TouchSensor DEF='TouchTextSensor' description='Click text to toggle ViewpointSequencer'/>
+            <Billboard axisOfRotation='0 0 0'>
+              <Shape>
+                <Text>
+                  <IS>
+                    <connect nodeField='string' protoField='toggleMessage'/>
+                  </IS>
+                  <FontStyle justify='"MIDDLE" "MIDDLE"'>
+                    <IS>
+                      <connect nodeField='size' protoField='toggleMessageFontSize'/>
+                    </IS>
+                  </FontStyle>
+                </Text>
+                <Appearance>
+                  <Material>
+                    <IS>
+                      <connect nodeField='diffuseColor' protoField='toggleMessageColor'/>
+                    </IS>
+                  </Material>
+                </Appearance>
+              </Shape>
+              <!-- An invisible box behind the string helps to toggle the ViewpointSequencer -->
+              <Shape>
+                <Box size='7.8 2 0.1'/>
+                <Appearance>
+                  <Material diffuseColor='1 1 1' transparency='1'/>
+                </Appearance>
+              </Shape>
+            </Billboard>
+            <BooleanToggle DEF='TouchToggle'/>
+            <ROUTE fromField='isActive' fromNode='TouchTextSensor' toField='set_boolean' toNode='TouchToggle'/>
+            <!-- TouchToggle toggle_changed should likely revert to TouchToggle toggle when inputOutput fields supported in Script, or native implementation provided. -->
+            <ROUTE fromField='toggle' fromNode='TouchToggle' toField='set_enabled' toNode='SequencerScript'/>
+            <ROUTE fromField='toggle' fromNode='TouchToggle' toField='enabled' toNode='Trigger'/>
+          </Group>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ===============Example============== -->
+    <Anchor description='select to view ViewpointSequencer example' parameter='"target=_blank"' url='"ViewpointSequencerExample.x3d" "https://savage.nps.edu/Savage/Tools/Animation/ViewpointSequencerExample.x3d" "ViewpointSequencerExample.wrl" "https://savage.nps.edu/Savage/Tools/Animation/ViewpointSequencerExample.wrl"'>
+      <Shape>
+        <Text string='"ViewpointSequencerPrototype" "defines a prototype" "" "Click text to see example scene" "ViewpointTourExample"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.9'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 1 0.2'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <!-- transparent Box to make text more selectable -->
+        <Box size='11 5 0.1'/>
+        <Appearance>
+          <Material diffuseColor='1 1 1' transparency='1'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

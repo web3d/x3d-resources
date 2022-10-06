@@ -1,0 +1,63 @@
+LOG	Avalon	 Init: 12/286, V2.8.0 build: R-36098 Jul 27 2016 Windows x86_64
+LOG	Avalon	 CDF parsing (0.012s): 631 Node-Types defined
+FATAL	S3	 Unknown S3 backend default; can not create
+WARNING	S3	 Could not create S3 backend: default
+WARNING	OpenSG	 Window::getFunctionByName: Couldn't get function 'glPointParameterfEXT' for Window 0000000007E56558.
+WARNING	OpenSG	 Window::getFunctionByName: Couldn't get function 'glPointParameterfvEXT' for Window 0000000007E56558.
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=2.564000129699707 0 -4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=2.564000129699707 0 -4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.7858999967575073
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-1.4360013008117676 0 -4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-1.4360013008117676 0 -4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.8859000205993652
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-4 0 -4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-4 0 -4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.9873999953269958
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-4 0 -0.48400068283081055
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-4 0 -0.48400068283081055
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.08789998292922974
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-4 0 3.595999240875244
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-4 0 3.595999240875244
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.1898999810218811
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-2.4039998054504395 0 4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-2.4039998054504395 0 4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.289900004863739
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=1.6519999504089355 0 4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=1.6519999504089355 0 4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.3912999927997589
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=4 0 4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=4 0 4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.4918999969959259
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=4 0 0.307999849319458
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=4 0 0.307999849319458
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.5922999978065491
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=4 0 -3.760000705718994
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=4 0 -3.760000705718994
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.6940000057220459
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=2.2159996032714844 0 -4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=2.2159996032714844 0 -4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.7946000099182129
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-1.7959990501403809 0 -4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-1.7959990501403809 0 -4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.8948999643325806
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-4 0 -4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-4 0 -4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.996399998664856
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-4 0 -0.11200094223022461
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-4 0 -0.11200094223022461
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.09719997644424438
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-4 0 3.8959999084472656
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-4 0 3.8959999084472656
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.19740000367164612
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=-2.0640006065368652 0 4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=-2.0640006065368652 0 4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.29839998483657837
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=1.9360008239746094 0 4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=1.9360008239746094 0 4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.3984000086784363
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=4 0 4
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=4 0 4
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.49959999322891235
+Trace_PositionInterpolator_PositionAnimator type=SFVec3f value_changed=4 0 -0.04000091552734375
+Trace_ROUTE_PositionAnimator.value_changed_TO_Pointer.translation type=SFVec3f value=4 0 -0.04000091552734375
+Trace_ROUTE_AnimationClock.fraction_changed_TO_PositionAnimator.set_fraction type=SFFloat value=0.6010000109672546

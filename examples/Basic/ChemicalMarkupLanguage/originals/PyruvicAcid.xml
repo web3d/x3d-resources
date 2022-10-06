@@ -1,0 +1,94 @@
+<molecule convention="MDLMol" title="Pyruvic Acid" type="3D">
+
+  <formula>C3 H4 O3</formula>
+  <float title="molecule weight">88.06</float>
+  <float title="melting point" units="degC">12</float>
+  <float title="boiling point" units="degC">165</float>
+  <float title="specific gravity">1.265</float>
+
+  <date day="05" month="02" year="2010"/>
+  <comment>Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.</comment>
+  <atomArray>
+    <atom id="pyruvic_acid_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.2732</float>
+      <float builtin="y3">0.8302</float>
+      <float builtin="z3">0.9936</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-25.98076211353316</float>
+      <float builtin="y2">45.0</float>
+    </atom>
+    <atom id="pyruvic_acid_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.6424</float>
+      <float builtin="y3">1.5034</float>
+      <float builtin="z3">0.9854</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">30.0</float>
+    </atom>
+    <atom id="pyruvic_acid_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.5974</float>
+      <float builtin="y3">2.9991</float>
+      <float builtin="z3">0.9011</float>
+      <integer builtin="nonHydrogenCount">3</integer>
+      <float builtin="x2">25.980762113533153</float>
+      <float builtin="y2">45.000000000000014</float>
+    </atom>
+    <atom id="pyruvic_acid_a4">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">3.6572</float>
+      <float builtin="y3">0.847</float>
+      <float builtin="z3">1.0232</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="pyruvic_acid_a5">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.8508</float>
+      <float builtin="y3">0.4234</float>
+      <float builtin="z3">2.2078</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-51.96152422706632</float>
+      <float builtin="y2">29.999999999999993</float>
+    </atom>
+    <atom id="pyruvic_acid_a6">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">0.5294</float>
+      <float builtin="y3">0.64</float>
+      <float builtin="z3">0.052</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">-25.980762113533174</float>
+      <float builtin="y2">75.0</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="pyruvic_acid_b1">
+      <string builtin="atomRef">pyruvic_acid_a1</string>
+      <string builtin="atomRef">pyruvic_acid_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="pyruvic_acid_b2">
+      <string builtin="atomRef">pyruvic_acid_a1</string>
+      <string builtin="atomRef">pyruvic_acid_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="pyruvic_acid_b3">
+      <string builtin="atomRef">pyruvic_acid_a1</string>
+      <string builtin="atomRef">pyruvic_acid_a6</string>
+      <string builtin="order">2</string>
+    </bond>
+    <bond id="pyruvic_acid_b4">
+      <string builtin="atomRef">pyruvic_acid_a2</string>
+      <string builtin="atomRef">pyruvic_acid_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="pyruvic_acid_b5">
+      <string builtin="atomRef">pyruvic_acid_a2</string>
+      <string builtin="atomRef">pyruvic_acid_a4</string>
+      <string builtin="order">2</string>
+    </bond>
+  </bondArray>
+</molecule>

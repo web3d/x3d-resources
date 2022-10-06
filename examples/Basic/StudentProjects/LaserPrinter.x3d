@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='LaserPrinter.x3d' name='title'/>
+    <meta content='Harold W. Valentine' name='creator'/>
+    <meta content='22 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='How a laser printer works' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/LaserPrinter.x3d' name='identifier'/>
+    <meta content='BottomFuserRoller.jpg' name='Image'/>
+    <meta content='PaperRoller.gif' name='Image'/>
+    <meta content='PaperRoller.jpg' name='Image'/>
+    <meta content='ReverseText.jpg' name='Image'/>
+    <meta content='Text.jpg' name='Image'/>
+    <meta content='TopFuser.jpg' name='Image'/>
+    <meta content='TopFuserRoller.gif' name='Image'/>
+    <meta content='chargeroller.jpg' name='Image'/>
+    <meta content='chipset.jpg' name='Image'/>
+    <meta content='mirror.jpg' name='Image'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='LaserPrinter.x3d'/>
+    <Viewpoint description='LaserPrinter' orientation='-0.590284 0.769274 0.244504 0.987861' position='10 10 10'/>
+    <Group>
+      <Transform rotation='0 0 1 1.57079' translation='0 -0.85 -3.75'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0 1'/>
+          </Appearance>
+          <Cylinder height='6' radius='.03'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0 0.05 0'>
+        <Transform rotation='0 0 1 1.57079' translation='-3 0 0'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.3 0.3 0.3' shininess='0.6' specularColor='1 1 1'/>
+            </Appearance>
+            <Cylinder height='.1'/>
+          </Shape>
+        </Transform>
+        <Transform rotation='0 0 1 1.57079' translation='3 0 0'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.3 0.3 0.3' shininess='0.6' specularColor='1 1 1'/>
+            </Appearance>
+            <Cylinder height='.1'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform rotation='0 0 1 1.57079' translation='0 .1 -1.75'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.5 0.5 0.5'/>
+          </Appearance>
+          <Box size='.75 6 .75'/>
+        </Shape>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='ChargeRollerTimer' cycleInterval='10' loop='true'/>
+        <OrientationInterpolator DEF='ChargeRollerOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 6.283185307 0 1 0 5.497787144 0 1 0 4.71238898 0 1 0 3.926990817 0 1 0 3.141592654 0 1 0 2.35619449 0 1 0 1.570796327 0 1 0 0.7854163 0 1 0 0'/>
+      </Group>
+      <Transform rotation='0 0 1 1.57079' translation='0 0.1 -1.25'>
+        <Transform DEF='ChargeRoller'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0.5 0.5 1'/>
+              <ImageTexture url='"chargeroller.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/chargeroller.jpg"'/>
+            </Appearance>
+            <Cylinder height='6' radius='.25'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform rotation='0 0 1 1.57079' translation='0 -0.215 -1.25'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.6 0.25 0.25'/>
+          </Appearance>
+          <Box size='.12 6 .25'/>
+        </Shape>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='TopFuserTimer' cycleInterval='10' loop='true'/>
+        <OrientationInterpolator DEF='TopFuserOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 0 0 1 0 0.7854163 0 1 0 1.570796327 0 1 0 2.35619449 0 1 0 3.141592654 0 1 0 3.926990817 0 1 0 4.71238898 0 1 0 5.497787144 0 1 0 6.283185307'/>
+      </Group>
+      <Transform rotation='0 0 1 1.57079' translation='0 -.68 3'>
+        <Transform DEF='TopFuser'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 1 1'/>
+              <ImageTexture url='"TopFuserRoller.gif" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/TopFuserRoller.jpg"'/>
+            </Appearance>
+            <Cylinder height='6' radius='.25'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='BottomFuserTimer' cycleInterval='10' loop='true'/>
+        <OrientationInterpolator DEF='BottomFuserOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 6.283185307 0 1 0 5.497787144 0 1 0 4.71238898 0 1 0 3.926990817 0 1 0 3.141592654 0 1 0 2.35619449 0 1 0 1.570796327 0 1 0 0.7854163 0 1 0 0'/>
+      </Group>
+      <Transform rotation='0 0 1 1.57079' translation='0 -1.2 3'>
+        <Transform DEF='BottomFuser'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 1 1'/>
+              <ImageTexture url='"BottomFuserRoller.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/BottomFuserRoller.jpg"'/>
+            </Appearance>
+            <Cylinder height='6' radius='.25'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='TopPaperTimer' cycleInterval='10' loop='true'/>
+        <OrientationInterpolator DEF='TopPaperOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 0 0 1 0 0.7854163 0 1 0 1.570796327 0 1 0 2.35619449 0 1 0 3.141592654 0 1 0 3.926990817 0 1 0 4.71238898 0 1 0 5.497787144 0 1 0 6.283185307'/>
+      </Group>
+      <Transform rotation='0 0 1 1.57079' translation='0 -0.68 -3'>
+        <Transform DEF='TopPaper'>
+          <Shape>
+            <Appearance>
+              <Material/>
+              <ImageTexture DEF='paperroller' url='"PaperRoller.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/PaperRoller.jpg"'/>
+            </Appearance>
+            <Cylinder height='6' radius='.25'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='BottomPaperTimer' cycleInterval='10' loop='true'/>
+        <OrientationInterpolator DEF='BottomPaperOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 6.283185307 0 1 0 5.497787144 0 1 0 4.71238898 0 1 0 3.926990817 0 1 0 3.141592654 0 1 0 2.35619449 0 1 0 1.570796327 0 1 0 0.7854163 0 1 0 0'/>
+      </Group>
+      <Transform rotation='0 0 1 1.57079' translation='0 -1.2 -3'>
+        <Transform DEF='BottomPaper'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='1 1 0'/>
+              <ImageTexture USE='paperroller'/>
+            </Appearance>
+            <Cylinder height='6' radius='.25'/>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform rotation='0 0 1 1.57079' translation='0 -.94 3'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1'/>
+            <ImageTexture url='"Text.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/Text.jpg"'/>
+          </Appearance>
+          <Box size='.02 6 8'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='0 0 1 1.57079' translation='0 -.94 -3.5'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 1 1'/>
+          </Appearance>
+          <Box size='.02 6 2'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='0 0 1 1.57079' translation='0 2 -3.5'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0 1'/>
+          </Appearance>
+          <Box size='.5 1.5 2'/>
+        </Shape>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='MirrorTimer' cycleInterval='0.1' loop='true'/>
+        <OrientationInterpolator DEF='MirrorOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='0 1 0 6.283185307 0 1 0 5.497787144 0 1 0 4.71238898 0 1 0 3.926990817 0 1 0 3.141592654 0 1 0 2.35619449 0 1 0 1.570796327 0 1 0 0.7854163 0 1 0 0'/>
+      </Group>
+      <Transform DEF='Mirror' translation='0 2 2'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='.5 .5 .5'/>
+            <ImageTexture url='"mirror.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/mirror.jpg"'/>
+          </Appearance>
+          <Cylinder height='.5' radius='.5'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='1 0 0 1.57079' translation='0 2 -1'>
+        <Shape>
+          <Appearance>
+            <Material DEF='Red' diffuseColor='1 0 0'/>
+          </Appearance>
+          <Cylinder height='6' radius='.04'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='1 0 0 .6' scale='1 1 .01' translation='0 1.352 1.0825'>
+        <Shape>
+          <Appearance>
+            <Material USE='Red'/>
+          </Appearance>
+          <Cone bottomRadius='3' height='1.48'/>
+        </Shape>
+      </Transform>
+      <Transform translation='0 0 -4.5'>
+        <Shape>
+          <Appearance>
+            <Material DEF='Green' diffuseColor='.2 1 0'/>
+          </Appearance>
+          <Box size='10 5 .2'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='0 1 0 1.57079' translation='-4.9 0 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.5 1 0'/>
+          </Appearance>
+          <Box size='9 5 .2'/>
+        </Shape>
+      </Transform>
+      <Transform rotation='0 1 0 1.57079' translation='-4.7 0 0'>
+        <Shape>
+          <Appearance>
+            <Material DEF='DarkGreen' diffuseColor='0 .5 0'/>
+            <ImageTexture url='"chipset.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/chipset.jpg"'/>
+          </Appearance>
+          <Box size='7 3 .2'/>
+        </Shape>
+      </Transform>
+      <Group>
+        <TimeSensor DEF='PrinterDrumTimer' cycleInterval='10' loop='true'/>
+        <OrientationInterpolator DEF='PrinterDrumOr' key='0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1' keyValue='1 0 0 6.283185307 1 0 0 5.497787144 1 0 0 4.71238898 1 0 0 3.926990817 1 0 0 3.141592654 1 0 0 2.35619449 1 0 0 1.570796327 1 0 0 0.7854163 1 0 0 0'/>
+      </Group>
+      <Transform DEF='PrinterDrum' translation='0 0.05 0'>
+        <Transform rotation='0 0 1 1.57079'>
+          <Shape>
+            <Appearance>
+              <Material DEF='DrumColor' diffuseColor='1 1 1' shininess='0.6' specularColor='1 1 1'/>
+              <ImageTexture url='"ReverseText.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ReverseText.jpg"'/>
+            </Appearance>
+            <Cylinder height='6'/>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='PrinterDrumTimer' toField='set_fraction' toNode='PrinterDrumOr'/>
+    <ROUTE fromField='value_changed' fromNode='PrinterDrumOr' toField='rotation' toNode='PrinterDrum'/>
+    <ROUTE fromField='fraction_changed' fromNode='MirrorTimer' toField='set_fraction' toNode='MirrorOr'/>
+    <ROUTE fromField='value_changed' fromNode='MirrorOr' toField='rotation' toNode='Mirror'/>
+    <ROUTE fromField='fraction_changed' fromNode='ChargeRollerTimer' toField='set_fraction' toNode='ChargeRollerOr'/>
+    <ROUTE fromField='value_changed' fromNode='ChargeRollerOr' toField='rotation' toNode='ChargeRoller'/>
+    <ROUTE fromField='fraction_changed' fromNode='TopFuserTimer' toField='set_fraction' toNode='TopFuserOr'/>
+    <ROUTE fromField='value_changed' fromNode='TopFuserOr' toField='rotation' toNode='TopFuser'/>
+    <ROUTE fromField='fraction_changed' fromNode='BottomFuserTimer' toField='set_fraction' toNode='BottomFuserOr'/>
+    <ROUTE fromField='value_changed' fromNode='BottomFuserOr' toField='rotation' toNode='BottomFuser'/>
+    <ROUTE fromField='fraction_changed' fromNode='TopPaperTimer' toField='set_fraction' toNode='TopPaperOr'/>
+    <ROUTE fromField='value_changed' fromNode='TopPaperOr' toField='rotation' toNode='TopPaper'/>
+    <ROUTE fromField='fraction_changed' fromNode='BottomPaperTimer' toField='set_fraction' toNode='BottomPaperOr'/>
+    <ROUTE fromField='value_changed' fromNode='BottomPaperOr' toField='rotation' toNode='BottomPaper'/>
+  </Scene>
+</X3D>

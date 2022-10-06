@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "http://www.web3d.org/specifications/x3d-3.0.dtd"
+                     "file:///www.web3d.org/TaskGroups/x3d/translation/x3d-3.0.dtd">
+<X3D profile="Immersive">
+  <head>
+    <meta content="EspduTransformProtoDeclare.x3d" name="filename"/>
+    <meta
+      content="Prototype definition for EspduTransform which handles EntityState, Collision, Detonate Fire CreateEntity and RemoveEntity DIS Protocol Data Units (PDUs)." name="description"/>
+    <meta content="Don Brutzman" name="author"/>
+    <meta content="7 December 2001" name="created"/>
+    <meta content="27 December 2002" name="revised"/>
+    <meta content="under development" name="warning"/>
+    <meta content="/vrtp/mil/navy/nps/dis/EspduTransformPROTO.wrl" name="reference"/>
+    <meta content="/vrtp/mil/navy/nps/dis/EspduTransform.java" name="reference"/>
+    <meta
+      content="http://www.web3d.org/WorkingGroups/vrtp/mil/navy/nps/dis/EspduTransform.java" name="reference"/>
+    <meta
+      content="http://www.web3d.org/TaskGroups/x3d/translation/examples/DistributedInteractiveSimulation/EspduTransformProtoDeclare.x3d" name="url"/>
+    <meta
+      content="X3D-Edit, http://www.web3d.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+  </head>
+
+  <Scene><!--============================================================--><!--Why
+      a prototype rather than an Inline file?  Prototyping allows
+      replacement of standard VRML nodes (e.g. Transform) and can also
+      expose events and fields to the encapsulating top-level
+      scene.--><!--CosmoPlayer bug?  SFTime values are rounded off to
+      nearest integer, so types for readInterval and writeInterval
+      changed to SFFloat --><ProtoDeclare
+      appInfo="EspduTransform is a networked Grouping node that can contain most nodes.&#10;EspduTransform integrates functionality for the following DIS PDUs:  EntityStatePdu CollisionPdu DetonatePdu FirePdu CreateEntity RemoveEntity." name="EspduTransform">
+      <ProtoInterface>
+        <field accessType="inputOutput"
+          appInfo="0..11 character label for entity" name="marking" type="SFString"/>
+        <field accessType="initializeOnly" appInfo="EntityID: site"
+          name="siteID" type="SFInt32" value="14"/>
+        <field accessType="initializeOnly"
+          appInfo="EntityID: application ID, unique ID for app at that site"
+          name="applicationID" type="SFInt32" value="17"/>
+        <field accessType="initializeOnly"
+          appInfo="unique ID for entity within that app" name="entityID"
+          type="SFInt32" value="9"/>
+        <field accessType="inputOutput"
+          appInfo="networkMode:&amp;#10;standAlone (ignore network but still respond to local events)&amp;#10;networkReader (listen to network as ghost entity)&amp;#10;networkWriter (output to network as master entity at writeInterval)"
+          name="networkMode" type="SFString"/>
+        <field accessType="inputOutput"
+          appInfo="Whether networkMode standAlone (ignore network but still respond to local events) is true/false"
+          name="isStandAlone" type="SFBool" value="true"/>
+        <field accessType="inputOutput"
+          appInfo="Whether networkMode &apos;networkWriter&apos; (output to network as master entity at writeInterval) is true/false"
+          name="isMaster" type="SFBool" value="false"/>
+        <field accessType="inputOutput"
+          appInfo="Whether networkMode &apos;networkReader&apos; (listen to network as ghost entity) is true/false"
+          name="isRemote" type="SFBool" value="false"/>
+        <field accessType="initializeOnly"
+          appInfo="seconds between read updates" name="readInterval"
+          type="SFTime" value="0.1"/>
+        <field accessType="initializeOnly"
+          appInfo="seconds between write updates" name="writeInterval"
+          type="SFTime" value="1"/>
+        <field accessType="outputOnly" name="active" type="SFBool"/>
+        <field accessType="outputOnly"
+          appInfo="DIS timestamp in VRML units" name="timestamp" type="SFTime"/>
+        <field accessType="inputOutput"
+          appInfo="Position of children relative to local coordinate system, usually read from (or written to) remote, networked EspduTransform nodes."
+          name="translation" type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput"
+          appInfo="Orientation of children relative to local coordinate system, usually read from (or written to) remote, networked EspduTransform nodes."
+          name="rotation" type="SFRotation" value="0 1 0 0"/>
+        <field accessType="inputOutput"
+          appInfo="Translation offset from origin of local coordinate system."
+          name="center" type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput"
+          appInfo="Non-uniform x-y-z scale of child coordinate system, adjusted by center and scaleOrientation."
+          name="scale" type="SFVec3f" value="0 0 0"/>
+        <field accessType="inputOutput"
+          appInfo="Non-uniform x-y-z scale of child coordinate system, adjusted by center and scaleOrientation."
+          name="scaleOrientation" type="SFRotation" value="0 1 0 0"/>
+        <field accessType="initializeOnly"
+          appInfo="Bounding box center:  position offset from origin of local coordinate system."
+          name="bboxCenter" type="SFVec3f" value="0 0 0"/>
+        <field accessType="initializeOnly"
+          appInfo="Bounding box size:  automatically calculated, can be specified as an optimization or constraint."
+          name="bboxSize" type="SFVec3f" value="-1 -1 -1"/>
+        <field accessType="initializeOnly"
+          appInfo="multicast address, or else &quot;localhost&quot; listens to local defaultBridge"
+          name="address" type="SFString" value="224.2.181.145"/>
+        <field accessType="initializeOnly"
+          appInfo="multicast port, or else listen to local defaultBridge"
+          name="port" type="SFInt32" value="62040"/>
+        <field accessType="initializeOnly" name="multicastRelayHost"
+          type="SFString" value="devo.cs.nps.navy.mil"/>
+        <field accessType="initializeOnly" name="multicastRelayPort"
+          type="SFInt32" value="8010"/>
+        <field accessType="initializeOnly" name="rtpHeaderExpected"
+          type="SFBool" value="false"/>
+        <field accessType="outputOnly" name="rtpHeaderHeard"
+          type="SFBool"/><!--many more here--><field
+          accessType="initializeOnly" name="traceJava" type="SFBool" value="false"/>
+      </ProtoInterface>
+      <ProtoBody><!--First node inside a         PrototypeDeclaration is
+          the node type of the         ProtoInstance--><Switch
+            whichChoice="1"><!--child 0 is           ignored--><Group
+              DEF="CacheExposedFieldNodes"><!--This first
+              set of nodes are not rendered and only hold exposedField
+              state.  This hack is necessary to work around the
+              restriction on exposedFields directly in Script
+              nodes.--><Anchor DEF="ModeState" description="Cache anchor">
+              <IS>
+                <connect nodeField="description" protoField="networkMode"/>
+              </IS>
+            </Anchor>
+            <TimeSensor DEF="ReaderState">
+              <IS>
+                <connect nodeField="enabled" protoField="isRemote"/>
+              </IS>
+            </TimeSensor>
+            <TimeSensor DEF="MasterState">
+              <IS>
+                <connect nodeField="enabled" protoField="isMaster"/>
+              </IS>
+            </TimeSensor>
+            <TimeSensor DEF="LocalState">
+              <IS>
+                <connect nodeField="enabled" protoField="isStandAlone"/>
+              </IS>
+            </TimeSensor>
+          </Group><!--child 1 is always active--><Group><!--Fields in
+              the             Script are directly mapped to the
+              PrototypeDeclare             field-tag interfaces by using
+              the IS             construct--><Script
+              DEF="EspduScriptNode" directOutput="false"
+              mustEvaluate="true"
+                url="RadioCommunicationsPduScriptNode.class"><!--Valid
+                values for radioPduType are ReceiverPdu,
+                SignalPdu and TransmitterPdu--><field
+                accessType="initializeOnly" name="radioPduType"
+                type="SFString" value="ReceiverPdu"/><!--Initialization
+                fields--><field accessType="initializeOnly"
+                name="readInterval" type="SFTime"/>
+              <field accessType="initializeOnly" name="writeInterval" type="SFTime"/>
+              <field accessType="initializeOnly" name="siteID" type="SFInt32"/>
+              <field accessType="initializeOnly" name="applicationID" type="SFInt32"/>
+              <field accessType="initializeOnly" name="entityID" type="SFInt32"/>
+              <field accessType="initializeOnly" name="address" type="SFString"/>
+              <field accessType="initializeOnly" name="port" type="SFInt32"/>
+              <field accessType="initializeOnly"
+                name="multicastRelayHost" type="SFString"/>
+              <field accessType="initializeOnly"
+                name="multicastRelayPort" type="SFInt32"/>
+              <field accessType="initializeOnly"
+                name="rtpHeaderExpected" type="SFBool"/>
+              <field accessType="initializeOnly" name="traceJava"
+                type="SFBool"/><!--Generic events--><field
+                accessType="inputOnly" name="update" type="SFTime"/>
+              <field accessType="outputOnly" name="active" type="SFBool"/>
+              <field accessType="outputOnly" name="timestamp" type="SFTime"/>
+              <field accessType="outputOnly" name="rtpHeaderHeard" type="SFBool"/>
+              <IS>
+                <connect nodeField="siteID" protoField="siteID"/>
+                <connect nodeField="applicationID" protoField="applicationID"/>
+                <connect nodeField="entityID" protoField="entityID"/>
+                <connect nodeField="readInterval" protoField="readInterval"/>
+                <connect nodeField="writeInterval" protoField="writeInterval"/>
+                <connect nodeField="active" protoField="active"/>
+                <connect nodeField="timestamp" protoField="timestamp"/>
+                <connect nodeField="address" protoField="address"/>
+                <connect nodeField="multicastRelayHost" protoField="multicastRelayHost"/>
+                <connect nodeField="multicastRelayPort" protoField="multicastRelayPort"/>
+                <connect nodeField="port" protoField="port"/>
+                <connect nodeField="rtpHeaderExpected" protoField="rtpHeaderExpected"/>
+                <connect nodeField="rtpHeaderHeard" protoField="rtpHeaderHeard"/>
+                <connect nodeField="traceJava" protoField="traceJava"/>
+              </IS>
+            </Script><!--Clocks stimulate the processEvents() method in
+              the         Script code, resulting in DIS PDU
+              reads/writes.             The 'update'         eventIn is
+              implicit (i.e. no             corresponding Java method is
+              needed).--><TimeSensor DEF="ReceiverPduReadIntervalClock" loop="true"/>
+          </Group>
+        </Switch>
+      </ProtoBody>
+
+    </ProtoDeclare><!--============================================================--><!--Ensure
+      that instances of this node are placed at the top-most level and
+      not translated away from the local world coordinates       origin.--><Group>
+      <ProtoInstance name="EspduTransform"/>
+    </Group>
+  </Scene>
+</X3D>

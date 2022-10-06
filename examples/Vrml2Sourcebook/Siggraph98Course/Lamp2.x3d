@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Lamp2.x3d' name='title'/>
+    <meta content='Desk lamp with light toggle switch: this file builds a desk lamp that can be moved about. Dragging on the lamp base slides the lamp back and forth. Dragging on the lamp arms turns the lamp arm. Dragging on the lamp shade turns the lamp shade. Touching the lamp&apos;s light switch (on the top of the lamp shade) turns the lamp on and off.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/lamp2.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0433.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Lamp2.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- To make the lamp go on and off, a TouchSensor is routed into a 'toggle' script that alternates between TRUE and FALSE outputs, sending TRUE on the first TRUE input, then FALSE on the next TRUE input. These TRUE/FALSE values are routed into a SpotLight node within the lamp, turning it on and off. -->
+    <!-- A second script converts an incoming TRUE or FALSE in to one of two colors. Those colors are routed into the lamp's bulb to change it from an on color to an off color. -->
+    <!-- Note that .x3d XML syntax uses boolean constants true/false instead of VRML syntax TRUE/FALSE -->
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Desk lamp with light toggle switch'/>
+    <Viewpoint DEF='Entry' description='Entry view' position='0.0 0.1 1.0'/>
+    <NavigationInfo headlight='false'/>
+    <Background/>
+    <DirectionalLight direction='0.0 -1.0 -1.0' intensity='0.3'/>
+    <Transform translation='-1.0 0.0 -1.0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+          <ImageTexture url='"wood.jpg" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/wood.jpg"'/>
+        </Appearance>
+        <ElevationGrid creaseAngle='3.14' height='0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0' xDimension='10' xSpacing='0.25' zDimension='10' zSpacing='0.25'/>
+      </Shape>
+    </Transform>
+    <Transform rotation='1.0 0.0 0.0 1.571' translation='0.0 0.01 0.0'>
+      <PlaneSensor DEF='MoveLamp'/>
+      <Transform DEF='Lamp' rotation='1.0 0.0 0.0 -1.571'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.5 0.5 0.5'/>
+          </Appearance>
+          <Cylinder height='0.01' radius='0.1'/>
+        </Shape>
+        <Group>
+          <CylinderSensor DEF='MoveFirstArm'/>
+          <Transform DEF='FirstArm'>
+            <Transform center='0.0 -0.15 0.0' rotation='1.0 0.0 0.0 -0.7' translation='0.0 0.15 0.0'>
+              <Shape DEF='LampArm'>
+                <Appearance DEF='Red'>
+                  <Material diffuseColor='1.0 0.2 0.2'/>
+                </Appearance>
+                <Cylinder height='0.3' radius='0.01'/>
+              </Shape>
+              <Group>
+                <CylinderSensor DEF='MoveSecondArm'/>
+                <Transform DEF='SecondArm'>
+                  <Transform center='0.0 -0.15 0.0' rotation='1.0 0.0 0.0 1.9' translation='0.0 0.3 0.0'>
+                    <Shape USE='LampArm'/>
+                    <Group>
+                      <SphereSensor DEF='MoveLampShade' offset='1.0 0.0 0.0 -1.25'/>
+                      <Transform DEF='LampShade' center='0.0 0.075 0.0' rotation='1.0 0.0 0.0 -1.25' translation='0.0 0.075 0.0'>
+                        <Shape>
+                          <Appearance USE='Red'/>
+                          <Cone bottom='false' bottomRadius='0.12' height='0.15'/>
+                        </Shape>
+                        <Transform translation='0.0 0.075 0.0'>
+                          <TouchSensor DEF='LightSwitch' description='Click to toggle light on/off'/>
+                          <Shape>
+                            <Appearance>
+                              <Material diffuseColor='1.0 1.0 1.0'/>
+                            </Appearance>
+                            <Cylinder height='0.03' radius='0.007'/>
+                          </Shape>
+                        </Transform>
+                        <Transform translation='0.0 -0.05 0.0'>
+                          <SpotLight DEF='LampLight' ambientIntensity='0.2' beamWidth='0.6' direction='0.0 -1.0 0.0'/>
+                          <Shape>
+                            <Appearance>
+                              <Material DEF='BulbMaterial' diffuseColor='0.0 0.0 0.0' emissiveColor='1.0 1.0 1.0'/>
+                            </Appearance>
+                            <Sphere radius='0.05'/>
+                          </Shape>
+                        </Transform>
+                      </Transform>
+                    </Group>
+                  </Transform>
+                </Transform>
+              </Group>
+            </Transform>
+          </Transform>
+        </Group>
+      </Transform>
+    </Transform>
+    <ROUTE fromField='translation_changed' fromNode='MoveLamp' toField='set_translation' toNode='Lamp'/>
+    <ROUTE fromField='rotation_changed' fromNode='MoveFirstArm' toField='set_rotation' toNode='FirstArm'/>
+    <ROUTE fromField='rotation_changed' fromNode='MoveSecondArm' toField='set_rotation' toNode='SecondArm'/>
+    <ROUTE fromField='rotation_changed' fromNode='MoveLampShade' toField='set_rotation' toNode='LampShade'/>
+    <Script DEF='Toggle'>
+      <field accessType='initializeOnly' name='on' type='SFBool' value='true'/>
+      <field accessType='inputOnly' name='set_active' type='SFBool'/>
+      <field accessType='outputOnly' name='on_changed' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+		function set_active( b, tm ) {
+			// ignore button releases
+			if ( b == false ) return;
+
+			// toggle on button presses
+			if ( on == true ) on = false;
+			else              on = true;
+			on_changed = on;
+		}
+]]>
+    </Script>
+    <Script DEF='ColorSelector'>
+      <field accessType='initializeOnly' name='offColor' type='SFColor' value='0.0 0.0 0.0'/>
+      <field accessType='initializeOnly' name='onColor' type='SFColor' value='1.0 1.0 1.0'/>
+      <field accessType='outputOnly' name='color_changed' type='SFColor'/>
+      <field accessType='inputOnly' name='set_selection' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+		function set_selection( b, tm ) {
+			if ( b == true )
+				color_changed = onColor;
+			else
+				color_changed = offColor;
+		}
+]]>
+    </Script>
+    <ROUTE fromField='isActive' fromNode='LightSwitch' toField='set_active' toNode='Toggle'/>
+    <ROUTE fromField='on_changed' fromNode='Toggle' toField='set_on' toNode='LampLight'/>
+    <ROUTE fromField='on_changed' fromNode='Toggle' toField='set_selection' toNode='ColorSelector'/>
+    <ROUTE fromField='color_changed' fromNode='ColorSelector' toField='set_emissiveColor' toNode='BulbMaterial'/>
+  </Scene>
+</X3D>

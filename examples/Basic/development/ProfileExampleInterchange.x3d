@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ProfileExampleInterchange.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='6 January 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='List of nodes available in a strictly compliant Interchange profile scene. Only Background renders in this example, other nodes have null values.' name='description'/>
+    <meta content='https://www.web3d.org/spec_editors/abstract/Part01/interchange.html' name='reference'/>
+    <meta content='ProfileExampleInterchange.png' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/ProfileExampleInterchange.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <Group>
+      <Shape>
+        <Appearance>
+          <ImageTexture url='"earth-topo.png" "earth-topo.gif" "https://www.web3d.org/x3d/content/examples/Basic/development/earth-topo.png" "https://www.web3d.org/x3d/content/examples/Basic/development/earth-topo.gif"'/>
+          <Material/>
+          <TextureTransform/>
+        </Appearance>
+        <IndexedFaceSet creaseAngle='3.14159'>
+          <Color color='1 1 1'/>
+          <Coordinate point='0 0 0'/>
+          <MultiTextureCoordinate/>
+        </IndexedFaceSet>
+      </Shape>
+      <Shape>
+        <IndexedLineSet>
+          <ColorRGBA color='1 1 1 1'/>
+        </IndexedLineSet>
+      </Shape>
+      <Shape>
+        <Box/>
+        <Appearance DEF='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <Cone/>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <Cylinder/>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <IndexedTriangleFanSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+          <TextureCoordinate point='0 0'/>
+        </IndexedTriangleFanSet>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <IndexedTriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+          <TextureCoordinateGenerator/>
+        </IndexedTriangleSet>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <IndexedTriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'>
+          <Normal vector='0 1 0'/>
+        </IndexedTriangleStripSet>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <LineSet/>
+        <Appearance>
+          <MultiTexture/>
+          <MultiTextureTransform/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <PixelTexture/>
+        </Appearance>
+        <PointSet/>
+      </Shape>
+      <Shape>
+        <Sphere/>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <TriangleFanSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'/>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <TriangleSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'/>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+      <Shape>
+        <TriangleStripSet ccw='true' colorPerVertex='true' normalPerVertex='true' solid='true'/>
+        <Appearance USE='SilenceWarnings'/>
+      </Shape>
+    </Group>
+    <Background groundColor='0 0 0' skyColor='0.0 0.2 0.7'/>
+    <CoordinateInterpolator DEF='CI'/>
+    <DirectionalLight/>
+    <NavigationInfo/>
+    <NormalInterpolator DEF='NI' key='0 1' keyValue='0 1 0 0 1 0'/>
+    <OrientationInterpolator DEF='OI' key='0 1' keyValue='0 1 0 0 0 1 0 0'/>
+    <PositionInterpolator DEF='PI' key='0 1' keyValue='0 0 0 0 0 0'/>
+    <ScalarInterpolator DEF='SI' key='0 1' keyValue='0 0'/>
+    <TimeSensor DEF='TS' enabled='false'/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='NI'/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='OI'/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='PI'/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='SI'/>
+    <Transform/>
+    <Viewpoint description='InterchangeProfileExample'/>
+    <WorldInfo/>
+    <ROUTE fromField='fraction_changed' fromNode='TS' toField='set_fraction' toNode='PI'/>
+  </Scene>
+</X3D>

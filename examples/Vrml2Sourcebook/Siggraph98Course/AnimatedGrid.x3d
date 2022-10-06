@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='AnimatedGrid.x3d' name='title'/>
+    <meta content='Animated grid world illustrates the use of a script to change the whichChoice field of a Switch node. When animated, this enables switching among different pieces of geometry, such as the separate ElevationGrid scenes shown in this example.' name='description'/>
+    <meta content='John L. Moreland' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/animgrid.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0495.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/AnimatedGrid.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1998, John L. Moreland"' title='Animated grid'/>
+    <Viewpoint description='Entry view' orientation='1.0 0.0 0.0 -0.83' position='0.0 12.0 12.0'/>
+    <NavigationInfo headlight='false' type='"EXAMINE"'/>
+    <DirectionalLight direction='1.0 -1.0 -1.0'/>
+    <DirectionalLight direction='-1.0 1.0 1.0'/>
+    <Switch DEF='Grids' whichChoice='0'>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain00.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain00.x3d" "Terrain00.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain00.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain01.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain01.x3d" "Terrain01.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain01.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain02.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain02.x3d" "Terrain02.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain02.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain03.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain03.x3d" "Terrain03.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain03.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain04.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain04.x3d" "Terrain04.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain04.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain05.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain05.x3d" "Terrain05.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain05.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain06.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain06.x3d" "Terrain06.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain06.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain07.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain07.x3d" "Terrain07.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain07.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain08.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain08.x3d" "Terrain08.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain08.wrl"'/>
+      <Inline bboxSize='14.0 5.0 14.0' url='"Terrain09.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain09.x3d" "Terrain09.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Terrain09.wrl"'/>
+    </Switch>
+    <TimeSensor DEF='Clock' cycleInterval='2.0' loop='true' startTime='1.0'/>
+    <Script DEF='Switcher'>
+      <field accessType='outputOnly' name='choice_changed' type='SFInt32'/>
+      <field accessType='initializeOnly' name='numberOfChoices' type='SFInt32' value='10'/>
+      <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+      <![CDATA[
+ecmascript:
+    function set_fraction( frac, stamp ) {
+            choice_changed = frac * numberOfChoices;
+    }
+]]>
+    </Script>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='Switcher'/>
+    <ROUTE fromField='choice_changed' fromNode='Switcher' toField='set_whichChoice' toNode='Grids'/>
+  </Scene>
+</X3D>

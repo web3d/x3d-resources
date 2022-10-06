@@ -1,0 +1,117 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ns.adobe.com/exif/1.0/ExifVersion
+<http://ns.adobe.com/exif/1.0/ExifVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/exif/1.0/PixelXDimension
+<http://ns.adobe.com/exif/1.0/PixelXDimension> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/exif/1.0/PixelYDimension
+<http://ns.adobe.com/exif/1.0/PixelYDimension> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xap/1.0/CreatorTool
+<http://ns.adobe.com/xap/1.0/CreatorTool> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xap/1.0/sType/Dimensions#h
+<http://ns.adobe.com/xap/1.0/sType/Dimensions#h> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xap/1.0/sType/Dimensions#unit
+<http://ns.adobe.com/xap/1.0/sType/Dimensions#unit> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xap/1.0/sType/Dimensions#w
+<http://ns.adobe.com/xap/1.0/sType/Dimensions#w> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xmp/sType/Area#h
+<http://ns.adobe.com/xmp/sType/Area#h> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xmp/sType/Area#unit
+<http://ns.adobe.com/xmp/sType/Area#unit> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xmp/sType/Area#w
+<http://ns.adobe.com/xmp/sType/Area#w> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xmp/sType/Area#x
+<http://ns.adobe.com/xmp/sType/Area#x> rdf:type owl:AnnotationProperty .
+
+
+###  http://ns.adobe.com/xmp/sType/Area#y
+<http://ns.adobe.com/xmp/sType/Area#y> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.metadataworkinggroup.com/schemas/regions/AppliedToDimensions
+<http://www.metadataworkinggroup.com/schemas/regions/AppliedToDimensions> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.metadataworkinggroup.com/schemas/regions/Area
+<http://www.metadataworkinggroup.com/schemas/regions/Area> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.metadataworkinggroup.com/schemas/regions/RegionList
+<http://www.metadataworkinggroup.com/schemas/regions/RegionList> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.metadataworkinggroup.com/schemas/regions/Regions
+<http://www.metadataworkinggroup.com/schemas/regions/Regions> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.metadataworkinggroup.com/schemas/regions/Type
+<http://www.metadataworkinggroup.com/schemas/regions/Type> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag
+rdf:Bag rdf:type owl:Class .
+
+
+[ <http://www.metadataworkinggroup.com/schemas/regions/Area> [ <http://ns.adobe.com/xmp/sType/Area#h> "0.4264919941775837" ;
+                                                               <http://ns.adobe.com/xmp/sType/Area#unit> "normalized" ;
+                                                               <http://ns.adobe.com/xmp/sType/Area#w> "0.32127192982456143" ;
+                                                               <http://ns.adobe.com/xmp/sType/Area#x> "0.680921052631579" ;
+                                                               <http://ns.adobe.com/xmp/sType/Area#y> "0.3537117903930131"
+                                                             ] ;
+  <http://www.metadataworkinggroup.com/schemas/regions/Type> ""
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<file:/C:/x3d-code/www.web3d.org/x3d/content/examples/X3dForWebAuthors/Chapter15Metadata/XmpMetadataWikipedia.xml> <http://ns.adobe.com/exif/1.0/ExifVersion> "0220" ;
+                                                                                                                    <http://ns.adobe.com/exif/1.0/PixelXDimension> "912" ;
+                                                                                                                    <http://www.metadataworkinggroup.com/schemas/regions/Regions> [ <http://www.metadataworkinggroup.com/schemas/regions/AppliedToDimensions> [ <http://ns.adobe.com/xap/1.0/sType/Dimensions#h> "687" ;
+                                                                                                                                                                                                                                                                <http://ns.adobe.com/xap/1.0/sType/Dimensions#unit> "pixel" ;
+                                                                                                                                                                                                                                                                <http://ns.adobe.com/xap/1.0/sType/Dimensions#w> "912"
+                                                                                                                                                                                                                                                              ] ;
+                                                                                                                                                                                    <http://www.metadataworkinggroup.com/schemas/regions/RegionList> [ rdf:type rdf:Bag
+                                                                                                                                                                                                                                                     ]
+                                                                                                                                                                                  ] ;
+                                                                                                                    <http://ns.adobe.com/exif/1.0/PixelYDimension> "687" ;
+                                                                                                                    <http://ns.adobe.com/xap/1.0/CreatorTool> "Picasa" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

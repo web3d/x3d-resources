@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='test-zSpacing.x3d' name='title'/>
+    <meta content='test-zSpacing-front.jpg' name='Image'/>
+    <meta content='test-zSpacing-rear.jpg' name='Image'/>
+    <meta content='test-zSpacing-top.jpg' name='Image'/>
+    <meta content='test-zSpacing-bottom.jpg' name='Image'/>
+    <meta content='test-zSpacing-left.jpg' name='Image'/>
+    <meta content='test-zSpacing-right.jpg' name='Image'/>
+    <meta content='http://www.nist.gov/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/members.html' name='creator'/>
+    <meta content='This file was provided by the National Institute of Standards and Technology, and is part of the X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html The information contained within this file is provided for use in establishing conformance to the ISO VRML97 Specification. Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology. This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are derived from it, and any modified versions bear some notice that they have been modified.' name='disclaimer'/>
+    <meta content='Correct definition and compliance of this conformance scene is maintained by the X3D Working Group, https://www.web3d.org/working-groups/x3d' name='info'/>
+    <meta content='Michael Kass NIST, Don Brutzman NPS' name='translator'/>
+    <meta content='21 January 2001' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='This test illustrates the effect of redefining the zSpacing field for the same ElevationGrid. The same grid is drawn three times increasing the zSpacing field by one from top to bottom. Each grid is rotated 1.0 radians along the Y axis to better illustrate such effect.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/Geometry/ElevationGrid/test_zSpacing.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='test-zSpacing.x3d'/>
+    <NavigationInfo type='"EXAMINE" "WALK" "FLY" "ANY"'/>
+    <Transform rotation='0 1 0 1' translation='-4 0 -1'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <ElevationGrid colorPerVertex='false' height='0 0 0.5 1 1.5 2 2 1.5 1 0.5 0 0 0 0 0.5 1 1.5 2 2 1.5 1 0.5 0 0' solid='false' xDimension='12'>
+          <Color color='1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0'/>
+        </ElevationGrid>
+      </Shape>
+    </Transform>
+    <Transform rotation='0 1 0 1' translation='-3.5 -1 -2'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <ElevationGrid colorPerVertex='false' height='0 0 0.5 1 1.5 2 2 1.5 1 0.5 0 0 0 0 0.5 1 1.5 2 2 1.5 1 0.5 0 0' solid='false' xDimension='12' zSpacing='2'>
+          <Color color='1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0'/>
+        </ElevationGrid>
+      </Shape>
+    </Transform>
+    <Transform rotation='0 1 0 1' translation='-3.5 -2 -3'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <ElevationGrid colorPerVertex='false' height='0 0 0.5 1 1.5 2 2 1.5 1 0.5 0 0 0 0 0.5 1 1.5 2 2 1.5 1 0.5 0 0' solid='false' xDimension='12' zSpacing='3'>
+          <Color color='1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0'/>
+        </ElevationGrid>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

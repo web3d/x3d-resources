@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='EventMonitorTest.x3d' name='title'/>
+    <meta content='This scene demonstrates how to receive a simple event and report it graphically, repeating every few seconds. Scene conversion from the XML encoding (.x3d) is then used to demonstrate X3DOM event handling within a web page (.xhtml).' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='Chris Peri, Dave Arendash and Damon Hernandez' name='acknowledgements'/>
+    <meta content='15 March 2014' name='created'/>
+    <meta content='31 October 2021' name='modified'/>
+    <meta content='record log outputs, compare various X3D players' name='TODO'/>
+    <meta content='AEC Hackathon v1.1, Facebook Menlo Park California' name='reference'/>
+    <meta content='http://www.aechackathon.org' name='reference'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserExperienceUX/EventMonitorTest.x3d' name='identifier'/>
+    <meta content='X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='https://www.web3d.org/x3d/stylesheets/X3dToX3dom.xslt' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ================================================== -->
+    <!-- Reusable code block for X3DOM: indicate event status -->
+    <WorldInfo title='EventMonitorTest.x3d'/>
+    <Background skyColor='0.4 0.6 1'/>
+    <Viewpoint description='Event Monitor Text' position='0 0 6'/>
+    <Transform translation='-0.6 1.2 0'>
+      <Shape>
+        <Text string='"Event Status"'>
+          <FontStyle DEF='Font' justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material DEF='TextMaterial' diffuseColor='0.7 0.7 0.1'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Switch DEF='EventSwitch' whichChoice='0'>
+      <Group DEF='DisplayUp'>
+        <Shape>
+          <Text string='"UP"'>
+            <FontStyle USE='Font'/>
+          </Text>
+          <Appearance>
+            <Material DEF='UpColor' diffuseColor='0.2 0.7 0.3'/>
+          </Appearance>
+        </Shape>
+        <Transform translation='-2.5 0 0'>
+          <Shape>
+            <Cone DEF='SmallCone' bottomRadius='0.4' height='0.6'/>
+            <Appearance>
+              <Material USE='UpColor'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Group>
+      <Group DEF='DisplayDown'>
+        <Shape>
+          <Text string='"DOWN"'>
+            <FontStyle USE='Font'/>
+          </Text>
+          <Appearance>
+            <Material DEF='DownColor' diffuseColor='1 0.2 0.2'/>
+          </Appearance>
+        </Shape>
+        <Transform rotation='1 0 0 3.14159' translation='-2.5 0 0'>
+          <Shape>
+            <Cone USE='SmallCone'/>
+            <Appearance>
+              <Material USE='DownColor'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Group>
+    </Switch>
+    <!-- ================================================== -->
+    <!-- Test harness: produce true/false events, flip the Switch -->
+    <IntegerTrigger DEF='EventTrueTrigger' integerKey='0'/>
+    <ROUTE fromField='triggerValue' fromNode='EventTrueTrigger' toField='whichChoice' toNode='EventSwitch'/>
+    <IntegerTrigger DEF='EventFalseTrigger' integerKey='1'/>
+    <ROUTE fromField='triggerValue' fromNode='EventFalseTrigger' toField='whichChoice' toNode='EventSwitch'/>
+    <Script DEF='EventReceiverScript'>
+      <field accessType='inputOnly' name='input' type='SFBool'/>
+      <field accessType='outputOnly' name='eventIsTrue' type='SFBool'/>
+      <field accessType='outputOnly' name='eventIsFalse' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+
+function input (eventValue) // input eventValue received for inputOnly field
+{
+   if (eventValue) eventIsTrue  = true;
+   else            eventIsFalse = true;
+}
+]]>
+    </Script>
+    <ROUTE fromField='eventIsTrue' fromNode='EventReceiverScript' toField='set_boolean' toNode='EventTrueTrigger'/>
+    <ROUTE fromField='eventIsFalse' fromNode='EventReceiverScript' toField='set_boolean' toNode='EventFalseTrigger'/>
+    <!-- Testing block: alternate true/false -->
+    <BooleanSequencer DEF='BooleanSwitcher' key='0 0.5 1' keyValue='true false false'/>
+    <ROUTE fromField='value_changed' fromNode='BooleanSwitcher' toField='input' toNode='EventReceiverScript'/>
+    <TimeSensor DEF='SwitchTestClock' cycleInterval='6' loop='true'/>
+    <ROUTE fromField='fraction_changed' fromNode='SwitchTestClock' toField='set_fraction' toNode='BooleanSwitcher'/>
+  </Scene>
+</X3D>

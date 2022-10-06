@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "https://www.web3d.org/specifications/x3d-3.1.dtd">
+<X3D profile='Immersive' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.1.xsd'>
+  <head>
+    <meta content='AddDynamicRoutesJava.x3d' name='title'/>
+    <meta content='This example shows adding dynamic ROUTE connections to a scene' name='description'/>
+    <meta content='X3D Specification' name='creator'/>
+    <meta content='23 February 2005' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='X3D Java Script Authoring Interface (SAI)' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/ScriptConformance/AddDynamicRoutesJava.x3d' name='identifier'/>
+    <meta content='https://www.web3d.org/x3d/specifications/ISO-IEC-19777-2-X3DLanguageBindings-Java/Part2/examples.html#AddDynamicRoutes' name='reference'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='AddDynamicRoutesJava.x3d'/>
+    <Script DEF='SC' url='"SAIExample4.class" "https://www.web3d.org/x3d/content/examples/Basic/ScriptConformance/SAIExample4.class"'>
+      <field accessType='inputOnly' name='touchTime' type='SFTime'/>
+    </Script>
+  </Scene>
+</X3D>

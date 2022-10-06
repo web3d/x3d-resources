@@ -1,0 +1,102 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO GeoLocation [
+  field SFNode   geoOrigin
+  field MFString geoSystem
+  field SFString geoCoords
+  field MFNode   children
+] "http://www.ai.sri.com/geovrml/1.0/protos/GeoLocation.wrl"
+
+EXTERNPROTO GeoElevationGrid [
+  field        SFNode   geoOrigin
+  field        MFString geoSystem
+  field        SFString geoGridOrigin
+  field        SFInt32  xDimension
+  field        SFString xSpacing
+  field        SFInt32  zDimension
+  field        SFString zSpacing
+  field        MFFloat  height
+  exposedField SFNode   color
+  exposedField SFNode   texCoord
+  exposedField SFNode   normal
+  field        SFBool   normalPerVertex
+  field        SFBool   ccw
+  field        SFBool   colorPerVertex
+  field        SFFloat  creaseAngle
+  field        SFBool   solid
+] "http://www.ai.sri.com/geovrml/1.0/protos/GeoElevationGrid.wrl"
+
+EXTERNPROTO GeoViewpoint [
+  field        SFNode     geoOrigin
+  field        MFString   geoSystem
+  field        SFString   position
+  field        SFRotation orientation
+  field        SFString   description
+  exposedField SFFloat    fieldOfView
+  exposedField SFBool     jump
+  exposedField MFString   navType
+  eventIn      SFBool     set_bind
+  eventIn      SFString   set_position
+  eventOut     SFTime     bindTime
+  eventOut     SFBool     isBound
+] "http://www.ai.sri.com/geovrml/1.0/protos/GeoViewpoint.wrl"
+
+Group {
+  children [
+
+    Background { skyColor 1 1 1 }
+
+    GeoViewpoint {
+       geoSystem [ "GDC" ]
+       position "51.5122 -40.0 10000000"
+       orientation 1 0 0 -1.57
+       description "Initial GeoViewpoint"
+    }
+
+    Shape {
+       appearance Appearance {
+	  material Material { diffuseColor 0.8 1.0 0.3 }
+	  texture ImageTexture {
+	     url "http://www.ai.sri.com/geovrml/1.0/doc/images/earth.jpg"
+	  }
+       }
+       geometry GeoElevationGrid {
+	  geoSystem [ "GDC" ]
+	  geoGridOrigin "-90 -180 0"
+	  xDimension 11
+	  zDimension 11
+	  xSpacing "36"
+	  zSpacing "18"
+	  height [
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 
+		  0 0 0 0 0 0 0 0 0 0 0 ]
+       }
+    }
+    
+    GeoLocation {
+      geoSystem [ "GDC" ]
+      geoCoords "57.7174 -3.286119 200000" # Lossiemouth, Scotland, elev 200km
+      children [
+         Transform { 
+	   rotation 1 0 0 3.1415926
+           children [
+             Shape {
+              appearance Appearance { material Material { diffuseColor 1 1 0 }}
+	      geometry Cone { bottomRadius 100000 height 500000 }
+	     }
+	   ] 
+         }
+      ]
+    }
+
+  ]
+}

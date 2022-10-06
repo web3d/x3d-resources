@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='SheenExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SheenExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen00' url='"SheenPrototypes.x3d#Sheen00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen00" "SheenPrototypes.wrl#Sheen00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen01' url='"SheenPrototypes.x3d#Sheen01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen01" "SheenPrototypes.wrl#Sheen01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen02' url='"SheenPrototypes.x3d#Sheen02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen02" "SheenPrototypes.wrl#Sheen02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen03' url='"SheenPrototypes.x3d#Sheen03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen03" "SheenPrototypes.wrl#Sheen03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen04' url='"SheenPrototypes.x3d#Sheen04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen04" "SheenPrototypes.wrl#Sheen04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen05' url='"SheenPrototypes.x3d#Sheen05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen05" "SheenPrototypes.wrl#Sheen05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen06' url='"SheenPrototypes.x3d#Sheen06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen06" "SheenPrototypes.wrl#Sheen06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen07' url='"SheenPrototypes.x3d#Sheen07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen07" "SheenPrototypes.wrl#Sheen07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen08' url='"SheenPrototypes.x3d#Sheen08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen08" "SheenPrototypes.wrl#Sheen08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen09' url='"SheenPrototypes.x3d#Sheen09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen09" "SheenPrototypes.wrl#Sheen09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen10' url='"SheenPrototypes.x3d#Sheen10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen10" "SheenPrototypes.wrl#Sheen10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen11' url='"SheenPrototypes.x3d#Sheen11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen11" "SheenPrototypes.wrl#Sheen11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen12' url='"SheenPrototypes.x3d#Sheen12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen12" "SheenPrototypes.wrl#Sheen12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen13' url='"SheenPrototypes.x3d#Sheen13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen13" "SheenPrototypes.wrl#Sheen13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen14' url='"SheenPrototypes.x3d#Sheen14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen14" "SheenPrototypes.wrl#Sheen14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen15' url='"SheenPrototypes.x3d#Sheen15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen15" "SheenPrototypes.wrl#Sheen15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen16' url='"SheenPrototypes.x3d#Sheen16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen16" "SheenPrototypes.wrl#Sheen16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen17' url='"SheenPrototypes.x3d#Sheen17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen17" "SheenPrototypes.wrl#Sheen17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen18' url='"SheenPrototypes.x3d#Sheen18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen18" "SheenPrototypes.wrl#Sheen18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen19' url='"SheenPrototypes.x3d#Sheen19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen19" "SheenPrototypes.wrl#Sheen19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen20' url='"SheenPrototypes.x3d#Sheen20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen20" "SheenPrototypes.wrl#Sheen20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen21' url='"SheenPrototypes.x3d#Sheen21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen21" "SheenPrototypes.wrl#Sheen21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen22' url='"SheenPrototypes.x3d#Sheen22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen22" "SheenPrototypes.wrl#Sheen22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen23' url='"SheenPrototypes.x3d#Sheen23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen23" "SheenPrototypes.wrl#Sheen23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen24' url='"SheenPrototypes.x3d#Sheen24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen24" "SheenPrototypes.wrl#Sheen24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen25' url='"SheenPrototypes.x3d#Sheen25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen25" "SheenPrototypes.wrl#Sheen25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen26' url='"SheenPrototypes.x3d#Sheen26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen26" "SheenPrototypes.wrl#Sheen26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen27' url='"SheenPrototypes.x3d#Sheen27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen27" "SheenPrototypes.wrl#Sheen27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen28' url='"SheenPrototypes.x3d#Sheen28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen28" "SheenPrototypes.wrl#Sheen28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen29' url='"SheenPrototypes.x3d#Sheen29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen29" "SheenPrototypes.wrl#Sheen29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen30' url='"SheenPrototypes.x3d#Sheen30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen30" "SheenPrototypes.wrl#Sheen30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen31' url='"SheenPrototypes.x3d#Sheen31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen31" "SheenPrototypes.wrl#Sheen31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen32' url='"SheenPrototypes.x3d#Sheen32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen32" "SheenPrototypes.wrl#Sheen32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen33' url='"SheenPrototypes.x3d#Sheen33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen33" "SheenPrototypes.wrl#Sheen33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Sheen34' url='"SheenPrototypes.x3d#Sheen34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.x3d#Sheen34" "SheenPrototypes.wrl#Sheen34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.wrl#Sheen34"'/>
+    <Group>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Sheen00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Sheen00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen00' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Sheen00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Sheen01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Sheen01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen01' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Sheen02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Sheen02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen02' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Sheen03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Sheen03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen03' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Sheen04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Sheen04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen04' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Sheen05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Sheen05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen05' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Sheen06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Sheen06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen06' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Sheen07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Sheen07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen07' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Sheen08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Sheen08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen08' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Sheen09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Sheen09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen09' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Sheen10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Sheen10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen10' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Sheen11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Sheen11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen11' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Sheen12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Sheen12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen12' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Sheen13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Sheen13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen13' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Sheen14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Sheen14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen14' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Sheen15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Sheen15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen15' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Sheen16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Sheen16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen16' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Sheen17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Sheen17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen17' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Sheen18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Sheen18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen18' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Sheen19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Sheen19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen19' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Sheen20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Sheen20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen20' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Sheen21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Sheen21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen21' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Sheen22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Sheen22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen22' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Sheen23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Sheen23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen23' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Sheen24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Sheen24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen24' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Sheen25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Sheen25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen25' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Sheen26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Sheen26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen26' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Sheen27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Sheen27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen27' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Sheen28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Sheen28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen28' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Sheen29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Sheen29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen29' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Sheen30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Sheen30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen30' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Sheen31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Sheen31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen31' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Sheen32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Sheen32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen32' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Sheen33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Sheen33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen33' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Sheen34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Sheen34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Sheen34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Sheen34' parameter='"target=_source"' url='"SheenPrototypes.html#ProtoDeclare_Sheen34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SheenPrototypes.html#ProtoDeclare_Sheen34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Sheen34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

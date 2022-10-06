@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet type="text/xsl" href="generic.xsl" ?>-->
+
+<document>
+<!-- CML document - cortisone - karne - 7/8/00 -->
+<!-- file converted from: MDL .mol -->
+<cml title="cortisone" id="cml_cortisone_karne" >
+	<molecule title="cortisone" id="mol_cortisone_karne">
+	<formula>C21 H28 O5</formula>
+		<string title="CAS">53-06-5</string>
+		<float title="molecular weight">360.44</float>
+		<atomArray>
+			<atom id="cortisone_karne_a_1">
+				<float builtin="x2" units="A">5.1880</float>
+				<float builtin="y2" units="A">4.0906</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_2">
+				<float builtin="x2" units="A">5.1880</float>
+				<float builtin="y2" units="A">2.9931</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_3">
+				<float builtin="x2" units="A">5.1880</float>
+				<float builtin="y2" units="A">1.9954</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_4">
+				<float builtin="x2" units="A">6.1358</float>
+				<float builtin="y2" units="A">3.2924</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_5">
+				<float builtin="x2" units="A">4.3400</float>
+				<float builtin="y2" units="A">3.4919</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_6">
+				<float builtin="x2" units="A">4.3400</float>
+				<float builtin="y2" units="A">1.4965</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_7">
+				<float builtin="x2" units="A">6.1358</float>
+				<float builtin="y2" units="A">1.6961</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_8">
+				<float builtin="x2" units="A">6.9340</float>
+				<float builtin="y2" units="A">3.8910</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_9">
+				<float builtin="x2" units="A">6.1358</float>
+				<float builtin="y2" units="A">4.2402</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="cortisone_karne_a_10">
+				<float builtin="x2" units="A">6.7345</float>
+				<float builtin="y2" units="A">2.4942</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_11">
+				<float builtin="x2" units="A">3.4421</float>
+				<float builtin="y2" units="A">2.9931</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_12">
+				<float builtin="x2" units="A">3.4421</float>
+				<float builtin="y2" units="A">1.9954</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_13">
+				<float builtin="x2" units="A">4.3400</float>
+				<float builtin="y2" units="A">0.4988</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_14">
+				<float builtin="x2" units="A">7.8818</float>
+				<float builtin="y2" units="A">3.4919</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_15">
+				<float builtin="x2" units="A">6.9340</float>
+				<float builtin="y2" units="A">4.8887</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="cortisone_karne_a_16">
+				<float builtin="x2" units="A">2.5940</float>
+				<float builtin="y2" units="A">3.4919</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="cortisone_karne_a_17">
+				<float builtin="x2" units="A">2.5940</float>
+				<float builtin="y2" units="A">1.4965</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_18">
+				<float builtin="x2" units="A">3.4421</float>
+				<float builtin="y2" units="A">0.0000</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_19">
+				<float builtin="x2" units="A">8.6800</float>
+				<float builtin="y2" units="A">4.0906</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="cortisone_karne_a_20">
+				<float builtin="x2" units="A">2.5940</float>
+				<float builtin="y2" units="A">2.4942</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_21">
+				<float builtin="x2" units="A">2.5940</float>
+				<float builtin="y2" units="A">0.4988</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_22">
+				<float builtin="x2" units="A">1.7460</float>
+				<float builtin="y2" units="A">1.9954</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_23">
+				<float builtin="x2" units="A">1.7460</float>
+				<float builtin="y2" units="A">0.0000</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_24">
+				<float builtin="x2" units="A">0.8979</float>
+				<float builtin="y2" units="A">1.4965</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_25">
+				<float builtin="x2" units="A">0.8979</float>
+				<float builtin="y2" units="A">0.4988</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="cortisone_karne_a_26">
+				<float builtin="x2" units="A">0.0000</float>
+				<float builtin="y2" units="A">0.0000</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">O</string>
+			</atom>
+		</atomArray>
+		<bondArray>
+			<bond id="cortisone_karne_b_1">
+				<string builtin="atomRef">cortisone_karne_a_1</string>
+				<string builtin="atomRef">cortisone_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_2">
+				<string builtin="atomRef">cortisone_karne_a_2</string>
+				<string builtin="atomRef">cortisone_karne_a_3</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_3">
+				<string builtin="atomRef">cortisone_karne_a_2</string>
+				<string builtin="atomRef">cortisone_karne_a_4</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_4">
+				<string builtin="atomRef">cortisone_karne_a_5</string>
+				<string builtin="atomRef">cortisone_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_5">
+				<string builtin="atomRef">cortisone_karne_a_3</string>
+				<string builtin="atomRef">cortisone_karne_a_6</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_6">
+				<string builtin="atomRef">cortisone_karne_a_7</string>
+				<string builtin="atomRef">cortisone_karne_a_3</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_7">
+				<string builtin="atomRef">cortisone_karne_a_8</string>
+				<string builtin="atomRef">cortisone_karne_a_4</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_8">
+				<string builtin="atomRef">cortisone_karne_a_9</string>
+				<string builtin="atomRef">cortisone_karne_a_4</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_9">
+				<string builtin="atomRef">cortisone_karne_a_4</string>
+				<string builtin="atomRef">cortisone_karne_a_10</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_10">
+				<string builtin="atomRef">cortisone_karne_a_10</string>
+				<string builtin="atomRef">cortisone_karne_a_7</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_11">
+				<string builtin="atomRef">cortisone_karne_a_11</string>
+				<string builtin="atomRef">cortisone_karne_a_5</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_12">
+				<string builtin="atomRef">cortisone_karne_a_12</string>
+				<string builtin="atomRef">cortisone_karne_a_6</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_13">
+				<string builtin="atomRef">cortisone_karne_a_12</string>
+				<string builtin="atomRef">cortisone_karne_a_11</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_14">
+				<string builtin="atomRef">cortisone_karne_a_6</string>
+				<string builtin="atomRef">cortisone_karne_a_13</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_15">
+				<string builtin="atomRef">cortisone_karne_a_8</string>
+				<string builtin="atomRef">cortisone_karne_a_14</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_16">
+				<string builtin="atomRef">cortisone_karne_a_15</string>
+				<string builtin="atomRef">cortisone_karne_a_8</string>
+				<string builtin="order" convention="MDL">2</string>
+			</bond>
+			<bond id="cortisone_karne_b_17">
+				<string builtin="atomRef">cortisone_karne_a_16</string>
+				<string builtin="atomRef">cortisone_karne_a_11</string>
+				<string builtin="order" convention="MDL">2</string>
+			</bond>
+			<bond id="cortisone_karne_b_18">
+				<string builtin="atomRef">cortisone_karne_a_17</string>
+				<string builtin="atomRef">cortisone_karne_a_12</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_19">
+				<string builtin="atomRef">cortisone_karne_a_13</string>
+				<string builtin="atomRef">cortisone_karne_a_18</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_20">
+				<string builtin="atomRef">cortisone_karne_a_19</string>
+				<string builtin="atomRef">cortisone_karne_a_14</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_21">
+				<string builtin="atomRef">cortisone_karne_a_20</string>
+				<string builtin="atomRef">cortisone_karne_a_17</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_22">
+				<string builtin="atomRef">cortisone_karne_a_17</string>
+				<string builtin="atomRef">cortisone_karne_a_21</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_23">
+				<string builtin="atomRef">cortisone_karne_a_18</string>
+				<string builtin="atomRef">cortisone_karne_a_21</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_24">
+				<string builtin="atomRef">cortisone_karne_a_22</string>
+				<string builtin="atomRef">cortisone_karne_a_17</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_25">
+				<string builtin="atomRef">cortisone_karne_a_21</string>
+				<string builtin="atomRef">cortisone_karne_a_23</string>
+				<string builtin="order" convention="MDL">2</string>
+			</bond>
+			<bond id="cortisone_karne_b_26">
+				<string builtin="atomRef">cortisone_karne_a_24</string>
+				<string builtin="atomRef">cortisone_karne_a_22</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_27">
+				<string builtin="atomRef">cortisone_karne_a_23</string>
+				<string builtin="atomRef">cortisone_karne_a_25</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_28">
+				<string builtin="atomRef">cortisone_karne_a_25</string>
+				<string builtin="atomRef">cortisone_karne_a_24</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="cortisone_karne_b_29">
+				<string builtin="atomRef">cortisone_karne_a_25</string>
+				<string builtin="atomRef">cortisone_karne_a_26</string>
+				<string builtin="order" convention="MDL">2</string>
+			</bond>
+		</bondArray>
+	</molecule>
+	
+</cml>
+</document>

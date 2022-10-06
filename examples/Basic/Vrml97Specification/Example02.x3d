@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Example02.x3d' name='title'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='26 June 2000' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='X3D working group' name='creator'/>
+    <meta content='VRML 97 specification example: a simple scene defining a view of a red Sphere and a blue Bbox, lit by a DirectionalLight.' name='description'/>
+    <meta content='originals/exampleD_2.wrl' name='reference'/>
+    <meta content='VRML 97, ISO/IEC 14772-1, Part 1: Functional specification and UTF-8 encoding, D.2 Simple example' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/14772/V2.0/part1/examples.html#D.2' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Vrml97Specification/Example02.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Example02.x3d'/>
+    <Transform>
+      <NavigationInfo headlight='false' type='"EXAMINE"'/>
+      <DirectionalLight/>
+      <Transform translation='3.0 0.0 1.0'>
+        <Shape>
+          <Sphere radius='2.3'/>
+          <Appearance>
+            <Material diffuseColor='1.0 0.0 0.0'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform rotation='0.0 0.70710677 0.70710677 0.9' translation='-2.4 0.2 1.0'>
+        <Shape>
+          <Box/>
+          <Appearance>
+            <Material diffuseColor='0.0 0.0 1.0'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

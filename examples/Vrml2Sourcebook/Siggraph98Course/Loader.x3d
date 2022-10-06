@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Loader.x3d' name='title'/>
+    <meta content='This example illustrates use of JavaScript to load a scene from a file through use of the Browser object. When a button is selected to provide a new url for a file to load, the Script adds the new world, waits for the load to complete, then adds the loaded Shape into a rendered group.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Loader.png' name='Image'/>
+    <meta content='Button.x3d' name='reference'/>
+    <meta content='originals/loader.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0469.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Loader.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1998, David R. Nadeau"' title='Load VRML using a script'/>
+    <NavigationInfo/>
+    <Viewpoint description='Entry view'/>
+    <Background skyAngle='1.37 1.57 1.77' skyColor='0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.8 0.2 0.0 0.0 0.0'/>
+    <ExternProtoDeclare name='Button' url='"Button.x3d#Button" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Button.x3d#Button" "Button.wrl#Button" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Button.wrl#Button"'>
+      <field accessType='inputOutput' name='url' type='MFString'/>
+      <field accessType='inputOutput' name='textureUrl' type='MFString'/>
+      <field accessType='outputOnly' name='url_changed' type='MFString'/>
+      <field accessType='initializeOnly' name='translation' type='SFVec3f'/>
+    </ExternProtoDeclare>
+    <ProtoInstance DEF='Button1' name='Button'>
+      <fieldValue name='url' value='"One.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/One.x3d"'/>
+      <fieldValue name='textureUrl' value='"one.jpg"'/>
+      <fieldValue name='translation' value='-4.0 2.0 0.0'/>
+    </ProtoInstance>
+    <ProtoInstance DEF='Button2' name='Button'>
+      <fieldValue name='url' value='"Two.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Two.x3d"'/>
+      <fieldValue name='textureUrl' value='"two.jpg"'/>
+      <fieldValue name='translation' value='-4.0 0.0 0.0'/>
+    </ProtoInstance>
+    <ProtoInstance DEF='Button3' name='Button'>
+      <fieldValue name='url' value='"Three.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Three.x3d"'/>
+      <fieldValue name='textureUrl' value='"three.jpg"'/>
+      <fieldValue name='translation' value='-4.0 -2.0 0.0'/>
+    </ProtoInstance>
+    <Transform translation='-4.0 -3.5 0.0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text DEF='Label'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.75'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform DEF='Loaded' translation='1.0 0.0 0.0'>
+      <!-- load result goes here -->
+    </Transform>
+    <Script DEF='Loader' directOutput='true'>
+      <field accessType='initializeOnly' name='lastUrl' type='MFString' value='""'/>
+      <field accessType='inputOnly' name='loadUrl' type='MFString'/>
+      <field accessType='inputOnly' name='vrmlLoaded' type='MFNode'/>
+      <field accessType='outputOnly' name='node_changed' type='MFNode'/>
+      <field accessType='outputOnly' name='string_changed' type='MFString'/>
+      <field accessType='initializeOnly' name='myself' type='SFNode'>
+        <Script USE='Loader'/>
+      </field>
+      <![CDATA[
+ecmascript:
+
+function loadUrl( str, ts )
+{
+        lastUrl = str;
+        Browser.createVrmlFromURL( str, myself, 'vrmlLoaded' );
+        string_changed[0] = 'Loading...';
+}
+function vrmlLoaded( nd, ts )
+{
+        node_changed = nd;
+        string_changed[0] = lastUrl[0];
+}
+]]>
+    </Script>
+    <ROUTE fromField='url_changed' fromNode='Button1' toField='loadUrl' toNode='Loader'/>
+    <ROUTE fromField='url_changed' fromNode='Button2' toField='loadUrl' toNode='Loader'/>
+    <ROUTE fromField='url_changed' fromNode='Button3' toField='loadUrl' toNode='Loader'/>
+    <ROUTE fromField='node_changed' fromNode='Loader' toField='set_children' toNode='Loaded'/>
+    <ROUTE fromField='string_changed' fromNode='Loader' toField='set_string' toNode='Label'/>
+  </Scene>
+</X3D>

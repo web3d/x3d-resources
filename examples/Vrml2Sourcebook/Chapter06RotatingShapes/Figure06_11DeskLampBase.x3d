@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure06_11DeskLampBase.x3d' name='title'/>
+    <meta content='Figure 6.11, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch06/06fig11.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='8 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='The lower arm of a desk lamp, rotated using a center of rotation at the lower end of the arm. See Figures 6.12 and 9.9 for comparison.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter06RotatingShapes/Figure06_11DeskLampBase.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure06_11DeskLampBase.x3d'/>
+    <Viewpoint description='View lamp base' orientation='1 0 0 -0.2' position='0 0.25 1'/>
+    <Group>
+      <Shape>
+        <Cylinder height='0.01' radius='0.1'/>
+        <Appearance DEF='White'>
+          <Material diffuseColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+      <Transform center='0 -0.15 0' rotation='1 0 0 -0.7' translation='0 0.15 0'>
+        <Shape>
+          <Cylinder height='0.3' radius='0.01'/>
+          <Appearance USE='White'/>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

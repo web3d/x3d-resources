@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet type="text/xsl" href="generic.xsl" ?>-->
+
+<document>
+<!-- CML document - ethanol - karne - 7/8/00 -->
+<!-- file converted from: MDL .mol -->
+<cml title="ethanol" id="cml_ethanol_karne" >
+	<molecule title="ethanol" id="mol_ethanol_karne">
+		<formula>C2 H6 O</formula>
+		<string title="CAS">64-17-5</string>
+		<float title="molecular weight">46.07</float>
+		<atomArray>
+			<atom id="ethanol_karne_a_1">
+				<float builtin="x3" units="A">1.0303</float>
+				<float builtin="y3" units="A">0.8847</float>
+				<float builtin="z3" units="A">0.9763</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="ethanol_karne_a_2">
+				<float builtin="x3" units="A">1.8847</float>
+				<float builtin="y3" units="A">1.9889</float>
+				<float builtin="z3" units="A">1.5717</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="ethanol_karne_a_3">
+				<float builtin="x3" units="A">3.1883</float>
+				<float builtin="y3" units="A">1.4807</float>
+				<float builtin="z3" units="A">1.7425</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="ethanol_karne_a_4">
+				<float builtin="x3" units="A">0.0000</float>
+				<float builtin="y3" units="A">1.2330</float>
+				<float builtin="z3" units="A">0.8324</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="ethanol_karne_a_5">
+				<float builtin="x3" units="A">0.9949</float>
+				<float builtin="y3" units="A">0.0000</float>
+				<float builtin="z3" units="A">1.6255</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="ethanol_karne_a_6">
+				<float builtin="x3" units="A">1.4097</float>
+				<float builtin="y3" units="A">0.5558</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="ethanol_karne_a_7">
+				<float builtin="x3" units="A">1.9050</float>
+				<float builtin="y3" units="A">2.8742</float>
+				<float builtin="z3" units="A">0.9059</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="ethanol_karne_a_8">
+				<float builtin="x3" units="A">1.4753</float>
+				<float builtin="y3" units="A">2.3225</float>
+				<float builtin="z3" units="A">2.5456</float>
+				<string builtin="elementType">H</string>
+			</atom>
+			<atom id="ethanol_karne_a_9">
+				<float builtin="x3" units="A">3.7056</float>
+				<float builtin="y3" units="A">2.1820</float>
+				<float builtin="z3" units="A">2.1139</float>
+				<string builtin="elementType">H</string>
+			</atom>
+		</atomArray>
+		<bondArray>
+			<bond id="ethanol_karne_b_1">
+				<string builtin="atomRef">ethanol_karne_a_1</string>
+				<string builtin="atomRef">ethanol_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_2">
+				<string builtin="atomRef">ethanol_karne_a_1</string>
+				<string builtin="atomRef">ethanol_karne_a_4</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_3">
+				<string builtin="atomRef">ethanol_karne_a_1</string>
+				<string builtin="atomRef">ethanol_karne_a_5</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_4">
+				<string builtin="atomRef">ethanol_karne_a_1</string>
+				<string builtin="atomRef">ethanol_karne_a_6</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_5">
+				<string builtin="atomRef">ethanol_karne_a_2</string>
+				<string builtin="atomRef">ethanol_karne_a_3</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_6">
+				<string builtin="atomRef">ethanol_karne_a_2</string>
+				<string builtin="atomRef">ethanol_karne_a_7</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_7">
+				<string builtin="atomRef">ethanol_karne_a_2</string>
+				<string builtin="atomRef">ethanol_karne_a_8</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="ethanol_karne_b_8">
+				<string builtin="atomRef">ethanol_karne_a_3</string>
+				<string builtin="atomRef">ethanol_karne_a_9</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+		</bondArray>
+	</molecule>
+
+</cml>
+</document>

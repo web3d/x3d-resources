@@ -1,0 +1,804 @@
+#VRML V2.0 utf8
+
+# Produced by 3D Studio MAX VRML97 exporter, modified by blaxxun interactive, Version 4, Revision 1
+# MAX File: ping.max, Date: Tue Jan 04 14:52:42 2000
+
+#DEF water Transform { 
+#translation     0 11000 0
+#scale 200 200 200
+#rotation         0 0 1 0  
+#children         [Inline { 
+#url        ["water.wrl"]
+#}]
+#} 
+
+#DEF town Transform { 
+#translation     0 -1600 0
+#scale 100 100 100
+#rotation         0 0 1 0  
+#children         [Inline { 
+#url        ["town2.wrl"]
+#}]
+#} 
+
+# S O U N D S T R E A M 
+
+
+#Transform {
+#children	Shape {
+#    appearance	Appearance {
+  #    material	Material {emissiveColor 1 1 1
+#      }
+#	texture MovieTexture {
+#	 loop TRUE
+#	 url     ["audio/paul2.rm"]
+#	}
+	
+#    }
+
+#    geometry	DEF _0 IndexedFaceSet {
+#      coord	Coordinate {
+#	point	[ -1 -1 0,
+#		  -1 1 0,
+#		  1 1 0,
+#		  1 -1 0 ]
+#      }
+
+#      coordIndex	[ 0, 1, 2, 3, -1 ]
+#      solid	FALSE
+#      normalIndex	[  ]
+#      texCoordIndex	[  ]
+#    }
+
+#  }
+
+#  translation	-30.9994 -1.82622e-005 8.99936
+#  rotation	-1 0 0  1.57079
+#  scale	.01 .01 .01
+#}
+
+
+DEF bubbles_all Transform { 
+rotation 0 0 0 0
+children         [
+
+Transform { 
+translation      12 0 16 
+rotation 0 1 0 .2
+children         [
+Billboard { 
+  axisOfRotation 1 0 0
+  children       [
+
+Billboard { 
+children       [
+DEF bubbles Transform { 
+translation     30 80 0
+scale 2 2 2
+rotation         0 0 1 0  
+children         [Inline { 
+url        ["bubbles2.wrl"]
+}]
+} 
+]
+}
+]
+}
+]
+}
+
+Transform { 
+translation      100 20 20 
+rotation 0 1 0 .2
+children         [
+Billboard { 
+  axisOfRotation 1 0 0
+  children       [
+Billboard { 
+
+children       [
+DEF bubbles2 Transform { 
+translation     0 0 0
+scale 1 1 1
+rotation         0 0 1 0  
+children         [Inline { 
+url        ["bubbles2.wrl"]
+}]
+} 
+]
+}
+]
+} 
+]
+}
+
+Transform { 
+translation      50 20 -50
+rotation 0 1 0 .35 
+children         [
+Billboard { 
+  axisOfRotation 1 0 0
+  children       [
+Billboard { 
+
+children       [
+DEF bubbles3 Transform { 
+translation     0 0 0
+scale 4 4 4
+rotation         0 0 1 0  
+children         [Inline { 
+url        ["bubbles2.wrl"]
+}]
+} 
+]
+}
+]
+} 
+]
+}
+
+
+Transform { 
+translation      -50 10 50 
+rotation 0 1 0 -.14
+children         [
+Billboard { 
+  axisOfRotation 1 0 0
+  children       [
+Billboard { 
+
+children       [
+DEF bubbles4 Transform { 
+translation     0 0 0
+scale 6 6 6
+rotation         0 0 1 0  
+children         [Inline { 
+url        ["bubbles2.wrl"]
+}]
+} 
+]
+}
+]
+} 
+]
+}
+
+
+Transform { 
+translation      10 50 -20  
+rotation 0 1 0 -.43
+children         [
+Billboard { 
+  axisOfRotation 1 0 0
+  children       [
+Billboard { 
+
+children       [
+DEF bubbles4 Transform { 
+translation     0 0 0
+scale 10 10 10
+rotation         0 0 1 0  
+children         [Inline { 
+url        ["bubbles2.wrl"]
+}]
+} 
+]
+}
+]
+} 
+]
+}
+
+
+
+Transform { 
+translation      30 -20 33
+rotation 0 1 0 -.22
+children         [
+Billboard { 
+  axisOfRotation 1 0 0
+  children       [
+Billboard { 
+
+children       [
+DEF bubbles5 Transform { 
+translation     0 0 0
+scale 5 5 5
+rotation         0 0 1 0  
+children         [Inline { 
+url        ["bubbles2.wrl"]
+}]
+} 
+]
+}
+]
+} 
+]
+}
+
+
+]
+} #end of all bubbles
+
+
+
+
+
+
+DEF camera Viewpoint {
+position 0 100 300
+orientation 0 1 0 1.37
+fieldOfView 0.6024
+description "camera01"
+}
+
+
+DEF camera2 Viewpoint {
+position 0 560 250
+orientation 0 1 1 1
+fieldOfView 0.6024
+description "camera02"
+}
+
+
+Background {
+groundAngle 1.57079
+groundColor [ 0 0 0,
+0.2 0.6 0.6 ]
+skyAngle [ 0.2, 1.57079 ]
+skyColor [ 1 1 0,
+1 1 1,
+0.2 0.6 0.6 ]
+}
+
+
+
+NavigationInfo {
+avatarSize [30,10,1]
+#visibilityLimit 10000
+}
+
+DEF Nebel Fog {
+color            .2 .55 .55
+fogType          "EXPONENTIAL"
+visibilityRange  6000
+}
+
+
+PROTO kugel_proto [
+exposedField SFInt32 mass 5
+exposedField SFInt32 bounce 2
+exposedField SFVec3f translation 0 0 0
+exposedField SFRotation rotation 0 0 0 0
+exposedField SFVec3f scale 2 1 1
+
+]
+{
+Transform { 
+translation IS translation
+rotation IS rotation
+scale IS scale
+children         [
+
+Shape
+{
+appearance  Appearance
+{
+material Material 
+{
+diffuseColor      0 .6 .6
+ambientIntensity  0.8
+specularColor .5 .5 .5
+shininess .1
+}
+texture ImageTexture { 
+url     ["images/rochen2.jpg"]
+}
+textureTransform TextureTransform {
+scale 10 20
+}
+}
+
+geometry DEF NS_051202E0 NurbsSurface {
+solid FALSE
+ccw FALSE 
+uOrder 4 
+vOrder 4 
+uDimension 9 
+vDimension 15 
+uKnot [
+-1.5708, -1.5708, -1.5708, -1.5708, -1.0472, -0.523599,
+0, 0.523599, 1.0472, 1.5708, 1.5708, 1.5708,
+1.5708,
+]
+vKnot [
+-3.14159, -3.14159, -3.14159, -3.14159, -2.87979, -2.61799,
+-2.0944, -1.0472, -0.523599, 6.66134e-016, 0.523599, 1.0472,
+2.0944, 2.61799, 2.87979, 3.14159, 3.14159, 3.14159,
+3.14159,
+]
+controlPoint [
+-1.27736 35.7961 4.55511e-006,
+-1.2779 35.7884 -5.24561,
+-1.35057 31.0356 -16.5869,
+-1.12506 17.389 -28.4984,
+-0.6016 19.5005 -32.9613,
+1.0955 42.4469 -28.4985,
+4.33945 72.7982 -16.5869,
+5.4398 83.1 -5.24562,
+5.43752 83.1066 4.55511e-006,
+
+-1.27737 35.7961 4.55511e-006,
+-1.73538 35.1384 -5.24561,
+-2.80489 29.4166 -16.5869,
+-3.60711 16.6993 -28.4984,
+-3.62723 20.9634 -32.9613,
+-1.86255 45.4255 -28.4985,
+2.46376 75.3978 -16.5869,
+4.83466 84.0175 -5.24562,
+5.43751 83.1066 4.55511e-006,
+
+-1.27737 35.7961 4.55511e-006,
+-2.70966 33.6966 -5.14473,
+-5.94269 25.551 -16.2679,
+-9.04301 14.9382 -27.9504,
+-10.207 23.4732 -32.3274,
+-8.05599 50.5478 -27.9504,
+-1.36058 80.2912 -16.268,
+3.57185 85.9006 -5.14474,
+5.43751 83.1066 4.55511e-006,
+
+-1.27736 35.7961 4.55511e-006,
+-4.66671 30.6507 -4.47467,
+-12.4049 17.2691 -14.1491,
+-20.8263 13.1122 -24.31,
+-24.5018 27.0106 -28.117,
+-20.4947 54.5641 -24.31,
+-8.58114 87.2636 -14.1491,
+1.11315 89.4354 -4.47467,
+5.43752 83.1066 4.55511e-006,
+
+-1.27736 35.7961 4.55511e-006,
+-7.51319 25.9634 -1.90257,
+-22.3168 6.72937 -6.01604,
+-41.9314 26.1883 -10.3363,
+-50.9968 38.2753 -11.955,
+-39.875 41.2045 -10.3364,
+-18.2221 87.8753 -6.01607,
+-2.28789 93.8959 -1.90257,
+5.43751 83.1066 4.55511e-006,
+
+-1.27736 35.7961 4.55511e-006,
+-7.53326 25.9296 1.90258,
+-22.5734 7.18829 6.01605,
+-44.1025 31.9326 10.3363,
+-53.8214 46.0061 11.955,
+-40.647 41.968 10.3363,
+-18.2963 87.4889 6.01606,
+-2.31116 93.9242 1.90259,
+5.43752 83.1066 4.55511e-006,
+
+-1.27736 35.7961 5.50253e-007,
+-4.23407 31.3391 4.8421,
+-11.2269 19.8422 15.311,
+-20.5758 18.3787 26.3062,
+-24.2895 28.6749 30.4258,
+-18.4979 50.5253 26.3063,
+-7.04619 85.1418 15.311,
+1.64795 88.6844 4.84212,
+5.43752 83.1066 5.50253e-007,
+
+-1.27736 35.7961 5.50253e-007,
+-1.27737 35.7961 5.44737,
+-1.50672 31.5193 17.2249,
+-2.14 18.5006 29.5945,
+-1.73525 15.9535 34.229,
+0.76022 37.2378 29.5946,
+4.31337 71.8979 17.2249,
+5.43751 83.1066 5.44738,
+5.43752 83.1066 5.50253e-007,
+
+-1.27736 35.7961 5.50253e-007,
+1.63521 39.6203 4.8421,
+7.69856 38.3458 15.311,
+14.1187 16.8463 26.3062,
+18.4528 6.91002 30.4258,
+20.7951 20.209 26.3063,
+17.1632 54.1716 15.311,
+9.41494 76.9854 4.84212,
+5.43752 83.1066 5.50253e-007,
+
+-1.27736 35.7961 4.55511e-006,
+4.78443 42.8789 1.90258,
+17.3498 34.3597 6.01605,
+30.5904 -3.7154 10.3363,
+40.2727 1.10951 11.955,
+45.6918 15.8365 10.3364,
+33.4807 36.666 6.01607,
+14.0125 69.8984 1.90258,
+5.43751 83.1066 4.55511e-006,
+
+-1.27736 35.7961 4.55511e-006,
+4.76558 42.8627 -1.90257,
+17.2995 34.4185 -6.01604,
+30.4938 -3.47852 -10.3363,
+40.1372 1.13182 -11.955,
+45.5286 15.8455 -10.3364,
+33.3746 36.8737 -6.01605,
+13.984 69.9418 -1.90257,
+5.43752 83.1066 4.55511e-006,
+
+-1.27737 35.7961 -3.4546e-006,
+2.05413 40.1119 -4.47465,
+9.04946 38.5154 -14.1491,
+16.4751 15.9156 -24.31,
+21.3889 7.41209 -28.117,
+23.9043 20.3186 -24.31,
+19.178 52.1257 -14.1491,
+10.0082 76.0653 -4.47467,
+5.43751 83.1066 5.50253e-007,
+
+-1.27736 35.7961 4.55511e-006,
+0.144505 37.746 -5.14473,
+3.13642 35.4755 -16.2679,
+6.49247 18.7535 -27.9504,
+8.75803 14.5264 -32.3274,
+10.4624 32.6411 -27.9504,
+10.356 64.2861 -16.268,
+7.34763 80.1841 -5.14474,
+5.43753 83.1066 4.55511e-006,
+
+-1.27736 35.7961 4.55511e-006,
+-0.820415 36.4385 -5.24561,
+0.103751 32.6546 -16.5869,
+1.35699 18.0788 -28.4984,
+2.42403 18.0377 -32.9613,
+4.05356 39.4683 -28.4985,
+6.21515 70.1987 -16.5869,
+6.04495 82.1825 -5.24562,
+5.43753 83.1066 4.55511e-006,
+
+-1.27736 35.7961 4.55511e-006,
+-1.2779 35.7884 -5.24561,
+-1.35057 31.0356 -16.5869,
+-1.12506 17.389 -28.4984,
+-0.6016 19.5005 -32.9613,
+1.0955 42.4469 -28.4985,
+4.33945 72.7982 -16.5869,
+5.4398 83.1 -5.24562,
+5.43752 83.1066 4.55511e-006,
+
+]
+}#end of NurbsSurface
+}
+]
+}
+}
+
+
+
+#PointLight {
+#   ambientIntensity  0 
+#   attenuation       1 0 0
+#   color             1 1 1 
+#   intensity         1
+#   location          0 1200 0
+#   on                TRUE 
+#   radius            1000
+#}
+
+
+
+
+DEF birds Transform { 
+children [
+
+Transform { 
+translation      0 -300 0  
+children 
+DEF bird Transform { 
+translation      0 0 0  
+rotation         0 0 1 0  
+children         [
+
+
+DEF kugel kugel_proto {
+mass 5
+bounce 2
+translation 0 0 -100
+scale 5 .7 .7
+}
+
+
+DEF Fl2 Transform {
+translation 0 0 0
+children [
+
+Shape {
+appearance Appearance {
+material Material {
+diffuseColor .2 .2 .7
+specularColor 1 1 1
+}
+texture ImageTexture { 
+url     ["images/rochen.gif"]
+}
+}
+#nurbsset 0097E500 nurbssurface 04991370
+geometry DEF nurb2 NurbsSurface {
+solid FALSE
+uOrder 4 
+vOrder 4 
+
+uDimension 5 
+vDimension 5 
+uKnot [
+0, 0, 0, 0, 0.50028, 1,
+1, 1, 1,
+]
+vKnot [
+0, 0, 0, 0, 0.499455, 1,
+1, 1, 1,
+]
+controlPoint [
+-100 0 -100,
+-33.3333 0 -100,
+0.0559914 0 -100,
+33.3333 0 -100,
+100 0 -100,
+
+-100 0 -33.3333,
+-33.3333 0 -33.3333,
+0.0559914 0 -33.3333,
+33.3333 0 -33.3333,
+100 0 -33.3333,
+
+-100 0 -0.108946,
+-33.3333 0 -0.108946,
+1.11983 365.342 -2.17891,
+33.3333 0 -0.108946,
+100 0 -0.108946,
+
+-100 0 33.3333,
+-33.3333 0 33.3333,
+0.0559914 0 33.3333,
+33.3333 0 33.3333,
+100 0 33.3333,
+
+-100 0 100,
+-33.3333 0 100,
+0.0559914 0 100,
+33.3333 0 100,
+100 0 100,
+
+]
+weight [
+1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1,
+1,
+]
+}#end of NurbsSurface
+}
+]
+}
+DEF Fl2_2 Transform {
+translation 0 0 -200
+rotation 0 1 0 3.14
+rotation 1 0 0 3.14
+children [
+
+Shape {
+appearance Appearance {
+material Material {
+diffuseColor .2 .2 .7
+specularColor 1 1 1
+}
+texture ImageTexture { 
+url     ["images/rochen.gif"]
+}
+}
+#nurbsset 0097E500 nurbssurface 04991370
+geometry DEF nurb2_2 NurbsSurface {
+solid FALSE
+uOrder 4 
+vOrder 4 
+
+uDimension 5 
+vDimension 5 
+uKnot [
+0, 0, 0, 0, 0.50028, 1,
+1, 1, 1,
+]
+vKnot [
+0, 0, 0, 0, 0.499455, 1,
+1, 1, 1,
+]
+controlPoint [
+-100 0 -100,
+-33.3333 0 -100,
+0.0559914 0 -100,
+33.3333 0 -100,
+100 0 -100,
+
+-100 0 -33.3333,
+-33.3333 0 -33.3333,
+0.0559914 0 -33.3333,
+33.3333 0 -33.3333,
+100 0 -33.3333,
+
+-100 0 -0.108946,
+-33.3333 0 -0.108946,
+1.11983 365.342 -2.17891,
+33.3333 0 -0.108946,
+100 0 -0.108946,
+
+-100 0 33.3333,
+-33.3333 0 33.3333,
+0.0559914 0 33.3333,
+33.3333 0 33.3333,
+100 0 33.3333,
+
+-100 0 100,
+-33.3333 0 100,
+0.0559914 0 100,
+33.3333 0 100,
+100 0 100,
+
+]
+weight [
+1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1,
+1,
+]
+}#end of NurbsSurface
+}
+]
+}
+
+]
+}
+}
+DEF bird2 Transform {
+translation 100 40 -150
+children USE bird
+}
+
+DEF bird3 Transform {
+translation 50 20 250
+children USE bird
+}
+
+]
+}
+
+#Sound {
+# source AudioClip {
+#    url "audio/paul.wav"
+#    description ""
+#    loop TRUE
+#    startTime 0
+#    stopTime 0
+#    pitch 1
+#  }
+#
+#  intensity 1
+#  priority 1
+#  location 0 0 0
+#  direction 0 0 1
+#  minBack 350
+#  minFront 350
+#  maxBack 10000
+#  maxFront 10000
+#  spatialize FALSE
+#}
+
+
+
+
+DEF animate Script {
+directOutput TRUE 
+eventIn SFFloat setTime
+eventIn SFFloat setTime2
+field SFNode Nebel USE Nebel
+field SFNode birds USE birds
+field SFNode camera USE camera
+field SFNode nurb2 USE nurb2
+field SFNode nurb2_2 USE nurb2_2
+field SFNode kugel USE kugel
+field SFNode bird2 USE bird2
+field SFNode bird3 USE bird3
+eventIn SFFloat flight
+url "javascript:
+function setTime(value) {
+
+// nurb.controlPoint[12].z = 50*Math.sin(value*2*Math.PI);
+for (i=0;i<25;i++)
+{
+
+nurb2.controlPoint[i].y = 100 * Math.sin(value*2*Math.PI-4*Math.sin(i/25)) ;
+nurb2_2.controlPoint[i].y = -100 * Math.sin(value*2*Math.PI-4*Math.sin(i/25)) ;
+kugel.translation[1] = 90 * Math.sin((value-.07)*2*Math.PI) -43 ;
+
+}
+}
+function setTime2(value)
+{
+Nebel.visibilityRange = Math.sin(value*2*Math.PI)*1400 + 4200;
+bird2.translation[1] = 100 * Math.sin((value+.3)*2*Math.PI+Math.PI*2) * Math.sin(value*2*Math.PI) ;
+bird3.translation[1] = -120 * Math.sin(value*2*Math.PI) ;
+}
+function flight (value)
+{
+birds.translation[0] = -value*12000 +6000;
+camera.position[0] = birds.translation[0] +2000;
+}
+
+"
+
+}
+DEF TimeSource TimeSensor {
+cycleInterval 2
+
+loop TRUE 
+}
+
+DEF TimeSource2 TimeSensor {
+cycleInterval 4
+
+loop TRUE 
+}
+
+DEF TimeSource3 TimeSensor {
+cycleInterval 40
+
+loop TRUE 
+}
+
+DEF TimeSource4 TimeSensor {
+cycleInterval 40
+
+loop TRUE 
+}
+
+DEF OI OrientationInterpolator { 
+key           [0, .52, 0.70, 0.75,  1]    
+keyValue      [1 0 0 0, 1 0 0 0,1 0 0 1.2,1 0 0 0.45,1 0 0 0]    
+#value_changed
+#set_fraction        
+}
+
+DEF OI2 OrientationInterpolator { 
+key           [0, .5 , 1]    
+keyValue      [0 1 0 0, 0 1 0 3.1415 , 0 1 0 6.28]    
+#value_changed
+#set_fraction        
+}
+
+DEF OI3 OrientationInterpolator { 
+key           [0, .54, 0.72, 0.8,  1]    
+keyValue      [0 1 0 0, 0 1 0 0,0 1 0 -1.5,0 1 0 -1.9,0 1 0 -2.2]    
+#value_changed
+#set_fraction        
+}
+
+
+ROUTE TimeSource.fraction TO animate.setTime
+ROUTE TimeSource2.fraction TO animate.setTime2
+ROUTE TimeSource3.fraction TO animate.flight
+ROUTE TimeSource3.fraction TO OI.fraction
+ROUTE TimeSource4.fraction TO OI2.fraction
+ROUTE TimeSource3.fraction TO OI3.fraction
+#ROUTE OI3.value TO town.rotation
+#ROUTE OI3.value TO water.rotation
+ROUTE OI2.value TO bubbles_all.rotation
+ROUTE OI.value TO birds.rotation
+
+
+
+
+
+

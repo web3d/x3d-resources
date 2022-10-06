@@ -1,0 +1,1025 @@
+> cd C:\www.web3D.org\TaskGroups\x3d\translation\
+> make LatticeXvl
+
+
+C:\www.web3D.org\TaskGroups\x3d\translation>make LatticeXvl 
+-------------------------------------------------------------------------
+cd examples/LatticeXvl/javasrc; pwd; make -i all
+/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc
+make[1]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make -i verbose
+make[2]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+Makefile verbose mode setting:
+make[2]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make -i clean
+make[2]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+rm -f  *.class
+rm -rf vrml/*.class
+rm -rf jp
+rm -rf javadoc
+rm -f  LatticeXvl.jar
+make[2]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make -i kernel
+make[2]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+build the Lattice Kernel Java classes - see Lv_Java_v0_31/BatOut/* for errors
+cd Lv_Java_v0_31; JavacXVL3View.bat; cd ..; \
+rm -rf jp; cp -r Lv_Java_v0_31/CodeBase/jp .;
+
+c:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31>cd Lj_Kernel 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>call JavacKernel.bat 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvCom0_SrcList.txt          2>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvCom0a_SrcList.txt         2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvUVcalc0Dmy_SrcList.txt    2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvAtt0_SrcList.txt          2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvGeom0_SrcList.txt         2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvTopo0_SrcList.txt         2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvCom0g_SrcList.txt         2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvAtt0g_SrcList.txt         2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvGeom0g_SrcList.txt        2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvTopo0g_SrcList.txt        2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\lvBase0_SrcList.txt         2>>..\BatOut\JavacKernel_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Kernel>cd ..\Lj_Processor 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Processor>call JavacProcessor.bat 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Processor>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\x3pCom_SrcList.txt          2>..\BatOut\JavacProcessor_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Processor>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\x3pNode_SrcList.txt         2>>..\BatOut\JavacProcessor_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Processor>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\x3pParse_SrcList.txt        2>>..\BatOut\JavacProcessor_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Processor>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\x3pBase_SrcList.txt         2>>..\BatOut\JavacProcessor_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_Processor>cd ..\Lj_ViewApp 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_ViewApp>call JavacViewApp.bat 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_ViewApp>javac -d ..\CodeBase -classpath ..\CodeBase @SrcList\ViewApp_SrcList.txt          2>..\BatOut\JavacViewApp_BatOut.txt 
+
+C:\www.web3d.org\TaskGroups\x3d\translation\examples\LatticeXvl\javasrc\Lv_Java_v0_31\Lj_ViewApp>cd .. 
+make[2]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make -i latticexvl
+make[2]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+javac  -deprecation -classpath . *.java
+make[2]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make -i jar
+make[2]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+build the java archive (.jar) file, which can also be read as a .zip file
+jar -vcf LatticeXvl.jar	\
+*.class				\
+	jp/co/lattice/*/*.class			\
+	jp/co/lattice/*/*/*.class		\
+	jp/co/lattice/*/*/*/*.class
+added manifest
+adding: XvlShell.class(in = 16091) (out= 7518)(deflated 53%)
+adding: jp/co/lattice/vApplet/xvBBox.class(in = 3582) (out= 1436)(deflated 59%)
+adding: jp/co/lattice/vApplet/xvDraw.class(in = 8570) (out= 3413)(deflated 60%)
+adding: jp/co/lattice/vApplet/xvGlobal.class(in = 532) (out= 333)(deflated 37%)
+adding: jp/co/lattice/vApplet/xvMain$Init.class(in = 883) (out= 480)(deflated 45%)
+adding: jp/co/lattice/vApplet/xvMain.class(in = 12601) (out= 6044)(deflated 52%)
+adding: jp/co/lattice/vApplet/xvRend.class(in = 7966) (out= 3781)(deflated 52%)
+adding: jp/co/lattice/vApplet/xvRoot.class(in = 913) (out= 446)(deflated 51%)
+adding: jp/co/lattice/vApplet/xvShade$1.class(in = 188) (out= 141)(deflated 25%)
+adding: jp/co/lattice/vApplet/xvShade$DrawLine.class(in = 6690) (out= 2647)(deflated 60%)
+adding: jp/co/lattice/vApplet/xvShade.class(in = 5242) (out= 2197)(deflated 58%)
+adding: jp/co/lattice/vApplet/xvShadeCore$Vector3I.class(in = 1584) (out= 671)(deflated 57%)
+adding: jp/co/lattice/vApplet/xvShadeCore.class(in = 1033) (out= 564)(deflated 45%)
+adding: jp/co/lattice/vApplet/xvShadeTexCoord$1.class(in = 212) (out= 151)(deflated 28%)
+adding: jp/co/lattice/vApplet/xvShadeTexCoord$CalcLine.class(in = 5107) (out= 1863)(deflated 63%)
+adding: jp/co/lattice/vApplet/xvShadeTexCoord.class(in = 4929) (out= 2003)(deflated 59%)
+adding: jp/co/lattice/vApplet/xvTexFileToImage.class(in = 3499) (out= 1686)(deflated 51%)
+adding: jp/co/lattice/vApplet/xvTexture.class(in = 689) (out= 469)(deflated 31%)
+adding: jp/co/lattice/vApplet/xvUtil.class(in = 796) (out= 472)(deflated 40%)
+adding: jp/co/lattice/vApplet/xvView.class(in = 4561) (out= 1986)(deflated 56%)
+adding: jp/co/lattice/vProcessor/base/x3pBaseGblElm.class(in = 1521) (out= 567)(deflated 62%)
+adding: jp/co/lattice/vProcessor/base/x3pBinToImage$Global.class(in = 567) (out= 350)(deflated 38%)
+adding: jp/co/lattice/vProcessor/base/x3pBinToImage.class(in = 2821) (out= 1556)(deflated 44%)
+adding: jp/co/lattice/vProcessor/base/x3pFromProcessor$Global.class(in = 822) (out= 385)(deflated 53%)
+adding: jp/co/lattice/vProcessor/base/x3pFromProcessor$Material.class(in = 877) (out= 494)(deflated 43%)
+adding: jp/co/lattice/vProcessor/base/x3pFromProcessor$Texture.class(in = 527) (out= 343)(deflated 34%)
+adding: jp/co/lattice/vProcessor/base/x3pFromProcessor.class(in = 4208) (out= 1677)(deflated 60%)
+adding: jp/co/lattice/vProcessor/base/x3pGblCore.class(in = 1188) (out= 536)(deflated 54%)
+adding: jp/co/lattice/vProcessor/base/x3pImageTextureEx.class(in = 314) (out= 224)(deflated 28%)
+adding: jp/co/lattice/vProcessor/base/x3pMaterialEx.class(in = 303) (out= 221)(deflated 27%)
+adding: jp/co/lattice/vProcessor/base/x3pParseEx.class(in = 1054) (out= 463)(deflated 56%)
+adding: jp/co/lattice/vProcessor/base/x3pShellInfo$Face.class(in = 397) (out= 279)(deflated 29%)
+adding: jp/co/lattice/vProcessor/base/x3pShellInfo$Faces.class(in = 704) (out= 406)(deflated 42%)
+adding: jp/co/lattice/vProcessor/base/x3pShellInfo$Instance.class(in = 625) (out= 371)(deflated 40%)
+adding: jp/co/lattice/vProcessor/base/x3pShellInfo.class(in = 653) (out= 329)(deflated 49%)
+adding: jp/co/lattice/vProcessor/base/x3pTmpDtTrv$ToKernelVtxGs.class(in = 511) (out= 331)(deflated 35%)
+adding: jp/co/lattice/vProcessor/base/x3pTmpDtTrv$ToKernelVtxUV.class(in = 600) (out= 360)(deflated 40%)
+adding: jp/co/lattice/vProcessor/base/x3pTmpDtTrv.class(in = 419) (out= 254)(deflated 39%)
+adding: jp/co/lattice/vProcessor/base/x3pToProcessor$Global.class(in = 576) (out= 367)(deflated 36%)
+adding: jp/co/lattice/vProcessor/base/x3pToProcessor.class(in = 3664) (out= 1646)(deflated 55%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvAddElm0.class(in = 7826) (out= 3246)(deflated 58%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvAddElm1.class(in = 5227) (out= 2121)(deflated 59%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvFromKernel$Global.class(in = 548) (out= 319)(deflated 41%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvFromKernel.class(in = 8860) (out= 3386)(deflated 61%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvInstance$Global.class(in = 1496) (out= 653)(deflated 56%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvInstance$TrvDataNumInstance.class(in = 1390) (out= 554)(deflated 60%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvInstance.class(in = 6695) (out= 2379)(deflated 64%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvNewVtxNo.class(in = 3688) (out= 1567)(deflated 57%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvNumInstance$TrvDataNumInstance.class(in = 666) (out= 351)(deflated 47%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvNumInstance.class(in = 4266) (out= 1612)(deflated 62%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvNumNewVtxNo.class(in = 2322) (out= 944)(deflated 59%)
+adding: jp/co/lattice/vProcessor/base/x3pTrvToKernel.class(in = 9176) (out= 3873)(deflated 57%)
+adding: jp/co/lattice/vProcessor/base/x3pWorld.class(in = 601) (out= 343)(deflated 42%)
+adding: jp/co/lattice/vProcessor/base/x3pXvlFacesEx.class(in = 513) (out= 347)(deflated 32%)
+adding: jp/co/lattice/vProcessor/base/x3pXvlShapeEx.class(in = 1439) (out= 610)(deflated 57%)
+adding: jp/co/lattice/vProcessor/com/x3pColor.class(in = 2732) (out= 1148)(deflated 57%)
+adding: jp/co/lattice/vProcessor/com/x3pComGblElm.class(in = 547) (out= 311)(deflated 43%)
+adding: jp/co/lattice/vProcessor/com/x3pGblCoreNull.class(in = 572) (out= 308)(deflated 46%)
+adding: jp/co/lattice/vProcessor/com/x3pGlobal.class(in = 920) (out= 403)(deflated 56%)
+adding: jp/co/lattice/vProcessor/com/x3pMatrix$Global.class(in = 2135) (out= 901)(deflated 57%)
+adding: jp/co/lattice/vProcessor/com/x3pMatrix.class(in = 8339) (out= 3424)(deflated 58%)
+adding: jp/co/lattice/vProcessor/com/x3pRoot.class(in = 880) (out= 415)(deflated 52%)
+adding: jp/co/lattice/vProcessor/node/x3pContent.class(in = 451) (out= 293)(deflated 35%)
+adding: jp/co/lattice/vProcessor/node/x3pCoordinate.class(in = 372) (out= 257)(deflated 30%)
+adding: jp/co/lattice/vProcessor/node/x3pElement.class(in = 1388) (out= 702)(deflated 49%)
+adding: jp/co/lattice/vProcessor/node/x3pField.class(in = 220) (out= 184)(deflated 16%)
+adding: jp/co/lattice/vProcessor/node/x3pFieldColor.class(in = 471) (out= 333)(deflated 29%)
+adding: jp/co/lattice/vProcessor/node/x3pFieldRotation.class(in = 390) (out= 270)(deflated 30%)
+adding: jp/co/lattice/vProcessor/node/x3pFieldUV.class(in = 274) (out= 192)(deflated 29%)
+adding: jp/co/lattice/vProcessor/node/x3pFieldVec3f.class(in = 402) (out= 274)(deflated 31%)
+adding: jp/co/lattice/vProcessor/node/x3pImageTexture.class(in = 425) (out= 299)(deflated 29%)
+adding: jp/co/lattice/vProcessor/node/x3pMaterial.class(in = 715) (out= 446)(deflated 37%)
+adding: jp/co/lattice/vProcessor/node/x3pNodeGblElm.class(in = 302) (out= 220)(deflated 27%)
+adding: jp/co/lattice/vProcessor/node/x3pTextureCoordinate.class(in = 383) (out= 261)(deflated 31%)
+adding: jp/co/lattice/vProcessor/node/x3pTransform.class(in = 767) (out= 416)(deflated 45%)
+adding: jp/co/lattice/vProcessor/node/x3pTraverse$TrvData.class(in = 322) (out= 228)(deflated 29%)
+adding: jp/co/lattice/vProcessor/node/x3pTraverse.class(in = 3940) (out= 1503)(deflated 61%)
+adding: jp/co/lattice/vProcessor/node/x3pUseElm.class(in = 408) (out= 281)(deflated 31%)
+adding: jp/co/lattice/vProcessor/node/x3pXvlEdge.class(in = 523) (out= 363)(deflated 30%)
+adding: jp/co/lattice/vProcessor/node/x3pXvlFace.class(in = 507) (out= 336)(deflated 33%)
+adding: jp/co/lattice/vProcessor/node/x3pXvlShape.class(in = 662) (out= 425)(deflated 35%)
+adding: jp/co/lattice/vProcessor/node/x3pXvlVertex.class(in = 489) (out= 343)(deflated 29%)
+adding: jp/co/lattice/vProcessor/parse/x3pKeyword.class(in = 3827) (out= 1898)(deflated 50%)
+adding: jp/co/lattice/vProcessor/parse/x3pLex$1.class(in = 203) (out= 151)(deflated 25%)
+adding: jp/co/lattice/vProcessor/parse/x3pLex$GetCharInfo.class(in = 1629) (out= 635)(deflated 61%)
+adding: jp/co/lattice/vProcessor/parse/x3pLex$GetTokenInfo.class(in = 918) (out= 444)(deflated 51%)
+adding: jp/co/lattice/vProcessor/parse/x3pLex.class(in = 7366) (out= 3558)(deflated 51%)
+adding: jp/co/lattice/vProcessor/parse/x3pParse.class(in = 18618) (out= 8505)(deflated 54%)
+adding: jp/co/lattice/vProcessor/parse/x3pParseGblElm.class(in = 305) (out= 223)(deflated 26%)
+adding: jp/co/lattice/vKernel/core/b0/lvBaseGblElm.class(in = 783) (out= 362)(deflated 53%)
+adding: jp/co/lattice/vKernel/core/b0/lvFromKernel$Global.class(in = 2937) (out= 877)(deflated 70%)
+adding: jp/co/lattice/vKernel/core/b0/lvFromKernel.class(in = 6938) (out= 2286)(deflated 67%)
+adding: jp/co/lattice/vKernel/core/b0/lvGblCore.class(in = 2280) (out= 874)(deflated 61%)
+adding: jp/co/lattice/vKernel/core/b0/lvToKernel$Global.class(in = 2400) (out= 769)(deflated 67%)
+adding: jp/co/lattice/vKernel/core/b0/lvToKernel.class(in = 7077) (out= 2609)(deflated 63%)
+adding: jp/co/lattice/vKernel/core/b0/lvWorld.class(in = 490) (out= 294)(deflated 40%)
+adding: jp/co/lattice/vKernel/core/c0/lvComGblElm.class(in = 1860) (out= 683)(deflated 63%)
+adding: jp/co/lattice/vKernel/core/c0/lvConst.class(in = 665) (out= 419)(deflated 36%)
+adding: jp/co/lattice/vKernel/core/c0/lvDblCalc$Global.class(in = 1570) (out= 633)(deflated 59%)
+adding: jp/co/lattice/vKernel/core/c0/lvDblCalc.class(in = 2295) (out= 792)(deflated 65%)
+adding: jp/co/lattice/vKernel/core/c0/lvDebugMode$Global.class(in = 543) (out= 323)(deflated 40%)
+adding: jp/co/lattice/vKernel/core/c0/lvDebugMode.class(in = 1084) (out= 501)(deflated 53%)
+adding: jp/co/lattice/vKernel/core/c0/lvDouble.class(in = 515) (out= 278)(deflated 46%)
+adding: jp/co/lattice/vKernel/core/c0/lvEps.class(in = 1991) (out= 993)(deflated 50%)
+adding: jp/co/lattice/vKernel/core/c0/lvError$Global.class(in = 1329) (out= 563)(deflated 57%)
+adding: jp/co/lattice/vKernel/core/c0/lvError.class(in = 1699) (out= 686)(deflated 59%)
+adding: jp/co/lattice/vKernel/core/c0/lvGblCoreNull.class(in = 897) (out= 346)(deflated 61%)
+adding: jp/co/lattice/vKernel/core/c0/lvGblElm.class(in = 274) (out= 214)(deflated 21%)
+adding: jp/co/lattice/vKernel/core/c0/lvGlobal.class(in = 1241) (out= 491)(deflated 60%)
+adding: jp/co/lattice/vKernel/core/c0/lvModelPoly$Global.class(in = 452) (out= 278)(deflated 38%)
+adding: jp/co/lattice/vKernel/core/c0/lvModelPoly.class(in = 789) (out= 348)(deflated 55%)
+adding: jp/co/lattice/vKernel/core/c0/lvPolygon$Edge.class(in = 739) (out= 433)(deflated 41%)
+adding: jp/co/lattice/vKernel/core/c0/lvPolygon$FaceHalf.class(in = 396) (out= 272)(deflated 31%)
+adding: jp/co/lattice/vKernel/core/c0/lvPolygon$InfoFaceHalf.class(in = 364) (out= 252)(deflated 30%)
+adding: jp/co/lattice/vKernel/core/c0/lvPolygon$Vertex.class(in = 671) (out= 363)(deflated 45%)
+adding: jp/co/lattice/vKernel/core/c0/lvPolygon.class(in = 1678) (out= 719)(deflated 57%)
+adding: jp/co/lattice/vKernel/core/c0/lvRec$CoordSys.class(in = 655) (out= 379)(deflated 42%)
+adding: jp/co/lattice/vKernel/core/c0/lvRec$PosNorHi.class(in = 935) (out= 454)(deflated 51%)
+adding: jp/co/lattice/vKernel/core/c0/lvRec$PosNorLow.class(in = 483) (out= 303)(deflated 37%)
+adding: jp/co/lattice/vKernel/core/c0/lvRec$SeqPart.class(in = 524) (out= 309)(deflated 41%)
+adding: jp/co/lattice/vKernel/core/c0/lvRec$TriIndex.class(in = 533) (out= 331)(deflated 37%)
+adding: jp/co/lattice/vKernel/core/c0/lvRec.class(in = 582) (out= 305)(deflated 47%)
+adding: jp/co/lattice/vKernel/core/c0/lvRoot.class(in = 879) (out= 394)(deflated 55%)
+adding: jp/co/lattice/vKernel/core/c0/lvShellPoly$Attr.class(in = 394) (out= 278)(deflated 29%)
+adding: jp/co/lattice/vKernel/core/c0/lvShellPoly.class(in = 494) (out= 297)(deflated 39%)
+adding: jp/co/lattice/vKernel/core/c0/lvThrowable.class(in = 229) (out= 182)(deflated 20%)
+adding: jp/co/lattice/vKernel/core/c0/lvToKernelType$Attr.class(in = 403) (out= 277)(deflated 31%)
+adding: jp/co/lattice/vKernel/core/c0/lvToKernelType$Edge.class(in = 535) (out= 342)(deflated 36%)
+adding: jp/co/lattice/vKernel/core/c0/lvToKernelType$Vertex.class(in = 522) (out= 320)(deflated 38%)
+adding: jp/co/lattice/vKernel/core/c0/lvToKernelType.class(in = 469) (out= 264)(deflated 43%)
+adding: jp/co/lattice/vKernel/core/c0/lvType$IntR.class(in = 319) (out= 233)(deflated 26%)
+adding: jp/co/lattice/vKernel/core/c0/lvType.class(in = 301) (out= 222)(deflated 26%)
+adding: jp/co/lattice/vKernel/core/c0/lvUVdt.class(in = 521) (out= 299)(deflated 42%)
+adding: jp/co/lattice/vKernel/core/c0/lvVecCalc$Global.class(in = 2912) (out= 1104)(deflated 62%)
+adding: jp/co/lattice/vKernel/core/c0/lvVecCalc.class(in = 11280) (out= 4182)(deflated 62%)
+adding: jp/co/lattice/vKernel/core/c0/lvVecDt.class(in = 565) (out= 324)(deflated 42%)
+adding: jp/co/lattice/vKernel/core/c0/lvVector$Global.class(in = 1638) (out= 700)(deflated 57%)
+adding: jp/co/lattice/vKernel/core/c0/lvVector.class(in = 7131) (out= 2666)(deflated 62%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$1.class(in = 219) (out= 155)(deflated 29%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$DownDivPoly.class(in = 680) (out= 360)(deflated 47%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$Global.class(in = 8489) (out= 2627)(deflated 69%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$TmpDivPoly.class(in = 1734) (out= 558)(deflated 67%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$TmpDivPolyOne.class(in = 1113) (out= 462)(deflated 58%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$TmpDivPolyOther.class(in = 1019) (out= 460)(deflated 54%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$TmpFace.class(in = 1150) (out= 483)(deflated 58%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow$UpDivPoly.class(in = 965) (out= 446)(deflated 53%)
+adding: jp/co/lattice/vKernel/core/g0/lvDivPolyLow.class(in = 20196) (out= 7711)(deflated 61%)
+adding: jp/co/lattice/vKernel/core/g0/lvGeomGblElm.class(in = 564) (out= 305)(deflated 45%)
+adding: jp/co/lattice/vKernel/core/t0/lvDivPoly$Global.class(in = 2837) (out= 898)(deflated 68%)
+adding: jp/co/lattice/vKernel/core/t0/lvDivPoly.class(in = 5032) (out= 1733)(deflated 65%)
+adding: jp/co/lattice/vKernel/core/t0/lvFromKernelLow.class(in = 765) (out= 367)(deflated 52%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$1.class(in = 213) (out= 153)(deflated 28%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$Global.class(in = 1576) (out= 555)(deflated 64%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$TmpEdge.class(in = 913) (out= 398)(deflated 56%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$TmpFace.class(in = 863) (out= 408)(deflated 52%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$TmpNgVertex.class(in = 1069) (out= 435)(deflated 59%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$TmpPoly.class(in = 4681) (out= 1063)(deflated 77%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$TmpRadial.class(in = 1825) (out= 626)(deflated 65%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly$TmpVertex.class(in = 1491) (out= 545)(deflated 63%)
+adding: jp/co/lattice/vKernel/core/t0/lvMakePoly.class(in = 22086) (out= 8445)(deflated 61%)
+adding: jp/co/lattice/vKernel/core/t0/lvToKernelLow.class(in = 935) (out= 445)(deflated 52%)
+adding: jp/co/lattice/vKernel/core/t0/lvTopoGblElm.class(in = 771) (out= 364)(deflated 52%)
+adding: jp/co/lattice/vKernel/greg/c0g/lv0ComGGblElm.class(in = 838) (out= 400)(deflated 52%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvBezLine$Global.class(in = 1740) (out= 758)(deflated 56%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvBezLine$Local.class(in = 5608) (out= 2222)(deflated 60%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvBezLine.class(in = 2301) (out= 766)(deflated 66%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType$DeriveDivFace.class(in = 794) (out= 401)(deflated 49%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType$DeriveInner.class(in = 574) (out= 358)(deflated 37%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType$DownAttr.class(in = 376) (out= 264)(deflated 29%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType$DownDivFace.class(in = 1240) (out= 527)(deflated 57%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType$DownHalf.class(in = 660) (out= 385)(deflated 41%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType$UpDivFace.class(in = 942) (out= 417)(deflated 55%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceType.class(in = 746) (out= 331)(deflated 55%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceUVtype$DownDivFaceUV.class(in = 554) (out= 292)(deflated 47%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceUVtype$DownDivFaceUVone.class(in = 588) (out= 339)(deflated 42%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceUVtype$UpDivFaceUV.class(in = 544) (out= 290)(deflated 46%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceUVtype$UpDivFaceUVone.class(in = 428) (out= 279)(deflated 34%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvDivFaceUVtype.class(in = 622) (out= 294)(deflated 52%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvModelGreg$Global.class(in = 455) (out= 282)(deflated 38%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvModelGreg.class(in = 797) (out= 360)(deflated 54%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive$Bezgon.class(in = 1183) (out= 533)(deflated 54%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive$BezgonEdge.class(in = 515) (out= 343)(deflated 33%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive$BezgonFace.class(in = 546) (out= 319)(deflated 41%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive$BezgonVertex.class(in = 470) (out= 297)(deflated 36%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive$PolyCenter.class(in = 889) (out= 475)(deflated 46%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive$PolyCenterLattice.class(in = 579) (out= 333)(deflated 42%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvPolyDerive.class(in = 748) (out= 332)(deflated 55%)
+adding: jp/co/lattice/vKernel/greg/c0g/lvShellGreg.class(in = 662) (out= 348)(deflated 47%)
+adding: jp/co/lattice/vKernel/greg/g0g/lv0GeomGGblElm.class(in = 2228) (out= 771)(deflated 65%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvDivFaceLow$Global.class(in = 2914) (out= 892)(deflated 69%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvDivFaceLow.class(in = 4813) (out= 1414)(deflated 70%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregory$Global.class(in = 1517) (out= 633)(deflated 58%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregory$Local.class(in = 6797) (out= 2489)(deflated 63%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregory$ParamSet.class(in = 839) (out= 412)(deflated 50%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregory.class(in = 7725) (out= 2385)(deflated 69%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregoryStd$DownGregoryStd.class(in = 775) (out= 438)(deflated 43%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregoryStd$Global.class(in = 3016) (out= 977)(deflated 67%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvGregoryStd.class(in = 7932) (out= 2898)(deflated 63%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd$DownCbd.class(in = 786) (out= 444)(deflated 43%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd$DownCbdOne.class(in = 657) (out= 379)(deflated 42%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd$Global.class(in = 4248) (out= 1294)(deflated 69%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd$UpCbd.class(in = 604) (out= 369)(deflated 38%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd$UpCbdOne.class(in = 545) (out= 330)(deflated 39%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd$UpHalfCbd.class(in = 634) (out= 394)(deflated 37%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeCbd.class(in = 11341) (out= 4516)(deflated 60%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeInnerEdge$1.class(in = 230) (out= 157)(deflated 31%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeInnerEdge$Global.class(in = 5892) (out= 1680)(deflated 71%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeInnerEdge$TmpCross.class(in = 828) (out= 424)(deflated 48%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeInnerEdge$TmpMakeInnerEdge.class(in = 1161) (out= 418)(deflated 63%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvMakeInnerEdge.class(in = 10421) (out= 3583)(deflated 65%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$1.class(in = 215) (out= 155)(deflated 27%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$DownRadial.class(in = 973) (out= 521)(deflated 46%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$DownRound.class(in = 744) (out= 387)(deflated 47%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$Global.class(in = 5825) (out= 1740)(deflated 70%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$TmpRadial0.class(in = 1238) (out= 481)(deflated 61%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$TmpRadial1.class(in = 1063) (out= 500)(deflated 52%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$TmpRadial1a.class(in = 890) (out= 428)(deflated 51%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$TmpRound0.class(in = 2074) (out= 637)(deflated 69%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$TmpRound1.class(in = 2671) (out= 749)(deflated 71%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$UpRadial.class(in = 523) (out= 316)(deflated 39%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow$UpRound.class(in = 687) (out= 366)(deflated 46%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvRoundLow.class(in = 18861) (out= 7019)(deflated 62%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellate$1.class(in = 221) (out= 154)(deflated 30%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellate$Global.class(in = 9986) (out= 2667)(deflated 73%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellate$TmpPatch.class(in = 1039) (out= 476)(deflated 54%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellate$TmpTessellate.class(in = 1407) (out= 479)(deflated 65%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellate.class(in = 19279) (out= 6317)(deflated 67%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellateLow$DownHalf.class(in = 751) (out= 443)(deflated 41%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellateLow$DownTessellate.class(in = 933) (out= 468)(deflated 49%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellateLow$Global.class(in = 2840) (out= 811)(deflated 71%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellateLow$UpTessellate.class(in = 1000) (out= 455)(deflated 54%)
+adding: jp/co/lattice/vKernel/greg/g0g/lvTessellateLow.class(in = 4646) (out= 1471)(deflated 68%)
+adding: jp/co/lattice/vKernel/greg/t0g/lv0DivFace$Global.class(in = 2999) (out= 921)(deflated 69%)
+adding: jp/co/lattice/vKernel/greg/t0g/lv0DivFace.class(in = 7999) (out= 2664)(deflated 66%)
+adding: jp/co/lattice/vKernel/greg/t0g/lv0MakeGreg$Global.class(in = 1003) (out= 441)(deflated 56%)
+adding: jp/co/lattice/vKernel/greg/t0g/lv0MakeGreg.class(in = 2527) (out= 854)(deflated 66%)
+adding: jp/co/lattice/vKernel/greg/t0g/lv0TopoGGblElm.class(in = 1274) (out= 527)(deflated 58%)
+adding: jp/co/lattice/vKernel/greg/t0g/lvConvGreg$Global.class(in = 1742) (out= 763)(deflated 56%)
+adding: jp/co/lattice/vKernel/greg/t0g/lvConvGreg.class(in = 6669) (out= 2564)(deflated 61%)
+adding: jp/co/lattice/vKernel/greg/t0g/lvDivFace.class(in = 621) (out= 323)(deflated 47%)
+adding: jp/co/lattice/vKernel/greg/t0g/lvMakeGreg.class(in = 413) (out= 260)(deflated 37%)
+adding: jp/co/lattice/vKernel/greg/t0g/lvRound$Global.class(in = 3899) (out= 1346)(deflated 65%)
+adding: jp/co/lattice/vKernel/greg/t0g/lvRound.class(in = 13089) (out= 4949)(deflated 62%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0AttGblElm.class(in = 1563) (out= 600)(deflated 61%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0DivPolyUV$Global.class(in = 2000) (out= 726)(deflated 63%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0DivPolyUV.class(in = 5948) (out= 2278)(deflated 61%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0MakeUVspace$Global.class(in = 1708) (out= 597)(deflated 65%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0MakeUVspace.class(in = 3002) (out= 1043)(deflated 65%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0PolyFromKernelUV$1.class(in = 238) (out= 158)(deflated 33%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0PolyFromKernelUV$DstUVspace.class(in = 632) (out= 340)(deflated 46%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0PolyFromKernelUV$Global.class(in = 1711) (out= 568)(deflated 66%)
+adding: jp/co/lattice/vKernel/tex/a0/lv0PolyFromKernelUV.class(in = 5935) (out= 2102)(deflated 64%)
+adding: jp/co/lattice/vKernel/tex/a0/lvCheckUVspace$Global.class(in = 2150) (out= 652)(deflated 69%)
+adding: jp/co/lattice/vKernel/tex/a0/lvCheckUVspace.class(in = 5635) (out= 2272)(deflated 59%)
+adding: jp/co/lattice/vKernel/tex/a0/lvDivPolyUV$DownDivPolyUV.class(in = 526) (out= 288)(deflated 45%)
+adding: jp/co/lattice/vKernel/tex/a0/lvDivPolyUV$DownDivPolyUVone.class(in = 442) (out= 292)(deflated 33%)
+adding: jp/co/lattice/vKernel/tex/a0/lvDivPolyUV$UpDivPolyUV.class(in = 516) (out= 288)(deflated 44%)
+adding: jp/co/lattice/vKernel/tex/a0/lvDivPolyUV$UpDivPolyUVone.class(in = 440) (out= 290)(deflated 34%)
+adding: jp/co/lattice/vKernel/tex/a0/lvDivPolyUV.class(in = 955) (out= 396)(deflated 58%)
+adding: jp/co/lattice/vKernel/tex/a0/lvMakeUVnonCalc$Global.class(in = 1133) (out= 455)(deflated 59%)
+adding: jp/co/lattice/vKernel/tex/a0/lvMakeUVnonCalc.class(in = 9500) (out= 3609)(deflated 62%)
+adding: jp/co/lattice/vKernel/tex/a0/lvMakeUVspace.class(in = 461) (out= 277)(deflated 39%)
+adding: jp/co/lattice/vKernel/tex/a0/lvPolyFromKernelUV.class(in = 682) (out= 338)(deflated 50%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0AttGGblElm.class(in = 1111) (out= 479)(deflated 56%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0DivFaceUV$Global.class(in = 2054) (out= 739)(deflated 64%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0DivFaceUV.class(in = 6151) (out= 2353)(deflated 61%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0FaceFromKernelUV$1.class(in = 240) (out= 158)(deflated 34%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0FaceFromKernelUV$DstUVspace.class(in = 636) (out= 341)(deflated 46%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0FaceFromKernelUV$Global.class(in = 1740) (out= 579)(deflated 66%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0FaceFromKernelUV.class(in = 5969) (out= 2090)(deflated 64%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0GregoryUV.class(in = 1477) (out= 611)(deflated 58%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0TessellateUV$Global.class(in = 3507) (out= 1135)(deflated 67%)
+adding: jp/co/lattice/vKernel/tex/a0g/lv0TessellateUV.class(in = 7643) (out= 2646)(deflated 65%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvDivFaceUV.class(in = 764) (out= 359)(deflated 53%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvFaceFromKernelUV.class(in = 701) (out= 346)(deflated 50%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvTessellateUV$DownTessellateUV.class(in = 585) (out= 305)(deflated 47%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvTessellateUV$DownTessellateUVone.class(in = 530) (out= 338)(deflated 36%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvTessellateUV$UpTessellateUV.class(in = 550) (out= 288)(deflated 47%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvTessellateUV$UpTessellateUVone.class(in = 429) (out= 275)(deflated 35%)
+adding: jp/co/lattice/vKernel/tex/a0g/lvTessellateUV.class(in = 1865) (out= 595)(deflated 68%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvComAGblElm.class(in = 556) (out= 306)(deflated 44%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvFromKernelUV.class(in = 334) (out= 249)(deflated 25%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$Bound.class(in = 701) (out= 341)(deflated 51%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$BoundBase.class(in = 576) (out= 341)(deflated 40%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$BoundOne.class(in = 523) (out= 296)(deflated 43%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$EdgeOne.class(in = 400) (out= 270)(deflated 32%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$EdgeVtx.class(in = 530) (out= 295)(deflated 44%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$EdgeVtxSet.class(in = 1000) (out= 451)(deflated 54%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$HalfInfo.class(in = 378) (out= 260)(deflated 31%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$RadialOne.class(in = 453) (out= 298)(deflated 34%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$UVpublic.class(in = 807) (out= 408)(deflated 49%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$UVpublicVtx.class(in = 449) (out= 293)(deflated 34%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$UVspaceST.class(in = 428) (out= 281)(deflated 34%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$UVspaceUV.class(in = 428) (out= 281)(deflated 34%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType$VtxOne.class(in = 586) (out= 349)(deflated 40%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvMakeUVspaceType.class(in = 1318) (out= 456)(deflated 65%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvModelAtt$Global.class(in = 448) (out= 283)(deflated 36%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvModelAtt.class(in = 784) (out= 360)(deflated 54%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvShellAtt.class(in = 392) (out= 261)(deflated 33%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvToKernelUV$GsUV.class(in = 343) (out= 241)(deflated 29%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvToKernelUV$VtxUV.class(in = 475) (out= 302)(deflated 36%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvToKernelUV.class(in = 680) (out= 364)(deflated 46%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvUVpublic$UVspace.class(in = 344) (out= 244)(deflated 29%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvUVpublic.class(in = 609) (out= 330)(deflated 45%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvUVspace$GsInfo.class(in = 472) (out= 301)(deflated 36%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvUVspace$UVspace.class(in = 558) (out= 326)(deflated 41%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvUVspace$VtxInfo.class(in = 470) (out= 303)(deflated 35%)
+adding: jp/co/lattice/vKernel/tex/c0a/lvUVspace.class(in = 1055) (out= 483)(deflated 54%)
+adding: jp/co/lattice/vKernel/texEx/a0x/lv0ExecUVcalc.class(in = 305) (out= 210)(deflated 31%)
+adding: jp/co/lattice/vKernel/texEx/a0x/lv0UVcalcGblElm.class(in = 362) (out= 247)(deflated 31%)
+adding: jp/co/lattice/vKernel/texEx/a0x/lvExecUVcalc.class(in = 516) (out= 300)(deflated 41%)
+check result:
+ls -l *.jar
+-rw-r--r--    1 Administ None       347652 Feb 18  2002 LatticeXvl.jar
+-rw-r--r--    1 Administ None       340014 Feb  2 12:30 LatticeXvlPackage.jar
+make[2]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make -i upload
+make[2]: Entering directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+cd ..; rm LatticeXvlPackage.jar; cp javasrc/LatticeXvl.jar LatticeXvl.jar;
+rm: cannot remove `LatticeXvlPackage.jar': No such file or directory
+cp: cannot create regular file `LatticeXvl.jar': Permission denied
+make[2]: [upload] Error 1 (ignored)
+make[2]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+make[1]: Leaving directory `/cygdrive/c/www.web3D.org/TaskGroups/x3d/translation/examples/LatticeXvl/javasrc'
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellExternProtoDeclare'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellExternProtoDeclare.x3d
+examples\LatticeXvl\XvlShellExternProtoDeclare.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellExternProtoDeclare.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellExternProtoDeclareStyled.wrl examples\LatticeXvl\XvlShellExternProtoDeclare.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellExternProtoDeclareStyled.wrl ">" examples\LatticeXvl\XvlShellExternProtoDeclare.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellExternProtoDeclare.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:58p               3,192 XvlShellExternProtoDeclare.wrl
+               1 File(s)          3,192 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellExternProtoDeclare'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellExternProtoDeclare.x3d
+examples\LatticeXvl\XvlShellExternProtoDeclare.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellExternProtoDeclare.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellExternProtoDeclareStyled.html examples\LatticeXvl\XvlShellExternProtoDeclare.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:58p              13,131 XvlShellExternProtoDeclare.html
+               1 File(s)         13,131 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellProtoDeclare'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellProtoDeclare.x3d
+examples\LatticeXvl\XvlShellProtoDeclare.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellProtoDeclare.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellProtoDeclareStyled.wrl examples\LatticeXvl\XvlShellProtoDeclare.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellProtoDeclareStyled.wrl ">" examples\LatticeXvl\XvlShellProtoDeclare.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellProtoDeclare.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:58p               4,502 XvlShellProtoDeclare.wrl
+               1 File(s)          4,502 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellProtoDeclare'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellProtoDeclare.x3d
+examples\LatticeXvl\XvlShellProtoDeclare.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellProtoDeclare.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellProtoDeclareStyled.html examples\LatticeXvl\XvlShellProtoDeclare.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:58p              22,390 XvlShellProtoDeclare.html
+               1 File(s)         22,390 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeAll'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeAll.x3d
+examples\LatticeXvl\XvlShellAttributeAll.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeAll.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeAllStyled.wrl examples\LatticeXvl\XvlShellAttributeAll.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeAllStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeAll.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeAll.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              27,801 XvlShellAttributeAll.wrl
+               1 File(s)         27,801 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeAll'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeAll.x3d
+examples\LatticeXvl\XvlShellAttributeAll.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeAll.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeAllStyled.html examples\LatticeXvl\XvlShellAttributeAll.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              85,953 XvlShellAttributeAll.html
+               1 File(s)         85,953 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeEdgeRound'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d
+examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeEdgeRoundStyled.wrl examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeEdgeRoundStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeEdgeRound.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeEdgeRound.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               5,605 XvlShellAttributeEdgeRound.wrl
+               1 File(s)          5,605 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeEdgeRound'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d
+examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeEdgeRoundStyled.html examples\LatticeXvl\XvlShellAttributeEdgeRound.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              15,782 XvlShellAttributeEdgeRound.html
+               1 File(s)         15,782 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeEdgeVector'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d
+examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeEdgeVectorStyled.wrl examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeEdgeVectorStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeEdgeVector.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeEdgeVector.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               5,815 XvlShellAttributeEdgeVector.wrl
+               1 File(s)          5,815 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeEdgeVector'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d
+examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeEdgeVectorStyled.html examples\LatticeXvl\XvlShellAttributeEdgeVector.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              16,193 XvlShellAttributeEdgeVector.html
+               1 File(s)         16,193 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeFaceFlags'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d
+examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeFaceFlagsStyled.wrl examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeFaceFlagsStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeFaceFlags.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeFaceFlags.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               5,354 XvlShellAttributeFaceFlags.wrl
+               1 File(s)          5,354 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeFaceFlags'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d
+examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeFaceFlagsStyled.html examples\LatticeXvl\XvlShellAttributeFaceFlags.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              15,073 XvlShellAttributeFaceFlags.html
+               1 File(s)         15,073 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeNumberOfDivisions'	-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d
+examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeNumberOfDivisionsStyled.wrl examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeNumberOfDivisionsStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               5,342 XvlShellAttributeNumberOfDivisions.wrl
+               1 File(s)          5,342 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeNumberOfDivisions'	-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d
+examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeNumberOfDivisionsStyled.html examples\LatticeXvl\XvlShellAttributeNumberOfDivisions.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              15,175 XvlShellAttributeNumberOfDivisions.html
+               1 File(s)         15,175 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeShellType'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeShellType.x3d
+examples\LatticeXvl\XvlShellAttributeShellType.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeShellType.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeShellTypeStyled.wrl examples\LatticeXvl\XvlShellAttributeShellType.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeShellTypeStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeShellType.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeShellType.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               4,383 XvlShellAttributeShellType.wrl
+               1 File(s)          4,383 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeShellType'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeShellType.x3d
+examples\LatticeXvl\XvlShellAttributeShellType.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeShellType.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeShellTypeStyled.html examples\LatticeXvl\XvlShellAttributeShellType.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              11,903 XvlShellAttributeShellType.html
+               1 File(s)         11,903 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeTexture'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeTexture.x3d
+examples\LatticeXvl\XvlShellAttributeTexture.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeTexture.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeTextureStyled.wrl examples\LatticeXvl\XvlShellAttributeTexture.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeTextureStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeTexture.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeTexture.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               7,321 XvlShellAttributeTexture.wrl
+               1 File(s)          7,321 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeTexture'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeTexture.x3d
+examples\LatticeXvl\XvlShellAttributeTexture.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeTexture.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeTextureStyled.html examples\LatticeXvl\XvlShellAttributeTexture.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              21,293 XvlShellAttributeTexture.html
+               1 File(s)         21,293 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellAttributeVertexRound'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeVertexRound.x3d
+examples\LatticeXvl\XvlShellAttributeVertexRound.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellAttributeVertexRound.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeVertexRoundStyled.wrl examples\LatticeXvl\XvlShellAttributeVertexRound.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellAttributeVertexRoundStyled.wrl ">" examples\LatticeXvl\XvlShellAttributeVertexRound.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellAttributeVertexRound.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p               5,478 XvlShellAttributeVertexRound.wrl
+               1 File(s)          5,478 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellAttributeVertexRound'		-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellAttributeVertexRound.x3d
+examples\LatticeXvl\XvlShellAttributeVertexRound.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellAttributeVertexRound.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellAttributeVertexRoundStyled.html examples\LatticeXvl\XvlShellAttributeVertexRound.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              15,265 XvlShellAttributeVertexRound.html
+               1 File(s)         15,265 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellModelBaby'				-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelBaby.x3d
+examples\LatticeXvl\XvlShellModelBaby.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellModelBaby.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelBabyStyled.wrl examples\LatticeXvl\XvlShellModelBaby.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellModelBabyStyled.wrl ">" examples\LatticeXvl\XvlShellModelBaby.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellModelBaby.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              24,626 XvlShellModelBaby.wrl
+               1 File(s)         24,626 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellModelBaby'				-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelBaby.x3d
+examples\LatticeXvl\XvlShellModelBaby.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellModelBaby.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelBabyStyled.html examples\LatticeXvl\XvlShellModelBaby.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              35,360 XvlShellModelBaby.html
+               1 File(s)         35,360 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellModelDolphin'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelDolphin.x3d
+examples\LatticeXvl\XvlShellModelDolphin.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellModelDolphin.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelDolphinStyled.wrl examples\LatticeXvl\XvlShellModelDolphin.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellModelDolphinStyled.wrl ">" examples\LatticeXvl\XvlShellModelDolphin.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellModelDolphin.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              10,146 XvlShellModelDolphin.wrl
+               1 File(s)         10,146 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellModelDolphin'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelDolphin.x3d
+examples\LatticeXvl\XvlShellModelDolphin.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellModelDolphin.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelDolphinStyled.html examples\LatticeXvl\XvlShellModelDolphin.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              13,583 XvlShellModelDolphin.html
+               1 File(s)         13,583 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellModelHand'				-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelHand.x3d
+examples\LatticeXvl\XvlShellModelHand.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellModelHand.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelHandStyled.wrl examples\LatticeXvl\XvlShellModelHand.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellModelHandStyled.wrl ">" examples\LatticeXvl\XvlShellModelHand.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellModelHand.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  06:59p              17,618 XvlShellModelHand.wrl
+               1 File(s)         17,618 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellModelHand'				-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelHand.x3d
+examples\LatticeXvl\XvlShellModelHand.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellModelHand.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelHandStyled.html examples\LatticeXvl\XvlShellModelHand.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  07:00p              22,700 XvlShellModelHand.html
+               1 File(s)         22,700 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellModelOctopus'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelOctopus.x3d
+examples\LatticeXvl\XvlShellModelOctopus.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellModelOctopus.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelOctopusStyled.wrl examples\LatticeXvl\XvlShellModelOctopus.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellModelOctopusStyled.wrl ">" examples\LatticeXvl\XvlShellModelOctopus.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellModelOctopus.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  07:00p              13,058 XvlShellModelOctopus.wrl
+               1 File(s)         13,058 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellModelOctopus'			-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelOctopus.x3d
+examples\LatticeXvl\XvlShellModelOctopus.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellModelOctopus.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelOctopusStyled.html examples\LatticeXvl\XvlShellModelOctopus.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  07:00p              20,947 XvlShellModelOctopus.html
+               1 File(s)         20,947 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+-------------------------------------------------------------------------
+X3dToVrml97.bat 'examples\LatticeXvl\XvlShellModelStar'				-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelStar.x3d
+examples\LatticeXvl\XvlShellModelStar.x3d
+- - - - -
+Translate examples\LatticeXvl\XvlShellModelStar.x3d
+from X3d to Vrml97, then syntax check the VRML output:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelStarStyled.wrl examples\LatticeXvl\XvlShellModelStar.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToVrml97.xsl
+Pretty-print VRML output:
+c:\www.web3D.org\TaskGroups\x3d\translation\vpp               examples\LatticeXvl\XvlShellModelStarStyled.wrl ">" examples\LatticeXvl\XvlShellModelStar.wrl
+Syntax check the pretty-printed VRML output:
+c:\vrml\vorlon\vorlon     examples\LatticeXvl\XvlShellModelStar.wrl -nowarnings
+Could not create Java VM
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  07:00p               7,870 XvlShellModelStar.wrl
+               1 File(s)          7,870 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+X3dToHtml.bat   'examples\LatticeXvl\XvlShellModelStar'				-same
+Syntax check the XML input:
+c:\xml\microsoft\xmlint.exe examples\LatticeXvl\XvlShellModelStar.x3d
+examples\LatticeXvl\XvlShellModelStar.x3d
+- - - - -
+Pretty print examples\LatticeXvl\XvlShellModelStar.x3d
+  XML tags as readable HTML:
+c:\xml\saxon\saxon.exe    -o examples\LatticeXvl\XvlShellModelStarStyled.html examples\LatticeXvl\XvlShellModelStar.x3d c:\www.web3D.org\TaskGroups\x3d\translation\X3dToHtml.xsl
+        1 file(s) copied.
+ Volume in drive C has no label.
+ Volume Serial Number is 07D1-071B
+
+ Directory of C:\www.web3D.org\TaskGroups\x3d\translation\examples\LatticeXvl
+
+02/18/2002  07:00p              11,579 XvlShellModelStar.html
+               1 File(s)         11,579 bytes
+               0 Dir(s)  20,408,696,832 bytes free
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

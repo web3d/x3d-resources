@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='LoadSensorExample.x3d' name='title'/>
+    <meta content='LoadSensor test: default initial view means no functionality, active view means load in progress, final view means LoadSensor (and loading) success.' name='description'/>
+    <meta content='16 August 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Don Brutzman, Alan Hudson' name='creator'/>
+    <meta content='LoadSensor only supported by X3D-compliant browsers. LoadSensor is not implemented in VRML 97.' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/LoadSensorExample.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Do not copy this ExternProtoDeclare, it is used for providing automatic support in X3dToVrml97.xslt and X3D-Edit -->
+    <WorldInfo title='LoadSensorExample.x3d'/>
+    <ExternProtoDeclare appinfo='LoadSensor monitors the progress and success of downloading URL elements over a network. Only nodes that contain a valid URL field (i.e. descendants of X3DUrlObject) may be specified as watchList children. Multiple nodes may be watched with a single LoadSensor.' documentation='https://www.web3d.org/specifications/ISO-IEC-19775/Part01/components/networking.html#LoadSensor' name='LoadSensor' url='"LoadSensorPrototype.wrl#LoadSensor" "https://www.web3d.org/x3d/content/examples/Basic/development/LoadSensorPrototype.wrl#LoadSensor" "LoadSensorPrototype.x3d#LoadSensor" "https://www.web3d.org/x3d/content/examples/Basic/development/LoadSensorPrototype.x3d#LoadSensor"'>
+      <field accessType='inputOutput' name='enabled' type='SFBool'/>
+      <field accessType='inputOutput' name='timeOut' type='SFTime'/>
+      <field accessType='initializeOnly' name='watchList' type='MFNode'/>
+      <field accessType='inputOnly' name='set_watchList' type='MFNode'/>
+      <field accessType='outputOnly' name='isActive' type='SFBool'/>
+      <field accessType='outputOnly' name='isLoaded' type='SFBool'/>
+      <field accessType='outputOnly' name='loadTime' type='SFTime'/>
+      <field accessType='outputOnly' name='progress' type='SFFloat'/>
+      <field accessType='initializeOnly' name='metadata' type='SFNode'/>
+    </ExternProtoDeclare>
+    <Group>
+      <Viewpoint DEF='NotLoadedView' description='Not loaded texture' position='0 0 6'/>
+      <Viewpoint DEF='ActiveView' description='Loading textures'/>
+      <Viewpoint DEF='LoadedView' description='Texture loading complete' orientation='0 1 0 3.14159' position='0 0 -10'/>
+      <Group>
+        <Transform translation='-1 0 0'>
+          <Shape>
+            <Sphere/>
+            <Appearance>
+              <ImageTexture DEF='EarthImage' url='"earth-topo.png" "earth-topo-small.gif" "https://www.web3d.org/x3d/content/examples/Basic/earth-topo.png" "https://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='1 0 0'>
+          <Shape>
+            <Box/>
+            <Appearance>
+              <ImageTexture DEF='JavaBoardImage' url='"JavaBoardSmileForTheCamera.jpg" "https://www.web3d.org/x3d/content/examples/Basic/development/JavaBoardSmileForTheCamera.jpg"'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Group>
+      <LoadSensor DEF='Loader' timeOut='4'>
+        <ImageTexture USE='EarthImage' containerField='watchList'/>
+        <ImageTexture USE='JavaBoardImage' containerField='watchList'/>
+      </LoadSensor>
+      <ROUTE fromField='isActive' fromNode='Loader' toField='set_bind' toNode='ActiveView'/>
+      <ROUTE fromField='isLoaded' fromNode='Loader' toField='set_bind' toNode='LoadedView'/>
+      <Transform translation='0 0 7'>
+        <Shape>
+          <Text string='"LoadSensor active"'>
+            <FontStyle DEF='Font' justify='"MIDDLE" "MIDDLE"' size='0.5'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.8 0.5 0.1'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform rotation='0 1 0 3.14159' translation='0 0 -7'>
+        <Shape>
+          <Text string='"LoadSensor success"'>
+            <FontStyle USE='Font'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.1 0.5 0.1'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

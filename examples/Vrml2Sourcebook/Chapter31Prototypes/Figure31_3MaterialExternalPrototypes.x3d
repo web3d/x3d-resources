@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure31_3MaterialExternalPrototypes.x3d' name='title'/>
+    <meta content='Figure 31.3, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch31/31fig03.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='27 September 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A world that uses an externally declared node type.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_3MaterialExternalPrototypes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure31_3MaterialExternalPrototypes.x3d'/>
+    <ExternProtoDeclare name='Aqua' url='"Figure31_2MaterialPrototypesLibrary.wrl#Aqua" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.wrl#Aqua" "Figure31_2MaterialPrototypesLibrary.x3d#Aqua" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.x3d#Aqua"'/>
+    <ExternProtoDeclare name='Gold' url='"Figure31_2MaterialPrototypesLibrary.wrl#Gold" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.wrl#Gold" "Figure31_2MaterialPrototypesLibrary.x3d#Gold" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.x3d#Gold"'/>
+    <ExternProtoDeclare name='Aluminum' url='"Figure31_2MaterialPrototypesLibrary.wrl#Aluminum" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.wrl#Aluminum" "Figure31_2MaterialPrototypesLibrary.x3d#Aluminum" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.x3d#Aluminum"'/>
+    <ExternProtoDeclare name='Copper' url='"Figure31_2MaterialPrototypesLibrary.wrl#Copper" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.wrl#Copper" "Figure31_2MaterialPrototypesLibrary.x3d#Copper" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter31Prototypes/Figure31_2MaterialPrototypesLibrary.x3d#Copper"'/>
+    <Transform translation='-3 0 0'>
+      <Shape>
+        <Box/>
+        <Appearance>
+          <ProtoInstance containerField='material' name='Aqua'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform translation='-1 0 0'>
+      <Shape>
+        <Sphere/>
+        <Appearance>
+          <ProtoInstance containerField='material' name='Gold'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform translation='1 0 0'>
+      <Shape>
+        <Cone/>
+        <Appearance>
+          <ProtoInstance containerField='material' name='Aluminum'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform translation='3 0 0'>
+      <Shape>
+        <Cylinder/>
+        <Appearance>
+          <ProtoInstance containerField='material' name='Copper'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

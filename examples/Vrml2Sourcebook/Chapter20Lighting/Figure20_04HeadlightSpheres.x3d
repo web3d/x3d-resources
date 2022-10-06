@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure20_04HeadlightSpheres.x3d' name='title'/>
+    <meta content='Figure 20.4, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch20/20fig04.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='16 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A sphere world illuminated by the headlight. Also see Figures 20.4, 20.6a, 20.6b, 20.7, 20.8 for comparison.' name='description'/>
+    <meta content='Figure20_06aPointLightSpheres.x3d' name='reference'/>
+    <meta content='Figure20_06bPointLightSpheresIntensity.x3d' name='reference'/>
+    <meta content='Figure20_07PointLightSpheresAttenuation.x3d' name='reference'/>
+    <meta content='Figure20_08PointLightSpheresSmallRadius.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter20Lighting/Figure20_04HeadlightSpheres.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure20_04HeadlightSpheres.x3d'/>
+    <Viewpoint description='Spheres' position='0 0 30'/>
+    <!-- Try viewing this with headlight false. NavigationInfo lets you specify the default setting. Most browsers let you select headlight on/off. -->
+    <!-- Headlight field of the NavigationInfo node is usually on by default, in order to ensure that all encountered geometry is visibly rendered. The headlight can be overridden if another parent scene Inlines this scene. -->
+    <Transform translation='-7.5 -7.5 0.0'>
+      <Group DEF='BallRow'>
+        <Shape DEF='Ball'>
+          <Appearance>
+            <Material diffuseColor='1 0.5 0.1'/>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+        <Transform translation='3 0 0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='6 0 0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='9 0 0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='12 0 0'>
+          <Shape USE='Ball'/>
+        </Transform>
+        <Transform translation='15 0 0'>
+          <Shape USE='Ball'/>
+        </Transform>
+      </Group>
+      <Transform translation='0 3 0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0 6 0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0 9 0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0 12 0'>
+        <Group USE='BallRow'/>
+      </Transform>
+      <Transform translation='0 15 0'>
+        <Group USE='BallRow'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

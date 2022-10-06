@@ -1,0 +1,2 @@
+Figure10_12BouncingBox.x3d          is essentially the same as  
+Figure08_3PositionInterpolator.x3d

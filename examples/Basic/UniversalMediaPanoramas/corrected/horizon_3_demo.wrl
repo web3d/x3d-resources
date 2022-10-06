@@ -1,0 +1,52 @@
+#VRML V2.0 utf8
+
+#viewpoints
+WorldInfo{
+title "Background Previewer"
+info [
+"(c) Copyright 1998, Pamela Maloney, aka Imagica"
+]
+},
+
+NavigationInfo{
+type [ "EXAMINE" "ANY" ]
+avatarSize [ .25 1.75 .25 ]
+},
+
+Viewpoint{
+position 0.0 1.75 48.00
+orientation 0.0 1.0 0.0    0.0
+fieldOfView 1.5
+description "Background Test World Entrance"
+jump TRUE
+}#end viewpoints
+
+#lights
+PointLight{
+on TRUE
+location 0.0 0.0 0.0 
+radius 100
+intensity 1.0 
+ambientIntensity 0.0 
+color 1.0 1.0 1.0
+attenuation 1.0 0.0 0.0
+}#end lights
+
+#background
+Background{
+skyColor[ 0.0 0.0 0.0
+]
+skyAngle [ 1.309, 1.571]
+groundColor[
+0 0 0
+]
+groundAngle [1.309, 1.571]
+frontUrl ["horizon_3_front.jpg"]
+backUrl ["horizon_3_back.jpg"]
+leftUrl ["horizon_3_left.jpg"]
+rightUrl ["horizon_3_right.jpg"]
+topUrl ["horizon_3_top.jpg"]
+bottomUrl ["horizon_3_bottom.jpg"]
+
+}#end background
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interactive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='Geospatial'/>
+    <meta content='SriCampus108.x3d' name='title'/>
+    <meta content='SRI campus building' name='description'/>
+    <meta content='Aaron Heller, SRI International' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 February 2000' name='created'/>
+    <meta content='29 April 2003' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://www.geovrml.org/examples' name='reference'/>
+    <meta content='X3D geospatial example' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/SriCampus108.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SriCampus108.x3d'/>
+    <TouchSensor DEF='MouseOverPopupDescription' description='House-82' enabled='false'/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='0.75 0.75 0.75'/>
+      </Appearance>
+      <IndexedFaceSet convex='false' coordIndex='10 11 13 -1 9 12 8 -1 9 10 13 12 -1 8 12 13 11 -1 10 2 3 11 -1 8 0 1 9 -1 2 10 9 1 -1 0 8 11 3 -1 0 3 2 1 -1' solid='false'>
+        <Coordinate DEF='OBJECT-108-VERTICES' point='-9.676358 -6.965627 23.128222 9.676358 -6.965627 23.128222 9.676358 -6.965627 -23.128222 -9.676358 -6.965627 -23.128222 -9.676358 1.4501029 23.128222 9.676358 1.4501029 23.128222 9.676358 1.4501029 -23.128222 -9.676358 1.4501029 -23.128222 -9.676358 1.4501029 23.128222 9.676358 1.4501029 23.128222 9.676358 1.4501029 -23.128222 -9.676358 1.4501029 -23.128222 0.0 6.965627 13.451863 0.0 6.965627 -13.451863'/>
+      </IndexedFaceSet>
+    </Shape>
+  </Scene>
+</X3D>

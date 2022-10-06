@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure09_7CylinderSensor.x3d' name='title'/>
+    <meta content='Figure 9.7, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch09/09fig07.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='12 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Two shapes that rotate about an axis when the viewer drags them, with coordinate axes superimposed to show X3D/VRML directions.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter09SensingViewer/Figure09_7CylinderSensor.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Click and drag to rotate shapes. Superfluous Group nodes removed. -->
+    <!-- First rotate to reorient the first CylinderSensor -->
+    <WorldInfo title='Figure09_7CylinderSensor.x3d'/>
+    <Transform rotation='1 0 0 1.57' translation='-2 0 0'>
+      <CylinderSensor DEF='FIRST_CYLINDERSENSOR' description='Click and drag to rotate' maxAngle='1.57' minAngle='-0.78'/>
+      <Transform DEF='FIRST_TRANSFORM'>
+        <!-- Note that we are connecting a rotation output to a rotation input in these ROUTEs. -->
+        <ROUTE fromField='rotation_changed' fromNode='FIRST_CYLINDERSENSOR' toField='set_rotation' toNode='FIRST_TRANSFORM'/>
+        <!-- Keep transparent user-interface geometry in this rotated CylinderSensor coordinate frame -->
+        <Transform DEF='TRANSPARENT_CYLINDER_TRANSFORM'>
+          <Shape>
+            <Cylinder height='.5'/>
+            <Appearance>
+              <Material diffuseColor='.7 .7 .7' transparency='.5'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <!-- Now restore original Y=up coordinate frame prior to drawing actual geometry -->
+        <Transform rotation='1 0 0 -1.57'>
+          <Shape>
+            <Box size='1 3 1'/>
+            <Appearance DEF='FIRST_APPEARANCE'>
+              <Material diffuseColor='.9 .9 .1' emissiveColor='.2 .2 .05'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+    <!-- Note this second example uses a simpler pattern: since we are not rotating the axis of the CylinderSensor away from the vertical, we do not need to change that rotation back again for the target geometry. -->
+    <Transform DEF='SECOND_TRANSFORM' translation='2 0 0'>
+      <CylinderSensor DEF='SECOND_CYLINDERSENSOR' description='Click and drag to rotate'/>
+      <ROUTE fromField='rotation_changed' fromNode='SECOND_CYLINDERSENSOR' toField='set_rotation' toNode='SECOND_TRANSFORM'/>
+      <!-- Keep transparent user-interface geometry in this rotated CylinderSensor coordinate frame -->
+      <Transform USE='TRANSPARENT_CYLINDER_TRANSFORM'/>
+      <!-- Rotate actual geometry -->
+      <Transform rotation='1 0 0 0.52'>
+        <Shape>
+          <Cone/>
+          <Appearance USE='FIRST_APPEARANCE'/>
+        </Shape>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure12_3TempleOfInlinedArches.x3d' name='title'/>
+    <meta content='Figure 12.3, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch12/12fig03.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='16 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A simple temple built by inlining one archway row from Figure 12.2 and repeatedly instancing it. Also see Figures 12.1, 12.2 and 12.3 for comparison.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter12Inline/Figure12_3TempleOfInlinedArches.x3d' name='identifier'/>
+    <meta content='Figure12_1SimpleArch.x3d' name='reference'/>
+    <meta content='Figure12_2InlinedArches.x3d' name='reference'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Watch out! default example in the VRML Sourcebook has the default viewpoint stuck under the floor! -->
+    <WorldInfo title='Figure12_3TempleOfInlinedArches.x3d'/>
+    <Viewpoint description='Temple-estuous aggregation of arches' orientation='1 0 0 -0.3' position='0 12 30'/>
+    <Group>
+      <Shape>
+        <Box size='50 0.1 50'/>
+        <Appearance>
+          <Material diffuseColor='0 1 0'/>
+        </Appearance>
+      </Shape>
+      <Transform bboxCenter='1 4 -5' bboxSize='5 8 10' translation='0 0 -4'>
+        <Inline DEF='ARCH_ROW' bboxCenter='1 4 0' bboxSize='5 8 2' url='"Figure12_2InlinedArches.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter12Inline/Figure12_2InlinedArches.x3d" "Figure12_2InlinedArches.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter12Inline/Figure12_2InlinedArches.wrl"'/>
+      </Transform>
+      <Transform rotation='0 1 0 3.14' translation='0 0 4.'>
+        <Inline USE='ARCH_ROW'/>
+      </Transform>
+      <Transform rotation='0 1 0 1.57' translation='-4 0 0'>
+        <Inline USE='ARCH_ROW'/>
+      </Transform>
+      <Transform rotation='0 1 0 -1.57' translation='4 0 0'>
+        <Inline USE='ARCH_ROW'/>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

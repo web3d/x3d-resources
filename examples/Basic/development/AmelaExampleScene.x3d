@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='AmelaExampleScene.x3d' name='title'/>
+    <meta content='Amela example developed at VRST 99. Place mouse over geometry to light the Cylinder. PointLight is coincident with the Sphere.' name='description'/>
+    <meta content='1 December 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/AmelaExampleScene.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='AmelaExampleScene.x3d'/>
+    <Group>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='.9 .9 .9'/>
+        </Appearance>
+        <Cylinder/>
+      </Shape>
+    </Group>
+    <Transform translation='0 -2 4'>
+      <Shape>
+        <Appearance>
+          <Material emissiveColor='0 0 0.8'/>
+        </Appearance>
+        <Sphere radius='.2'/>
+      </Shape>
+      <PointLight DEF='MyPointLight' color='0 0 1' on='false'/>
+    </Transform>
+    <TouchSensor DEF='MyTouchSensor' description='pointing device over geometry turns on light'/>
+    <ROUTE fromField='isOver' fromNode='MyTouchSensor' toField='on' toNode='MyPointLight'/>
+  </Scene>
+</X3D>

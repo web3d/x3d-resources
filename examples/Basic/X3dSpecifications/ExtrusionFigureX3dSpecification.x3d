@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='ExtrusionFigureX3dSpecification.x3d' name='title'/>
+    <meta content='X3D Extrusion spine-aligned cross-section plane (SCP) at a spine point. Modeled after Figure 13.5 in X3D Specification.' name='description'/>
+    <meta content='Al Shaffer' name='creator'/>
+    <meta content='4 February 2005' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='Extrusion.gif' name='Image'/>
+    <meta content='X3D encodings, ISO/IEC 19776-1.3, Part 1: XML encoding, Figure 13.5 - Spine-aligned cross-section plane at a spine point.' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry3D.html#f-Spine-alignedcross-section' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/ExtrusionFigureX3dSpecification.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ExtrusionFigureX3dSpecification.x3d'/>
+    <Background groundColor='1 1 1' skyColor='1 1 1'/>
+    <Viewpoint description='X3D Specification Figure 13.5, Extrusion Spine-aligned Cross-section Plane (SCP)' orientation='1 0 0 -0.43' position='-0.5 5.5 12'/>
+    <Viewpoint description='Front view, Spine-aligned Cross-section Plane (SCP)' position='0 0 14'/>
+    <Viewpoint description='Overhead view, Spine-aligned Cross-section Plane (SCP)' orientation='1 0 0 -1.428899' position='0 14 2'/>
+    <Transform>
+      <!-- Draw partial coordinate axis. Code derived from CoordinateAxes.x3d by Don Brutzman, 21 January 2002 -->
+      <Transform DEF='HALF_COORD_AXIS'>
+        <Group>
+          <!-- Vertical Y arrow and labels -->
+          <Group DEF='ARROW'>
+            <Transform translation='0 1 0'>
+              <Shape>
+                <Appearance DEF='ARROW_APPEARANCE'>
+                  <Material diffuseColor='0 1 .7'/>
+                </Appearance>
+                <Cylinder bottom='false' radius='.05' top='false'/>
+              </Shape>
+            </Transform>
+            <Transform translation='0 2 0'>
+              <Shape DEF='ARROW_POINTER'>
+                <Cone bottomRadius='.16' height='.4'/>
+                <Appearance USE='ARROW_APPEARANCE'/>
+              </Shape>
+            </Transform>
+          </Group>
+          <Transform translation='0.15 2.1 0.15'>
+            <Billboard axisOfRotation='0 0 0'>
+              <Shape>
+                <Appearance DEF='LABEL_APPEARANCE'>
+                  <Material diffuseColor='0 0 0'/>
+                </Appearance>
+                <Text string='"+Y axis"'>
+                  <FontStyle DEF='LABEL_FONT' family='"SANS"' justify='"BEGIN" "END"' size='.4' style='ITALIC'/>
+                </Text>
+              </Shape>
+            </Billboard>
+          </Transform>
+        </Group>
+        <Transform rotation='0 0 1 -1.57079'>
+          <!-- Horizontal X arrow and label -->
+          <Group>
+            <Group USE='ARROW'/>
+            <Transform rotation='0 0 1 1.57079' translation='-0.15 2.1 0.15'>
+              <Billboard axisOfRotation='0 0 0'>
+                <Shape>
+                  <Appearance USE='LABEL_APPEARANCE'/>
+                  <Text string='"+X axis"'>
+                    <FontStyle USE='LABEL_FONT'/>
+                  </Text>
+                </Shape>
+              </Billboard>
+            </Transform>
+          </Group>
+        </Transform>
+        <Transform rotation='1 0 0 1.57079'>
+          <!-- Perpendicular Z arrow and label -->
+          <Group>
+            <Group USE='ARROW'/>
+            <Transform rotation='1 0 0 -1.57079' translation='0.15 2.1 -0.15'>
+              <Billboard axisOfRotation='0 0 0'>
+                <Shape>
+                  <Appearance USE='LABEL_APPEARANCE'/>
+                  <Text string='"+Z axis"'>
+                    <FontStyle USE='LABEL_FONT'/>
+                  </Text>
+                </Shape>
+              </Billboard>
+            </Transform>
+          </Group>
+        </Transform>
+      </Transform>
+      <!-- Draw spine-aligned cross-section plane at a spine point -->
+      <Transform DEF='SPINE_CROSS_SECTION'>
+        <Group>
+          <!-- Draw sphere and label at center of coordinate axis -->
+          <Group>
+            <Transform>
+              <Shape DEF='DARK_GRAY_SPHERE'>
+                <Sphere radius='0.3'/>
+                <Appearance DEF='DARK_GRAY'>
+                  <Material diffuseColor='0.15 0.15 0.15'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <Transform translation='-1 0 0'>
+              <Billboard axisOfRotation='0 0 0'>
+                <Shape>
+                  <Appearance USE='LABEL_APPEARANCE'/>
+                  <Text string='"spine[i]"'>
+                    <FontStyle DEF='LABEL_FONT2' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.4' style='ITALIC'/>
+                  </Text>
+                </Shape>
+              </Billboard>
+            </Transform>
+          </Group>
+          <!-- Draw spine rods -->
+          <Group>
+            <Transform rotation='0 0 1 0.64'>
+              <Transform translation='0 2.5 0'>
+                <Shape DEF='RED_ROD'>
+                  <Cylinder bottom='false' height='5.0' radius='0.08' top='false'/>
+                  <Appearance>
+                    <Material diffuseColor='0.82 0.13 0.56'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Transform>
+            <Transform rotation='0 0 1 -0.64'>
+              <Transform translation='0 -2.5 0'>
+                <Shape USE='RED_ROD'/>
+              </Transform>
+            </Transform>
+          </Group>
+          <!-- Draw two spheres and labels at ends of spines -->
+          <Group>
+            <Transform translation='-3 4 0'>
+              <Shape USE='DARK_GRAY_SPHERE'/>
+              <Transform translation='0 0.7 0'>
+                <Billboard axisOfRotation='0 0 0'>
+                  <Shape>
+                    <Appearance USE='LABEL_APPEARANCE'/>
+                    <Text string='"spine[i+1]"'>
+                      <FontStyle USE='LABEL_FONT2'/>
+                    </Text>
+                  </Shape>
+                </Billboard>
+              </Transform>
+            </Transform>
+            <Transform translation='-3 -4 0'>
+              <Shape USE='DARK_GRAY_SPHERE'/>
+              <Transform translation='0 -0.7 0'>
+                <Billboard axisOfRotation='0 0 0'>
+                  <Shape>
+                    <Appearance USE='LABEL_APPEARANCE'/>
+                    <Text string='"spine[i-1]"'>
+                      <FontStyle USE='LABEL_FONT2'/>
+                    </Text>
+                  </Shape>
+                </Billboard>
+              </Transform>
+            </Transform>
+          </Group>
+          <!-- Draw tangent and label between spines -->
+          <Group>
+            <Transform translation='-3 0 0'>
+              <Shape>
+                <Cylinder height='8' radius='.02'/>
+                <Appearance USE='DARK_GRAY'/>
+              </Shape>
+            </Transform>
+            <Transform rotation='0 0 1 3.14' translation='-3 -3.55 0'>
+              <Shape>
+                <Cone bottomRadius='.15' height='.5'/>
+                <Appearance USE='DARK_GRAY'/>
+              </Shape>
+            </Transform>
+            <Transform translation='-3.2 0 0'>
+              <Billboard>
+                <Shape>
+                  <Appearance USE='LABEL_APPEARANCE'/>
+                  <Text string='"t a n g e n t"'>
+                    <FontStyle family='"SANS"' horizontal='false' justify='"MIDDLE" "END"' size='0.5' style='ITALIC'/>
+                  </Text>
+                </Shape>
+              </Billboard>
+            </Transform>
+            <Transform rotation='0 0 1 1.57' translation='-1.5 0 0'>
+              <Shape>
+                <Cylinder height='3' radius='.015'/>
+                <Appearance>
+                  <Material diffuseColor='.2 .2 .2' transparency='.5'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <Transform translation='-2.7 0.15 0'>
+              <Shape>
+                <Cylinder height='.3' radius='.02'/>
+                <Appearance USE='DARK_GRAY'/>
+              </Shape>
+            </Transform>
+            <Transform rotation='0 0 1 1.57' translation='-2.85 0.3 0'>
+              <Shape>
+                <Cylinder height='.3' radius='.02'/>
+                <Appearance USE='DARK_GRAY'/>
+              </Shape>
+            </Transform>
+          </Group>
+          <!-- Draw SCP (spine-aligned cross-section plane) and label -->
+          <Group>
+            <Transform>
+              <Shape>
+                <IndexedFaceSet coordIndex='0 1 2 3 4 -1' solid='false'>
+                  <Coordinate point='1.35 0 1.35 1.35 0 -1.35 -1.35 0 -1.35 -1.35 0 1.35 1.35 0 1.35'/>
+                </IndexedFaceSet>
+                <Appearance>
+                  <Material diffuseColor='0.27 0.51 0.71' transparency='.5'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <Transform rotation='1 0 0 -1.57' translation='.5 0 -1'>
+              <Shape>
+                <Text string='"SCP"'>
+                  <FontStyle family='"SANS"' size='0.4' style='BOLDITALIC'/>
+                </Text>
+                <Appearance USE='LABEL_APPEARANCE'/>
+              </Shape>
+            </Transform>
+          </Group>
+        </Group>
+      </Transform>
+      <!-- Draw title of model -->
+      <Group>
+        <Transform translation='-0.2 -5.5 0'>
+          <Shape>
+            <Text string='"Spine-aligned Cross-section Plane (SCP) at Spine Point"'>
+              <FontStyle DEF='LABEL_FONT3' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.45' style='BOLD'/>
+            </Text>
+            <Appearance USE='LABEL_APPEARANCE'/>
+          </Shape>
+        </Transform>
+      </Group>
+    </Transform>
+  </Scene>
+</X3D>

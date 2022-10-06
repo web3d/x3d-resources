@@ -1,0 +1,37 @@
+OpenJSCadConversionIssues.txt                                   26 October 2017
+
+http://x3dgraphics.com/examples/X3dForAdvancedModeling/ToolConversions/OpenJSCadConversionIssues.txt
+
+Export action: select "X3D" from menu in lower left of screen, then
+"Generate X3D" button.
+
+=======================================================
+
+1. No Viewpoint nodes provided.  This leads to user being lost inside the
+   model with nothing provided.
+
+=======================================================
+
+2. No UNIT statement or transform scaling provided.  Model output needs to
+   be in meters.
+
+=======================================================
+
+3. Author needs to decide whether standalone model export is centered at origin.
+
+=======================================================
+
+Tool resources for conversion developers:
+
+a. X3D Specifications, especially X3D Abstract Specification.
+   http://www.web3d.org/standards
+   http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/X3D.html
+b. X3D Scene Authoring Hints
+   http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html
+c. X3D Tooltips
+   http://www.web3d.org/x3d/content/X3dTooltips.html
+b. X3D Resources
+   http://www.web3d.org/x3d/content/examples/X3dResources.html
+
+=======================================================
+=======================================================

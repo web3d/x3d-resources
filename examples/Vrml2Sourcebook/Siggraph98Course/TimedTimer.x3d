@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='TimedTimer.x3d' name='title'/>
+    <meta content='Timed-timer demonstrates how to drive one TimeSensor with another one in order periodically trigger another animation.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/timetime.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0257.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/TimedTimer.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Timed timer'/>
+    <Viewpoint description='Entry view' position='0.0 0.0 12.0'/>
+    <NavigationInfo/>
+    <Transform DEF='Red'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 0.0 0.0'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform translation='2.0 2.0 0.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='-2.0 2.0 0.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='2.0 -2.0 0.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='-2.0 -2.0 0.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='0.0 -2.0 2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='0.0 2.0 2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='2.0 0.0 2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='-2.0 0.0 2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='0.0 -2.0 -2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='0.0 2.0 -2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='2.0 0.0 -2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform translation='-2.0 0.0 -2.0'>
+      <Transform USE='Red'/>
+    </Transform>
+    <Transform DEF='Blue' translation='2.0 0.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.0 0.0 1.0'/>
+        </Appearance>
+        <Box/>
+      </Shape>
+    </Transform>
+    <Transform translation='-4.0 0.0 0.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-2.0 0.0 2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-2.0 0.0 -2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-2.0 2.0 0.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-2.0 -2.0 0.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='0.0 2.0 2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='0.0 2.0 -2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-4.0 2.0 2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-4.0 2.0 -2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='0.0 -2.0 2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='0.0 -2.0 -2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-4.0 -2.0 2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <Transform translation='-4.0 -2.0 -2.0'>
+      <Transform USE='Blue'/>
+    </Transform>
+    <TimeSensor DEF='Clock' cycleInterval='3.0'/>
+    <TimeSensor DEF='Trigger' cycleInterval='5.0' loop='true'/>
+    <PositionInterpolator DEF='RedScale' key='0.0 0.5 1.0' keyValue='1.0 1.0 1.0 1.0E-4 1.0E-4 1.0E-4 1.0 1.0 1.0'/>
+    <PositionInterpolator DEF='BlueScale' key='0.0 0.25 0.5 0.75 1.0' keyValue='1.0 1.0 1.0 1.0E-4 1.0E-4 1.0E-4 1.0 1.0 1.0 1.0E-4 1.0E-4 1.0E-4 1.0 1.0 1.0'/>
+    <ROUTE fromField='cycleTime' fromNode='Trigger' toField='set_startTime' toNode='Clock'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='RedScale'/>
+    <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='BlueScale'/>
+    <ROUTE fromField='value_changed' fromNode='RedScale' toField='set_scale' toNode='Red'/>
+    <ROUTE fromField='value_changed' fromNode='BlueScale' toField='set_scale' toNode='Blue'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure09_1SpinningCubeTouchSensor.x3d' name='title'/>
+    <meta content='Figure 9.1, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch09/09fig01.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='9 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A cube that spins when the cursor moves over it. Also see Figure 9.2 for comparison.' name='description'/>
+    <meta content='Figure09_2SpinningCubeTouchSensorClicked.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter09SensingViewer/Figure09_1SpinningCubeTouchSensor.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Rotating Cube -->
+    <WorldInfo title='Figure09_1SpinningCubeTouchSensor.x3d'/>
+    <Group>
+      <Transform DEF='CUBE_TRANSFORM'>
+        <Shape>
+          <Box/>
+          <Appearance>
+            <Material diffuseColor='.5 .5 .5'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <TouchSensor DEF='MyTouchSensor' description='Point at box to spin it'/>
+      <TimeSensor DEF='CLOCK' cycleInterval='4' enabled='false' loop='true'/>
+      <OrientationInterpolator DEF='CubePathInterpolator' key='0.0 0.50 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 3.14 0.0 1.0 0.0 6.28'/>
+    </Group>
+    <!-- Note that we are connecting a Boolean output to a Boolean input in the first ROUTE. -->
+    <ROUTE fromField='isOver' fromNode='MyTouchSensor' toField='set_enabled' toNode='CLOCK'/>
+    <ROUTE fromField='fraction_changed' fromNode='CLOCK' toField='set_fraction' toNode='CubePathInterpolator'/>
+    <ROUTE fromField='value_changed' fromNode='CubePathInterpolator' toField='set_rotation' toNode='CUBE_TRANSFORM'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='FogWorld.x3d' name='title'/>
+    <meta content='Scene geometry to support illustrating fog effects in test scenes.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/fogworld.wrl' name='reference'/>
+    <meta content='Fog1.x3d' name='reference'/>
+    <meta content='Fog2.x3d' name='reference'/>
+    <meta content='Fog3.x3d' name='reference'/>
+    <meta content='Fog4.x3d' name='reference'/>
+    <meta content='Fog5.x3d' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0327.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0331.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/FogWorld.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='FogWorld.x3d'/>
+    <Transform translation='0.0 -1.6 0.0'>
+      <DirectionalLight ambientIntensity='1.0' direction='0.0 -1.0 -1.0' intensity='0.2'/>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.5' diffuseColor='0.2 0.8 0.2'/>
+        </Appearance>
+        <Box size='50.0 0.01 50.0'/>
+      </Shape>
+      <Group DEF='ColumnPair'>
+        <Transform translation='-4.0 3.0 0.0'>
+          <Shape DEF='Column'>
+            <Appearance>
+              <Material diffuseColor='1.0 0.8 0.5'/>
+            </Appearance>
+            <Cylinder height='6.0' radius='0.3'/>
+          </Shape>
+        </Transform>
+        <Transform translation='4.0 3.0 0.0'>
+          <Shape USE='Column'/>
+        </Transform>
+      </Group>
+      <Transform translation='0.0 0.0 -8.0'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0.0 0.0 8.0'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0.0 0.0 -16.0'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0.0 0.0 16.0'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0.0 0.0 -24.0'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0.0 0.0 24.0'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "http://www.web3d.org/specifications/x3d-3.0.dtd"
+                     "/www.web3d.org/TaskGroups/x3d/translation/x3d-3.0.dtd">
+<X3D>
+  <head>
+    <meta content="NurbsPrototypes.x3d" name="filename"/>
+    <meta
+      content="Non-Uniform Rational B-Spline (NURBS) prototype definitions." name="description"/>
+    <meta
+      content="Originally blaxxun.  X3D specification revisions by Don Brutzman, Charles Adams and Jeffrey Weekley NPS." name="author"/>
+    <meta content="Don Brutzman" name="translator"/>
+    <meta content="2000" name="created"/>
+    <meta content="18 March 2002" name="translated"/>
+    <meta content="4 March 2003" name="revised"/>
+    <meta content="under development" name="warning"/>
+    <meta
+      content="Not all NURBS nodes are prototyped here, and these implementations are not yet demonstrated." name="warning"/>
+    <meta
+      content="http://www.web3d.org/technicalinfo/specifications/ISO_IEC_19775/Part01/components/nurbs.html" name="reference"/>
+    <meta content="http://www.blaxxun.com/vrml/protos/nurbs.wrl" name="reference"/>
+    <meta content="NurbsPrototypesOriginal.x3d.txt" name="reference"/>
+    <meta content="NURBS Prototypes" name="keywords"/>
+    <meta
+      content="http://www.web3d.org/TaskGroups/x3d/translation/examples/Nurbs/NurbsPrototypes.x3d" name="url"/>
+    <meta content="Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html" name="generator"/>
+  </head>
+  <Scene>
+    <ProtoDeclare
+      appInfo="Contour2D node groups a set of curve segments &#10;(either NurbsCurve2D or ContourPolyline2D nodes) to a composite contour,&#10;in consecutive order according to the topology of the contour.&#10;The children shall form a closed loop with the&#10;first point of the first child repeated as the last point of the last child &#10;and the last point of a segment repeated as the first point of the consecutive one.&#10;"
+      documentation="http://www.web3d.org/technicalinfo/specifications/ISO_IEC_19775/Part01/components/nurbs.html#Contour2D" name="Contour2D">
+      <ProtoInterface>
+        <field accessType="inputOutput" name="children" type="MFNode"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group DEF="RootContour2D">
+          <IS>
+            <connect nodeField="children" protoField="children"/>
+          </IS>
+        </Group><!--consider adding a Script here to check that the
+          children nodes are solely of type NurbsCurbe2D and/or ContourPolyline2D--></ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="ContourPolyline2D">
+      <ProtoInterface>
+        <field accessType="initializeOnly" name="point" type="MFVec2f"/>
+      </ProtoInterface>
+      <ProtoBody><!--Typical initial approach:  group all body nodes
+          together, since rendering is only affected by first Prototype
+          child. Then, map interface field(s) to dummy-node field(s)  so
+          that a Script can USE and then manipulate them.--><Group>
+          <Switch DEF="HideDummy" whichChoice="-1">
+            <Shape>
+              <Extrusion DEF="PointHolder">
+                <IS>
+                  <connect nodeField="crossSection" protoField="point"/>
+                </IS>
+              </Extrusion>
+            </Shape>
+          </Switch>
+          <Script DEF="ScriptContourPolyline2D" directOutput="true" url="http://www.none">
+            <field accessType="inputOnly" name="PointHolder" type="SFNode">
+              <Extrusion USE="PointHolder"/>
+            </field>
+          </Script>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare
+      documentation="http://www.web3d.org/technicalinfo/specifications/ISO_IEC_19775/Part01/components/nurbs.html#CoordinateDeformer" name="CoordinateDeformer">
+      <ProtoInterface>
+        <field accessType="inputOutput" appInfo="X3DShapeNode"
+          name="children" type="MFNode"/>
+        <field accessType="inputOutput" name="controlPoint" type="MFVec3f"/>
+        <field accessType="inputOutput" appInfo="Coordinate"
+          name="inputCoord" type="MFNode"/>
+        <field accessType="inputOutput" appInfo="Transform"
+          name="inputTransform" type="MFNode"/>
+        <field accessType="inputOutput" appInfo="Coordinate"
+          name="outputCoord" type="MFNode"/>
+        <field accessType="inputOutput"
+          appInfo="range (- &amp;#8734;, &amp;#8734)" name="weight" type="MFFloat"/>
+        <field accessType="initializeOnly"
+          appInfo="range (- &amp;#8734;, &amp;#8734)" name="bboxCenter"
+          type="SFVec3f" value="0 0 0"/>
+        <field accessType="initializeOnly"
+          appInfo="range [0, &amp;#8734;)" name="bboxSize"
+          type="SFVec3f" value="-1 -1 -1"/>
+        <field accessType="initializeOnly"
+          appInfo="range [0, &amp;#8734;)" name="uDimension"
+          type="SFInt32" value="0"/>
+        <field accessType="initializeOnly"
+          appInfo="range (- &amp;#8734, &amp;#8734;)" name="uKnot" type="MFFloat"/>
+        <field accessType="initializeOnly"
+          appInfo="range [2, &amp;#8734;)" name="uOrder" type="SFInt32" value="2"/>
+        <field accessType="initializeOnly"
+          appInfo="range [0, &amp;#8734;)" name="vDimension"
+          type="SFInt32" value="0"/>
+        <field accessType="initializeOnly"
+          appInfo="range (- &amp;#8734, &amp;#8734;)" name="vKnot" type="MFFloat"/>
+        <field accessType="initializeOnly"
+          appInfo="range [2, &amp;#8734;)" name="vOrder" type="SFInt32" value="2"/>
+        <field accessType="initializeOnly"
+          appInfo="range [0, &amp;#8734;)" name="wDimension"
+          type="SFInt32" value="0"/>
+        <field accessType="initializeOnly"
+          appInfo="range (- &amp;#8734, &amp;#8734;)" name="wKnot" type="MFFloat"/>
+        <field accessType="initializeOnly"
+          appInfo="range [2, &amp;#8734;)" name="wOrder" type="SFInt32" value="2"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="NurbsCurve">
+      <ProtoInterface>
+        <field accessType="initializeOnly" name="controlPoint" type="MFVec3f"/>
+        <field accessType="initializeOnly" name="tessellation" type="SFInt32"/>
+        <field accessType="initializeOnly" name="weight" type="MFFloat"/>
+        <field accessType="initializeOnly" name="knot" type="MFFloat"/>
+        <field accessType="initializeOnly" name="order" type="SFInt32"/>
+        <field accessType="inputOnly" name="set_controlPoint" type="MFVec3f"/>
+        <field accessType="inputOnly" name="set_tessellation" type="SFInt32"/>
+        <field accessType="inputOnly" name="set_weight" type="MFFloat"/>
+        <field accessType="outputOnly" name="controlPoint_changed" type="MFVec3f"/>
+        <field accessType="outputOnly" name="tessellation_changed" type="SFInt32"/>
+        <field accessType="outputOnly" name="weight_changed" type="MFFloat"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedLineSet DEF="ncLineSet">
+          <Coordinate DEF="ncCoord"/>
+        </IndexedLineSet>
+        <Script DEF="NurbsCurve" directOutput="false"
+          mustEvaluate="true" url="&quot;NurbsCurve.class&quot; &quot; http://www.web3D.org/TaskGroups/x3d/translation/examples/Nurbs/NurbsCurve.class&quot;">
+          <field accessType="initializeOnly" name="controlPoint" type="MFVec3f"/>
+          <field accessType="initializeOnly" name="tessellation" type="SFInt32"/>
+          <field accessType="initializeOnly" name="weight" type="MFFloat"/>
+          <field accessType="initializeOnly" name="knot" type="MFFloat"/>
+          <field accessType="initializeOnly" name="order" type="SFInt32"/>
+          <field accessType="outputOnly" name="point" type="MFVec3f"/>
+          <field accessType="outputOnly" name="pointIndex" type="MFInt32"/>
+          <field accessType="inputOnly" name="set_controlPoint" type="MFVec3f"/>
+          <field accessType="inputOnly" name="set_tessellation" type="SFInt32"/>
+          <field accessType="inputOnly" name="set_weight" type="MFFloat"/>
+          <field accessType="outputOnly" name="controlPoint_changed" type="MFVec3f"/>
+          <field accessType="outputOnly" name="tessellation_changed" type="SFInt32"/>
+          <field accessType="outputOnly" name="weight_changed" type="MFFloat"/>
+          <IS>
+            <connect nodeField="controlPoint" protoField="controlPoint"/>
+            <connect nodeField="tessellation" protoField="tessellation"/>
+            <connect nodeField="weight" protoField="weight"/>
+            <connect nodeField="knot" protoField="knot"/>
+            <connect nodeField="order" protoField="order"/>
+            <connect nodeField="set_controlPoint" protoField="set_controlPoint"/>
+            <connect nodeField="set_tessellation" protoField="set_tessellation"/>
+            <connect nodeField="set_weight" protoField="set_weight"/>
+            <connect nodeField="controlPoint_changed" protoField="controlPoint_changed"/>
+            <connect nodeField="tessellation_changed" protoField="tessellation_changed"/>
+            <connect nodeField="weight_changed" protoField="weight_changed"/>
+          </IS>
+        </Script>
+        <ROUTE fromField="point" fromNode="NurbsCurve"
+          toField="set_point" toNode="ncCoord"/>
+        <ROUTE fromField="pointIndex" fromNode="NurbsCurve"
+          toField="set_coordIndex" toNode="ncLineSet"/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="NurbsCurve2D">
+      <ProtoInterface>
+        <field accessType="inputOutput"
+          appInfo="range (- &amp;#8734;, &amp;#8734;)"
+          name="controlPoint" type="MFVec2f"/>
+        <field accessType="inputOutput"
+          appInfo="range (- &amp;#8734;, &amp;#8734;)"
+          name="tessellation" type="SFInt32" value="0"/>
+        <field accessType="inputOutput"
+          appInfo="range [0,  &amp;#8734;)" name="weight" type="MFFloat"/>
+        <field accessType="initializeOnly"
+          appInfo="range (- &amp;#8734;, &amp;#8734;)" name="knot" type="MFFloat"/>
+        <field accessType="initializeOnly"
+          appInfo="range [2, &amp;#8734;)" name="order" type="SFInt32" value="3"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="NurbsGroup">
+      <ProtoInterface>
+        <field accessType="inputOnly" appInfo="[NurbsSurface]"
+          name="addChildren" type="MFNode"/>
+        <field accessType="inputOnly" appInfo="[NurbsSurface]"
+          name="removeChildren" type="MFNode"/>
+        <field accessType="inputOutput" appInfo="[NurbsSurface]"
+          name="children" type="MFNode"/>
+        <field accessType="inputOutput" appInfo="(0, &amp;#8734;]"
+          name="tessellationScale" type="SFFloat" value="1.0"/>
+        <field accessType="initializeOnly"
+          appInfo="(-&amp;#8734;, &amp;#8734;)" name="bboxCenter"
+          type="SFVec3f" value="0 0 0"/>
+        <field accessType="initializeOnly"
+          appInfo="(0, &amp;#8734;] &amp;#124; [-1 -1 -1]"
+          name="bboxSize" type="SFVec3f" value="-1 -1 -1"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Group DEF="_IS_2">
+          <IS>
+            <connect nodeField="children" protoField="children"/>
+            <connect nodeField="addChildren" protoField="addChildren"/>
+            <connect nodeField="removeChildren" protoField="removeChildren"/>
+            <connect nodeField="bboxCenter" protoField="bboxCenter"/>
+            <connect nodeField="bboxSize" protoField="bboxSize"/>
+          </IS>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="NurbsPositionInterpolator">
+      <ProtoInterface>
+        <field accessType="initializeOnly" name="weight" type="MFFloat"/>
+        <field accessType="initializeOnly" name="knot" type="MFFloat"/>
+        <field accessType="initializeOnly" name="order" type="SFInt32"/>
+        <field accessType="inputOnly" name="set_weight" type="MFFloat"/>
+        <field accessType="outputOnly" name="weight_changed" type="MFFloat"/>
+        <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
+        <field accessType="outputOnly" name="value_changed" type="SFVec3f"/>
+        <field accessType="initializeOnly" name="key" type="MFFloat"/>
+        <field accessType="inputOnly" name="set_key" type="MFFloat"/>
+        <field accessType="outputOnly" name="key_changed" type="MFFloat"/>
+        <field accessType="initializeOnly" name="keyValue" type="MFVec3f"/>
+        <field accessType="inputOnly" name="set_keyValue" type="MFVec3f"/>
+        <field accessType="outputOnly" name="keyValue_changed" type="MFVec3f"/>
+        <field accessType="initializeOnly" name="fractionAbsolute"
+          type="SFBool" value="false"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script DEF="NurbsPositionInterpolator" directOutput="false"
+          mustEvaluate="true" url="&quot;NurbsPositionInterpolator.class&quot; &quot; http://www.web3D.org/TaskGroups/x3d/translation/examples/Nurbs/NurbsPositionInterpolator.class&quot;">
+          <field accessType="initializeOnly" name="weight" type="MFFloat"/>
+          <field accessType="initializeOnly" name="knot" type="MFFloat"/>
+          <field accessType="initializeOnly" name="order" type="SFInt32"/>
+          <field accessType="inputOnly" name="set_weight" type="MFFloat"/>
+          <field accessType="outputOnly" name="weight_changed" type="MFFloat"/>
+          <field accessType="inputOnly" name="set_fraction" type="SFFloat"/>
+          <field accessType="outputOnly" name="value_changed" type="SFVec3f"/>
+          <field accessType="initializeOnly"
+            appInfo="Specifies time for keyValues, in non decreasing order from 0 - 1."
+            name="key" type="MFFloat"/>
+          <field accessType="inputOnly" name="set_key" type="MFFloat"/>
+          <field accessType="outputOnly" name="key_changed" type="MFFloat"/>
+          <field accessType="initializeOnly"
+            appInfo="Specifies a normalized distance along NurbsCurve, corresponding to a key. Must be in the range 0 - 1 where 0 is the beginning of the curve and 1 is the end."
+            name="keyValue" type="MFVec3f"/>
+          <field accessType="inputOnly" name="set_keyValue" type="MFVec3f"/>
+          <field accessType="outputOnly" name="keyValue_changed" type="MFVec3f"/>
+          <field accessType="initializeOnly" name="fractionAbsolute" type="SFBool"/>
+          <IS>
+            <connect nodeField="weight" protoField="weight"/>
+            <connect nodeField="knot" protoField="knot"/>
+            <connect nodeField="order" protoField="order"/>
+            <connect nodeField="set_weight" protoField="set_weight"/>
+            <connect nodeField="weight_changed" protoField="weight_changed"/>
+            <connect nodeField="set_fraction" protoField="set_fraction"/>
+            <connect nodeField="value_changed" protoField="value_changed"/>
+            <connect nodeField="key" protoField="key"/>
+            <connect nodeField="set_key" protoField="set_key"/>
+            <connect nodeField="key_changed" protoField="key_changed"/>
+            <connect nodeField="keyValue" protoField="keyValue"/>
+            <connect nodeField="set_keyValue" protoField="set_keyValue"/>
+            <connect nodeField="keyValue_changed" protoField="keyValue_changed"/>
+            <connect nodeField="fractionAbsolute" protoField="fractionAbsolute"/>
+          </IS>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="NurbsSurface">
+      <ProtoInterface>
+        <field accessType="initializeOnly" name="controlPoint" type="MFVec3f"/>
+        <field accessType="inputOutput" name="texCoord" type="SFNode"/>
+        <field accessType="initializeOnly" name="uTessellation" type="SFInt32"/>
+        <field accessType="initializeOnly" name="vTessellation" type="SFInt32"/>
+        <field accessType="initializeOnly" name="weight" type="MFFloat"/>
+        <field accessType="initializeOnly" name="ccw" type="SFBool" value="true"/>
+        <field accessType="initializeOnly" name="solid" type="SFBool" value="false"/>
+        <field accessType="initializeOnly" name="uDimension" type="SFInt32"/>
+        <field accessType="initializeOnly" name="uKnot" type="MFFloat"/>
+        <field accessType="initializeOnly" name="uOrder" type="SFInt32"/>
+        <field accessType="initializeOnly" name="vDimension" type="SFInt32"/>
+        <field accessType="initializeOnly" name="vKnot" type="MFFloat"/>
+        <field accessType="initializeOnly" name="vOrder" type="SFInt32"/>
+        <field accessType="inputOnly" name="set_controlPoint" type="MFVec3f"/>
+        <field accessType="outputOnly" name="controlPoint_changed" type="MFVec3f"/>
+        <field accessType="inputOnly" name="set_weight" type="MFFloat"/>
+        <field accessType="outputOnly" name="weight_changed" type="MFFloat"/>
+        <field accessType="inputOnly" name="set_uTessellation" type="SFInt32"/>
+        <field accessType="outputOnly" name="uTessellation_changed" type="SFInt32"/>
+        <field accessType="inputOnly" name="set_vTessellation" type="SFInt32"/>
+        <field accessType="outputOnly" name="vTessellation_changed" type="SFInt32"/>
+        <field accessType="initializeOnly" name="closedSurface"
+          type="SFBool" value="false"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet DEF="nsfaceset" creaseAngle="3.14" solid="false">
+          <IS>
+            <connect nodeField="ccw" protoField="ccw"/>
+            <connect nodeField="solid" protoField="solid"/>
+            <connect nodeField="texCoord" protoField="texCoord"/>
+          </IS>
+          <Coordinate DEF="nscoord"/>
+        </IndexedFaceSet>
+        <Script DEF="NurbsSurface" directOutput="false"
+          mustEvaluate="true" url="&quot;NurbsSurface.class&quot; &quot;http://www.web3D.org/TaskGroups/x3d/translation/examples/Nurbs/NurbsSurface.class&quot;">
+          <field accessType="initializeOnly" name="controlPoint" type="MFVec3f"/>
+          <field accessType="initializeOnly" name="uTessellation" type="SFInt32"/>
+          <field accessType="initializeOnly" name="vTessellation" type="SFInt32"/>
+          <field accessType="initializeOnly" name="weight" type="MFFloat"/>
+          <field accessType="initializeOnly" name="uDimension" type="SFInt32"/>
+          <field accessType="initializeOnly" name="uKnot" type="MFFloat"/>
+          <field accessType="initializeOnly" name="uOrder" type="SFInt32"/>
+          <field accessType="initializeOnly" name="vDimension" type="SFInt32"/>
+          <field accessType="initializeOnly" name="vKnot" type="MFFloat"/>
+          <field accessType="initializeOnly" name="vOrder" type="SFInt32"/>
+          <field accessType="outputOnly" name="coord" type="MFVec3f"/>
+          <field accessType="outputOnly" name="coordIndex" type="MFInt32"/>
+          <field accessType="inputOnly" name="set_controlPoint" type="MFVec3f"/>
+          <field accessType="outputOnly" name="controlPoint_changed" type="MFVec3f"/>
+          <field accessType="inputOnly" name="set_weight" type="MFFloat"/>
+          <field accessType="outputOnly" name="weight_changed" type="MFFloat"/>
+          <field accessType="inputOnly" name="set_uTessellation" type="SFInt32"/>
+          <field accessType="outputOnly" name="uTessellation_changed" type="SFInt32"/>
+          <field accessType="inputOnly" name="set_vTessellation" type="SFInt32"/>
+          <field accessType="outputOnly" name="vTessellation_changed" type="SFInt32"/>
+          <field accessType="initializeOnly" name="closedSurface" type="SFBool"/>
+          <IS>
+            <connect nodeField="controlPoint" protoField="controlPoint"/>
+            <connect nodeField="uTessellation" protoField="uTessellation"/>
+            <connect nodeField="vTessellation" protoField="vTessellation"/>
+            <connect nodeField="weight" protoField="weight"/>
+            <connect nodeField="uDimension" protoField="uDimension"/>
+            <connect nodeField="uKnot" protoField="uKnot"/>
+            <connect nodeField="uOrder" protoField="uOrder"/>
+            <connect nodeField="vDimension" protoField="vDimension"/>
+            <connect nodeField="vKnot" protoField="vKnot"/>
+            <connect nodeField="vOrder" protoField="vOrder"/>
+            <connect nodeField="set_controlPoint" protoField="set_controlPoint"/>
+            <connect nodeField="controlPoint_changed" protoField="controlPoint_changed"/>
+            <connect nodeField="set_weight" protoField="set_weight"/>
+            <connect nodeField="weight_changed" protoField="weight_changed"/>
+            <connect nodeField="set_uTessellation" protoField="set_uTessellation"/>
+            <connect nodeField="uTessellation_changed" protoField="uTessellation_changed"/>
+            <connect nodeField="set_vTessellation" protoField="set_vTessellation"/>
+            <connect nodeField="vTessellation_changed" protoField="vTessellation_changed"/>
+            <connect nodeField="closedSurface" protoField="closedSurface"/>
+          </IS>
+        </Script>
+        <ROUTE fromField="coord" fromNode="NurbsSurface"
+          toField="set_point" toNode="nscoord"/>
+        <ROUTE fromField="coordIndex" fromNode="NurbsSurface"
+          toField="set_coordIndex" toNode="nsfaceset"/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="NurbsTextureSurface">
+      <ProtoInterface>
+        <field accessType="inputOutput" name="uTessellation"
+          type="SFInt32" value="0"/>
+        <field accessType="inputOutput" name="texCoord" type="SFNode"/>
+        <field accessType="initializeOnly" name="vOrder" type="SFInt32" value="3"/>
+        <field accessType="initializeOnly" name="vKnot" type="MFFloat"/>
+        <field accessType="inputOutput" name="weight" type="MFFloat"/>
+        <field accessType="initializeOnly" name="uKnot" type="MFFloat"/>
+        <field accessType="inputOutput" name="controlPoint" type="MFVec3f"/>
+        <field accessType="inputOutput" name="vTessellation"
+          type="SFInt32" value="0"/>
+        <field accessType="initializeOnly" name="uDimension"
+          type="SFInt32" value="0"/>
+        <field accessType="initializeOnly" name="solid" type="SFBool" value="true"/>
+        <field accessType="initializeOnly" name="ccw" type="SFBool" value="true"/>
+        <field accessType="initializeOnly" name="uOrder" type="SFInt32" value="3"/>
+        <field accessType="initializeOnly" name="vDimension"
+          type="SFInt32" value="0"/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedLineSet DEF="NurbsSurfaceIls" coordIndex=" 1 2 3 -1 5 6 7 -1">
+          <Coordinate DEF="NurbsSurfaceIlsCoordinate">
+            <IS>
+              <connect nodeField="point" protoField="controlPoint"/>
+            </IS>
+          </Coordinate>
+        </IndexedLineSet>
+        <Script DEF="NurbsSurfaceScript" directOutput="true">
+          <field accessType="initializeOnly" name="uDimension" type="SFInt32"/>
+          <field accessType="initializeOnly" name="vDimension" type="SFInt32"/>
+          <field accessType="initializeOnly" name="ils" type="SFNode">
+            <IndexedLineSet USE="NurbsSurfaceIls"/>
+          </field>
+          <IS>
+            <connect nodeField="uDimension" protoField="uDimension"/>
+            <connect nodeField="vDimension" protoField="vDimension"/>
+</IS><![CDATA[javascript:
+        function initialize() {
+			//Browser.print('Sorry, your browser does not support NURBS nodes');
+			var u,v, counter, number;
+			counter = 0;
+			number = 0;
+			var ind = new MFInt32();
+			ind.length = 2*vDimension * uDimension + uDimension + vDimension;
+
+			for(v=0; v<vDimension;v++)
+			{
+				for(u=0; u<uDimension;u++)
+				{
+					ind[counter] = number;
+					counter++;
+					number++;
+				}
+				ind[counter] = -1; counter++;
+			}
+		
+			for(u=0; u<uDimension;u++)
+			{
+				for(v=0; v<vDimension;v++)
+				{
+					ind[counter] = v*uDimension + u;
+					counter++;
+					number++;
+				}
+				ind[counter] = -1; counter++;
+			}
+			
+			ils.set_coordIndex = ind;
+
+		}]]></Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name="TrimmedSurface"><!--No attributes, node-type
+        children and events only.--><ProtoBody>
+        <Group/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <NavigationInfo type="&quot;EXAMINE&quot; &quot;ANY&quot;"/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor="0.8 0.6 0.2"/>
+      </Appearance>
+      <Text string="&quot;NurbsPrototypes is a&quot;&#10;&quot;developmental file for&quot;&#10;&quot;Nurbs implementations.&quot;">
+        <FontStyle justify="&quot;MIDDLE&quot; &quot;MIDDLE&quot;" size="0.7"/>
+      </Text>
+    </Shape>
+  </Scene>
+</X3D>

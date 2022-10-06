@@ -1,0 +1,27 @@
+  initialize ():
+  changedText =[ "EcmaScript initialize () with eventOut control", "has reinitialized the changedText node.", "", "Please click text for additional results." ]
+  changedPosition =0 3 0
+  changedColor =0.8 0.8 0.2
+  ==============================
+  touchEvent startTime = 989792862.4649434
+  mode = 2
+  changedText     = [ "User click on text seen by EcmaScript", "function via Script node eventIn.", "Text & position successfully changed", "via EventOut control.  Test passed." ]
+  changedPosition = 0 -1 0
+  changedColor    = 0.2 0.8 0.2
+  ==============================
+  touchEvent startTime = 989792864.6806003
+  mode = 0
+  changedText     = [ "Default text in VRML scene will be replaced by", "EcmaScript initialize() in Script using EventOut control.", "This text appears first, if EcmaScript initialization fails.", "" ]
+  changedPosition = 0 1 0
+  changedColor    = 0.8 0.2 0.2
+  ==============================
+  touchEvent startTime = 989792866.4402688
+  mode = 1
+  initialize ():
+  changedText =[ "EcmaScript initialize () with eventOut control", "has reinitialized the changedText node.", "", "Please click text for additional results." ]
+  changedPosition =0 3 0
+  changedColor =0.8 0.8 0.2
+  ==============================
+  script shutdown.
+  ==============================
+

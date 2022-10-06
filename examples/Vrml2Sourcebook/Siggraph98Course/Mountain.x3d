@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interactive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Mountain.x3d' name='title'/>
+    <meta content='Simple mountain illustrates the use of an ElevationGrid to build a mountain. Use a very small grid so the code is easy to read and modify.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/mount.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0206.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Mountain.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1997, Andrea L. Ames, David R. Nadeau, John L. Moreland"' title='Simple mountain'/>
+    <Viewpoint description='Entry view' orientation='1.0 0.0 0.0 -0.2' position='4.5 4.0 15.0'/>
+    <NavigationInfo/>
+    <Shape>
+      <Appearance>
+        <Material/>
+      </Appearance>
+      <ElevationGrid height='0.0 0.0 0.5 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 2.5 0.5 0.0 0.0 0.0 0.0 0.0 0.5 0.5 3.0 1.0 0.5 0.0 1.0 0.0 0.0 0.5 2.0 4.5 2.5 1.0 1.5 0.5 1.0 2.5 3.0 4.5 5.5 3.5 3.0 1.0 0.0 0.5 2.0 2.0 2.5 3.5 4.0 2.0 0.5 0.0 0.0 0.0 0.5 1.5 1.0 2.0 3.0 1.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 2.0 1.5 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.5 0.0 0.0' solid='false' xDimension='9' zDimension='9'/>
+    </Shape>
+  </Scene>
+</X3D>

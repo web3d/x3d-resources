@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='CADGeometry'/>
+    <component level='1' name='H-Anim'/>
+    <unit category='length' conversionFactor='0.9144' name='Yards'/>
+    <unit category='angle' conversionFactor='0.0174532925167' name='Degrees'/>
+    <meta content='TestJsonEncoding.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='29 March 2015' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Test scene to ensure that X3dToJson xslt stylesheet translator properly converts X3D source into JavaScript Object Notation (JSON).' name='description'/>
+    <meta content='TestJsonEncoding.json' name='reference'/>
+    <meta content='https://www.web3d.org/wiki/index.php/X3D_JSON_Encoding' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/TestJsonEncoding.x3d' name='identifier'/>
+    <meta content='https://www.web3d.org/x3d/stylesheets/X3dToJson.xslt' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/stylesheets/X3dToJson.html' name='reference'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- excerpted from HelloWorld.x3d -->
+    <WorldInfo title='TestJsonEncoding.x3d'/>
+    <Group>
+      <Viewpoint DEF='ViewUpClose' centerOfRotation='0 -1 0' description='Hello world!' position='0 -1 7'/>
+      <Transform rotation='0 1 0 3'>
+        <Shape>
+          <Sphere/>
+          <Appearance>
+            <!-- Test leading zeroes inserted before (and trailing zeroes inserted after) decimal points: diffuseColor='.1 0.5 1.' -->
+            <Material DEF='MaterialLightBlue' diffuseColor='.1 0.5 1.'/>
+            <ImageTexture DEF='ImageCloudlessEarth' url='"earth-topo.png" "earth-topo.jpg" "earth-topo-small.gif" "https://www.web3d.org/x3d/content/examples/Basic/earth-topo.png" "https://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg" "https://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+      <Transform translation='-.1 -2 -.2'>
+        <!-- Test leading zeroes inserted between -. values: translation='-.1 -2 -.2' -->
+        <Shape>
+          <Text DEF='TextMessage' string='"Hello" "JSON!"'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+          </Text>
+          <Appearance>
+            <Material USE='MaterialLightBlue'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

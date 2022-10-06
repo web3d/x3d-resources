@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <script async="" src="X3dWeatherGlobeOriginal/globe-weather_files/weather.json"></script>
+        <title>X3D Weather Globe</title>
+        <!-- Numbered X3DOM release versions: https://www.x3dom.org/download -->
+        <!-- Developer X3DOM release version: https://www.x3dom.org/download/dev -->
+        <link rel="stylesheet" type="text/css" href="https://x3dom.org/download/dev/x3dom.css"/>
+        <script type="text/javascript"          src="https://x3dom.org/download/dev/x3dom-full.js"/>
+    <!--<script src="X3dWeatherGlobeOriginal/globe-weather_files/jquery-1.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="X3dWeatherGlobeOriginal/globe-weather_files/globe-weather.css">
+        <script src="X3dWeatherGlobeOriginal/globe-weather_files/util2.js"></script>
+        <script src="X3dWeatherGlobeOriginal/globe-weather_files/space2.js"></script>
+        <meta content="https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserExperienceUX/X3dWeatherGlobe.html" name="identifier"/>
+    </head>
+
+
+    <body onload="initLocation()">
+        <div class="main-content">
+            <div class="content-text">
+                <h1 class="title">X3D Weather Globe</h1>
+                <div class="description">Drag the globe with your cursor. The weather in the city closest to the center point will be displayed. The <i>Reset View</i> button returns the globe to 0<sup>o</sup> latitute, 0<sup>o</sup> longitude.</div>
+            </div>
+            <div class="content-3d">
+                <div class="content3d-top"></div>
+                <div class="content3d-scene">
+                    
+                    <!-- ================================= -->
+                    <X3D version="4.0" profile="Immersive" id="model" showstat="false" showlog="false" x="0px" y="0px" width="100%" height="100%"><!-- width="240px" height="200px" -->
+                        <head>
+                            <meta content="X3dWeatherGlobe.html" name="title"/>
+                            <meta content="X3DOM to dynamic data" name="description"/>
+                            <meta content="Matthew Bock" name="creator"/>
+                            <meta content="Nicholas Polys" name="creator"/>
+                            <meta content="Don Brutzman" name="translator"/>
+                            <meta content="Summer 2013" name="created"/>
+                            <meta content="June 2014" name="published"/>
+                            <meta content="30 October 2021" name="modified"/>
+                            <meta content="X3dWeatherGlobeExemplarWeb3D2021.pdf" name="reference"/>
+                            <meta content="X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit" name="generator"/>
+                            <meta content="https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserExperienceUX/X3dWeatherGlobe.html" name="identifier"/>
+                            <meta content="Apache 2 license.html" name="license"/>
+                        </head>
+
+                        <Scene id="scene">
+                            <WorldInfo title='X3D Weather Globe'/>
+                            <NavigationInfo speed=".17" headlight="true" type='"EXAMINE" "ANY"' avatarSize="0.25 1.6 0.75" transitionTime="1"></NavigationInfo>
+                            <Viewpoint id="mainView" description="Default View" position="0 0 10" nearDistance="-1" farDistance="-1"></Viewpoint>
+                            <!--		<background backUrl='res/img/stars.png' bottomUrl='res/img/stars.png' frontUrl='res/img/stars.png' leftUrl='res/img/stars.png' 
+                                                                                    rightUrl='res/img/stars.png' topUrl='res/img/stars.png'></background> -->
+                            <Transform DEF="dad_Sphere1">
+                                <LOD DEF="LOD3" range="4 6">
+                                    <Group>
+                                        <Shape>
+                                            <Appearance>
+                                                <ImageTexture id="earthTexture" url='"X3dWeatherGlobeOriginal/res/img/world.topo.bathy.200404.3x5400x2700.jpg"
+                "https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserInterface/X3dWeatherGlobeOriginal/res/img/X3dWeatherGlobeOriginal/res/img/world.topo.bathy.200404.3x5400x2700.jpg"'>                                                </ImageTexture>
+                                            </Appearance>
+                                            <Sphere DEF="obj" radius="3" onclick="reportCoords(event)" solid="true"></Sphere>
+                                        </Shape>
+                                    </Group>
+                                    <Group>
+                                        <Shape>
+                                            <Appearance>
+                                                <ImageTexture id="earthTexture2" url='"X3dWeatherGlobeOriginal/res/img/world.topo.bathy.200404.3x5400x2700_1400.jpg"
+                "https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserInterface/X3dWeatherGlobeOriginal/res/img/world.topo.bathy.200404.3x5400x2700_1400.jpg"'></ImageTexture>
+                                            </Appearance>
+                                            <Sphere USE="obj"></Sphere>
+                                        </Shape>
+                                    </Group>
+                                    <Group>
+                                        <Shape>
+                                            <Appearance>
+                                                <ImageTexture id="earthTexture3" url='"X3dWeatherGlobeOriginal/res/img/world.topo.bathy.200404.3x5400x2700_800.jpg"
+                "https://x3dgraphics.com/examples/X3dForAdvancedModeling/UserInterface/X3dWeatherGlobeOriginal/res/img/world.topo.bathy.200404.3x5400x2700_800.jpg"'></ImageTexture>
+                                            </Appearance>
+                                            <Sphere USE="obj"></Sphere>
+                                        </Shape>
+                                    </Group>
+                                </LOD>
+                            </Transform>
+                            <!--	since we are not using the TouchSensor hitPoint, animating the sphere w/ X3D events doesn't seem to work !
+                                            <timeSensor DEF='Wizard' cycleInterval='256' loop='true'></timeSensor>
+                                    <orientationInterpolator DEF='Wizard_rot0' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0 0 1 0 1.571 0 1 0 3.142 0 1 0 4.712 0 1 0 6.283'></orientationInterpolator>
+                                    <ROUTE fromNode='Wizard' fromField='fraction_changed' toNode='Wizard_rot0' toField='set_fraction'></ROUTE>
+                                    <ROUTE fromNode='Wizard_rot0' fromField='value_changed' toNode='dad_Sphere1' toField='set_rotation'></ROUTE>
+                            -->	
+                            <Billboard DEF="Group1" axisOfRotation="0 0 0">
+                                <Transform DEF="dad_Text1" translation="0 -.4 0">
+                                    <Shape DEF="Text1">
+                                        <Appearance>
+                                            <Material DEF="Shiny_White" diffuseColor="0 0 0" shininess="0.1" specularColor="1 1 1" ambientIntensity="0.2" emissiveColor="0 0 0"></Material>
+                                        </Appearance>
+                                        <Text DEF="GeoText1" string="&quot;Zoom&quot; &quot;Back In!&quot;" solid="true">
+                                            <FontStyle family="&quot;SERIF&quot;" justify="&quot;MIDDLE&quot; &quot;BEGIN&quot;"></FontStyle>
+                                        </Text>
+                                    </Shape>
+                                </Transform>
+                            </Billboard>
+                        </Scene>
+                    </X3D>
+                    <!-- ================================= -->
+                    <canvas class="x3dom-canvas" id="x3dom-model-canvas" style="width: 240px; height: 200px;" tabindex="0"></canvas>
+                    <div id="x3dom-state-viewer" style="display: none;">
+                                <div class="x3dom-states-head"><span class="x3dom-states-head2">
+                            
+                            </span>
+                                </div>
+                        <ul class="x3dom-states-list">
+                            <li class="x3dom-states-item">
+                                <div class="x3dom-states-item-title">FPS</div>
+                                <div class="x3dom-states-item-value">0.00</div>
+                            </li>
+                            <li class="x3dom-states-item">
+                                <div class="x3dom-states-item-title">ANIM</div>
+                                <div class="x3dom-states-item-value">0.00</div>
+                            </li>
+                            <li class="x3dom-states-item">
+                                <div class="x3dom-states-item-title">TRAVERSE</div>
+                                <div class="x3dom-states-item-value">0.00</div>
+                            </li>
+                            <li class="x3dom-states-item">
+                                <div class="x3dom-states-item-title">SORT</div>
+                                <div class="x3dom-states-item-value">0.00</div>
+                            </li>
+                            <li class="x3dom-states-item">
+                                <div class="x3dom-states-item-title">RENDER</div>
+                                <div class="x3dom-states-item-value">2.00</div>
+                            </li>
+                            <li class="x3dom-states-item">
+                                <div class="x3dom-states-item-title">DRAW</div>
+                                <div class="x3dom-states-item-value">1.00</div>
+                            </li>
+                        </ul>
+                        <ul class="x3dom-states-list">
+                                <li class="x3dom-states-item">
+                                    <div class="x3dom-states-item-title">#NODES:</div>
+                                    <div class="x3dom-states-item-value">8</div></li>
+                                <li class="x3dom-states-item">
+                                    <div class="x3dom-states-item-title">#SHAPES:</div>
+                                    <div class="x3dom-states-item-value">2</div>
+                                </li>
+                                <li class="x3dom-states-item">
+                                    <div class="x3dom-states-item-title">#DRAWS:</div>
+                                    <div class="x3dom-states-item-value">2</div>
+                                </li>
+                                <li class="x3dom-states-item">
+                                    <div class="x3dom-states-item-title">#POINTS:</div>
+                                    <div class="x3dom-states-item-value">629</div>
+                                </li>
+                                <li class="x3dom-states-item">
+                                    <div class="x3dom-states-item-title">#TRIS:</div>
+                                    <div class="x3dom-states-item-value">1,154</div>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="x3dom-progress" style="display: none;">
+                        <strong>Loading: 0</strong>
+                        <span style="width: 25%;"> </span>
+                    </div>
+                </div>
+                <div class="content3d-bottom">
+                    <button id="resetViewButton" onclick="resetView(this); return false;">Reset View</button>
+                </div>
+            </div>
+            <div id="content2">
+                <div id="dataDump">Initializing...</div>
+            </div>
+            <div>
+
+            </div>
+                
+        </div>
+        <div id="x3dom_logdiv" class="x3dom-logContainer" style="clear: both; display: none;">
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: Time for setup and init of GL element no. 0: 86 ms.</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate FogBindable null/defaultX3DFogNode</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: register FogBindable null/defaultX3DFogNode</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: create new Fog for X3DFogNode-stack</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate ViewpointBindable mainView/Default View</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate first X3DViewpointNode for X3DViewpointNode-stack</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate BackgroundBindable null/defaultX3DBackgroundNode</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: register BackgroundBindable null/defaultX3DBackgroundNode</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: create new Background for X3DBackgroundNode-stack</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: System ready.</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate NavigationInfoBindable null/</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate first X3DNavigationInfoNode for X3DNavigationInfoNode-stack</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: activate EnvironmentBindable null/defaultX3DEnvironmentNode</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: register EnvironmentBindable null/defaultX3DEnvironmentNode</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: create new Environment for X3DEnvironmentNode-stack</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: register ViewpointBindable mainView/Default View</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: register NavigationInfoBindable null/</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: NavType: examine</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: addEventListener for X3D.onDOMNodeInserted</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: addEventListener for X3D.onDOMNodeRemoved</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: 
+                Vendor: Mozilla, Renderer: ANGLE (Intel(R) HD Graphics Direct3D11 vs_5_0 ps_5_0), Version: WebGL 1.0, ShadingLangV.: WebGL GLSL ES 1.0, MSAA samples: 4
+                Extensions: ANGLE_instanced_arrays,EXT_blend_minmax,EXT_color_buffer_half_float,EXT_float_blend,EXT_frag_depth,EXT_shader_texture_lod,EXT_sRGB,EXT_texture_compression_bptc,EXT_texture_compression_rgtc,EXT_texture_filter_anisotropic,OES_element_index_uint,OES_fbo_render_mipmap,OES_standard_derivatives,OES_texture_float,OES_texture_float_linear,OES_texture_half_float,OES_texture_half_float_linear,OES_vertex_array_object,WEBGL_color_buffer_float,WEBGL_compressed_texture_s3tc,WEBGL_compressed_texture_s3tc_srgb,WEBGL_debug_renderer_info,WEBGL_debug_shaders,WEBGL_depth_texture,WEBGL_draw_buffers,WEBGL_lose_context</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: Initializing X3DCanvas for [x3dom-model-canvas]</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: Creating canvas for (X)3D element...</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: Found 1 X3D and 0 (experimental) WebSG nodes...</p>
+            <p style="margin: 0px; color: rgb(0, 255, 0);">INFO: X3DOM version 1.5.1, Revison <a href="https://github.com/x3dom/x3dom/tree/c0f47cbb994175bc43240b8de110f51628c95b6a">c0f47cbb994175bc43240b8de110f51628c95b6a</a>, Date Wed Oct 23 16:23:43 2013 +0200</p>
+        </div>
+    </body>
+</html>

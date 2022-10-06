@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <meta content='WorldInfoExampleMetadataSetX3D4.x3d' name='title'/>
+    <meta content='Test target for python x3d package development. Can x3d.py package generate this valid X3D file? This scene contains MetadataSet with a non-null metadata field.' name='description'/>
+    <meta content='Metadata nodes are not allowed at top level of scene in X3D3, but one is allowed as field within WorldInfo' name='warning'/>
+    <meta content='WorldInfoExampleMetadataSetX3D3.x3d' name='reference'/>
+    <meta content='Original name MetadataSetWithMetadata.x3d' name='info'/>
+    <meta content='Vincent Marchetti' name='creator'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='16 November 2021' name='created'/>
+    <meta content='2 February 2022' name='revised'/>
+    <meta content='https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter15Metadata/WorldInfoExampleMetadataSetX3D4.x3d' name='identifier'/>
+    <meta content='https://creativecommons.org/licenses/by/4.0' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='WorldInfoExampleMetadataSetX3D4.x3d Example Scene'>
+      <!-- WorldInfo single available child field of interest is 'metadata' so contained MetadataSet must have containerField='metadata' which IS NOT default in X3D4 -->
+      <MetadataSet containerField='metadata' name='birthday' reference='http://www.americaslibrary.gov/jb/colonial/jb_colonial_washingtn_2.html'>
+        <MetadataString containerField='metadata' name='calendar' reference='this node describes nature of parent node, and is not intended as a data value' value='"Julian"'/>
+        <!-- MetadataSet next field of interest is 'value' and so contained Metadata nodes must have containerField='value' which IS the default in X3D4' -->
+        <MetadataInteger name='day' value='11'/>
+        <MetadataInteger name='month' value='2'/>
+        <MetadataInteger name='year' value='1731'/>
+      </MetadataSet>
+    </WorldInfo>
+    <Background skyColor='0 0.439216 0.760784'/>
+    <Viewpoint description='View scene source to see metadata examples' position='0 0 12'/>
+    <Anchor description='Load scene index page' parameter='"target=_blank"' url='"WorldInfoExampleMetadataSetX3D4.html" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter15Metadata/WorldInfoExampleMetadataSetX3D4.html"'>
+      <Shape>
+        <Text string='"View scene source" "to see" "WorldInfoExampleMetadataSetX3D4"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 0.039216 0.992157'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

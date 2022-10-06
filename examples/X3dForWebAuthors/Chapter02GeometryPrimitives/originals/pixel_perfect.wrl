@@ -1,0 +1,201 @@
+#VRML V2.0 utf8
+
+#Cosmo Worlds V2.0
+
+Background {
+  skyColor	1 1 1
+}
+DEF home Viewpoint {
+	position 0 1.25 5
+	orientation 0 1 0 .35
+	fieldOfView 1.4
+	description "home"
+}
+DEF byz Viewpoint {
+  position	0 1  2.829157172164	#this is where you input Zdist
+  fieldOfView	0.785398      	#the FOV used in the equation
+  description	"Byzantine Astronomical Data"
+}
+Transform {
+  children	[
+	Shape {
+    appearance	Appearance {
+      texture	ImageTexture {
+	repeatS	FALSE
+	repeatT	FALSE
+	url	"byz_small.jpg"
+      }
+
+      textureTransform DEF tt	TextureTransform {
+	translation	0 0
+	rotation	0
+	center	0 0
+      }
+
+    }
+
+    geometry	DEF page0 IndexedFaceSet {
+      coord	Coordinate {
+	point	[ -1 -1 0,   		#here is y2
+		  -1 1 0,  			#here is y1
+		  1 1 0,
+		  1 -1 0 ]
+      }
+
+      coordIndex	[ 0, 1, 2, 3, -1 ]
+      texCoord	TextureCoordinate {
+	point	[ 0 0.5,
+		  0 1,
+		  1 1,
+		  1 0.5 ]
+      }
+
+      solid	FALSE
+      normalIndex	[  ]
+      texCoordIndex	[ 0, 1, 2, 3, -1 ]
+    }
+
+  }
+	DEF byz_touch TouchSensor {}
+  ]
+  translation	0 1 0
+}
+DEF Slider1 Transform {
+  children	[
+    DEF Knob_Slide PlaneSensor {
+      minPosition	0 0
+      maxPosition	0 0.07
+	offset 0 0.07 0
+    }
+    DEF Knob_Move Transform {
+      children	DEF Knob Shape {
+	appearance	Appearance {
+	  material	DEF Knob_Color Material {
+	    ambientIntensity	0.823529
+	    diffuseColor	0.18 0.18 0.18
+	    emissiveColor	1 0.7 0.1
+	  }
+
+	}
+
+	geometry	DEF _4 IndexedFaceSet {
+	  coord	Coordinate {
+	    point	[ -0.013638 -0.04 0.001197,
+		      0.013638 -0.04 0.001197,
+		      0.013638 -0.03 0.001197,
+		      -0.013638 -0.03 0.001197,
+		      -0.009802 -0.037032 0.0184,
+		      0.009802 -0.037032 0.0184,
+		      0.009802 -0.032968 0.0184,
+		      -0.009802 -0.032968 0.0184 ]
+	  }
+
+	  coordIndex	[ 4, 5, 6, 7, -1, 7, 3, 0,
+		    4, -1, 3, 7, 6, 2, -1, 4,
+		    0, 1, 5, -1, 5, 1, 2, 6,
+		    -1 ]
+	  normalIndex	[  ]
+	  texCoordIndex	[  ]
+	}
+
+      }
+
+      translation	0 0.07 0
+    }
+    DEF Slot Shape {
+      appearance	Appearance {
+	material	Material {
+	  ambientIntensity	0
+	  diffuseColor	0 0 0
+	}
+
+      }
+
+      geometry	DEF _5 IndexedFaceSet {
+	coord	Coordinate {
+	  point	[ -0.002569 -0.044933 0,
+		    0.002569 -0.044933 0,
+		    0.002569 0.044933 0,
+		    -0.002569 0.044933 0 ]
+	}
+
+	coordIndex	[ 2, 3, 0, 1, -1 ]
+	normalIndex	[  ]
+	texCoordIndex	[  ]
+      }
+
+    }
+    DEF Metal Shape {
+      appearance	Appearance {
+	material	Material {
+	  ambientIntensity	0.179104
+	  diffuseColor	0.712766 0.712766 0.712766
+	}
+
+      }
+
+      geometry	DEF _6 IndexedFaceSet {
+	coord	Coordinate {
+	  point	[ -0.002569 -0.044933 0,
+		    0.002569 -0.044933 0,
+		    0.002569 0.044933 0,
+		    -0.002569 0.044933 0,
+		    -0.007707 -0.05 0,
+		    0.007707 -0.05 0,
+		    0.007707 0.05 0,
+		    -0.007707 0.05 0 ]
+	}
+
+	coordIndex	[ 4, 0, 3, 7, -1, 6, 7, 3,
+		  2, -1, 5, 6, 2, 1, -1, 1,
+		  0, 4, 5, -1 ]
+	normalIndex	[  ]
+	texCoordIndex	[  ]
+      }
+
+    }
+    DEF Script0 Script {
+      eventIn      SFVec3f	trans_in
+      field        SFFloat	minTranslation	0
+      field        SFFloat	maxTranslation	1
+      field        SFColor	knobColor0	0.18 0.18 0.18
+      field        SFColor	knobColor1	1 0.7 0.1
+      field        SFColor	knobBuff	0 0 0
+	eventOut	 SFColor	color_out
+	eventOut	 SFVec2f	trans_out
+	field		 SFVec2f	trans_buff 0 0
+	eventIn	 SFBool	byz_trigger
+	field		 SFBool	byz_state FALSE
+	eventOut	 SFBool	byz_stateout
+
+      url	"vrmlscript:
+  function trans_in(v){
+   V = (v[1]/.07);
+   print(v[1]);
+   trans_buff[0] = 0;
+   trans_buff[1] = -.5*(1-V);
+   trans_out = trans_buff;
+   for(i=0;i<3;i++){
+    knobBuff[i] = knobColor0[i]+((knobColor1[i]-knobColor0[i])*V);
+   }
+   color_out = knobBuff;
+   
+  }
+  function byz_trigger(v){
+	if (v) {
+	byz_state = !byz_state;
+	byz_stateout = byz_state;
+	}
+  }
+ "
+    }
+  ]
+  translation	1.10175 1.20236 0.11536
+  scale	7.4608 7.4608 7.4608
+}
+ROUTE Knob_Slide.translation_changed TO Knob_Move.set_translation
+ROUTE Knob_Slide.translation_changed TO Script0.trans_in
+ROUTE Script0.trans_out TO tt.set_translation
+ROUTE Script0.color_out TO Knob_Color.set_emissiveColor
+ROUTE byz_touch.isActive TO Script0.byz_trigger
+ROUTE Script0.byz_stateout TO byz.set_bind

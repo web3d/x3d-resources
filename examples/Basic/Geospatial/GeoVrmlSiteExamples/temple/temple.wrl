@@ -1,0 +1,514 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO GeoLocation [
+  field SFNode   geoOrigin
+  field MFString geoSystem
+  field SFString geoCoords
+  field MFNode   children
+] "http://www.ai.sri.com/VRMLSets/v1.0/protos/GeoLocation/GeoLocation.wrl"
+
+PROTO GeoOrigin [
+  exposedField MFString geoSystem [ "UTM" ]
+  exposedField SFString geoCoords "Z11 8167780 258126 0"
+] { Group{} }
+
+NavigationInfo {
+   avatarSize [ 0.000001 0.000001 0.000001 ]
+   speed 0.0001
+   type [ "EXAMINE" "ANY" ]
+}
+
+Viewpoint {
+   position -0.0000023708 -0.000003422 .0000138728
+   orientation .827405 -.5579944 .0635881 .273737
+   description "Temple"
+}
+
+Background {
+  skyColor    1 1 1
+  groundColor 1 1 1
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258115.0 2.5"
+  geoOrigin DEF ORIGIN GeoOrigin { 
+     geoSystem [ "UTM" ]
+     geoCoords "Z11 8.16778e+06 258126 0"
+  }
+  children Transform { 
+     children [
+        DEF COLUMN Shape {
+          appearance Appearance {
+            texture ImageTexture { url "stone6.gif" }
+            material Material { diffuseColor 1 .9 .8 }
+          }
+          geometry Cylinder { radius 0.6 height 5 }
+      }
+    ] 
+  }
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167773.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167775.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167777.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167781.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167783.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167785.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258115.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167773.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167775.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167777.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167781.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167783.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167785.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258117.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258119.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258119.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258119.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258119.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258121.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258121.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258121.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258121.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258123.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258123.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258123.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258123.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258125.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258125.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258125.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258125.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258127.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258127.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258127.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258127.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258129.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258129.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258129.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258129.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258131.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258131.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258131.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258131.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167773.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167775.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167777.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167781.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167783.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167785.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258133.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167769.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167771.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167773.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167775.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167777.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167781.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167783.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167785.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167787.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167789.0 258135.0 2.5"
+  geoOrigin USE ORIGIN
+  children USE COLUMN
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258125.0 -0.5"
+  geoOrigin USE ORIGIN
+  children Transform {
+    rotation 0 1 0 0.13    children Shape {
+          appearance Appearance {
+            texture ImageTexture { url "stone5.gif" }
+            material Material { diffuseColor 1 1 1 }
+          }
+    geometry Box { size 22.0 1.0 22.0 }
+  }}
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258125.0 -1.5"
+  geoOrigin USE ORIGIN
+  children Transform {
+    rotation 0 1 0 0.13    children Shape {
+          appearance Appearance {
+            texture ImageTexture { url "stone5.gif" }
+            material Material { diffuseColor 1 1 1 }
+          }
+    geometry Box { size 24.0 1.0 24.0 }
+  }}
+}
+GeoLocation {
+  geoSystem [ "UTM" ]
+  geoCoords "Z11 8167779.0 258125.0 -2.5"
+  geoOrigin USE ORIGIN
+  children Transform {
+    rotation 0 1 0 0.13    children Shape {
+          appearance Appearance {
+            texture ImageTexture { url "stone5.gif" }
+            material Material { diffuseColor 1 1 1 }
+          }
+    geometry Box { size 26.0 1.0 26.0 }
+  }}
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='LinePlot.x3d' name='title'/>
+    <meta content='Building shapes out of points, lines, and faces: IndexedLineSet example.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/lnplot.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0186.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/LinePlot.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='LinePlot.x3d'/>
+    <Viewpoint description='Entry view'/>
+    <NavigationInfo/>
+    <Transform translation='-5.0 -4.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 1.0 1.0' emissiveColor='1.0 1.0 1.0'/>
+        </Appearance>
+        <IndexedLineSet coordIndex='0 1 -1 0 2 -1'>
+          <Coordinate point='0.0 0.0 0.0 10.0 0.0 0.0 0.0 8.0 0.0'/>
+        </IndexedLineSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.0 1.0 0.0' emissiveColor='0.0 1.0 0.0'/>
+        </Appearance>
+        <IndexedLineSet coordIndex='0 1 2 3 4 5 6 7 8 9 -1'>
+          <Coordinate point='1.0 1.0 0.0 2.0 4.0 0.0 3.0 5.0 0.0 4.0 4.0 0.0 5.0 6.0 0.0 6.0 7.0 0.0 7.0 5.0 0.0 8.0 6.0 0.0 9.0 4.0 0.0 10.0 3.0 0.0'/>
+        </IndexedLineSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1.0 1.0 0.0' emissiveColor='1.0 1.0 0.0'/>
+        </Appearance>
+        <IndexedLineSet coordIndex='0 1 2 3 4 5 6 7 8 9 -1'>
+          <Coordinate point='1.0 3.0 0.0 2.0 2.0 0.0 3.0 2.0 0.0 4.0 1.0 0.0 5.0 2.0 0.0 6.0 4.0 0.0 7.0 3.0 0.0 8.0 5.0 0.0 9.0 5.0 0.0 10.0 6.0 0.0'/>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

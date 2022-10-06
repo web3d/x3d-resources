@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='GraphicalLogAnalyzer.x3d' name='title'/>
+    <meta content='GraphicalLogAnalyzerDisplay.html' name='example'/>
+    <meta content='Graphical Log Analyzer (GLA) reads data from a file to create a visualization - load the GraphicalLogAnalyzerDisplay HTML page to test functionality.' name='description'/>
+    <meta content='requires External Authoring Interface (EAI) as implemented by Cortona. File read/display functionality only works when running in Netscape.' name='warning'/>
+    <meta content='Lindsey Lack' name='creator'/>
+    <meta content='2 May 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Under development. VRML 97 EAI support appears inconsistent for various browsers.' name='warning'/>
+    <meta content='GraphicalLogAnalyzer.ppt' name='reference'/>
+    <meta content='GraphicalLogAnalyzer.java' name='reference'/>
+    <meta content='javadoc/index.html' name='reference'/>
+    <meta content='GraphicalLogAnalyzerInputFile.txt' name='reference'/>
+    <meta content='GraphicalLogAnalyzerReadme.txt' name='reference'/>
+    <meta content='Some values used from CreateVrmlFromString sample by Vincent Gardet (modified by Curt Blais). Also see vrmlcity CreateVrmlFromString tutorial.' name='reference'/>
+    <meta content='../course/CreateVrmlFromStringRandomBoxes.wrl' name='reference'/>
+    <meta content='../course/CreateVrmlFromStringRandomBoxes.x3d' name='reference'/>
+    <meta content='../course/CreateVrmlFromStringRandomBoxes.html' name='reference'/>
+    <meta content='http://www.gardet.nom.fr/vrmlcity/tut_cvfs.htm' name='reference'/>
+    <meta content='http://www.parallelgraphics.com/developer/products/cortona/eai' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/ExternalAuthoringInterface/GraphicalLogAnalyzer.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='GraphicalLogAnalyzer.x3d'/>
+    <NavigationInfo headlight='false' speed='5'/>
+    <Background skyAngle='1.1 1.57' skyColor='.3 .3 1 .4 .4 1 .7 .7 .9'/>
+    <DirectionalLight direction='0 -.5 -1'/>
+    <DirectionalLight direction='-1 -.5 .5' intensity='.7'/>
+    <DirectionalLight direction='1 -.5 .5' intensity='.7'/>
+    <Viewpoint description='Entry' position='0 1.2 5'/>
+    <Viewpoint description='Overview' orientation='1 0 0 -.37' position='0 5 4'/>
+    <Viewpoint description='Down' orientation='1 0 0 -1.57' position='0 8 -2'/>
+    <Transform translation='0 0 -490'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='.25' diffuseColor='.14 .14 .16' shininess='.072' specularColor='.39 .46 .52' transparency='.1'/>
+        </Appearance>
+        <Box size='10 0.01 1000'/>
+      </Shape>
+    </Transform>
+    <Group>
+      <Transform DEF='ROOT'/>
+    </Group>
+  </Scene>
+</X3D>

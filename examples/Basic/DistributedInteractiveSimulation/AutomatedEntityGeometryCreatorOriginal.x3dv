@@ -1,0 +1,39 @@
+#X3D V3.2 utf8
+
+PROFILE Immersive
+COMPONENT xj3d_DIS:1
+
+DEF EntityManager DISEntityManager {
+   address "224.2.181.145"
+   port 62040
+   siteID 0
+   applicationID 1
+   mapping [
+      DISEntityTypeMapping {
+          domain 1
+          country 225
+          category 1
+          url ["usatank.x3d"]
+      }
+      DISEntityTypeMapping {
+          domain 3
+          country 225
+          category 4
+          url ["ddg.x3d"]
+      }
+      DISEntityTypeMapping {
+          domain 1
+          url ["land.x3d"]
+      }
+      DISEntityTypeMapping {
+          domain 3
+          url ["surface.x3d"]
+      }
+  ]
+}
+
+DEF EntityHolder Group {
+}
+
+ROUTE EntityManager.addedEntities TO EntityHolder.addChildren
+ROUTE EntityManager.removedEntities TO EntityHolder.removeChildren

@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> test-anchorviewpoint.xml  (X3dToHtml)</title>
+<meta name="generator"   content="X3dToHtml.xsl, http://www.web3D.org/TaskGroups/x3d/translation/X3dToHtml.xsl">
+</head>
+<body>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;!DOCTYPE X3D PUBLIC "http://www.web3D.org/TaskGroups/x3d/translation/x3d-compromise.dtd"
+                     "file://localhost/C:/www.web3D.org/TaskGroups/x3d/translation/x3d-compromise.dtd">
+&lt;<FONT color="NAVY">X3D</FONT>&gt;
+<blockquote>&lt;<FONT color="NAVY">head</font>&gt;
+<blockquote>&lt;<FONT color="NAVY">meta</FONT> <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">author</FONT><B>'</B> <FONT color="GREEN">content</FONT><B>='</B><FONT color="TEAL">http://www.itl.nist.gov/div897/ctg/vrml/members.html</FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT> <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">filename</FONT><B>'</B> <FONT color="GREEN">content</FONT><B>='</B><A href=" test-anchorviewpoint.xml "> test-anchorviewpoint.xml </A><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT>
+   <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">disclaimer</FONT><B>'</B>
+   <FONT color="GREEN">content</FONT><B>='</B><FONT color="TEAL">This file was provided by the National Institute of Standards and Technology, and is part of the   X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html  The information contained within this file   is provided for use in establishing comformance to the ISO VRML97 Specification.   Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology.   This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are   derived from it, and any modified versions bear some notice that they have been modified. </FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT> <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">translator</FONT><B>'</B> <FONT color="GREEN">content</FONT><B>='</B><FONT color="TEAL">Michael Kass, NIST</FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT> <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">revised</FONT><B>'</B> <FONT color="GREEN">content</FONT><B>='</B><FONT color="TEAL">21 January 2001</FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT>
+   <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">description</FONT><B>'</B>
+   <FONT color="GREEN">content</FONT><B>='</B><FONT color="TEAL">Test an Anchor with a Viewpoint. This test defines an Anchor node with a Shape node in its children (Text geometry).  It references the fiie "test-viewanchor.xml" its "url" field with user clicks on the text when the test is first started.  A new viewpoint cone and the box are displayed. </FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT>
+   <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">url</FONT><B>'</B>
+   <FONT color="GREEN">content</FONT><B>='</B><A href=" http://www.web3D.org/TaskGroups/x3d/translation/examples/Conformance/Grouping_Nodes/Anchor/test-anchorviewpoint.xml "> http://www.web3D.org/TaskGroups/x3d/translation/examples/Conformance/Grouping_Nodes/Anchor/test-anchorviewpoint.xml </A><B>'</B>/&gt;
+&lt;<FONT color="NAVY">meta</FONT>
+   <FONT color="GREEN">name</FONT><B>='</B><FONT color="TEAL">generator</FONT><B>'</B>
+   <FONT color="GREEN">content</FONT><B>='</B><FONT color="TEAL">X3D-Edit, http://www.web3D.org/TaskGroups/x3d/translation/README.X3D-Edit.html</FONT><B>'</B>/&gt;
+</blockquote>&lt;/<FONT color="NAVY">head</font>&gt;
+&lt;<FONT color="NAVY">Scene</FONT>&gt;
+<blockquote>&lt;<FONT color="NAVY">NavigationInfo</FONT>
+   <FONT color="GREEN">type</FONT><B>='</B><FONT color="TEAL">"EXAMINE" "WALK" "FLY" "ANY"</FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">Viewpoint</FONT>
+   <FONT color="GREEN">description</FONT><B>='</B><FONT color="TEAL">"Front view"</FONT><B>'</B>
+   <FONT color="GREEN">position</FONT><B>='</B><FONT color="TEAL">0 0 14</FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">Viewpoint</FONT>
+   <FONT color="GREEN">DEF</FONT><B>='</B><FONT color="TEAL">newview</FONT><B>'</B>
+   <FONT color="GREEN">description</FONT><B>='</B><FONT color="TEAL">"Front view of referenced file"</FONT><B>'</B>
+   <FONT color="GREEN">position</FONT><B>='</B><FONT color="TEAL">0 0 20</FONT><B>'</B>/&gt;
+&lt;<FONT color="NAVY">Anchor</FONT>
+   <FONT color="GREEN">description</FONT><B>='</B><FONT color="TEAL">"Anchor node with viewpoint"</FONT><B>'</B>
+   <FONT color="GREEN">url</FONT><B>='</B><A href="test-viewanchor.xml#newview">test-viewanchor.xml#newview</A><B>'</B>&gt;
+<blockquote>&lt;<FONT color="NAVY">Shape</FONT>&gt;
+<blockquote>&lt;<FONT color="NAVY">Appearance</FONT>&gt;
+<blockquote>&lt;<FONT color="NAVY">Material</FONT>
+   <FONT color="GREEN">diffuseColor</FONT><B>='</B><FONT color="TEAL">1 0 0</FONT><B>'</B>
+   <FONT color="GREEN">emissiveColor</FONT><B>='</B><FONT color="TEAL">1 0 0</FONT><B>'</B>/&gt;
+</blockquote>&lt;/<FONT color="NAVY">Appearance</FONT>&gt;
+&lt;<FONT color="NAVY">Text</FONT>
+   <FONT color="GREEN">string</FONT><B>='</B><FONT color="TEAL">"Please click here to see" "a red box and a red cone" "with a bound viewpoint"</FONT><B>'</B>&gt;
+<blockquote>&lt;<FONT color="NAVY">FontStyle</FONT>
+   <FONT color="GREEN">justify</FONT><B>='</B><FONT color="TEAL">"MIDDLE"</FONT><B>'</B>/&gt;
+</blockquote>&lt;/<FONT color="NAVY">Text</FONT>&gt;
+</blockquote>&lt;/<FONT color="NAVY">Shape</FONT>&gt;
+</blockquote>&lt;/<FONT color="NAVY">Anchor</FONT>&gt;
+</blockquote>&lt;/<FONT color="NAVY">Scene</FONT>&gt;
+</blockquote>&lt;/<FONT color="NAVY">X3D</FONT>&gt;
+
+&lt;!-- Tag color codes:  &lt;<font color="NAVY">NodeName</font><font color="GREEN"> attribute</font>='<font color="TEAL">value</font>'/&gt; --&gt;
+</pre>
+</body>
+</html>

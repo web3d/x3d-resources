@@ -1,0 +1,20 @@
+Log of model modifications:
+
+ 1. Canonicalization (C14N) of whitespace and default attribute values
+ 2. Changed version to 3.3
+ 3. Inserted X3D DOCTYPE
+ 4. Added WorldInfo with title, inserted xmlns:chimera namespace entries as Metadata nodes
+ 5. Added meta tags: title (file name), creator, description, identifier (url), references
+ 6. Removed empty <Transform/>
+ 7. X3D Canonicalization (C14N) of whitespace etc.
+ 8. X3D Tidy and X3D Validator checks seemed OK, minor touchups performed.
+ 9. X3D Tidy fixed <?xml version='1.0' encoding='UTF-8'?> (use apostrophes not quote marks).
+10. Why is DirectionalLight with intensity='0.0' present?  Has no effect.
+11. TODO fix: DEF/USE names have type ID/IDREF (NMTOKEN), cannot start with a numeral.
+12. Added meta Image reference to screen snapshot.
+
+Tool improvements needed:
+a. Chimera: X3D version 3.3, DOCTYPE, minor issues above.
+b. X3D Validator, X3D Tidy, X3D C14N: check legal DEF/USE values, NavInfo type default.
+
+Revised 2 APR 2017

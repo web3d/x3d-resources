@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "https://www.web3d.org/specifications/x3d-3.1.dtd">
+<X3D profile='Immersive' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.1.xsd'>
+  <head>
+    <meta content='CreateNodesECMAScript.x3d' name='title'/>
+    <meta content='This example shows how to use createX3DFromString to create nodes' name='description'/>
+    <meta content='X3D Specification' name='creator'/>
+    <meta content='23 February 2005' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='X3D ECMAScript Script Authoring Interface (SAI)' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/ScriptConformance/CreateNodesECMAScript.x3d' name='identifier'/>
+    <meta content='https://www.web3d.org/x3d/specifications/ISO-IEC-19777-1-X3DLanguageBindings-ECMAScript/Part1/examples.html#CreateNodes' name='reference'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='CreateNodesECMAScript.x3d'/>
+    <Transform DEF='HOLDER' translation='-2.0 0.0 0.0'/>
+    <Script DEF='SC'>
+      <field accessType='outputOnly' name='children' type='MFNode'>
+        <!-- initialization nodes (if any) go here -->
+      </field>
+      <![CDATA[
+ecmascript:
+
+function initialize() 
+{
+    // Create nodes directly in the parent scene
+    shape = Browser.currentScene.createNode('Shape');
+    box = Browser.currentScene.createNode('Box');
+    shape.geometry = box;
+    Browser.currentScene.RootNodes[0] = shape;
+
+    // Create children using the createX3DFromString service
+    vrmlCmd = 'PROFILE Interchange  Shape { geometry Sphere{} }'
+    tmpScene = Browser.createX3DFromString(vrmlCmd);
+    nodes = tmpScene.rootNodes;
+
+    // Nodes must be removed before adding to another scene
+    for(i=0; i < nodes.length; i++) {
+        tmpScene.removeRootNode(nodes[i]);
+    }
+
+    children = nodes;
+}
+]]>
+    </Script>
+    <ROUTE fromField='children' fromNode='SC' toField='children' toNode='HOLDER'/>
+  </Scene>
+</X3D>

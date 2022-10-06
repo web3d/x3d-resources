@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <!-- component Core level 2 in support of ExternProtoDeclare hack for KeySensor -->
+    <component level='2' name='Core'/>
+    <meta content='KeySensorActivationKeySwitchTestInteractive.x3d' name='title'/>
+    <meta content='A simple scene to show KeySensor functionality using Interactive Profile.' name='description'/>
+    <meta content='Mr. Philip Sand Hansel II, mr.phillip@home.com' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='8 July 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='This won&apos;t work because there is no KeySensor implementation yet! Prototype script (written in Java) or native node support for KeySensor is needed.' name='warning'/>
+    <meta content='enabled needs to be changed to exposedField once supported by Script capabilities' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/specification-2000july/part1/nodesDef.html#KeySensor' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/sai/javadoc/org/web3d/x3d/sai/Core/KeySensor.html' name='reference'/>
+    <meta content='KeySensor Interactive Profile' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/KeySensorActivationKeySwitchTestInteractive.x3d' name='identifier'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/ConformanceNist/Sensors/Keyboard/KeySensorActivationKeySwitchTestInteractive.x3d' name='reference'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='KeySensorActivationKeySwitchTestInteractive.x3d'/>
+    <ExternProtoDeclare name='KeySensor' url='"KeySensorActivationKeySwitchTest.wrl#KeySensor" "https://www.web3d.org/x3d/content/examples/Basic/development/KeySensorActivationKeySwitchTest.wrl#KeySensor" "KeySensorActivationKeySwitchTest.x3d#KeySensor" "https://www.web3d.org/x3d/content/examples/Basic/development/KeySensorActivationKeySwitchTest.x3d#KeySensor"'>
+      <field accessType='outputOnly' name='altKey' type='SFBool'/>
+      <field accessType='outputOnly' name='keyPress' type='SFInt32'/>
+      <field accessType='inputOnly' name='set_enabled' type='SFBool'/>
+      <field accessType='outputOnly' name='keyRelease' type='SFInt32'/>
+      <field accessType='initializeOnly' name='enabled' type='SFBool'/>
+      <field accessType='outputOnly' name='shiftKey' type='SFBool'/>
+      <field accessType='outputOnly' name='actionKeyRelease' type='SFInt32'/>
+      <field accessType='outputOnly' name='isActive' type='SFBool'/>
+      <field accessType='outputOnly' name='enabled_changed' type='SFBool'/>
+      <field accessType='outputOnly' name='actionKeyPress' type='SFInt32'/>
+      <field accessType='outputOnly' name='controlKey' type='SFBool'/>
+    </ExternProtoDeclare>
+    <Viewpoint DEF='Viewpoint1' description='Viewpoint1' fieldOfView='0.79' position='0.0 0.0 30.0'/>
+    <KeySensor DEF='SingleKeySensor' enabled='false'/>
+    <Shape DEF='A'>
+      <Appearance>
+        <Material DEF='red' diffuseColor='1.0 0.0 0.0'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet DEF='slab' coordIndex='0 1 2 -1 0 2 3 -1' creaseAngle='0.5'>
+        <Coordinate point='-0.5 0.5 0.5 -0.5 -0.5 0.5 0.5 -0.5 0.5 0.5 0.5 0.5'/>
+      </IndexedFaceSet>
+    </Shape>
+    <Shape DEF='B'>
+      <Appearance>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='C'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='D'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='E'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='F'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='G'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 255 255 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='H'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='I'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 255 255 255 255 255 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='J'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 255 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='K'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 255 0 0 0 0 0 255 0 255 0 0 0 0 0 255 255 0 0 0 0 0 0 255 0 255 0 0 0 0 0 255 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='L'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='M'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 255 0 255 0 0 0 255 0 255 0 255 0 0 0 0 255 0 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='N'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 255 255 0 0 0 0 255 255 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='O'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='P'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Q'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 255 0 0 0 0 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='R'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 255 0 0 0 0 0 255 255 0 0 0 0 0 0 255 0 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='S'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 255 255 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='T'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 255 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='U'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='V'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 255 0 255 0 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='W'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 0 255 0 0 0 0 255 0 255 0 255 0 0 0 255 0 255 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='X'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 255 0 0 0 255 0 0 0 0 255 0 255 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 255 0 255 0 0 0 0 255 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Y'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 255 0 255 0 0 0 0 255 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Z'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='One'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Two'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Three'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Four'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Five'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 255 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Six'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 255 255 0 0 0 0 0 255 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Seven'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Eight'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Nine'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 0 0 255 0 0 0 0 0 255 255 255 0 0 0 0 255 0 0 255 0 0 0 0 0 255 255 255 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Zero'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 255 0 0 255 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Colon'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Comma'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 255 0 0 0 0 0 0 255 255 0 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Shape DEF='Dot'>
+      <Appearance>
+        <TextureTransform scale='0.75 1.0'/>
+        <Material USE='red'/>
+        <PixelTexture image='8 8 1 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0'/>
+      </Appearance>
+      <IndexedFaceSet USE='slab'/>
+    </Shape>
+    <Group>
+      <Transform translation='0.0 5.0 0.0'>
+        <Transform translation='-12.0 0.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='-11.0 0.0 0.0'>
+          <Shape USE='O'/>
+        </Transform>
+        <Transform translation='-10.0 0.0 0.0'>
+          <Shape USE='U'/>
+        </Transform>
+        <Transform translation='-9.0 0.0 0.0'>
+          <Shape USE='C'/>
+        </Transform>
+        <Transform translation='-8.0 0.0 0.0'>
+          <Shape USE='H'/>
+        </Transform>
+        <Transform translation='-6.0 0.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='-5.0 0.0 0.0'>
+          <Shape USE='H'/>
+        </Transform>
+        <Transform translation='-4.0 0.0 0.0'>
+          <Shape USE='I'/>
+        </Transform>
+        <Transform translation='-3.0 0.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='-1.0 0.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='1.0 0.0 0.0'>
+          <Shape USE='X'/>
+        </Transform>
+        <Transform translation='2.0 0.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='4.0 0.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='5.0 0.0 0.0'>
+          <Shape USE='O'/>
+        </Transform>
+        <Transform translation='7.0 0.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='8.0 0.0 0.0'>
+          <Shape USE='N'/>
+        </Transform>
+        <Transform translation='9.0 0.0 0.0'>
+          <Shape USE='A'/>
+        </Transform>
+        <Transform translation='10.0 0.0 0.0'>
+          <Shape USE='B'/>
+        </Transform>
+        <Transform translation='11.0 0.0 0.0'>
+          <Shape USE='L'/>
+        </Transform>
+        <Transform translation='12.0 0.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='-15.0 -1.0 0.0'>
+          <Shape USE='K'/>
+        </Transform>
+        <Transform translation='-14.0 -1.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='-13.0 -1.0 0.0'>
+          <Shape USE='Y'/>
+        </Transform>
+        <Transform translation='-12.0 -1.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='-11.0 -1.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='-10.0 -1.0 0.0'>
+          <Shape USE='N'/>
+        </Transform>
+        <Transform translation='-9.0 -1.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='-8.0 -1.0 0.0'>
+          <Shape USE='O'/>
+        </Transform>
+        <Transform translation='-7.0 -1.0 0.0'>
+          <Shape USE='R'/>
+        </Transform>
+        <Transform translation='-5.0 -1.0 0.0'>
+          <Shape USE='A'/>
+        </Transform>
+        <Transform translation='-4.0 -1.0 0.0'>
+          <Shape USE='C'/>
+        </Transform>
+        <Transform translation='-3.0 -1.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='-2.0 -1.0 0.0'>
+          <Shape USE='I'/>
+        </Transform>
+        <Transform translation='-1.0 -1.0 0.0'>
+          <Shape USE='V'/>
+        </Transform>
+        <Transform translation='0.0 -1.0 0.0'>
+          <Shape USE='A'/>
+        </Transform>
+        <Transform translation='1.0 -1.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='2.0 -1.0 0.0'>
+          <Shape USE='I'/>
+        </Transform>
+        <Transform translation='3.0 -1.0 0.0'>
+          <Shape USE='O'/>
+        </Transform>
+        <Transform translation='4.0 -1.0 0.0'>
+          <Shape USE='N'/>
+        </Transform>
+        <Transform translation='6.0 -1.0 0.0'>
+          <Shape USE='K'/>
+        </Transform>
+        <Transform translation='7.0 -1.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='8.0 -1.0 0.0'>
+          <Shape USE='Y'/>
+        </Transform>
+        <Transform translation='9.0 -1.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='10.0 -1.0 0.0'>
+          <Shape USE='Comma'/>
+        </Transform>
+        <Transform translation='12.0 -1.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='13.0 -1.0 0.0'>
+          <Shape USE='H'/>
+        </Transform>
+        <Transform translation='14.0 -1.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='15.0 -1.0 0.0'>
+          <Shape USE='N'/>
+        </Transform>
+        <Transform translation='-15.0 -2.0 0.0'>
+          <Shape USE='P'/>
+        </Transform>
+        <Transform translation='-14.0 -2.0 0.0'>
+          <Shape USE='R'/>
+        </Transform>
+        <Transform translation='-13.0 -2.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='-12.0 -2.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='-11.0 -2.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='-9.0 -2.0 0.0'>
+          <Shape USE='A'/>
+        </Transform>
+        <Transform translation='-8.0 -2.0 0.0'>
+          <Shape USE='C'/>
+        </Transform>
+        <Transform translation='-7.0 -2.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='-6.0 -2.0 0.0'>
+          <Shape USE='I'/>
+        </Transform>
+        <Transform translation='-5.0 -2.0 0.0'>
+          <Shape USE='V'/>
+        </Transform>
+        <Transform translation='-4.0 -2.0 0.0'>
+          <Shape USE='A'/>
+        </Transform>
+        <Transform translation='-3.0 -2.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='-2.0 -2.0 0.0'>
+          <Shape USE='I'/>
+        </Transform>
+        <Transform translation='-1.0 -2.0 0.0'>
+          <Shape USE='O'/>
+        </Transform>
+        <Transform translation='0.0 -2.0 0.0'>
+          <Shape USE='N'/>
+        </Transform>
+        <Transform translation='2.0 -2.0 0.0'>
+          <Shape USE='K'/>
+        </Transform>
+        <Transform translation='3.0 -2.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='4.0 -2.0 0.0'>
+          <Shape USE='Y'/>
+        </Transform>
+        <Transform translation='5.0 -2.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='7.0 -2.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='8.0 -2.0 0.0'>
+          <Shape USE='O'/>
+        </Transform>
+        <Transform translation='10.0 -2.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='11.0 -2.0 0.0'>
+          <Shape USE='E'/>
+        </Transform>
+        <Transform translation='12.0 -2.0 0.0'>
+          <Shape USE='S'/>
+        </Transform>
+        <Transform translation='13.0 -2.0 0.0'>
+          <Shape USE='T'/>
+        </Transform>
+        <Transform translation='14.0 -2.0 0.0'>
+          <Shape USE='Dot'/>
+        </Transform>
+      </Transform>
+      <Switch DEF='ActivationKeyMessageSwitch' whichChoice='0'>
+        <Transform DEF='Nokeypress' translation='-2 0 0'>
+          <Transform translation='-13.0 -4.0 0.0'>
+            <Shape USE='N'/>
+          </Transform>
+          <Transform translation='-12.0 -4.0 0.0'>
+            <Shape USE='O'/>
+          </Transform>
+          <Transform translation='-10.0 -4.0 0.0'>
+            <Shape USE='A'/>
+          </Transform>
+          <Transform translation='-9.0 -4.0 0.0'>
+            <Shape USE='C'/>
+          </Transform>
+          <Transform translation='-8.0 -4.0 0.0'>
+            <Shape USE='T'/>
+          </Transform>
+          <Transform translation='-7.0 -4.0 0.0'>
+            <Shape USE='I'/>
+          </Transform>
+          <Transform translation='-6.0 -4.0 0.0'>
+            <Shape USE='V'/>
+          </Transform>
+          <Transform translation='-5.0 -4.0 0.0'>
+            <Shape USE='A'/>
+          </Transform>
+          <Transform translation='-4.0 -4.0 0.0'>
+            <Shape USE='T'/>
+          </Transform>
+          <Transform translation='-3.0 -4.0 0.0'>
+            <Shape USE='I'/>
+          </Transform>
+          <Transform translation='-2.0 -4.0 0.0'>
+            <Shape USE='O'/>
+          </Transform>
+          <Transform translation='-1.0 -4.0 0.0'>
+            <Shape USE='N'/>
+          </Transform>
+          <Transform translation='1.0 -4.0 0.0'>
+            <Shape USE='K'/>
+          </Transform>
+          <Transform translation='2.0 -4.0 0.0'>
+            <Shape USE='E'/>
+          </Transform>
+          <Transform translation='3.0 -4.0 0.0'>
+            <Shape USE='Y'/>
+          </Transform>
+          <Transform translation='4.0 -4.0 0.0'>
+            <Shape USE='P'/>
+          </Transform>
+          <Transform translation='5.0 -4.0 0.0'>
+            <Shape USE='R'/>
+          </Transform>
+          <Transform translation='6.0 -4.0 0.0'>
+            <Shape USE='E'/>
+          </Transform>
+          <Transform translation='7.0 -4.0 0.0'>
+            <Shape USE='S'/>
+          </Transform>
+          <Transform translation='8.0 -4.0 0.0'>
+            <Shape USE='S'/>
+          </Transform>
+          <Transform translation='10.0 -4.0 0.0'>
+            <Shape USE='S'/>
+          </Transform>
+          <Transform translation='11.0 -4.0 0.0'>
+            <Shape USE='E'/>
+          </Transform>
+          <Transform translation='12.0 -4.0 0.0'>
+            <Shape USE='N'/>
+          </Transform>
+          <Transform translation='13.0 -4.0 0.0'>
+            <Shape USE='S'/>
+          </Transform>
+          <Transform translation='14.0 -4.0 0.0'>
+            <Shape USE='E'/>
+          </Transform>
+          <Transform translation='15.0 -4.0 0.0'>
+            <Shape USE='D'/>
+          </Transform>
+          <Transform translation='16.0 -4.0 0.0'>
+            <Shape USE='Dot'/>
+          </Transform>
+          <Transform translation='17.0 -4.0 0.0'>
+            <Shape USE='Dot'/>
+          </Transform>
+        </Transform>
+        <Transform DEF='Functions' translation='0.0 -6.0 0.0'>
+          <Transform DEF='F1'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='One'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F2' translation='0.0 -1.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Two'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F3' translation='0.0 -2.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Three'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F4' translation='0.0 -3.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Four'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F5' translation='0.0 -4.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Five'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F6' translation='0.0 -5.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Six'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F7' translation='0.0 -6.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Seven'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F8' translation='0.0 -7.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Eight'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F9' translation='0.0 -8.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='Nine'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F10' translation='0.0 -9.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='Zero'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F11' translation='0.0 -10.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='F12' translation='0.0 -11.0 0.0'>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='Two'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='Home' translation='0.0 -12.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Three'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='H'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='O'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='M'/>
+            </Transform>
+            <Transform translation='3.0 0.0 0.0'>
+              <Shape USE='E'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='End' translation='0.0 -13.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Four'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='E'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='N'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='D'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='Left' translation='0.0 -14.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Five'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='L'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='E'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='F'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='T'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='Right' translation='0.0 -15.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Six'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='R'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='I'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='G'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='H'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='T'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='Up' translation='0.0 -16.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Seven'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='U'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='P'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='Down' translation='0.0 -17.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Eight'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='D'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='O'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='W'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='N'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='PGUP' translation='0.0 -18.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='One'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Nine'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='P'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='G'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='U'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='P'/>
+            </Transform>
+          </Transform>
+          <Transform DEF='PGDN' translation='0.0 -19.0 0.0'>
+            <Transform translation='-3.0 0.0 0.0'>
+              <Shape USE='Two'/>
+            </Transform>
+            <Transform translation='-2.0 0.0 0.0'>
+              <Shape USE='Zero'/>
+            </Transform>
+            <Transform translation='-1.0 0.0 0.0'>
+              <Shape USE='Colon'/>
+            </Transform>
+            <Transform>
+              <Shape USE='P'/>
+            </Transform>
+            <Transform translation='1.0 0.0 0.0'>
+              <Shape USE='G'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='D'/>
+            </Transform>
+            <Transform translation='2.0 0.0 0.0'>
+              <Shape USE='N'/>
+            </Transform>
+          </Transform>
+        </Transform>
+      </Switch>
+    </Group>
+    <ROUTE fromField='actionKeyPress' fromNode='SingleKeySensor' toField='whichChoice' toNode='ActivationKeyMessageSwitch'/>
+  </Scene>
+</X3D>

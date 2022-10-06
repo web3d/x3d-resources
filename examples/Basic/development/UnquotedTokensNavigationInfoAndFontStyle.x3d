@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='UnquotedTokensNavigationInfoAndFontStyle.x3d' name='title'/>
+    <meta content='This scene tests whether enclosing "quote marks" can be omitted for three tokenized fields in X3D. The X3dToVrml97.xsl translator does this for FontStyle family, FontStyle justify and NavigationInfo type.' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='23 January 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/UnquotedTokensNavigationInfoAndFontStyle.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- note that ordinary XML encoding of an MFString attribute is type='"EXAMINE" "ANY"' -->
+    <WorldInfo title='UnquotedTokensNavigationInfoAndFontStyle.x3d'/>
+    <Transform translation='-5 0 0'>
+      <Shape>
+        <!-- \" (backslash quote) escapes a quote mark so that it is a rendered character, instead of a line terminator. -->
+        <Text string='"This scene tests whether enclosing" " \"quote marks\" can be omitted for" " three tokenized fields in X3D." "" "Inspect translated VRML source to see" "" "NavigationInfo { " " type [ \"EXAMINE\" \"ANY\" ]" "}" "FontStyle {" " family [ \"TYPEWRITER\" \"SANS\" ]" " justify [ \"BEGIN\" \"MIDDLE\" ]" "}"'>
+          <!-- Again note that ordinary XML encoding is a variation of family="&quot;TYPEWRITER&quot; SANS" justify='"BEGIN" "MIDDLE"' -->
+          <FontStyle family='"TYPEWRITER" "SANS"' justify='"BEGIN" "MIDDLE"' size='0.5' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0.1 0.7 0.6'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

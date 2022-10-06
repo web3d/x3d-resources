@@ -1,0 +1,66 @@
+ant -f C:\\x3d-code\\www.web3d.org\\x3d\\tools\\schematron\\buildSchematronDevelopment.xml test.oneScene.saxon
+prepare-X3dSchematron-stylesheet:
+===================================================================
+validateX3dSchematronRules:
+well-formed Schematron rules:
+1 file(s) have been successfully validated.
+XML Schematron rules validation using RelaxNG via Java jing..
+XML Schematron rules validation using RelaxNG via jing task..
+.. validateX3dSchematronRules complete
+created X3dSchematronValidityChecks1.sch
+created X3dSchematronValidityChecks2.sch
+converting X3dSchematronValidityChecks.xslt to XSLT version 2.0
+Replaced 1 occurrences in 1 files.
+created X3dSchematronValidityChecks.xslt
+1 file(s) have been successfully validated.
+===================================================================
+test.oneScene.saxon:
+check well-formedness of original model...
+1 file(s) have been successfully validated.
+check DTD validation  of original model...
+1 file(s) have been successfully validated.
+check schema validation of original model...
+check schematron validation of original model...
+C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedField.x3d validation using X3D Schematron rules
+TestProtoDeclareDisconnectedField.svrl.txt result:
+- - - - - - - - - - - -
+Based on file name, TestProtoDeclareDisconnectedField.x3d is considered a test model supporting X3D Quality Assurance (QA).
+  https://www.web3d.org/x3d/content/examples/X3dResources.html#QualityAssurance[/X3D/head, diagnostic]
+Missing connection for field in ProtoBody: <ProtoDeclare name='MyShape'> <ProtoInterface> <field name='color' accessType='inputOutput' type='SFColor'/> is unused with no <ProtoDeclare name='MyShape'> <ProtoBody> ... <IS> <connect protoField='color' nodeField='someParentNodeFieldName'/> found in corresponding ProtoBody content [/X3D/Scene/ProtoDeclare/ProtoInterface/field[2], warning]
+Not finding connect protoField: <IS> <connect nodeField='bboxCenter' protoField='undefinedProtoField'/> does not have a corresponding protoField declaration <ProtoDeclare name='MyShape'> <ProtoInterface> <field name='undefinedProtoField'>[/X3D/Scene/ProtoDeclare/ProtoBody/Shape/IS/connect[2], error]
+- - - - - - - - - - - -
+X3dTidy.xslt conversion to C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedFieldTidy.x3d follows...
+Processing C:\x3d-code\www.web3d.org\x3d\content\examples\basic\development\TestProtoDeclareDisconnectedField.x3d to C:\x3d-code\www.web3d.org\x3d\content\examples\basic\development\TestProtoDeclareDisconnectedFieldTidy.x3d
+Loading stylesheet C:\x3d-code\www.web3d.org\x3d\stylesheets\X3dTidy.xslt
+expected file output: C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedFieldTidy.x3d
+check well-formedness of X3dTidy form
+1 file(s) have been successfully validated.
+check DTD validation  of X3dTidy form
+1 file(s) have been successfully validated.
+check schema validation of X3dTidy form
+now canonicalize X3dTidy output:
+invocation parameters: 
+ C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedFieldTidy.x3d
+ C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedFieldTidyCanonical.xml
+ INFO [main] (X3dHeaderChecker.java:446) - final canonical 3.3 DOCTYPE found
+ INFO [main] (X3dHeaderChecker.java:553) - -f final DTD was set, no action taken
+ INFO [main] (X3dHeaderChecker.java:647) - Scene "C:/x3d-code/www.web3d.org/x3d/content/examples/basic/development/TestProtoDeclareDisconnectedFieldTidy.x3d" was not modified
+ INFO [main] (X3dCanonicalizer.java:1616) - Source file is already X3D C14N compliant for C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedFieldTidyCanonical.xml
+check well-formedness of X3dTidy canonicalized form
+1 file(s) have been successfully validated.
+check DTD validation  of X3dTidy canonicalized form
+1 file(s) have been successfully validated.
+check schema validation of X3dTidy canonicalizedform
+C:\x3d-code\www.web3d.org\x3d\content\examples/basic/development/TestProtoDeclareDisconnectedFieldTidyCanonical.xml validation using X3D Schematron rules
+TestProtoDeclareDisconnectedFieldTidyCanonical.svrl.txt result:
+- - - - - - - - - - - -
+Based on file name, TestProtoDeclareDisconnectedField.x3d is considered a test model supporting X3D Quality Assurance (QA).
+  https://www.web3d.org/x3d/content/examples/X3dResources.html#QualityAssurance[/X3D/head, diagnostic]
+Missing connection for field in ProtoBody: <ProtoDeclare name='MyShape'> <ProtoInterface> <field name='color' accessType='inputOutput' type='SFColor'/> is unused with no <ProtoDeclare name='MyShape'> <ProtoBody> ... <IS> <connect protoField='color' nodeField='someParentNodeFieldName'/> found in corresponding ProtoBody content [/X3D/Scene/ProtoDeclare/ProtoInterface/field[2], warning]
+Not finding connect protoField: <IS> <connect nodeField='bboxCenter' protoField='undefinedProtoField'/> does not have a corresponding protoField declaration <ProtoDeclare name='MyShape'> <ProtoInterface> <field name='undefinedProtoField'>[/X3D/Scene/ProtoDeclare/ProtoBody/Shape/IS/connect[2], error]
+- - - - - - - - - - - -
+Deleting: C:\x3d-code\www.web3d.org\x3d\content\examples\basic\development\TestProtoDeclareDisconnectedFieldTidyCanonical.xml
+overwrite original, without separate canonicalization:
+Moving 1 file to C:\x3d-code\www.web3d.org\x3d\content\examples\basic\development
+Attempting to rename: C:\x3d-code\www.web3d.org\x3d\content\examples\basic\development\TestProtoDeclareDisconnectedFieldTidy.x3d to C:\x3d-code\www.web3d.org\x3d\content\examples\basic\development\TestProtoDeclareDisconnectedField.x3d
+BUILD SUCCESSFUL (total time: 53 seconds)

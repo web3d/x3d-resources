@@ -1,0 +1,93 @@
+<molecule convention="MDLMol" title="Alanine" type="3D">
+  <formula>C3 H7 N O2</formula>
+  <float title="molecule weight">89.09</float>
+  <float title="melting point" units="degC">264</float>
+  <float title="boiling point" units="degC">314</float>
+  <float title="specific gravity">1.42</float>
+
+  <date day="05" month="02" year="2010"/>
+  <comment>Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.</comment>
+  <atomArray>
+    <atom id="alanine_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.1133</float>
+      <float builtin="y3">2.7796</float>
+      <float builtin="z3">1.817</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">30.0</float>
+    </atom>
+    <atom id="alanine_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.0036</float>
+      <float builtin="y3">2.0206</float>
+      <float builtin="z3">1.1013</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-25.98076211353316</float>
+      <float builtin="y2">45.0</float>
+    </atom>
+    <atom id="alanine_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">1.964</float>
+      <float builtin="y3">0.5868</float>
+      <float builtin="z3">1.6215</float>
+      <integer builtin="nonHydrogenCount">3</integer>
+      <float builtin="x2">-51.96152422706632</float>
+      <float builtin="y2">29.999999999999993</float>
+    </atom>
+    <atom id="alanine_a4">
+      <string builtin="elementType">N</string>
+      <float builtin="x3">0.7338</float>
+      <float builtin="y3">2.7669</float>
+      <float builtin="z3">1.2777</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">-25.980762113533174</float>
+      <float builtin="y2">75.0</float>
+    </atom>
+    <atom id="alanine_a5">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">4.1888</float>
+      <float builtin="y3">3.0708</float>
+      <float builtin="z3">1.0506</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">25.980762113533153</float>
+      <float builtin="y2">45.000000000000014</float>
+    </atom>
+    <atom id="alanine_a6">
+      <string builtin="elementType">O</string>
+      <float builtin="x3">3.171</float>
+      <float builtin="y3">3.1403</float>
+      <float builtin="z3">2.9781</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">0.0</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="alanine_b1">
+      <string builtin="atomRef">alanine_a1</string>
+      <string builtin="atomRef">alanine_a2</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="alanine_b2">
+      <string builtin="atomRef">alanine_a1</string>
+      <string builtin="atomRef">alanine_a5</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="alanine_b3">
+      <string builtin="atomRef">alanine_a1</string>
+      <string builtin="atomRef">alanine_a6</string>
+      <string builtin="order">2</string>
+    </bond>
+    <bond id="alanine_b4">
+      <string builtin="atomRef">alanine_a2</string>
+      <string builtin="atomRef">alanine_a3</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="alanine_b5">
+      <string builtin="atomRef">alanine_a2</string>
+      <string builtin="atomRef">alanine_a4</string>
+      <string builtin="order">1</string>
+    </bond>
+  </bondArray>
+</molecule>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <component level='1' name='Core'/>
+    <meta content='SchemaTest.x3d' name='title'/>
+    <meta content='1 October 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Test scene for obscure schema validation cases.' name='description'/>
+    <meta content='Test scene that does not render or validate.' name='error'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/SchemaTest.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SchemaTest.x3d'/>
+    <TimeSensor DEF='badCycleIntervalValue' cycleInterval='-1.8e-1'/>
+    <Transform rotation='0 0 1 -0.444E+1' translation='+10000.e-1 50 0.5'>
+      <Anchor>
+        <Shape>
+          <IndexedLineSet>
+            <Color/>
+            <Coordinate/>
+          </IndexedLineSet>
+          <Appearance>
+            <MovieTexture/>
+            <Material/>
+            <TextureTransform/>
+          </Appearance>
+        </Shape>
+        <Collision>
+          <Background groundAngle='0.5' groundColor='1 0 0'/>
+          <Shape containerField='proxy'>
+            <Extrusion/>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material/>
+              <PixelTexture/>
+            </Appearance>
+            <Cylinder/>
+          </Shape>
+        </Collision>
+      </Anchor>
+    </Transform>
+    <Shape>
+      <ElevationGrid>
+        <Normal/>
+        <Color color='0.5e+0 0.05e+1 0.e-1 0 1 1'/>
+        <TextureCoordinate/>
+        <!-- partial loophole via xsd:all forcontained ProtoInstance, USE -->
+      </ElevationGrid>
+      <Appearance>
+        <TextureTransform/>
+        <MovieTexture/>
+        <Material/>
+      </Appearance>
+    </Shape>
+    <NavigationInfo/>
+    <Shape>
+      <Appearance>
+        <IS>
+          <connect nodeField='sfdg' protoField='df'/>
+        </IS>
+        <MetadataSet>
+          <MetadataInteger containerField='value'/>
+          <MetadataSet containerField='value'/>
+          <ProtoInstance containerField='value' name='SomeKindOfMetadataPrototype'/>
+        </MetadataSet>
+        <Material/>
+        <MultiTexture/>
+      </Appearance>
+      <IndexedFaceSet>
+        <Normal/>
+        <Coordinate/>
+      </IndexedFaceSet>
+    </Shape>
+    <ProtoDeclare name='blah'>
+      <ProtoInterface>
+        <field accessType='inputOnly' name='something' type='SFBool'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Anchor/>
+        <ROUTE fromField='x' fromNode='blah' toField='x' toNode='blah'/>
+        <Sound>
+          <AudioClip/>
+        </Sound>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoInstance DEF='blah' name='blah'/>
+    <ROUTE fromField='x' fromNode='blah' toField='x' toNode='blah'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='PropellerControlPanel.x3d' name='title'/>
+    <meta content='Controller buttons and slider for a propeller.' name='description'/>
+    <meta content='Dan DeVos' name='creator'/>
+    <meta content='*if manually translating VRML-to-X3D, enter name of person translating here*' name='translator'/>
+    <meta content='8 August 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='mismatched typing in some ROUTEs still needs fixing' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/PropellerControlPanel.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='PropellerControlPanel.x3d'/>
+    <Viewpoint description='Fan' position='1 0 10'/>
+    <Viewpoint description='Control Panel' position='-1 0 5'/>
+    <Viewpoint description='Watch Fan Spin' orientation='0 1 0 1.571' position='10 0 0'/>
+    <Viewpoint description='Remote Control' orientation='1 0 0 -1.571' position='0 3 20'/>
+    <Background groundColor='.3 .6 .4' skyColor='.6 .6 .9'/>
+    <!-- Rotating Fan -->
+    <Group DEF='MaterialGroup'>
+      <Shape>
+        <Sphere radius='.001'/>
+        <Appearance DEF='DarkBlueGreyMetal'>
+          <Material diffuseColor='0.4 0.4 0.4' specularColor='0.4 0.4 0.6'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <Sphere radius='.001'/>
+        <Appearance DEF='LightGreyMetal'>
+          <Material diffuseColor='0.7 0.7 0.7' shininess='0.1' specularColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+    </Group>
+    <Transform rotation='0 0 -1 1.571' translation='2 0 0'>
+      <Group DEF='RotatingFanGroup'>
+        <Transform DEF='Fan'>
+          <Transform DEF='FanHub'>
+            <Shape DEF='FanHubMiddle'>
+              <Appearance USE='DarkBlueGreyMetal'/>
+              <Cylinder height='.4' radius='.25'/>
+            </Shape>
+            <Transform translation='0 .2 0'>
+              <Shape DEF='FanHubTop'>
+                <Sphere radius='.255'/>
+                <Appearance USE='DarkBlueGreyMetal'/>
+              </Shape>
+            </Transform>
+          </Transform>
+          <Transform DEF='RightFanBlade' rotation='1 0 0 -.2' scale='2 .1 .5' translation='1.8 0 0'>
+            <Shape DEF='FanBlade'>
+              <Sphere/>
+              <Appearance USE='LightGreyMetal'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='LeftFanBlade' rotation='1 0 0 .2' scale='2 .1 .5' translation='-1.8 0 0'>
+            <Shape USE='FanBlade'/>
+          </Transform>
+        </Transform>
+        <TimeSensor DEF='FanClock' startTime='10' stopTime='0.1'/>
+        <OrientationInterpolator DEF='FanPath' key='0.0 0.50 1.0' keyValue='0.0 1.0 0.0 0.0 0.0 1.0 0.0 3.14 0.0 1.0 0.0 6.28'/>
+      </Group>
+    </Transform>
+    <!-- This is where the motor goes. -->
+    <Transform>
+      <Group DEF='MotorHousingGroup'>
+        <Transform>
+          <Shape>
+            <Box size='3.65 3.65 3.65'/>
+            <Appearance>
+              <Material/>
+            </Appearance>
+          </Shape>
+        </Transform>
+      </Group>
+    </Transform>
+    <!-- -->
+    <Group DEF='ControlPanel'>
+      <!-- This switch is used to control the fan -->
+      <Transform scale='.2 .2 .2' translation='-1 -.3 1.825'>
+        <Group DEF='SwitchGroup'>
+          <Transform rotation='0 0 1 1.571'>
+            <Transform rotation='1 0 0 1.571'>
+              <Shape>
+                <Appearance USE='DarkBlueGreyMetal'/>
+                <Extrusion crossSection='0 1.2 0 1.0 -2 1.0 -2 -1.0 2 -1.0 2 1.0 0 1.0 0 1.2 2.2 1.2 2.2 -1.2 -2.2 -1.2 -2.2 1.2 0 1.2' spine='0 0 0 0 .5 0'/>
+              </Shape>
+            </Transform>
+          </Transform>
+          <Transform translation='0 -1.5 .251'>
+            <Transform DEF='SwitchTransform'>
+              <Shape DEF='SwitchNob'>
+                <Box size='2 1 .499'/>
+                <Appearance USE='LightGreyMetal'/>
+              </Shape>
+              <PlaneSensor DEF='SwitchPlaneSensor' maxPosition='0 3'/>
+              <TouchSensor DEF='SwitchTouchSensor'/>
+            </Transform>
+          </Transform>
+          <Transform translation='0 0 .1'>
+            <Shape DEF='SwitchBack'>
+              <Box size='2 4 .2'/>
+              <Appearance USE='DarkBlueGreyMetal'/>
+            </Shape>
+          </Transform>
+        </Group>
+      </Transform>
+      <!-- Fan Status Display -->
+      <Transform translation='.5 -.5 1.83'>
+        <Group DEF='Display'>
+          <Transform translation='0 0 .01'>
+            <Shape>
+              <Text DEF='SpeedDisplay' string='"OFF"'>
+                <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.5'/>
+              </Text>
+              <Appearance DEF='BlackText'>
+                <Material diffuseColor='0 0 0'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+          <Shape DEF='DisplayField'>
+            <Appearance>
+              <Material emissiveColor='0 1 1' transparency='.7'/>
+            </Appearance>
+            <Box size='2 .6 .01'/>
+          </Shape>
+          <Transform translation='0 .5 .01'>
+            <Shape>
+              <Text string='"Fan Status:"'>
+                <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.5'/>
+              </Text>
+              <Appearance USE='BlackText'/>
+            </Shape>
+          </Transform>
+        </Group>
+      </Transform>
+      <Script DEF='MotorAmp'>
+        <field accessType='inputOnly' name='switchPosition' type='SFVec3f'/>
+        <field accessType='outputOnly' name='fanCycleTime' type='MFFloat'/>
+        <field accessType='outputOnly' name='displayFanSpeed' type='MFString'/>
+        <![CDATA[
+ecmascript:
+
+function switchPosition(pos)
+{
+	if (switchPosition.pos.y == 0){
+		fanCycleTime[0] = switchPosition.pos.y;
+		displayFanSpeed[0] ='OFF';
+	}
+	else{if (switchPosition.pos.y == 3){
+		fanCycleTime[0] = .01;
+		displayFanSpeed[0] ='MAX';
+	}
+	else {
+		fanCycleTime[0] = (6 - (switchPosition.pos.y*2));
+		displayFanSpeed[0] = (Math.round((1/fanCycleTime[0])*6000)/100) + ' RPM';
+	}}
+}
+]]>
+      </Script>
+      <!-- Motor On/Off Buttons -->
+      <Transform translation='-1 1 1.6'>
+        <Transform rotation='1 0 0 1.571'>
+          <Transform DEF='OffButton' translation='0 .1 .3'>
+            <Group>
+              <Shape>
+                <Cylinder height='.45' radius='.2'/>
+                <Appearance DEF='RedStatus'>
+                  <Material diffuseColor='1 0.3 0.3'/>
+                </Appearance>
+              </Shape>
+              <TouchSensor DEF='SensorOffButton'/>
+              <PositionInterpolator DEF='OffButtonDownPath' key='0.0 0.50 1.0' keyValue='0.0 0.3 0.3 0.0 0.2 0.3 0.0 0.1 0.3'/>
+              <PositionInterpolator DEF='OffButtonUpPath' key='0.0 0.50 1.0' keyValue='0.0 0.1 0.3 0.0 0.2 0.3 0.0 0.3 0.3'/>
+            </Group>
+          </Transform>
+          <Transform DEF='OnButton' translation='0 .3 -.3'>
+            <Group>
+              <Shape>
+                <Cylinder height='.45' radius='.2'/>
+                <Appearance DEF='GreenStatus'>
+                  <Material diffuseColor='0.3 1 .3'/>
+                </Appearance>
+              </Shape>
+              <TouchSensor DEF='SensorOnButton'/>
+              <PositionInterpolator DEF='OnButtonDownPath' key='0.0 0.50 1.0' keyValue='0.0 0.3 -0.3 0.0 0.2 -0.3 0.0 0.1 -0.3'/>
+              <PositionInterpolator DEF='OnButtonUpPath' key='0.0 0.50 1.0' keyValue='0.0 0.1 -0.3 0.0 0.2 -0.3 0.0 0.3 -0.3'/>
+            </Group>
+          </Transform>
+          <TimeSensor DEF='MotorClockOff'/>
+          <TimeSensor DEF='MotorClockOn'/>
+        </Transform>
+      </Transform>
+      <!-- Motor Status Display -->
+      <Transform translation='.5 .8 1.83'>
+        <Group DEF='MotorStatus'>
+          <Transform translation='0 .5 .01'>
+            <Shape>
+              <Text string='"Motor Status:"'>
+                <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.5'/>
+              </Text>
+              <Appearance USE='BlackText'/>
+            </Shape>
+          </Transform>
+          <Transform translation='0 0 .01'>
+            <Shape>
+              <Text DEF='StatusDisplay' string='"OFF"'>
+                <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.5'/>
+              </Text>
+              <Appearance>
+                <Material DEF='MotorDisplayMaterial' diffuseColor='1 .3 .3'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+          <Shape USE='DisplayField'/>
+        </Group>
+      </Transform>
+      <Script DEF='MotorButtonActionOn'>
+        <field accessType='inputOnly' name='onButtonAction' type='SFBool'/>
+        <field accessType='outputOnly' name='displayMotorStatus' type='MFString'/>
+        <field accessType='outputOnly' name='fanOnButtonAction' type='SFInt32'/>
+        <![CDATA[
+ecmascript:
+
+function onButtonAction(bool)
+{
+	if (onButtonAction.bool == true)
+	{
+		displayMotorStatus[0] ='ON';
+		fanOnButtonAction = 1;
+	}
+}
+]]>
+      </Script>
+      <Script DEF='MotorButtonActionOff'>
+        <field accessType='inputOnly' name='offButtonAction' type='SFBool'/>
+        <field accessType='outputOnly' name='displayMotorStatus' type='MFString'/>
+        <![CDATA[
+ecmascript:
+
+function offButtonAction(bool)
+{
+	if (offButtonAction.bool == true)
+	{
+		displayMotorStatus[0] ='OFF';
+	}
+}
+]]>
+      </Script>
+      <ColorInterpolator DEF='RtoGColorInerp' key='0 .1 .1 1' keyValue='1 .3 .3 1 .3 .3 .3 1 .3 .3 1 .3'/>
+      <ColorInterpolator DEF='GtoRColorInerp' key='0 .1 .1 1' keyValue='.3 1 .3 .3 1 .3 1 .3 .3 1 .3 .3'/>
+    </Group>
+    <Group DEF='RemoteControl'>
+      <Transform rotation='1 0 0 -1.571'>
+        <Transform scale='.2 .5 .5' translation='0 -20 0'>
+          <Group USE='ControlPanel'/>
+          <Transform translation='0 0 1.325'>
+            <Shape>
+              <Box size='3 3 1'/>
+              <Appearance USE='DarkBlueGreyMetal'/>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+    </Group>
+    <!-- Route for controling Switch movement -->
+    <ROUTE fromField='translation_changed' fromNode='SwitchPlaneSensor' toField='set_translation' toNode='SwitchTransform'/>
+    <!-- Routes for controling Fan w/ Switch -->
+    <ROUTE fromField='translation_changed' fromNode='SwitchPlaneSensor' toField='switchPosition' toNode='MotorAmp'/>
+    <ROUTE fromField='fanCycleTime' fromNode='MotorAmp' toField='set_cycleInterval' toNode='FanClock'/>
+    <ROUTE fromField='fraction_changed' fromNode='FanClock' toField='set_fraction' toNode='FanPath'/>
+    <ROUTE fromField='value_changed' fromNode='FanPath' toField='set_rotation' toNode='Fan'/>
+    <!-- Button Movement Routes -->
+    <ROUTE fromField='touchTime' fromNode='SensorOffButton' toField='set_startTime' toNode='MotorClockOff'/>
+    <ROUTE fromField='isActive' fromNode='SensorOffButton' toField='offButtonAction' toNode='MotorButtonActionOff'/>
+    <ROUTE fromField='touchTime' fromNode='SensorOnButton' toField='set_startTime' toNode='MotorClockOn'/>
+    <ROUTE fromField='isActive' fromNode='SensorOnButton' toField='onButtonAction' toNode='MotorButtonActionOn'/>
+    <ROUTE fromField='fraction_changed' fromNode='MotorClockOn' toField='set_fraction' toNode='OnButtonDownPath'/>
+    <ROUTE fromField='fraction_changed' fromNode='MotorClockOn' toField='set_fraction' toNode='OffButtonUpPath'/>
+    <ROUTE fromField='fraction_changed' fromNode='MotorClockOff' toField='set_fraction' toNode='OffButtonDownPath'/>
+    <ROUTE fromField='fraction_changed' fromNode='MotorClockOff' toField='set_fraction' toNode='OnButtonUpPath'/>
+    <ROUTE fromField='value_changed' fromNode='OnButtonDownPath' toField='set_translation' toNode='OnButton'/>
+    <ROUTE fromField='value_changed' fromNode='OffButtonDownPath' toField='set_translation' toNode='OffButton'/>
+    <ROUTE fromField='value_changed' fromNode='OnButtonUpPath' toField='set_translation' toNode='OnButton'/>
+    <ROUTE fromField='value_changed' fromNode='OffButtonUpPath' toField='set_translation' toNode='OffButton'/>
+    <!-- Route for Fan display -->
+    <ROUTE fromField='displayFanSpeed' fromNode='MotorAmp' toField='set_string' toNode='SpeedDisplay'/>
+    <!-- Route for Motor display -->
+    <ROUTE fromField='fraction_changed' fromNode='MotorClockOn' toField='set_fraction' toNode='RtoGColorInerp'/>
+    <ROUTE fromField='fraction_changed' fromNode='MotorClockOff' toField='set_fraction' toNode='GtoRColorInerp'/>
+    <ROUTE fromField='displayMotorStatus' fromNode='MotorButtonActionOn' toField='set_string' toNode='StatusDisplay'/>
+    <ROUTE fromField='value_changed' fromNode='RtoGColorInerp' toField='set_diffuseColor' toNode='MotorDisplayMaterial'/>
+    <ROUTE fromField='value_changed' fromNode='GtoRColorInerp' toField='set_diffuseColor' toNode='MotorDisplayMaterial'/>
+    <ROUTE fromField='displayMotorStatus' fromNode='MotorButtonActionOff' toField='set_string' toNode='StatusDisplay'/>
+    <!-- Buttons control Fan -->
+    <ROUTE fromField='fanOnButtonAction' fromNode='MotorButtonActionOn' toField='set_cycleInterval' toNode='FanClock'/>
+    <!-- -->
+  </Scene>
+</X3D>

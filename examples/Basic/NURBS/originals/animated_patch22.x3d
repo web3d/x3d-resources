@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D version="3.0" profile="Immersive"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.0.xsd">
+  <head><!--Import note:  the following meta tags were created during
+      Vrml97ToX3d translation.  Please update or delete them as
+      appropriate.--><meta content="animated_patch22.x3d" name="title"/>
+    <meta content="*enter description here, short-sentence summaries preferred*" name="description"/>
+    <meta content="*enter name of original author here*" name="creator"/>
+    <meta content="Xeena VRML importer" name="translator"/>
+    <meta content="11 February 2003" name="imported"/>
+    <meta content="11 February 2003" name="modified"/>
+    <meta content="*enter version here*" name="version"/>
+    <meta content="*enter reference citation or relative/online url here*" name="reference"/>
+    <meta content="*enter additional url/bibliographic reference information here*" name="reference"/>
+    <meta content="*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2001" name="rights"/>
+    <meta content="*enter drawing filename/url here*" name="drawing"/>
+    <meta content="*enter image filename/url here*" name="image"/>
+    <meta content="*enter movie filename/url here*" name="MovingImage"/>
+    <meta content="*enter photo filename/url here*" name="photo"/>
+    <meta content="*enter keywords here*" name="subject"/>
+    <meta content="*enter online url address for this file here*" name="identifier"/>
+    <meta content="X3D-Edit 3.2, https://savage.nps.edu/X3D-Edit" name="generator"/>
+    <meta content="Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html" name="generator"/>
+    <meta name="license" content="../../license.html"/>
+  </head>
+  <Scene>
+    <WorldInfo info="Nurbs 2*2 Patch with animated controlPoint" title="Nurbs 2*2 animated"/>
+    <ExternProtoDeclare name="NurbsPatchSurface" url="&quot;urn:inet:blaxxun.com:node:NurbsPatchSurface&quot;&#10;&quot;nurbs.wrl#NurbsPatchSurface&quot;&#10;&quot;http://www.blaxxun.com/vrml/protos/nurbs.wrl#NurbsPatchSurface&quot;">
+      <field accessType="inputOutput" name="uTessellation" type="SFInt32"/>
+      <field accessType="inputOutput" name="texCoord" type="SFNode"/>
+      <field accessType="initializeOnly" name="vOrder" type="SFInt32"/>
+      <field accessType="initializeOnly" name="vKnot" type="MFFloat"/>
+      <field accessType="inputOutput" name="weight" type="MFFloat"/>
+      <field accessType="initializeOnly" name="uKnot" type="MFFloat"/>
+      <field accessType="inputOutput" name="controlPoint" type="MFVec3f"/>
+      <field accessType="inputOutput" name="vTessellation" type="SFInt32"/>
+      <field accessType="initializeOnly" name="uDimension" type="SFInt32"/>
+      <field accessType="initializeOnly" name="solid" type="SFBool"/>
+      <field accessType="initializeOnly" name="ccw" type="SFBool"/>
+      <field accessType="initializeOnly" name="uOrder" type="SFInt32"/>
+      <field accessType="initializeOnly" name="vDimension" type="SFInt32"/>
+    </ExternProtoDeclare>
+    <Group>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.0 0.0 1.0"
+            emissiveColor="1.0 0.0 0.0" specularColor="1.0 1.0 1.0"/>
+          <ImageTexture url="&quot;texture.jpg&quot;"/>
+          <ProtoInstance DEF="nurb" name="NurbsPatchSurface">
+            <fieldValue name="uTessellation" value="16"/>
+            <fieldValue name="texCoord"/>
+            <fieldValue name="vOrder" value="2"/>
+            <fieldValue name="vKnot" value="0.0 0.0 1.0 1.0"/>
+            <fieldValue name="weight"/>
+            <fieldValue name="uKnot" value="0.0 0.0 1.0 1.0"/>
+            <fieldValue name="controlPoint" value="-1.0 0.0 0.0&#10;1.0 0.0 0.0&#10;-1.0 1.0 0.0&#10;1.0 1.0 0.0"/>
+            <fieldValue name="uDimension" value="2"/>
+            <fieldValue name="vTessellation" value="16"/>
+            <fieldValue name="solid" value="false"/>
+            <fieldValue name="uOrder" value="2"/>
+            <fieldValue name="ccw" value="false"/>
+            <fieldValue name="vDimension" value="2"/>
+          </ProtoInstance>
+        </Appearance>
+      </Shape>
+    </Group>
+    <Script DEF="animate" directOutput="true">
+      <field accessType="initializeOnly" name="nurb" type="SFNode">
+        <ProtoInstance USE="nurb" name="NurbsPatchSurface"/>
+      </field>
+<field accessType="inputOnly" name="setTime" type="SFTime"/><![CDATA[ecmascript:
+
+        function setTime(value) {
+
+			nurb.controlPoint[0].z = 2*Math.sin(value*2*Math.PI);		
+
+			nurb.controlPoint[3].z = 2*Math.sin(value*2*Math.PI);		
+
+	}
+
+    ]]></Script>
+    <TimeSensor DEF="TimeSource" cycleInterval="2.0" loop="true"/>
+    <ROUTE fromField="fraction_changed" fromNode="TimeSource"
+      toField="setTime" toNode="animate"/>
+  </Scene>
+</X3D>

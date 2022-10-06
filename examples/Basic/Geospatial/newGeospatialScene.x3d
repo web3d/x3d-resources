@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='Geospatial'/>
+    <meta content='newGeospatialScene.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='23 May 2000' name='created'/>
+    <meta content='14 March 2021' name='modified'/>
+    <meta content='Sample default scene which shows syntax and provides default relationships among Geospatial nodes.' name='description'/>
+    <meta content='Empty nodes are provided as informational exampls and fail various diagnostic tests' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/newGeospatialScene.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ExternProtoDeclare statements for Geospatial nodes are no longer needed for backwards compatibility for VRML 97, since X3dToVrml97.xsl now handles that task. -->
+    <!-- This scene shows example Geospatial node relationships in a scene graph. -->
+    <WorldInfo info='"WorldInfo contains generic information or metadata about a model, not about the georeferenced information."' title='newGeospatialScene.x3d'/>
+    <GeoMetadata url='"https://exampleResource.com/ExternalMetadataDescription.x3d"'>
+      <!-- original GeoMetadata summary='"title" "example title" "description" "example description"' -->
+      <MetadataSet name='GeoMetadata.summary' reference='https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-CD1/Part01/components/geospatial.html#GeoMetadata'>
+        <MetadataString containerField='value' name='title' value='TODO'/>
+        <MetadataString containerField='value' name='description' value='TODO'/>
+        <MetadataString containerField='value' name='coordinateSystem' value='TODO'/>
+        <MetadataString containerField='value' name='horizontalDatum' value='TODO'/>
+        <MetadataString containerField='value' name='verticalDatum' value='TODO'/>
+        <MetadataString containerField='value' name='ellipsoid' value='TODO'/>
+        <MetadataString containerField='value' name='extent' value='0'/>
+        <MetadataFloat containerField='value' name='resolution' value='0'/>
+        <MetadataString containerField='value' name='originator' value='TODO'/>
+        <MetadataString containerField='value' name='copyright' value='TODO'/>
+        <MetadataString containerField='value' name='date' value='TODO'/>
+        <MetadataString containerField='value' name='metadataFormat' value='TODO'/>
+        <MetadataString containerField='value' name='dataUrl' value='TODO'/>
+        <MetadataString containerField='value' name='dataFormat' value='TODO'/>
+      </MetadataSet>
+    </GeoMetadata>
+    <GeoViewpoint>
+      <GeoOrigin DEF='DefaultGeoOrigin'/>
+    </GeoViewpoint>
+    <!-- GeoInline replaced by Inline -->
+    <Inline DEF='GeoInlineReplacedByInline'/>
+    <GeoLocation>
+      <GeoOrigin USE='DefaultGeoOrigin'/>
+    </GeoLocation>
+    <GeoLOD center='10 10 1' child1Url='"https://b"' child2Url='"https://c"' child3Url='"https://d"' child4Url='"https://e"' range='1000' rootUrl='"https://a"'>
+      <GeoOrigin USE='DefaultGeoOrigin' containerField='rootNode'/>
+      <!-- Nodes loaded via the 'rootUrl' field appear under 'rootNode' for current GeoLOD level. -->
+      <!-- Defining both 'rootUrl' and 'rootNode' is erroneous, use either one or the other. -->
+      <!-- rootNode nodes are the default geometry to be shown at this level of detail -->
+      <WorldInfo containerField='rootNode'/>
+      <Shape containerField='rootNode'/>
+    </GeoLOD>
+    <Shape DEF='ExampleGeoSnippet1'>
+      <GeoElevationGrid DEF='EmptyGeoElevationGrid' height='0 0'>
+        <GeoOrigin USE='DefaultGeoOrigin'/>
+        <Color/>
+        <Normal/>
+        <TextureCoordinate/>
+      </GeoElevationGrid>
+    </Shape>
+    <Shape DEF='ExampleGeoSnippet2'>
+      <IndexedFaceSet>
+        <GeoCoordinate>
+          <GeoOrigin USE='DefaultGeoOrigin'/>
+        </GeoCoordinate>
+      </IndexedFaceSet>
+    </Shape>
+  </Scene>
+</X3D>

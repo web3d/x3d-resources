@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ProjectileInterpolatorArena.x3d' name='title'/>
+    <meta content='A projectile motion application which displays range and max height values accoding to Vi and theta inputs. Calculations for drag force with air density are also taken into account.' name='description'/>
+    <meta content='Ozan APAYDIN' name='creator'/>
+    <meta content='10 December 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ProjectileInterpolatorArena.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ProjectileInterpolatorArena.x3d'/>
+    <ExternProtoDeclare name='ProjectileSliderBar' url='"ProjectileSliderBarPrototype.wrl#ProjectileSliderBar" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ProjectileSliderBarPrototype.wrl#ProjectileSliderBar" "ProjectileSliderBarPrototype.x3d#ProjectileSliderBar" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ProjectileSliderBarPrototype.x3d#ProjectileSliderBar"'>
+      <field accessType='initializeOnly' name='name' type='MFString'/>
+      <field accessType='initializeOnly' name='length' type='SFFloat'/>
+      <field accessType='initializeOnly' name='width' type='SFFloat'/>
+      <field accessType='initializeOnly' name='maxValue' type='SFFloat'/>
+      <field accessType='initializeOnly' name='minValue' type='SFFloat'/>
+      <field accessType='initializeOnly' name='barColor' type='SFColor'/>
+      <field accessType='initializeOnly' name='pointerColor' type='SFColor'/>
+      <field accessType='initializeOnly' name='nameColor' type='SFColor'/>
+      <field accessType='initializeOnly' name='currentValueColor' type='SFColor'/>
+      <field accessType='outputOnly' name='currentValueInt' type='SFInt32'/>
+      <field accessType='outputOnly' name='currentValueFloat' type='SFFloat'/>
+      <field accessType='initializeOnly' name='precision' type='SFInt32'/>
+      <field accessType='initializeOnly' name='translation' type='SFVec3f'/>
+    </ExternProtoDeclare>
+    <ExternProtoDeclare name='ProjectileInterpolator' url='"ProjectileInterpolatorPrototype.wrl#ProjectileInterpolator" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ProjectileInterpolatorPrototype.wrl#ProjectileInterpolator" "ProjectileInterpolatorPrototype.x3d#ProjectileInterpolator" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/ProjectileInterpolatorPrototype.x3d#ProjectileInterpolator"'>
+      <field accessType='initializeOnly' name='Vi' type='SFFloat'/>
+      <field accessType='initializeOnly' name='theta' type='SFFloat'/>
+      <field accessType='initializeOnly' name='B_m' type='SFFloat'/>
+      <field accessType='initializeOnly' name='dt' type='SFFloat'/>
+      <field accessType='initializeOnly' name='fraction' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_theta' type='SFFloat'/>
+      <field accessType='inputOnly' name='set_Vi' type='SFFloat'/>
+      <field accessType='outputOnly' name='value_changed' type='SFVec3f'/>
+    </ExternProtoDeclare>
+    <Viewpoint DEF='FirstView' description='First view' position='60 15 150'/>
+    <Background backUrl='"urn:web3d:media:textures/panoramas/space_1_back.jpg" "space_1_back.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_back.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_back.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_back.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_back.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_back.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_back.jpg"' bottomUrl='"urn:web3d:media:textures/panoramas/space_1_bottom.jpg" "space_1_bottom.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_bottom.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_bottom.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_bottom.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_bottom.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_bottom.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_bottom.jpg"' frontUrl='"urn:web3d:media:textures/panoramas/space_1_front.jpg" "space_1_front.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_front.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_front.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_front.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_front.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_front.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_front.jpg"' groundAngle='1.309 1.570796' groundColor='0 0 0' leftUrl='"urn:web3d:media:textures/panoramas/space_1_left.jpg" "space_1_left.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_left.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_left.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_left.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_left.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_left.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_left.jpg"' rightUrl='"urn:web3d:media:textures/panoramas/space_1_right.jpg" "space_1_right.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_right.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_right.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_right.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_right.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_right.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_right.jpg"' skyAngle='1.309 1.571' topUrl='"urn:web3d:media:textures/panoramas/space_1_top.jpg" "space_1_top.jpg" "https://www.web3d.org/WorkingGroups/media/textures/panoramas/space_1_top.jpg" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/space_1_top.jpg" "http://www.web3dmedia.com/UniversalMedia/textures/panoramas/space_1_top.jpg" "http://www.officetowers.com/UniversalMedia/textures/panoramas/space_1_top.jpg" "http://geometrek.com/UniversalMedia/textures/panoramas/space_1_top.jpg" "http://www.sc.ehu.es/ccwgamoa/UniversalMedia/textures/panoramas/space_1_top.jpg"'/>
+    <DirectionalLight direction='0 -1 0' intensity='0.5'/>
+    <ProtoInstance DEF='SliderVelocity' name='ProjectileSliderBar'>
+      <fieldValue name='name' value='"Vi"'/>
+      <fieldValue name='length' value='1.5'/>
+      <fieldValue name='width' value='1'/>
+      <fieldValue name='maxValue' value='30'/>
+      <fieldValue name='minValue' value='0'/>
+      <fieldValue name='barColor' value='0 0 1'/>
+      <fieldValue name='pointerColor' value='1 1 0'/>
+      <fieldValue name='nameColor' value='1 0 1'/>
+      <fieldValue name='precision' value='1'/>
+      <fieldValue name='translation' value='-0.04 0.06 0.0'/>
+    </ProtoInstance>
+    <ProtoInstance DEF='SliderAngle' name='ProjectileSliderBar'>
+      <fieldValue name='name' value='"Theta"'/>
+      <fieldValue name='length' value='1.5'/>
+      <fieldValue name='width' value='1'/>
+      <fieldValue name='maxValue' value='90'/>
+      <fieldValue name='minValue' value='0'/>
+      <fieldValue name='barColor' value='1 0 0'/>
+      <fieldValue name='pointerColor' value='1 1 0'/>
+      <fieldValue name='nameColor' value='0 1 1'/>
+      <fieldValue name='precision' value='1'/>
+      <fieldValue name='translation' value='-0.04 0.05 0.0'/>
+    </ProtoInstance>
+    <ProtoInstance DEF='TimeCycle' name='ProjectileSliderBar'>
+      <fieldValue name='name' value='"CycleInterval"'/>
+      <fieldValue name='length' value='1.5'/>
+      <fieldValue name='width' value='1'/>
+      <fieldValue name='maxValue' value='5'/>
+      <fieldValue name='minValue' value='1'/>
+      <fieldValue name='barColor' value='0 1 0'/>
+      <fieldValue name='pointerColor' value='1 1 0'/>
+      <fieldValue name='nameColor' value='0 0.3 1'/>
+      <fieldValue name='precision' value='1'/>
+      <fieldValue name='translation' value='-0.04 0.04 0.0'/>
+    </ProtoInstance>
+    <ProtoInstance DEF='ProjectileInterpolator' name='ProjectileInterpolator'/>
+    <ROUTE fromField='currentValueFloat' fromNode='SliderVelocity' toField='set_Vi' toNode='ProjectileInterpolator'/>
+    <ROUTE fromField='currentValueFloat' fromNode='SliderAngle' toField='set_theta' toNode='ProjectileInterpolator'/>
+    <Transform>
+      <Group DEF='HUDGroup'>
+        <Collision enabled='false'>
+          <ProximitySensor DEF='HudProx' size='1000000 1000000 1000000'/>
+          <Transform DEF='HudTransform'>
+            <Transform translation='0.05 0.06 -0.2'>
+              <Transform DEF='TrajectoryTextTransform'>
+                <Shape>
+                  <Text DEF='RangeText' string='"Range 0.0"'>
+                    <FontStyle size='0.01' style='BOLD'/>
+                  </Text>
+                  <Appearance>
+                    <Material diffuseColor='0.9 0.7 0.0'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform translation='0.0 -0.015 0.0'>
+                <Shape>
+                  <Text DEF='HeightText' string='"Max Height 0.0"'>
+                    <FontStyle size='0.01' style='BOLD'/>
+                  </Text>
+                  <Appearance>
+                    <Material diffuseColor='0 1 0'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Transform>
+          </Transform>
+        </Collision>
+      </Group>
+    </Transform>
+    <ROUTE fromField='position_changed' fromNode='HudProx' toField='set_translation' toNode='HudTransform'/>
+    <ROUTE fromField='position_changed' fromNode='HudProx' toField='center' toNode='HudProx'/>
+    <ROUTE fromField='orientation_changed' fromNode='HudProx' toField='set_rotation' toNode='HudTransform'/>
+    <Script DEF='ValueDisplayer' directOutput='true'>
+      <field accessType='inputOnly' name='setTextValues' type='SFVec3f'/>
+      <field accessType='inputOnly' name='reset' type='SFBool'/>
+      <field accessType='initializeOnly' name='RangeText' type='SFNode'>
+        <Text USE='RangeText'/>
+      </field>
+      <field accessType='initializeOnly' name='HeightText' type='SFNode'>
+        <Text USE='HeightText'/>
+      </field>
+      <![CDATA[
+ecmascript:
+var maxValue;
+
+function initialize() {
+   maxValue = 0;
+}
+
+function setTextValues(values, timeEvent) {
+   var precision = 2;
+   RangeText.string[0] ='Range            ' + roundOff(values[0], precision);
+   if(values[1] > maxValue) {
+      maxValue = roundOff(values[1], precision);
+      Browser.print ('maximum' + maxValue);
+   }
+
+   Browser.print ('values' + values[1]);
+   HeightText.string[0] ='Max Height   ' + maxValue;
+}
+
+function reset(bool, eventTime) {
+   maxValue = 0;
+}
+
+//A function to round the values regarding to given precision.
+function roundOff(value, precision) {
+
+   var result;
+   var isNegative = false;
+   var wholeInt = Math.round(value * Math.pow(10, precision));
+ 
+   //Negative numbers creates exceptional condition, therefor they are converted
+   //to positive values.
+   if(wholeInt < 0) {
+      wholeInt = -wholeInt;
+      isNegative = true;
+   }
+
+   var whole = wholeInt.toString();
+   
+   var decPoint = whole.length - precision;
+   
+   //Exception when precision is bigger than the string length   
+   if(decPoint < 0) {
+      i = -decPoint;
+      for(i; i > 0; i--) {  
+         whole ='0' + whole;
+      }
+
+      //Calculate decPoint according to new string expanded with 0s      
+      decPoint = whole.length - precision;
+   }
+
+   if(whole !='0') {
+      //Put the decimal point on the appropriate place
+      result = whole.substring(0, decPoint);
+      result +='.';
+      result += whole.substring(decPoint, whole.length);
+   }
+   else { //If the string is'0', then result is'0'
+      result = whole;
+   }
+   
+   //Negative numbers are altered.
+   if(isNegative) {
+      result ='-' + result;
+   }
+   //Convert the String value to Float.
+   resultFloat = parseFloat(result); 
+  
+  
+   return resultFloat;
+  
+}
+]]>
+    </Script>
+    <ROUTE fromField='value_changed' fromNode='ProjectileInterpolator' toField='setTextValues' toNode='ValueDisplayer'/>
+    <Transform translation='0.0 -0.7 0.0'>
+      <Collision>
+        <Shape>
+          <Appearance>
+            <ImageTexture url='"grass_1.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/grass_1.jpg" "https://www.web3d.org/WorkingGroups/media/textures/nature/grass_1.jpg"'/>
+            <TextureTransform scale='8 4'/>
+          </Appearance>
+          <ElevationGrid height='-0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75 -0.75' xDimension='4' xSpacing='40' zSpacing='25'/>
+        </Shape>
+      </Collision>
+    </Transform>
+    <Transform translation='0 0 12.5'>
+      <Transform DEF='BallTransform'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='1 0 0'/>
+          </Appearance>
+          <Sphere radius='1.5'/>
+        </Shape>
+        <Viewpoint description='BallView' position='0 10 70'/>
+        <TouchSensor DEF='HitSensor'/>
+      </Transform>
+    </Transform>
+    <TimeSensor DEF='Timer' cycleInterval='3.5'/>
+    <ROUTE fromField='fraction_changed' fromNode='Timer' toField='set_fraction' toNode='ProjectileInterpolator'/>
+    <ROUTE fromField='touchTime' fromNode='HitSensor' toField='set_startTime' toNode='Timer'/>
+    <ROUTE fromField='isActive' fromNode='HitSensor' toField='reset' toNode='ValueDisplayer'/>
+    <ROUTE fromField='value_changed' fromNode='ProjectileInterpolator' toField='set_translation' toNode='BallTransform'/>
+    <Script DEF='TimeConverter' directOutput='true'>
+      <field accessType='initializeOnly' name='TimerNode' type='SFNode'>
+        <TimeSensor USE='Timer'/>
+      </field>
+      <field accessType='inputOnly' name='setTime' type='SFFloat'/>
+      <![CDATA[
+ecmascript:
+function initialize() {
+}
+
+function setTime(inputTime, timeEvent) {
+   TimerNode.cycleInterval = inputTime;
+}
+]]>
+    </Script>
+    <ROUTE fromField='currentValueFloat' fromNode='TimeCycle' toField='setTime' toNode='TimeConverter'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "http://www.web3d.org/TaskGroups/x3d/translation/x3d-compact.dtd"
+                     "/www.web3d.org/TaskGroups/x3d/translation/x3d-compact.dtd">
+<X3D>
+  <head>
+    <meta content="X3DRetreatProtoExercise.x3d" name="filename"/>
+    <meta content="Don Brutzman" name="author"/>
+    <meta content="25 May 2000" name="revised"/>
+    <meta
+      content="Solutions to the Proto Exercise posed by Chris Marrin of SONY at the X3D Retreat.  This exercise includes intentionally illegal VRML and does not render." name="description"/>
+    <meta
+      content="http://www.web3d.org/TaskGroups/x3d/sony/X3DRetreatProtoEx.html" name="reference"/>
+    <meta
+      content="http://www.web3d.org/TaskGroups/x3d/translation/examples/development/X3DRetreatProtoExercise.x3d" name="url"/>
+    <meta
+      content="X3D-Edit, http://www.web3d.org/TaskGroups/x3d/translation/README.X3D-Edit.html" name="generator"/>
+  </head>
+  <Scene><!--============= Example 1 =============--><!--GeometryNode
+      and ChildNode are not valid node types, so used type Node/Nodes
+      instead.--><!--Note exercise example is incomplete and has no
+      node(s) defined for body content.--><!--X3D DTD can correctly
+      detect these content errors if they occur, scene will be
+      well-formed but not valid.--><ProtoDeclare name="MyProto">
+      <field name="geometry" type="Node" value="NULL"/>
+      <field name="children" type="Nodes" value="NULL"/>
+      <WorldInfo info="Added this node as PROTO body, so that the example can be valid VRML"/>
+    </ProtoDeclare><!--============= Example 2
+      =============--><!--Adding new fields to an existing
+      node.--><!--Corrected example by moving Material from PROTO
+      interface to PROTO body.--><ProtoDeclare name="PhysicalMaterial">
+      <field name="mass" type="Float" value="1"/>
+      <field name="hardness" type="Float" value="1"/>
+      <field name="friction" type="Float" value="1"/>
+      <Material DEF="M"/><!--EXPORT M (this is Blendo nomenclature, not
+        VRML 97)--></ProtoDeclare><!--============= Example 3a
+      =============--><!--Consider new possibility of declaring a field
+      PROTO.--><!--Again no body provided in this example (since goal is
+      a new FieldPROTO construct).--><ProtoDeclare
+        name="Plane"><!--FIELDPROTO--><field name="normal"
+        type="Vector3Float" value="0 0 1"/>
+      <field name="distance" type="Float" value="0"/>
+      <WorldInfo info="Added this node as PROTO body, so that the example can be valid VRML"/>
+    </ProtoDeclare><!--============= Example 3b
+      =============--><!--Example 3b employs the supposed field
+      PROTO.--><!--X3D DTD currently restricts field types to VRML 97
+      types, and so flags these untyped fields as an error.--><!--We
+      could allow unspecified field types, but would lose checking (and
+      authoring suggestions) on existing types.--><ProtoDeclare
+        name="BSPLeaf"><!--Intentionally invalid type values
+        used.--><field name="plane" type="Plane" value="0 0 1  0"/>
+      <field name="front" type="BSPLeaf" value="NULL"/>
+      <field name="back" type="BSPLeaf" value="NULL"/>
+      <field name="children" type="Nodes" value="NULL"/>
+      <WorldInfo info="Added this node as PROTO body, so that the example can be valid VRML"/>
+    </ProtoDeclare><!--============= Example 4 =============--><!--PROTO
+      with routes. Example nodes moved from interface definition to
+      body.--><ProtoDeclare name="SpinGroup"><!--Example 4 calls three
+        of the field references ROUTEs, but they actually match VRML 97
+        'IS' statements.--><field IS="TS.cycleInterval" name="speed"
+        type="Time" value="1"/>
+      <field IS="TS.startTime" name="startTime" type="Time" value="0"/>
+      <field IS="TS.stopTime" name="stopTime" type="Time"
+        value="0"/><!--Corrected example by moving nodes T, G, TS and OI
+        from PROTO interface to PROTO body.--><Transform
+          DEF="T"><!--EXPORT G (this is Blendo nomenclature, not VRML
+          97)--><Group DEF="G"/>
+      </Transform>
+      <TimeSensor DEF="TS" loop="true"/>
+      <OrientationInterpolator DEF="OI" key="0 0.25 0.5 0.75 1" keyValue="0 1 0 0, 0 1 0 1.57, 0 1 0 3.14, 0 1 0 4.71, 0 1 0 0"/>
+      <ROUTE fromField="fraction_changed" fromNode="TS"
+        toField="set_fraction" toNode="OI"/>
+      <ROUTE fromField="value_changed" fromNode="OI"
+        toField="set_rotation" toNode="T"/>
+    </ProtoDeclare><!--============= Example 5 =============--><!--Show
+      "overriding of a method of the inherited interface."--><!--X3D DTD
+      currently restricts field types to VRML 97 types, other values can
+      be entered but are flagged as invalid.--><ProtoDeclare name="BSPLeaf">
+      <field IS="RENDERscript.plane" name="plane" type="Plane" value="0 0 1  0"/>
+      <field IS="RENDERscript.front" name="front" type="BSPLeaf" value="NULL"/>
+      <field IS="RENDERscript.back" name="back" type="BSPLeaf"
+        value="NULL"/><!--Here is a curious example problem: an
+        unattached function overriding an unspecified (but commonly
+        occuring) implementation-specific browser function.--><!--This
+        solution wraps a Script node around the render () function to
+        maintain VRML 97 semantics.--><!--Preprocessing can automate
+        this process of wrapping a Script node around inline
+        functions.--><!--Corrected example by moving Group G (renamed
+        GG) from PROTO interface to PROTO body.--><Group DEF="GG"/>
+<Script DEF="RENDERscript"><![CDATA[javascript:
+function render()
+{
+ var result = plane.onPlane(System.sceneManager.getCameraPos());
+ if (result < 0) {
+  front.render();
+  G.render();
+  back.render();
+ }
+ else if (result > 0) {
+  back.render();
+  G.render();
+  front.render();
+ }
+ else {
+  front.render();
+  back.render();
+ }
+}]]></Script>
+    </ProtoDeclare><!--============= Example 6 =============--><!--Show
+      "inclusion of field scripts which execute whenever the field
+      receives an event."--><ProtoDeclare
+        name="AnimatedMaterial"><!--FROM is Blendo nomenclature,
+        expressed using IS references.--><field IS="timeBase.startTime"
+        name="startTime" type="Time" value="0"/>
+      <field IS="timeBase.stopTime" name="stopTime" type="Time" value="0"/>
+      <field name="startColor" type="Color" value="0 0 0"/>
+      <field name="endColor" type="Color" value="0 0 0"/><!--During the
+        December 3 1999 x3d-contributors meeting, Chris showed
+        how--><!--the VRML 97 specification allows an SF/MFNode field
+        node to be initialized with node content.--><!--This construct
+        is now permitted by DTD, here is an example:--><field
+        name="initializedChildren" type="Nodes">
+        <Group bboxCenter="1 2 3"/>
+        <Transform translation="1 2 3"/>
+      </field><!--Moved the following content nodes from PROTO interface
+        to PROTO body in order to match valid VRML 97
+        content.--><Material DEF="MM"/>
+      <ProtoInstance name="IntervalSensor">
+        <ProtoInstance DEF="timeBase" name="TimeBase"/>
+      </ProtoInstance>
+      <ColorInterpolator DEF="CI" key="0 0.5 1"/>
+<Script DEF="AnimatedMaterialInitialize"><![CDATA[javascript:
+{ // simple exercise for reader to initialize/update PROTO field values
+  // to the MM Material node.  Be sure to add some IS statements to match.
+}]]></Script>
+      <ROUTE fromField="value_changed" fromNode="CI"
+        toField="set_diffuseColor" toNode="MM"/>
+    </ProtoDeclare>
+  </Scene>
+</X3D>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE molecule SYSTEM "cml1_0_1.dtd">
+<!--Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.-->
+<!-- type="3D"   <date day="5" month="2" year="2010"/>-->
+
+<molecule convention="MDLMol" title="_1-4-Dihydronaphthalene">
+
+  <formula>C10 H10</formula>
+  <float title="molecule weight">130.19</float>
+  <float title="melting point" units="degC">207</float>
+  <float title="boiling point" units="degC">-35.8</float>
+  <float title="specific gravity">0.965</float>
+
+  <atomArray>
+    <atom id="_1_4-dihydronaphthalene_a1">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">0.9478</float>
+      <float builtin="y3">1.7879</float>
+      <float builtin="z3">0.8809</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-15.000000000000016</float>
+      <float builtin="y2">-25.980762113533153</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a2">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">0.9477</float>
+      <float builtin="y3">3.1805</float>
+      <float builtin="z3">0.8809</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-30.000000000000004</float>
+      <float builtin="y2">5.4502972368423104E-15</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a3">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.1499</float>
+      <float builtin="y3">1.0958</float>
+      <float builtin="z3">0.8809</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">14.999999999999982</float>
+      <float builtin="y2">-25.980762113533174</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a4">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">2.1502</float>
+      <float builtin="y3">3.8723</float>
+      <float builtin="z3">0.8809</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">-14.999999999999995</float>
+      <float builtin="y2">25.980762113533167</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a5">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.3665</float>
+      <float builtin="y3">3.1822</float>
+      <float builtin="z3">0.8809</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">15.000000000000005</float>
+      <float builtin="y2">25.98076211353316</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a6">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">3.3665</float>
+      <float builtin="y3">1.7856</float>
+      <float builtin="z3">0.8809</float>
+      <integer builtin="nonHydrogenCount">0</integer>
+      <float builtin="x2">30.000000000000004</float>
+      <float builtin="y2">0.0</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a7">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">4.6338</float>
+      <float builtin="y3">3.9703</float>
+      <float builtin="z3">0.8814</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">29.999999999999993</float>
+      <float builtin="y2">51.96152422706631</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a8">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">4.6336</float>
+      <float builtin="y3">0.9973</float>
+      <float builtin="z3">0.8813</float>
+      <integer builtin="nonHydrogenCount">2</integer>
+      <float builtin="x2">60.00000000000005</float>
+      <float builtin="y2">1.4210854715202004E-14</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a9">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">5.8696</float>
+      <float builtin="y3">1.8177</float>
+      <float builtin="z3">0.8716</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">75.00000000000001</float>
+      <float builtin="y2">25.980762113533192</float>
+    </atom>
+    <atom id="_1_4-dihydronaphthalene_a10">
+      <string builtin="elementType">C</string>
+      <float builtin="x3">5.8698</float>
+      <float builtin="y3">3.1496</float>
+      <float builtin="z3">0.8715</float>
+      <integer builtin="nonHydrogenCount">1</integer>
+      <float builtin="x2">59.999999999999986</float>
+      <float builtin="y2">51.961524227066334</float>
+    </atom>
+  </atomArray>
+  <bondArray>
+    <bond id="_1_4-dihydronaphthalene_b1">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a1</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a2</string>
+      <string builtin="order">A</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b2">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a3</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a1</string>
+      <string builtin="order">A</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b4">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a2</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a4</string>
+      <string builtin="order">A</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b6">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a6</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a3</string>
+      <string builtin="order">A</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b8">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a4</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a5</string>
+      <string builtin="order">A</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b10">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a6</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a5</string>
+      <string builtin="order">A</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b11">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a5</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a7</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b12">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a8</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a6</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b13">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a7</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a10</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b16">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a9</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a8</string>
+      <string builtin="order">1</string>
+    </bond>
+    <bond id="_1_4-dihydronaphthalene_b19">
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a10</string>
+      <string builtin="atomRef">_1_4-dihydronaphthalene_a9</string>
+      <string builtin="order">2</string>
+      <string builtin="stereo">null</string>
+    </bond>
+  </bondArray>
+</molecule>

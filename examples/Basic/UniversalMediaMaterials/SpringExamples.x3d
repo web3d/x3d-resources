@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='SpringExamples.x3d' name='title'/>
+    <meta content='Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI&apos;s Open Inventor material examples.' name='description'/>
+    <meta content='David Roussel' name='creator'/>
+    <meta content='James Harney, Don Brutzman NPS' name='translator'/>
+    <meta content='7 April 2002' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://vrmlstuff.free.fr/materials' name='reference'/>
+    <meta content='Universal Media Material Library' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringExamples.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SpringExamples.x3d'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring00' url='"SpringPrototypes.x3d#Spring00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring00" "SpringPrototypes.wrl#Spring00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring00"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring01' url='"SpringPrototypes.x3d#Spring01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring01" "SpringPrototypes.wrl#Spring01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring01"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring02' url='"SpringPrototypes.x3d#Spring02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring02" "SpringPrototypes.wrl#Spring02" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring02"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring03' url='"SpringPrototypes.x3d#Spring03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring03" "SpringPrototypes.wrl#Spring03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring03"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring04' url='"SpringPrototypes.x3d#Spring04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring04" "SpringPrototypes.wrl#Spring04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring04"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring05' url='"SpringPrototypes.x3d#Spring05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring05" "SpringPrototypes.wrl#Spring05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring05"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring06' url='"SpringPrototypes.x3d#Spring06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring06" "SpringPrototypes.wrl#Spring06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring06"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring07' url='"SpringPrototypes.x3d#Spring07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring07" "SpringPrototypes.wrl#Spring07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring07"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring08' url='"SpringPrototypes.x3d#Spring08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring08" "SpringPrototypes.wrl#Spring08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring08"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring09' url='"SpringPrototypes.x3d#Spring09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring09" "SpringPrototypes.wrl#Spring09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring09"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring10' url='"SpringPrototypes.x3d#Spring10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring10" "SpringPrototypes.wrl#Spring10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring10"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring11' url='"SpringPrototypes.x3d#Spring11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring11" "SpringPrototypes.wrl#Spring11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring11"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring12' url='"SpringPrototypes.x3d#Spring12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring12" "SpringPrototypes.wrl#Spring12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring12"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring13' url='"SpringPrototypes.x3d#Spring13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring13" "SpringPrototypes.wrl#Spring13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring13"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring14' url='"SpringPrototypes.x3d#Spring14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring14" "SpringPrototypes.wrl#Spring14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring14"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring15' url='"SpringPrototypes.x3d#Spring15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring15" "SpringPrototypes.wrl#Spring15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring15"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring16' url='"SpringPrototypes.x3d#Spring16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring16" "SpringPrototypes.wrl#Spring16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring16"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring17' url='"SpringPrototypes.x3d#Spring17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring17" "SpringPrototypes.wrl#Spring17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring17"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring18' url='"SpringPrototypes.x3d#Spring18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring18" "SpringPrototypes.wrl#Spring18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring18"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring19' url='"SpringPrototypes.x3d#Spring19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring19" "SpringPrototypes.wrl#Spring19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring19"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring20' url='"SpringPrototypes.x3d#Spring20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring20" "SpringPrototypes.wrl#Spring20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring20"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring21' url='"SpringPrototypes.x3d#Spring21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring21" "SpringPrototypes.wrl#Spring21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring21"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring22' url='"SpringPrototypes.x3d#Spring22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring22" "SpringPrototypes.wrl#Spring22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring22"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring23' url='"SpringPrototypes.x3d#Spring23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring23" "SpringPrototypes.wrl#Spring23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring23"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring24' url='"SpringPrototypes.x3d#Spring24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring24" "SpringPrototypes.wrl#Spring24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring24"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring25' url='"SpringPrototypes.x3d#Spring25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring25" "SpringPrototypes.wrl#Spring25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring25"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring26' url='"SpringPrototypes.x3d#Spring26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring26" "SpringPrototypes.wrl#Spring26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring26"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring27' url='"SpringPrototypes.x3d#Spring27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring27" "SpringPrototypes.wrl#Spring27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring27"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring28' url='"SpringPrototypes.x3d#Spring28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring28" "SpringPrototypes.wrl#Spring28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring28"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring29' url='"SpringPrototypes.x3d#Spring29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring29" "SpringPrototypes.wrl#Spring29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring29"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring30' url='"SpringPrototypes.x3d#Spring30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring30" "SpringPrototypes.wrl#Spring30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring30"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring31' url='"SpringPrototypes.x3d#Spring31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring31" "SpringPrototypes.wrl#Spring31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring31"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring32' url='"SpringPrototypes.x3d#Spring32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring32" "SpringPrototypes.wrl#Spring32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring32"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring33' url='"SpringPrototypes.x3d#Spring33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring33" "SpringPrototypes.wrl#Spring33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring33"'/>
+    <ExternProtoDeclare appinfo='UniversalMediaMaterials prototype' documentation='https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials' name='Spring34' url='"SpringPrototypes.x3d#Spring34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.x3d#Spring34" "SpringPrototypes.wrl#Spring34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.wrl#Spring34"'/>
+    <Group bboxSize='10.5 10.5 2.0'>
+      <NavigationInfo headlight='false'/>
+      <Viewpoint DEF='Front' description='Front view' position='0.0 0.0 12.0'/>
+      <Viewpoint DEF='PersRight' description='Low Right' orientation='0.74291 0.30772 0.59447 1.2171' position='6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='PersLeft' description='Low Left' orientation='0.74291 -0.30772 -0.59447 1.2171' position='-6.9282 -6.9282 6.9282'/>
+      <Viewpoint DEF='Back' description='Back view' orientation='0.0 1.0 0.0 3.1416' position='0.0 0.0 -12.0'/>
+      <Transform DEF='Close_travel'>
+        <PositionInterpolator DEF='Close_Mover' key='0.0 0.25 0.5 0.75 1.0' keyValue='0.0 2.5 0.0 0.0 0.0 0.0 0.0 -2.5 0.0 0.0 0.0 0.0 0.0 2.5 0.0'/>
+        <TimeSensor DEF='Close_Time' cycleInterval='12.0' loop='true'/>
+        <Viewpoint DEF='Close' description='Close Front' position='0.0 0.0 6.0'/>
+      </Transform>
+      <DirectionalLight direction='1.0 -1.0 -1.0'/>
+      <DirectionalLight direction='0.0 1.0 -0.5' intensity='0.5'/>
+      <Anchor description='Back to front view' url='"#Front"'>
+        <Transform translation='0.0 0.0 -0.5'>
+          <Inline url='"gridBack.x3d" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d" "gridBack.wrl" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"'/>
+        </Transform>
+      </Anchor>
+      <Viewpoint DEF='View00' description='Spring00' position='-3.75 3.75 3.0'/>
+      <Transform translation='-3.75 3.75 0.0'>
+        <Anchor description='Spring00 view' url='"#View00"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring00'/>
+            </Appearance>
+            <Sphere DEF='Ball' radius='0.5'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring00' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring00" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring00"'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextMat' diffuseColor='1.0 1.0 1.0'/>
+              </Appearance>
+              <Text string='"Spring00"'>
+                <FontStyle DEF='Style' family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.3' style='BOLD'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View01' description='Spring01' position='-2.25 3.75 3.0'/>
+      <Transform translation='-2.25 3.75 0.0'>
+        <Anchor description='Spring01 view' url='"#View01"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring01'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring01' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring01" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring01"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring01"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View02' description='Spring02' position='-0.75 3.75 3.0'/>
+      <Transform translation='-0.75 3.75 0.0'>
+        <Anchor description='Spring02 view' url='"#View02"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring02'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring02' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring03" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring02"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring02"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View03' description='Spring03' position='0.75 3.75 3.0'/>
+      <Transform translation='0.75 3.75 0.0'>
+        <Anchor description='Spring03 view' url='"#View03"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring03'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring03' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring03"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring03"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View04' description='Spring04' position='2.25 3.75 3.0'/>
+      <Transform translation='2.25 3.75 0.0'>
+        <Anchor description='Spring04 view' url='"#View04"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring04'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring04' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring04" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring04"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring04"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View05' description='Spring05' position='3.75 3.75 3.0'/>
+      <Transform translation='3.75 3.75 0.0'>
+        <Anchor description='Spring05 view' url='"#View05"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring05'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring05' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring05" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring05"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring05"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View06' description='Spring06' position='-3.75 2.25 3.0'/>
+      <Transform translation='-3.75 2.25 0.0'>
+        <Anchor description='Spring06 view' url='"#View06"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring06'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring06' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring06" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring06"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring06"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View07' description='Spring07' position='-2.25 2.25 3.0'/>
+      <Transform translation='-2.25 2.25 0.0'>
+        <Anchor description='Spring07 view' url='"#View07"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring07'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring07' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring07" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring07"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring07"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View08' description='Spring08' position='-0.75 2.25 3.0'/>
+      <Transform translation='-0.75 2.25 0.0'>
+        <Anchor description='Spring08 view' url='"#View08"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring08'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring08' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring08" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring08"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring08"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View09' description='Spring09' position='0.75 2.25 3.0'/>
+      <Transform translation='0.75 2.25 0.0'>
+        <Anchor description='Spring09 view' url='"#View09"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring09'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring09' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring09" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring09"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring09"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View10' description='Spring10' position='2.25 2.25 3.0'/>
+      <Transform translation='2.25 2.25 0.0'>
+        <Anchor description='Spring10 view' url='"#View10"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring10'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring10' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring10" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring10"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring10"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View11' description='Spring11' position='3.75 2.25 3.0'/>
+      <Transform translation='3.75 2.25 0.0'>
+        <Anchor description='Spring11 view' url='"#View11"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring11'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring11' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring11" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring11"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring11"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View12' description='Spring12' position='-3.75 0.75 3.0'/>
+      <Transform translation='-3.75 0.75 0.0'>
+        <Anchor description='Spring12 view' url='"#View12"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring12'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring12' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring12" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring12"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring12"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View13' description='Spring13' position='-2.25 0.75 3.0'/>
+      <Transform translation='-2.25 0.75 0.0'>
+        <Anchor description='Spring13 view' url='"#View13"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring13'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring13' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring13" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring13"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring13"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View14' description='Spring14' position='-0.75 0.75 3.0'/>
+      <Transform translation='-0.75 0.75 0.0'>
+        <Anchor description='Spring14 view' url='"#View14"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring14'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring14' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring14" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring14"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring14"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View15' description='Spring15' position='0.75 0.75 3.0'/>
+      <Transform translation='0.75 0.75 0.0'>
+        <Anchor description='Spring15 view' url='"#View15"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring15'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring15' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring15" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring15"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring15"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View16' description='Spring16' position='2.25 0.75 3.0'/>
+      <Transform translation='2.25 0.75 0.0'>
+        <Anchor description='Spring16 view' url='"#View16"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring16'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring16' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring16" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring16"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring16"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View17' description='Spring17' position='3.75 0.75 3.0'/>
+      <Transform translation='3.75 0.75 0.0'>
+        <Anchor description='Spring17 view' url='"#View17"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring17'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring17' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring17" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring17"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring17"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View18' description='Spring18' position='-3.75 -0.75 3.0'/>
+      <Transform translation='-3.75 -0.75 0.0'>
+        <Anchor description='Spring18 view' url='"#View18"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring18'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring18' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring18" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring18"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring18"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View19' description='Spring19' position='-2.25 -0.75 3.0'/>
+      <Transform translation='-2.25 -0.75 0.0'>
+        <Anchor description='Spring19 view' url='"#View19"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring19'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring19' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring19" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring19"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring19"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View20' description='Spring20' position='-0.75 -0.75 3.0'/>
+      <Transform translation='-0.75 -0.75 0.0'>
+        <Anchor description='Spring20 view' url='"#View20"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring20'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring20' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring20" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring20"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring20"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View21' description='Spring21' position='0.75 -0.75 3.0'/>
+      <Transform translation='0.75 -0.75 0.0'>
+        <Anchor description='Spring21 view' url='"#View21"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring21'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring21' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring21" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring21"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring21"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View22' description='Spring22' position='2.25 -0.75 3.0'/>
+      <Transform translation='2.25 -0.75 0.0'>
+        <Anchor description='Spring22 view' url='"#View22"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring22'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring22' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring22" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring22"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring22"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View23' description='Spring23' position='3.75 -0.75 3.0'/>
+      <Transform translation='3.75 -0.75 0.0'>
+        <Anchor description='Spring23 view' url='"#View23"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring23'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring23' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring23" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring23"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring23"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View24' description='Spring24' position='-3.75 -2.25 3.0'/>
+      <Transform translation='-3.75 -2.25 0.0'>
+        <Anchor description='Spring24 view' url='"#View24"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring24'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring24' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring24" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring24"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring24"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View25' description='Spring25' position='-2.25 -2.25 3.0'/>
+      <Transform translation='-2.25 -2.25 0.0'>
+        <Anchor description='Spring25 view' url='"#View25"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring25'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring25' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring25" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring25"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring25"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View26' description='Spring26' position='-0.75 -2.25 3.0'/>
+      <Transform translation='-0.75 -2.25 0.0'>
+        <Anchor description='Spring26 view' url='"#View26"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring26'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring26' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring26" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring26"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring26"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View27' description='Spring27' position='0.75 -2.25 3.0'/>
+      <Transform translation='0.75 -2.25 0.0'>
+        <Anchor description='Spring27 view' url='"#View27"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring27'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring27' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring27" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring27"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring27"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View28' description='Spring28' position='2.25 -2.25 3.0'/>
+      <Transform translation='2.25 -2.25 0.0'>
+        <Anchor description='Spring28 view' url='"#View28"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring28'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring28' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring28" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring28"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring28"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View29' description='Spring29' position='3.75 -2.25 3.0'/>
+      <Transform translation='3.75 -2.25 0.0'>
+        <Anchor description='Spring29 view' url='"#View29"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring29'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring29' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring29" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring29"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring29"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View30' description='Spring30' position='-3.75 -3.75 3.0'/>
+      <Transform translation='-3.75 -3.75 0.0'>
+        <Anchor description='Spring30 view' url='"#View30"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring30'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring30' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring30" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring30"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring30"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View31' description='Spring31' position='-2.25 -3.75 3.0'/>
+      <Transform translation='-2.25 -3.75 0.0'>
+        <Anchor description='Spring31 view' url='"#View31"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring31'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring31' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring31" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring31"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring31"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View32' description='Spring32' position='-0.75 -3.75 3.0'/>
+      <Transform translation='-0.75 -3.75 0.0'>
+        <Anchor description='Spring32 view' url='"#View32"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring32'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring32' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring32" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring32"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring32"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View33' description='Spring33' position='0.75 -3.75 3.0'/>
+      <Transform translation='0.75 -3.75 0.0'>
+        <Anchor description='Spring33 view' url='"#View33"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring33'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring33' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring33" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring33"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring33"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+      <Viewpoint DEF='View34' description='Spring34' position='2.25 -3.75 3.0'/>
+      <Transform translation='2.25 -3.75 0.0'>
+        <Anchor description='Spring34 view' url='"#View34"'>
+          <Shape>
+            <Appearance>
+              <ProtoInstance containerField='material' name='Spring34'/>
+            </Appearance>
+            <Sphere USE='Ball'/>
+          </Shape>
+        </Anchor>
+        <Transform translation='0.0 0.3 0.5'>
+          <Anchor description='Spring34' parameter='"target=_source"' url='"SpringPrototypes.html#ProtoDeclare_Spring34" "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/SpringPrototypes.html#ProtoDeclare_Spring34"'>
+            <Shape>
+              <Appearance>
+                <Material USE='TextMat'/>
+              </Appearance>
+              <Text string='"Spring34"'>
+                <FontStyle USE='Style'/>
+              </Text>
+            </Shape>
+          </Anchor>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromField='fraction_changed' fromNode='Close_Time' toField='set_fraction' toNode='Close_Mover'/>
+    <ROUTE fromField='value_changed' fromNode='Close_Mover' toField='set_translation' toNode='Close_travel'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interactive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <component level='1' name='Geospatial'/>
+    <meta content='SriCampus082.x3d' name='title'/>
+    <meta content='SRI campus building' name='description'/>
+    <meta content='Aaron Heller, SRI International' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 February 2000' name='created'/>
+    <meta content='29 April 2003' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://www.geovrml.org/examples' name='reference'/>
+    <meta content='X3D geospatial example' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Geospatial/SriCampus082.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='SriCampus082.x3d'/>
+    <TouchSensor DEF='MouseOverPopupDescription' description='Cube-104' enabled='false'/>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='0.75 0.75 0.75'/>
+      </Appearance>
+      <IndexedFaceSet convex='false' coordIndex='5 6 7 4 -1 0 3 2 1 -1 2 3 7 6 -1 0 1 5 4 -1 2 6 5 1 -1 0 4 7 3 -1' solid='false'>
+        <Coordinate DEF='OBJECT-82-VERTICES' point='-1.5151489 -3.7058856 3.7563171 1.5151489 -3.7058856 3.7563171 1.5151489 -3.7058856 -3.7563171 -1.5151489 -3.7058856 -3.7563171 -1.5151489 3.7058856 3.7563171 1.5151489 3.7058856 3.7563171 1.5151489 3.7058856 -3.7563171 -1.5151489 3.7058856 -3.7563171'/>
+      </IndexedFaceSet>
+    </Shape>
+  </Scene>
+</X3D>

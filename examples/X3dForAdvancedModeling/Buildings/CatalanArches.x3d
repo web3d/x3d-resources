@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='CatalanArches.x3d' name='title'/>
+    <meta content='Draw architectural forms by Rafael Guastavino' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='9 November 2013' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='TODO lecture pdf' name='reference'/>
+    <meta content='TODO book references' name='reference'/>
+    <meta content='https://en.wikipedia.org/wiki/Guastavino_tile' name='reference'/>
+    <meta content='https://en.wikipedia.org/wiki/Catalan_vault' name='reference'/>
+    <meta content='http://architecture.mit.edu/class/guastavino/news.html' name='reference'/>
+    <meta content='http://block.arch.ethz.ch' name='reference'/>
+    <meta content='http://architecture.mit.edu/class/guastavino/features/lisa/mroszczyk%20thesis.pdf' name='reference'/>
+    <meta content='http://vimeo.com/21965637' name='reference'/>
+    <meta content='Under development' name='warning'/>
+    <meta content='https://x3dgraphics.com/examples/X3dForAdvancedModeling/Buildings/CatalanArches.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='CatalanArches.x3d'/>
+    <Group>
+      <Shape>
+        <Text string='"TODO" "compute arch geometry"'>
+          <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0.9 0.9 0.9'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <Box size='11 3 .001'/>
+        <Appearance>
+          <Material transparency='0.8'/>
+        </Appearance>
+      </Shape>
+    </Group>
+  </Scene>
+</X3D>

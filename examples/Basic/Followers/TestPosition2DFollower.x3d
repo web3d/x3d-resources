@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <meta content='TestPosition2DFollower.x3d' name='title'/>
+    <meta content='X3D Follower example' name='description'/>
+    <meta content='Herbert Stocker' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='18 April 2006' name='created'/>
+    <meta content='2 December 2011' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='originals/test_Pos2DFollower.wrl' name='reference'/>
+    <meta content='Stocker_06_Followers.pdf' name='reference'/>
+    <meta content='http://www.hersto.com/Publications/Followers' name='reference'/>
+    <meta content='X3D version 3.2 or greater' name='requires'/>
+    <meta content='X3D Follower Chaser Damper' name='subject'/>
+    <meta content='under development, instantReality works but BS Contact fails silently' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/specifications/ISO-IEC-19775-1.2-X3D-AbstractSpecification/Part01/components/followers.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Followers/TestPosition2DFollower.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='TestPosition2DFollower.x3d'/>
+    <Viewpoint fieldOfView='0.716' position='0.0 0.0 15.0'/>
+    <NavigationInfo type='"NONE"'/>
+    <Group>
+      <TouchSensor DEF='PositionTouchSensor' description='move ball to demonstrate PositionChaser2D, PositionDamper2D'/>
+      <Transform translation='0.0 0.0 -0.05'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.0 0.0 0.0' emissiveColor='0.28 0.27 0.24'/>
+          </Appearance>
+          <Box size='10.0 10.0 0.1'/>
+        </Shape>
+      </Transform>
+    </Group>
+    <Transform DEF='TrObjectDirect' scale='0.8 0.8 0.8'>
+      <Shape>
+        <Appearance>
+          <Material ambientIntensity='0.0333' diffuseColor='0.02 0.24 0.53' emissiveColor='0.01 0.12 0.27' shininess='0.54' specularColor='0.32 0.4 0.4'/>
+        </Appearance>
+        <Sphere DEF='GeomObject' radius='0.3'/>
+      </Shape>
+    </Transform>
+    <Script DEF='ScrTexCoordTo3D'>
+      <field accessType='outputOnly' name='A_ot' type='SFVec3f'/>
+      <field accessType='inputOnly' name='B_in' type='SFVec2f'/>
+      <field accessType='inputOnly' name='A_in' type='SFVec2f'/>
+      <field accessType='outputOnly' name='C_ot' type='SFVec3f'/>
+      <field accessType='outputOnly' name='B_ot' type='SFVec3f'/>
+      <field accessType='inputOnly' name='C_in' type='SFVec2f'/>
+      <![CDATA[
+ecmascript:
+
+function A_in(a)   { A_ot= (new SFVec3f(a.x, a.y, 0)).multiply(10).subtract(new SFVec3f(5, 5, 0)); }
+function B_in(b)   { B_ot= (new SFVec3f(b.x, b.y, 0)).multiply(10).subtract(new SFVec3f(5, 5, 0)); }
+function C_in(c)   { C_ot= (new SFVec3f(c.x, c.y, 0)).multiply(10).subtract(new SFVec3f(5, 5, 0)); }
+]]>
+    </Script>
+    <ROUTE fromField='hitTexCoord_changed' fromNode='PositionTouchSensor' toField='A_in' toNode='ScrTexCoordTo3D'/>
+    <ROUTE fromField='A_ot' fromNode='ScrTexCoordTo3D' toField='translation' toNode='TrObjectDirect'/>
+    <Switch DEF='SwObjectDampered' whichChoice='0'>
+      <Transform DEF='TrObjectDampered'>
+        <Shape>
+          <Appearance DEF='AppObjectDampered'>
+            <Material ambientIntensity='0.0333' diffuseColor='0.53 0.02 0.24' emissiveColor='0.27 0.01 0.12' shininess='0.54' specularColor='0.4 0.32 0.4'/>
+          </Appearance>
+          <Sphere USE='GeomObject'/>
+        </Shape>
+      </Transform>
+    </Switch>
+    <PositionDamper2D DEF='PositionDamper2DNode'/>
+    <ROUTE fromField='hitTexCoord_changed' fromNode='PositionTouchSensor' toField='set_destination' toNode='PositionDamper2DNode'/>
+    <ROUTE fromField='value_changed' fromNode='PositionDamper2DNode' toField='B_in' toNode='ScrTexCoordTo3D'/>
+    <ROUTE fromField='B_ot' fromNode='ScrTexCoordTo3D' toField='translation' toNode='TrObjectDampered'/>
+    <Switch DEF='SwObjectFollowed' whichChoice='0'>
+      <Transform DEF='TrObjectFollowed'>
+        <Shape>
+          <Appearance DEF='AppObjectFollowed'>
+            <Material ambientIntensity='0.0333' diffuseColor='0.24 0.53 0.02' emissiveColor='0.12 0.27 0.01' shininess='0.54' specularColor='0.4 0.4 0.32'/>
+          </Appearance>
+          <Sphere USE='GeomObject'/>
+        </Shape>
+      </Transform>
+    </Switch>
+    <PositionChaser2D DEF='PositionChaser2DNode' duration='1.5'/>
+    <ROUTE fromField='hitTexCoord_changed' fromNode='PositionTouchSensor' toField='set_destination' toNode='PositionChaser2DNode'/>
+    <ROUTE fromField='value_changed' fromNode='PositionChaser2DNode' toField='C_in' toNode='ScrTexCoordTo3D'/>
+    <ROUTE fromField='C_ot' fromNode='ScrTexCoordTo3D' toField='translation' toNode='TrObjectFollowed'/>
+    <ProtoDeclare name='ToggleButton'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='HottColor' type='SFColor' value='0.8 0.8 0.3'/>
+        <field accessType='initializeOnly' name='initiallyOn' type='SFBool' value='false'/>
+        <field accessType='initializeOnly' name='ColdColor' type='SFColor' value='0.2 0.2 0.0'/>
+        <field accessType='outputOnly' name='isOn' type='SFBool'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Transform scale='0.4 0.4 0.4'>
+          <TouchSensor DEF='Touch' description='touch to activate'/>
+          <Shape DEF='ShRect'>
+            <Appearance>
+              <Material DEF='Mat' ambientIntensity='0.04' diffuseColor='0.0 0.0 0.0' shininess='0.11'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3 -1'>
+              <Coordinate point='-1.0 -1.0 0.0 1.0 -1.0 0.0 1.0 1.0 0.0 -1.0 1.0 0.0'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <Script DEF='ScrToggleButton'>
+          <field accessType='inputOnly' name='TS_Touched' type='SFTime'/>
+          <field accessType='outputOnly' name='Color' type='SFColor'/>
+          <field accessType='outputOnly' name='isOn' type='SFBool'/>
+          <field accessType='initializeOnly' name='ColdColor' type='SFColor'/>
+          <field accessType='outputOnly' name='Tau' type='SFFloat'/>
+          <field accessType='initializeOnly' name='initiallyOn' type='SFBool'/>
+          <field accessType='inputOnly' name='DamperSThere' type='SFBool'/>
+          <field accessType='initializeOnly' name='HottColor' type='SFColor'/>
+          <IS>
+            <connect nodeField='isOn' protoField='isOn'/>
+            <connect nodeField='ColdColor' protoField='ColdColor'/>
+            <connect nodeField='initiallyOn' protoField='initiallyOn'/>
+            <connect nodeField='HottColor' protoField='HottColor'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function DamperSThere()
+{
+    activate(initiallyOn);
+}
+
+function activate(a)
+{
+    isOn= a;
+    Tau=  a? .1 : .2;
+    Color= a? HottColor : ColdColor;
+}
+
+function set_id(i)
+{
+    id= i;
+}
+
+function TS_Touched()
+{
+    activate(!isOn);
+}
+]]>
+        </Script>
+        <ColorDamper DEF='ColorDamperNode' order='1'/>
+        <ROUTE fromField='Tau' fromNode='ScrToggleButton' toField='tau' toNode='ColorDamperNode'/>
+        <ROUTE fromField='Color' fromNode='ScrToggleButton' toField='set_destination' toNode='ColorDamperNode'/>
+        <Group>
+          <!-- ======= ROUTE Trace ============================================== -->
+          <Script DEF='Trace_ROUTE_ScrToggleButton.Tau_TO_Damp.tau' mustEvaluate='true'>
+            <!-- Trace ROUTEd values on X3D browser console -->
+            <field accessType='initializeOnly' appinfo='Sampling frequency in seconds (0 means all values)' name='reportInterval' type='SFTime' value='1.0'/>
+            <field accessType='inputOnly' name='traceValue' type='SFFloat'/>
+            <field accessType='initializeOnly' name='timeStampPreviousReport' type='SFTime' value='-1'/>
+            <![CDATA[
+ecmascript:
+    function traceValue (eventValue, timeStamp) {
+      // input eventValue received for trace field
+      if (timeStamp - timeStampPreviousReport >= reportInterval) {
+        Browser.print ('Trace_ROUTE_ScrToggleButton.Tau_TO_Damp.tau type=SFFloat value=' + eventValue + '\n');
+        timeStampPreviousReport = timeStamp;
+      }
+    }
+    function timeOfDay (someTime) {
+      hh = Math.floor (someTime /(60*60)) % 24;
+      mm = Math.floor (someTime / 60)     % 60;
+      ss = Math.floor (someTime)          % 60;
+      if (hh < 9) hour   = '0' + hh;
+      else        hour   =       hh;
+      if (mm < 9) minute = '0' + mm;
+      else        minute =       mm;
+      if (ss < 9) second = '0' + ss;
+      else        second =       ss;
+      return '(' + hour + ':' + minute + ':' + second + ' GMT)';
+    }
+]]>
+          </Script>
+          <ROUTE fromField='Tau' fromNode='ScrToggleButton' toField='traceValue' toNode='Trace_ROUTE_ScrToggleButton.Tau_TO_Damp.tau'/>
+          <!-- ======= ROUTE Trace block complete ===================================================== -->
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <Transform translation='-5.7 4.0 0.0'>
+      <ProtoInstance DEF='BtnDamper' name='ToggleButton'>
+        <fieldValue name='HottColor' value='0.8 0.03 0.36'/>
+        <fieldValue name='initiallyOn' value='true'/>
+        <fieldValue name='ColdColor' value='0.2 0.0080 0.09'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='-8.0 3.9 0.0'>
+      <Shape>
+        <Appearance DEF='AppLabels'>
+          <Material diffuseColor='0.0 0.0 0.0' emissiveColor='0.8 0.8 0.8'/>
+        </Appearance>
+        <Text string='"Damper"'>
+          <FontStyle DEF='FntLabels' family='"Arial" "SANS"' size='0.5'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='-5.7 2.8 0.0'>
+      <ProtoInstance DEF='BtnChaser' name='ToggleButton'>
+        <fieldValue name='HottColor' value='0.36 0.8 0.03'/>
+        <fieldValue name='initiallyOn' value='true'/>
+        <fieldValue name='ColdColor' value='0.09 0.2 0.0080'/>
+      </ProtoInstance>
+    </Transform>
+    <Transform translation='-8.0 2.7 0.0'>
+      <Shape>
+        <Appearance USE='AppLabels'/>
+        <Text string='"Chaser"'>
+          <FontStyle USE='FntLabels'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Script DEF='ScrBtnMgr'>
+      <field accessType='inputOnly' name='BtnChaserIsOn' type='SFBool'/>
+      <field accessType='outputOnly' name='WcDamper' type='SFInt32'/>
+      <field accessType='outputOnly' name='WcChaser' type='SFInt32'/>
+      <field accessType='inputOnly' name='BtnDamperIsOn' type='SFBool'/>
+      <![CDATA[
+ecmascript:
+
+function BtnDamperIsOn(on)
+{
+    WcDamper= on? 0:-1;
+}
+
+function BtnChaserIsOn(on)
+{
+    WcChaser= on? 0:-1;
+}
+]]>
+    </Script>
+    <ROUTE fromField='isOn' fromNode='BtnDamper' toField='BtnDamperIsOn' toNode='ScrBtnMgr'/>
+    <ROUTE fromField='isOn' fromNode='BtnChaser' toField='BtnChaserIsOn' toNode='ScrBtnMgr'/>
+    <ROUTE fromField='WcDamper' fromNode='ScrBtnMgr' toField='whichChoice' toNode='SwObjectDampered'/>
+    <ROUTE fromField='WcChaser' fromNode='ScrBtnMgr' toField='whichChoice' toNode='SwObjectFollowed'/>
+    <Switch DEF='SwDamperTrail' whichChoice='0'>
+      <Group DEF='GrDamperTrail'/>
+    </Switch>
+    <Switch DEF='SwChaserTrail' whichChoice='0'>
+      <Group DEF='GrChaserTrail'/>
+    </Switch>
+    <TimeSensor DEF='TmrTrail' cycleInterval='0.020000000000000004' loop='true'/>
+    <Script DEF='ScrTrailer' directOutput='true'>
+      <field accessType='initializeOnly' name='cShapeDamperTrailPoint' type='SFNode'>
+        <Shape>
+          <Appearance USE='AppObjectDampered'/>
+          <Sphere DEF='GeomTrail' radius='0.1'/>
+        </Shape>
+      </field>
+      <field accessType='initializeOnly' name='lastDamperPos' type='SFVec3f' value='0.0 0.0 0.0'/>
+      <field accessType='initializeOnly' name='ChaserTrails' type='MFNode'>
+        <!-- no initialization nodes since this is a local field to hold content -->
+      </field>
+      <field accessType='initializeOnly' name='cShapeChaserTrailPoint' type='SFNode'>
+        <Shape>
+          <Appearance USE='AppObjectFollowed'/>
+          <Sphere USE='GeomTrail'/>
+        </Shape>
+      </field>
+      <field accessType='initializeOnly' name='DamperTrails' type='MFNode'>
+        <!-- no initialization nodes since this is a local field to hold content -->
+      </field>
+      <field accessType='initializeOnly' name='GrChaserTrail' type='SFNode'>
+        <Group USE='GrChaserTrail'/>
+      </field>
+      <field accessType='inputOnly' name='ChaserPos' type='SFVec3f'/>
+      <field accessType='initializeOnly' name='cNumTrailPoints' type='SFInt32' value='35'/>
+      <field accessType='initializeOnly' name='lastChaserPos' type='SFVec3f' value='0.0 0.0 0.0'/>
+      <field accessType='inputOnly' name='Tick' type='SFTime'/>
+      <field accessType='inputOnly' name='DamperPos' type='SFVec3f'/>
+      <field accessType='initializeOnly' name='GrDamperTrail' type='SFNode'>
+        <Group USE='GrDamperTrail'/>
+      </field>
+      <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    DamperTrails.length=
+    ChaserTrails.length= cNumTrailPoints;
+
+    for(var C= 0; C<cNumTrailPoints; C++ )
+    {
+        DamperTrails[C]= new SFNode('Transform{}');
+        ChaserTrails[C]= new SFNode('Transform{}');
+
+        DamperTrails[C].children[0]= cShapeDamperTrailPoint;
+        ChaserTrails[C].children[0]= cShapeChaserTrailPoint;
+    }
+
+    GrDamperTrail.children= DamperTrails;
+    GrChaserTrail.children= ChaserTrails;
+}
+
+function DamperPos(Pos)
+{
+    lastDamperPos= Pos;
+}
+
+function ChaserPos(Pos)
+{
+    lastChaserPos= Pos;
+}
+
+function Tick()
+{
+    for(var C= cNumTrailPoints - 1; C>0; C-- )
+    {
+        DamperTrails[C].translation= DamperTrails[  C - 1].translation;
+        ChaserTrails[C].translation= ChaserTrails[C - 1].translation;
+    }
+
+    DamperTrails[0].translation= lastDamperPos;
+    ChaserTrails[0].translation= lastChaserPos;
+}
+]]>
+    </Script>
+    <ROUTE fromField='cycleTime' fromNode='TmrTrail' toField='Tick' toNode='ScrTrailer'/>
+    <ROUTE fromField='translation' fromNode='TrObjectDampered' toField='DamperPos' toNode='ScrTrailer'/>
+    <ROUTE fromField='translation' fromNode='TrObjectFollowed' toField='ChaserPos' toNode='ScrTrailer'/>
+    <ROUTE fromField='WcDamper' fromNode='ScrBtnMgr' toField='whichChoice' toNode='SwDamperTrail'/>
+    <ROUTE fromField='WcChaser' fromNode='ScrBtnMgr' toField='whichChoice' toNode='SwChaserTrail'/>
+  </Scene>
+</X3D>

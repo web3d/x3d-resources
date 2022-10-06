@@ -1,0 +1,67 @@
+...
+    // Since there is exactly one set of texture coordinates for each vertex,
+    // can use a single UV space and default the mappings.
+
+    mlvToKernel.uvSpace = new lvToKernelUV();
+    mlvToKernel.uvSpace.numUVspace = nf;
+
+    mlvToKernel.uvSpace.gsNumUV = new int[nf];
+    for (int i=0; i < nf; i++) {
+        mlvToKernel.uvSpace.gsNumUV[i] = 1;
+    }
+
+    mlvToKernel.uvSpace.gsUVseq = new lvToKernelUV.GsUV[nf];
+    for (int i=0; i < nf; i++) {
+        mlvToKernel.uvSpace.gsUVseq[i].uvSpaceNo = i;
+    }
+
+    mlvToKernel.uvSpace.vtxNumUV = new int[nv];
+    for (int i=0; i < nv; i++) {
+        mlvToKernel.uvSpace.vtxNumUV[i] = 0;
+    }
+    int start = 0;
+    for (int i=0; i < nf; i++) {
+        int n = mlvToKernel.gsNumVtx[i];
+        for (int j=0; j < n; j++) {
+            int vtx = mlvToKernel.gsVtxSeq[start+j];
+            mlvToKernel.uvSpace.vtxNumUV[vtx]++;
+        }
+        start += n;
+    }
+
+    int index[] = new int[nv];
+    int n = 0;
+    for (int i=0; i < nv; i++) {
+        index[i] = n;
+        n += mlvToKernel.uvSpace.vtxNumUV[i];
+    }
+    mlvToKernel.uvSpace.vtxUVseq = new lvToKernelUV.VtxUV[n];
+
+    float vec2s[] = new float[2];
+    start = 0;
+    for (int i=0; i < nf; i++) {
+        int n = mlvToKernel.gsNumVtx[i];
+        for (int j=0; j < n; j++) {
+            mTextureCoord.get1Value(i, j, vec2s); 
+            int vtx = mlvToKernel.gsVtxSeq[start+j];
+            int idx0 = index[vtx];
+            
+            mlvToKernel.uvSpace.vtxUVseq[idx0].uvSpaceNo = i;
+            mlvToKernel.uvSpace.vtxUVseq[idx0].uv.u = vec2s[0];
+            mlvToKernel.uvSpace.vtxUVseq[idx0].uv.v = vec2s[1];
+            
+            index[vtx]++;
+        }
+        start += n;
+    }
+...
+
+    for(int i=0; i < mlvFromKernel.vertex.length; i++) {
+        ... = mlvFromKernel.uvSpace[0].uv[i];
+    }
+...
+
+where:
+nf = num GS faces
+nv = num vertices
+mTextureCoord = array of VRML97 texture coordinates

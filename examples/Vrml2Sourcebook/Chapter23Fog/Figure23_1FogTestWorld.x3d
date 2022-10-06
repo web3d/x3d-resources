@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure23_1FogTestWorld.x3d' name='title'/>
+    <meta content='Figure 23.1, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch23/23fig01.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='22 September 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A test world for use in subsequent fog example scenes.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter23Fog/Figure23_1FogTestWorld.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure23_1FogTestWorld.x3d'/>
+    <Viewpoint description='30m above 60m x 60m square' orientation='1 0 0 -1.57' position='0 30 0'/>
+    <Viewpoint description='60m above 60m x 60m square' orientation='1 0 0 -1.57' position='0 60 0'/>
+    <Group>
+      <DirectionalLight ambientIntensity='1' direction='0 -1 -1' intensity='0.2'/>
+      <Shape>
+        <Box size='60 0.01 60'/>
+        <Appearance>
+          <Material ambientIntensity='0.5' diffuseColor='0.2 0.8 0.2'/>
+        </Appearance>
+      </Shape>
+      <Group DEF='ColumnPair'>
+        <Transform translation='-4 3 0'>
+          <Shape DEF='Column'>
+            <Cylinder height='6' radius='0.3'/>
+            <Appearance>
+              <Material diffuseColor='1 0.8 0.5'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='4 3 0'>
+          <Shape USE='Column'/>
+        </Transform>
+      </Group>
+      <Transform translation='0 0 -8'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0 0 -8'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0 0 8'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0 0 -16'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0 0 16'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0 0 -24'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+      <Transform translation='0 0 24'>
+        <Group USE='ColumnPair'/>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

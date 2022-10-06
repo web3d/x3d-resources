@@ -1,0 +1,70 @@
+<!--
+		XVL 1.0 Document Type Definition (DTD)
+
+Filename:	LatticeXvl-compact.dtd
+
+Description:	Define the LatticeXVL tag and attribute profile for X3D.
+
+		This X3D native node corresponds to a VRML ExternProto
+		declaration.
+
+ 		Elements in this tagset are enabled by setting the 
+		XvlProfile entity to "INCLUDE" at the top of an 
+		X3D scene file, as shown in several examples such as
+		examples/LatticeXvl/XvlShellAll.xml.  This flag then 
+		triggers inclusion of the XVL tags in the 
+		x3d-compact.dtd tagset.  Thus the Xvl.dtd
+		demonstrates X3D extensibility for profiles.
+
+ Status:	In testing and preparation for February 2002 SDK CDs
+
+ Authors:	Lattice Technology, Inc. proposed the LatticeXvl extension,
+		Makito Seki produced the original XML encoding of LatticeXvl
+		nodes for X3D with additional work by Marc Jablonski and
+		Don Brutzman
+
+ Reference:	LatticeXvl extension for X3D
+ 		http://www.web3d.org/TaskGroups/x3d/translation/examples/LatticeXvl/doc/proposal/LatticeProposal.html
+ 		http://www.Xvl3D.com
+
+ Issues:	None.
+
+ Address:	http://www.web3D.org/TaskGroups/x3d/translation/LatticeXvl-compact.dtd
+
+ Created:	10 May 2001
+
+ Revised:	20 January 2002
+-->
+
+<!-- for future: G1T1 level -->
+
+<!ENTITY % XvlG1T1ShellTypes "" >
+
+<!-- Types of XVL Shells -->
+
+<!ENTITY % XvlShell.shellTypes " %XvlG1T1ShellTypes; POLYGON_MESH | LATTICE_MESH " >
+
+<!-- XvlShell geometry node -->
+
+<!ELEMENT   XvlShell (
+	( (%TextureCoordinateNodes;), ((%CoordinateNodes;) | %WildcardNodes;)  ) |
+	( (%CoordinateNodes;), ((%TextureCoordinateNodes;) | %WildcardNodes;)? ) |
+	( %WildcardNodes;, ((%TextureCoordinateNodes;) | (%CoordinateNodes;) | %WildcardNodes;)?) )?
+>
+<!ATTLIST   XvlShell
+    shellType          ( %XvlShell.shellTypes; )  #IMPLIED
+    numberOfDivisions    %SFInt32;  #IMPLIED
+    vertexRound          %MFFloat;  #IMPLIED
+    edgeStartCoordIndex  %MFInt32;  #IMPLIED
+    edgeEndCoordIndex    %MFInt32;  #IMPLIED
+    edgeRound            %MFFloat;  #IMPLIED
+    edgeStartVector      %MFVec3f;  #IMPLIED
+    edgeEndVector        %MFVec3f;  #IMPLIED
+    faceCoordIndex       %MFInt32;  #IMPLIED
+    faceTexCoordIndex    %MFInt32;  #IMPLIED
+    faceEmpty            %MFBool;   #IMPLIED
+    faceHidden           %MFBool;   #IMPLIED
+    nodeTypeHint         NMTOKEN    #FIXED  "IndexedFaceSet"
+    DEF                  ID         #IMPLIED
+    USE                  IDREF      #IMPLIED
+>

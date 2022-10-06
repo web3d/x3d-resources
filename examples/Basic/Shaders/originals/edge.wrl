@@ -1,0 +1,67 @@
+#VRML V2.0 utf8
+
+PolygonBackground {
+    appearance Appearance {
+        texture ImageTexture {
+            url "snaefari.jpg"
+			repeatS FALSE
+			repeatT	FALSE
+        }
+		shaders	ComposedShader {
+			exposedField SFInt32 tex0 0
+			exposedField MFFloat KernelValue [ -4., 1., 1., 1., 1. ]
+			exposedField MFVec2f Offset [ 0 0, 0 0.004, 0 -0.004, 0.003 0, -0.003 0 ]
+			parts [
+				ShaderPart {
+					type "FRAGMENT"
+					url	"
+					uniform sampler2D tex0;
+					
+				#if 1
+					uniform vec2 Offset[5];
+					uniform float KernelValue[5];
+					
+				#else
+					const float over = 4.0;
+                    const float step_w = over / 1280.0;
+                    const float step_h = over / 960.0;
+
+					vec2 Offset[5] = {
+						vec2(0.,  0.),
+						vec2(0.,  step_h),
+						vec2(0., -step_h),
+						vec2( step_w, 0.),
+						vec2(-step_w, 0.)
+					};
+					float KernelValue[5] = {
+						-4., 1., 1., 1., 1.
+					};
+				#endif
+
+					void main()
+					{
+    					vec4 tmp;
+						float luminance, sum = 0.0;
+
+    					for (int i=0; i<5; i++)
+    					{
+        					tmp = texture2D(tex0, gl_TexCoord[0].st + Offset[i]);
+							luminance = dot(vec3(0.2125, 0.7154, 0.0721), tmp.rgb);
+        					sum += luminance * KernelValue[i];
+    					}									   
+						
+    					gl_FragColor = vec4(sum,sum,sum,1.0);
+					}
+					"
+				}
+			]
+		}
+    }
+    positions [
+        0 0, 1 0, 1 1, 0 1
+    ]
+    texCoords [
+        0 0 0, 1 0 0, 1 1 0, 0 1 0
+    ]
+    fixedImageSize 1280 960
+}

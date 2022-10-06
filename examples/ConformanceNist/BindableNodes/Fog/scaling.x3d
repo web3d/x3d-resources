@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='scaling.x3d' name='title'/>
+    <meta content='http://www.nist.gov/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/vrml.html' name='reference'/>
+    <meta content='http://www.itl.nist.gov/div897/ctg/vrml/members.html' name='creator'/>
+    <meta content='This file was provided by the National Institute of Standards and Technology, and is part of the X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html The information contained within this file is provided for use in establishing conformance to the ISO VRML97 Specification. Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology. This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are derived from it, and any modified versions bear some notice that they have been modified.' name='disclaimer'/>
+    <meta content='Correct definition and compliance of this conformance scene is maintained by the X3D Working Group, https://www.web3d.org/working-groups/x3d' name='info'/>
+    <meta content='Michael Kass NIST, Don Brutzman NPS' name='translator'/>
+    <meta content='21 January 2001' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Test Transform scaling effect on Fog visibility. This world contains two Viewpoint nodes, residing in two seperate Transforms. One Viewpoint is contained in a Transform with a scale of 1 1 1. A second Viewpoint is contained in a Transform with a scale of (.01 .01 .01). Indicating the Text geometry associated with each Viewpoint places the viewer in that Viepoints local coordinate system. A single Fog node with a visibilityLimit of 40 meters, and Box geometry exist in the root Transform. Indicating the appropriate Text geometry with the pointing device moves the Viewpoint to either of the two Transforms local coordinate systems. As a result: indicating the left Text geometry places the Viewpoint at a distance of 20 meters from the Box, while indicating the right Text places the Viewpoint in a local coordinate system where the viewer is 2000 meters from the Box. Hence, indicating the left Text results in a half-fogged Box, while indicating the right Text renderes a fully-fogged Box.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Fog/scaling.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='scaling.x3d'/>
+    <Viewpoint DEF='DUMMYVIEW' description='initial view' position='0 0 20'/>
+    <Fog DEF='DUMMYFOG'/>
+    <Fog DEF='REDFOG' color='1 0 0' visibilityRange='40'/>
+    <Transform translation='0 2 0'>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Box size='6 6 2'/>
+      </Shape>
+    </Transform>
+    <Transform translation='-10 2.5 2'>
+      <TouchSensor DEF='TOUCH1' description='touch for close range'/>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"scale = 1 1 1" "(distance = 20)"'>
+          <FontStyle style='BOLD'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform translation='4.2 2.5 2'>
+      <TouchSensor DEF='TOUCH2' description='touch for far range'/>
+      <Shape>
+        <Appearance>
+          <Material/>
+        </Appearance>
+        <Text string='"scale = .01 .01 .01" "(distance = 2000)"'>
+          <FontStyle style='BOLD'/>
+        </Text>
+      </Shape>
+    </Transform>
+    <Transform>
+      <Viewpoint DEF='VIEW1' description='1-to-1 scale view' position='0 0 20'/>
+    </Transform>
+    <Transform scale='0.01 0.01 0.01'>
+      <Viewpoint DEF='VIEW2' description='1-to-100 scale view' position='0 0 2000'/>
+    </Transform>
+    <Script DEF='STACKSCRIPT' directOutput='true' url='"scaling.js" "https://www.web3d.org/x3d/content/examples/ConformanceNist/BindableNodes/Fog/scaling.js"'>
+      <field accessType='initializeOnly' name='redfog' type='SFNode'>
+        <Fog USE='REDFOG'/>
+      </field>
+      <field accessType='initializeOnly' name='view1' type='SFNode'>
+        <Viewpoint USE='VIEW1'/>
+      </field>
+      <field accessType='initializeOnly' name='view2' type='SFNode'>
+        <Viewpoint USE='VIEW2'/>
+      </field>
+      <field accessType='inputOnly' name='smallScale' type='SFBool'/>
+      <field accessType='inputOnly' name='largeScale' type='SFBool'/>
+    </Script>
+    <ROUTE fromField='isOver' fromNode='TOUCH1' toField='largeScale' toNode='STACKSCRIPT'/>
+    <ROUTE fromField='isOver' fromNode='TOUCH2' toField='smallScale' toNode='STACKSCRIPT'/>
+  </Scene>
+</X3D>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='PlayRoom.x3d' name='title'/>
+    <meta content='X3D example Model of a Play room' name='description'/>
+    <meta content='3 March 2004' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Vaughn Pangelinan' name='creator'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/PlayRoom.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Scene Generates the house and world -->
+    <WorldInfo title='PlayRoom.x3d'/>
+    <Background groundColor='.1 .4 .1' skyColor='.8 .8 1'/>
+    <Transform DEF='World'>
+      <Transform DEF='House'>
+        <Transform DEF='Walls'>
+          <Transform DEF='LowerWallTransform'>
+            <Transform translation='1.25 .3 1.4'>
+              <Shape>
+                <Box size='1.499 .6 .201'/>
+                <Appearance>
+                  <ImageTexture DEF='BrickTex' url='"brick.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/brick.jpg"'/>
+                  <TextureTransform scale='5 2'/>
+                </Appearance>
+              </Shape>
+              <Transform translation='-.7495 0 0'>
+                <Shape>
+                  <Box size='.001 .6 .2'/>
+                  <Appearance>
+                    <ImageTexture USE='BrickTex'/>
+                    <TextureTransform scale='.5 2'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Transform>
+            <Transform translation='-1.25 .3 1.4'>
+              <Shape>
+                <Box size='1.499 .6 .201'/>
+                <Appearance>
+                  <ImageTexture USE='BrickTex'/>
+                  <TextureTransform scale='5 2'/>
+                </Appearance>
+              </Shape>
+              <Transform translation='.7495 0 0'>
+                <Shape>
+                  <Box size='.001 .6 .2'/>
+                  <Appearance>
+                    <ImageTexture USE='BrickTex'/>
+                    <TextureTransform scale='.5 2'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Transform>
+            <Transform translation='-1.9 .3 0'>
+              <Shape>
+                <Box size='.201 .6 3'/>
+                <Appearance>
+                  <ImageTexture USE='BrickTex'/>
+                  <TextureTransform scale='10 2'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <Transform translation='1.9 .3 0'>
+              <Shape>
+                <Box size='.201 .6 3'/>
+                <Appearance>
+                  <ImageTexture USE='BrickTex'/>
+                  <TextureTransform scale='10 2'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <Transform translation='0 .3 -1.4'>
+              <Shape>
+                <Box size='4 .6 .201'/>
+                <Appearance>
+                  <ImageTexture USE='BrickTex'/>
+                  <TextureTransform scale='12 2'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+          <Transform DEF='MidLowWallTransform'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.9 0.7'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='-0.5 1.5 -0.5 1.3 -1.8 1.3 -1.8 -1.3 1.8 -1.3 1.8 1.3 0.5 1.3 0.5 1.5 2.0 1.5 2.0 -1.5 -2.0 -1.5 -2.0 1.5 -0.5 1.5' solid='false' spine='0 .6 0 0 .7 0'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='MidHighLeftWallTransform'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.9 0.7'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='-1.8 .45 -1.8 1.3 -0.5 1.3 -0.5 1.5 -2.0 1.5 -2.0 .45 -1.8 .45' solid='false' spine='0 .7 0 0 1.5 0'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='MidHighRightWallTransform'>
+            <Transform DEF='MidHighRightFrontWallTransform'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0.9 0.7'/>
+                </Appearance>
+                <Extrusion convex='false' creaseAngle='0.785' crossSection='0.5 1.3 0.5 1.5 1 1.5 1 1.3 0.5 1.3' solid='false' spine='0 .7 0 0 1.5 0'/>
+              </Shape>
+            </Transform>
+            <Transform DEF='MidHighRightSideWallTransform'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0.9 0.7'/>
+                </Appearance>
+                <Extrusion convex='false' creaseAngle='0.785' crossSection='1.8 .45 1.8 1.3 1.5 1.3 1.5 1.5 2.0 1.5 2.0 .45 1.8 .45' solid='false' spine='0 .7 0 0 1.5 0'/>
+              </Shape>
+            </Transform>
+          </Transform>
+          <Transform DEF='MidHighBackWallTransform'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.9 0.7'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='-1.8 -.45 -1.8 -1.3 1.8 -1.3 1.8 -.45 2.0 -.45 2.0 -1.5 -2.0 -1.5 -2.0 -.45 -1.8 -.45' solid='false' spine='0 .7 0 0 1.5 0'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='UpperWallTransform'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.9 0.7'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='-0.5 1.5 -0.5 1.3 -1.8 1.3 -1.8 -1.3 1.8 -1.3 1.8 1.3 0.5 1.3 0.5 1.5 2.0 1.5 2.0 -1.5 -2.0 -1.5 -2.0 1.5 -0.5 1.5' solid='false' spine='0 1.5 0 0 2 0'/>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform DEF='Floor'>
+          <Shape>
+            <Appearance DEF='WoodFloor'>
+              <ImageTexture url='"PrintShopFloorWood.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/PrintShopFloorWood.jpg"'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+              <Coordinate point='-2 0 -1.5 2 0 -1.5 2 0 1.5 -2 0 1.5'/>
+              <TextureCoordinate point='0 0 1 0 1 1 0 1'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <Transform DEF='CeilingTransform' translation='0 2 0'>
+          <Shape>
+            <Appearance DEF='Ceiling'>
+              <ImageTexture url='"StuccoCeiling.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/StuccoCeiling.jpg"'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+              <Coordinate point='-1.8 0 -1.3 1.8 0 -1.3 1.8 0 1.3 -1.8 0 1.3'/>
+              <TextureCoordinate point='0 0 5 0 5 5 0 5'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Transform scale='.3 .3 .3' translation='-.4 .1 -.155'>
+            <Shape>
+              <Text length='3' string='"Hello In Here!"'/>
+              <Appearance>
+                <Material diffuseColor='0.7 0.1 .1'/>
+              </Appearance>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform DEF='Light' scale='.05 .05 .05' translation='0 2 0'>
+          <Transform>
+            <Transform translation='0 -2.95 0'>
+              <Shape>
+                <Appearance>
+                  <Material DEF='BULB_MATERIAL' diffuseColor='0.4 0.4 0.4' emissiveColor='0.8 0.8 0.8'/>
+                </Appearance>
+                <Sphere/>
+              </Shape>
+              <PointLight DEF='LIGHTSOURCE' radius='1000'/>
+              <Transform translation='0 2.65 0'>
+                <Shape>
+                  <Appearance>
+                    <Material diffuseColor='0.4 0.4 0.4' emissiveColor='0.1 0.1 0.1'/>
+                  </Appearance>
+                  <Cylinder height='.6' radius='0.05'/>
+                </Shape>
+              </Transform>
+            </Transform>
+            <Group>
+              <Transform translation='0 -1 0'>
+                <Shape>
+                  <Appearance DEF='BULB_CASING'>
+                    <Material DEF='SOCKET_MATERIAL' diffuseColor='0.4 0.4 0.16' emissiveColor='0.4 0.4 0.16'/>
+                  </Appearance>
+                  <Sphere radius='0.5'/>
+                </Shape>
+              </Transform>
+              <Transform translation='0 -1.5 0'>
+                <Shape>
+                  <Appearance USE='BULB_CASING'/>
+                  <Cylinder height='1' radius='0.5'/>
+                </Shape>
+              </Transform>
+            </Group>
+          </Transform>
+        </Transform>
+        <Group DEF='FrontDoor'>
+          <CylinderSensor DEF='CYLINDERSENSOR' description='Click and drag to rotate' maxAngle='0' minAngle='-2.35'/>
+          <Transform DEF='DoorRotator' center='-.5 0 1.45'>
+            <ROUTE fromField='rotation_changed' fromNode='CYLINDERSENSOR' toField='set_rotation' toNode='DoorRotator'/>
+            <Transform translation='0 1 1.425'>
+              <Shape>
+                <Box size='1 2 .05'/>
+                <Appearance DEF='Wood'>
+                  <Material diffuseColor='.6 .5 .2'/>
+                </Appearance>
+              </Shape>
+              <Transform rotation='1 0 0 1.57' translation='.45 .15 0'>
+                <Shape>
+                  <Cylinder height='.1' radius='.02'/>
+                  <Appearance>
+                    <Material DEF='copper' ambientIntensity='.26' diffuseColor='.3 .11 0' shininess='.08' specularColor='.75 .33 0'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform scale='1 1 .5' translation='.45 .15 .06'>
+                <Shape>
+                  <Sphere radius='.03'/>
+                  <Appearance>
+                    <Material USE='copper'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform scale='1 1 .5' translation='.45 .15 -.06'>
+                <Shape>
+                  <Sphere radius='.03'/>
+                  <Appearance>
+                    <Material USE='copper'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Transform>
+          </Transform>
+        </Group>
+        <Transform DEF='AllRoof'>
+          <Transform DEF='FrontRoofSupport'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.9 0.7'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='-2 2 2 2 0 2.5 -2 2' solid='false' spine='0 0 1.5 0 0 1.3'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='RearRoofSupport'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.9 0.7'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='-2 2 2 2 0 2.5 -2 2' solid='false' spine='0 0 -1.3 0 0 -1.5'/>
+            </Shape>
+          </Transform>
+          <Transform DEF='LeftRoof' rotation='0 0 1 .245' translation='0 2.501 0'>
+            <Shape>
+              <Appearance DEF='RoofMaterial'>
+                <ImageTexture url='"RoofRock.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/RoofRock.jpg"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='0 0 -1.8 -2.3 0 -1.8 -2.3 0 1.8 0 0 1.8'/>
+                <TextureCoordinate point='0 0 10 0 10 10 0 10'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform DEF='RightRoof' rotation='0 0 1 -.245' translation='-.001 2.501 0'>
+            <Shape>
+              <Appearance USE='RoofMaterial'/>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='0 0 -1.8 2.3 0 -1.8 2.3 0 1.8 0 0 1.8'/>
+                <TextureCoordinate point='0 0 10 0 10 10 0 10'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform DEF='Window'>
+          <Transform DEF='FrontWindowTransform' translation='1.25 1.1 1.4'>
+            <Group DEF='FrontWindowGroup'>
+              <Transform DEF='MovingWindowTransform' translation='0 .1 0'>
+                <Transform>
+                  <Shape>
+                    <Box size='.499 .721 .002'/>
+                    <Appearance DEF='Glass'>
+                      <Material diffuseColor='.03 .04 .08' transparency='.85'/>
+                    </Appearance>
+                  </Shape>
+                </Transform>
+                <Transform translation='0 -.341 0'>
+                  <Shape>
+                    <Box size='.492 .04 .02'/>
+                    <Appearance USE='Wood'/>
+                  </Shape>
+                </Transform>
+                <Transform translation='0 .341 0'>
+                  <Shape>
+                    <Box size='.492 .04 .02'/>
+                    <Appearance USE='Wood'/>
+                  </Shape>
+                </Transform>
+                <Transform translation='.191 0 0'>
+                  <Shape>
+                    <Box size='.04 .722 .02'/>
+                    <Appearance USE='Wood'/>
+                  </Shape>
+                </Transform>
+                <Transform translation='-.191 0 0'>
+                  <Shape>
+                    <Box size='.04 .722 .02'/>
+                    <Appearance USE='Wood'/>
+                  </Shape>
+                </Transform>
+                <Transform>
+                  <Shape>
+                    <Box size='.472 .01 .01'/>
+                    <Appearance USE='Wood'/>
+                  </Shape>
+                </Transform>
+                <Transform>
+                  <Shape>
+                    <Box size='.01 .721 .01'/>
+                    <Appearance USE='Wood'/>
+                  </Shape>
+                </Transform>
+                <Transform translation='0 -.33 -.01'>
+                  <Transform rotation='1 0 0 1.57' translation='0 0 -.012'>
+                    <Shape>
+                      <Cylinder height='.025' radius='.0075'/>
+                      <Appearance>
+                        <Material DEF='copper2' ambientIntensity='.26' diffuseColor='.3 .11 0' shininess='.08' specularColor='.75 .33 0'/>
+                      </Appearance>
+                    </Shape>
+                  </Transform>
+                  <Transform scale='1 1 .5' translation='0 0 -.02'>
+                    <Shape>
+                      <Sphere radius='.020'/>
+                      <Appearance>
+                        <Material USE='copper2'/>
+                      </Appearance>
+                    </Shape>
+                  </Transform>
+                </Transform>
+                <PlaneSensor DEF='MyPlaneSensor' description='Lift Window' maxPosition='0 .361'/>
+              </Transform>
+              <Transform DEF='FrontSill'>
+                <Transform translation='0 -.381 0'>
+                  <Shape>
+                    <Box size='.502 .04 .201'/>
+                    <Appearance DEF='Frame'>
+                      <Material diffuseColor='.6 .5 .2'/>
+                    </Appearance>
+                  </Shape>
+                </Transform>
+                <Transform translation='0 .381 0'>
+                  <Shape>
+                    <Box size='.502 .04 .201'/>
+                    <Appearance USE='Frame'/>
+                  </Shape>
+                </Transform>
+                <Transform translation='.231 0 0'>
+                  <Shape>
+                    <Box size='.04 .802 .201'/>
+                    <Appearance USE='Frame'/>
+                  </Shape>
+                </Transform>
+                <Transform translation='-.231 0 0'>
+                  <Shape>
+                    <Box size='.04 .802 .201'/>
+                    <Appearance USE='Frame'/>
+                  </Shape>
+                </Transform>
+              </Transform>
+              <Viewpoint DEF='FrontWindowView' description='Front Window Opens Up' fieldOfView='1.2' orientation='0 1 0 3.14' position='0 0 -.65'/>
+              <ROUTE fromField='translation_changed' fromNode='MyPlaneSensor' toField='set_translation' toNode='MovingWindowTransform'/>
+            </Group>
+          </Transform>
+          <Transform DEF='LeftWindowTransform' rotation='0 1 0 -1.57' translation='-1.9 1.1 0'>
+            <Group DEF='LeftWindowGroup'>
+              <Transform>
+                <Shape>
+                  <Box size='.899 .799 .002'/>
+                  <Appearance USE='Glass'/>
+                </Shape>
+              </Transform>
+              <Transform>
+                <Group DEF='SideSillGroup'>
+                  <Transform translation='0 -.381 0'>
+                    <Shape>
+                      <Box size='.902 .04 .201'/>
+                      <Appearance USE='Frame'/>
+                    </Shape>
+                  </Transform>
+                  <Transform translation='0 .381 0'>
+                    <Shape>
+                      <Box size='.902 .04 .201'/>
+                      <Appearance USE='Frame'/>
+                    </Shape>
+                  </Transform>
+                  <Transform translation='.431 0 0'>
+                    <Shape>
+                      <Box size='.04 .802 .201'/>
+                      <Appearance USE='Frame'/>
+                    </Shape>
+                  </Transform>
+                  <Transform translation='-.431 0 0'>
+                    <Shape>
+                      <Box size='.04 .802 .201'/>
+                      <Appearance USE='Frame'/>
+                    </Shape>
+                  </Transform>
+                </Group>
+              </Transform>
+            </Group>
+          </Transform>
+          <Transform DEF='RightWindowTransform' rotation='0 1 0 1.57' translation='1.9 1.1 0'>
+            <Group DEF='RightWindowGroup'>
+              <Transform>
+                <Shape>
+                  <Box size='.899 .799 .002'/>
+                  <Appearance USE='Glass'/>
+                </Shape>
+              </Transform>
+              <Transform>
+                <Group USE='SideSillGroup'/>
+              </Transform>
+            </Group>
+          </Transform>
+        </Transform>
+        <Transform DEF='MessageBoardTransform'>
+          <Transform scale='1.5 1 1' translation='0 1.2 -1.299'>
+            <Shape>
+              <Appearance>
+                <ImageTexture repeatS='false' repeatT='false' url='"MessageBoard.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/MessageBoard.jpg"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                <Coordinate point='-.5 -.5 0 .5 -.5 0 .5 .5 0 -.5 .5 0'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform translation='0 1.2 -1.3'>
+            <Group DEF='MessageBoardFrameGroup'>
+              <Transform translation='.005 -.461 0'>
+                <Shape>
+                  <Box size='1.548 .075 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+              <Transform translation='.005 .485 0'>
+                <Shape>
+                  <Box size='1.548 .075 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+              <Transform translation='.741 0 0'>
+                <Shape>
+                  <Box size='.075 .9 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+              <Transform translation='-.730 0 0'>
+                <Shape>
+                  <Box size='.075 .9 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+            </Group>
+          </Transform>
+        </Transform>
+        <Transform DEF='RealStuffTransform' scale='.6 .6 .6' translation='-1.15 1.2 1.299'>
+          <Transform rotation='0 1 0 3.14' scale='1.5 1 1'>
+            <Shape>
+              <Appearance>
+                <ImageTexture repeatS='false' repeatT='false' url='"RealStuff.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/RealStuff.jpg"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                <Coordinate point='-.5 -.5 0 .5 -.5 0 .5 .5 0 -.5 .5 0'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform scale='1.06 1.06 1.06'>
+            <Group DEF='RealStuffFrameGroup'>
+              <Transform translation='.005 -.461 0'>
+                <Shape>
+                  <Box size='1.548 .075 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+              <Transform translation='.005 .485 0'>
+                <Shape>
+                  <Box size='1.548 .075 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+              <Transform translation='.741 0 0'>
+                <Shape>
+                  <Box size='.075 .9 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+              <Transform translation='-.730 0 0'>
+                <Shape>
+                  <Box size='.075 .9 .04'/>
+                  <Appearance USE='Frame'/>
+                </Shape>
+              </Transform>
+            </Group>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='Yard'>
+        <Transform DEF='AllGrass'>
+          <Transform DEF='LeftGrass' translation='0 -.011 0'>
+            <Shape>
+              <Appearance DEF='GrassPattern'>
+                <ImageTexture url='"grass.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/grass.jpg"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='-.5 0 1.5 -5.5 0 1.5 -5.5 0 7.5 -.5 0 7.5'/>
+                <TextureCoordinate point='0 0 10 0 10 10 0 10'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform DEF='RightGrass' translation='0 -.011 0'>
+            <Shape>
+              <Appearance USE='GrassPattern'/>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='.5 0 1.5 5.5 0 1.5 5.5 0 7.5 .5 0 7.5'/>
+                <TextureCoordinate point='0 0 10 0 10 10 0 10'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform DEF='LeftSideGrass' translation='0 -.011 0'>
+            <Shape>
+              <Appearance USE='GrassPattern'/>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='-2 0 1.5 -5.5 0 1.5 -5.5 0 -1.5 -2 0 -1.5'/>
+                <TextureCoordinate point='0 0 10 0 10 10 0 10'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform DEF='RightSideGrass' translation='0 -.011 0'>
+            <Shape>
+              <Appearance USE='GrassPattern'/>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='2 0 1.5 5.5 0 1.5 5.5 0 -1.5 2 0 -1.5'/>
+                <TextureCoordinate point='0 0 10 0 10 10 0 10'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform DEF='BackGrass' translation='0 -.011 0'>
+            <Shape>
+              <Appearance USE='GrassPattern'/>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='-5.5 0 -1.5 5.5 0 -1.5 5.5 0 -7.5 -5.5 0 -7.5'/>
+                <TextureCoordinate point='0 0 30 0 30 15 0 15'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform DEF='Walkway' translation='0 -.011 0'>
+          <Shape>
+            <Appearance DEF='WalkwayConcrete'>
+              <ImageTexture url='"Concrete.jpg" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/Concrete.jpg"'/>
+            </Appearance>
+            <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+              <Coordinate point='-.5 0 1.5 .5 0 1.5 .5 0 7.5 -.5 0 7.5'/>
+              <TextureCoordinate point='0 0 2 0 2 10 0 10'/>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+        <Transform DEF='Fence'>
+          <Group DEF='FenceGroup'>
+            <Transform DEF='FenceSection'>
+              <Transform translation='0 0 7.5'>
+                <Group>
+                  <Shape>
+                    <Appearance DEF='RightFence'>
+                      <ImageTexture DEF='FenceImage' url='"Fence.png" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/Fence.png"'/>
+                    </Appearance>
+                    <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                      <Coordinate point='0.5 0 0 5.5 0 0 5.5 0.5 0 0.5 0.5 0'/>
+                      <TextureCoordinate point='0 0 10 0 10 1 0 1'/>
+                    </IndexedFaceSet>
+                  </Shape>
+                </Group>
+              </Transform>
+            </Transform>
+          </Group>
+          <Transform center='0 0 7.5' rotation='0 1 0 3.14'>
+            <Group USE='FenceGroup'/>
+          </Transform>
+          <Transform translation='5.5 0 0'>
+            <Shape>
+              <Appearance>
+                <ImageTexture USE='FenceImage'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='0 0 7.5 0 0 -7.5 0 0.5 -7.5 0 0.5 7.5'/>
+                <TextureCoordinate point='0 0 30 0 30 1 0 1'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform translation='-5.5 0 0'>
+            <Shape>
+              <Appearance>
+                <ImageTexture USE='FenceImage'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='0 0 7.5 0 0 -7.5 0 0.5 -7.5 0 0.5 7.5'/>
+                <TextureCoordinate point='0 0 30 0 30 1 0 1'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='0 0 -7.5'>
+            <Shape>
+              <Appearance>
+                <ImageTexture USE='FenceImage'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                <Coordinate point='-5.5 0 0 5.5 0 0 5.5 0.5 0 -5.5 0.5 0'/>
+                <TextureCoordinate point='0 0 22 0 22 1 0 1'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+        </Transform>
+        <Transform DEF='Trees'>
+          <Transform translation='4 .5 -1'>
+            <Group DEF='FirstTree'>
+              <Shape>
+                <Appearance DEF='Tree1'>
+                  <ImageTexture repeatS='false' repeatT='false' url='"tree1.png" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/tree1.png"'/>
+                </Appearance>
+                <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                  <Coordinate point='-0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+                </IndexedFaceSet>
+              </Shape>
+              <Transform rotation='0 1 0 1.57' translation='.03 0 .02'>
+                <Shape>
+                  <Appearance USE='Tree1'/>
+                  <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                    <Coordinate point='-0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0 -0.5 0.5 0'/>
+                  </IndexedFaceSet>
+                </Shape>
+              </Transform>
+            </Group>
+          </Transform>
+          <Transform translation='-4 .5 -1'>
+            <Group USE='FirstTree'/>
+          </Transform>
+        </Transform>
+        <Transform DEF='AllBushes'>
+          <Transform translation='0 0 -7'>
+            <Group DEF='Bushes'>
+              <Shape DEF='BushRow'>
+                <Appearance DEF='BushPattern'>
+                  <ImageTexture repeatT='false' url='"BushPattern.png" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/BushPattern.png"'/>
+                </Appearance>
+                <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+                  <Coordinate point='-5.5 0 0 5.5 0 0 5.5 0.5 0 -5.5 0.5 0'/>
+                  <TextureCoordinate point='0 0 20 0 20 1 0 1'/>
+                </IndexedFaceSet>
+              </Shape>
+              <Transform translation='0 0 -.3'>
+                <Shape USE='BushRow'/>
+              </Transform>
+            </Group>
+          </Transform>
+          <Transform translation='0 .25 -13.5'>
+            <Transform rotation='0 1 0 .45'>
+              <Viewpoint DEF='BushesView' description='Bushes in Backyard' fieldOfView='1.2'/>
+            </Transform>
+          </Transform>
+        </Transform>
+      </Transform>
+      <Transform DEF='FurnishingsTransform'>
+        <Group DEF='Furnishing'>
+          <Transform DEF='ToyTransform' rotation='0 1 0 -1.57' scale='.05 .05 .05' translation='.15 .7 0'>
+            <Inline url='"IkeaBeadToy.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBeadToy.x3d" "IkeaBeadToy.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBeadToy.wrl"'/>
+          </Transform>
+          <Transform DEF='MatTransform' scale='1 1 .67' translation='0 .001 0'>
+            <Group DEF='AlphabetMat'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url='"MatTransparent.png" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/MatTransparent.png"'/>
+                </Appearance>
+                <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                  <Coordinate point='-1 0 -1 1 0 -1 1 0 1 -1 0 1'/>
+                </IndexedFaceSet>
+              </Shape>
+            </Group>
+          </Transform>
+          <Transform DEF='TableTranslation' translation='0 .61 0'>
+            <Inline url='"IkeaTable.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaTable.x3d" "IkeaTable.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaTable.wrl"'/>
+          </Transform>
+          <Transform DEF='BlueChairTransform' rotation='0 1 0 1.57' translation='-.67 .31 0'>
+            <Inline url='"IkeaBlueChair.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBlueChair.x3d" "IkeaBlueChair.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBlueChair.wrl"'/>
+          </Transform>
+          <Transform DEF='GreenChairTransform' rotation='0 1 0 4.71' translation='.67 .31 0'>
+            <Inline url='"IkeaGreenChair.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaGreenChair.x3d" "IkeaGreenChair.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaGreenChair.wrl"'/>
+          </Transform>
+          <Transform DEF='BenchTransform' rotation='0 1 0 3.14' translation='0 .31 .45'>
+            <Inline url='"IkeaBench.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBench.x3d" "IkeaBench.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaBench.wrl"'/>
+          </Transform>
+          <Transform rotation='0 1 0 .7' scale='.015 .015 .015' translation='-1.05 0 -.45'>
+            <Inline url='"IkeaRockingHorse.x3d" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaRockingHorse.x3d" "IkeaRockingHorse.wrl" "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/IkeaRockingHorse.wrl"'/>
+          </Transform>
+        </Group>
+      </Transform>
+    </Transform>
+    <Group DEF='ViewpointsGroup'>
+      <Viewpoint DEF='FrontEntrance' description='Front Entrance' orientation='1 0 0 -.15' position='0 1.15 7'/>
+      <Viewpoint DEF='AtticView' description='Inside Attic' fieldOfView='1.3' orientation='1 0 0 0' position='0 2.3 .6'/>
+      <Transform DEF='TreeViewTransform' center='5 1.3 0' rotation='0 1 0 .78'>
+        <Viewpoint DEF='TreeView' description='Tree Outside' fieldOfView='1.2' orientation='1 0 0 -.5' position='5 1.3 0'/>
+      </Transform>
+      <Viewpoint DEF='LightView' description='LightBulb' fieldOfView='1.3' orientation='1 0 0 0' position='0 1.9 .6'/>
+      <Viewpoint DEF='AboveOutside' description='Aerial View' orientation='1 0 0 -.35' position='0 5 10'/>
+      <Transform DEF='OverheadViewTransform' translation='1.4 1.9 1.1'>
+        <Transform rotation='0 1 0 .78'>
+          <Viewpoint DEF='OverheadView' description='OverHead' fieldOfView='1.2' orientation='1 0 0 -.45' position='0 0 0'/>
+        </Transform>
+      </Transform>
+      <Transform DEF='FromMessageBoardTransform' rotation='0 1 0 3.14'>
+        <Viewpoint DEF='FromMessageBoardView' description='Back Against Board' fieldOfView='1.3' orientation='1 0 0 -.2' position='0 1 .9'/>
+      </Transform>
+      <Viewpoint DEF='InRoom' description='Enter Room' fieldOfView='1.2' orientation='1 0 0 -.15' position='0 1 1.3'/>
+      <Viewpoint DEF='RealStuffView' description='Real Stuff Picture' orientation='0 1 0 3.14' position='-1.15 1.2 .5'/>
+      <Transform DEF='HorseTransform'>
+        <Viewpoint DEF='HorseSideView' description='Horse Side View' position='-1 .3 .5'/>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure30_3ScriptSoundActivate.x3d' name='title'/>
+    <meta content='Figure 30.3, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch30/30fig03.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='29 October 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A pair of filter scripts used to create a toggle on-off switch.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter30Scripts/Figure30_3ScriptSoundActivate.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure30_3ScriptSoundActivate.x3d'/>
+    <Viewpoint description='toggle sound by clicking ball'/>
+    <Viewpoint description='move left spatialize right' position='-5 0 10'/>
+    <Viewpoint description='move right spatialize left' position='5 0 10'/>
+    <Viewpoint description='outside maximum attenuation ellipsoid' position='0 0 30'/>
+    <NavigationInfo type='"NONE"'/>
+    <!-- Background nodes are usually best placed at the top of the scene since they have global effect and are bindable nodes. -->
+    <Background groundAngle='1.309 1.570796' groundColor='0.1 0.1 0 0.5 0.25 0.2 0.6 0.6 0.2' skyAngle='1.309 1.571' skyColor='1 0 0 1 0.4 0 1 1 0'/>
+    <Group>
+      <TouchSensor DEF='Touch' description='touch to toggle audio'/>
+      <Shape>
+        <Sphere/>
+        <Appearance>
+          <Material diffuseColor='1 0.3 0.3'/>
+        </Appearance>
+      </Shape>
+      <Sound maxBack='15' maxFront='15' minBack='5' minFront='5'>
+        <AudioClip DEF='Audio' description='willow1' loop='true' url='"../Chapter24Sound/willow1.wav" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter24Sound/willow1.wav"'/>
+      </Sound>
+      <Script DEF='ToggleScript'>
+        <field accessType='inputOnly' name='toggle' type='SFBool'/>
+        <field accessType='initializeOnly' name='state' type='SFBool' value='true'/>
+        <field accessType='outputOnly' name='stateTurnedTrue' type='SFBool'/>
+        <field accessType='outputOnly' name='stateTurnedFalse' type='SFBool'/>
+        <![CDATA[
+ecmascript:
+
+// setting the value of an eventOut variable also sends it as an event
+// you can view the output of print statements in the VRML Console
+
+function toggle ( value, ts ) {
+  // only toggle on click (isActive true) not release (isActive false)
+  if ( value == false ) return;
+  if ( state == true )
+  {
+	state  = false;
+	stateTurnedFalse = true;
+	Browser.print ('ToggleScript.state = ' + state + ', stateTurnedFalse = ' + true);
+  }
+  else
+  {
+	state  = true;
+	stateTurnedTrue = true;
+	Browser.print ('ToggleScript.state = ' + state + ', stateTurnedTrue = ' + true);
+  }
+}
+]]>
+      </Script>
+      <Script DEF='TimeFilter'>
+        <field accessType='inputOnly' name='setStart' type='SFBool'/>
+        <field accessType='inputOnly' name='setStop' type='SFBool'/>
+        <field accessType='outputOnly' name='startEventTime' type='SFTime'/>
+        <field accessType='outputOnly' name='stopEventTime' type='SFTime'/>
+        <![CDATA[
+ecmascript:
+
+// setting the value of an eventOut variable also sends it as an event
+
+function setStart ( value, timeStamp ) {
+	startEventTime = timeStamp;
+	Browser.print ('TimeFilter.setStart (' + value + '), startEventTime = ' + timeStamp);
+	Browser.print ('\n'); // newline
+}
+function setStop  ( value, timeStamp ) {
+	stopEventTime  = timeStamp;
+	Browser.print ('TimeFilter.setStop  (' + value + '),  stopEventTime = ' + timeStamp);
+	Browser.print ('\n'); // newline
+}
+]]>
+      </Script>
+      <ROUTE fromField='isActive' fromNode='Touch' toField='toggle' toNode='ToggleScript'/>
+      <ROUTE fromField='stateTurnedTrue' fromNode='ToggleScript' toField='setStart' toNode='TimeFilter'/>
+      <ROUTE fromField='stateTurnedFalse' fromNode='ToggleScript' toField='setStop' toNode='TimeFilter'/>
+      <ROUTE fromField='startEventTime' fromNode='TimeFilter' toField='set_startTime' toNode='Audio'/>
+      <ROUTE fromField='stopEventTime' fromNode='TimeFilter' toField='set_stopTime' toNode='Audio'/>
+      <!-- extra widget -->
+      <Transform translation='0 2.5 0'>
+        <!-- Selectable Text design pattern has transparent Box and TouchSensor description as a tooltip -->
+        <Shape>
+          <Text string='"toggle sound" "by clicking ball"'>
+            <FontStyle family='"SANS"' justify='"MIDDLE" "MIDDLE"' size='0.8' style='BOLD'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.9 0.9 0.9'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Group>
+    <!-- Semitransparent sphere matching maxFront-MaxBack attenuation ellipsoid -->
+    <Shape>
+      <Appearance DEF='TransparentAppearance'>
+        <Material diffuseColor='0.5 0 0' transparency='0.7'/>
+      </Appearance>
+      <Sphere radius='15'/>
+    </Shape>
+  </Scene>
+</X3D>

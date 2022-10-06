@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Flames.x3d' name='title'/>
+    <meta content='Flickering flames: this prototype declaration illustrates the use of a script to cycle between textures, and then encapsulation of the script, a clock, and a polygon, all within a new Flames prototype node that makes flickering flames. See the Match.x3d scene for an example.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Match.x3d' name='reference'/>
+    <meta content='originals/flames.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0499.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Flames.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- Three flame textures are used: flames1.png flames2.png flames3.png -->
+    <!-- All three textures have a transparency channel (alpha channel) so that areas outside of the flame are transparent. -->
+    <!-- flame1.png was hand-drawn in PhotoShop. The other two flames were created by applying the PhotoShop 'Twirl' filter to several parts of the original flame. This creates a curling effect that looks vaugely flame-like. For a better effect, use more flame images and more care in applying the Twirl filter... or hand draw them all. -->
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Flickering Flames'/>
+    <ProtoDeclare name='Flames'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='startTime' type='SFTime' value='0.0'/>
+        <field accessType='initializeOnly' name='cycleInterval' type='SFTime' value='1.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Shape>
+          <Appearance DEF='FlameAppearance'/>
+          <IndexedFaceSet coordIndex='0 1 2 3' solid='false' texCoordIndex='0 1 2 3'>
+            <TextureCoordinate point='0.0 0.0 1.0 0.0 1.0 1.0 0.0 1.0'/>
+            <Coordinate point='-0.5 0.0 0.0 0.5 0.0 0.0 0.5 1.8 0.0 -0.5 1.8 0.0'/>
+          </IndexedFaceSet>
+        </Shape>
+        <TimeSensor DEF='Clock' loop='true'>
+          <IS>
+            <connect nodeField='startTime' protoField='startTime'/>
+            <connect nodeField='cycleInterval' protoField='cycleInterval'/>
+          </IS>
+        </TimeSensor>
+        <Script DEF='FlameSelector' directOutput='true'>
+          <field accessType='initializeOnly' name='flameTextures' type='MFNode'>
+            <ImageTexture DEF='Flame1' repeatS='false' repeatT='false' url='"flames1.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/flames1.png"'/>
+            <ImageTexture repeatS='false' repeatT='false' url='"flames2.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/flames2.png"'/>
+            <ImageTexture USE='Flame1'/>
+            <ImageTexture repeatS='false' repeatT='false' url='"flames3.png" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/flames3.png"'/>
+          </field>
+          <field accessType='outputOnly' name='texture_changed' type='SFNode'/>
+          <field accessType='inputOnly' name='set_fraction' type='SFFloat'/>
+          <![CDATA[
+ecmascript:
+    function set_fraction( f, tm ) {
+            if ( f < 0.25 )
+                    texture_changed = flameTextures[0];
+            else if ( f < 0.50 )
+                    texture_changed = flameTextures[1];
+            else if ( f < 0.75 )
+                    texture_changed = flameTextures[2];
+            else
+                    texture_changed = flameTextures[3];
+    }
+]]>
+        </Script>
+        <ROUTE fromField='fraction_changed' fromNode='Clock' toField='set_fraction' toNode='FlameSelector'/>
+        <ROUTE fromField='texture_changed' fromNode='FlameSelector' toField='set_texture' toNode='FlameAppearance'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- Display scene instructions for viewing an example scene with a corresponding prototype instance -->
+    <Background skyColor='0 0.333333 0.66667'/>
+    <Anchor description='select text to view parent scene' url='"Match.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Match.x3d" "Match.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Match.wrl"'>
+      <Shape>
+        <Text string='"The Flames.x3d scene holds" "a prototype declaration" "" "Select this text to view example usage" "in Match.x3d scene"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 0.9 0.4'/>
+        </Appearance>
+      </Shape>
+      <!-- Invisible box behind text makes selection easier -->
+      <Shape>
+        <Box size='12 5 0.1'/>
+        <Appearance>
+          <Material transparency='1'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

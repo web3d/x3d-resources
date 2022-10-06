@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet type="text/xsl" href="generic.xsl" ?>-->
+
+<document>
+<!-- CML document - tetrahydrofuran - karne - 7/8/00 -->
+<!-- file converted from: MDL .mol -->
+<cml title="tetrahydrofuran" id="cml_tetrahydrofuran_karne" >
+	<molecule title="tetrahydrofuran" id="mol_tetrahydrofuran_karne">
+		<formula>C4 H8 O</formula>
+		<string title="CAS">109-99-9</string>
+		<float title="molecular weight">72.1066</float>
+      		<string title="ACX">I1001473</string>
+     		<string title="DOT">UN 2056</string>
+     		<string title="RTECS">LU5950000</string>
+		<float title="melting point" units="degC">-108.3</float>
+		<float title="boiling point" units="degC">65</float>
+   	   	<float title="specific gravity">0.886</float>
+      		<float title="water solubility" convention="g/100 mL at 23 degC">30</float>
+      		<string title="comments">Colorless liquid with an ether-like odor detectable at 2 to 50 ppm. HYGROSCOPIC</string>
+		<list title="alternate names">
+			<string title="name">THF</string>
+			<string title="name">1,4-Epoxybutane</string>
+			<string title="name">Butylene oxide</string>
+			<string title="name">Cyclotetramethylene</string>
+			<string title="name">tetramethylene oxide</string>
+			<string title="name">oxacyclopentane</string>
+			<string title="name">Cyclotetramethylene oxide</string>
+			<string title="name">Furanidine</string>
+			<string title="name">Hydrofuran</string>
+			<string title="name">oxolane</string>
+		</list>
+		<atomArray>
+			<atom id="tetrahydrofuran_karne_a_1">
+				<float builtin="x3" units="A">0.0300</float>
+				<float builtin="y3" units="A">-1.1700</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">O</string>
+			</atom>
+			<atom id="tetrahydrofuran_karne_a_2">
+				<float builtin="x3" units="A">-1.2200</float>
+				<float builtin="y3" units="A">-0.2900</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="tetrahydrofuran_karne_a_3">
+				<float builtin="x3" units="A">1.2400</float>
+				<float builtin="y3" units="A">-0.2800</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="tetrahydrofuran_karne_a_4">
+				<float builtin="x3" units="A">-0.7700</float>
+				<float builtin="y3" units="A">1.1600</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+			<atom id="tetrahydrofuran_karne_a_5">
+				<float builtin="x3" units="A">0.7700</float>
+				<float builtin="y3" units="A">1.1600</float>
+				<float builtin="z3" units="A">0.0000</float>
+				<string builtin="elementType">C</string>
+			</atom>
+		</atomArray>
+		<bondArray>
+			<bond id="tetrahydrofuran_karne_b_1">
+				<string builtin="atomRef">tetrahydrofuran_karne_a_2</string>
+				<string builtin="atomRef">tetrahydrofuran_karne_a_1</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="tetrahydrofuran_karne_b_2">
+				<string builtin="atomRef">tetrahydrofuran_karne_a_3</string>
+				<string builtin="atomRef">tetrahydrofuran_karne_a_1</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="tetrahydrofuran_karne_b_3">
+				<string builtin="atomRef">tetrahydrofuran_karne_a_4</string>
+				<string builtin="atomRef">tetrahydrofuran_karne_a_2</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="tetrahydrofuran_karne_b_4">
+				<string builtin="atomRef">tetrahydrofuran_karne_a_5</string>
+				<string builtin="atomRef">tetrahydrofuran_karne_a_3</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+			<bond id="tetrahydrofuran_karne_b_5">
+				<string builtin="atomRef">tetrahydrofuran_karne_a_4</string>
+				<string builtin="atomRef">tetrahydrofuran_karne_a_5</string>
+				<string builtin="order" convention="MDL">1</string>
+			</bond>
+		</bondArray>
+	</molecule>
+
+</cml>
+</document>

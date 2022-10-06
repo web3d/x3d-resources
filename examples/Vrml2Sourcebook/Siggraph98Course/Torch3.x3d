@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Interchange' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='Torch3.x3d' name='title'/>
+    <meta content='Medieval torch with low-resolution detail.' name='description'/>
+    <meta content='David R. Nadeau, John L. Moreland, Michael M. Heck' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Torches.x3d' name='reference'/>
+    <meta content='Torches3.x3d' name='reference'/>
+    <meta content='originals/torch3.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0389.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0397.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Torch3.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Torch3.x3d'/>
+    <Transform scale='0.5 0.5 0.5' translation='0.0 0.0 0.2'>
+      <Shape>
+        <Appearance DEF='Gray'>
+          <Material diffuseColor='0.4 0.4 0.4'/>
+        </Appearance>
+        <IndexedFaceSet coordIndex='0 1 2'>
+          <Coordinate point='-0.15 0.0 0.0 0.0 -1.5 0.0 0.15 0.0 0.0'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Shape DEF='Ring'>
+        <Appearance USE='Gray'/>
+        <IndexedFaceSet coordIndex='0 1 2 3 -1 4 5 6 7 -1'>
+          <Coordinate point='-0.4 -0.05 0.1 0.4 -0.05 0.1 0.4 0.05 0.1 -0.4 0.05 0.1 -0.4 0.15 0.1 0.4 0.15 0.1 0.4 0.25 0.1 -0.4 0.25 0.1'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Shape DEF='Flames'>
+        <IndexedFaceSet coordIndex='0 1 2'>
+          <Coordinate point='0.18 0.0 0.05 0.0 1.2 0.05 -0.18 0.0 0.05'/>
+          <Color color='1.0 0.0 0.0 0.9 0.5 0.0 1.0 0.0 0.0'/>
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>

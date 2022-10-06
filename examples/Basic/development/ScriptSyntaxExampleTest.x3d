@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ScriptSyntaxExampleTest.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='8 January 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Script node syntax example, testing sample values of various types with simple escaping of apostrophe and quotation mark characters, with results shown on Browser console output.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/ScriptSyntaxExampleTest.x3d' name='identifier'/>
+    <meta content='X3D-Edit, https://www.web3d.org/x3d/content/README.X3D-Edit.txt' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ScriptSyntaxExampleTest.x3d'/>
+    <Script DEF='myScript' url='"NoSuchScript1.js" "https://www.web3d.org/x3d/content/examples/Basic/development/NoSuchScript2.class.ignore"'>
+      <field accessType='inputOnly' name='someSFBool' type='SFBool'/>
+      <field accessType='outputOnly' name='someMFInt32' type='MFInt32'/>
+      <field accessType='initializeOnly' name='someMFFloats' type='MFFloat' value='0.0 1.0 2.0'/>
+      <field accessType='initializeOnly' name='someStringField' type='SFString' value='hello'/>
+      <field accessType='initializeOnly' name='stringTest1' type='MFString' value='"&apos;" "apostrophe"'/>
+      <field accessType='initializeOnly' name='stringTest2' type='MFString' value='"Quote &amp;quot; character" "More Text"'/>
+      <field accessType='initializeOnly' name='someInitializedRotation' type='SFRotation' value='0 1 0 0'/>
+      <field accessType='initializeOnly' name='someInitializedTime' type='SFTime' value='0'/>
+      <![CDATA[
+ecmascript:
+
+// Preferred style for inlined script code is contained CDATA
+// in order to simplify use of characters < > " " ' ' etc. in source code
+
+// When inlined script code appears in url instead, XML special characters
+// must be carefully 'escaped' or an incorrect translation will result.
+
+// url appears before contained code when translating to VRML encoding,
+// so that external (possibly updated) code scripts can take precedence
+
+function someSFBool (value, timestamp)
+{
+	Browser.println ('someSFBool input event=' + value);
+	someMFInt32 = 0; // set outputOnly event, for example
+}
+function initialize (value)
+{
+	Browser.println ('    someMFFloats=' + someMFFloats);
+	Browser.println ('someStringField=' + someStringField);
+	Browser.println ('    stringTest1=' + stringTest1);
+	Browser.println ('    stringTest2=' + stringTest2);
+}
+]]>
+    </Script>
+    <Anchor description='Select text to view source documentation' url='"ScriptSyntaxExampleTest.html" "https://www.web3d.org/x3d/content/examples/Basic/development/ScriptSyntaxExampleTest.html"'>
+      <Shape>
+        <Text string='"Script node syntax example," "select this text to view source"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='0.7 0.4 0.1'/>
+        </Appearance>
+      </Shape>
+      <!-- selectable Text to show Anchor description -->
+      <Shape>
+        <Box size='11 2 .001'/>
+        <Appearance>
+          <Material transparency='1'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

@@ -1,0 +1,6 @@
+x3pCom\source\x3pRoot.java
+x3pCom\source\x3pComGblElm.java
+x3pCom\source\x3pGlobal.java
+x3pCom\source\x3pGblCoreNull.java
+x3pCom\source\x3pMatrix.java
+x3pCom\source\x3pColor.java

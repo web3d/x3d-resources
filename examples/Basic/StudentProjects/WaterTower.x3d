@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='WaterTower.x3d' name='title'/>
+    <meta content='A simple water tower, produced as a MV4204 class project. Total height 25m.' name='description'/>
+    <meta content='Bob Vojtik, Don Brutzman' name='creator'/>
+    <meta content='26 July 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/WaterTower.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='WaterTower.x3d'/>
+    <Viewpoint description='Water Tower' position='0 15 50'/>
+    <Transform DEF='MoveUpAboveGround' translation='0 22.5 0'>
+      <Shape DEF='waterTank'>
+        <Appearance>
+          <Material diffuseColor='0.6 0.6 0.6'/>
+        </Appearance>
+        <Cylinder height='7' radius='5'/>
+      </Shape>
+      <Transform translation='0 -12.5 0'>
+        <Shape DEF='centerWaterPipe'>
+          <Appearance>
+            <Material/>
+          </Appearance>
+          <Cylinder height='20' radius='.6'/>
+        </Shape>
+        <Transform DEF='leftLeg' translation='-2 0 0'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Cylinder height='20' radius='.2'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='rightLeg' translation='2 0 0'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Cylinder height='20' radius='.2'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='backLeg' translation='0 0 -2'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Cylinder height='20' radius='.2'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='frontLeg' translation='0 0 2'>
+          <Shape>
+            <Appearance>
+              <Material/>
+            </Appearance>
+            <Cylinder height='20' radius='.2'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='ground' translation='0 -10 0'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 1 0'/>
+            </Appearance>
+            <Box size='8 .1 8'/>
+          </Shape>
+        </Transform>
+        <Transform DEF='crossBeams' rotation='0 1 0 .785' translation='1 0 1'>
+          <Transform rotation='0 0 1 .785' translation='0 8.586 0'>
+            <Shape DEF='CrossBeam'>
+              <Appearance>
+                <Material/>
+              </Appearance>
+              <Box size='4 .2 .1'/>
+            </Shape>
+          </Transform>
+          <Transform rotation='0 0 1 -.785' translation='0 8.586 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 .785' translation='0 5.7575 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 -.785' translation='0 5.7575 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 .785' translation='0 2.9291 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 -.785' translation='0 2.9291 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 .785' translation='0 -2.8284 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 -.785' translation='0 -2.8284 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 .785'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 -.785'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 .785' translation='0 -5.6568 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 -.785' translation='0 -5.6568 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 .785' translation='0 -8.4852 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+          <Transform rotation='0 0 1 -.785' translation='0 -8.4852 0'>
+            <Shape USE='CrossBeam'/>
+          </Transform>
+        </Transform>
+        <Transform translation='-2 0 -2'>
+          <Transform USE='crossBeams'/>
+        </Transform>
+        <Transform rotation='0 1 0 1.57'>
+          <Transform USE='crossBeams'/>
+        </Transform>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

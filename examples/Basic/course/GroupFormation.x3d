@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interchange' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='GroupFormation.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='8 November 2001' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Simple example to demonstrate rotating a Group of copied, elongated Boxes.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/course/GroupFormation.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='GroupFormation.x3d'/>
+    <Viewpoint description='watch the boxes' position='0 2 10'/>
+    <!-- Translate and rotate the entire formation here. 90 degrees around y axis turns to West. -->
+    <Transform rotation='0 1 0 -0.345'>
+      <Group DEF='LEAD_ENTITY'>
+        <Shape DEF='FLYING_BOX'>
+          <Box size='.5 .5 3'/>
+          <Appearance>
+            <Material diffuseColor='0 .2 .8'/>
+          </Appearance>
+        </Shape>
+      </Group>
+      <Transform DEF='SECOND_ENTITY' translation='5 0 -2'>
+        <Shape USE='FLYING_BOX'/>
+      </Transform>
+      <Transform DEF='THIRD_ENTITY' translation='-5 0 -2'>
+        <Shape USE='FLYING_BOX'/>
+      </Transform>
+    </Transform>
+  </Scene>
+</X3D>

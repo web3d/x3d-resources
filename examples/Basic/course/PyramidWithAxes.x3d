@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='PyramidWithAxes.x3d' name='title'/>
+    <meta content='MV4204 class' name='creator'/>
+    <meta content='8 July 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Constructing a Pyramid geometric primitive in order to show use of points and coordinate indices. Coordinate axes superimposed.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/course/PyramidWithAxes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='PyramidWithAxes.x3d'/>
+    <Viewpoint description='Pyramid with axes' position='0 0 40'/>
+    <Transform scale='12 12 12'>
+      <Inline DEF='CoordinateAxes' url='"../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.x3d" "../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.wrl" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.wrl" "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.wrl"'/>
+    </Transform>
+    <Inline url='"Pyramid.x3d" "https://www.web3d.org/x3d/content/examples/Basic/course/Pyramid.x3d" "Pyramid.wrl" "https://www.web3d.org/x3d/content/examples/Basic/course/Pyramid.wrl"'/>
+  </Scene>
+</X3D>

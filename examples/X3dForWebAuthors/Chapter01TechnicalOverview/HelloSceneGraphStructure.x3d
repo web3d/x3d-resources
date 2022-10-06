@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "http://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component level='4' name='Rendering'/>
+    <unit category='length' conversionFactor='0.3048' name='FeetToMeters'/>
+    <!-- Authors need to provide meta tags as appropriate -->
+    <meta content='HelloSceneGraphStructure.x3d' name='title'/>
+    <meta content='Show basic scene graph structure' name='description'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='18 September 2022' name='created'/>
+    <meta content='18 September 2022' name='modified'/>
+    <meta content='HelloSceneGraphStructure.png' name='Image'/>
+    <meta content='https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloSceneGraphStructure.x3d' name='identifier'/>
+    <meta content='X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='HelloSceneGraphStructure.x3d'/>
+    <!-- Scene graph nodes are added here -->
+    <Transform>
+      <Inline url='"HelloTriangle.x3d" "HelloTriangle.wrl" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloTriangle.x3d" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloTriangle.wrl"'/>
+      <!-- TODO add children nodes here -->
+    </Transform>
+  </Scene>
+</X3D>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='aTorch.x3d' name='title'/>
+    <meta content='Torch with animated flames: this file illustrates creation of a Torch prototype node via the Prototype declaration syntax. The torch uses an LOD to select among three torch variants, each designed to work as part of this animated torch.' name='description'/>
+    <meta content='David R. Nadeau' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 July 1998' name='created'/>
+    <meta content='2 February 2014' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Columns.x3d' name='reference'/>
+    <meta content='originals/aTorch.wrl' name='reference'/>
+    <meta content='http://www.siggraph.org/s98' name='reference'/>
+    <meta content='http://www.siggraph.org/s98/conference/courses/18.html' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/slides/mt0500.htm' name='reference'/>
+    <meta content='http://www.sdsc.edu/~moreland/courses/Siggraph98/vrml97/vrml97.htm' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dResources.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"Copyright (c) 1997, David R. Nadeau"' title='Torch with animated flames'/>
+    <ProtoDeclare name='Torch'>
+      <ProtoInterface/>
+      <ProtoBody>
+        <LOD range='19.0 25.0'>
+          <Inline url='"aTorch1.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch1.x3d" "aTorch1.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch1.wrl"'/>
+          <Inline url='"aTorch2.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch2.x3d" "aTorch2.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch2.wrl"'/>
+          <Inline url='"aTorch3.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch3.x3d" "aTorch3.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/aTorch3.wrl"'/>
+        </LOD>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- Display scene instructions for viewing an example scene with a corresponding prototype instance -->
+    <Background skyColor='0 0.333333 0.66667'/>
+    <Anchor description='select text to view parent scene' url='"Columns.x3d" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Columns.x3d" "Columns.wrl" "https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Siggraph98Course/Columns.wrl"'>
+      <Shape>
+        <Text string='"The aTorch.x3d scene holds" "a prototype declaration" "" "Select this text to view example usage" "in Columns.x3d scene"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' style='BOLD'/>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='1 0.9 0.4'/>
+        </Appearance>
+      </Shape>
+      <!-- Invisible box behind text makes selection easier -->
+      <Shape>
+        <Box size='12 5 0.1'/>
+        <Appearance>
+          <Material transparency='1'/>
+        </Appearance>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

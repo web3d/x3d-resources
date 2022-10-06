@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+    <head>
+        <!-- TODO: * authors need to replace the following metadata values * -->
+        <link rel="shortcut icon" href="http://www.web3d.org/x3d/content/examples/images/X3DtextIcon16.png" title="X3D" >
+        <title>TODO:  </title>
+        <meta name="author"      content="Don Brutzman">
+        <meta name="description" content="Example HTML page with X3D object tag to copy, edit and reuse.">
+        <meta name="filename"    content="TODO.html">
+        <meta name="identifier"  content="http://X3dGraphics.com/examples/X3dForAdvancedModeling/SanCarlosCatheral/TODO.html">
+        <meta name="reference"   content="http://www.web3d.org/x3d/content/examples/HtmlObjectTagForX3d.html">
+        <meta name="generator"   content="X3D-Edit, https://savage.nps.edu/X3D-Edit">
+        <meta name="created"     content="3 February 2012">
+        <meta name='modified'    content='3 February 2012'/>
+    </head>
+    <body>
+
+        <h1> San Carlos Cathedral model:  TODO list </h1>
+
+        <object data="SanCarlosCathedral.x3d" type="model/x3d+xml" height="320" width="640">
+            <param name="src" value="SanCarlosCathedral.x3d"/>
+
+            <!-- the remaining HTML that follows should not need further modification -->
+            <param name="DASHBOARD" value="TRUE"/>
+            <param name="SPLASHSCREEN" value="FALSE"/>
+            <!-- the following anchor-link text is only displayed to user if no X3D plugin is already installed -->
+            <div class="noX3dPluginInstalled">
+                <a href="http://www.web3d.org/x3d/content/examples/X3dResources.html#Applications" target="helpPage">Select an X3D plugin to see this example...</a>
+                <!-- alternate url: http://www.web3d.org/tools/viewers_and_browsers -->
+            </div>
+        </object>
+
+        <p>
+            Michele Foti is building a detailed model of the 
+            <a href="http://www.sancarloscathedral.org">San Carlos Cathedral</a>
+            in Monterey California.
+        </p>
+
+        <p>
+            The
+            <a href="index.html">chapter distribution page</a>
+            lists all models in the archive.
+            Changes to master versions can be seen in
+            <a href="http://x3d.svn.sourceforge.net/viewvc/x3d/www.web3d.org/x3d/content/examples/X3dForAdvancedModeling/SanCarlosCathedral/">SourceForge version control</a>.
+        </p>
+
+        <h1> Priority items </h1>
+        <ol>
+            <li>
+                We need Michele working in version control!
+            </li>
+            <li>
+                Need map of church coordinate system.  Where is origin?  In what direction are the X Y Z axes?
+            </li>
+        </ol>
+
+        <h1> Additional items </h1>
+        
+        <ol>
+            <li>
+                Bell animation:  want to set the center of rotation at the top center of the bell
+            </li>
+            <li>
+                Add Viewpoints and ViewpointSequencer tour - done.  Also WaypointInterpolator tour.
+            </li>
+            <li>
+                Add Bell.x3d and integrate clapper:  done.
+                Record sounds of bells chiming at the church (Don).
+                BellSound will need to be moved from a MovieTexture node to a Sound/AudioClip.
+            </li>
+            <li>
+                Add images, benches, etc.
+            </li>
+            <li>
+                Uncomment author assists in the scenes
+            </li>
+            <li>
+                Add PointLights directly between windows, also add chandeliers and corresponding lights.
+                Consider different lighting schemes.
+                Consider LightingSwitch prototype to handle enabling/disabling groups of lights.
+                These are being tested in LightingAlternatives.x3d
+            </li>
+            <li>
+                How to maintain photographs?
+            </li>
+            <li>
+                Don:  add semi-transparent image capability to moving grid widgets
+            </li>
+            <li>
+                Don:  chapter slideset  linked
+            </li>
+            <li>
+                Paper for
+                <a href="http://www.web3d.org/realtime-3d/events/web3d-2012" target="_blank">Web3D 2012 Conference</a>
+            </li>
+            <li>
+                Move Clapper into Bell.x3d
+            </li>
+            <li>
+                Convert this document into DesignNotes.html ?
+            </li>
+        </ol>
+        
+        <p>
+            Updated 16 April 2012.
+        </p>
+
+
+    </body>
+</html>

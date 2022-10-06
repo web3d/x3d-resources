@@ -1,0 +1,24 @@
+#X3D V3.0 utf8
+
+PROFILE Immersive
+
+DEF SC Script {
+    url ["ecmascript:
+        var lastStartTime;
+
+        function initialize() {
+            date = new Date();
+            lastStartTime = date.getTime();
+        }
+
+        // Called each frame
+        function prepareEvents() {
+            date = new Date();
+            frameTime = (date.getTime() - lastStartTime) / 1000.0;
+            lastStartTime = date.getTime();
+
+            fps = 1.0 / frameTime;
+            Browser.println('FPS: ' + fps);
+        }
+    "]
+}

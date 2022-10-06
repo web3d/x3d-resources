@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+  <head>
+    <meta content='ExtrusionEdgeCases.x3d' name='title'/>
+    <meta content='Scene incorporating extrusion edge cases' name='description'/>
+    <meta content='Vsevolod Alekseyev, Vince Marchetti, Roy Walmsley, Leonard Daly, Dick Puk, Joe Williams, Don Brutzman' name='creator'/>
+    <meta content='29 January 2016' name='created'/>
+    <meta content='28 October 2019' name='modified'/>
+    <meta content='https://www.web3d.org/wiki/index.php/Extrusion_Edge_Cases' name='reference'/>
+    <meta content='add descriptions why each case holds special interest' name='TODO'/>
+    <meta content='add named Viewpoints with name for each case' name='TODO'/>
+    <meta content='X3D-public email thread http://web3d.org/pipermail/x3d-public_web3d.org/2016-January/004184.html' name='TODO'/>
+    <meta content='Mantis issue 923 https://www.web3d.org/member-only/mantis/view.php?id=923' name='TODO'/>
+    <meta content='X3D encodings, ISO/IEC 19775-1.4, Part 1: Architecture and base components, Clause 13 Geometry3D component, Topic 13.3.5 Extrusion, Section 13.3.5.4 Special cases' name='specificationSection'/>
+    <meta content='https://www.web3d.org/documents/specifications/19776-1/V3.3/Part01/examples.html#ExecutionModel' name='specificationUrl'/>
+    <meta content='TODO github draft X3D 4.0 document' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/ExtrusionEdgeCases.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='ExtrusionEdgeCases.x3d'/>
+    <Group>
+      <Transform translation='2 10 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.8 0.1 0.05'/>
+          </Appearance>
+          <Extrusion crossSection='-1 0 0 1 1 0 -1 0' scale='1 1 1 1 1 1 2 2 3 3 3 3' spine='-5 0 0 0 0 0 4 4 0 4 4 0 4 4 0 8 0 0'>
+            <!-- spine is open, crossSection is closed -->
+          </Extrusion>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='2 2 2' translation='-2 -2 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0.8 0.1'/>
+          </Appearance>
+          <Extrusion crossSection='-1 0 0 2 1 0 -1 0' solid='false'>
+            <!-- spine is open, crossSection is closed -->
+          </Extrusion>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='2 2 2' translation='2 -2 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 0.8 0.1'/>
+          </Appearance>
+          <Extrusion crossSection='-1 0 0 2 1 0 -1 0' solid='false' spine='3 1 0 3 0 0'>
+            <!-- spine is open, crossSection is closed -->
+          </Extrusion>
+        </Shape>
+      </Transform>
+    </Group>
+    <Group>
+      <Transform scale='1.5 1.5 1.5' translation='20 0 0'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.1 0 0.8'/>
+          </Appearance>
+          <!-- spine is closed with only 3 points, thus 2 independent points. Sounds like a potential problem but is actually legitimate (i.e. not geometrically degenerate) for many cases. -->
+          <Extrusion beginCap='false' endCap='false' scale='1 1 1.2 1.2 1.4 1.4' solid='false' spine='0 0 0 0 1 0 0 0 0'>
+            <!-- spine is closed, crossSection is closed -->
+          </Extrusion>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "http://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Interchange'>
+<head>
+  <component name='NURBS' level='3'/>
+    <meta content='NurbsSweptSurface.x3d' name='title'/>
+    <meta content='X3D Architecture example: NurbsSweptSurface demonstration.' name='description'/>
+    <meta content='Doug Sanden and Don Brutzman' name='creator'/>
+    <meta content='13 April 2022' name='created'/>
+    <meta content='30 May 2022' name='modified'/>
+    <meta content='X3D Architecture, 27 NURBS component, 27.4.11 NurbsSweptSurface' name='specificationSection'/>
+    <meta content='https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-CD1/Part01/components/nurbs.html#NurbsSweptSurface' name='specificationUrl'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/NurbsSweptSurface.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+</head>
+
+<Scene>
+    <Group>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0  4 0 0'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='1 0 0'/>
+          <LineProperties linewidthScaleFactor='4'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 0 4 0'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='0 1 0'/>
+          <LineProperties linewidthScaleFactor='4'/>
+        </Appearance>
+      </Shape>
+      <Shape>
+        <LineSet vertexCount='2'>
+          <Coordinate point='0 0 0 0 0 4'/>
+        </LineSet>
+        <Appearance>
+          <Material emissiveColor='0 0 1'/>
+          <LineProperties linewidthScaleFactor='4'/>
+        </Appearance>
+      </Shape>
+    </Group>
+
+  <Background transparency='1.0' skyColor='1 1 1'/>
+  <Viewpoint/>
+
+  <Transform >
+    <Shape >
+      <Appearance >
+        <Material transparency='.5' />
+      </Appearance>
+      <NurbsSweptSurface ccw='true' solid='false' method="FULL" >
+        <NurbsCurve2D containerField='crossSectionCurve' tessellation='30'
+          controlPoint='-.25 0, .5 0, .5 .25, 0 .5, .5 .75, .5 1, -.25 1, -.25 0' 
+          weight='1  1  1  1  1  1  1  1' knot='0  0  0  1  2  3  4  5  6  6  6' order='3' />
+
+        <NurbsCurve DEF='TRAJECTORY' containerField='trajectoryCurve' order='3'
+         weight='1  1  1  1  1  1  1' knot='0  0  0  1  2  3  4  5  5  5 ' >
+          <Coordinate DEF='TRAJECTORYCONTROLPTS' containerField='controlPoint' 
+          point='0 2 4, 0 2 2, 0 0 2, 2 0 2, 2 0 0, 2 4 0, 2 4 2' />
+          <!--Coordinate DEF='TRAJECTORYCONTROLPTS' containerField='controlPoint' 
+                    point='4 0 2, 2 0 2, 2 0 0, 2 2 0, 0 2 0, 0 2 4, 2 2 4' /-->
+        </NurbsCurve>        
+      </NurbsSweptSurface>
+    </Shape>
+  </Transform>
+
+   <Transform scale='1 1 1'>
+    <Shape>
+      <Appearance >
+        <Material DEF='CYAN' diffuseColor='0 .8 .8'/>
+        <LineProperties linewidthScaleFactor='6'/>
+      </Appearance>
+      <!-- To convert a NurbsCurve2D control curve to a displayable NurbsCurve
+        1. rename element NurbsCurve2D -> NurbsCurve
+        2. cut controlPoint= field and paste into child node CoordinateDouble point field
+        3. edit point field adding a 3rd (z) = 0 to each xy point
+      -->
+      <NurbsCurve DEF='CROSSSECTION' knot='0  0  0  1  2  3  4  5  6  6  6' order='3' 
+        weight='1  1  1  1  1  1  1  1'>
+        <CoordinateDouble point='-.25 0 0, .5 0 0, .5 .25 0, 0 .5 0, .5 .75 0, .5 1 0, -.25 1 0, -.25 0 0'/>
+      </NurbsCurve>
+    </Shape>
+    <Shape>
+      <Appearance >
+        <Material DEF='MAGENTA' diffuseColor='.8 0 .8'/>
+        <LineProperties linewidthScaleFactor='6'/>
+      </Appearance>
+      <NurbsCurve USE='TRAJECTORY' containerField='geometry' />
+    </Shape>
+   <Shape>
+      <Appearance >
+        <Material DEF='GRAY' diffuseColor='.5 .5 .5' transparency='.5'/>
+        <LineProperties linewidthScaleFactor='6'/>
+      </Appearance>
+      <NurbsCurve DEF='TRAJECTORYCONTROLLINES' knot='0 0 1 2 3 4 5 6 6' order='2' 
+        weight='1  1  1  1  1  1  1'>
+        <Coordinate USE='TRAJECTORYCONTROLPTS' containerField='controlPoint'/>
+      </NurbsCurve>
+    </Shape>
+    
+    </Transform>
+
+
+</Scene>
+</X3D>

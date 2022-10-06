@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Interactive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure10_07LightBulb.x3d' name='title'/>
+    <meta content='Figure 10.7, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch10/10fig07.htm' name='reference'/>
+    <meta content='Don Brutzman' name='transcriber'/>
+    <meta content='15 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='A lightbulb that varies in brightness as the pointing device is held over the socket.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter10Materials/Figure10_07LightBulb.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure10_07LightBulb.x3d'/>
+    <Viewpoint description='Light bulb: put mouse over socket to change brightness' position='0 0 8'/>
+    <Transform translation='0 2 0'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.4 0.4 0.4' emissiveColor='0.1 0.1 0.1'/>
+        </Appearance>
+        <Cylinder radius='0.05'/>
+      </Shape>
+      <Group>
+        <Transform translation='0 -1 0'>
+          <Shape>
+            <Appearance DEF='BULB_CASING'>
+              <Material DEF='SOCKET_MATERIAL' diffuseColor='0.4 0.4 0.16' emissiveColor='0.4 0.4 0.16'/>
+            </Appearance>
+            <Sphere radius='0.5'/>
+          </Shape>
+        </Transform>
+        <Transform translation='0 -1.5 0'>
+          <Shape>
+            <Appearance USE='BULB_CASING'/>
+            <Cylinder height='1' radius='0.5'/>
+          </Shape>
+        </Transform>
+        <TouchSensor DEF='SOCKET_TOUCHSENSOR' description='touch to change light intensity'/>
+      </Group>
+      <Transform translation='0 -2.95 0'>
+        <Shape>
+          <Appearance>
+            <Material DEF='BULB_MATERIAL' diffuseColor='0.4 0.4 0.4' emissiveColor='0.8 0.8 0.8'/>
+          </Appearance>
+          <Sphere/>
+        </Shape>
+        <PointLight DEF='LIGHTSOURCE'/>
+      </Transform>
+    </Transform>
+    <TimeSensor DEF='LIGHT_TIMESENSOR' cycleInterval='3' enabled='false' loop='true'/>
+    <ColorInterpolator DEF='WHITE_COLORINTERPOLATOR' key='0 0.1 0.4 0.6 0.9 1' keyValue='1 1 1 1 1 1 0.1 0.1 0.1 0.1 0.1 0.1 1 1 1 1 1 1'/>
+    <ROUTE fromField='isOver' fromNode='SOCKET_TOUCHSENSOR' toField='enabled' toNode='LIGHT_TIMESENSOR'/>
+    <ROUTE fromField='fraction_changed' fromNode='LIGHT_TIMESENSOR' toField='set_fraction' toNode='WHITE_COLORINTERPOLATOR'/>
+    <ROUTE fromField='value_changed' fromNode='WHITE_COLORINTERPOLATOR' toField='set_diffuseColor' toNode='BULB_MATERIAL'/>
+    <ROUTE fromField='value_changed' fromNode='WHITE_COLORINTERPOLATOR' toField='set_emissiveColor' toNode='BULB_MATERIAL'/>
+    <ROUTE fromField='value_changed' fromNode='WHITE_COLORINTERPOLATOR' toField='set_color' toNode='LIGHTSOURCE'/>
+  </Scene>
+</X3D>

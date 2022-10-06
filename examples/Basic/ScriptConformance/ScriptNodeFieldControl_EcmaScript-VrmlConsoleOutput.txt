@@ -1,0 +1,27 @@
+  initialize ():
+  sceneText.string           =[ "EcmaScript initialize () with field control", "has reinitialized the changedText node.", "", "Please click text for additional results." ]
+  sceneTransform.translation =0 3 0
+  sceneMaterial.diffuseColor =0.8 0.8 0.2
+  ==============================
+  touchEvent startTime = 989793676.0224512
+  mode = 2
+  sceneText.string           = [ "User click on text seen by EcmaScript", "function via Script node eventIn.", "Text & position successfully changed", "via field control.  Test passed." ]
+  sceneTransform.translation = 0 -1 0
+  sceneMaterial.diffuseColor = 0.2 0.8 0.2
+  ==============================
+  touchEvent startTime = 989793677.7742687
+  mode = 0
+  sceneText.string           = [ "Default text in VRML scene will be replaced by", "EcmaScript initialize() in Script using field control.", "This text appears first, if EcmaScript initialization fails.", "" ]
+  sceneTransform.translation = 0 1 0
+  sceneMaterial.diffuseColor = 0.8 0.2 0.2
+  ==============================
+  touchEvent startTime = 989793679.4458759
+  mode = 1
+  initialize ():
+  sceneText.string           =[ "EcmaScript initialize () with field control", "has reinitialized the changedText node.", "", "Please click text for additional results." ]
+  sceneTransform.translation =0 3 0
+  sceneMaterial.diffuseColor =0.8 0.8 0.2
+  ==============================
+  script shutdown.
+  ==============================
+

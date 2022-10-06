@@ -1,0 +1,59 @@
+TODO Basic examples for Shaders
+
+Don Brutzman and Jeff Malnick
+
+should we have both embedded source and url values?  verify X3D spec says that is so...
+
+flutter.x3d bugs
+    http://freewrl.sourceforge.net/examples.html
+     improper version X3D, must be 3.1 or greater
+     tell John that commas are only allowed between 3-tuples, not within
+     freewrl installer failed on Windows Vista :(
+     need head/meta section
+
+flutter default errors:
+<Viewpoint DEF=''/> orientation='0 0 0 0' has illegal zero-length axis values[/X3D/Scene/Viewpoint, error]
+<PlaneSensor DEF='mySensorY'/> description='brightness' can include space characters in description [/X3D/Scene/Group/Group/Transform[2]/Transform/PlaneSensor, hint]
+<ShaderPart DEF=''/> url array address(es) do not include online http/https references (url='data:text/plain varying float LTI;varying vec3 MCO;uniform float fraction;uniform vec3 xBall;uniform vec3 yBall;uniform vec3 zBall;void main(){vec3 TNO;vec4 TPO=gl_Vertex;MCO=gl_Color.rgb;float thisX=TPO.x;float thisY=TPO.y;float HMP=abs((1.8+zBall.y)/5.0);float ticker;ticker=sin(fraction*6.18)*40.*(1.8 +xBall.x);float thisXY2=dot(vec2(TPO.xy) vec2(TPO.xy))*ticker;TPO.z=HMP*sin(thisXY2);vec3 LightPos=vec3(0. 10. 0.);TNO.x=2.*HMP*thisX*cos(thisXY2);TNO.y=2.*HMP*thisY*cos(thisXY2);TNO.z=1.;vec3 myNorml=normalize(TNO);vec3 ECpos=vec3(gl_ModelViewMatrix*TPO);LTI=dot(normalize(LightPos-ECpos) myNorml);LTI=(yBall.y*0.35)+abs(LTI);LTI=clamp(LTI 0. 1.);gl_Position=gl_ModelViewProjectionMatrix*TPO;}') [/X3D/Scene/Group/Transform/Shape/Appearance/ComposedShader/ShaderPart[1], info]
+<ShaderPart DEF='' string=''/> url string array needs to begin and end with "quote marks".  Corrected example: <ShaderPart DEF='' string='"data:text/plain varying float LTI;varying vec3 MCO;uniform float fraction;uniform vec3 xBall;uniform vec3 yBall;uniform vec3 zBall;void main(){vec3 TNO;vec4 TPO=gl_Vertex;MCO=gl_Color.rgb;float thisX=TPO.x;float thisY=TPO.y;float HMP=abs((1.8+zBall.y)/5.0);float ticker;ticker=sin(fraction*6.18)*40.*(1.8 +xBall.x);float thisXY2=dot(vec2(TPO.xy) vec2(TPO.xy))*ticker;TPO.z=HMP*sin(thisXY2);vec3 LightPos=vec3(0. 10. 0.);TNO.x=2.*HMP*thisX*cos(thisXY2);TNO.y=2.*HMP*thisY*cos(thisXY2);TNO.z=1.;vec3 myNorml=normalize(TNO);vec3 ECpos=vec3(gl_ModelViewMatrix*TPO);LTI=dot(normalize(LightPos-ECpos) myNorml);LTI=(yBall.y*0.35)+abs(LTI);LTI=clamp(LTI 0. 1.);gl_Position=gl_ModelViewProjectionMatrix*TPO;}"'/> [/X3D/Scene/Group/Transform/Shape/Appearance/ComposedShader/ShaderPart[1], error]
+<ShaderPart DEF=''/> url array address(es) do not include online http/https references (url='data:text/plain varying float LTI; varying vec3 MCO; void main() { vec4 newColor; newColor.xyz = MCO.xyz * LTI; newColor.a = 1.0; gl_FragColor = newColor; }') [/X3D/Scene/Group/Transform/Shape/Appearance/ComposedShader/ShaderPart[2], info]
+<ShaderPart DEF='' string=''/> url string array needs to begin and end with "quote marks".  Corrected example: <ShaderPart DEF='' string='"data:text/plain varying float LTI; varying vec3 MCO; void main() { vec4 newColor; newColor.xyz = MCO.xyz * LTI; newColor.a = 1.0; gl_FragColor = newColor; }"'/> [/X3D/Scene/Group/Transform/Shape/Appearance/ComposedShader/ShaderPart[2], error]
+X3D Schematron rules validation complete.
+
+SimpleShader.x3d
+    make Netbeans recognize .fs .vs .ds file extensions as .c source?
+
+get rid of ecmascript: prefix from node panels
+
+where are public specifications for the shader languages?
+add to X3D help system.
+
+    http://www.opengl.org/documentation/glsl/
+    http://www.opengl.org/registry/doc/GLSLangSpec.1.50.09.pdf
+
+    http://developer.nvidia.com/page/cg_main.html
+    
+Spec problem:  the following section contradicts the corresponding
+appendices and should be rewritten to match.
+----------------------------
+31.2.2.2 Node representation
+
+Each shading language option has a node that implements its functionality.
+Since each language is quite different, it is not possible to define a
+single set of nodes that can represent the entire capabilities offered.
+Each language has its own set of nodes that pertain only to that shading language.
+
+For each set of nodes for a given shading language, there are
+language-specific behaviours. Mappings for each of the languages
+are defined in their own annex to this specification as described
+in 31.2.2.1 Shader language options. Table 2 lists the nodes and
+which annex shall be used to define language-specific behaviours:
+
+Table 31.2 — Shader language node specifications
+Shading Language    Nodes               Annex
+OpenGL              GLSLang
+                    GLSLShader
+                    GLSLShaderObject    Annex I
+Direct3D HLSL       HDSLShader          Annex J
+nVidia Cg           CgShader            Annex K
+----------------------------

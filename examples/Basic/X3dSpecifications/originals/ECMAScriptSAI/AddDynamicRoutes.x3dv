@@ -1,0 +1,39 @@
+#X3D V3.0 utf8
+
+PROFILE Immersive
+
+#/*
+ * An SAI Example which shows how to add dynamic routes.
+ * This example creates a Box with a touchSensor, then routes its touchTime
+ * events to itself for handling.
+ *
+ */#
+
+DEF SC Script {
+    inputOnly SFTime touchTime
+
+    url ["ecmascript:
+
+        function touchTime(val) {
+            // Create nodes directly in the parent scene
+            scene = Browser.currentScene;
+
+            shape = scene.createNode('Shape');
+            box = scene.createNode('Box');
+            touchSensor = scene.createNode('TouchSensor');
+            shape.geometry = box;
+
+            // Create a Group to hold the nodes
+            group = scene.createNode('Group');
+
+            // Add the shape and sensor to the group
+            group.children = new MFNode(shape, touchSensor);
+
+            // Add the nodes to the scene
+            scene.rootNodes[0] = group;
+
+            // Add a route from the touchSensor to this script
+            scene.addRoute(touchSensor, 'touchTime', Script, 'touchTime');
+        }
+    "]
+}

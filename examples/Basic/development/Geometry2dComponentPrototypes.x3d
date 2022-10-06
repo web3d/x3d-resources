@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Geometry2dComponentPrototypes.x3d' name='title'/>
+    <meta content='X3D Geometry2D component nodes, implemented as prototypes for developmental use to provide backwards compatibility with VRML 97. Arc2D specifies a 2D linear circular arc. ArcClose2D specifies a portion of a circle. Circle2D specifies a 2D circular line. Disk2D specifies a 2D circular disk. Polyline2D specifies 2D line segments. Polypoint2D specifies 2D point array. Rectangle2D specifies a 2D rectangle. TriangleSet2D specifies 2D triangles. 2D nodes are considered particularly helpful for CADPart geometry and building user interfaces such as Heads-Up Displays (HUDs).' name='description'/>
+    <meta content='Christos Kalogrias, Don Brutzman, Ken Curtin, Duane Davis' name='creator'/>
+    <meta content='14 November 2003' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='These examples are complete but only used for developmental testing, not regular X3D authoring.' name='warning'/>
+    <meta content='Geometry2dComponentExternProtos.x3d' name='reference'/>
+    <meta content='Geometry2dComponentExamples.x3d' name='reference'/>
+    <meta content='https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html' name='reference'/>
+    <meta content='Geometry2D component nodes (Arc2D ArcClose2D Circle2D Disk2D Polyline2D Polypoint2D Rectangle2D TriangleSet2D)' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/Geometry2dComponentPrototypes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ==================== -->
+    <WorldInfo title='Geometry2dComponentPrototypes.x3d'/>
+    <ProtoDeclare name='Arc2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='startAngle' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' name='endAngle' type='SFFloat' value='1.5707963265'/>
+        <field accessType='initializeOnly' name='radius' type='SFFloat' value='1'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <!-- Only the first node counts as the node type of a prototype. This node must be a geometry node. -->
+        <IndexedLineSet DEF='ArcIndexPoints'>
+          <Coordinate DEF='Arc3DPoints'/>
+        </IndexedLineSet>
+        <!-- Any nodes after initial node in a ProtoBody is not rendered. -->
+        <Group>
+          <IS>
+            <connect nodeField='metadata' protoField='metadata'/>
+          </IS>
+          <Script DEF='Arc2dToFaceSet3d'>
+            <field accessType='initializeOnly' name='startAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='endAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='radius' type='SFFloat'/>
+            <field accessType='outputOnly' name='arcSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='arcIndexSet3d' type='MFInt32'/>
+            <IS>
+              <connect nodeField='startAngle' protoField='startAngle'/>
+              <connect nodeField='endAngle' protoField='endAngle'/>
+              <connect nodeField='radius' protoField='radius'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   numOfPoints = 100;
+
+   if (radius < 0)
+   {
+      Browser.print ('[Arc2D] Warning:  invalid value, radius=' + value + ' must instead be >= 0');
+   }
+
+   if ((startAngle < 0) || (startAngle >= 2 * Math.PI))
+   {
+	Browser.print ('[Arc2D] Warning: startAngle=' + startAngle + ' must be within range [0..2pi)'); // (]
+   }
+
+   if ((endAngle < 0) || (endAngle >= 2 * Math.PI))
+   {
+	Browser.print ('[Arc2D] Warning: endAngle=' + endAngle + ' must be within range [0..2pi)'); // (]
+   }
+
+   // equal startAngle, endAngle means draw full circle.
+   // high out-of-range endAngle is OK for local computation.
+   if (startAngle >= endAngle)
+      endAngle = endAngle + 2 * Math.PI;
+
+   differAng = Math.abs((endAngle - startAngle)) / numOfPoints;
+
+   for (i = 0; i <= numOfPoints; i++)
+   {
+	arcSet3d[i] = new SFVec3f (radius * Math.cos(startAngle + i * differAng), radius * Math.sin(startAngle + i * differAng), 0.0);
+        arcIndexSet3d[i] = i;
+   }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='arcSet3d' fromNode='Arc2dToFaceSet3d' toField='point' toNode='Arc3DPoints'/>
+          <ROUTE fromField='arcIndexSet3d' fromNode='Arc2dToFaceSet3d' toField='set_coordIndex' toNode='ArcIndexPoints'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare name='ArcClose2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='startAngle' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' name='endAngle' type='SFFloat' value='1.5707963265'/>
+        <field accessType='initializeOnly' name='radius' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' name='closureType' type='SFString' value='PIE'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet DEF='ArcPointFaceIndex'>
+          <Coordinate DEF='ArcClose2DFaceCoordinate'/>
+        </IndexedFaceSet>
+        <Group>
+          <Script DEF='ArcClose2dToFaceSet3d'>
+            <field accessType='initializeOnly' name='closureType' type='SFString'/>
+            <field accessType='initializeOnly' name='startAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='endAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='radius' type='SFFloat'/>
+            <field accessType='outputOnly' name='arcSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='pointIndex' type='MFInt32'/>
+            <IS>
+              <connect nodeField='closureType' protoField='closureType'/>
+              <connect nodeField='startAngle' protoField='startAngle'/>
+              <connect nodeField='endAngle' protoField='endAngle'/>
+              <connect nodeField='radius' protoField='radius'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   if (radius < 0)
+   {
+      Browser.print ('[ArcClose2D] Warning:  invalid value, radius=' + value + ' must instead be >= 0');
+   }
+
+   if ((startAngle < 0) || (startAngle >= 2 * Math.PI))
+   {
+	Browser.print ('[ArcClose2D] Warning: startAngle=' + startAngle + ' must be within range [0..2pi)'); //(]
+   }
+
+   if ((endAngle< 0) || (endAngle>= 2 * Math.PI))
+   {
+	Browser.print ('[ArcClose2D] Warning: endAngle=' + endAngle+ ' must be within range [0..2pi)'); // (]
+    }
+
+    // equal startAngle, endAngle means draw full circle.
+    // high out-of-range endAngle is OK for local computation.
+   if (startAngle >= endAngle)
+      endAngle = endAngle + 2*Math.PI;
+
+   numOfPoints = 100;
+   differAng = Math.abs((endAngle - startAngle))/numOfPoints;
+
+   for ( i=0 ; i<=numOfPoints ; i++)
+   {
+	if ( i == numOfPoints)
+             arcSet3d[i] = new SFVec3f (0.0, 0.0, 0.0);
+        else
+             arcSet3d[i] = new SFVec3f ( radius*Math.cos(startAngle + i*differAng), radius*Math.sin(startAngle + i*differAng), 0.0 );
+   }
+
+   k=0;
+   if (closureType =='PIE')
+       for ( i=0 ; i<numOfPoints ; i++)
+       {
+        	pointIndex[k]   = numOfPoints;
+        	pointIndex[k+1] = i;
+        	pointIndex[k+2] = i + 1;
+        	pointIndex[k+3]   = numOfPoints;
+        	pointIndex[k+4] = -1;
+        k=k+5;
+	}
+   else
+       for ( i=0 ; i<numOfPoints-1 ; i++)
+       {
+              pointIndex[k]   = 0;
+              pointIndex[k+1] = i;
+              pointIndex[k+2] = i + 1;
+              pointIndex[k+3]   = 0;
+              pointIndex[k+4] = -1;
+        k=k+5;
+	}
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='arcSet3d' fromNode='ArcClose2dToFaceSet3d' toField='point' toNode='ArcClose2DFaceCoordinate'/>
+          <ROUTE fromField='pointIndex' fromNode='ArcClose2dToFaceSet3d' toField='set_coordIndex' toNode='ArcPointFaceIndex'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ArcClose2DUnfilled also provided since FillProperties not available in VRML 97 -->
+    <ProtoDeclare name='ArcClose2DUnfilled'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='startAngle' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' name='endAngle' type='SFFloat' value='1.5707963265'/>
+        <field accessType='initializeOnly' name='radius' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' name='closureType' type='SFString' value='PIE'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedLineSet DEF='ArcPointLineIndex'>
+          <Coordinate DEF='ArcClose2DLineCoordinate'/>
+        </IndexedLineSet>
+        <Group>
+          <Script DEF='ArcClose2dToLineSet3d'>
+            <field accessType='initializeOnly' name='closureType' type='SFString'/>
+            <field accessType='initializeOnly' name='startAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='endAngle' type='SFFloat'/>
+            <field accessType='initializeOnly' name='radius' type='SFFloat'/>
+            <field accessType='outputOnly' name='arcSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='pointIndex' type='MFInt32'/>
+            <IS>
+              <connect nodeField='closureType' protoField='closureType'/>
+              <connect nodeField='startAngle' protoField='startAngle'/>
+              <connect nodeField='endAngle' protoField='endAngle'/>
+              <connect nodeField='radius' protoField='radius'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+
+   if (radius < 0)
+   {
+      Browser.print ('[ArcCloseUnfilled2D] Warning:  invalid value, radius=' + value + ' must instead be >= 0');
+   }
+
+   if ((startAngle < 0) || (startAngle >= 2 * Math.PI))
+   {
+	Browser.print ('[ArcCloseUnfilled2D] Warning: startAngle=' + startAngle + ' must be within range [0..2pi)'); //(]
+   }
+
+   if ((endAngle< 0) || (endAngle>= 2 * Math.PI))
+   {
+	Browser.print ('[ArcCloseUnfilled2D] Warning: endAngle=' + endAngle+ ' must be within range [0..2pi)'); //(]
+    }
+
+    // equal startAngle, endAngle means draw full circle.
+    // high out-of-range endAngle is OK for local computation.
+   if (startAngle >= endAngle)
+      endAngle = endAngle + 2*Math.PI;
+
+   numOfPoints = 100;
+   differAng = Math.abs((endAngle - startAngle))/numOfPoints;
+
+   for ( i=0 ; i<=numOfPoints +1 ; i++)
+   {
+	if ( i == numOfPoints +1)
+             arcSet3d[i] = new SFVec3f (0.0, 0.0, 0.0);
+        else
+             arcSet3d[i] = new SFVec3f ( radius*Math.cos(startAngle + i*differAng), radius*Math.sin(startAngle + i*differAng), 0.0 );
+   }
+
+   if (closureType =='CHORD')
+   {
+	for ( i=0 ; i<=numOfPoints +1 ; i++)
+	{
+        	if ( i == numOfPoints +1)
+             		pointIndex[i] = 0.0;
+        	else
+             		pointIndex[i] = i;
+	}
+   }
+   else
+   {
+	for ( i=0 ; i<=numOfPoints +1 ; i++)
+	{
+         pointIndex[i] = i;
+	}
+         pointIndex[i] = 0.0;
+   }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='arcSet3d' fromNode='ArcClose2dToLineSet3d' toField='point' toNode='ArcClose2DLineCoordinate'/>
+          <ROUTE fromField='pointIndex' fromNode='ArcClose2dToLineSet3d' toField='set_coordIndex' toNode='ArcPointLineIndex'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare name='Circle2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='radius' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedLineSet DEF='Circ3DPointsIndex'>
+          <Coordinate DEF='Circ3DPoints'/>
+        </IndexedLineSet>
+        <Group>
+          <Script DEF='Circ2dToLineSet3d'>
+            <field accessType='initializeOnly' name='radius' type='SFFloat'/>
+            <field accessType='outputOnly' name='circSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='circIndexSet3d' type='MFInt32'/>
+            <IS>
+              <connect nodeField='radius' protoField='radius'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    if (radius < 0)
+   {
+      Browser.print ('[Circle2D] Warning:  invalid value, radius=' + value + ' must instead be >= 0');
+   }
+
+
+   numOfPoints = 100;
+   differAng = 2*Math.PI/numOfPoints;
+
+   for ( i=0 ; i<=numOfPoints ; i++)
+   {
+	circSet3d[i] = new SFVec3f ( radius*Math.cos(i*differAng), radius*Math.sin(i*differAng), 0.0 );
+        circIndexSet3d[i] = i;
+   }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='circSet3d' fromNode='Circ2dToLineSet3d' toField='point' toNode='Circ3DPoints'/>
+          <ROUTE fromField='circIndexSet3d' fromNode='Circ2dToLineSet3d' toField='set_coordIndex' toNode='Circ3DPointsIndex'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare name='Disk2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='innerRadius' type='SFFloat' value='0'/>
+        <field accessType='initializeOnly' name='outerRadius' type='SFFloat' value='1'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet DEF='DiskPointsIndex'>
+          <Coordinate DEF='Disk3DPoints'/>
+        </IndexedFaceSet>
+        <Group>
+          <Script DEF='Disk2dToFaceSet3d'>
+            <field accessType='initializeOnly' name='innerRadius' type='SFFloat'/>
+            <field accessType='initializeOnly' name='outerRadius' type='SFFloat'/>
+            <field accessType='outputOnly' name='diskSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='diskIndexSet3d' type='MFInt32'/>
+            <IS>
+              <connect nodeField='innerRadius' protoField='innerRadius'/>
+              <connect nodeField='outerRadius' protoField='outerRadius'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   if (innerRadius < 0)
+   {
+      Browser.print ('[Disk2D] Warning:  invalid value, innerRadius=' + value + ' must instead be >= 0');
+   }
+
+   if (outerRadius < 0)
+   {
+      Browser.print ('[Disk2D] Warning:  invalid value, outerRadius=' + value + ' must instead be >= 0');
+   }
+
+
+
+   numOfPoints    = 100.0;
+   diskSet3d      = new MFVec3f();
+   diskIndexSet3d = new MFInt32();
+   differAng = 2 * Math.PI/numOfPoints;
+
+
+   for ( i=0 ; i<2*numOfPoints ; i++)
+   {
+        if ( i<numOfPoints)
+	     diskSet3d[i] = new SFVec3f ( innerRadius*Math.cos(i*differAng), innerRadius*Math.sin(i*differAng), 0.0 );
+        else
+             diskSet3d[i] = new SFVec3f ( outerRadius*Math.cos((i-numOfPoints-1.0)*differAng), outerRadius*Math.sin((i-numOfPoints-1.0)*differAng), 0.0 );
+   }
+
+
+   k=0;
+   for (i=0 ; i<numOfPoints ; i++)
+   {
+        diskIndexSet3d[k]   = i;
+        diskIndexSet3d[k+1] = i + numOfPoints;
+        diskIndexSet3d[k+2] = i + numOfPoints + 1;
+        diskIndexSet3d[k+3]   = i;
+        diskIndexSet3d[k+4] = -1;
+        diskIndexSet3d[k+5] = i+1;
+        diskIndexSet3d[k+6] = i ;
+        diskIndexSet3d[k+7] = i + numOfPoints +1;
+        diskIndexSet3d[k+8] = i +1;
+        diskIndexSet3d[k+9] = -1;
+
+        if (i == numOfPoints-1)
+        {
+        diskIndexSet3d[k]   = i;
+        diskIndexSet3d[k+1] = i + numOfPoints;
+        diskIndexSet3d[k+2] = numOfPoints;
+        diskIndexSet3d[k+3]   = i;
+        diskIndexSet3d[k+4] = -1;
+        diskIndexSet3d[k+5] = 0;
+        diskIndexSet3d[k+6] = i;
+        diskIndexSet3d[k+7] = numOfPoints;
+        diskIndexSet3d[k+8] = 0;
+        diskIndexSet3d[k+9] = -1;
+        }
+   k=k+10;
+   }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='diskSet3d' fromNode='Disk2dToFaceSet3d' toField='point' toNode='Disk3DPoints'/>
+          <ROUTE fromField='diskIndexSet3d' fromNode='Disk2dToFaceSet3d' toField='set_coordIndex' toNode='DiskPointsIndex'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare name='Polyline2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='lineSegments' type='MFVec2f'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedLineSet DEF='LinesSegmentsIndexPoints'>
+          <Coordinate DEF='LineSegments3DPoints'/>
+        </IndexedLineSet>
+        <Group>
+          <Script DEF='LineSegments2dToLineSet3d'>
+            <field accessType='initializeOnly' name='lineSegments' type='MFVec2f'/>
+            <field accessType='outputOnly' name='lineSegments3D' type='MFVec3f'/>
+            <field accessType='outputOnly' name='lineSegmentsIndex' type='MFInt32'/>
+            <IS>
+              <connect nodeField='lineSegments' protoField='lineSegments'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   for ( i=0 ; i<lineSegments.length ; i++)
+   {
+          lineSegments3D[i] = new SFVec3f ( lineSegments[i].x, lineSegments[i].y, 0.0 );
+          lineSegmentsIndex[i] = i;
+   }
+
+     lineSegmentsIndex[i] = -1;
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='lineSegments3D' fromNode='LineSegments2dToLineSet3d' toField='point' toNode='LineSegments3DPoints'/>
+          <ROUTE fromField='lineSegmentsIndex' fromNode='LineSegments2dToLineSet3d' toField='set_coordIndex' toNode='LinesSegmentsIndexPoints'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare name='Polypoint2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='point' type='MFVec2f'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <PointSet>
+          <Coordinate DEF='Points3D'/>
+        </PointSet>
+        <Group>
+          <Script DEF='Points2dToLineSet3d'>
+            <field accessType='initializeOnly' name='point' type='MFVec2f'/>
+            <field accessType='outputOnly' name='points3D' type='MFVec3f'/>
+            <IS>
+              <connect nodeField='point' protoField='point'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+
+   for ( i=0 ; i<point.length ; i++)
+   {
+          points3D[i] = new SFVec3f ( point[i].x, point[i].y, 0.0 );
+   }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='points3D' fromNode='Points2dToLineSet3d' toField='point' toNode='Points3D'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare appinfo='Default filled matching default FillProperties filled=true.' name='Rectangle2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='size' type='SFVec2f' value='2 2'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet coordIndex='0 1 2 0 -1 2 3 0 2' solid='false'>
+          <Coordinate DEF='RectanglePoints'/>
+        </IndexedFaceSet>
+        <Group>
+          <Script DEF='Rect2dToFaceSet3d'>
+            <field accessType='initializeOnly' name='size' type='SFVec2f'/>
+            <field accessType='outputOnly' name='pointSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='fillNoFillSelection' type='SFInt32'/>
+            <IS>
+              <connect nodeField='size' protoField='size'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   xDim = size[0];
+   yDim = size[1];
+
+   pointSet3d[0] = new SFVec3f ( (-xDim / 2.0), (yDim / 2.0), 0.0 );
+   pointSet3d[1] = new SFVec3f ( (-xDim / 2.0), (-yDim / 2.0), 0.0 );
+   pointSet3d[2] = new SFVec3f ( (xDim / 2.0), (-yDim / 2.0), 0.0 );
+   pointSet3d[3] = new SFVec3f ( (xDim / 2.0), (yDim / 2.0), 0.0 );
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='pointSet3d' fromNode='Rect2dToFaceSet3d' toField='point' toNode='RectanglePoints'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- Rectangle2DUnfilled also provided since FillProperties not available in VRML 97 -->
+    <ProtoDeclare name='Rectangle2DUnfilled'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='size' type='SFVec2f' value='2 2'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedLineSet coordIndex='0 1 2 3 0'>
+          <Coordinate DEF='RectanglePointsLine'/>
+        </IndexedLineSet>
+        <Group>
+          <Script DEF='Rect2dToLineSet3d'>
+            <field accessType='initializeOnly' name='size' type='SFVec2f'/>
+            <field accessType='outputOnly' name='pointSet3d' type='MFVec3f'/>
+            <field accessType='outputOnly' name='fillNoFillSelection' type='SFInt32'/>
+            <IS>
+              <connect nodeField='size' protoField='size'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   xDim = size[0];
+   yDim = size[1];
+
+   pointSet3d[0] = new SFVec3f ( (-xDim / 2.0), (yDim / 2.0), 0.0 );
+   pointSet3d[1] = new SFVec3f ( (-xDim / 2.0), (-yDim / 2.0), 0.0 );
+   pointSet3d[2] = new SFVec3f ( (xDim / 2.0), (-yDim / 2.0), 0.0 );
+   pointSet3d[3] = new SFVec3f ( (xDim / 2.0), (yDim / 2.0), 0.0 );
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='pointSet3d' fromNode='Rect2dToLineSet3d' toField='point' toNode='RectanglePointsLine'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <ProtoDeclare name='TriangleSet2D'>
+      <ProtoInterface>
+        <field accessType='initializeOnly' name='vertices' type='MFVec2f'/>
+        <field accessType='initializeOnly' name='solid' type='SFBool' value='false'/>
+        <field accessType='inputOutput' appinfo='Metadata node only' name='metadata' type='SFNode'>
+          <!-- default NULL -->
+        </field>
+      </ProtoInterface>
+      <ProtoBody>
+        <IndexedFaceSet DEF='TriangleSetIndexPoints' solid='false'>
+          <Coordinate DEF='TriangleSet3DPoints'/>
+        </IndexedFaceSet>
+        <Group>
+          <Script DEF='TriangleSet2dToLineSet3d'>
+            <field accessType='initializeOnly' name='vertices' type='MFVec2f'/>
+            <field accessType='outputOnly' name='triangleSet3D' type='MFVec3f'/>
+            <field accessType='outputOnly' name='triangleSetIndex' type='MFInt32'/>
+            <IS>
+              <connect nodeField='vertices' protoField='vertices'/>
+            </IS>
+            <![CDATA[
+ecmascript:
+
+function initialize()
+{
+   numbOfTriangles = Math.floor(vertices.length/3);
+
+   for ( i=0 ; i<3*numbOfTriangles ; i++)
+   {
+          triangleSet3D[i] = new SFVec3f ( vertices[i].x, vertices[i].y, 0.0 );
+   }
+
+   k=0;
+   for (i=0; i<numbOfTriangles; i++)
+   {
+        triangleSetIndex[k] = k - i ;
+        triangleSetIndex[k+1] = k - i + 1 ;
+        triangleSetIndex[k+2] = k - i + 2 ;
+        triangleSetIndex[k+3] = -1 ;
+
+        k=k+4;
+    }
+
+} // initialize
+]]>
+          </Script>
+          <ROUTE fromField='triangleSet3D' fromNode='TriangleSet2dToLineSet3d' toField='point' toNode='TriangleSet3DPoints'/>
+          <ROUTE fromField='triangleSetIndex' fromNode='TriangleSet2dToLineSet3d' toField='set_coordIndex' toNode='TriangleSetIndexPoints'/>
+        </Group>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <Background groundColor='0.25 0.25 0.25' skyColor='0.25 0.25 0.25'/>
+    <Anchor DEF='LinkToExamples' description='link to examples' url='"Geometry2dComponentExternProtos.x3d" "https://www.web3d.org/x3d/content/examples/Basic/development/Geometry2dComponentExternProtos.x3d" "Geometry2dComponentExamples.wrl" "https://www.web3d.org/x3d/content/examples/Basic/development/Geometry2dComponentExamples.wrl"'>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0.8 0.6 0.2'/>
+        </Appearance>
+        <Text string='"Geometry2dComponentPrototypes" "is a developmental file." "Click this text to view" "Geometry2dComponentExamples"'>
+          <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.75'/>
+        </Text>
+      </Shape>
+    </Anchor>
+  </Scene>
+</X3D>

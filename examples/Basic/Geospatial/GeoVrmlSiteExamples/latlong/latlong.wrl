@@ -1,0 +1,182 @@
+#VRML V2.0 utf8
+
+# London:   latitude 51.5122, longitude -0.065
+# New York: latitude 40.6698, longitude -73.943849
+# Paris:    latitude 48.865,  longitude 2.35
+
+EXTERNPROTO GeoPositionInterpolator [
+  field        SFNode   geoOrigin
+  field        MFString geoSystem
+  field        MFFloat  key
+  field        MFString keyValue
+  eventIn      SFFloat  set_fraction
+  eventOut     SFVec3f  value_changed
+  eventOut     SFString geovalue_changed
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoPositionInterpolator.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoPositionInterpolator.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoPositionInterpolator.wrl"
+]
+
+EXTERNPROTO GeoLocation [
+  field SFNode   geoOrigin
+  field MFString geoSystem
+  field SFString geoCoords
+  field MFNode   children
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoLocation.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoLocation.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoLocation.wrl"
+]
+
+EXTERNPROTO GeoElevationGrid [
+  field        SFNode   geoOrigin
+  field        MFString geoSystem
+  field        SFString geoGridOrigin
+  field        SFInt32  xDimension
+  field        SFString xSpacing
+  field        SFInt32  zDimension
+  field        SFString zSpacing
+  field        MFFloat  height
+  exposedField SFNode   color
+  exposedField SFNode   texCoord
+  exposedField SFNode   normal
+  field        SFBool   normalPerVertex
+  field        SFBool   ccw
+  field        SFBool   colorPerVertex
+  field        SFFloat  creaseAngle
+  field        SFBool   solid
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoElevationGrid.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoElevationGrid.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoElevationGrid.wrl"
+]
+
+EXTERNPROTO GeoViewpoint [
+  field        SFNode     geoOrigin
+  field        MFString   geoSystem
+  field        SFString   position
+  field        SFRotation orientation
+  field        SFString   description
+  exposedField SFFloat    fieldOfView
+  exposedField SFBool     jump
+  exposedField MFString   navType
+  eventIn      SFBool     set_bind
+  eventIn      SFString   set_position
+  eventOut     SFTime     bindTime
+  eventOut     SFBool     isBound
+] [
+ "urn:web3d:geovrml:1.0/protos/GeoViewpoint.wrl"
+ "file:///C|/Program%20Files/GeoVRML/1.0/protos/GeoViewpoint.wrl"
+ "http://www.geovrml.org/1.0/protos/GeoViewpoint.wrl"
+]
+
+Group {
+  children [
+
+    GeoViewpoint {
+       geoSystem [ "GDC" ]
+       position "45 -20 10000000"
+       orientation 1 0 0 -1.57
+       description "Initial GeoViewpoint"
+    }
+
+    Shape {
+       appearance Appearance {
+	  material Material { diffuseColor 0.8 1.0 0.3 }
+	  texture ImageTexture { url "earth.gif" }
+       }
+       geometry GeoElevationGrid {
+	  geoSystem [ "GDC" ]
+	  geoGridOrigin "-90 -180 0"
+	  xDimension 21
+	  zDimension 21
+	  xSpacing "18"
+	  zSpacing "9"
+	  height [
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 ]
+       }
+    }
+    
+    DEF PI GeoPositionInterpolator {
+      geoSystem "GDC"
+      key [ 0.0  0.1  0.55  1.0 ]
+      keyValue [ 
+	"51.5122 -0.065     0",       # London
+        "48.865   2.35      0",       # Paris
+	"40.6698 -73.943849 0",       # New York
+	"51.5122 -0.065     0",       # Back to London
+      ]
+    }
+    DEF T Transform {
+      children [
+	 Shape {
+	    appearance Appearance { material Material { diffuseColor 1 0 0 } }
+	    geometry Sphere { radius 100000 }
+	 }
+	 Billboard {
+	    axisOfRotation 0 0 0
+	    children Transform {
+	       translation 0 0 3000000
+	       children [
+		  Shape {
+		     appearance Appearance {
+			material Material { diffuseColor 1 1 1 }
+		     }
+		     geometry DEF TXT Text {
+			string "Hello World"
+			fontStyle FontStyle { size 300000.0 }
+		     }
+		  }
+	       ]
+	    }
+	 }
+      ]
+    }
+    DEF TS TimeSensor { 
+       cycleInterval 8.0
+       loop TRUE
+    }
+
+    Background { skyColor 0.3 0.5 0.8 groundColor 0.3 0.5 0.8 }
+    NavigationInfo { type [ "EXAMINE" "ANY" ] }
+
+  ]
+}
+
+DEF SFTOMF Script {
+   eventIn  SFString set_value
+   eventOut MFString value_changed
+   url "javascript: function set_value( value ) { 
+           var s = value.split(' ',3);
+           value_changed = new MFString( 'Lat: ' + s[0] + ' deg',
+                                         'Long: ' + s[1] + ' deg' );
+        }"
+}
+
+ROUTE TS.fraction_changed TO PI.set_fraction
+ROUTE PI.value_changed TO T.translation
+ROUTE PI.geovalue_changed TO SFTOMF.set_value
+ROUTE SFTOMF.value_changed TO TXT.string

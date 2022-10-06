@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure30_2ScriptBackgroundSelect.x3d' name='title'/>
+    <meta content='Figure 30.2, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch30/30fig02.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='2 September 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Click on a geometric Shape to change the scene Background. A Script node controls the state changes.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter30Scripts/Figure30_2ScriptBackgroundSelect.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure30_2ScriptBackgroundSelect.x3d'/>
+    <Viewpoint description='Background select' orientation='1 0 0 -0.2' position='0 2 10'/>
+    <!-- Background nodes are usually best placed at the top of the scene since they have global effect and are bindable nodes. -->
+    <!-- Bindable Backgrounds (cyan, red, blue) -->
+    <Background DEF='Default'/>
+    <Background DEF='BackgroundCyan-ish' groundAngle='1.309 1.570796' groundColor='0.1 0.1 0 0.4 0.25 0.2 0.6 0.6 0.6' skyAngle='1.309 1.571' skyColor='0 0.2 0.7 0.0 0.5 1 1 1 1'/>
+    <Background DEF='BackgroundReddish' groundAngle='1.309 1.570796' groundColor='0.1 0.1 0 0.5 0.25 0.2 0.6 0.6 0.2' skyAngle='1.309 1.571' skyColor='1 0 0 1 0.4 0 1 1 0'/>
+    <Background DEF='BackgroundBluish' groundAngle='1.309 1.570796' groundColor='0 0 0.1 0 0.1 0.3 0.3 0.3 0.6' skyAngle='1.309 1.571' skyColor='1 0 0.8 0.5 0 0.8 0 0 0.8'/>
+    <Group>
+      <Transform translation='-3 0 0'>
+        <Shape>
+          <Box/>
+          <Appearance>
+            <Material diffuseColor='0 0.5 0.8'/>
+          </Appearance>
+        </Shape>
+        <TouchSensor DEF='SensorButton1' description='Cyan background'/>
+      </Transform>
+      <Script DEF='Filter1'>
+        <field accessType='inputOnly' appinfo='filter input value' name='set_boolean' type='SFBool'/>
+        <field accessType='outputOnly' appinfo='activated provides a persistent binding value otherwise isActive events will toggle Background binding on/off.' name='activated' type='SFBool'/>
+        <field accessType='initializeOnly' appinfo='count is only used locally so it is declared as an interface for persistence' name='count' type='SFInt32' value='1'/>
+        <![CDATA[
+ecmascript:
+
+function initialize () {
+  Browser.print (' '); // skip line
+  Browser.print ('Click shapes to select a background...');
+  Browser.print (' '); // skip line
+}
+
+// setting the value of an eventOut variable also sends it as an event
+
+function set_boolean ( value, eventTime ) {
+  // only trigger on true values so that Background stays bound
+  if ( value == true ) {  
+	activated = value;
+	Browser.print ('Cyan background ' + count);
+  }
+  else count++;  // received isActive value = false
+}
+]]>
+      </Script>
+      <ROUTE fromField='isActive' fromNode='SensorButton1' toField='set_boolean' toNode='Filter1'/>
+      <ROUTE fromField='activated' fromNode='Filter1' toField='set_bind' toNode='BackgroundCyan-ish'/>
+      <Group>
+        <Shape>
+          <Sphere/>
+          <Appearance>
+            <Material diffuseColor='1 0.3 0.3'/>
+          </Appearance>
+        </Shape>
+        <TouchSensor DEF='SensorButton2' description='Red background'/>
+      </Group>
+      <Script DEF='Filter2'>
+        <field accessType='inputOnly' appinfo='filter input value' name='set_boolean' type='SFBool'/>
+        <field accessType='outputOnly' appinfo='activated provides a persistent binding value otherwise isActive events will toggle Background binding on/off.' name='activated' type='SFBool'/>
+        <field accessType='initializeOnly' appinfo='count is only used locally so it is declared as an interface for persistence' name='count' type='SFInt32' value='1'/>
+        <![CDATA[
+ecmascript:
+
+// setting the value of an eventOut variable also sends it as an event
+
+function set_boolean ( value, eventTime ) {
+  // only trigger on true values so that Background stays bound
+  if ( value == true ) {
+	activated = value;
+	Browser.print ('Red background ' + count);
+  }
+  else count++;  // received isActive value = false
+}
+]]>
+      </Script>
+      <ROUTE fromField='isActive' fromNode='SensorButton2' toField='set_boolean' toNode='Filter2'/>
+      <ROUTE fromField='activated' fromNode='Filter2' toField='set_bind' toNode='BackgroundReddish'/>
+      <Transform translation='3 0 0'>
+        <Shape>
+          <Cone/>
+          <Appearance>
+            <Material diffuseColor='0.2 0.2 0.8'/>
+          </Appearance>
+        </Shape>
+        <TouchSensor DEF='SensorButton3' description='Blue background'/>
+      </Transform>
+      <Script DEF='Filter3'>
+        <field accessType='inputOnly' appinfo='filter input value' name='set_boolean' type='SFBool'/>
+        <field accessType='outputOnly' appinfo='activated provides a persistent binding value otherwise isActive events will toggle Background binding on/off.' name='activated' type='SFBool'/>
+        <field accessType='initializeOnly' appinfo='count is only used locally so it is declared as an interface for persistence' name='count' type='SFInt32' value='1'/>
+        <![CDATA[
+ecmascript:
+
+// setting the value of an eventOut variable also sends it as an event
+
+function set_boolean ( value, eventTime ) {
+  // only trigger on true values so that Background stays bound
+  if ( value == true ) {
+	activated = value;
+	Browser.print ('Blue background ' + count);
+  }
+  else count++;  // received isActive value = false
+}
+]]>
+      </Script>
+      <ROUTE fromField='isActive' fromNode='SensorButton3' toField='set_boolean' toNode='Filter3'/>
+      <ROUTE fromField='activated' fromNode='Filter3' toField='set_bind' toNode='BackgroundBluish'/>
+      <Transform translation='0 -3 0'>
+        <Shape>
+          <Text string='"Click on a Shape to change a Background," "Open player console to see trace statements."'>
+            <FontStyle justify='"MIDDLE" "MIDDLE"' size='0.6'/>
+          </Text>
+          <Appearance>
+            <Material diffuseColor='0.7 0.7 0.7'/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>

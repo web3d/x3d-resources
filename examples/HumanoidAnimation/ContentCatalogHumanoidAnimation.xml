@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ContentCatalog
+ PUBLIC "http://svn.code.sf.net/p/x3d/code/www.web3d.org/x3d/tools/CreateContentCatalog/ContentCatalog.dtd"
+        "../../../tools/CreateContentCatalog/ContentCatalog.dtd">
+<ContentCatalog creationDate='6/11/2021' helpPage='X3dResources.html' name='HumanoidAnimation'
+   title='Humanoid Animation' toc='index.html'>
+  <meta content='ContentCatalogBuilder' name='generator'/>
+  <Chapter name='Characters' title='Characters'>
+    <Page created='26 January 2015' creator='Kwan-Hee YOO, Don Brutzman and Joe Williams'
+       description='Left foot, using high-fidelity definitions for HAnim version 2.0'
+       modified='8 March 2021' name='HAnimModelFootLeft' subject='X3D HAnim humanoid animation'
+       thumbnail='_thumbnails/HAnimModelFootLeftThumbnail.png' title='HAnim Model Foot Left'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelFootLeft.x3d'
+       warning='TODO will X3D HAnim component add a new level to support LOA-4 functionality?'>
+      <Viewpoint description='[1] HAnimModelFootLeft.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimModelFootLeft.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='26 January 2015' creator='Kwan-Hee YOO, Don Brutzman and Joe Williams'
+       description='Right foot, using high-fidelity definitions for HAnim version 2.0'
+       modified='8 March 2021' name='HAnimModelFootRight' subject='X3D HAnim humanoid animation'
+       thumbnail='_thumbnails/HAnimModelFootRightThumbnail.png' title='HAnim Model Foot Right'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelFootRight.x3d'
+       warning='TODO will X3D HAnim component add a new level to support LOA-4 functionality?'>
+      <Viewpoint description='[2] HAnimModelFootRight.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimModelFootRight.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='26 January 2015' creator='Kwan-Hee YOO, Don Brutzman and Joe Williams'
+       description='Left hand, using high-fidelity definitions for HAnim version 2.0'
+       error='not yet to scale, also relatively flat' modified='14 March 2021' name='HAnimModelHandLeft'
+       subject='X3D HAnim humanoid animation' thumbnail='_thumbnails/HAnimModelHandLeftThumbnail.png'
+       title='HAnim Model Hand Left'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelHandLeft.x3d'
+       warning='TODO will X3D HAnim component add a new level to support LOA-4 functionality?'>
+      <Viewpoint description='[3] HAnimModelHandLeft.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimModelHandLeft.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='26 January 2015' creator='Kwan-Hee YOO, Don Brutzman and Joe Williams'
+       description='Right hand using high-fidelity definitions for HAnim version 2.0'
+       error='not yet to scale, also relatively flat' modified='14 March 2021'
+       name='HAnimModelHandRight' subject='X3D HAnim humanoid animation'
+       thumbnail='_thumbnails/HAnimModelHandRightThumbnail.png' title='HAnim Model Hand Right'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelHandRight.x3d'
+       warning='TODO will X3D HAnim component add a new level to support LOA-4 functionality?'>
+      <Viewpoint description='[4] HAnimModelHandRight.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimModelHandRight.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='8 February 2015' creator='YOO Kwan Hee and Don Brutzman'
+       description='Left and right hands and feet, using high-fidelity definitions for HAnim version 2.0'
+       modified='8 March 2021' name='HAnimModelsHandsFeet' subject='X3D HAnim humanoid animation'
+       thumbnail='_thumbnails/HAnimModelsHandsFeetThumbnail.png' title='HAnim Models Hands Feet'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelsHandsFeet.x3d'
+       warning='TODO will X3D HAnim component add a new level to support LOA-4 functionality?'>
+      <Viewpoint description='[5] HAnimModelsHandsFeet.x3d Hands and feet 10m'
+         fileName='HAnimModelsHandsFeet.x3d._VP_Hands_and_feet_10m.png' found='false'/>
+      <Viewpoint description='[6] HAnimModelsHandsFeet.x3d Hands and feet 1.7m'
+         fileName='HAnimModelsHandsFeet.x3d._VP_Hands_and_feet_1.7m.png' found='false'/>
+      <Viewpoint description='[7] HAnimModelsHandsFeet.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimModelsHandsFeet.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='JinLOA1' thumbnail='_thumbnails/JinLOA1Thumbnail.png'
+       title='Jin LOA 1' translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JinLOA1.x3d'>
+      <Viewpoint description='[8] JinLOA1.x3d JinLOA1' fileName='JinLOA1.x3d._VP_JinLOA1.png'
+         found='false'/>
+      <Viewpoint description='[9] JinLOA1.x3d (default X3D view from 0 0 10)'
+         fileName='JinLOA1.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='12 March 2021' name='JinLOA2' thumbnail='_thumbnails/JinLOA2Thumbnail.png'
+       title='Jin LOA 2' translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JinLOA2.x3d'>
+      <Viewpoint description='[10] JinLOA2.x3d JinLOA2' fileName='JinLOA2.x3d._VP_JinLOA2.png'
+         found='false'/>
+      <Viewpoint description='[11] JinLOA2.x3d (default X3D view from 0 0 10)'
+         fileName='JinLOA2.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='12 March 2021' name='JinLOA3' thumbnail='_thumbnails/JinLOA3Thumbnail.png'
+       title='Jin LOA 3' translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JinLOA3.x3d'>
+      <Viewpoint description='[12] JinLOA3.x3d JinLOA3' fileName='JinLOA3.x3d._VP_JinLOA3.png'
+         found='false'/>
+      <Viewpoint description='[13] JinLOA3.x3d (default X3D view from 0 0 10)'
+         fileName='JinLOA3.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='JinLOA4' thumbnail='_thumbnails/JinLOA4Thumbnail.png'
+       title='Jin LOA 4' translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JinLOA4.x3d'>
+      <Viewpoint description='[14] JinLOA4.x3d JinLOA4' fileName='JinLOA4.x3d._VP_JinLOA4.png'
+         found='false'/>
+      <Viewpoint description='[15] JinLOA4.x3d (default X3D view from 0 0 10)'
+         fileName='JinLOA4.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='9 January 2004' creator='Joe Williams'
+       description='This Joe model is a HAnim version 2 LOA-3 Humanoid with textured skin based on the original HAnim Specification and data from CAESAR models.'
+       modified='5 July 2020' name='JoeKick' thumbnail='_thumbnails/JoeKickThumbnail.png'
+       title='Joe Kick' translator='Roy Walmsley, Don Brutzman, John Carlson'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JoeKick.x3d'>
+      <Viewpoint description='[16] JoeKick.x3d Scene_Inclined View'
+         fileName='JoeKick.x3d._VP_Scene_Inclined_View.png' found='false'/>
+      <Viewpoint description='[17] JoeKick.x3d Scene_Front View'
+         fileName='JoeKick.x3d._VP_Scene_Front_View.png' found='false'/>
+      <Viewpoint description='[18] JoeKick.x3d Scene_Side View'
+         fileName='JoeKick.x3d._VP_Scene_Side_View.png' found='false'/>
+      <Viewpoint description='[19] JoeKick.x3d Scene_Back View'
+         fileName='JoeKick.x3d._VP_Scene_Back_View.png' found='false'/>
+      <Viewpoint description='[20] JoeKick.x3d Scene_Top View'
+         fileName='JoeKick.x3d._VP_Scene_Top_View.png' found='false'/>
+      <Viewpoint description='[21] JoeKick.x3d Joe_HAnim Root HAnimSite Coordinate Axes View'
+         fileName='JoeKick.x3d._VP_Joe_HAnim_Root_HAnimSite_Coordinate_Axes_View.png' found='false'/>
+      <Viewpoint description='[22] JoeKick.x3d Ball View' fileName='JoeKick.x3d._VP_Ball_View.png'
+         found='false'/>
+      <Viewpoint description='[23] JoeKick.x3d (default X3D view from 0 0 10)'
+         fileName='JoeKick.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter01Jin'
+       thumbnail='_thumbnails/KoreanCharacter01JinThumbnail.png' title='Korean Character 01 Jin'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter01Jin.x3d'>
+      <Viewpoint description='[24] KoreanCharacter01Jin.x3d Jin'
+         fileName='KoreanCharacter01Jin.x3d._VP_Jin.png' found='false'/>
+      <Viewpoint description='[25] KoreanCharacter01Jin.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter01Jin.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter02Chul'
+       thumbnail='_thumbnails/KoreanCharacter02ChulThumbnail.png' title='Korean Character 02 Chul'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter02Chul.x3d'>
+      <Viewpoint description='[26] KoreanCharacter02Chul.x3d Chul'
+         fileName='KoreanCharacter02Chul.x3d._VP_Chul.png' found='false'/>
+      <Viewpoint description='[27] KoreanCharacter02Chul.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter02Chul.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter03Hyun'
+       thumbnail='_thumbnails/KoreanCharacter03HyunThumbnail.png' title='Korean Character 03 Hyun'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter03Hyun.x3d'>
+      <Viewpoint description='[28] KoreanCharacter03Hyun.x3d Hyun'
+         fileName='KoreanCharacter03Hyun.x3d._VP_Hyun.png' found='false'/>
+      <Viewpoint description='[29] KoreanCharacter03Hyun.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter03Hyun.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter04Young'
+       thumbnail='_thumbnails/KoreanCharacter04YoungThumbnail.png' title='Korean Character 04 Young'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter04Young.x3d'>
+      <Viewpoint description='[30] KoreanCharacter04Young.x3d Young'
+         fileName='KoreanCharacter04Young.x3d._VP_Young.png' found='false'/>
+      <Viewpoint description='[31] KoreanCharacter04Young.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter04Young.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter05Ju'
+       thumbnail='_thumbnails/KoreanCharacter05JuThumbnail.png' title='Korean Character 05 Ju'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter05Ju.x3d'
+       warning='HAnimJoint and HAnimSegment names upgraded to HAnim2 but graph topology has inconsistencies that do not match loa=1 specification hierarchy'>
+      <Viewpoint description='[32] KoreanCharacter05Ju.x3d Ju'
+         fileName='KoreanCharacter05Ju.x3d._VP_Ju.png' found='false'/>
+      <Viewpoint description='[33] KoreanCharacter05Ju.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter05Ju.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter06Ga'
+       thumbnail='_thumbnails/KoreanCharacter06GaThumbnail.png' title='Korean Character 06 Ga'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter06Ga.x3d'>
+      <Viewpoint description='[34] KoreanCharacter06Ga.x3d Ga'
+         fileName='KoreanCharacter06Ga.x3d._VP_Ga.png' found='false'/>
+      <Viewpoint description='[35] KoreanCharacter06Ga.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter06Ga.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter07No'
+       thumbnail='_thumbnails/KoreanCharacter07NoThumbnail.png' title='Korean Character 07 No'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter07No.x3d'>
+      <Viewpoint description='[36] KoreanCharacter07No.x3d No'
+         fileName='KoreanCharacter07No.x3d._VP_No.png' found='false'/>
+      <Viewpoint description='[37] KoreanCharacter07No.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter07No.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter08Da'
+       thumbnail='_thumbnails/KoreanCharacter08DaThumbnail.png' title='Korean Character 08 Da'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter08Da.x3d'>
+      <Viewpoint description='[38] KoreanCharacter08Da.x3d Da'
+         fileName='KoreanCharacter08Da.x3d._VP_Da.png' found='false'/>
+      <Viewpoint description='[39] KoreanCharacter08Da.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter08Da.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter09Ru'
+       thumbnail='_thumbnails/KoreanCharacter09RuThumbnail.png' title='Korean Character 09 Ru'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter09Ru.x3d'>
+      <Viewpoint description='[40] KoreanCharacter09Ru.x3d Ru'
+         fileName='KoreanCharacter09Ru.x3d._VP_Ru.png' found='false'/>
+      <Viewpoint description='[41] KoreanCharacter09Ru.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter09Ru.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter10Mi'
+       thumbnail='_thumbnails/KoreanCharacter10MiThumbnail.png' title='Korean Character 10 Mi'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter10Mi.x3d'>
+      <Viewpoint description='[42] KoreanCharacter10Mi.x3d Mi'
+         fileName='KoreanCharacter10Mi.x3d._VP_Mi.png' found='false'/>
+      <Viewpoint description='[43] KoreanCharacter10Mi.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter10Mi.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter11Min'
+       thumbnail='_thumbnails/KoreanCharacter11MinThumbnail.png' title='Korean Character 11 Min'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter11Min.x3d'>
+      <Viewpoint description='[44] KoreanCharacter11Min.x3d Min'
+         fileName='KoreanCharacter11Min.x3d._VP_Min.png' found='false'/>
+      <Viewpoint description='[45] KoreanCharacter11Min.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter11Min.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='13 March 2021' name='KoreanCharacter12Sun'
+       thumbnail='_thumbnails/KoreanCharacter12SunThumbnail.png' title='Korean Character 12 Sun'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter12Sun.x3d'>
+      <Viewpoint description='[46] KoreanCharacter12Sun.x3d Sun'
+         fileName='KoreanCharacter12Sun.x3d._VP_Sun.png' found='false'/>
+      <Viewpoint description='[47] KoreanCharacter12Sun.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter12Sun.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Legacy' title='Legacy'>
+    <Page created='8 June 2001' creator='Allen Dutton'
+       description='Articulated human model developed from laser-scan data using X3D native tags, rather than prototypes.'
+       modified='4 July 2020' name='AllenDutton' thumbnail='_thumbnails/AllenDuttonThumbnail.png'
+       title='Allen Dutton' translator='Ozan APAYDIN'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/AllenDutton.x3d'
+       warning='X3D Validator reports numerous warnings are present'>
+      <Viewpoint description='[1] AllenDutton.x3d Inclined View'
+         fileName='AllenDutton.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[2] AllenDutton.x3d Front View'
+         fileName='AllenDutton.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[3] AllenDutton.x3d Side View' fileName='AllenDutton.x3d._VP_Side_View.png'
+         found='false'/>
+      <Viewpoint description='[4] AllenDutton.x3d Top View' fileName='AllenDutton.x3d._VP_Top_View.png'
+         found='false'/>
+      <Viewpoint description='[5] AllenDutton.x3d (default X3D view from 0 0 10)'
+         fileName='AllenDutton.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 March 2001' creator='James Smith - james@vapourtech.com'
+       description='A Seamless VRML Human, demonstrating the HAnim 2001 Specification, animation scripting via an external prototype (ExternProtoDeclare).'
+       modified='7 March 2021' name='BoxMan' subject='BoxMan HAnim 2.0'
+       thumbnail='_thumbnails/BoxManThumbnail.png' title='Box Man'
+       translator='Don Brutzman and Matt Beitler'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/BoxMan.x3d'
+       warning='Skin mesh is split across multiple shapes within a Group, should that be allowed?'>
+      <Viewpoint description='[6] BoxMan.x3d Inclined View' fileName='BoxMan.x3d._VP_Inclined_View.png'
+         found='false'/>
+      <Viewpoint description='[7] BoxMan.x3d Front View' fileName='BoxMan.x3d._VP_Front_View.png'
+         found='false'/>
+      <Viewpoint description='[8] BoxMan.x3d Right-side View'
+         fileName='BoxMan.x3d._VP_Right-side_View.png' found='false'/>
+      <Viewpoint description='[9] BoxMan.x3d Left-side View' fileName='BoxMan.x3d._VP_Left-side_View.png'
+         found='false'/>
+      <Viewpoint description='[10] BoxMan.x3d Top View' fileName='BoxMan.x3d._VP_Top_View.png'
+         found='false'/>
+      <Viewpoint description='[11] BoxMan.x3d (default X3D view from 0 0 10)'
+         fileName='BoxMan.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 March 2001' creator='Joe Williams and James Smith - james@vapourtech.com'
+       description='A Seamless VRML Human, demonstrating the HAnim 2001 Specification, animation panel shows multiple behaviors.'
+       modified='4 July 2020' name='BoxManAnimationPanel' subject='BoxMan HAnim 2.0'
+       thumbnail='_thumbnails/BoxManAnimationPanelThumbnail.png' title='Box Man Animation Panel'
+       translator='Joe Williams and Don Brutzman'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/BoxManAnimationPanel.x3d'>
+      <Viewpoint description='[12] BoxManAnimationPanel.x3d Inclined View'
+         fileName='BoxManAnimationPanel.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[13] BoxManAnimationPanel.x3d Front View'
+         fileName='BoxManAnimationPanel.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[14] BoxManAnimationPanel.x3d Right-side View'
+         fileName='BoxManAnimationPanel.x3d._VP_Right-side_View.png' found='false'/>
+      <Viewpoint description='[15] BoxManAnimationPanel.x3d Left-side View'
+         fileName='BoxManAnimationPanel.x3d._VP_Left-side_View.png' found='false'/>
+      <Viewpoint description='[16] BoxManAnimationPanel.x3d Top View'
+         fileName='BoxManAnimationPanel.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[17] BoxManAnimationPanel.x3d (default X3D view from 0 0 10)'
+         fileName='BoxManAnimationPanel.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 January 2001' creator='Etsuko Lippi'
+       description='Bubble animation used by Nancy Diving example.' modified='23 May 2020'
+       name='Bubbles' thumbnail='_thumbnails/BubblesThumbnail.png' title='Bubbles'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/Bubbles.x3d'>
+      <Viewpoint description='[18] Bubbles.x3d (default X3D view from 0 0 10)'
+         fileName='Bubbles.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='12 November 2001' creator='Matthew T. Beitler'
+       description='HAnim skeletal structure for Level of Action (LOA) zero, with one diamond at the base node for the structure. HumanoidRoot only, so this is the minimum legal HAnim humanoid.'
+       modified='9 March 2021' name='DiamondManLOA_0'
+       thumbnail='_thumbnails/DiamondManLOA_0Thumbnail.png' title='Diamond Man LOA 0'
+       translator='Joel S. Pawloski'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Templates/DiamondManLOA_0.x3d'>
+      <Viewpoint description='[19] DiamondManLOA_0.x3d Diamond Man, LOA 0'
+         fileName='DiamondManLOA_0.x3d._VP_Diamond_Man,_LOA_0.png' found='false'/>
+      <Viewpoint description='[20] DiamondManLOA_0.x3d Inclined View'
+         fileName='DiamondManLOA_0.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[21] DiamondManLOA_0.x3d Front View'
+         fileName='DiamondManLOA_0.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[22] DiamondManLOA_0.x3d Side View'
+         fileName='DiamondManLOA_0.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[23] DiamondManLOA_0.x3d Top View'
+         fileName='DiamondManLOA_0.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[24] DiamondManLOA_0.x3d (default X3D view from 0 0 10)'
+         fileName='DiamondManLOA_0.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='12 November 2001' creator='Matthew T. Beitler'
+       description='HAnim skeletal structure for Level of Action (LOA) one, with diamonds at the Joint centers. LOA-1 is typical low-end real-time 3D hierarchy.'
+       modified='13 March 2021' name='DiamondManLOA_1'
+       thumbnail='_thumbnails/DiamondManLOA_1Thumbnail.png' title='Diamond Man LOA 1'
+       translator='Joel S. Pawloski'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Templates/DiamondManLOA_1.x3d'
+       warning='Still needs comments on CAESAR feature points inserted'>
+      <Viewpoint description='[25] DiamondManLOA_1.x3d Diamond Man, LOA 1'
+         fileName='DiamondManLOA_1.x3d._VP_Diamond_Man,_LOA_1.png' found='false'/>
+      <Viewpoint description='[26] DiamondManLOA_1.x3d Inclined View'
+         fileName='DiamondManLOA_1.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[27] DiamondManLOA_1.x3d Front View'
+         fileName='DiamondManLOA_1.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[28] DiamondManLOA_1.x3d Side View'
+         fileName='DiamondManLOA_1.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[29] DiamondManLOA_1.x3d Top View'
+         fileName='DiamondManLOA_1.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[30] DiamondManLOA_1.x3d (default X3D view from 0 0 10)'
+         fileName='DiamondManLOA_1.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='12 November 2001' creator='Matthew T. Beitler'
+       description='hanim skeletal structure at level of articulation two, one diamond at the base node for the structure'
+       modified='13 March 2021' name='DiamondManLOA_2' subject='human animation, x3d, vrml, animation'
+       thumbnail='_thumbnails/DiamondManLOA_2Thumbnail.png' title='Diamond Man LOA 2'
+       translator='Joel S. Pawloski'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Templates/DiamondManLOA_2.x3d'>
+      <Viewpoint description='[31] DiamondManLOA_2.x3d Diamond Man, LOA 2'
+         fileName='DiamondManLOA_2.x3d._VP_Diamond_Man,_LOA_2.png' found='false'/>
+      <Viewpoint description='[32] DiamondManLOA_2.x3d Front View'
+         fileName='DiamondManLOA_2.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[33] DiamondManLOA_2.x3d Side View'
+         fileName='DiamondManLOA_2.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[34] DiamondManLOA_2.x3d Top View'
+         fileName='DiamondManLOA_2.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[35] DiamondManLOA_2.x3d Humanoid Root View'
+         fileName='DiamondManLOA_2.x3d._VP_Humanoid_Root_View.png' found='false'/>
+      <Viewpoint description='[36] DiamondManLOA_2.x3d Inclined View'
+         fileName='DiamondManLOA_2.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[37] DiamondManLOA_2.x3d (default X3D view from 0 0 10)'
+         fileName='DiamondManLOA_2.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage and visibility of all specified HAnim constructs, plus motion animations. Geometry visualizations are derived from HAnim1SpecificationLOA3Invisible.x3d visualization report. Resusable exemplar animations also added via heads-up display (HUD) interface to confirm proper parent-child relationships.'
+       modified='19 February 2021' name='HAnim1SpecificationLOA3Animation'
+       title='HAnim 1 Specification LOA 3 Animation' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/HAnim1SpecificationLOA3Animation.x3d'>
+      <Viewpoint description='[38] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[39] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[40] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[41] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front_Face.png' found='false'/>
+      <Viewpoint description='[42] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Right_Side.png' found='false'/>
+      <Viewpoint description='[43] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[44] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[45] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Left_Side.png' found='false'/>
+      <Viewpoint description='[46] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Top'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[47] HAnim1SpecificationLOA3Animation.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[48] HAnim1SpecificationLOA3Animation.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[49] HAnim1SpecificationLOA3Animation.x3d left hand front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[50] HAnim1SpecificationLOA3Animation.x3d right hand front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[51] HAnim1SpecificationLOA3Animation.x3d left inclined'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[52] HAnim1SpecificationLOA3Animation.x3d right inclined'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[53] HAnim1SpecificationLOA3Animation.x3d front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[54] HAnim1SpecificationLOA3Animation.x3d back'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[55] HAnim1SpecificationLOA3Animation.x3d left side'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[56] HAnim1SpecificationLOA3Animation.x3d Top'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[57] HAnim1SpecificationLOA3Animation.x3d front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[58] HAnim1SpecificationLOA3Animation.x3d side close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[59] HAnim1SpecificationLOA3Animation.x3d head front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[60] HAnim1SpecificationLOA3Animation.x3d chest front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[61] HAnim1SpecificationLOA3Animation.x3d pelvis front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[62] HAnim1SpecificationLOA3Animation.x3d knees front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[63] HAnim1SpecificationLOA3Animation.x3d feet front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[64] HAnim1SpecificationLOA3Animation.x3d eye level looking forward'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_eye_level_looking_forward.png' found='false'/>
+      <Viewpoint description='[65] HAnim1SpecificationLOA3Animation.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage and visibility of all specified HAnim constructs, also suitable for re-use as an authoring template. Geometry visualizations are derived from HAnim1SpecificationLOA3Invisible.x3d visualization report. Resusable exemplar animations also added via heads-up display (HUD) interface to confirm proper parent-child relationships.'
+       modified='19 February 2021' name='HAnim1SpecificationLOA3Illustrated'
+       title='HAnim 1 Specification LOA 3 Illustrated' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/HAnim1SpecificationLOA3Illustrated.x3d'
+       warning='BS Contact and H3DViewer have polygon-culling problems at close range (possibly related to avatarSize), other players look OK'>
+      <Viewpoint description='[66] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[67] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[68] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[69] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Face.png'
+         found='false'/>
+      <Viewpoint description='[70] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Right_Side.png'
+         found='false'/>
+      <Viewpoint
+         description='[71] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[72] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[73] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Left_Side.png'
+         found='false'/>
+      <Viewpoint description='[74] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Top'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[75] HAnim1SpecificationLOA3Illustrated.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[76] HAnim1SpecificationLOA3Illustrated.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[77] HAnim1SpecificationLOA3Illustrated.x3d left hand front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[78] HAnim1SpecificationLOA3Illustrated.x3d right hand front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[79] HAnim1SpecificationLOA3Illustrated.x3d left inclined'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[80] HAnim1SpecificationLOA3Illustrated.x3d right inclined'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[81] HAnim1SpecificationLOA3Illustrated.x3d front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[82] HAnim1SpecificationLOA3Illustrated.x3d back'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[83] HAnim1SpecificationLOA3Illustrated.x3d left side'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[84] HAnim1SpecificationLOA3Illustrated.x3d Top'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[85] HAnim1SpecificationLOA3Illustrated.x3d front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[86] HAnim1SpecificationLOA3Illustrated.x3d side close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[87] HAnim1SpecificationLOA3Illustrated.x3d head front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[88] HAnim1SpecificationLOA3Illustrated.x3d chest front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[89] HAnim1SpecificationLOA3Illustrated.x3d pelvis front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[90] HAnim1SpecificationLOA3Illustrated.x3d knees front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[91] HAnim1SpecificationLOA3Illustrated.x3d feet front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[92] HAnim1SpecificationLOA3Illustrated.x3d eye level looking forward'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_eye_level_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[93] HAnim1SpecificationLOA3Illustrated.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage (and no illustrated visibility) of all specified HAnim constructs, also suitable for re-use as an authoring template.'
+       modified='19 February 2021' name='HAnim1SpecificationLOA3Invisible'
+       title='HAnim 1 Specification LOA 3 Invisible' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/HAnim1SpecificationLOA3Invisible.x3d'>
+      <Viewpoint description='[94] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[95] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[96] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[97] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Face.png' found='false'/>
+      <Viewpoint description='[98] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Right_Side.png' found='false'/>
+      <Viewpoint description='[99] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[100] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[101] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Left_Side.png' found='false'/>
+      <Viewpoint description='[102] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Top'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[103] HAnim1SpecificationLOA3Invisible.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[104] HAnim1SpecificationLOA3Invisible.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[105] HAnim1SpecificationLOA3Invisible.x3d left hand front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[106] HAnim1SpecificationLOA3Invisible.x3d right hand front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[107] HAnim1SpecificationLOA3Invisible.x3d left inclined'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[108] HAnim1SpecificationLOA3Invisible.x3d right inclined'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[109] HAnim1SpecificationLOA3Invisible.x3d front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[110] HAnim1SpecificationLOA3Invisible.x3d back'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[111] HAnim1SpecificationLOA3Invisible.x3d left side'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[112] HAnim1SpecificationLOA3Invisible.x3d Top'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[113] HAnim1SpecificationLOA3Invisible.x3d front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[114] HAnim1SpecificationLOA3Invisible.x3d side close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[115] HAnim1SpecificationLOA3Invisible.x3d head front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[116] HAnim1SpecificationLOA3Invisible.x3d chest front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[117] HAnim1SpecificationLOA3Invisible.x3d pelvis front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[118] HAnim1SpecificationLOA3Invisible.x3d knees front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[119] HAnim1SpecificationLOA3Invisible.x3d feet front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[120] HAnim1SpecificationLOA3Invisible.x3d eye level looking forward'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_eye_level_looking_forward.png' found='false'/>
+      <Viewpoint description='[121] HAnim1SpecificationLOA3Invisible.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='15 January 2004' creator='Joe D Williams'
+       description='This Joe model is a V1 LOA3 Humanoid with textured skin composed mainly of V1 Site locations.'
+       modified='20 September 2020' name='JoeSkinTexcoordDisplacerKick'
+       thumbnail='_thumbnails/JoeSkinTexcoordDisplacerKickThumbnail.png'
+       title='Joe Skin Texcoord Displacer Kick' translator='Roy Walmsley and Don Brutzman'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/JoeSkinTexcoordDisplacerKick.x3d'>
+      <Viewpoint description='[122] JoeSkinTexcoordDisplacerKick.x3d Scene_Inclined View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Scene_Inclined_View.png' found='false'/>
+      <Viewpoint description='[123] JoeSkinTexcoordDisplacerKick.x3d Scene Front View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Scene_Front_View.png' found='false'/>
+      <Viewpoint description='[124] JoeSkinTexcoordDisplacerKick.x3d Scene Side View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Scene_Side_View.png' found='false'/>
+      <Viewpoint description='[125] JoeSkinTexcoordDisplacerKick.x3d Scene Back View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Scene_Back_View.png' found='false'/>
+      <Viewpoint description='[126] JoeSkinTexcoordDisplacerKick.x3d Scene Top View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Scene_Top_View.png' found='false'/>
+      <Viewpoint
+         description='[127] JoeSkinTexcoordDisplacerKick.x3d Joe_HAnim Root HAnimSite Coordinate Axes View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Joe_HAnim_Root_HAnimSite_Coordinate_Axes_View.png'
+         found='false'/>
+      <Viewpoint description='[128] JoeSkinTexcoordDisplacerKick.x3d Ball View'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Ball_View.png' found='false'/>
+      <Viewpoint description='[129] JoeSkinTexcoordDisplacerKick.x3d (default X3D view from 0 0 10)'
+         fileName='JoeSkinTexcoordDisplacerKick.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter01Jin'
+       thumbnail='_thumbnails/KoreanCharacter01JinThumbnail.png' title='Korean Character 01 Jin'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter01Jin.x3d'>
+      <Viewpoint description='[130] KoreanCharacter01Jin.x3d Jin'
+         fileName='KoreanCharacter01Jin.x3d._VP_Jin.png' found='false'/>
+      <Viewpoint description='[131] KoreanCharacter01Jin.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter01Jin.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter02Chul'
+       thumbnail='_thumbnails/KoreanCharacter02ChulThumbnail.png' title='Korean Character 02 Chul'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter02Chul.x3d'>
+      <Viewpoint description='[132] KoreanCharacter02Chul.x3d Chul'
+         fileName='KoreanCharacter02Chul.x3d._VP_Chul.png' found='false'/>
+      <Viewpoint description='[133] KoreanCharacter02Chul.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter02Chul.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter03Hyun'
+       thumbnail='_thumbnails/KoreanCharacter03HyunThumbnail.png' title='Korean Character 03 Hyun'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter03Hyun.x3d'>
+      <Viewpoint description='[134] KoreanCharacter03Hyun.x3d Hyun'
+         fileName='KoreanCharacter03Hyun.x3d._VP_Hyun.png' found='false'/>
+      <Viewpoint description='[135] KoreanCharacter03Hyun.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter03Hyun.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter04Young'
+       thumbnail='_thumbnails/KoreanCharacter04YoungThumbnail.png' title='Korean Character 04 Young'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter04Young.x3d'>
+      <Viewpoint description='[136] KoreanCharacter04Young.x3d Young'
+         fileName='KoreanCharacter04Young.x3d._VP_Young.png' found='false'/>
+      <Viewpoint description='[137] KoreanCharacter04Young.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter04Young.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter05Ju'
+       thumbnail='_thumbnails/KoreanCharacter05JuThumbnail.png' title='Korean Character 05 Ju'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter05Ju.x3d'>
+      <Viewpoint description='[138] KoreanCharacter05Ju.x3d Ju'
+         fileName='KoreanCharacter05Ju.x3d._VP_Ju.png' found='false'/>
+      <Viewpoint description='[139] KoreanCharacter05Ju.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter05Ju.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter06Ga'
+       thumbnail='_thumbnails/KoreanCharacter06GaThumbnail.png' title='Korean Character 06 Ga'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter06Ga.x3d'>
+      <Viewpoint description='[140] KoreanCharacter06Ga.x3d Ga'
+         fileName='KoreanCharacter06Ga.x3d._VP_Ga.png' found='false'/>
+      <Viewpoint description='[141] KoreanCharacter06Ga.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter06Ga.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter07No'
+       thumbnail='_thumbnails/KoreanCharacter07NoThumbnail.png' title='Korean Character 07 No'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter07No.x3d'>
+      <Viewpoint description='[142] KoreanCharacter07No.x3d No'
+         fileName='KoreanCharacter07No.x3d._VP_No.png' found='false'/>
+      <Viewpoint description='[143] KoreanCharacter07No.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter07No.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter08Da'
+       thumbnail='_thumbnails/KoreanCharacter08DaThumbnail.png' title='Korean Character 08 Da'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter08Da.x3d'>
+      <Viewpoint description='[144] KoreanCharacter08Da.x3d Da'
+         fileName='KoreanCharacter08Da.x3d._VP_Da.png' found='false'/>
+      <Viewpoint description='[145] KoreanCharacter08Da.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter08Da.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter09Ru'
+       thumbnail='_thumbnails/KoreanCharacter09RuThumbnail.png' title='Korean Character 09 Ru'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter09Ru.x3d'>
+      <Viewpoint description='[146] KoreanCharacter09Ru.x3d Ru'
+         fileName='KoreanCharacter09Ru.x3d._VP_Ru.png' found='false'/>
+      <Viewpoint description='[147] KoreanCharacter09Ru.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter09Ru.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter10Mi'
+       thumbnail='_thumbnails/KoreanCharacter10MiThumbnail.png' title='Korean Character 10 Mi'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter10Mi.x3d'>
+      <Viewpoint description='[148] KoreanCharacter10Mi.x3d Mi'
+         fileName='KoreanCharacter10Mi.x3d._VP_Mi.png' found='false'/>
+      <Viewpoint description='[149] KoreanCharacter10Mi.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter10Mi.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter11Min'
+       thumbnail='_thumbnails/KoreanCharacter11MinThumbnail.png' title='Korean Character 11 Min'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter11Min.x3d'>
+      <Viewpoint description='[150] KoreanCharacter11Min.x3d Min'
+         fileName='KoreanCharacter11Min.x3d._VP_Min.png' found='false'/>
+      <Viewpoint description='[151] KoreanCharacter11Min.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter11Min.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='3 July 2020' name='KoreanCharacter12Sun'
+       thumbnail='_thumbnails/KoreanCharacter12SunThumbnail.png' title='Korean Character 12 Sun'
+       translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/KoreanCharacter12Sun.x3d'>
+      <Viewpoint description='[152] KoreanCharacter12Sun.x3d Sun'
+         fileName='KoreanCharacter12Sun.x3d._VP_Sun.png' found='false'/>
+      <Viewpoint description='[153] KoreanCharacter12Sun.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacter12Sun.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='January 24, 2001' creator='Etsuko Lippi' description='Diving mask and snorkel tube.'
+       modified='23 May 2020' name='MaskAndSnorkel' thumbnail='_thumbnails/MaskAndSnorkelThumbnail.png'
+       title='Mask And Snorkel'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/MaskAndSnorkel.x3d'>
+      <Viewpoint description='[154] MaskAndSnorkel.x3d (default X3D view from 0 0 10)'
+         fileName='MaskAndSnorkel.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='17 December 2001' creator='Etsuko Lippi'
+       description='Nancy having fun scuba diving!' modified='4 July 2020' name='NancyDiving'
+       thumbnail='_thumbnails/NancyDivingThumbnail.png' title='Nancy Diving'
+       translator='Tom Miller and Don Brutzman, NPS'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/NancyDiving.x3d'
+       warning='Viewpoint nodes need to be made child nodes under HAnimHumanoid with containerField=&apos;viewpoints&apos;.'>
+      <Viewpoint description='[155] NancyDiving.x3d Nancy diving, view from right side'
+         fileName='NancyDiving.x3d._VP_Nancy_diving,_view_from_right_side.png' found='false'/>
+      <Viewpoint description='[156] NancyDiving.x3d Nancy diving, view from below'
+         fileName='NancyDiving.x3d._VP_Nancy_diving,_view_from_below.png' found='true'/>
+      <Viewpoint description='[157] NancyDiving.x3d Nancy diving, view from ahead'
+         fileName='NancyDiving.x3d._VP_Nancy_diving,_view_from_ahead.png' found='true'/>
+      <Viewpoint description='[158] NancyDiving.x3d Nancy diving, view from left side'
+         fileName='NancyDiving.x3d._VP_Nancy_diving,_view_from_left_side.png' found='true'/>
+      <Viewpoint description='[159] NancyDiving.x3d Nancy diving view from behind'
+         fileName='NancyDiving.x3d._VP_Nancy_diving_view_from_behind.png' found='true'/>
+      <Viewpoint description='[160] NancyDiving.x3d Nancy diving view from above'
+         fileName='NancyDiving.x3d._VP_Nancy_diving_view_from_above.png' found='true'/>
+      <Viewpoint description='[161] NancyDiving.x3d Nancy diving, view through her goggles'
+         fileName='NancyDiving.x3d._VP_Nancy_diving,_view_through_her_goggles.png' found='true'/>
+      <Viewpoint description='[162] NancyDiving.x3d (default X3D view from 0 0 10)'
+         fileName='NancyDiving.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='9 July 2000' creator='Cindy Ballreich'
+       description='Canonical HAnim 1.1 specification example, using native X3D tags instead of ProtoDeclaration/ExternProtoDeclaration and ProtoInstance.'
+       modified='4 July 2020' name='NancyNativeTags'
+       thumbnail='_thumbnails/NancyNativeTagsThumbnail.png' title='Nancy Native Tags'
+       translator='Tom Miller and Don Brutzman, NPS'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/NancyNativeTags.x3d'>
+      <Viewpoint description='[163] NancyNativeTags.x3d Inclined View'
+         fileName='NancyNativeTags.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[164] NancyNativeTags.x3d Front View'
+         fileName='NancyNativeTags.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[165] NancyNativeTags.x3d Side View'
+         fileName='NancyNativeTags.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[166] NancyNativeTags.x3d Top View'
+         fileName='NancyNativeTags.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[167] NancyNativeTags.x3d (default X3D view from 0 0 10)'
+         fileName='NancyNativeTags.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='4 January 2002' creator='Etsuko Lippi'
+       description='Canonical HAnim 1.1 specification example, using native X3D tags instead of ProtoDeclaration/ExternProtoDeclaration and ProtoInstance.'
+       modified='23 May 2020' name='NancyStandShootRifleM24'
+       thumbnail='_thumbnails/NancyStandShootRifleM24Thumbnail.png' title='Nancy Stand Shoot Rifle M 24'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/NancyStandShootRifleM24.x3d'
+       warning='LOA1_ShootAnimation ought to be moved out as a separate prototype.'>
+      <Viewpoint description='[168] NancyStandShootRifleM24.x3d Nancy Rifle Shooting Position'
+         fileName='NancyStandShootRifleM24.x3d._VP_Nancy_Rifle_Shooting_Position.png' found='false'/>
+      <Viewpoint description='[169] NancyStandShootRifleM24.x3d Nancy Side Viewpoint'
+         fileName='NancyStandShootRifleM24.x3d._VP_Nancy_Side_Viewpoint.png' found='true'/>
+      <Viewpoint description='[170] NancyStandShootRifleM24.x3d Nancy Above Viewpoint'
+         fileName='NancyStandShootRifleM24.x3d._VP_Nancy_Above_Viewpoint.png' found='true'/>
+      <Viewpoint description='[171] NancyStandShootRifleM24.x3d (default X3D view from 0 0 10)'
+         fileName='NancyStandShootRifleM24.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='24 January 2001' creator='Etsuko Lippi'
+       description='Scuba gear used by Nancy Diving example.' modified='23 May 2020' name='ScubaTank'
+       thumbnail='_thumbnails/ScubaTankThumbnail.png' title='Scuba Tank'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/ScubaTank.x3d'>
+      <Viewpoint description='[172] ScubaTank.x3d (default X3D view from 0 0 10)'
+         fileName='ScubaTank.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='MotionAnimation' title='Motion Animation'>
+    <Page created='*enter date of initial version here*' creator='*enter name of original author here*'
+       description='BVH file conversion: *enter description here, short-sentence summaries preferred*'
+       modified='9 June 2021' name='1' title='1'
+       url='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*'>
+      <Viewpoint description='[1] 1.x3d Bvh1 model BVH to X3D conversion, from 8m'
+         fileName='1.x3d._VP_Bvh1_model_BVH_to_X3D_conversion,_from_8m.png' found='false'/>
+      <Viewpoint description='[2] 1.x3d Bvh1 initial motion position'
+         fileName='1.x3d._VP_Bvh1_initial_motion_position.png' found='false'/>
+      <Viewpoint description='[3] 1.x3d Bvh1 final motion position'
+         fileName='1.x3d._VP_Bvh1_final_motion_position.png' found='false'/>
+      <Viewpoint description='[4] 1.x3d Bvh1 front view towards HAnimHumanoid center'
+         fileName='1.x3d._VP_Bvh1_front_view_towards_HAnimHumanoid_center.png' found='false'/>
+      <Viewpoint description='[5] 1.x3d (default X3D view from 0 0 10)'
+         fileName='1.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 January 2016'
+       creator='TODO unknown original creator of file 1.bvh, please advise if known'
+       description='BVH file conversion: test case showing unmodified BVH-to-X3D conversion results using X3D-Edit import to create separate test scene 1.x3d. Correct parsing of all information in input file 1.bvh is confirmed by output file 1.bvh.txt.'
+       modified='10 March 2021' name='BvhConversion1'
+       thumbnail='_thumbnails/BvhConversion1Thumbnail.png' title='Bvh Conversion 1'
+       translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/MotionAnimation/BvhConversion1.x3d'
+       warning='Note this conversion of a legacy model is not HAnim compliant.'>
+      <Viewpoint description='[6] BvhConversion1.x3d Bvh1 model BVH to X3D conversion, from 8m'
+         fileName='BvhConversion1.x3d._VP_Bvh1_model_BVH_to_X3D_conversion,_from_8m.png' found='true'/>
+      <Viewpoint description='[7] BvhConversion1.x3d Bvh1 initial motion position'
+         fileName='BvhConversion1.x3d._VP_Bvh1_initial_motion_position.png' found='true'/>
+      <Viewpoint description='[8] BvhConversion1.x3d Bvh1 final motion position'
+         fileName='BvhConversion1.x3d._VP_Bvh1_final_motion_position.png' found='true'/>
+      <Viewpoint description='[9] BvhConversion1.x3d Bvh1 front view towards HAnimHumanoid center'
+         fileName='BvhConversion1.x3d._VP_Bvh1_front_view_towards_HAnimHumanoid_center.png'
+         found='false'/>
+      <Viewpoint description='[10] BvhConversion1.x3d (default X3D view from 0 0 10)'
+         fileName='BvhConversion1.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 January 2016'
+       creator='TODO unknown original creator of file 1.bvh, please advise if known'
+       description='BVH file conversion: test case showing current BVH-to-X3D conversion results of "invisible" skeleton, with node visualization geometry later applied from X3dToXhtml stylesheet-produced HumanoidRootHAnimHumanoidReport.'
+       modified='20 February 2021' name='BvhConversion1Illustrated'
+       thumbnail='_thumbnails/BvhConversion1IllustratedThumbnail.png'
+       title='Bvh Conversion 1 Illustrated' translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/MotionAnimation/BvhConversion1Illustrated.x3d'
+       warning='under development, TODO fix transcription of HAnimSite nodes. A few further improvements needed in X3dToXhhtml.xslt HAnim report stylesheet'>
+      <Viewpoint
+         description='[11] BvhConversion1Illustrated.x3d Bvh1 model BVH to X3D conversion, from 8m'
+         fileName='BvhConversion1Illustrated.x3d._VP_Bvh1_model_BVH_to_X3D_conversion,_from_8m.png'
+         found='true'/>
+      <Viewpoint description='[12] BvhConversion1Illustrated.x3d Bvh1 initial motion position'
+         fileName='BvhConversion1Illustrated.x3d._VP_Bvh1_initial_motion_position.png' found='true'/>
+      <Viewpoint description='[13] BvhConversion1Illustrated.x3d Bvh1 final motion position'
+         fileName='BvhConversion1Illustrated.x3d._VP_Bvh1_final_motion_position.png' found='true'/>
+      <Viewpoint
+         description='[14] BvhConversion1Illustrated.x3d View from (0 0 4) towards HAnimHumanoid center'
+         fileName='BvhConversion1Illustrated.x3d._VP_View_from_(0_0_4)_towards_HAnimHumanoid_center.png'
+         found='false'/>
+      <Viewpoint
+         description='[15] BvhConversion1Illustrated.x3d Bvh1 front view towards HAnimHumanoid center'
+         fileName='BvhConversion1Illustrated.x3d._VP_Bvh1_front_view_towards_HAnimHumanoid_center.png'
+         found='false'/>
+      <Viewpoint description='[16] BvhConversion1Illustrated.x3d (default X3D view from 0 0 10)'
+         fileName='BvhConversion1Illustrated.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 January 2016'
+       creator='TODO unknown original creator of file 1.bvh, please advise if known'
+       description='BVH file conversion: test case showing current BVH-to-X3D conversion results, without visualization geometry. Correct parsing of all information in input file 1.bvh is confirmed by output file 1.bvh.txt.'
+       modified='20 February 2021' name='BvhConversion1Invisible'
+       thumbnail='_thumbnails/BvhConversion1InvisibleThumbnail.png' title='Bvh Conversion 1 Invisible'
+       translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/MotionAnimation/BvhConversion1Invisible.x3d'>
+      <Viewpoint description='[17] BvhConversion1Invisible.x3d Bvh1 model BVH to X3D conversion, from 8m'
+         fileName='BvhConversion1Invisible.x3d._VP_Bvh1_model_BVH_to_X3D_conversion,_from_8m.png'
+         found='true'/>
+      <Viewpoint description='[18] BvhConversion1Invisible.x3d Bvh1 initial motion position'
+         fileName='BvhConversion1Invisible.x3d._VP_Bvh1_initial_motion_position.png' found='true'/>
+      <Viewpoint description='[19] BvhConversion1Invisible.x3d Bvh1 final motion position'
+         fileName='BvhConversion1Invisible.x3d._VP_Bvh1_final_motion_position.png' found='true'/>
+      <Viewpoint
+         description='[20] BvhConversion1Invisible.x3d Bvh1 front view towards HAnimHumanoid center'
+         fileName='BvhConversion1Invisible.x3d._VP_Bvh1_front_view_towards_HAnimHumanoid_center.png'
+         found='false'/>
+      <Viewpoint description='[21] BvhConversion1Invisible.x3d (default X3D view from 0 0 10)'
+         fileName='BvhConversion1Invisible.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='1 January 2017'
+       description='Seamless3d tool import of bvh file and export of x3d scene. Note use of single skin mesh, animated by unadorned skeleton.'
+       modified='20 October 2019' name='BvhSeamless3dExport1' subject='BVH X3D Seamless3d'
+       thumbnail='_thumbnails/BvhSeamless3dExport1Thumbnail.png' title='Bvh Seamless 3D Export 1'
+       translator='Don Brutzman'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/MotionAnimation/BvhSeamless3dExport1.x3d'>
+      <Viewpoint description='[22] BvhSeamless3dExport1.x3d View animation'
+         fileName='BvhSeamless3dExport1.x3d._VP_View_animation.png' found='true'/>
+      <Viewpoint description='[23] BvhSeamless3dExport1.x3d (default X3D view from 0 0 10)'
+         fileName='BvhSeamless3dExport1.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='17 December 2016' creator='Don Brutzman'
+       description='BVH file conversion support: test and visualize various rotations in order to properly configure converter from Euler angles to SFRotation values.'
+       modified='20 October 2019' name='RotationTests'
+       thumbnail='_thumbnails/RotationTestsThumbnail.png' title='Rotation Tests'
+       url='https://x3dgraphics.com/examples/X3dForAdvancedModeling/MotionAnimation/RotationTests.x3d'
+       warning='under development: euler-angle conversions still problematic, single-step animation reveals that animations are not smooth.'>
+      <Viewpoint description='[24] RotationTests.x3d (default X3D view from 0 0 10)'
+         fileName='RotationTests.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Polygonal' title='Polygonal'>
+    <Page created='25 November 2006' creator='Pat Sullivan' description='Marine model'
+       modified='9 May 2020' name='Marine' thumbnail='_thumbnails/MarineThumbnail.png' title='Marine'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Polygonal/Marine.x3d'
+       warning='Not HAnim compliant'>
+      <Viewpoint description='[1] Marine.x3d Sailor Front' fileName='Marine.x3d._VP_Sailor_Front.png'
+         found='false'/>
+      <Viewpoint description='[2] Marine.x3d Sailor Back' fileName='Marine.x3d._VP_Sailor_Back.png'
+         found='true'/>
+      <Viewpoint description='[3] Marine.x3d (default X3D view from 0 0 10)'
+         fileName='Marine.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Prototypes' title='Prototypes'>
+    <Page created='8 June 2001' creator='Allen Dutton'
+       description='Articulated human model developed from laser-scan data.' modified='4 July 2020'
+       name='AllenDuttonProtoInstances' thumbnail='_thumbnails/AllenDuttonProtoInstancesThumbnail.png'
+       title='Allen Dutton Proto Instances' translator='Ozan APAYDIN'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/AllenDuttonProtoInstances.x3d'
+       warning='using ProtoDeclare is only for developmental experimentation, use X3D native tags for Humanoids instead'>
+      <Viewpoint description='[1] AllenDuttonProtoInstances.x3d Inclined View'
+         fileName='AllenDuttonProtoInstances.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[2] AllenDuttonProtoInstances.x3d Front View'
+         fileName='AllenDuttonProtoInstances.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[3] AllenDuttonProtoInstances.x3d Side View'
+         fileName='AllenDuttonProtoInstances.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[4] AllenDuttonProtoInstances.x3d Top View'
+         fileName='AllenDuttonProtoInstances.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[5] AllenDuttonProtoInstances.x3d (default X3D view from 0 0 10)'
+         fileName='AllenDuttonProtoInstances.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='3 January 2002' creator='Etsuko Lippi'
+       description='Canonical HAnim 1 -1 specification example, using native X3D tags instead of ProtoDeclaration/ExternProtoDeclaration and ProtoInstance.'
+       modified='23 May 2020' name='AllenStandShootRifleM24'
+       thumbnail='_thumbnails/AllenStandShootRifleM24Thumbnail.png' title='Allen Stand Shoot Rifle M 24'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/AllenStandShootRifleM24.x3d'>
+      <Viewpoint description='[6] AllenStandShootRifleM24.x3d Allen Rifle Shooting Position'
+         fileName='AllenStandShootRifleM24.x3d._VP_Allen_Rifle_Shooting_Position.png' found='false'/>
+      <Viewpoint description='[7] AllenStandShootRifleM24.x3d Allen Back Viewpoint'
+         fileName='AllenStandShootRifleM24.x3d._VP_Allen_Back_Viewpoint.png' found='true'/>
+      <Viewpoint description='[8] AllenStandShootRifleM24.x3d Allen Above Viewpoint'
+         fileName='AllenStandShootRifleM24.x3d._VP_Allen_Above_Viewpoint.png' found='true'/>
+      <Viewpoint description='[9] AllenStandShootRifleM24.x3d (default X3D view from 0 0 10)'
+         fileName='AllenStandShootRifleM24.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page created='2 May 2006'
+       creator='Don Brutzman, Jeff Weekley, MV4205 Advanced X3D Authoring class, and Keith Victor'
+       description='Prototypes for HAnimBehavior node, which collects OrientationInterpolators for aggregate animation of an HAnim humanoid model, and HAnimBodyBehaviorChooser, which selects one body and enables/disables multiple aggregated behaviors.'
+       modified='4 July 2020' name='HAnimBehaviorPrototypes'
+       subject='X3D HAnim humanoid animation behaviors'
+       thumbnail='_thumbnails/HAnimBehaviorPrototypesThumbnail.png' title='HAnim Behavior Prototypes'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/HAnimBehaviorPrototypes.x3d'
+       warning='under development. should joint translations be exposed? upgrade to HAnim v2.2'>
+      <Viewpoint description='[10] HAnimBehaviorPrototypes.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimBehaviorPrototypes.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='15 November 2001' creator='Ozan APAYDIN, Don Brutzman'
+       description='Example implementation of X3D Humanoid Animation (HAnim) nodes using X3D prototypes.'
+       modified='23 May 2020' name='HAnimPrototypes'
+       thumbnail='_thumbnails/HAnimPrototypesThumbnail.png' title='HAnim Prototypes'
+       translator='Ozan APAYDIN, Don Brutzman'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/HAnimPrototypes.x3d'
+       warning='Need support for skin'>
+      <Viewpoint description='[11] HAnimPrototypes.x3d (default X3D view from 0 0 10)'
+         fileName='HAnimPrototypes.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='15 November 2001' creator='Ozan APAYDIN'
+       description='This example demonstrates interchangeability of avatars (Nancy, Allen, Boxman) and animation behaviors (Stand, Run, Jump, Walk) via dynamic routing.'
+       modified='9 July 2020' name='InterchangableActorsViaDynamicRoutingPrototypes'
+       thumbnail='_thumbnails/InterchangableActorsViaDynamicRoutingPrototypesThumbnail.png'
+       title='Interchangable Actors Via Dynamic Routing Prototypes' translator='Ozan APAYDIN'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/InterchangableActorsViaDynamicRoutingPrototypes.x3d'
+       warning='this example needs to be converted from HAnim Prototypes to HAnim native tags.'>
+      <Viewpoint description='[12] InterchangableActorsViaDynamicRoutingPrototypes.x3d Inclined View'
+         fileName='InterchangableActorsViaDynamicRoutingPrototypes.x3d._VP_Inclined_View.png'
+         found='false'/>
+      <Viewpoint description='[13] InterchangableActorsViaDynamicRoutingPrototypes.x3d Front View'
+         fileName='InterchangableActorsViaDynamicRoutingPrototypes.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[14] InterchangableActorsViaDynamicRoutingPrototypes.x3d Side View'
+         fileName='InterchangableActorsViaDynamicRoutingPrototypes.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[15] InterchangableActorsViaDynamicRoutingPrototypes.x3d Top View'
+         fileName='InterchangableActorsViaDynamicRoutingPrototypes.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint
+         description='[16] InterchangableActorsViaDynamicRoutingPrototypes.x3d (default X3D view)'
+         fileName='InterchangableActorsViaDynamicRoutingPrototypes.x3d._VP_Default_viewpoint.png'
+         found='false'/>
+    </Page>
+    <Page creator='Cindy Ballreich cindy@ballreich.net 3Name3D'
+       description='Humanoid animation prototype reusable by any Humanoid.' modified='23 May 2020'
+       name='LOA1_JumpAnimation'
+       subject='InterchangableActorsViaDynamicRouting Nancy jump Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_JumpAnimationThumbnail.png' title='LOA 1 Jump Animation'
+       translator='Scott Tufts'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_JumpAnimation.x3d'>
+      <Viewpoint description='[17] LOA1_JumpAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_JumpAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page creator='Tom Miller' description='Humanoid animation prototype reusable by any Humanoid.'
+       modified='23 May 2020' name='LOA1_KneelAnimation' subject='Nancy kneel Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_KneelAnimationThumbnail.png' title='LOA 1 Kneel Animation'
+       translator='Curt Blais'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_KneelAnimation.x3d'>
+      <Viewpoint description='[18] LOA1_KneelAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_KneelAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page creator='Cindy Ballreich cindy@ballreich.net 3Name3D'
+       description='Humanoid animation prototype reusable by any Humanoid.' modified='23 May 2020'
+       name='LOA1_RunAnimation' subject='Nancy Run Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_RunAnimationThumbnail.png' title='LOA 1 Run Animation'
+       translator='Ozan APAYDIN'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_RunAnimation.x3d'>
+      <Viewpoint description='[19] LOA1_RunAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_RunAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 December 2001'
+       creator='Cindy Ballreich cindy@ballreich.net 3Name3D, Joe Williams, Don Brutzman'
+       description='Humanoid animation prototype reusable by any Humanoid.' modified='23 May 2020'
+       name='LOA1_StandAnimation' subject='Nancy Stand Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_StandAnimationThumbnail.png' title='LOA 1 Stand Animation'
+       translator='Ozan APAYDIN'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_StandAnimation.x3d'>
+      <Viewpoint description='[20] LOA1_StandAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_StandAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='1 December 2001'
+       creator='Cindy Ballreich cindy@ballreich.net 3Name3D, Joe Williams, Don Brutzman'
+       description='Humanoid animation prototype reusable by any Humanoid.' modified='23 May 2020'
+       name='LOA1_StopAnimation' subject='Nancy Stand Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_StopAnimationThumbnail.png' title='LOA 1 Stop Animation'
+       translator='Ozan APAYDIN'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_StopAnimation.x3d'>
+      <Viewpoint description='[21] LOA1_StopAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_StopAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='13 December 2001' creator='Etsuko Lippi'
+       description='Humanoid animation prototype reusable by any Humanoid.' modified='23 May 2020'
+       name='LOA1_SwimmingFlutterKickAnimation' subject='Swimming flutter kick Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_SwimmingFlutterKickAnimationThumbnail.png'
+       title='LOA 1 Swimming Flutter Kick Animation'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_SwimmingFlutterKickAnimation.x3d'
+       warning='not yet tested, need to compare with NancyDivingExample interpolators'>
+      <Viewpoint
+         description='[22] LOA1_SwimmingFlutterKickAnimation.x3d LOA1_SwimmingFlutterKickAnimation scene'
+         fileName='LOA1_SwimmingFlutterKickAnimation.x3d._VP_LOA1_SwimmingFlutterKickAnimation_scene.png'
+         found='false'/>
+      <Viewpoint description='[23] LOA1_SwimmingFlutterKickAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_SwimmingFlutterKickAnimation.x3d._VP_Default_viewpoint.png' found='true'/>
+    </Page>
+    <Page creator='Cindy Ballreich cindy@ballreich.net 3Name3D'
+       description='Humanoid animation prototype reusable by any Humanoid.' modified='23 May 2020'
+       name='LOA1_WalkAnimation' subject='Nancy Walk Animation HAnim 2001'
+       thumbnail='_thumbnails/LOA1_WalkAnimationThumbnail.png' title='LOA 1 Walk Animation'
+       translator='Don Brutzman'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_WalkAnimation.x3d'>
+      <Viewpoint description='[24] LOA1_WalkAnimation.x3d (default X3D view from 0 0 10)'
+         fileName='LOA1_WalkAnimation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='19 November 2001' creator='Cindy Ballreich cindy@ballreich.net 3Name3D'
+       description='Nancy having fun scuba diving - developmental model using ProtoInstance instead of HAnim native tags, do not use this pattern.'
+       modified='4 July 2020' name='NancyDivingProtoInstances'
+       thumbnail='_thumbnails/NancyDivingProtoInstancesThumbnail.png'
+       title='Nancy Diving Proto Instances' translator='Tom Miller and Don Brutzman, NPS'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/NancyDivingProtoInstances.x3d'
+       warning='This is a developmental example, use HAnim native tags as shown in other examples instead of the prototypes and ProtoInstances shown here.'>
+      <Viewpoint description='[25] NancyDivingProtoInstances.x3d Nancy diving default viewpoint'
+         fileName='NancyDivingProtoInstances.x3d._VP_Nancy_diving_default_viewpoint.png' found='false'/>
+      <Viewpoint description='[26] NancyDivingProtoInstances.x3d Nancy front viewpoint'
+         fileName='NancyDivingProtoInstances.x3d._VP_Nancy_front_viewpoint.png' found='false'/>
+      <Viewpoint description='[27] NancyDivingProtoInstances.x3d Nancy above viewpoint'
+         fileName='NancyDivingProtoInstances.x3d._VP_Nancy_above_viewpoint.png' found='false'/>
+      <Viewpoint description='[28] NancyDivingProtoInstances.x3d Nancy back viewpoint'
+         fileName='NancyDivingProtoInstances.x3d._VP_Nancy_back_viewpoint.png' found='false'/>
+      <Viewpoint description='[29] NancyDivingProtoInstances.x3d Nancy side viewpoint'
+         fileName='NancyDivingProtoInstances.x3d._VP_Nancy_side_viewpoint.png' found='false'/>
+      <Viewpoint description='[30] NancyDivingProtoInstances.x3d Nancy viewpoint through her goggles'
+         fileName='NancyDivingProtoInstances.x3d._VP_Nancy_viewpoint_through_her_goggles.png'
+         found='false'/>
+      <Viewpoint description='[31] NancyDivingProtoInstances.x3d (default X3D view from 0 0 10)'
+         fileName='NancyDivingProtoInstances.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='9 July 2000' creator='Cindy Ballreich'
+       description='Canonical HAnim 1.1 specification example, using ProtoDeclaration and ProtoInstance instead of native X3D tags. Prototype definitions are a compatible combination of version 1.0 and 2.0 prototype interfaces.'
+       modified='4 July 2020' name='NancyPrototypes'
+       thumbnail='_thumbnails/NancyPrototypesThumbnail.png' title='Nancy Prototypes'
+       translator='Tom Miller and Don Brutzman, NPS'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/NancyPrototypes.x3d'
+       warning='using ProtoDeclare is only for developmental experimentation, use X3D native tags for Humanoids instead'>
+      <Viewpoint description='[32] NancyPrototypes.x3d Inclined View'
+         fileName='NancyPrototypes.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[33] NancyPrototypes.x3d Front View'
+         fileName='NancyPrototypes.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[34] NancyPrototypes.x3d Side View'
+         fileName='NancyPrototypes.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[35] NancyPrototypes.x3d Top View'
+         fileName='NancyPrototypes.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[36] NancyPrototypes.x3d (default X3D view from 0 0 10)'
+         fileName='NancyPrototypes.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Specifications' title='Specifications'>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage and visibility of all specified HAnim constructs, plus motion animations. Geometry visualizations are derived from HAnimSpecificationLOA3Invisible.x3d visualization report. Resusable exemplar animations also added via heads-up display (HUD) interface to confirm proper parent-child relationships.'
+       modified='4 July 2020' name='HAnim1SpecificationLOA3Animation'
+       title='HAnim 1 Specification LOA 3 Animation' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/HAnimSpecificationLOA3Animation.x3d'>
+      <Viewpoint description='[1] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[2] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[3] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[4] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Front_Face.png' found='false'/>
+      <Viewpoint description='[5] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Right_Side.png' found='false'/>
+      <Viewpoint description='[6] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[7] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[8] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Left_Side.png' found='false'/>
+      <Viewpoint description='[9] HAnim1SpecificationLOA3Animation.x3d Humanoid LOA 3 Top'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[10] HAnim1SpecificationLOA3Animation.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[11] HAnim1SpecificationLOA3Animation.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[12] HAnim1SpecificationLOA3Animation.x3d left hand front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[13] HAnim1SpecificationLOA3Animation.x3d right hand front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[14] HAnim1SpecificationLOA3Animation.x3d left inclined'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[15] HAnim1SpecificationLOA3Animation.x3d right inclined'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[16] HAnim1SpecificationLOA3Animation.x3d front'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[17] HAnim1SpecificationLOA3Animation.x3d back'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[18] HAnim1SpecificationLOA3Animation.x3d left side'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[19] HAnim1SpecificationLOA3Animation.x3d Top'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[20] HAnim1SpecificationLOA3Animation.x3d front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[21] HAnim1SpecificationLOA3Animation.x3d side close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[22] HAnim1SpecificationLOA3Animation.x3d head front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[23] HAnim1SpecificationLOA3Animation.x3d chest front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[24] HAnim1SpecificationLOA3Animation.x3d pelvis front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[25] HAnim1SpecificationLOA3Animation.x3d knees front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[26] HAnim1SpecificationLOA3Animation.x3d feet front close'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[27] HAnim1SpecificationLOA3Animation.x3d eye level looking forward'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_eye_level_looking_forward.png' found='false'/>
+      <Viewpoint description='[28] HAnim1SpecificationLOA3Animation.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim1SpecificationLOA3Animation.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage and visibility of all specified HAnim constructs, also suitable for re-use as an authoring template. Geometry visualizations are derived from HAnimSpecificationLOA3Invisible.x3d visualization report. Resusable exemplar animations also added via heads-up display (HUD) interface to confirm proper parent-child relationships.'
+       modified='4 July 2020' name='HAnim1SpecificationLOA3Illustrated'
+       title='HAnim 1 Specification LOA 3 Illustrated' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/HAnimSpecificationLOA3Illustrated.x3d'
+       warning='BS Contact and H3DViewer have polygon-culling problems at close range (possibly related to avatarSize), other players look OK'>
+      <Viewpoint description='[29] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[30] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[31] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[32] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Face.png'
+         found='false'/>
+      <Viewpoint description='[33] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Right_Side.png'
+         found='false'/>
+      <Viewpoint
+         description='[34] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[35] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[36] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Left_Side.png'
+         found='false'/>
+      <Viewpoint description='[37] HAnim1SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Top'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[38] HAnim1SpecificationLOA3Illustrated.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[39] HAnim1SpecificationLOA3Illustrated.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[40] HAnim1SpecificationLOA3Illustrated.x3d left hand front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[41] HAnim1SpecificationLOA3Illustrated.x3d right hand front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[42] HAnim1SpecificationLOA3Illustrated.x3d left inclined'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[43] HAnim1SpecificationLOA3Illustrated.x3d right inclined'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[44] HAnim1SpecificationLOA3Illustrated.x3d front'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[45] HAnim1SpecificationLOA3Illustrated.x3d back'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[46] HAnim1SpecificationLOA3Illustrated.x3d left side'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[47] HAnim1SpecificationLOA3Illustrated.x3d Top'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[48] HAnim1SpecificationLOA3Illustrated.x3d front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[49] HAnim1SpecificationLOA3Illustrated.x3d side close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[50] HAnim1SpecificationLOA3Illustrated.x3d head front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[51] HAnim1SpecificationLOA3Illustrated.x3d chest front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[52] HAnim1SpecificationLOA3Illustrated.x3d pelvis front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[53] HAnim1SpecificationLOA3Illustrated.x3d knees front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[54] HAnim1SpecificationLOA3Illustrated.x3d feet front close'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[55] HAnim1SpecificationLOA3Illustrated.x3d eye level looking forward'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_eye_level_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[56] HAnim1SpecificationLOA3Illustrated.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim1SpecificationLOA3Illustrated.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage (and no illustrated visibility) of all specified HAnim constructs, also suitable for re-use as an authoring template.'
+       modified='4 July 2020' name='HAnim1SpecificationLOA3Invisible'
+       title='HAnim 1 Specification LOA 3 Invisible' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/HAnimSpecificationLOA3Invisible.x3d'>
+      <Viewpoint description='[57] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[58] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[59] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[60] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Face.png' found='false'/>
+      <Viewpoint description='[61] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Right_Side.png' found='false'/>
+      <Viewpoint description='[62] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[63] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[64] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Left_Side.png' found='false'/>
+      <Viewpoint description='[65] HAnim1SpecificationLOA3Invisible.x3d Humanoid LOA 3 Top'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[66] HAnim1SpecificationLOA3Invisible.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[67] HAnim1SpecificationLOA3Invisible.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[68] HAnim1SpecificationLOA3Invisible.x3d left hand front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[69] HAnim1SpecificationLOA3Invisible.x3d right hand front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[70] HAnim1SpecificationLOA3Invisible.x3d left inclined'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[71] HAnim1SpecificationLOA3Invisible.x3d right inclined'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[72] HAnim1SpecificationLOA3Invisible.x3d front'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[73] HAnim1SpecificationLOA3Invisible.x3d back'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[74] HAnim1SpecificationLOA3Invisible.x3d left side'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[75] HAnim1SpecificationLOA3Invisible.x3d Top'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[76] HAnim1SpecificationLOA3Invisible.x3d front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[77] HAnim1SpecificationLOA3Invisible.x3d side close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[78] HAnim1SpecificationLOA3Invisible.x3d head front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[79] HAnim1SpecificationLOA3Invisible.x3d chest front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[80] HAnim1SpecificationLOA3Invisible.x3d pelvis front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[81] HAnim1SpecificationLOA3Invisible.x3d knees front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[82] HAnim1SpecificationLOA3Invisible.x3d feet front close'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[83] HAnim1SpecificationLOA3Invisible.x3d eye level looking forward'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_eye_level_looking_forward.png' found='false'/>
+      <Viewpoint description='[84] HAnim1SpecificationLOA3Invisible.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim1SpecificationLOA3Invisible.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='18 February 2021' creator='Don Brutzman'
+       description='HAnim Specification reference example providing full coverage (and no illustrated visibility) of all specified HAnim constructs, also suitable for re-use as an authoring template.'
+       modified='13 March 2021' name='HAnim2SpecificationLOA3Illustrated'
+       title='HAnim 2 Specification LOA 3 Illustrated' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/HAnim2SpecificationLOA3Illustrated.x3d'>
+      <Viewpoint description='[85] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[86] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[87] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[88] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Front_Face.png'
+         found='false'/>
+      <Viewpoint description='[89] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Right_Side.png'
+         found='false'/>
+      <Viewpoint
+         description='[90] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[91] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[92] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Left_Side.png'
+         found='false'/>
+      <Viewpoint description='[93] HAnim2SpecificationLOA3Illustrated.x3d Humanoid LOA 3 Top'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[94] HAnim2SpecificationLOA3Illustrated.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[95] HAnim2SpecificationLOA3Illustrated.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[96] HAnim2SpecificationLOA3Illustrated.x3d left hand front'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[97] HAnim2SpecificationLOA3Illustrated.x3d right hand front'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[98] HAnim2SpecificationLOA3Illustrated.x3d left inclined'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[99] HAnim2SpecificationLOA3Illustrated.x3d right inclined'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[100] HAnim2SpecificationLOA3Illustrated.x3d front'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[101] HAnim2SpecificationLOA3Illustrated.x3d back'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[102] HAnim2SpecificationLOA3Illustrated.x3d left side'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[103] HAnim2SpecificationLOA3Illustrated.x3d Top'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[104] HAnim2SpecificationLOA3Illustrated.x3d front close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[105] HAnim2SpecificationLOA3Illustrated.x3d side close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[106] HAnim2SpecificationLOA3Illustrated.x3d head front close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[107] HAnim2SpecificationLOA3Illustrated.x3d chest front close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[108] HAnim2SpecificationLOA3Illustrated.x3d pelvis front close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[109] HAnim2SpecificationLOA3Illustrated.x3d knees front close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[110] HAnim2SpecificationLOA3Illustrated.x3d feet front close'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[111] HAnim2SpecificationLOA3Illustrated.x3d eye level looking forward'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_eye_level_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[112] HAnim2SpecificationLOA3Illustrated.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim2SpecificationLOA3Illustrated.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='24 April 2013' creator='Matthew T. Beitler, Joe D. Williams, Don Brutzman'
+       description='HAnim Specification reference example providing full coverage (and no illustrated visibility) of all specified HAnim constructs, also suitable for re-use as an authoring template.'
+       modified='13 March 2021' name='HAnim2SpecificationLOA3Invisible'
+       thumbnail='_thumbnails/HAnim2SpecificationLOA3InvisibleThumbnail.png'
+       title='HAnim 2 Specification LOA 3 Invisible' translator='Don Brutzman and Joe Williams'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/HAnim2SpecificationLOA3Invisible.x3d'>
+      <Viewpoint description='[113] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front.png' found='false'/>
+      <Viewpoint description='[114] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Close.png'
+         found='false'/>
+      <Viewpoint description='[115] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Closer'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Closer.png'
+         found='false'/>
+      <Viewpoint description='[116] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Front Face'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Front_Face.png' found='false'/>
+      <Viewpoint description='[117] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Right Side'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Right_Side.png' found='false'/>
+      <Viewpoint description='[118] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Right Side Close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Right_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[119] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Left Side Close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Left_Side_Close.png'
+         found='false'/>
+      <Viewpoint description='[120] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Left Side'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Left_Side.png' found='false'/>
+      <Viewpoint description='[121] HAnim2SpecificationLOA3Invisible.x3d Humanoid LOA 3 Top'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Humanoid_LOA_3_Top.png' found='false'/>
+      <Viewpoint
+         description='[122] HAnim2SpecificationLOA3Invisible.x3d l_eyeball_site_viewpoint looking forward'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_l_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint
+         description='[123] HAnim2SpecificationLOA3Invisible.x3d r_eyeball_site_viewpoint looking forward'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_r_eyeball_site_viewpoint_looking_forward.png'
+         found='false'/>
+      <Viewpoint description='[124] HAnim2SpecificationLOA3Invisible.x3d left hand front'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_left_hand_front.png' found='false'/>
+      <Viewpoint description='[125] HAnim2SpecificationLOA3Invisible.x3d right hand front'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_right_hand_front.png' found='false'/>
+      <Viewpoint description='[126] HAnim2SpecificationLOA3Invisible.x3d left inclined'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_left_inclined.png' found='false'/>
+      <Viewpoint description='[127] HAnim2SpecificationLOA3Invisible.x3d right inclined'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_right_inclined.png' found='false'/>
+      <Viewpoint description='[128] HAnim2SpecificationLOA3Invisible.x3d front'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_front.png' found='false'/>
+      <Viewpoint description='[129] HAnim2SpecificationLOA3Invisible.x3d back'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_back.png' found='false'/>
+      <Viewpoint description='[130] HAnim2SpecificationLOA3Invisible.x3d left side'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_left_side.png' found='false'/>
+      <Viewpoint description='[131] HAnim2SpecificationLOA3Invisible.x3d Top'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Top.png' found='false'/>
+      <Viewpoint description='[132] HAnim2SpecificationLOA3Invisible.x3d front close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_front_close.png' found='false'/>
+      <Viewpoint description='[133] HAnim2SpecificationLOA3Invisible.x3d side close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_side_close.png' found='false'/>
+      <Viewpoint description='[134] HAnim2SpecificationLOA3Invisible.x3d head front close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_head_front_close.png' found='false'/>
+      <Viewpoint description='[135] HAnim2SpecificationLOA3Invisible.x3d chest front close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_chest_front_close.png' found='false'/>
+      <Viewpoint description='[136] HAnim2SpecificationLOA3Invisible.x3d pelvis front close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_pelvis_front_close.png' found='false'/>
+      <Viewpoint description='[137] HAnim2SpecificationLOA3Invisible.x3d knees front close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_knees_front_close.png' found='false'/>
+      <Viewpoint description='[138] HAnim2SpecificationLOA3Invisible.x3d feet front close'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_feet_front_close.png' found='false'/>
+      <Viewpoint description='[139] HAnim2SpecificationLOA3Invisible.x3d eye level looking forward'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_eye_level_looking_forward.png' found='false'/>
+      <Viewpoint description='[140] HAnim2SpecificationLOA3Invisible.x3d (default X3D view from 0 0 10)'
+         fileName='HAnim2SpecificationLOA3Invisible.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='8 March 2021' name='KoreanCharacterMotionAnnexC01Jin'
+       thumbnail='_thumbnails/KoreanCharacterMotionAnnexC01JinThumbnail.png'
+       title='Korean Character Motion Annex C 01 Jin' translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/KoreanCharacterMotionAnnexC01Jin.x3d'>
+      <Viewpoint description='[141] KoreanCharacterMotionAnnexC01Jin.x3d AnnexC01Jin'
+         fileName='KoreanCharacterMotionAnnexC01Jin.x3d._VP_AnnexC01Jin.png' found='false'/>
+      <Viewpoint description='[142] KoreanCharacterMotionAnnexC01Jin.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacterMotionAnnexC01Jin.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='31 March 2011' creator='Jin Hoon Lee and Min Joo Lee'
+       description='Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model.'
+       modified='8 March 2021' name='KoreanCharacterMotionAnnexD01Jin'
+       thumbnail='_thumbnails/KoreanCharacterMotionAnnexD01JinThumbnail.png'
+       title='Korean Character Motion Annex D 01 Jin' translator='Chul Hee Jung and Myeong Won Lee'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Specifications/KoreanCharacterMotionAnnexD01Jin.x3d'>
+      <Viewpoint description='[143] KoreanCharacterMotionAnnexD01Jin.x3d AnnexD01Jin'
+         fileName='KoreanCharacterMotionAnnexD01Jin.x3d._VP_AnnexD01Jin.png' found='false'/>
+      <Viewpoint description='[144] KoreanCharacterMotionAnnexD01Jin.x3d (default X3D view from 0 0 10)'
+         fileName='KoreanCharacterMotionAnnexD01Jin.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+  <Chapter name='Templates' title='Templates'>
+    <Page created='12 November 2001' creator='Matthew T. Beitler'
+       description='HAnim skeletal structure for Level of Action (LOA) zero, with one diamond at the base node for the structure. HumanoidRoot only, so this is the minimum legal HAnim humanoid.'
+       modified='8 March 2021' name='DiamondManLOA0' thumbnail='_thumbnails/DiamondManLOA0Thumbnail.png'
+       title='Diamond Man LOA 0' translator='Joel S. Pawloski'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Templates/DiamondManLOA0.x3d'>
+      <Viewpoint description='[1] DiamondManLOA0.x3d Diamond Man, LOA 0'
+         fileName='DiamondManLOA0.x3d._VP_Diamond_Man,_LOA_0.png' found='false'/>
+      <Viewpoint description='[2] DiamondManLOA0.x3d Inclined View'
+         fileName='DiamondManLOA0.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[3] DiamondManLOA0.x3d Front View'
+         fileName='DiamondManLOA0.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[4] DiamondManLOA0.x3d Side View'
+         fileName='DiamondManLOA0.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[5] DiamondManLOA0.x3d Top View'
+         fileName='DiamondManLOA0.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[6] DiamondManLOA0.x3d (default X3D view from 0 0 10)'
+         fileName='DiamondManLOA0.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='12 November 2001' creator='Matthew T. Beitler'
+       description='HAnim skeletal structure for Level of Action (LOA) one, with diamonds at the Joint centers. LOA-1 is typical low-end real-time 3D hierarchy.'
+       modified='13 March 2021' name='DiamondManLOA1'
+       thumbnail='_thumbnails/DiamondManLOA1Thumbnail.png' title='Diamond Man LOA 1'
+       translator='Joel S. Pawloski'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Templates/DiamondManLOA1.x3d'
+       warning='Still needs comments on CAESAR feature points inserted'>
+      <Viewpoint description='[7] DiamondManLOA1.x3d Diamond Man, LOA 1'
+         fileName='DiamondManLOA1.x3d._VP_Diamond_Man,_LOA_1.png' found='false'/>
+      <Viewpoint description='[8] DiamondManLOA1.x3d Inclined View'
+         fileName='DiamondManLOA1.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[9] DiamondManLOA1.x3d Front View'
+         fileName='DiamondManLOA1.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[10] DiamondManLOA1.x3d Side View'
+         fileName='DiamondManLOA1.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[11] DiamondManLOA1.x3d Top View'
+         fileName='DiamondManLOA1.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[12] DiamondManLOA1.x3d (default X3D view from 0 0 10)'
+         fileName='DiamondManLOA1.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+    <Page created='12 November 2001' creator='Matthew T. Beitler'
+       description='hanim skeletal structure at level of articulation two, one diamond at the base node for the structure'
+       modified='8 March 2021' name='DiamondManLOA2' subject='human animation, x3d, vrml, animation'
+       thumbnail='_thumbnails/DiamondManLOA2Thumbnail.png' title='Diamond Man LOA 2'
+       translator='Joel S. Pawloski'
+       url='https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Templates/DiamondManLOA2.x3d'>
+      <Viewpoint description='[13] DiamondManLOA2.x3d Diamond Man, LOA 2'
+         fileName='DiamondManLOA2.x3d._VP_Diamond_Man,_LOA_2.png' found='false'/>
+      <Viewpoint description='[14] DiamondManLOA2.x3d Front View'
+         fileName='DiamondManLOA2.x3d._VP_Front_View.png' found='false'/>
+      <Viewpoint description='[15] DiamondManLOA2.x3d Side View'
+         fileName='DiamondManLOA2.x3d._VP_Side_View.png' found='false'/>
+      <Viewpoint description='[16] DiamondManLOA2.x3d Top View'
+         fileName='DiamondManLOA2.x3d._VP_Top_View.png' found='false'/>
+      <Viewpoint description='[17] DiamondManLOA2.x3d Humanoid Root View'
+         fileName='DiamondManLOA2.x3d._VP_Humanoid_Root_View.png' found='false'/>
+      <Viewpoint description='[18] DiamondManLOA2.x3d Inclined View'
+         fileName='DiamondManLOA2.x3d._VP_Inclined_View.png' found='false'/>
+      <Viewpoint description='[19] DiamondManLOA2.x3d (default X3D view from 0 0 10)'
+         fileName='DiamondManLOA2.x3d._VP_Default_viewpoint.png' found='false'/>
+    </Page>
+  </Chapter>
+</ContentCatalog>
+
+

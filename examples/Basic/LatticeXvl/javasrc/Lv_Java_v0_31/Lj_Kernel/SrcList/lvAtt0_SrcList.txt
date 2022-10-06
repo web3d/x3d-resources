@@ -1,0 +1,9 @@
+lvAtt0\source\lvMakeUVnonCalc.java
+lvAtt0\source\lvPolyFromKernelUV.java
+lvAtt0\source\lvCheckUVspace.java
+lvAtt0\source\lvMakeUVspace.java
+lvAtt0\source\lvDivPolyUV.java
+lvAtt0\source\SubClass\lv0MakeUVspace.java
+lvAtt0\source\SubClass\lv0DivPolyUV.java
+lvAtt0\source\SubClass\lv0PolyFromKernelUV.java
+lvAtt0\source\SubClass\lv0AttGblElm.java

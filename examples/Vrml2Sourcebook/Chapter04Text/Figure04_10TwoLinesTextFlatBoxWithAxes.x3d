@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='Figure04_10TwoLinesTextFlatBoxWithAxes.x3d' name='title'/>
+    <meta content='Figure 4.10, The VRML 2.0 Sourcebook, Copyright [1997] By Andrea L. Ames, David R. Nadeau, and John L. Moreland' name='creator'/>
+    <meta content='http://www.wiley.com/legacy/compbooks/vrml2sbk/ch04/04fig10.htm' name='reference'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='6 August 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Two lines of text with a flat box between them, with coordinate axes superimposed to show X3D/VRML directions' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Vrml2Sourcebook/Chapter04Text/Figure04_10TwoLinesTextFlatBoxWithAxes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='Figure04_10TwoLinesTextFlatBoxWithAxes.x3d'/>
+    <Shape>
+      <Appearance DEF='WHITE'>
+        <Material emissiveColor='1 1 1'/>
+      </Appearance>
+      <Text string='"Above" "Below"'>
+        <FontStyle justify='"MIDDLE" "MIDDLE"'/>
+      </Text>
+    </Shape>
+    <Shape>
+      <Appearance>
+        <Material diffuseColor='0.4 0.4 0.8'/>
+      </Appearance>
+      <Box size='5 0.01 2'/>
+    </Shape>
+    <!-- Adding this Inline reference to another scene superimposes X3D/VRML coordinate system axes. -->
+    <Transform scale='5 5 5' translation='0 0 -.2'>
+      <Inline DEF='CoordinateAxes' url='"../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d" "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.x3d" "../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.wrl" "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.wrl" "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.wrl"'/>
+    </Transform>
+  </Scene>
+</X3D>

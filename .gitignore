@@ -1,0 +1,8 @@
+
+.DS_Store
+
+.svn
+.vscode
+
+*.zip
+*.log.txt

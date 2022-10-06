@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+<title>Draft X3D Specification Addition for NetworkSensor capability</title>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1252"><title></title>
+  
+  <meta name="GENERATOR" content="OpenOffice.org 1.9.125  (Win32)">
+  <meta name="CREATED" content="20050716;16255700">
+  <meta name="CHANGEDBY" content="x">
+  <meta name="CHANGED" content="20050927;10020157">
+  <style>
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+	-->
+	</style></head><body dir="ltr" lang="">
+
+<h1>Draft X3D Specification Addition for NetworkSensor capability</h1>
+<h2>Document Status</h2>
+<p>Work on these nodes has been discontinued, at least temporarily.
+   Because the NetworkSensor node allows definition of new fields by name,
+   a proper implementation requires native X3D-player support and a full
+   Prototype-based implementation is not possible.  No X3D browser companies
+   have yet committed to produce such an implementation.
+    <br>
+</p>
+<p>Further questions can be directed to the
+    <a href="mailto:x3d-public@web3d.org?subject=NetworkSensor%20node%20development">x3d-public@web3d.org</a>
+    mailing list.
+    <br>
+</p>
+<p style="margin-bottom: 0cm;">Specification draft updated June 12 2008<br>
+</p>
+
+<hr />
+
+<h1>9 Networking Component</h1>
+<p><i>Insert the following new sections 9.4.4 and 9.4.5 before section 9.5:</i></p>
+<h2>9.4.4 Connection</h2>
+<pre>Connection: X3DNetworkSensorNode {
+    SFBool [in,out] enabled  TRUE
+    SFNode [in,out] metadata NULL [X3DMetadataObject]
+    SFBool        [out]      isActive FALSE
+    MFString      [in,out]   url ["x3dp://localhost:80/"]
+    SFInt32       [in]       protocol 0 [0,65535]
+    SFTime        [in,out]   timeOut  0
+    SFBool        [in]       secure   TRUE
+}<br><br></pre>
+<p>The Connection node specifies a network connection such as a TCP/IP
+socket. The X3D Browser shall support at least two such nodes being
+active at any one time. Support for more active Connection nodes can be
+optionally supported.<br>
+</p>
+<p>The <span style="font-style: italic;">url </span>field identifies
+the <span style="font-style: italic;">application protocol</span>://<span style="font-style: italic;">network address</span>:<span style="font-style: italic;">port number </span>triplet for the
+stream in the style of urls. <br>
+</p>
+<p>The <span style="font-style: italic;">protocol </span>field is a
+code specifying the underlying protocol (such as HTTP, ftp, TCP/IP, UDP)
+to use: 0 means
+underlying protocol is defined by the application protocol, 1&nbsp; for
+HTTP (default), 2 for HTTP1.1, 3 for TCP/IP, 4 for UDP, 5 for&nbsp;
+multicast.&nbsp; <i>Multicast</i> support is optional because it can
+be impractical to get it to work in a general public situation, due to
+lack of control/access to routers. There is no onus on the X3D
+application to have control
+over multicast configuration of network nodes.<br>
+</p>
+<p>The <span style="font-style: italic;">application protocol</span>
+part of the address field identifies the higher level "application"
+protocol the X3D application
+is using over the underlying protocol specified in the <span style="font-style: italic;">protocol </span>field. If
+the default HTTP underlying protocol is to be used then the prefix:
+"http:" can be omitted and refers specifically to HTTP 1.0. When the
+underlying protocol is
+anything other than HTTP the default application protocol is "x3dp:" <br>
+</p>
+<p>The application protocol "x3dp:" refers to a basic common
+application protocol to be defined in another X3D document. When it is
+defined, it recommended that
+"x3dp:" be
+supported so there is at least one application protocol that all X3D
+Browsers can interpret. Examples of other application protocols that
+may be used
+are "xmpp:", "dis:", and "swmp:".&nbsp; This specification shall,
+however,&nbsp; be independent of the status of the common x3dp
+application
+protocol specification. <br>
+</p>
+<p><span style="font-style: italic;">url </span>may contain a list of
+host address triplets, each formatted as: &lt;protocol&gt;&lt;host
+address&gt;&lt;port number&gt;. For example, a <span style="font-style: italic;">url </span>may be:&nbsp;
+["x3dp://224.2.181.145:7000" "http://224.2.181.145:7000"&nbsp;
+"alternate.net.server"] or it may just be:
+["localhost"]. It is recommended that each host be
+initially tested for response so that non responding hosts can be
+skipped for one that does respond. It is up to the implementation as
+to how hosts are tested, whether in sequential order or parallel.
+However, the
+order hosts are listed is to be taken as the order of preference for
+responding hosts. That is, if multiple hosts respond, the one listed
+first is to be used. The <span style="font-style: italic;">url
+</span>field may have an additional suffix
+string such as initial path and authentication, for example:
+"x3dp://localhost:80/pathid?initialAuthentication="authString".
+</p>
+<p>
+</p>
+<p>The <i>port number</i> part of the <span style="font-style: italic;">address </span>field identifies the port
+to use, for example
+"7000". </p>
+<p>Note
+that if more than one NetworkSensor refers to the same connection node
+then the events from the NetworkSensor nodes shall be routed over the
+same connection. By default, only two simultaneous active ports
+are required to be supported.<br>
+</p>
+<p><i>isActive</i><span style="font-style: normal;"> is initially
+FALSE and only becomes TRUE if the port is successfully opened.</span></p>
+<p><i>enabled</i><span style="font-style: normal;"> is initially TRUE
+and means the browser should attempt to open the port. If set to
+FALSE the port will be closed. If the port could not be opened the
+browser will change enabled to FALSE.</span></p>
+<p style="font-style: normal;"><i>timeout</i> is the period of time to
+wait, in milliseconds, before deciding a host is not responding. If a
+connection times out, <span style="font-style: italic;">enabled </span>shall
+be set to FALSE.<br>
+</p>
+<p style="font-style: normal;"><i>secure</i> is TRUE by default and
+means that only connections to the originating server are accepted.
+The browser may optionally implement a <i>secure</i>=FALSE capability
+in which case it will be possible for the web3d application to
+communicate with non originating servers, but this is not as secure.</p>
+<h2>9.4.5 NetworkSensor</h2>
+<pre>NetworkSensor : X3DNetworkSensorNode {
+    SFBool    [in,out] enabled         TRUE
+    SFNode    [in,out] metadata        NULL  [X3DMetadataObject]
+    SFBool    [out]    isActive
+    SFNode    [in out] connection      NULL [Connection node only]
+    SFString  [in]     httpRequest     ""
+    MFString  [out]    httpResponse    NULL
+    SFString  []       channelId       ""
+    # And any number of:
+    fieldType [in]     fieldName
+    fieldType [in,out] fieldName
+    fieldType [out]    fieldName
+    fieldType []       fieldName
+}
+</pre>
+<p>The NetworkSensor is intended to provide more efficient sending and
+receiving of
+events via a network connection than would normally be possible via an
+external API. It acts as a high speed gateway between a network
+stream and the X3D scene graph so routes can be set to/from it. It
+defines a set of fields to be sent/received over a <span style="font-style: italic;">connection</span>.&nbsp; The connection
+shall be non blocking: the node shall wait for a response without
+suspending the execution of other Browser functions.<br>
+</p>
+<p style="font-style: normal;">Fan in of events is treated the same as
+other nodes: multiple events received at the same "time" are not
+buffered, they are sent as
+one packet.&nbsp; In the case of HTTP, if the node is waiting on a
+response then it is up to the Browser implementation to
+buffer incoming MFString events or not.<br>
+</p>
+<p><i>enabled</i><span style="font-style: normal;"> is initially TRUE.</span></p>
+<span style="font-style: italic;">connection </span>specifies the
+network connection to use.<br>
+<br>
+<span style="font-style: italic;">httprequest</span>&nbsp; and <span style="font-style: italic;">httpResponse</span> only apply when the
+protocol is HTTP. The HTTP capability should allow for HTTP functions
+such as POS, MGET, HEADER and others defined in HTTP. When the
+protocol is HTTP, "fieldType" fields<span style="font-style: italic;"></span><span style="font-style: italic;"></span><span style="font-style: italic;"></span><span style="font-style: italic;"></span><span style="font-style: italic;"></span>
+are ignored.
+<p><span style="font-style: italic;">httprequest </span>contains at
+least a URL but this may be preceeded by a HTTP header. The X3D Browser
+shall support the use
+of standard URL encoded parameters with the special characters "?",
+"=", """ and "&amp;" appended to the URL. The domain is already
+specified in the
+connection field.<br>
+</p>
+<p><span style="font-style: italic;">httpResponse </span>is the event
+returned from a server in response to a HTTP request. The response must
+be
+in the form of an X3D MFNode. That is, the HTTP <span style="font-style: italic;">httprequest</span>-<span style="font-style: italic;">httpResponse </span>sequence shall
+operate in a similar way as if it came from a CreateX3DFromUrl
+call.&nbsp; <br>
+</p>
+<p><span style="font-style: italic;">channelId&nbsp; </span>identifies
+the NetworkSensor node instance which corresponds to a communication channel. For example, two clients with the same channel id of 1 could communicate the same type of data between them.
+This enables more than one NetworkSensor to use
+the same <span style="font-style: italic;">connection </span>and the <span style="font-style: italic;">connection </span>can&nbsp; push the id's
+over the network&nbsp; so a recipient can know which
+NetworkSensor&nbsp; it came from.<br>
+</p>
+Any number of fields and field types can be defined.<span style="font-style: italic;"></span> The transmission format will be
+determined by the chosen protocol.<br>
+The
+default mapping order of fields to elements in transmission packets is
+in-order.<br>
+  
+  
+<hr/>
+
+
+<p><i>Insert row in Support levels table 9.3, support level 4:</i></p>
+
+<p><b>Connection</b> | 
+"Lower level protocols: HTTP1.0, HTTP1.1,
+TCP/IP and UDP shall be supported except multicast which
+is optional. The W3C URL encoding standard shall be supported.
+"</p>
+
+<hr/>
+
+<h3>4.4.2.3 Interface hierarchy</h3>
+<p><i>Add the following to the interface hierarchy diagram:</i></p>
+<br>
+"<br>
++- X3DNetworkSensorNode -+- Connection<br>
+<p style="margin-bottom: 0cm;"> </p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-+- NetworkSensor<br>
+"<br>
+<p style="margin-bottom: 0cm;"> </p>
+
+
+</body></html>

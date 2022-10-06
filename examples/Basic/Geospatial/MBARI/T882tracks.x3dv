@@ -1,0 +1,1822 @@
+#X3D V3.2 utf8
+
+PROFILE Immersive
+COMPONENT Geospatial:1
+COMPONENT xj3d_Time:1
+COMPONENT Layering:1
+COMPONENT EnvironmentalEffects:3
+COMPONENT xj3d_Layering:1
+
+META "version", "'# $Id: pdx3dc.py,v 1.5 2009/12/07 01:49:13 mccann Exp $'"
+META "title" "TrackPrototype.x3dv"
+META "description" "VCR-style playback of vehicle track data."
+META "creator" "$Id: pdx3dc.py,v 1.5 2009/12/07 01:49:13 mccann Exp $"
+META "created" ""
+META "modified" ""
+META "reference" "http://www.web3d.org/x3d-earth"
+META "reference" "http://x3d-earth.nps.edu"
+META "identifier" ""
+META "generator" "$Id: pdx3dc.py,v 1.5 2009/12/07 01:49:13 mccann Exp $"
+META "license" "license.html"
+
+
+
+EXTERNPROTO Track [
+   initializeOnly SFColor trackColor                        # The color of the track line
+   initializeOnly SFFloat trackLineScale                    # The linewidth scale factor for the track line
+   initializeOnly SFFloat trackLinePickingWidth             # The width of the picking box in degrees
+   initializeOnly SFFloat trackLinePickingHeight            # The height of the picking box in meters
+   initializeOnly SFColor markerColor                       # The color of the location markers
+   initializeOnly SFFloat markerSize                        # The size of the location markers in meters
+   initializeOnly MFInt32 numLocations                      # The number of locations in the locations array
+   initializeOnly MFVec3d locations                         # The locations described in lat/long/height
+   initializeOnly MFRotation orientations                   # The orientation of the vehicle at the locations
+   initializeOnly MFFloat timings                           # Fractional time of each location
+   initializeOnly SFBool pickingEnabled                     # Is picking enabled on the segments
+   initializeOnly MFFloat dataValue0                        # Data value for each segment, set 1
+   initializeOnly MFFloat dataValue1                        # Data value for each segment, set 2
+   initializeOnly MFFloat dataValue2                        # Data value for each segment, set 3
+   initializeOnly MFFloat dataValue3                        # Data value for each segment, set 4
+   initializeOnly MFFloat dataValue4                        # Data value for each segment, set 5
+   initializeOnly MFFloat dataValue5                        # Data value for each segment, set 6
+   initializeOnly MFFloat dataValue6                        # Data value for each segment, set 7
+   initializeOnly MFFloat dataValue7                        # Data value for each segment, set 8
+   
+   initializeOnly MFColor dataVis0                          # Data to color the lines, set 1
+   initializeOnly MFColor dataVis1                          # Data to color the lines, set 2
+   initializeOnly MFColor dataVis2                          # Data to color the lines, set 3
+   initializeOnly MFColor dataVis3                          # Data to color the lines, set 4
+   initializeOnly MFColor dataVis4                          # Data to color the lines, set 5
+   initializeOnly MFColor dataVis5                          # Data to color the lines, set 6
+   initializeOnly MFColor dataVis6                          # Data to color the lines, set 7
+   initializeOnly MFColor dataVis7                          # Data to color the lines, set 8
+
+   inputOnly SFFloat fraction                               # The simulation time to show
+   
+   inputOutput SFBool visible                               # Should this track and all its parts be displayed
+   inputOutput MFString platformModel                       # List of URLS to use for the platform models
+   inputOutput SFBool showMarkers                           # Show markers for the location points
+   initializeOnly SFFloat scaleFactor                       # Distance scale factor for platform model      
+   inputOutput SFInt32 dataShown                            # Which data set to show, -1 for none
+   
+   outputOnly SFBool platformSelected                       # The platform has been clicked
+   outputOnly SFBool platformActive                         # The platform's touchsensor isActive
+   outputOnly SFInt32 locationIndexOver                     # The index value of the segment location the mouse is over
+   outputOnly SFFloat locationTimeOver                      # the time value of the segment location the mouse is over.  Uses the time of the closet point
+   outputOnly MFFloat locationDataOver                      # The value of the segment location the mouse is over.  Uses the data value of the closet point   
+] [
+  "urn:inet:mbari.org:3dreplay:TrackProto" 
+  "TrackProto.x3dv"
+]
+
+PROTO TimeControllerLogic [
+   initializeOnly SFTime endTime 20
+   
+   inputOnly SFBool pause
+   inputOnly SFBool play
+   inputOnly SFBool fastForward
+   inputOnly SFBool fastRewind
+   inputOnly SFBool rewind
+   inputOnly SFBool start
+   inputOnly SFBool end
+   
+   inputOnly SFFloat fraction
+   
+   outputOnly SFBool run
+   outputOnly SFFloat rate
+   outputOnly SFBool direction
+   outputOnly SFTime currentTime
+   outputOnly SFBool enabled
+] {
+DEF TIME TimeSensor {
+   loop TRUE
+}
+
+DEF SCRIPT Script {
+   initializeOnly SFTime endTime IS endTime
+   
+   inputOnly SFBool pause IS pause
+   inputOnly SFBool play IS play
+   inputOnly SFBool fastForward IS fastForward
+   inputOnly SFBool fastRewind IS fastRewind
+   inputOnly SFBool rewind IS rewind
+   inputOnly SFBool start IS start
+   inputOnly SFBool end IS end
+   
+   inputOnly SFFloat fraction
+   
+   outputOnly SFBool run IS run
+   outputOnly SFFloat rate IS rate
+   outputOnly SFBool direction IS direction
+   outputOnly SFTime currentTime IS currentTime
+   outputOnly SFBool enabled IS enabled
+   
+   url ["ecmascript:
+      var nextTime = -1;
+      var currRate = 1;
+      
+      function pause(val) {
+         Browser.println('Pausing: ' + val);
+         if (val == false) 
+            return;
+            
+         run = false;
+      }
+      function play(val) {
+         if (val == false) 
+            return;
+            
+            
+         Browser.println('Running');
+	 run = true;
+	 currRate = 1;
+	 rate = currRate;
+	 direction = true;
+      }
+      function rewind(val) {
+         if (val == false) 
+            return;
+            
+            
+         Browser.println('Rewinding');
+         run = true;
+	 direction = false;
+	 currRate = 1;
+	 rate = currRate;
+      }
+      
+      function fastForward(val) {
+         if (val == false)
+            return;
+            
+         run = true;
+	 currRate = currRate * 2;
+	 rate = currRate;
+         direction = true;
+      }
+      
+      function fastRewind(val) {
+         if (val == false)
+            return;
+            
+         run = true;
+	 currRate = currRate * 2;
+	 rate = currRate;
+         direction = false;
+      }
+      
+      function start(val) {
+         if (val == false)
+            return;
+
+   	 enabled = false;
+         
+         nextTime = 0;
+      }
+
+      function end(val) {
+         if (val == false)
+            return;
+
+   	 enabled = false;
+         run = false;
+         
+         nextTime = endTime;
+      }
+      
+      function fraction(val) {      
+         if (nextTime >= 0) {
+            currentTime = nextTime;
+            enabled = true;
+            pause = true;
+            nextTime = -1;
+         }
+      }
+   "]
+}
+ROUTE TIME.fraction_changed TO SCRIPT.fraction
+
+}
+
+PROTO DVDControl [
+   outputOnly SFBool pause
+   outputOnly SFBool play
+   outputOnly SFBool fastForward
+   outputOnly SFBool fastRewind
+   outputOnly SFBool rewind
+   outputOnly SFBool start
+   outputOnly SFBool end
+] {
+DEF MidLayerSwitch Switch {
+    whichChoice 0
+    children [
+      DEF DisplayPlaybackButtonsMid Transform {
+	translation 2.86 0 0
+	children [
+	    DEF PlaybackButtons Transform {
+	      children [
+		  Transform {
+		    translation -2.05 0 0
+		    children [
+			DEF ResetToStartSensor TouchSensor {
+			  description "reset clock to beginning"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF ResetToStartButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry DEF PlaybackButton IndexedFaceSet {
+			    coordIndex [ 3 2 1 0 3 -1 ]
+			    solid FALSE
+			    coord Coordinate {
+			      point [ -0.375 0.25 0.05 0.375 0.25 0.05 0.375 -0.25 0.05 -0.375 -0.25 0.05 ]
+			    }
+			  }
+			}
+			Transform {
+			  children [
+			      Transform {
+				translation -0.12 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material DEF ResetToStartLabelMaterial Material {
+					}
+				      }
+				      geometry DEF Bar Box {
+					size 0.04 0.3 0.12
+				      }
+				    }
+				]
+			      }
+			      Transform {
+				translation 0.01 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material USE ResetToStartLabelMaterial
+				      }
+				      geometry DEF Triangle IndexedFaceSet {
+					coordIndex [ 0 1 2 -1 ]
+					coord Coordinate {
+					  point [ -0.15 0 0.051 0.15 -0.15 0.051 0.15 0.15 0.051 ]
+					}
+				      }
+				    }
+				]
+			      }
+			  ]
+			}
+		    ]
+		  }
+		  Transform {
+		    translation -1.36 0 0
+		    children [
+			DEF FastRewindSensor TouchSensor {
+			  description "fast rewind"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF FastRewindButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry USE PlaybackButton
+			}
+			Transform {
+			  children [
+			      Transform {
+				translation -0.15 0.0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material DEF FastRewindLabelMaterial Material {
+					}
+				      }
+				      geometry USE Triangle
+				    }
+				]
+			      }
+			      Transform {
+				translation 0.1 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material USE FastRewindLabelMaterial
+				      }
+				      geometry USE Triangle
+				    }
+				]
+			      }
+			  ]
+			}
+		    ]
+		  }
+		  Transform {
+		    translation -0.68 0 0
+		    children [
+			DEF RewindSensor TouchSensor {
+			  description "rewind"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF RewindButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry USE PlaybackButton
+			}
+			Transform {
+			  children [
+			      Shape {
+				appearance Appearance {
+				  material DEF RewindLabelMaterial Material {
+				  }
+				}
+				geometry USE Triangle
+			      }
+			  ]
+			}
+		    ]
+		  }
+		  Transform {
+		    children [
+			DEF PauseSensor TouchSensor {
+			  description "pause"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF PauseButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry USE PlaybackButton
+			}
+			Transform {
+			  children [
+			      Transform {
+				translation -0.05 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material DEF PauseLabelMaterial Material {
+					}
+				      }
+				      geometry USE Bar
+				    }
+				]
+			      }
+			      Transform {
+				translation 0.085 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material USE PauseLabelMaterial
+				      }
+				      geometry USE Bar
+				    }
+				]
+			      }
+			  ]
+			}
+		    ]
+		  }
+		  Transform {
+		    translation 0.68 0 0
+		    children [
+			DEF PlaySensor TouchSensor {
+			  description "play"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF PlayButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry USE PlaybackButton
+			}
+			Transform {
+			  rotation 0 0 1 3.14
+			  translation 0.05 0 0
+			  children [
+			      Shape {
+				appearance Appearance {
+				  material DEF PlayLabelMaterial Material {
+				  }
+				}
+				geometry USE Triangle
+			      }
+			  ]
+			}
+		    ]
+		  }
+		  Transform {
+		    translation 1.36 0 0
+		    children [
+			DEF FastForwardSensor TouchSensor {
+			  description "fast forward"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF FastForwardButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry USE PlaybackButton
+			}
+			Transform {
+			  rotation 0 0 1 3.14
+			  children [
+			      Transform {
+				translation -0.15 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material DEF FastForwardLabelMaterial Material {
+					}
+				      }
+				      geometry USE Triangle
+				    }
+				]
+			      }
+			      Transform {
+				translation 0.1 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material USE FastForwardLabelMaterial
+				      }
+				      geometry USE Triangle
+				    }
+				]
+			      }
+			  ]
+			}
+		    ]
+		  }
+		  Transform {
+		    translation 2.05 0 0
+		    children [
+			DEF ResetToEndSensor TouchSensor {
+			  description "reset clock to end"
+			}
+			Shape {
+			  appearance Appearance {
+			    material DEF ResetToEndButtonMaterial Material {
+			      transparency 0.9
+			    }
+			  }
+			  geometry USE PlaybackButton
+			}
+			Transform {
+			  children [
+			      Transform {
+				rotation 0 0 1 3.14
+				children [
+				    Shape {
+				      appearance Appearance {
+					material DEF ResetToEndLabelMaterial Material {
+					}
+				      }
+				      geometry USE Triangle
+				    }
+				]
+			      }
+			      Transform {
+				translation 0.12 0 0
+				children [
+				    Shape {
+				      appearance Appearance {
+					material USE ResetToEndLabelMaterial
+				      }
+				      geometry USE Bar
+				    }
+				]
+			      }
+			  ]
+			}
+		    ]
+		  }
+	      ]
+	    }
+	]
+      }
+      DEF DisplayNoneMid Transform {
+      }
+    ]
+  }
+                          
+  DEF PlaybackControlScript Script {
+    initializeOnly SFBool   traceEnabled FALSE
+    initializeOnly SFBool   playEnabled FALSE
+    initializeOnly SFColor  buttonColor 0 0 1
+    initializeOnly SFColor  activeButtonColor 1 0 0
+    initializeOnly SFColor  labelColor 1 1 1
+    initializeOnly SFColor  activeLabelColor 1 0 0
+    initializeOnly SFBool   isActive TRUE
+    inputOnly      SFBool   setIsActive
+    initializeOnly SFBool   resetToStartToggleArmed FALSE
+    initializeOnly SFBool   fastRewindToggleArmed FALSE
+    initializeOnly SFBool   rewindToggleArmed FALSE
+    initializeOnly SFBool   pauseToggleArmed FALSE
+    initializeOnly SFBool   playToggleArmed FALSE
+    initializeOnly SFBool   fastForwardToggleArmed FALSE
+    initializeOnly SFBool   resetToEndToggleArmed FALSE
+    inputOnly      SFBool   resetToStartToggleEnabled
+    inputOnly      SFBool   fastRewindToggleEnabled
+    inputOnly      SFBool   rewindToggleEnabled
+    inputOnly      SFBool   pauseToggleEnabled
+    inputOnly      SFBool   playToggleEnabled
+    inputOnly      SFBool   fastForwardToggleEnabled
+    inputOnly      SFBool   resetToEndToggleEnabled
+    outputOnly     SFColor  resetToStartButtonColor
+    outputOnly     SFColor  resetToStartLabelColor
+    outputOnly     SFColor  fastRewindButtonColor
+    outputOnly     SFColor  fastRewindLabelColor
+    outputOnly     SFColor  rewindButtonColor
+    outputOnly     SFColor  rewindLabelColor
+    outputOnly     SFColor  pauseButtonColor
+    outputOnly     SFColor  pauseLabelColor
+    outputOnly     SFColor  playButtonColor
+    outputOnly     SFColor  playLabelColor
+    outputOnly     SFColor  fastForwardButtonColor
+    outputOnly     SFColor  fastForwardLabelColor
+    outputOnly     SFColor  resetToEndButtonColor
+    outputOnly     SFColor  resetToEndLabelColor
+    outputOnly     SFBool   isPaused
+    outputOnly     SFBool   isRunning
+    outputOnly     SFBool   resetToStartChanged IS start
+    outputOnly     SFBool   fastRewindChanged IS fastRewind
+    outputOnly     SFBool   rewindChanged IS rewind
+    outputOnly     SFBool   pauseChanged IS pause
+    outputOnly     SFBool   playChanged IS play
+    outputOnly     SFBool   fastForwardChanged IS fastForward
+    outputOnly     SFBool   resetToEndChanged IS end
+                                                                                                                                                                                                                                                                                                                                                                                                                             ### Error:  function initialize() method signature cannot include any passed parameters.
+
+    url [ "ecmascript:
+// ### X3D Browser.print() not supported by all VRML97 viewers, instead simply use print()
+
+
+function tracePrint (text)
+{
+    if (traceEnabled) Browser.println ('[DvdController PlaybackControlScript]' + text);
+}
+function TraceLabelColors ()
+{
+    if (traceEnabled == false) return;
+/*
+    Browser.print ('    buttonColor=' + buttonColor);
+    Browser.print ('    activeButtonColor=' + activeButtonColor);
+    Browser.print ('    labelColor=' + labelColor);
+    Browser.print ('    activeLabelColor=' + activeLabelColor);
+
+    Browser.print ('    resetToStartLabelColor=' + resetToStartLabelColor);
+    Browser.print ('    fastRewindLabelColor=' + fastRewindLabelColor);
+    Browser.print ('    rewindLabelColor=' + rewindLabelColor);
+    Browser.print ('    pauseLabelColor=' + pauseLabelColor);
+    Browser.print ('    playLabelColor=' + playLabelColor);
+    Browser.print ('    fastForwardLabelColor=' + fastForwardLabelColor);
+    Browser.print ('    resetToEndLabelColor=' + resetToEndLabelColor);
+*/    
+}
+function initialize(timeStamp)
+{
+    tracePrint ('initialize() starting...');
+    if (!playEnabled)
+    {
+        resetToStartButtonColor = buttonColor;
+        fastRewindButtonColor   = buttonColor;
+        rewindButtonColor       = buttonColor;
+        pauseButtonColor        = activeButtonColor;
+        playButtonColor         = buttonColor;
+        fastForwardButtonColor  = buttonColor;
+        resetToEndButtonColor   = buttonColor;
+
+        resetToStartLabelColor  = labelColor;
+        fastRewindLabelColor    = labelColor;
+        rewindLabelColor        = labelColor;
+        pauseLabelColor         = activeLabelColor;
+        playLabelColor          = labelColor;
+        fastForwardLabelColor   = labelColor;
+        resetToEndLabelColor    = labelColor;
+
+        isPaused = true;
+        isRunning = false;
+        TraceLabelColors ();
+    }
+    else // playEnabled == true
+    {
+        playToggleEnabled(true, timeStamp);
+        playToggleArmed = false;
+    }
+    tracePrint ('...initialize() complete');
+}
+function setIsActive(value, timeStamp)
+{
+    isActive = value;
+}
+function resetToStartToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('resetToStartToggleEnabled (' + value + ')' + ', resetToStartToggleArmed=' + resetToStartToggleArmed);
+    isPaused  = true;
+    isRunning = false;
+    resetToStartChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = buttonColor;
+    rewindButtonColor       = buttonColor;
+    pauseButtonColor        = activeButtonColor;
+    playButtonColor         = buttonColor;
+    fastForwardButtonColor  = buttonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = labelColor;
+    rewindLabelColor       = labelColor;
+    pauseLabelColor        = activeLabelColor;
+    playLabelColor         = labelColor;
+    fastForwardLabelColor  = labelColor;
+    resetToEndLabelColor   = labelColor;
+
+}
+function fastRewindToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('fastRewindToggleEnabled (' + value + ')' + ', fastRewindToggleArmed=' + fastRewindToggleArmed);
+
+    isPaused  = true;
+    isRunning = false;
+    fastRewindChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = activeButtonColor;
+    rewindButtonColor       = buttonColor;
+    pauseButtonColor        = buttonColor;
+    playButtonColor         = buttonColor;
+    fastForwardButtonColor  = buttonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = activeLabelColor;
+    rewindLabelColor       = labelColor;
+    pauseLabelColor        = labelColor;
+    playLabelColor         = labelColor;
+    fastForwardLabelColor  = labelColor;
+    resetToEndLabelColor   = labelColor;
+
+    TraceLabelColors ();
+}
+
+function rewindToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('rewindToggleEnabled (' + value + ')' + ', rewindToggleArmed=' + rewindToggleArmed);
+
+    isPaused  = true;
+    isRunning = false;
+    rewindChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = buttonColor;
+    rewindButtonColor       = activeButtonColor;
+    pauseButtonColor        = buttonColor;
+    playButtonColor         = buttonColor;
+    fastForwardButtonColor  = buttonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = labelColor;
+    rewindLabelColor       = activeLabelColor;
+    pauseLabelColor        = labelColor;
+    playLabelColor         = labelColor;
+    fastForwardLabelColor  = labelColor;
+    resetToEndLabelColor   = labelColor;
+
+    TraceLabelColors ();
+}
+
+function pauseToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('pauseToggleEnabled (' + value + ')' + ', pauseToggleArmed=' + pauseToggleArmed);
+
+    isPaused  = true;
+    isRunning = false;
+Browser.println('setting pauseChanged');    
+    pauseChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = buttonColor;
+    rewindButtonColor       = buttonColor;
+    pauseButtonColor        = activeButtonColor;
+    playButtonColor         = buttonColor;
+    fastForwardButtonColor  = buttonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = labelColor;
+    rewindLabelColor       = labelColor;
+    pauseLabelColor        = activeLabelColor;
+    playLabelColor         = labelColor;
+    fastForwardLabelColor  = labelColor;
+    resetToEndLabelColor   = labelColor;
+
+    TraceLabelColors ();
+}
+
+function playToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('playToggleEnabled (' + value + ')' + ', pauseToggleArmed=' + playToggleArmed);
+
+    isPaused  = false;
+    isRunning = true;
+    playChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = buttonColor;
+    rewindButtonColor       = buttonColor;
+    pauseButtonColor        = buttonColor;
+    playButtonColor         = activeButtonColor;
+    fastForwardButtonColor  = buttonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = labelColor;
+    rewindLabelColor       = labelColor;
+    pauseLabelColor        = labelColor;
+    playLabelColor         = activeLabelColor;
+    fastForwardLabelColor  = labelColor;
+    resetToEndLabelColor   = labelColor;
+
+    TraceLabelColors ();
+}
+
+function fastForwardToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('fastForwardToggleEnabled (' + value + ')' + ', fastForwardToggleArmed=' + fastForwardToggleArmed);
+
+    isPaused  = false;
+    isRunning = true;
+    fastForwardChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = buttonColor;
+    rewindButtonColor       = buttonColor;
+    pauseButtonColor        = buttonColor;
+    playButtonColor         = buttonColor;
+    fastForwardButtonColor  = activeButtonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = labelColor;
+    rewindLabelColor       = labelColor;
+    pauseLabelColor        = labelColor;
+    playLabelColor         = labelColor;
+    fastForwardLabelColor  = activeLabelColor;
+    resetToEndLabelColor   = labelColor;
+
+    TraceLabelColors ();
+}
+
+function resetToEndToggleEnabled(value, timeStamp)
+{
+    if (value == false) return;
+    tracePrint ('resetToEndToggleEnabled (' + value + ')' + ', resetToEndToggleArmed=' + resetToEndToggleArmed);
+    
+    isPaused  = true;
+    isRunning = false;
+    resetToEndChanged = true;
+
+    if (!isActive) return;
+
+    resetToStartButtonColor = buttonColor;
+    fastRewindButtonColor   = buttonColor;
+    rewindButtonColor       = buttonColor;
+    pauseButtonColor        = activeButtonColor;
+    playButtonColor         = buttonColor;
+    fastForwardButtonColor  = buttonColor;
+    resetToEndButtonColor   = buttonColor;
+
+    resetToStartLabelColor = labelColor;
+    fastRewindLabelColor   = labelColor;
+    rewindLabelColor       = labelColor;
+    pauseLabelColor        = activeLabelColor;
+    playLabelColor         = labelColor;
+    fastForwardLabelColor  = labelColor;
+    resetToEndLabelColor   = labelColor;
+}
+                        
+                      
+" ]
+                                          }
+         
+
+ROUTE PlaybackControlScript.resetToStartButtonColor TO ResetToStartButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.resetToStartLabelColor TO ResetToStartLabelMaterial.diffuseColor
+ROUTE PlaybackControlScript.fastRewindButtonColor TO FastRewindButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.fastRewindLabelColor TO FastRewindLabelMaterial.diffuseColor
+ROUTE PlaybackControlScript.rewindButtonColor TO RewindButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.rewindLabelColor TO RewindLabelMaterial.diffuseColor
+ROUTE PlaybackControlScript.pauseButtonColor TO PauseButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.pauseLabelColor TO PauseLabelMaterial.diffuseColor
+ROUTE PlaybackControlScript.playButtonColor TO PlayButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.playLabelColor TO PlayLabelMaterial.diffuseColor
+ROUTE PlaybackControlScript.fastForwardButtonColor TO FastForwardButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.fastForwardLabelColor TO FastForwardLabelMaterial.diffuseColor
+ROUTE PlaybackControlScript.resetToEndButtonColor TO ResetToEndButtonMaterial.diffuseColor
+ROUTE PlaybackControlScript.resetToEndLabelColor TO ResetToEndLabelMaterial.diffuseColor
+ROUTE ResetToStartSensor.isActive TO PlaybackControlScript.resetToStartToggleEnabled
+ROUTE FastRewindSensor.isActive TO PlaybackControlScript.fastRewindToggleEnabled
+ROUTE RewindSensor.isActive TO PlaybackControlScript.rewindToggleEnabled
+ROUTE PauseSensor.isActive TO PlaybackControlScript.pauseToggleEnabled
+ROUTE PlaySensor.isActive TO PlaybackControlScript.playToggleEnabled
+ROUTE FastForwardSensor.isActive TO PlaybackControlScript.fastForwardToggleEnabled
+ROUTE ResetToEndSensor.isActive TO PlaybackControlScript.resetToEndToggleEnabled
+}
+
+######################################################
+
+#
+# Real Ship and ROV tracks for Dive T882
+#
+
+DEF ROV_T882 Track {
+   platformModel ["simple_ventana.x3dv"]
+   scaleFactor 0.002   
+   pickingEnabled TRUE   
+   trackColor 1 0 0
+   numLocations [672]
+   dataShown 0   
+   timings [
+ 0.000000 0.001477 0.002979 0.004457 0.005934 0.007436 0.008913 0.010391 0.011893 0.013370 0.014872 0.016349 0.017851 0.019329 0.020806 0.022308 0.023785 0.025263 0.026765 0.028242 0.029744 0.031222 0.032699 0.034201 0.035703 0.037180 0.038658 0.040160 0.041637 0.043139 0.044616 0.046118 0.047596 0.049098 0.050575 0.052052 0.053554 0.055056 0.056534 0.058011 0.059513 0.060990 0.062492 0.063970 0.065472 0.066949 0.068451 0.069928 0.071430 0.072908 0.074410 0.075912 0.077389 0.078891 0.080368 0.081870 0.083348 0.084825 0.086327 0.087804 0.089306 0.090784 0.092286 0.093763 0.095265 0.096742 0.098244 0.099722 0.101224 0.102701 0.104203 0.105680 0.107158 0.108660 0.110137 0.111639 0.113116 0.114618 0.116096 0.117598 0.119075 0.120577 0.122055 0.123556 0.125034 0.126511 0.128013 0.129491 0.130993 0.132470 0.133972 0.135449 0.136951 0.138429 0.139931 0.141408 0.142910 0.144387 0.145889 0.147367 0.148869 0.150346 0.151848 0.153325 0.154827 0.156305 0.157807 0.159309 0.160786 0.162263 0.163765 0.165243 0.166720 0.168222 0.169699 0.171201 0.172679 0.174156 0.175658 0.177135 0.178613 0.180115 0.181592 0.183094 0.184571 0.186073 0.187551 0.189053 0.190530 0.192007 0.193509 0.194987 0.196489 0.197966 0.199444 0.200946 0.202423 0.203925 0.205402 0.206904 0.208382 0.209884 0.211361 0.212838 0.214340 0.215818 0.217320 0.218797 0.220299 0.221776 0.223278 0.224756 0.226233 0.227735 0.229212 0.230714 0.232192 0.233694 0.235171 0.236673 0.238150 0.239652 0.241130 0.242632 0.244109 0.245611 0.247088 0.248590 0.250068 0.251545 0.253047 0.254524 0.256026 0.257504 0.259006 0.260483 0.261985 0.263462 0.264964 0.266442 0.267919 0.269421 0.270898 0.272400 0.273878 0.275355 0.276857 0.278335 0.279837 0.281314 0.282816 0.284293 0.285771 0.287273 0.288750 0.290227 0.291729 0.293207 0.294709 0.296186 0.297688 0.299165 0.300667 0.302145 0.303647 0.305124 0.306626 0.308103 0.309605 0.311083 0.312585 0.314062 0.315564 0.317041 0.318519 0.320021 0.321498 0.323000 0.324502 0.325979 0.327481 0.328959 0.330461 0.331938 0.333415 0.334917 0.336395 0.337897 0.339374 0.340851 0.342353 0.343831 0.345308 0.346810 0.348287 0.349765 0.351267 0.352744 0.354222 0.355724 0.357201 0.358703 0.360180 0.361658 0.363160 0.364637 0.366139 0.367616 0.369094 0.370596 0.372073 0.373575 0.375052 0.376530 0.378032 0.379509 0.381011 0.382488 0.383966 0.385468 0.386945 0.388447 0.389949 0.391426 0.392904 0.394406 0.395883 0.397385 0.398862 0.400364 0.401842 0.403344 0.404821 0.406298 0.407800 0.409278 0.410755 0.412257 0.413735 0.415237 0.416714 0.418216 0.419693 0.421195 0.422673 0.424175 0.425652 0.427154 0.428631 0.430109 0.431611 0.433088 0.434590 0.436067 0.437569 0.439047 0.440524 0.442026 0.443503 0.445005 0.446483 0.447985 0.449462 0.450964 0.452441 0.453919 0.455421 0.456898 0.458400 0.459877 0.461355 0.462857 0.464334 0.465836 0.467313 0.468791 0.470293 0.471770 0.473272 0.474749 0.476251 0.477729 0.479206 0.480708 0.482186 0.483663 0.485165 0.486642 0.488144 0.489622 0.491124 0.492601 0.494078 0.495580 0.497058 0.498560 0.500037 0.501539 0.503016 0.504518 0.505996 0.507473 0.508975 0.510452 0.511954 0.513432 0.514934 0.516411 0.517913 0.519390 0.520868 0.522370 0.523847 0.525349 0.526826 0.528328 0.529830 0.531308 0.532810 0.534287 0.535764 0.537266 0.538744 0.540246 0.541723 0.543200 0.544702 0.546180 0.547682 0.549159 0.550636 0.552138 0.553640 0.555118 0.556620 0.558097 0.559575 0.561077 0.562554 0.564056 0.565558 0.567035 0.568537 0.570015 0.571517 0.572994 0.574496 0.575973 0.577451 0.578953 0.580430 0.581932 0.583409 0.584911 0.586389 0.587891 0.589368 0.590870 0.592347 0.593825 0.595327 0.596804 0.598306 0.599783 0.601285 0.602763 0.604240 0.605742 0.607219 0.608721 0.610199 0.611676 0.613178 0.614680 0.616157 0.617635 0.619137 0.620614 0.622116 0.623593 0.625095 0.626573 0.628075 0.629552 0.631054 0.632531 0.634009 0.635511 0.636988 0.638490 0.639967 0.641469 0.642947 0.644449 0.645926 0.647428 0.648906 0.650408 0.651885 0.653362 0.654864 0.656342 0.657844 0.659321 0.660798 0.662300 0.663778 0.665280 0.666757 0.668259 0.669736 0.671238 0.672716 0.674193 0.675695 0.677172 0.678650 0.680152 0.681629 0.683131 0.684608 0.686086 0.687588 0.689065 0.690567 0.692044 0.693522 0.695024 0.696501 0.698003 0.699480 0.700958 0.702460 0.703937 0.705439 0.706917 0.708418 0.709896 0.711398 0.712875 0.714377 0.715855 0.717357 0.718834 0.720336 0.721813 0.723315 0.724793 0.726295 0.727772 0.729274 0.730776 0.732253 0.733755 0.735233 0.736710 0.738212 0.739689 0.741191 0.742669 0.744171 0.745648 0.747125 0.748627 0.750105 0.751582 0.753084 0.754561 0.756039 0.757541 0.759018 0.760495 0.761997 0.763475 0.764977 0.766454 0.767956 0.769433 0.770935 0.772437 0.773915 0.775392 0.776894 0.778371 0.779873 0.781351 0.782853 0.784330 0.785832 0.787309 0.788811 0.790289 0.791791 0.793268 0.794770 0.796248 0.797749 0.799227 0.800729 0.802206 0.803708 0.805186 0.806688 0.808165 0.809667 0.811144 0.812646 0.814124 0.815626 0.817103 0.818605 0.820082 0.821584 0.823062 0.824564 0.826041 0.827543 0.829020 0.830498 0.832000 0.833477 0.834979 0.836456 0.837958 0.839436 0.840938 0.842415 0.843917 0.845394 0.846872 0.848374 0.849851 0.851353 0.852830 0.854332 0.855810 0.857312 0.858789 0.860291 0.861768 0.863270 0.864748 0.866250 0.867727 0.869229 0.870706 0.872208 0.873686 0.875188 0.876665 0.878167 0.879644 0.881146 0.882624 0.884126 0.885603 0.887105 0.888582 0.890084 0.891562 0.893064 0.894541 0.896043 0.897520 0.899022 0.900500 0.902002 0.903479 0.904981 0.906459 0.907936 0.909438 0.910915 0.912417 0.913895 0.915397 0.916874 0.918376 0.919853 0.921355 0.922833 0.924335 0.925812 0.927314 0.928791 0.930269 0.931771 0.933248 0.934750 0.936227 0.937729 0.939207 0.940709 0.942186 0.943688 0.945165 0.946643 0.948145 0.949622 0.951124 0.952601 0.954103 0.955605 0.957083 0.958585 0.960062 0.961564 0.963041 0.964543 0.966021 0.967523 0.969000 0.970502 0.971979 0.973481 0.974959 0.976461 0.977938 0.979440 0.980917 0.982419 0.983897 0.985399 0.986876 0.988378 0.989855 0.991357 0.992835 0.994337 0.995814 0.997316 0.998793
+   ]
+   
+   locations [
+ 46.532513 -129.573971 -2.0,  46.532475 -129.574012 -18.7,  46.532488
+-129.574038 -29.9,  46.532504 -129.574063 -32.7,  46.532468 -129.574057 -45.4,
+46.532481 -129.574075 -64.9,  46.532497 -129.574070 -89.6,  46.532515
+-129.574025 -118.0,  46.532547 -129.574160 -142.9,  46.532588 -129.574314
+-175.3,  46.532652 -129.574465 -200.2,  46.532693 -129.574454 -221.6,  46.532711
+-129.574412 -253.6,  46.532691 -129.574353 -287.2,  46.532682 -129.574280
+-321.5,  46.532691 -129.574286 -355.5,  46.532722 -129.574317 -386.1,  46.532715
+-129.574360 -417.8,  46.532647 -129.574326 -449.7,  46.532585 -129.574287
+-482.1,  46.532558 -129.574273 -513.4,  46.532489 -129.574181 -542.1,  46.532511
+-129.574159 -577.8,  46.532551 -129.574062 -608.3,  46.532561 -129.574139
+-644.2,  46.532576 -129.574139 -680.2,  46.532537 -129.574111 -714.3,  46.532562
+-129.574142 -748.5,  46.532599 -129.574182 -783.3,  46.532593 -129.574208
+-818.9,  46.532583 -129.574196 -854.2,  46.532570 -129.574170 -886.1,  46.532590
+-129.574189 -921.8,  46.532589 -129.574148 -959.4,  46.532579 -129.574083
+-996.8,  46.532591 -129.574045 -1034.1,  46.532628 -129.574009 -1071.5,
+46.532643 -129.573989 -1108.9,  46.532641 -129.573970 -1146.2,  46.532639
+-129.573958 -1183.4,  46.532613 -129.573896 -1220.4,  46.532610 -129.573873
+-1257.8,  46.532650 -129.573880 -1295.9,  46.532668 -129.574049 -1330.0,
+46.532678 -129.574116 -1367.9,  46.532672 -129.574154 -1406.3,  46.532692
+-129.574127 -1444.3,  46.532673 -129.574126 -1482.2,  46.532761 -129.574237
+-1519.3,  46.532772 -129.574281 -1557.9,  46.532793 -129.574263 -1596.6,
+46.532824 -129.574265 -1634.1,  46.532855 -129.574333 -1671.1,  46.532832
+-129.574279 -1704.8,  46.532725 -129.574140 -1735.8,  46.532638 -129.574036
+-1769.6,  46.532655 -129.574031 -1806.1,  46.532665 -129.574083 -1843.5,
+46.532688 -129.574113 -1877.3,  46.532744 -129.574160 -1914.0,  46.532741
+-129.574093 -1950.1,  46.532766 -129.574115 -1984.3,  46.532774 -129.574108
+-2019.3,  46.532744 -129.574115 -2053.6,  46.532696 -129.574041 -2088.3,
+46.532686 -129.574063 -2121.7,  46.532703 -129.574052 -2157.4,  46.532757
+-129.574086 -2193.5,  46.532829 -129.574104 -2229.5,  46.532828 -129.574114
+-2264.6,  46.532725 -129.574056 -2298.1,  46.532641 -129.574004 -2331.2,
+46.532537 -129.573953 -2362.1,  46.532465 -129.573963 -2395.8,  46.532510
+-129.574047 -2424.6,  46.532562 -129.574088 -2431.8,  46.532552 -129.574070
+-2432.8,  46.532568 -129.574057 -2432.2,  46.532558 -129.574019 -2432.4,
+46.532552 -129.574053 -2431.1,  46.532533 -129.574071 -2432.6,  46.532506
+-129.574087 -2431.5,  46.532511 -129.574093 -2433.6,  46.532532 -129.574004
+-2433.9,  46.532524 -129.574038 -2433.8,  46.532499 -129.574084 -2433.9,
+46.532501 -129.574066 -2432.7,  46.532474 -129.574092 -2434.1,  46.532501
+-129.574121 -2434.3,  46.532495 -129.574132 -2431.7,  46.532505 -129.574133
+-2434.3,  46.532480 -129.574113 -2434.3,  46.532489 -129.574117 -2434.3,
+46.532504 -129.574102 -2434.3,  46.532526 -129.574105 -2433.9,  46.532489
+-129.574153 -2433.6,  46.532416 -129.574179 -2433.2,  46.532343 -129.574205
+-2434.1,  46.532312 -129.574276 -2434.9,  46.532313 -129.574362 -2435.8,
+46.532324 -129.574361 -2434.1,  46.532298 -129.574363 -2435.0,  46.532222
+-129.574466 -2433.8,  46.532196 -129.574581 -2433.2,  46.532226 -129.574563
+-2430.3,  46.532225 -129.574549 -2428.9,  46.532216 -129.574560 -2430.8,
+46.532210 -129.574618 -2431.4,  46.532128 -129.574656 -2430.8,  46.532099
+-129.574682 -2433.4,  46.532053 -129.574718 -2435.9,  46.531977 -129.574817
+-2435.3,  46.531946 -129.574823 -2433.0,  46.531874 -129.574868 -2432.1,
+46.531876 -129.574883 -2431.1,  46.531876 -129.574870 -2428.8,  46.531851
+-129.574898 -2427.0,  46.531834 -129.574989 -2425.4,  46.531763 -129.575077
+-2421.3,  46.531725 -129.575051 -2420.9,  46.531659 -129.574985 -2420.9,
+46.531724 -129.575032 -2420.9,  46.531734 -129.575079 -2420.9,  46.531719
+-129.575082 -2421.0,  46.531738 -129.575081 -2421.0,  46.531709 -129.575034
+-2421.0,  46.531705 -129.575035 -2417.3,  46.531650 -129.575077 -2414.3,
+46.531571 -129.575042 -2411.9,  46.531509 -129.575051 -2409.8,  46.531415
+-129.575026 -2410.6,  46.531307 -129.575080 -2408.0,  46.531272 -129.575111
+-2408.6,  46.531134 -129.575192 -2411.9,  46.531053 -129.575222 -2415.6,
+46.530933 -129.575315 -2418.8,  46.530835 -129.575372 -2422.6,  46.530785
+-129.575390 -2426.0,  46.530754 -129.575357 -2429.6,  46.530695 -129.575304
+-2434.0,  46.530713 -129.575239 -2433.4,  46.530653 -129.575109 -2438.0,
+46.530484 -129.574943 -2444.7,  46.530495 -129.574744 -2445.4,  46.530543
+-129.574573 -2439.9,  46.530522 -129.574375 -2445.3,  46.530438 -129.574187
+-2442.2,  46.530392 -129.574047 -2439.1,  46.530355 -129.573880 -2438.0,
+46.530329 -129.573763 -2437.8,  46.530261 -129.573626 -2437.6,  46.530209
+-129.573471 -2436.2,  46.530147 -129.573367 -2433.3,  46.530145 -129.573333
+-2434.3,  46.530169 -129.573329 -2434.7,  46.530169 -129.573310 -2434.6,
+46.530117 -129.573366 -2434.7,  46.530138 -129.573327 -2434.7,  46.530170
+-129.573300 -2434.8,  46.530169 -129.573294 -2434.7,  46.530157 -129.573282
+-2433.8,  46.530147 -129.573290 -2432.5,  46.530170 -129.573268 -2432.6,
+46.530135 -129.573252 -2431.2,  46.530136 -129.573208 -2428.7,  46.530084
+-129.573115 -2425.4,  46.530030 -129.573052 -2425.2,  46.529985 -129.573008
+-2422.4,  46.529926 -129.573005 -2419.6,  46.529901 -129.573004 -2419.6,
+46.529873 -129.572992 -2419.8,  46.529917 -129.572991 -2419.5,  46.529914
+-129.572980 -2419.8,  46.529927 -129.572955 -2419.3,  46.529933 -129.572983
+-2419.4,  46.529895 -129.572967 -2419.4,  46.529918 -129.572953 -2415.5,
+46.529928 -129.572990 -2419.4,  46.529908 -129.573019 -2420.2,  46.529855
+-129.573009 -2419.6,  46.529842 -129.573026 -2423.3,  46.529855 -129.573024
+-2426.6,  46.529838 -129.573033 -2419.8,  46.529803 -129.573051 -2424.2,
+46.529725 -129.573112 -2426.6,  46.529673 -129.573031 -2425.2,  46.529595
+-129.572897 -2431.3,  46.529507 -129.572754 -2439.3,  46.529382 -129.572623
+-2451.0,  46.529325 -129.572474 -2460.1,  46.529328 -129.572297 -2466.6,
+46.529317 -129.572297 -2467.0,  46.529352 -129.572299 -2467.8,  46.529364
+-129.572329 -2468.0,  46.529363 -129.572290 -2468.1,  46.529343 -129.572215
+-2467.2,  46.529305 -129.572179 -2467.8,  46.529290 -129.572162 -2465.3,
+46.529200 -129.572114 -2462.6,  46.529118 -129.572059 -2464.2,  46.529034
+-129.571945 -2463.4,  46.528945 -129.571810 -2460.7,  46.528856 -129.571697
+-2455.6,  46.528790 -129.571609 -2452.0,  46.528670 -129.571553 -2450.9,
+46.528480 -129.571505 -2450.9,  46.528304 -129.571432 -2448.6,  46.528206
+-129.571286 -2444.0,  46.528139 -129.571145 -2439.2,  46.528118 -129.571041
+-2437.1,  46.528117 -129.571055 -2438.0,  46.528133 -129.571033 -2437.9,
+46.528138 -129.571033 -2438.2,  46.528171 -129.571003 -2438.2,  46.528152
+-129.570990 -2436.9,  46.528160 -129.570954 -2437.4,  46.528148 -129.570978
+-2437.4,  46.528170 -129.570941 -2436.9,  46.528178 -129.570997 -2436.1,
+46.528200 -129.570998 -2437.1,  46.528195 -129.570978 -2437.4,  46.528200
+-129.571027 -2437.5,  46.528210 -129.570966 -2434.0,  46.528182 -129.570891
+-2434.5,  46.528189 -129.570896 -2434.7,  46.528183 -129.570876 -2434.8,
+46.528176 -129.570896 -2434.8,  46.528189 -129.570830 -2434.7,  46.528187
+-129.570789 -2433.1,  46.528004 -129.570640 -2429.6,  46.527775 -129.570244
+-2424.5,  46.527646 -129.570167 -2424.2,  46.527651 -129.570192 -2424.8,
+46.527686 -129.570207 -2424.5,  46.527689 -129.570237 -2424.4,  46.527683
+-129.570227 -2424.1,  46.527669 -129.570241 -2424.3,  46.527665 -129.570223
+-2424.4,  46.527680 -129.570277 -2424.4,  46.527684 -129.570269 -2424.3,
+46.527714 -129.570217 -2424.4,  46.527683 -129.570223 -2424.3,  46.527661
+-129.570180 -2424.4,  46.527682 -129.570238 -2424.3,  46.527614 -129.570211
+-2422.9,  46.527462 -129.570124 -2435.1,  46.527424 -129.569921 -2449.6,
+46.527364 -129.569807 -2462.0,  46.527309 -129.569767 -2467.8,  46.527233
+-129.569787 -2471.1,  46.527150 -129.569695 -2474.4,  46.527165 -129.569519
+-2476.7,  46.527068 -129.569255 -2480.0,  46.526971 -129.569008 -2482.1,
+46.526866 -129.568785 -2486.7,  46.526746 -129.568655 -2492.6,  46.526610
+-129.568565 -2499.1,  46.526613 -129.568359 -2503.3,  46.526654 -129.568102
+-2502.8,  46.526616 -129.567829 -2494.5,  46.526507 -129.567574 -2502.9,
+46.526408 -129.567385 -2507.4,  46.526331 -129.567139 -2499.3,  46.526304
+-129.566906 -2493.7,  46.526127 -129.566661 -2501.6,  46.526070 -129.566443
+-2504.3,  46.526045 -129.566387 -2502.1,  46.526048 -129.566428 -2504.0,
+46.526021 -129.566394 -2503.7,  46.526024 -129.566375 -2503.2,  46.526049
+-129.566399 -2506.0,  46.526073 -129.566363 -2506.2,  46.526068 -129.566378
+-2503.0,  46.526055 -129.566354 -2504.0,  46.526002 -129.566346 -2504.5,
+46.525998 -129.566500 -2502.9,  46.526020 -129.566545 -2502.9,  46.526007
+-129.566564 -2503.1,  46.525963 -129.566585 -2502.8,  46.525995 -129.566563
+-2504.0,  46.525996 -129.566560 -2504.9,  46.525957 -129.566600 -2504.5,
+46.525927 -129.566606 -2504.5,  46.525928 -129.566595 -2505.5,  46.525926
+-129.566618 -2504.1,  46.525958 -129.566681 -2505.1,  46.525941 -129.566675
+-2504.0,  46.525860 -129.566808 -2500.5,  46.525697 -129.567000 -2503.8,
+46.525511 -129.567047 -2507.9,  46.525435 -129.567066 -2505.2,  46.525328
+-129.567113 -2500.2,  46.525223 -129.567144 -2492.4,  46.525096 -129.567299
+-2490.5,  46.525064 -129.567543 -2488.9,  46.525041 -129.567786 -2499.6,
+46.525041 -129.567861 -2500.8,  46.524975 -129.567855 -2501.6,  46.524934
+-129.567852 -2500.2,  46.524976 -129.567851 -2502.4,  46.525012 -129.567834
+-2502.5,  46.525016 -129.567932 -2502.0,  46.524994 -129.567945 -2503.2,
+46.525036 -129.567913 -2502.0,  46.524992 -129.568127 -2506.0,  46.524984
+-129.568349 -2498.8,  46.524879 -129.568568 -2490.3,  46.524843 -129.568714
+-2483.7,  46.524782 -129.568831 -2477.0,  46.524700 -129.569001 -2476.0,
+46.524694 -129.569164 -2463.0,  46.524713 -129.569283 -2449.7,  46.524687
+-129.569378 -2446.6,  46.524661 -129.569522 -2437.1,  46.524712 -129.569719
+-2437.1,  46.524693 -129.569899 -2432.6,  46.524697 -129.570022 -2430.2,
+46.524678 -129.570096 -2431.4,  46.524697 -129.570115 -2432.7,  46.524699
+-129.570118 -2432.5,  46.524759 -129.570152 -2433.8,  46.524895 -129.570133
+-2440.8,  46.524961 -129.570141 -2449.1,  46.524915 -129.570356 -2452.9,
+46.524896 -129.570534 -2454.8,  46.524865 -129.570633 -2456.5,  46.524853
+-129.570731 -2461.9,  46.524838 -129.570816 -2464.8,  46.524800 -129.570917
+-2468.4,  46.524772 -129.571054 -2470.3,  46.524767 -129.571153 -2473.1,
+46.524764 -129.571249 -2475.7,  46.524766 -129.571324 -2477.5,  46.524767
+-129.571446 -2479.9,  46.524797 -129.571564 -2479.7,  46.524817 -129.571725
+-2476.1,  46.524818 -129.571803 -2477.0,  46.524820 -129.571836 -2476.9,
+46.524813 -129.571845 -2477.0,  46.524817 -129.571823 -2477.4,  46.524820
+-129.571838 -2477.4,  46.524830 -129.571847 -2475.8,  46.524812 -129.571877
+-2475.2,  46.524769 -129.571901 -2475.1,  46.524764 -129.571851 -2475.1,
+46.524767 -129.571898 -2475.1,  46.524786 -129.571888 -2475.1,  46.524784
+-129.571896 -2475.1,  46.524782 -129.571897 -2475.1,  46.524777 -129.571951
+-2472.7,  46.524721 -129.572066 -2467.4,  46.524678 -129.572288 -2467.6,
+46.524642 -129.572400 -2470.4,  46.524608 -129.572373 -2471.0,  46.524572
+-129.572378 -2470.9,  46.524537 -129.572356 -2470.4,  46.524466 -129.572405
+-2473.0,  46.524401 -129.572602 -2471.7,  46.524322 -129.572842 -2472.1,
+46.524294 -129.572992 -2472.5,  46.524295 -129.573029 -2473.2,  46.524286
+-129.573021 -2473.2,  46.524287 -129.573043 -2473.2,  46.524308 -129.573045
+-2472.7,  46.524336 -129.573041 -2473.1,  46.524353 -129.573083 -2472.6,
+46.524357 -129.573181 -2465.5,  46.524303 -129.573293 -2459.9,  46.524231
+-129.573406 -2455.9,  46.524208 -129.573506 -2453.8,  46.524179 -129.573657
+-2452.8,  46.524163 -129.573841 -2448.8,  46.524063 -129.573989 -2448.1,
+46.524134 -129.574051 -2446.8,  46.524103 -129.574204 -2446.4,  46.524090
+-129.574318 -2445.8,  46.524161 -129.574330 -2444.2,  46.524146 -129.574370
+-2444.1,  46.524142 -129.574427 -2443.5,  46.524119 -129.574550 -2442.8,
+46.524120 -129.574670 -2442.9,  46.524098 -129.574762 -2442.8,  46.524069
+-129.574872 -2441.9,  46.524037 -129.574925 -2441.6,  46.524046 -129.574901
+-2442.9,  46.524046 -129.574901 -2440.0,  46.524050 -129.574950 -2441.5,
+46.524074 -129.574948 -2434.4,  46.524105 -129.574978 -2439.5,  46.524129
+-129.575058 -2438.3,  46.524124 -129.575213 -2436.7,  46.524157 -129.575295
+-2436.3,  46.524161 -129.575325 -2436.1,  46.524111 -129.575431 -2437.3,
+46.524102 -129.575465 -2437.7,  46.524085 -129.575459 -2437.6,  46.524072
+-129.575499 -2435.4,  46.524027 -129.575611 -2436.1,  46.523954 -129.575784
+-2439.2,  46.523891 -129.575925 -2438.9,  46.523848 -129.576006 -2439.1,
+46.523775 -129.576128 -2440.2,  46.523778 -129.576185 -2441.6,  46.523829
+-129.576147 -2438.9,  46.523842 -129.576181 -2439.4,  46.523860 -129.576153
+-2438.2,  46.523901 -129.576163 -2440.1,  46.523887 -129.576190 -2441.2,
+46.523881 -129.576179 -2440.3,  46.523918 -129.576222 -2439.5,  46.523929
+-129.576332 -2440.1,  46.523931 -129.576401 -2440.3,  46.523900 -129.576478
+-2442.0,  46.523875 -129.576486 -2442.0,  46.523874 -129.576473 -2442.5,
+46.523879 -129.576472 -2442.6,  46.523883 -129.576467 -2442.6,  46.523856
+-129.576539 -2441.0,  46.523798 -129.576719 -2440.2,  46.523659 -129.576911
+-2441.2,  46.523536 -129.577122 -2437.7,  46.523459 -129.577379 -2434.7,
+46.523434 -129.577587 -2425.3,  46.523462 -129.577687 -2426.1,  46.523476
+-129.577780 -2424.1,  46.523470 -129.577846 -2422.1,  46.523452 -129.577932
+-2417.9,  46.523431 -129.578032 -2416.6,  46.523443 -129.578189 -2407.9,
+46.523504 -129.578313 -2403.9,  46.523469 -129.578439 -2398.5,  46.523472
+-129.578559 -2391.4,  46.523479 -129.578670 -2384.2,  46.523475 -129.578814
+-2378.6,  46.523441 -129.579036 -2375.3,  46.523426 -129.579150 -2373.6,
+46.523474 -129.579222 -2373.4,  46.523500 -129.579273 -2372.1,  46.523495
+-129.579450 -2369.7,  46.523505 -129.579542 -2368.7,  46.523468 -129.579607
+-2371.3,  46.523458 -129.579741 -2371.5,  46.523426 -129.579884 -2371.8,
+46.523425 -129.579917 -2372.0,  46.523425 -129.579917 -2371.9,  46.523435
+-129.579899 -2371.9,  46.523417 -129.579965 -2371.9,  46.523422 -129.579948
+-2372.0,  46.523417 -129.579934 -2372.0,  46.523414 -129.579969 -2370.4,
+46.523465 -129.580096 -2371.4,  46.523466 -129.580173 -2371.4,  46.523485
+-129.580157 -2371.5,  46.523470 -129.580196 -2371.4,  46.523465 -129.580289
+-2371.4,  46.523425 -129.580449 -2373.6,  46.523340 -129.580683 -2376.8,
+46.523310 -129.580895 -2381.4,  46.523517 -129.580863 -2379.8,  46.523777
+-129.580907 -2381.3,  46.523868 -129.580780 -2380.5,  46.523852 -129.580744
+-2379.2,  46.523866 -129.580802 -2381.1,  46.523879 -129.580884 -2381.6,
+46.523885 -129.580824 -2376.2,  46.523911 -129.580571 -2372.6,  46.523873
+-129.580562 -2374.2,  46.523884 -129.580656 -2377.7,  46.523928 -129.580775
+-2380.8,  46.523943 -129.580869 -2383.8,  46.523891 -129.580999 -2384.6,
+46.523868 -129.581132 -2387.3,  46.523771 -129.581196 -2387.2,  46.523657
+-129.581202 -2387.6,  46.523447 -129.581302 -2387.4,  46.523305 -129.581490
+-2389.6,  46.523132 -129.581590 -2391.9,  46.523073 -129.581766 -2395.2,
+46.523108 -129.581942 -2397.3,  46.523117 -129.582032 -2397.7,  46.523121
+-129.582097 -2398.2,  46.523166 -129.582228 -2400.0,  46.523143 -129.582370
+-2400.3,  46.523135 -129.582389 -2402.6,  46.523107 -129.582411 -2402.6,
+46.523094 -129.582397 -2402.6,  46.523066 -129.582440 -2401.3,  46.523014
+-129.582471 -2402.4,  46.522952 -129.582526 -2402.9,  46.522992 -129.582491
+-2402.9,  46.522980 -129.582522 -2403.0,  46.522969 -129.582543 -2402.9,
+46.523008 -129.582517 -2400.3,  46.522970 -129.582585 -2400.8,  46.522938
+-129.582885 -2398.2,  46.522883 -129.583104 -2396.3,  46.522858 -129.583149
+-2394.3,  46.522809 -129.583260 -2395.9,  46.522744 -129.583390 -2399.2,
+46.522678 -129.583474 -2400.3,  46.522625 -129.583624 -2402.1,  46.522552
+-129.583687 -2402.1,  46.522480 -129.583745 -2401.8,  46.522403 -129.583689
+-2400.7,  46.522310 -129.583666 -2400.5,  46.522280 -129.583634 -2400.0,
+46.522253 -129.583649 -2400.5,  46.522211 -129.583635 -2401.0,  46.522088
+-129.583630 -2401.5,  46.521991 -129.583630 -2401.7,  46.521887 -129.583632
+-2402.2,  46.521830 -129.583594 -2402.9,  46.521805 -129.583495 -2403.4,
+46.521756 -129.583418 -2401.0,  46.521701 -129.583404 -2402.2,  46.521598
+-129.583400 -2399.4,  46.521548 -129.583387 -2398.3,  46.521499 -129.583364
+-2396.8,  46.521361 -129.583325 -2394.6,  46.521298 -129.583275 -2393.9,
+46.521181 -129.583242 -2395.4,  46.521042 -129.583209 -2396.9,  46.521007
+-129.583177 -2396.5,  46.520935 -129.583098 -2395.7,  46.520921 -129.583065
+-2393.7,  46.520927 -129.583017 -2393.9,  46.520948 -129.582969 -2393.3,
+46.520953 -129.582851 -2392.7,  46.520997 -129.582855 -2393.4,  46.521003
+-129.582878 -2393.3,  46.521018 -129.582861 -2393.4,  46.521047 -129.582848
+-2393.4,  46.521007 -129.582849 -2392.6,  46.520997 -129.582794 -2393.0,
+46.520990 -129.582654 -2392.5,  46.521001 -129.582541 -2391.7,  46.520992
+-129.582471 -2390.9,  46.521023 -129.582319 -2389.9,  46.521053 -129.582187
+-2388.9,  46.521036 -129.582097 -2387.9,  46.521060 -129.582043 -2388.1,
+46.521075 -129.581941 -2388.1,  46.521088 -129.581819 -2388.5,  46.521063
+-129.581677 -2388.5,  46.521114 -129.581606 -2389.2,  46.521124 -129.581511
+-2389.4,  46.521121 -129.581469 -2390.1,  46.521126 -129.581474 -2390.2,
+46.521145 -129.581443 -2390.2,  46.521139 -129.581462 -2390.2,  46.521142
+-129.581463 -2389.9,  46.521109 -129.581346 -2390.8,  46.521037 -129.581162
+-2392.3,  46.521010 -129.580988 -2393.5,  46.520943 -129.580786 -2398.8,
+46.520884 -129.580522 -2401.3,  46.520844 -129.580300 -2398.9,  46.520821
+-129.580096 -2399.8,  46.520832 -129.579923 -2400.8,  46.520754 -129.579889
+-2402.8,  46.520507 -129.579917 -2415.0,  46.520297 -129.579988 -2425.6,
+46.520073 -129.579870 -2429.9,  46.520029 -129.579765 -2433.6,  46.520117
+-129.579631 -2434.5,  46.520088 -129.579658 -2434.8,  46.520068 -129.579664
+-2434.9,  46.520056 -129.579698 -2434.5,  46.520052 -129.579722 -2432.0,
+46.520160 -129.579633 -2429.9,  46.520138 -129.579572 -2429.1,  46.520129
+-129.579582 -2429.8,  46.520146 -129.579611 -2429.9,  46.520216 -129.579605
+-2429.8,  46.520256 -129.579630 -2429.8,  46.520228 -129.579643 -2430.2,
+46.520225 -129.579580 -2428.9,  46.520222 -129.579632 -2428.8,  46.520234
+-129.579649 -2429.2,  46.520232 -129.579636 -2429.1,  46.520253 -129.579698
+-2426.4,  46.520191 -129.579913 -2419.4,  46.520109 -129.580213 -2408.9,
+46.520031 -129.580387 -2387.1,  46.520016 -129.580525 -2362.1,  46.519991
+-129.580665 -2335.3,  46.519999 -129.580772 -2307.8,  46.519993 -129.580846
+-2280.2,  46.519982 -129.580929 -2252.4,  46.519872 -129.580884 -2224.5,
+46.519916 -129.580965 -2196.6,  46.519924 -129.581075 -2168.6,  46.519958
+-129.581213 -2140.2,  46.519973 -129.581272 -2111.8,  46.519976 -129.581304
+-2083.3,  46.519977 -129.581284 -2054.1,  46.520003 -129.581271 -2024.7,
+46.519982 -129.581213 -1996.7,  46.520000 -129.581130 -1968.6,  46.520033
+-129.580929 -1940.7,  46.520075 -129.580932 -1913.1,  46.520072 -129.580902
+-1885.1,  46.520090 -129.580899 -1858.2,  46.520113 -129.580889 -1831.0,
+46.520091 -129.580903 -1803.4,  46.520054 -129.580947 -1777.2,  46.520091
+-129.581007 -1751.7,  46.520124 -129.581052 -1725.6,  46.520140 -129.581056
+-1699.5,  46.520158 -129.581081 -1673.8,  46.520156 -129.581134 -1648.2,
+46.520181 -129.581123 -1622.3,  46.520156 -129.581143 -1597.2,  46.520159
+-129.581170 -1571.6,  46.520178 -129.581127 -1543.7,  46.520222 -129.581165
+-1516.1,  46.520255 -129.581155 -1490.5,  46.520192 -129.581165 -1468.4,
+46.520135 -129.581189 -1444.1,  46.520101 -129.581212 -1418.7,  46.520042
+-129.581177 -1392.1,  46.520021 -129.581166 -1365.2,  46.519972 -129.581181
+-1338.1,  46.519944 -129.581182 -1310.4,  46.519941 -129.581204 -1282.8,
+46.519887 -129.581186 -1255.3,  46.519853 -129.581144 -1228.3,  46.519855
+-129.581107 -1200.2,  46.519897 -129.581104 -1171.0,  46.519921 -129.581080
+-1142.9,  46.519949 -129.581070 -1114.7,  46.519978 -129.581059 -1086.6,
+46.519965 -129.581082 -1058.9,  46.519907 -129.581076 -1035.5,  46.519927
+-129.581069 -1005.0,  46.519951 -129.581029 -975.1,  46.519971 -129.580997
+-946.4,  46.519993 -129.580932 -918.0,  46.519998 -129.580862 -889.9,  46.519999
+-129.580824 -861.4,  46.520017 -129.580785 -832.7,  46.520048 -129.580738
+-804.3,  46.520049 -129.580701 -776.3,  46.520030 -129.580701 -748.5,  46.520030
+-129.580700 -720.8,  46.520034 -129.580736 -693.3,  46.519988 -129.580812
+-665.8,  46.519937 -129.580887 -639.4,  46.519882 -129.580986 -610.4,  46.519786
+-129.581025 -581.3,  46.519700 -129.581013 -550.6,  46.519692 -129.581028
+-518.3,  46.519713 -129.581051 -485.5,  46.519717 -129.581058 -454.5,  46.519712
+-129.581041 -424.6,  46.519711 -129.581028 -395.1,  46.519725 -129.580980
+-365.5,  46.519703 -129.580958 -336.0,  46.519733 -129.580902 -307.3,  46.519768
+-129.580921 -279.2,  46.519824 -129.580912 -250.8,  46.519796 -129.580949
+-220.9,  46.519770 -129.580955 -189.8,  46.519743 -129.580920 -159.1,  46.519762
+-129.580897 -128.8,  46.519815 -129.580830 -99.9,  46.519896 -129.580729 -71.5,
+46.519912 -129.580495 -48.4,  46.519931 -129.580211 -37.0,  46.519922
+-129.579809 -38.7,  46.519941 -129.579596 -26.9,  46.519973 -129.579425 -11.8
+   ]
+	
+   orientations [
+ 0 -1 0 2.6616,  0 -1 0 2.6512,  0 -1 0 2.1974,  0 -1 0 1.8431,  0 -1 0 1.7663,
+0 -1 0 1.7349,  0 -1 0 1.8082,  0 -1 0 1.7558,  0 -1 0 1.7575,  0 -1 0 1.7767,
+0 -1 0 1.7802,  0 -1 0 1.8221,  0 -1 0 1.8204,  0 -1 0 1.7663,  0 -1 0 2.1363,
+0 -1 0 2.3422,  0 -1 0 2.3649,  0 -1 0 2.3928,  0 -1 0 2.3579,  0 -1 0 2.0822,
+0 -1 0 2.0700,  0 -1 0 0.8447,  0 -1 0 0.9285,  0 -1 0 1.5359,  0 -1 0 1.5481,
+0 -1 0 2.4853,  0 -1 0 2.3126,  0 -1 0 1.9914,  0 -1 0 2.0019,  0 -1 0 2.0001,
+0 -1 0 1.9984,  0 -1 0 1.9879,  0 -1 0 2.0071,  0 -1 0 2.0071,  0 -1 0 2.0124,
+0 -1 0 2.0036,  0 -1 0 1.9897,  0 -1 0 1.9914,  0 -1 0 1.9914,  0 -1 0 1.9967,
+0 -1 0 1.9967,  0 -1 0 2.0054,  0 -1 0 1.9914,  0 -1 0 2.0193,  0 -1 0 2.0298,
+0 -1 0 2.0071,  0 -1 0 2.0141,  0 -1 0 2.0193,  0 -1 0 2.0159,  0 -1 0 2.0351,
+0 -1 0 2.0298,  0 -1 0 2.0176,  0 -1 0 2.3841,  0 -1 0 2.4243,  0 -1 0 2.4208,
+0 -1 0 2.3998,  0 -1 0 2.3998,  0 -1 0 2.4138,  0 -1 0 2.4016,  0 -1 0 2.4173,
+0 -1 0 2.4120,  0 -1 0 2.4033,  0 -1 0 2.4190,  0 -1 0 2.6023,  0 -1 0 2.6145,
+0 -1 0 2.6005,  0 -1 0 2.5970,  0 -1 0 2.5848,  0 -1 0 2.5953,  0 -1 0 2.9339,
+0 -1 0 2.8920,  0 -1 0 2.8815,  0 -1 0 3.5430,  0 -1 0 5.9079,  0 -1 0 5.5554,
+0 -1 0 2.3876,  0 -1 0 2.3021,  0 -1 0 2.0089,  0 -1 0 2.4190,  0 -1 0 1.3893,
+0 -1 0 5.2744,  0 -1 0 4.7909,  0 -1 0 4.4907,  0 -1 0 4.3459,  0 -1 0 4.1993,
+0 -1 0 4.2010,  0 -1 0 4.1905,  0 -1 0 3.3999,  0 -1 0 3.2428,  0 -1 0 3.6128,
+0 -1 0 4.4715,  0 -1 0 4.4785,  0 -1 0 4.4785,  0 -1 0 4.4785,  0 -1 0 4.2429,
+0 -1 0 3.1398,  0 -1 0 3.3249,  0 -1 0 3.3877,  0 -1 0 4.2848,  0 -1 0 4.6757,
+0 -1 0 3.4837,  0 -1 0 4.7211,  0 -1 0 4.5832,  0 -1 0 4.4942,  0 -1 0 3.9410,
+0 -1 0 3.1608,  0 -1 0 1.7104,  0 -1 0 2.0717,  0 -1 0 2.5569,  0 -1 0 2.9653,
+0 -1 0 3.3999,  0 -1 0 4.4523,  0 -1 0 3.0055,  0 -1 0 2.2707,  0 -1 0 2.5936,
+0 -1 0 3.2306,  0 -1 0 3.8921,  0 -1 0 4.4436,  0 -1 0 3.9794,  0 -1 0 3.6303,
+0 -1 0 3.6949,  0 -1 0 3.7018,  0 -1 0 3.7647,  0 -1 0 3.7891,  0 -1 0 3.7891,
+0 -1 0 3.7158,  0 -1 0 3.4837,  0 -1 0 3.2428,  0 -1 0 2.9706,  0 -1 0 3.0404,
+0 -1 0 3.5430,  0 -1 0 3.7472,  0 -1 0 3.8624,  0 -1 0 3.5465,  0 -1 0 3.4889,
+0 -1 0 4.1294,  0 -1 0 4.0858,  0 -1 0 3.7245,  0 -1 0 1.1083,  0 -1 0 1.0961,
+0 -1 0 2.5918,  0 -1 0 2.4993,  0 -1 0 2.5220,  0 -1 0 2.1572,  0 -1 0 2.3702,
+0 -1 0 2.3911,  0 -1 0 2.3544,  0 -1 0 2.0281,  0 -1 0 2.0438,  0 -1 0 2.0281,
+0 -1 0 2.0124,  0 -1 0 2.2707,  0 -1 0 2.0525,  0 -1 0 2.1276,  0 -1 0 2.0001,
+0 -1 0 2.0438,  0 -1 0 2.1049,  0 -1 0 2.1660,  0 -1 0 2.4853,  0 -1 0 2.5412,
+0 -1 0 2.4155,  0 -1 0 2.3108,  0 -1 0 2.1363,  0 -1 0 2.3736,  0 -1 0 2.3335,
+0 -1 0 2.2532,  0 -1 0 2.0054,  0 -1 0 1.8169,  0 -1 0 1.9879,  0 -1 0 1.5237,
+0 -1 0 1.2479,  0 -1 0 1.3736,  0 -1 0 1.2671,  0 -1 0 1.5237,  0 -1 0 1.8605,
+0 -1 0 1.9565,  0 -1 0 2.1223,  0 -1 0 1.7715,  0 -1 0 2.3213,  0 -1 0 1.7994,
+0 -1 0 1.7349,  0 -1 0 2.0228,  0 -1 0 1.9495,  0 -1 0 2.5028,  0 -1 0 1.2933,
+0 -1 0 2.2899,  0 -1 0 1.3090,  0 -1 0 1.0961,  0 -1 0 1.3142,  0 -1 0 0.9861,
+0 -1 0 3.3214,  0 -1 0 5.8573,  0 -1 0 5.8067,  0 -1 0 5.8277,  0 -1 0 5.8521,
+0 -1 0 1.9932,  0 -1 0 1.6633,  0 -1 0 2.4836,  0 -1 0 2.2532,  0 -1 0 2.3544,
+0 -1 0 2.3230,  0 -1 0 2.3492,  0 -1 0 2.3387,  0 -1 0 1.9076,  0 -1 0 2.4976,
+0 -1 0 1.9460,  0 -1 0 2.4749,  0 -1 0 2.3213,  0 -1 0 2.2497,  0 -1 0 2.0909,
+0 -1 0 1.8640,  0 -1 0 2.0508,  0 -1 0 1.9373,  0 -1 0 1.8413,  0 -1 0 2.1415,
+0 -1 0 2.3894,  0 -1 0 2.3824,  0 -1 0 2.8082,  0 -1 0 2.2096,  0 -1 0 1.4783,
+0 -1 0 1.4085,  0 -1 0 1.4312,  0 -1 0 2.2323,  0 -1 0 1.8483,  0 -1 0 2.0909,
+0 -1 0 2.0577,  0 -1 0 2.0769,  0 -1 0 2.0892,  0 -1 0 2.1677,  0 -1 0 2.3894,
+0 -1 0 2.3353,  0 -1 0 4.7700,  0 -1 0 5.1121,  0 -1 0 4.6199,  0 -1 0 4.6478,
+0 -1 0 4.8223,  0 -1 0 5.1941,  0 -1 0 5.2255,  0 -1 0 5.2290,  0 -1 0 5.2342,
+0 -1 0 5.2308,  0 -1 0 5.2273,  0 -1 0 5.2308,  0 -1 0 5.2081,  0 -1 0 5.4891,
+0 -1 0 5.4350,  0 -1 0 5.4227,  0 -1 0 5.5327,  0 -1 0 5.5693,  0 -1 0 5.6112,
+0 -1 0 2.5272,  0 -1 0 2.0874,  0 -1 0 2.1921,  0 -1 0 2.2044,  0 -1 0 2.8780,
+0 -1 0 4.9201,  0 -1 0 3.4383,  0 -1 0 3.7350,  0 -1 0 2.1660,  0 -1 0 2.2742,
+0 -1 0 3.5081,  0 -1 0 2.3318,  0 -1 0 2.1677,  0 -1 0 1.8029,  0 -1 0 3.2358,
+0 -1 0 2.2096,  0 -1 0 2.2846,  0 -1 0 1.1013,  0 -1 0 1.4870,  0 -1 0 2.6389,
+0 -1 0 1.9652,  0 -1 0 1.7296,  0 -1 0 1.7331,  0 -1 0 1.8954,  0 -1 0 5.0649,
+0 -1 0 5.1208,  0 -1 0 5.0580,  0 -1 0 5.3093,  0 -1 0 5.3599,  0 -1 0 5.2622,
+0 -1 0 5.5065,  0 -1 0 6.0580,  0 -1 0 6.0022,  0 -1 0 5.6950,  0 -1 0 4.8573,
+0 -1 0 6.1767,  0 -1 0 5.9551,  0 -1 0 4.5605,  0 -1 0 4.1417,  0 -1 0 3.6111,
+0 -1 0 2.7367,  0 -1 0 3.5657,  0 -1 0 3.5133,  0 -1 0 4.5518,  0 -1 0 4.5239,
+0 -1 0 4.0823,  0 -1 0 1.1624,  0 -1 0 0.6109,  0 -1 0 4.8031,  0 -1 0 1.0507,
+0 -1 0 1.0786,  0 -1 0 1.9932,  0 -1 0 2.7663,  0 -1 0 4.6129,  0 -1 0 4.6373,
+0 -1 0 4.5204,  0 -1 0 4.4628,  0 -1 0 4.3982,  0 -1 0 4.4872,  0 -1 0 4.7351,
+0 -1 0 4.6600,  0 -1 0 4.6443,  0 -1 0 4.6007,  0 -1 0 4.9079,  0 -1 0 4.6304,
+0 -1 0 4.5588,  0 -1 0 5.0527,  0 -1 0 0.6510,  0 -1 0 0.8029,  0 -1 0 0.8395,
+0 -1 0 1.2095,  0 -1 0 1.5568,  0 -1 0 4.8154,  0 -1 0 4.5850,  0 -1 0 4.6426,
+0 -1 0 4.0858,  0 -1 0 4.0527,  0 -1 0 4.0247,  0 -1 0 4.0387,  0 -1 0 4.0404,
+0 -1 0 3.9200,  0 -1 0 3.8868,  0 -1 0 3.9392,  0 -1 0 3.9479,  0 -1 0 4.8066,
+0 -1 0 4.8398,  0 -1 0 4.9812,  0 -1 0 4.7054,  0 -1 0 3.6792,  0 -1 0 4.2394,
+0 -1 0 4.2080,  0 -1 0 4.6740,  0 -1 0 4.6094,  0 -1 0 4.6862,  0 -1 0 4.6792,
+0 -1 0 4.6775,  0 -1 0 4.6810,  0 -1 0 4.7159,  0 -1 0 4.6932,  0 -1 0 4.5448,
+0 -1 0 4.3214,  0 -1 0 4.4646,  0 -1 0 1.9059,  0 -1 0 1.9984,  0 -1 0 2.4976,
+0 -1 0 2.8414,  0 -1 0 2.3894,  0 -1 0 4.4628,  0 -1 0 4.7281,  0 -1 0 4.7490,
+0 -1 0 4.5937,  0 -1 0 4.5396,  0 -1 0 4.7456,  0 -1 0 5.0999,  0 -1 0 5.9359,
+0 -1 0 4.6618,  0 -1 0 4.3075,  0 -1 0 4.1905,  0 -1 0 4.2097,  0 -1 0 4.2097,
+0 -1 0 4.6321,  0 -1 0 4.4611,  0 -1 0 4.6496,  0 -1 0 4.9916,  0 -1 0 4.9672,
+0 -1 0 5.0597,  0 -1 0 5.2796,  0 -1 0 5.0911,  0 -1 0 4.9707,  0 -1 0 5.1208,
+0 -1 0 4.9777,  0 -1 0 4.7770,  0 -1 0 4.8066,  0 -1 0 4.7752,  0 -1 0 4.9463,
+0 -1 0 4.5291,  0 -1 0 3.7455,  0 -1 0 4.9585,  0 -1 0 5.4716,  0 -1 0 5.4070,
+0 -1 0 6.2553,  0 -1 0 3.5203,  0 -1 0 4.6269,  0 -1 0 5.0964,  0 -1 0 5.0196,
+0 -1 0 5.0196,  0 -1 0 4.5152,  0 -1 0 4.5029,  0 -1 0 4.4698,  0 -1 0 4.4139,
+0 -1 0 4.0719,  0 -1 0 4.1923,  0 -1 0 3.3144,  0 -1 0 3.1765,  0 -1 0 3.4331,
+0 -1 0 2.9356,  0 -1 0 1.4347,  0 -1 0 0.6597,  0 -1 0 0.6720,  0 -1 0 4.9096,
+0 -1 0 5.2168,  0 -1 0 4.4960,  0 -1 0 3.7071,  0 -1 0 3.9113,  0 -1 0 4.0125,
+0 -1 0 4.0631,  0 -1 0 4.0631,  0 -1 0 4.2289,  0 -1 0 4.1958,  0 -1 0 4.1993,
+0 -1 0 4.3668,  0 -1 0 4.5937,  0 -1 0 4.2743,  0 -1 0 3.4802,  0 -1 0 4.1521,
+0 -1 0 4.4680,  0 -1 0 4.4646,  0 -1 0 5.1976,  0 -1 0 5.1609,  0 -1 0 5.3110,
+0 -1 0 4.4471,  0 -1 0 4.5204,  0 -1 0 4.4558,  0 -1 0 4.5361,  0 -1 0 4.6042,
+0 -1 0 4.7351,  0 -1 0 4.8695,  0 -1 0 4.8049,  0 -1 0 4.8834,  0 -1 0 4.8084,
+0 -1 0 4.4628,  0 -1 0 4.5640,  0 -1 0 4.9323,  0 -1 0 4.9637,  0 -1 0 4.9707,
+0 -1 0 4.9358,  0 -1 0 4.9375,  0 -1 0 4.9375,  0 -1 0 4.9375,  0 -1 0 4.9602,
+0 -1 0 4.9655,  0 -1 0 4.8485,  0 -1 0 4.8485,  0 -1 0 4.8485,  0 -1 0 4.5204,
+0 -1 0 4.0108,  0 -1 0 4.3459,  0 -1 0 0.1449,  0 -1 0 0.6650,  0 -1 0 0.6388,
+0 -1 0 2.4470,  0 -1 0 3.9671,  0 -1 0 2.4382,  0 -1 0 2.1869,  0 -1 0 0.9913,
+0 -1 0 2.1468,  0 -1 0 2.6721,  0 -1 0 2.7541,  0 -1 0 2.9583,  0 -1 0 6.1593,
+0 -1 0 1.0612,  0 -1 0 4.3860,  0 -1 0 3.6076,  0 -1 0 3.6477,  0 -1 0 3.9514,
+0 -1 0 4.2237,  0 -1 0 4.4558,  0 -1 0 4.9026,  0 -1 0 5.0178,  0 -1 0 4.6914,
+0 -1 0 4.8328,  0 -1 0 4.7054,  0 -1 0 3.6233,  0 -1 0 4.9829,  0 -1 0 4.9864,
+0 -1 0 4.9864,  0 -1 0 4.7525,  0 -1 0 4.5553,  0 -1 0 4.6373,  0 -1 0 4.6373,
+0 -1 0 4.6775,  0 -1 0 4.7787,  0 -1 0 4.4541,  0 -1 0 4.5187,  0 -1 0 4.5710,
+0 -1 0 4.3616,  0 -1 0 4.8573,  0 -1 0 5.3180,  0 -1 0 4.7735,  0 -1 0 3.9165,
+0 -1 0 4.0230,  0 -1 0 2.8903,  0 -1 0 3.1381,  0 -1 0 3.0648,  0 -1 0 3.1695,
+0 -1 0 3.1625,  0 -1 0 3.1119,  0 -1 0 3.2009,  0 -1 0 3.0683,  0 -1 0 3.2201,
+0 -1 0 3.2097,  0 -1 0 2.1171,  0 -1 0 2.1398,  0 -1 0 2.6738,  0 -1 0 3.0194,
+0 -1 0 2.5779,  0 -1 0 2.5377,  0 -1 0 2.6267,  0 -1 0 2.5290,  0 -1 0 2.6913,
+0 -1 0 2.9583,  0 -1 0 2.8938,  0 -1 0 2.4679,  0 -1 0 2.5709,  0 -1 0 1.6197,
+0 -1 0 1.6074,  0 -1 0 1.7994,  0 -1 0 2.7384,  0 -1 0 2.6721,  0 -1 0 2.6738,
+0 -1 0 2.7070,  0 -1 0 2.8798,  0 -1 0 2.5011,  0 -1 0 1.6965,  0 -1 0 1.6633,
+0 -1 0 1.4661,  0 -1 0 1.2793,  0 -1 0 1.5237,  0 -1 0 1.5464,  0 -1 0 1.6598,
+0 -1 0 1.6354,  0 -1 0 1.3823,  0 -1 0 1.6389,  0 -1 0 1.6197,  0 -1 0 1.6668,
+0 -1 0 1.6441,  0 -1 0 1.7837,  0 -1 0 1.7802,  0 -1 0 1.7767,  0 -1 0 1.7698,
+0 -1 0 1.7837,  0 -1 0 2.2340,  0 -1 0 1.9356,  0 -1 0 3.4051,  0 -1 0 2.8554,
+0 -1 0 1.8361,  0 -1 0 1.9164,  0 -1 0 0.4590,  0 -1 0 3.6041,  0 -1 0 3.1643,
+0 -1 0 2.9531,  0 -1 0 2.9217,  0 -1 0 2.7838,  0 -1 0 2.2602,  0 -1 0 2.5970,
+0 -1 0 2.3126,  0 -1 0 2.3579,  0 -1 0 2.3998,  0 -1 0 0.4136,  0 -1 0 5.3913,
+0 -1 0 4.8503,  0 -1 0 4.5763,  0 -1 0 4.5588,  0 -1 0 4.6286,  0 -1 0 4.5152,
+0 -1 0 5.4070,  0 -1 0 4.8956,  0 -1 0 1.2444,  0 -1 0 0.0506,  0 -1 0 0.3700,
+0 -1 0 4.6792,  0 -1 0 4.1993,  0 -1 0 4.2045,  0 -1 0 4.2412,  0 -1 0 4.3075,
+0 -1 0 4.3337,  0 -1 0 4.3581,  0 -1 0 4.3633,  0 -1 0 4.3563,  0 -1 0 4.3982,
+0 -1 0 4.3686,  0 -1 0 4.3755,  0 -1 0 4.3808,  0 -1 0 4.3790,  0 -1 0 4.3982,
+0 -1 0 4.3651,  0 -1 0 4.3930,  0 -1 0 4.3912,  0 -1 0 4.3511,  0 -1 0 4.3947,
+0 -1 0 4.3686,  0 -1 0 4.3843,  0 -1 0 4.3720,  0 -1 0 4.3930,  0 -1 0 4.3755,
+0 -1 0 4.3773,  0 -1 0 4.3895,  0 -1 0 4.3790,  0 -1 0 4.3773,  0 -1 0 4.3895,
+0 -1 0 4.3598,  0 -1 0 4.4087,  0 -1 0 4.4000,  0 -1 0 4.3790,  0 -1 0 4.4296,
+0 -1 0 4.4436,  0 -1 0 3.7350,  0 -1 0 3.3755,  0 -1 0 3.3929,  0 -1 0 3.2812,
+0 -1 0 3.2969,  0 -1 0 3.3388,  0 -1 0 3.3441,  0 -1 0 3.3057,  0 -1 0 3.3475,
+0 -1 0 3.3318,  0 -1 0 3.2865,  0 -1 0 3.3388,  0 -1 0 3.3423,  0 -1 0 3.3022,
+0 -1 0 3.3249,  0 -1 0 3.3475,  0 -1 0 3.3824,  0 -1 0 4.5867,  0 -1 0 4.6199,
+0 -1 0 4.6321,  0 -1 0 4.6356,  0 -1 0 4.6373,  0 -1 0 4.6373,  0 -1 0 4.6147,
+0 -1 0 4.6321,  0 -1 0 4.6688,  0 -1 0 4.6583,  0 -1 0 4.6478,  0 -1 0 4.2167,
+0 -1 0 4.0631,  0 -1 0 4.0177,  0 -1 0 3.7071,  0 -1 0 3.6966,  0 -1 0 3.3301,
+0 -1 0 3.3283,  0 -1 0 3.3475,  0 -1 0 3.3632,  0 -1 0 3.3702,  0 -1 0 3.4139,
+0 -1 0 3.3824,  0 -1 0 3.3650,  0 -1 0 3.4243,  0 -1 0 3.3650,  0 -1 0 3.4016,
+0 -1 0 3.4261,  0 -1 0 3.3947,  0 -1 0 3.3929,  0 -1 0 3.3598,  0 -1 0 4.6984,
+0 -1 0 1.3631,  0 -1 0 1.5289,  0 -1 0 1.5219,  0 -1 0 1.5603,  0 -1 0 1.8047,
+0 -1 0 1.5376,  0 -1 0 1.4102
+   ]
+	
+   # Temperature
+   ##dataValue0 [
+   ##]
+   ##dataVis0 [ 
+   ##]
+   
+} # End ROV
+
+
+DEF SHIP_T882 Track {
+   platformModel ["simple_lobos.x3dv"]
+   scaleFactor 0.002      
+   trackColor 0 1 1
+   pickingEnabled FALSE
+   numLocations [672]
+   timings [
+ 0.000000 0.001477 0.002979 0.004457 0.005934 0.007436 0.008913 0.010391 0.011893 0.013370 0.014872 0.016349 0.017851 0.019329 0.020806 0.022308 0.023785 0.025263 0.026765 0.028242 0.029744 0.031222 0.032699 0.034201 0.035703 0.037180 0.038658 0.040160 0.041637 0.043139 0.044616 0.046118 0.047596 0.049098 0.050575 0.052052 0.053554 0.055056 0.056534 0.058011 0.059513 0.060990 0.062492 0.063970 0.065472 0.066949 0.068451 0.069928 0.071430 0.072908 0.074410 0.075912 0.077389 0.078891 0.080368 0.081870 0.083348 0.084825 0.086327 0.087804 0.089306 0.090784 0.092286 0.093763 0.095265 0.096742 0.098244 0.099722 0.101224 0.102701 0.104203 0.105680 0.107158 0.108660 0.110137 0.111639 0.113116 0.114618 0.116096 0.117598 0.119075 0.120577 0.122055 0.123556 0.125034 0.126511 0.128013 0.129491 0.130993 0.132470 0.133972 0.135449 0.136951 0.138429 0.139931 0.141408 0.142910 0.144387 0.145889 0.147367 0.148869 0.150346 0.151848 0.153325 0.154827 0.156305 0.157807 0.159309 0.160786 0.162263 0.163765 0.165243 0.166720 0.168222 0.169699 0.171201 0.172679 0.174156 0.175658 0.177135 0.178613 0.180115 0.181592 0.183094 0.184571 0.186073 0.187551 0.189053 0.190530 0.192007 0.193509 0.194987 0.196489 0.197966 0.199444 0.200946 0.202423 0.203925 0.205402 0.206904 0.208382 0.209884 0.211361 0.212838 0.214340 0.215818 0.217320 0.218797 0.220299 0.221776 0.223278 0.224756 0.226233 0.227735 0.229212 0.230714 0.232192 0.233694 0.235171 0.236673 0.238150 0.239652 0.241130 0.242632 0.244109 0.245611 0.247088 0.248590 0.250068 0.251545 0.253047 0.254524 0.256026 0.257504 0.259006 0.260483 0.261985 0.263462 0.264964 0.266442 0.267919 0.269421 0.270898 0.272400 0.273878 0.275355 0.276857 0.278335 0.279837 0.281314 0.282816 0.284293 0.285771 0.287273 0.288750 0.290227 0.291729 0.293207 0.294709 0.296186 0.297688 0.299165 0.300667 0.302145 0.303647 0.305124 0.306626 0.308103 0.309605 0.311083 0.312585 0.314062 0.315564 0.317041 0.318519 0.320021 0.321498 0.323000 0.324502 0.325979 0.327481 0.328959 0.330461 0.331938 0.333415 0.334917 0.336395 0.337897 0.339374 0.340851 0.342353 0.343831 0.345308 0.346810 0.348287 0.349765 0.351267 0.352744 0.354222 0.355724 0.357201 0.358703 0.360180 0.361658 0.363160 0.364637 0.366139 0.367616 0.369094 0.370596 0.372073 0.373575 0.375052 0.376530 0.378032 0.379509 0.381011 0.382488 0.383966 0.385468 0.386945 0.388447 0.389949 0.391426 0.392904 0.394406 0.395883 0.397385 0.398862 0.400364 0.401842 0.403344 0.404821 0.406298 0.407800 0.409278 0.410755 0.412257 0.413735 0.415237 0.416714 0.418216 0.419693 0.421195 0.422673 0.424175 0.425652 0.427154 0.428631 0.430109 0.431611 0.433088 0.434590 0.436067 0.437569 0.439047 0.440524 0.442026 0.443503 0.445005 0.446483 0.447985 0.449462 0.450964 0.452441 0.453919 0.455421 0.456898 0.458400 0.459877 0.461355 0.462857 0.464334 0.465836 0.467313 0.468791 0.470293 0.471770 0.473272 0.474749 0.476251 0.477729 0.479206 0.480708 0.482186 0.483663 0.485165 0.486642 0.488144 0.489622 0.491124 0.492601 0.494078 0.495580 0.497058 0.498560 0.500037 0.501539 0.503016 0.504518 0.505996 0.507473 0.508975 0.510452 0.511954 0.513432 0.514934 0.516411 0.517913 0.519390 0.520868 0.522370 0.523847 0.525349 0.526826 0.528328 0.529830 0.531308 0.532810 0.534287 0.535764 0.537266 0.538744 0.540246 0.541723 0.543200 0.544702 0.546180 0.547682 0.549159 0.550636 0.552138 0.553640 0.555118 0.556620 0.558097 0.559575 0.561077 0.562554 0.564056 0.565558 0.567035 0.568537 0.570015 0.571517 0.572994 0.574496 0.575973 0.577451 0.578953 0.580430 0.581932 0.583409 0.584911 0.586389 0.587891 0.589368 0.590870 0.592347 0.593825 0.595327 0.596804 0.598306 0.599783 0.601285 0.602763 0.604240 0.605742 0.607219 0.608721 0.610199 0.611676 0.613178 0.614680 0.616157 0.617635 0.619137 0.620614 0.622116 0.623593 0.625095 0.626573 0.628075 0.629552 0.631054 0.632531 0.634009 0.635511 0.636988 0.638490 0.639967 0.641469 0.642947 0.644449 0.645926 0.647428 0.648906 0.650408 0.651885 0.653362 0.654864 0.656342 0.657844 0.659321 0.660798 0.662300 0.663778 0.665280 0.666757 0.668259 0.669736 0.671238 0.672716 0.674193 0.675695 0.677172 0.678650 0.680152 0.681629 0.683131 0.684608 0.686086 0.687588 0.689065 0.690567 0.692044 0.693522 0.695024 0.696501 0.698003 0.699480 0.700958 0.702460 0.703937 0.705439 0.706917 0.708418 0.709896 0.711398 0.712875 0.714377 0.715855 0.717357 0.718834 0.720336 0.721813 0.723315 0.724793 0.726295 0.727772 0.729274 0.730776 0.732253 0.733755 0.735233 0.736710 0.738212 0.739689 0.741191 0.742669 0.744171 0.745648 0.747125 0.748627 0.750105 0.751582 0.753084 0.754561 0.756039 0.757541 0.759018 0.760495 0.761997 0.763475 0.764977 0.766454 0.767956 0.769433 0.770935 0.772437 0.773915 0.775392 0.776894 0.778371 0.779873 0.781351 0.782853 0.784330 0.785832 0.787309 0.788811 0.790289 0.791791 0.793268 0.794770 0.796248 0.797749 0.799227 0.800729 0.802206 0.803708 0.805186 0.806688 0.808165 0.809667 0.811144 0.812646 0.814124 0.815626 0.817103 0.818605 0.820082 0.821584 0.823062 0.824564 0.826041 0.827543 0.829020 0.830498 0.832000 0.833477 0.834979 0.836456 0.837958 0.839436 0.840938 0.842415 0.843917 0.845394 0.846872 0.848374 0.849851 0.851353 0.852830 0.854332 0.855810 0.857312 0.858789 0.860291 0.861768 0.863270 0.864748 0.866250 0.867727 0.869229 0.870706 0.872208 0.873686 0.875188 0.876665 0.878167 0.879644 0.881146 0.882624 0.884126 0.885603 0.887105 0.888582 0.890084 0.891562 0.893064 0.894541 0.896043 0.897520 0.899022 0.900500 0.902002 0.903479 0.904981 0.906459 0.907936 0.909438 0.910915 0.912417 0.913895 0.915397 0.916874 0.918376 0.919853 0.921355 0.922833 0.924335 0.925812 0.927314 0.928791 0.930269 0.931771 0.933248 0.934750 0.936227 0.937729 0.939207 0.940709 0.942186 0.943688 0.945165 0.946643 0.948145 0.949622 0.951124 0.952601 0.954103 0.955605 0.957083 0.958585 0.960062 0.961564 0.963041 0.964543 0.966021 0.967523 0.969000 0.970502 0.971979 0.973481 0.974959 0.976461 0.977938 0.979440 0.980917 0.982419 0.983897 0.985399 0.986876 0.988378 0.989855 0.991357 0.992835 0.994337 0.995814 0.997316 0.998793
+   ]
+   
+   locations [
+ 46.532508 -129.574027 0.0,  46.532485 -129.574050 0.0,  46.532472 -129.574023
+0.0,  46.532510 -129.574000 0.0,  46.532512 -129.574000 0.0,  46.532498
+-129.574005 0.0,  46.532513 -129.574003 0.0,  46.532490 -129.574022 0.0,
+46.532507 -129.574013 0.0,  46.532483 -129.574008 0.0,  46.532508 -129.574000
+0.0,  46.532508 -129.573967 0.0,  46.532475 -129.574003 0.0,  46.532485
+-129.574023 0.0,  46.532482 -129.574018 0.0,  46.532505 -129.573988 0.0,
+46.532508 -129.574025 0.0,  46.532502 -129.574028 0.0,  46.532502 -129.574015
+0.0,  46.532515 -129.574010 0.0,  46.532512 -129.574030 0.0,  46.532515
+-129.574030 0.0,  46.532513 -129.574050 0.0,  46.532473 -129.574002 0.0,
+46.532477 -129.574040 0.0,  46.532505 -129.574035 0.0,  46.532508 -129.574028
+0.0,  46.532530 -129.574035 0.0,  46.532487 -129.574043 0.0,  46.532490
+-129.574023 0.0,  46.532488 -129.574028 0.0,  46.532510 -129.574020 0.0,
+46.532540 -129.574027 0.0,  46.532508 -129.574002 0.0,  46.532502 -129.574012
+0.0,  46.532500 -129.574015 0.0,  46.532485 -129.574025 0.0,  46.532492
+-129.574018 0.0,  46.532505 -129.574022 0.0,  46.532490 -129.574010 0.0,
+46.532497 -129.573997 0.0,  46.532505 -129.574020 0.0,  46.532492 -129.574025
+0.0,  46.532508 -129.574005 0.0,  46.532528 -129.574005 0.0,  46.532513
+-129.574003 0.0,  46.532497 -129.573993 0.0,  46.532505 -129.574020 0.0,
+46.532492 -129.574017 0.0,  46.532487 -129.574018 0.0,  46.532492 -129.574053
+0.0,  46.532492 -129.574067 0.0,  46.532512 -129.574025 0.0,  46.532502
+-129.574013 0.0,  46.532502 -129.574020 0.0,  46.532502 -129.574000 0.0,
+46.532503 -129.574002 0.0,  46.532508 -129.574020 0.0,  46.532527 -129.574000
+0.0,  46.532507 -129.573990 0.0,  46.532507 -129.574003 0.0,  46.532493
+-129.574008 0.0,  46.532502 -129.574015 0.0,  46.532505 -129.574030 0.0,
+46.532497 -129.574022 0.0,  46.532498 -129.574012 0.0,  46.532520 -129.573995
+0.0,  46.532512 -129.573998 0.0,  46.532505 -129.574030 0.0,  46.532490
+-129.574033 0.0,  46.532487 -129.574038 0.0,  46.532502 -129.574017 0.0,
+46.532500 -129.574017 0.0,  46.532500 -129.574000 0.0,  46.532493 -129.574023
+0.0,  46.532467 -129.574028 0.0,  46.532497 -129.574027 0.0,  46.532532
+-129.574013 0.0,  46.532512 -129.573997 0.0,  46.532505 -129.574003 0.0,
+46.532493 -129.573980 0.0,  46.532498 -129.573953 0.0,  46.532502 -129.573952
+0.0,  46.532493 -129.573985 0.0,  46.532465 -129.573988 0.0,  46.532498
+-129.573992 0.0,  46.532510 -129.573985 0.0,  46.532515 -129.573982 0.0,
+46.532517 -129.573992 0.0,  46.532510 -129.574005 0.0,  46.532498 -129.574002
+0.0,  46.532507 -129.573992 0.0,  46.532498 -129.574012 0.0,  46.532467
+-129.574000 0.0,  46.532505 -129.574003 0.0,  46.532475 -129.573980 0.0,
+46.532405 -129.574043 0.0,  46.532333 -129.574125 0.0,  46.532232 -129.574192
+0.0,  46.532115 -129.574267 0.0,  46.531967 -129.574312 0.0,  46.531847
+-129.574325 0.0,  46.531773 -129.574337 0.0,  46.531743 -129.574347 0.0,
+46.531772 -129.574388 0.0,  46.531792 -129.574447 0.0,  46.531765 -129.574502
+0.0,  46.531737 -129.574420 0.0,  46.531763 -129.574423 0.0,  46.531748
+-129.574398 0.0,  46.531762 -129.574370 0.0,  46.531735 -129.574403 0.0,
+46.531745 -129.574422 0.0,  46.531735 -129.574440 0.0,  46.531692 -129.574465
+0.0,  46.531682 -129.574493 0.0,  46.531700 -129.574483 0.0,  46.531687
+-129.574475 0.0,  46.531688 -129.574480 0.0,  46.531658 -129.574537 0.0,
+46.531702 -129.574517 0.0,  46.531720 -129.574477 0.0,  46.531685 -129.574473
+0.0,  46.531688 -129.574483 0.0,  46.531645 -129.574480 0.0,  46.531685
+-129.574487 0.0,  46.531687 -129.574488 0.0,  46.531623 -129.574528 0.0,
+46.531540 -129.574597 0.0,  46.531470 -129.574622 0.0,  46.531388 -129.574658
+0.0,  46.531325 -129.574665 0.0,  46.531272 -129.574702 0.0,  46.531232
+-129.574733 0.0,  46.531183 -129.574752 0.0,  46.531135 -129.574778 0.0,
+46.531077 -129.574812 0.0,  46.531028 -129.574837 0.0,  46.530985 -129.574800
+0.0,  46.530950 -129.574737 0.0,  46.530920 -129.574673 0.0,  46.530820
+-129.574630 0.0,  46.530815 -129.574565 0.0,  46.530772 -129.574535 0.0,
+46.530780 -129.574450 0.0,  46.530775 -129.574355 0.0,  46.530738 -129.574287
+0.0,  46.530682 -129.574245 0.0,  46.530645 -129.574175 0.0,  46.530592
+-129.574142 0.0,  46.530560 -129.574053 0.0,  46.530538 -129.573993 0.0,
+46.530497 -129.573943 0.0,  46.530447 -129.573903 0.0,  46.530410 -129.573852
+0.0,  46.530337 -129.573792 0.0,  46.530307 -129.573718 0.0,  46.530282
+-129.573662 0.0,  46.530250 -129.573605 0.0,  46.530200 -129.573557 0.0,
+46.530158 -129.573485 0.0,  46.530112 -129.573427 0.0,  46.530070 -129.573372
+0.0,  46.530032 -129.573323 0.0,  46.529987 -129.573262 0.0,  46.529968
+-129.573202 0.0,  46.529952 -129.573128 0.0,  46.529900 -129.573068 0.0,
+46.529862 -129.573013 0.0,  46.529825 -129.572953 0.0,  46.529797 -129.572902
+0.0,  46.529723 -129.572832 0.0,  46.529700 -129.572778 0.0,  46.529610
+-129.572752 0.0,  46.529595 -129.572702 0.0,  46.529583 -129.572623 0.0,
+46.529533 -129.572552 0.0,  46.529510 -129.572483 0.0,  46.529470 -129.572430
+0.0,  46.529462 -129.572355 0.0,  46.529408 -129.572288 0.0,  46.529378
+-129.572230 0.0,  46.529350 -129.572160 0.0,  46.529298 -129.572127 0.0,
+46.529230 -129.572080 0.0,  46.529208 -129.572017 0.0,  46.529173 -129.571952
+0.0,  46.529138 -129.571918 0.0,  46.529105 -129.571830 0.0,  46.529032
+-129.571757 0.0,  46.529017 -129.571733 0.0,  46.528988 -129.571658 0.0,
+46.528947 -129.571588 0.0,  46.528887 -129.571530 0.0,  46.528857 -129.571487
+0.0,  46.528807 -129.571448 0.0,  46.528748 -129.571393 0.0,  46.528722
+-129.571347 0.0,  46.528720 -129.571267 0.0,  46.528682 -129.571187 0.0,
+46.528610 -129.571118 0.0,  46.528590 -129.571073 0.0,  46.528563 -129.571020
+0.0,  46.528503 -129.570953 0.0,  46.528430 -129.570905 0.0,  46.528397
+-129.570845 0.0,  46.528377 -129.570808 0.0,  46.528333 -129.570735 0.0,
+46.528312 -129.570668 0.0,  46.528292 -129.570612 0.0,  46.528242 -129.570520
+0.0,  46.528202 -129.570492 0.0,  46.528140 -129.570442 0.0,  46.528100
+-129.570408 0.0,  46.528078 -129.570333 0.0,  46.528040 -129.570272 0.0,
+46.527987 -129.570202 0.0,  46.527967 -129.570135 0.0,  46.527937 -129.570068
+0.0,  46.527898 -129.570025 0.0,  46.527838 -129.569975 0.0,  46.527802
+-129.569907 0.0,  46.527735 -129.569833 0.0,  46.527718 -129.569790 0.0,
+46.527695 -129.569717 0.0,  46.527660 -129.569653 0.0,  46.527612 -129.569593
+0.0,  46.527558 -129.569560 0.0,  46.527518 -129.569507 0.0,  46.527483
+-129.569478 0.0,  46.527450 -129.569405 0.0,  46.527417 -129.569313 0.0,
+46.527377 -129.569243 0.0,  46.527337 -129.569178 0.0,  46.527282 -129.569138
+0.0,  46.527240 -129.569118 0.0,  46.527228 -129.569020 0.0,  46.527217
+-129.568953 0.0,  46.527163 -129.568902 0.0,  46.527090 -129.568867 0.0,
+46.527032 -129.568817 0.0,  46.527008 -129.568753 0.0,  46.527002 -129.568685
+0.0,  46.526928 -129.568613 0.0,  46.526877 -129.568577 0.0,  46.526865
+-129.568510 0.0,  46.526845 -129.568423 0.0,  46.526807 -129.568372 0.0,
+46.526767 -129.568315 0.0,  46.526705 -129.568267 0.0,  46.526700 -129.568225
+0.0,  46.526655 -129.568145 0.0,  46.526630 -129.568085 0.0,  46.526583
+-129.568032 0.0,  46.526533 -129.567988 0.0,  46.526485 -129.567935 0.0,
+46.526437 -129.567872 0.0,  46.526387 -129.567840 0.0,  46.526325 -129.567740
+0.0,  46.526275 -129.567623 0.0,  46.526240 -129.567522 0.0,  46.526195
+-129.567415 0.0,  46.526108 -129.567342 0.0,  46.526030 -129.567282 0.0,
+46.525973 -129.567182 0.0,  46.525913 -129.567107 0.0,  46.525845 -129.567017
+0.0,  46.525792 -129.566928 0.0,  46.525748 -129.566843 0.0,  46.525692
+-129.566753 0.0,  46.525643 -129.566653 0.0,  46.525575 -129.566615 0.0,
+46.525552 -129.566562 0.0,  46.525535 -129.566497 0.0,  46.525518 -129.566418
+0.0,  46.525472 -129.566373 0.0,  46.525395 -129.566365 0.0,  46.525307
+-129.566335 0.0,  46.525265 -129.566270 0.0,  46.525228 -129.566213 0.0,
+46.525202 -129.566132 0.0,  46.525192 -129.566073 0.0,  46.525177 -129.565998
+0.0,  46.525122 -129.565953 0.0,  46.525078 -129.565955 0.0,  46.525097
+-129.565985 0.0,  46.525093 -129.565977 0.0,  46.525112 -129.565957 0.0,
+46.525117 -129.565928 0.0,  46.525118 -129.566070 0.0,  46.525115 -129.566148
+0.0,  46.525078 -129.566295 0.0,  46.525037 -129.566415 0.0,  46.525017
+-129.566535 0.0,  46.524998 -129.566668 0.0,  46.525002 -129.566783 0.0,
+46.524982 -129.566897 0.0,  46.524985 -129.567035 0.0,  46.524985 -129.567132
+0.0,  46.524955 -129.567255 0.0,  46.524938 -129.567358 0.0,  46.524918
+-129.567510 0.0,  46.524898 -129.567513 0.0,  46.524915 -129.567492 0.0,
+46.524915 -129.567495 0.0,  46.524920 -129.567493 0.0,  46.524925 -129.567575
+0.0,  46.524895 -129.567702 0.0,  46.524892 -129.567813 0.0,  46.524872
+-129.567912 0.0,  46.524852 -129.568038 0.0,  46.524840 -129.568165 0.0,
+46.524840 -129.568277 0.0,  46.524802 -129.568413 0.0,  46.524807 -129.568553
+0.0,  46.524783 -129.568657 0.0,  46.524768 -129.568762 0.0,  46.524758
+-129.568895 0.0,  46.524727 -129.569018 0.0,  46.524713 -129.569153 0.0,
+46.524707 -129.569252 0.0,  46.524685 -129.569365 0.0,  46.524667 -129.569508
+0.0,  46.524673 -129.569615 0.0,  46.524660 -129.569738 0.0,  46.524628
+-129.569870 0.0,  46.524623 -129.569980 0.0,  46.524608 -129.570085 0.0,
+46.524585 -129.570223 0.0,  46.524562 -129.570343 0.0,  46.524560 -129.570443
+0.0,  46.524560 -129.570578 0.0,  46.524530 -129.570703 0.0,  46.524525
+-129.570822 0.0,  46.524507 -129.570945 0.0,  46.524473 -129.571067 0.0,
+46.524442 -129.571193 0.0,  46.524457 -129.571305 0.0,  46.524477 -129.571413
+0.0,  46.524435 -129.571545 0.0,  46.524378 -129.571667 0.0,  46.524372
+-129.571783 0.0,  46.524395 -129.571913 0.0,  46.524387 -129.572020 0.0,
+46.524357 -129.572147 0.0,  46.524325 -129.572272 0.0,  46.524315 -129.572382
+0.0,  46.524312 -129.572520 0.0,  46.524270 -129.572632 0.0,  46.524270
+-129.572758 0.0,  46.524263 -129.572823 0.0,  46.524258 -129.572825 0.0,
+46.524248 -129.572848 0.0,  46.524253 -129.572977 0.0,  46.524242 -129.573083
+0.0,  46.524228 -129.573178 0.0,  46.524198 -129.573302 0.0,  46.524170
+-129.573442 0.0,  46.524173 -129.573570 0.0,  46.524170 -129.573610 0.0,
+46.524177 -129.573598 0.0,  46.524188 -129.573590 0.0,  46.524175 -129.573607
+0.0,  46.524158 -129.573593 0.0,  46.524165 -129.573600 0.0,  46.524192
+-129.573590 0.0,  46.524173 -129.573588 0.0,  46.524175 -129.573595 0.0,
+46.524180 -129.573595 0.0,  46.524185 -129.573603 0.0,  46.524167 -129.573597
+0.0,  46.524152 -129.573598 0.0,  46.524177 -129.573590 0.0,  46.524173
+-129.573612 0.0,  46.524178 -129.573592 0.0,  46.524192 -129.573623 0.0,
+46.524163 -129.573730 0.0,  46.524132 -129.573857 0.0,  46.524125 -129.573978
+0.0,  46.524107 -129.574082 0.0,  46.524090 -129.574232 0.0,  46.524092
+-129.574330 0.0,  46.524067 -129.574462 0.0,  46.524028 -129.574587 0.0,
+46.524022 -129.574702 0.0,  46.524038 -129.574828 0.0,  46.524020 -129.574963
+0.0,  46.523993 -129.575055 0.0,  46.523988 -129.575182 0.0,  46.523970
+-129.575295 0.0,  46.523952 -129.575437 0.0,  46.523945 -129.575552 0.0,
+46.523920 -129.575665 0.0,  46.523897 -129.575775 0.0,  46.523875 -129.575920
+0.0,  46.523882 -129.576063 0.0,  46.523878 -129.576145 0.0,  46.523840
+-129.576265 0.0,  46.523847 -129.576328 0.0,  46.523838 -129.576403 0.0,
+46.523817 -129.576487 0.0,  46.523818 -129.576583 0.0,  46.523798 -129.576673
+0.0,  46.523762 -129.576767 0.0,  46.523775 -129.576830 0.0,  46.523760
+-129.576902 0.0,  46.523738 -129.576985 0.0,  46.523767 -129.577057 0.0,
+46.523762 -129.577150 0.0,  46.523745 -129.577222 0.0,  46.523730 -129.577298
+0.0,  46.523705 -129.577382 0.0,  46.523717 -129.577450 0.0,  46.523697
+-129.577537 0.0,  46.523683 -129.577650 0.0,  46.523685 -129.577690 0.0,
+46.523667 -129.577775 0.0,  46.523657 -129.577860 0.0,  46.523640 -129.577950
+0.0,  46.523635 -129.578010 0.0,  46.523617 -129.578073 0.0,  46.523613
+-129.578160 0.0,  46.523612 -129.578258 0.0,  46.523607 -129.578352 0.0,
+46.523588 -129.578427 0.0,  46.523568 -129.578500 0.0,  46.523565 -129.578578
+0.0,  46.523568 -129.578677 0.0,  46.523562 -129.578742 0.0,  46.523535
+-129.578817 0.0,  46.523542 -129.578910 0.0,  46.523518 -129.578982 0.0,
+46.523492 -129.579072 0.0,  46.523503 -129.579150 0.0,  46.523490 -129.579228
+0.0,  46.523470 -129.579303 0.0,  46.523448 -129.579392 0.0,  46.523455
+-129.579468 0.0,  46.523467 -129.579565 0.0,  46.523463 -129.579655 0.0,
+46.523440 -129.579747 0.0,  46.523427 -129.579848 0.0,  46.523392 -129.579997
+0.0,  46.523383 -129.580120 0.0,  46.523380 -129.580235 0.0,  46.523363
+-129.580347 0.0,  46.523327 -129.580467 0.0,  46.523305 -129.580598 0.0,
+46.523318 -129.580720 0.0,  46.523302 -129.580843 0.0,  46.523298 -129.580972
+0.0,  46.523292 -129.581067 0.0,  46.523245 -129.581205 0.0,  46.523237
+-129.581333 0.0,  46.523223 -129.581450 0.0,  46.523178 -129.581567 0.0,
+46.523188 -129.581678 0.0,  46.523210 -129.581698 0.0,  46.523223 -129.581717
+0.0,  46.523208 -129.581718 0.0,  46.523202 -129.581728 0.0,  46.523198
+-129.581715 0.0,  46.523195 -129.581682 0.0,  46.523185 -129.581692 0.0,
+46.523182 -129.581705 0.0,  46.523172 -129.581725 0.0,  46.523193 -129.581718
+0.0,  46.523183 -129.581700 0.0,  46.523200 -129.581685 0.0,  46.523188
+-129.581665 0.0,  46.523197 -129.581687 0.0,  46.523192 -129.581672 0.0,
+46.523180 -129.581680 0.0,  46.523183 -129.581705 0.0,  46.523177 -129.581700
+0.0,  46.523188 -129.581702 0.0,  46.523175 -129.581828 0.0,  46.523168
+-129.581938 0.0,  46.523142 -129.582062 0.0,  46.523132 -129.582188 0.0,
+46.523117 -129.582303 0.0,  46.523100 -129.582408 0.0,  46.523087 -129.582542
+0.0,  46.523068 -129.582658 0.0,  46.523042 -129.582772 0.0,  46.523013
+-129.582890 0.0,  46.522992 -129.583013 0.0,  46.522997 -129.583143 0.0,
+46.522997 -129.583268 0.0,  46.522968 -129.583390 0.0,  46.522952 -129.583510
+0.0,  46.522927 -129.583623 0.0,  46.522947 -129.583750 0.0,  46.522928
+-129.583835 0.0,  46.522905 -129.583840 0.0,  46.522797 -129.583850 0.0,
+46.522670 -129.583837 0.0,  46.522560 -129.583832 0.0,  46.522487 -129.583833
+0.0,  46.522398 -129.583857 0.0,  46.522320 -129.583873 0.0,  46.522267
+-129.583893 0.0,  46.522163 -129.583915 0.0,  46.522077 -129.583915 0.0,
+46.521990 -129.583910 0.0,  46.521902 -129.583943 0.0,  46.521817 -129.583935
+0.0,  46.521738 -129.583942 0.0,  46.521658 -129.583963 0.0,  46.521570
+-129.583960 0.0,  46.521503 -129.583978 0.0,  46.521413 -129.583983 0.0,
+46.521320 -129.584018 0.0,  46.521235 -129.584008 0.0,  46.521158 -129.584028
+0.0,  46.521077 -129.584043 0.0,  46.521010 -129.584048 0.0,  46.520980
+-129.584032 0.0,  46.520990 -129.584052 0.0,  46.521002 -129.584038 0.0,
+46.521032 -129.583957 0.0,  46.521000 -129.583833 0.0,  46.521002 -129.583717
+0.0,  46.520993 -129.583598 0.0,  46.520992 -129.583475 0.0,  46.520980
+-129.583312 0.0,  46.520967 -129.583198 0.0,  46.520947 -129.583097 0.0,
+46.520942 -129.582963 0.0,  46.520943 -129.582867 0.0,  46.520920 -129.582742
+0.0,  46.520915 -129.582603 0.0,  46.520915 -129.582482 0.0,  46.520917
+-129.582362 0.0,  46.520892 -129.582243 0.0,  46.520885 -129.582127 0.0,
+46.520870 -129.581988 0.0,  46.520857 -129.581867 0.0,  46.520853 -129.581732
+0.0,  46.520850 -129.581623 0.0,  46.520812 -129.581497 0.0,  46.520827
+-129.581350 0.0,  46.520823 -129.581288 0.0,  46.520810 -129.581147 0.0,
+46.520793 -129.581007 0.0,  46.520787 -129.580937 0.0,  46.520777 -129.580950
+0.0,  46.520788 -129.580943 0.0,  46.520775 -129.580928 0.0,  46.520758
+-129.580925 0.0,  46.520775 -129.580955 0.0,  46.520818 -129.580887 0.0,
+46.520798 -129.580783 0.0,  46.520775 -129.580638 0.0,  46.520765 -129.580505
+0.0,  46.520747 -129.580378 0.0,  46.520737 -129.580253 0.0,  46.520718
+-129.580140 0.0,  46.520717 -129.580028 0.0,  46.520653 -129.579992 0.0,
+46.520572 -129.580000 0.0,  46.520530 -129.580005 0.0,  46.520478 -129.580048
+0.0,  46.520370 -129.580075 0.0,  46.520258 -129.580028 0.0,  46.520117
+-129.579970 0.0,  46.520008 -129.579898 0.0,  46.519992 -129.579888 0.0,
+46.520000 -129.579932 0.0,  46.520022 -129.579973 0.0,  46.520047 -129.579955
+0.0,  46.520077 -129.579955 0.0,  46.520073 -129.579948 0.0,  46.520060
+-129.579973 0.0,  46.520067 -129.579982 0.0,  46.520078 -129.579950 0.0,
+46.520083 -129.579990 0.0,  46.520075 -129.579982 0.0,  46.520080 -129.579950
+0.0,  46.520062 -129.579943 0.0,  46.520052 -129.579955 0.0,  46.520063
+-129.579967 0.0,  46.520078 -129.579967 0.0,  46.520068 -129.579977 0.0,
+46.520082 -129.579965 0.0,  46.520085 -129.579972 0.0,  46.520063 -129.579973
+0.0,  46.520070 -129.579977 0.0,  46.520062 -129.579950 0.0,  46.520092
+-129.579953 0.0,  46.520092 -129.579988 0.0,  46.520060 -129.579992 0.0,
+46.520050 -129.579987 0.0,  46.520062 -129.579985 0.0,  46.520075 -129.579965
+0.0,  46.520070 -129.579968 0.0,  46.520062 -129.579940 0.0,  46.520082
+-129.579965 0.0,  46.520095 -129.579963 0.0,  46.520090 -129.579943 0.0,
+46.520080 -129.579973 0.0,  46.520063 -129.579978 0.0,  46.520082 -129.579957
+0.0,  46.520075 -129.579987 0.0,  46.520060 -129.579982 0.0,  46.520070
+-129.579978 0.0,  46.520075 -129.579962 0.0,  46.520062 -129.579955 0.0,
+46.520080 -129.579965 0.0,  46.520075 -129.579993 0.0,  46.520082 -129.579942
+0.0,  46.520092 -129.579962 0.0,  46.520072 -129.579965 0.0,  46.520088
+-129.579933 0.0,  46.520087 -129.579948 0.0,  46.520075 -129.579968 0.0,
+46.520080 -129.579967 0.0,  46.520075 -129.579992 0.0,  46.520090 -129.580015
+0.0,  46.520062 -129.580013 0.0,  46.520063 -129.579987 0.0,  46.520078
+-129.579972 0.0,  46.520082 -129.579975 0.0,  46.520087 -129.579957 0.0,
+46.520070 -129.579933 0.0,  46.520065 -129.579970 0.0,  46.520077 -129.579988
+0.0,  46.520098 -129.579958 0.0,  46.520087 -129.579947 0.0,  46.520082
+-129.579977 0.0,  46.520022 -129.579952 0.0,  46.519957 -129.579902 0.0,
+46.519882 -129.579855 0.0,  46.519852 -129.579852 0.0,  46.519882 -129.579880
+0.0,  46.519908 -129.579910 0.0,  46.519898 -129.579907 0.0,  46.519890
+-129.579882 0.0,  46.519893 -129.579883 0.0,  46.519893 -129.579887 0.0,
+46.519885 -129.579912 0.0,  46.519885 -129.579872 0.0,  46.519915 -129.579892
+0.0,  46.519915 -129.579900 0.0,  46.519895 -129.579883 0.0,  46.519893
+-129.579875 0.0,  46.519888 -129.579872 0.0,  46.519883 -129.579880 0.0,
+46.519865 -129.579882 0.0,  46.519873 -129.579878 0.0,  46.519907 -129.579917
+0.0,  46.519925 -129.579913 0.0,  46.519925 -129.579883 0.0,  46.519900
+-129.579887 0.0,  46.519877 -129.579890 0.0,  46.519872 -129.579873 0.0,
+46.519902 -129.579895 0.0,  46.519867 -129.579873 0.0,  46.519875 -129.579878
+0.0,  46.519895 -129.579905 0.0,  46.519927 -129.579903 0.0,  46.519922
+-129.579888 0.0,  46.519892 -129.579868 0.0,  46.519895 -129.579882 0.0,
+46.519913 -129.579905 0.0,  46.519933 -129.579902 0.0,  46.519928 -129.579920
+0.0,  46.519927 -129.579893 0.0,  46.519910 -129.579855 0.0,  46.519918
+-129.579762 0.0,  46.519942 -129.579597 0.0,  46.519970 -129.579422 0.0
+    ]
+	
+   orientations [
+ 0 -1 0 5.6688,  0 -1 0 5.6426,  0 -1 0 5.6723,  0 -1 0 5.7177,  0 -1 0 5.6810,
+0 -1 0 5.6898,  0 -1 0 5.6898,  0 -1 0 5.6304,  0 -1 0 5.6968,  0 -1 0 5.6810,
+0 -1 0 5.7107,  0 -1 0 5.7107,  0 -1 0 5.6077,  0 -1 0 5.6374,  0 -1 0 5.6060,
+0 -1 0 5.6514,  0 -1 0 5.6112,  0 -1 0 5.6008,  0 -1 0 5.6008,  0 -1 0 5.6252,
+0 -1 0 5.6025,  0 -1 0 5.6130,  0 -1 0 5.5763,  0 -1 0 5.6426,  0 -1 0 5.6235,
+0 -1 0 5.6392,  0 -1 0 5.6374,  0 -1 0 5.6252,  0 -1 0 5.5920,  0 -1 0 5.6531,
+0 -1 0 5.5938,  0 -1 0 5.6200,  0 -1 0 5.6426,  0 -1 0 5.6392,  0 -1 0 5.5728,
+0 -1 0 5.6304,  0 -1 0 5.6025,  0 -1 0 5.6095,  0 -1 0 5.6444,  0 -1 0 5.6095,
+0 -1 0 5.6706,  0 -1 0 5.6165,  0 -1 0 5.6374,  0 -1 0 5.6514,  0 -1 0 5.6514,
+0 -1 0 5.5990,  0 -1 0 5.6252,  0 -1 0 5.6252,  0 -1 0 5.6653,  0 -1 0 5.6322,
+0 -1 0 5.6252,  0 -1 0 5.6322,  0 -1 0 5.6758,  0 -1 0 5.6409,  0 -1 0 5.6322,
+0 -1 0 5.6566,  0 -1 0 5.6322,  0 -1 0 5.6426,  0 -1 0 5.6409,  0 -1 0 5.6392,
+0 -1 0 5.6461,  0 -1 0 5.6706,  0 -1 0 5.6444,  0 -1 0 5.6426,  0 -1 0 5.6252,
+0 -1 0 5.6182,  0 -1 0 5.6426,  0 -1 0 5.6322,  0 -1 0 5.5728,  0 -1 0 5.5851,
+0 -1 0 5.6165,  0 -1 0 5.6025,  0 -1 0 5.5851,  0 -1 0 5.5641,  0 -1 0 5.5624,
+0 -1 0 5.5571,  0 -1 0 5.5868,  0 -1 0 5.5868,  0 -1 0 5.5659,  0 -1 0 5.5536,
+0 -1 0 5.5309,  0 -1 0 5.5257,  0 -1 0 5.4995,  0 -1 0 5.4123,  0 -1 0 5.4454,
+0 -1 0 5.4926,  0 -1 0 5.4716,  0 -1 0 5.4507,  0 -1 0 5.4402,  0 -1 0 5.4576,
+0 -1 0 5.4350,  0 -1 0 5.4734,  0 -1 0 5.4489,  0 -1 0 5.4472,  0 -1 0 5.4786,
+0 -1 0 5.4419,  0 -1 0 5.2273,  0 -1 0 5.0318,  0 -1 0 4.8293,  0 -1 0 4.6565,
+0 -1 0 4.5396,  0 -1 0 4.5274,  0 -1 0 4.6112,  0 -1 0 4.7473,  0 -1 0 4.9916,
+0 -1 0 5.0213,  0 -1 0 4.9375,  0 -1 0 5.0702,  0 -1 0 5.1941,  0 -1 0 5.1889,
+0 -1 0 5.1889,  0 -1 0 5.1452,  0 -1 0 5.1225,  0 -1 0 5.1348,  0 -1 0 5.1033,
+0 -1 0 5.2290,  0 -1 0 5.2412,  0 -1 0 5.2360,  0 -1 0 5.2657,  0 -1 0 5.1993,
+0 -1 0 5.2744,  0 -1 0 5.2709,  0 -1 0 5.2308,  0 -1 0 5.1993,  0 -1 0 5.2168,
+0 -1 0 5.3198,  0 -1 0 5.2133,  0 -1 0 4.8799,  0 -1 0 4.6688,  0 -1 0 4.6530,
+0 -1 0 4.5850,  0 -1 0 4.6147,  0 -1 0 4.6164,  0 -1 0 4.6199,  0 -1 0 4.6304,
+0 -1 0 4.5920,  0 -1 0 4.6304,  0 -1 0 4.6321,  0 -1 0 4.6356,  0 -1 0 4.6129,
+0 -1 0 4.6269,  0 -1 0 4.5204,  0 -1 0 4.7124,  0 -1 0 4.8119,  0 -1 0 4.9567,
+0 -1 0 5.0056,  0 -1 0 4.9916,  0 -1 0 4.9288,  0 -1 0 4.9428,  0 -1 0 4.9044,
+0 -1 0 4.9410,  0 -1 0 4.9445,  0 -1 0 4.9218,  0 -1 0 4.8695,  0 -1 0 4.8782,
+0 -1 0 4.8677,  0 -1 0 4.8991,  0 -1 0 4.8974,  0 -1 0 4.8730,  0 -1 0 4.8782,
+0 -1 0 4.8695,  0 -1 0 4.8817,  0 -1 0 4.8695,  0 -1 0 4.8904,  0 -1 0 4.8817,
+0 -1 0 4.9410,  0 -1 0 4.9637,  0 -1 0 4.9026,  0 -1 0 4.9079,  0 -1 0 4.9218,
+0 -1 0 4.9288,  0 -1 0 4.8852,  0 -1 0 4.9201,  0 -1 0 4.8922,  0 -1 0 4.9201,
+0 -1 0 4.9951,  0 -1 0 4.9759,  0 -1 0 4.9829,  0 -1 0 5.0213,  0 -1 0 5.0737,
+0 -1 0 5.0440,  0 -1 0 5.0754,  0 -1 0 5.0510,  0 -1 0 5.0370,  0 -1 0 5.0126,
+0 -1 0 5.0527,  0 -1 0 5.0213,  0 -1 0 5.0265,  0 -1 0 5.0615,  0 -1 0 4.9969,
+0 -1 0 5.0807,  0 -1 0 5.0754,  0 -1 0 5.0405,  0 -1 0 4.9759,  0 -1 0 5.0004,
+0 -1 0 4.9794,  0 -1 0 4.9847,  0 -1 0 5.0492,  0 -1 0 5.0684,  0 -1 0 5.0859,
+0 -1 0 5.0126,  0 -1 0 5.0143,  0 -1 0 5.0283,  0 -1 0 4.9812,  0 -1 0 4.9428,
+0 -1 0 4.9707,  0 -1 0 5.0021,  0 -1 0 4.9847,  0 -1 0 5.0196,  0 -1 0 5.0231,
+0 -1 0 4.9969,  0 -1 0 4.9899,  0 -1 0 4.9620,  0 -1 0 5.0039,  0 -1 0 5.0126,
+0 -1 0 4.9951,  0 -1 0 5.0300,  0 -1 0 5.0510,  0 -1 0 4.9882,  0 -1 0 5.0021,
+0 -1 0 5.0039,  0 -1 0 5.0021,  0 -1 0 5.0126,  0 -1 0 5.0283,  0 -1 0 5.0353,
+0 -1 0 5.0423,  0 -1 0 5.0091,  0 -1 0 4.9951,  0 -1 0 4.9864,  0 -1 0 4.9951,
+0 -1 0 5.0178,  0 -1 0 5.0091,  0 -1 0 5.0196,  0 -1 0 5.0231,  0 -1 0 4.9899,
+0 -1 0 4.9794,  0 -1 0 5.0213,  0 -1 0 5.0737,  0 -1 0 4.9934,  0 -1 0 4.9951,
+0 -1 0 4.9550,  0 -1 0 5.0143,  0 -1 0 5.0300,  0 -1 0 4.9969,  0 -1 0 5.0527,
+0 -1 0 5.0196,  0 -1 0 5.0440,  0 -1 0 5.0353,  0 -1 0 5.0353,  0 -1 0 5.0161,
+0 -1 0 5.0580,  0 -1 0 5.0388,  0 -1 0 5.0667,  0 -1 0 5.0091,  0 -1 0 4.9463,
+0 -1 0 4.9742,  0 -1 0 4.9323,  0 -1 0 4.9742,  0 -1 0 4.9550,  0 -1 0 4.9934,
+0 -1 0 5.0126,  0 -1 0 5.0213,  0 -1 0 4.9480,  0 -1 0 4.9445,  0 -1 0 4.9690,
+0 -1 0 4.9759,  0 -1 0 4.9882,  0 -1 0 4.9550,  0 -1 0 4.9777,  0 -1 0 4.9882,
+0 -1 0 4.9794,  0 -1 0 4.9690,  0 -1 0 4.9794,  0 -1 0 4.9916,  0 -1 0 5.0196,
+0 -1 0 4.9340,  0 -1 0 4.8084,  0 -1 0 4.7735,  0 -1 0 4.8049,  0 -1 0 4.8101,
+0 -1 0 4.8311,  0 -1 0 4.8660,  0 -1 0 4.8817,  0 -1 0 4.8607,  0 -1 0 4.8398,
+0 -1 0 4.8450,  0 -1 0 4.8293,  0 -1 0 4.8730,  0 -1 0 4.8538,  0 -1 0 4.8189,
+0 -1 0 4.8258,  0 -1 0 4.7508,  0 -1 0 4.7682,  0 -1 0 4.7264,  0 -1 0 4.7647,
+0 -1 0 4.7839,  0 -1 0 4.7490,  0 -1 0 4.7700,  0 -1 0 4.7595,  0 -1 0 4.7717,
+0 -1 0 4.7595,  0 -1 0 4.7298,  0 -1 0 4.7351,  0 -1 0 4.7647,  0 -1 0 4.7578,
+0 -1 0 4.7839,  0 -1 0 4.7665,  0 -1 0 4.7874,  0 -1 0 4.7857,  0 -1 0 4.7700,
+0 -1 0 4.7647,  0 -1 0 4.7613,  0 -1 0 4.7927,  0 -1 0 4.7508,  0 -1 0 4.7857,
+0 -1 0 4.7578,  0 -1 0 4.7752,  0 -1 0 4.7805,  0 -1 0 4.7490,  0 -1 0 4.7508,
+0 -1 0 4.7351,  0 -1 0 4.7787,  0 -1 0 4.7211,  0 -1 0 4.7944,  0 -1 0 4.7647,
+0 -1 0 4.7682,  0 -1 0 4.7525,  0 -1 0 4.7962,  0 -1 0 4.7560,  0 -1 0 4.7682,
+0 -1 0 4.7822,  0 -1 0 4.7839,  0 -1 0 4.7543,  0 -1 0 4.7770,  0 -1 0 4.7770,
+0 -1 0 4.7525,  0 -1 0 4.7508,  0 -1 0 4.7892,  0 -1 0 4.7735,  0 -1 0 4.7229,
+0 -1 0 4.6530,  0 -1 0 4.7229,  0 -1 0 4.7595,  0 -1 0 4.7490,  0 -1 0 4.7089,
+0 -1 0 4.6862,  0 -1 0 4.7316,  0 -1 0 4.7438,  0 -1 0 4.7054,  0 -1 0 4.7316,
+0 -1 0 4.7002,  0 -1 0 4.7386,  0 -1 0 4.7490,  0 -1 0 4.7351,  0 -1 0 4.7264,
+0 -1 0 4.7229,  0 -1 0 4.7019,  0 -1 0 4.7298,  0 -1 0 4.7508,  0 -1 0 4.7141,
+0 -1 0 4.7281,  0 -1 0 4.7421,  0 -1 0 4.7194,  0 -1 0 4.6984,  0 -1 0 4.7386,
+0 -1 0 4.7490,  0 -1 0 4.7246,  0 -1 0 4.7490,  0 -1 0 4.7421,  0 -1 0 4.7246,
+0 -1 0 4.7316,  0 -1 0 4.6914,  0 -1 0 4.7543,  0 -1 0 4.7403,  0 -1 0 4.7316,
+0 -1 0 4.7613,  0 -1 0 4.7176,  0 -1 0 4.7019,  0 -1 0 4.7473,  0 -1 0 4.7264,
+0 -1 0 4.7264,  0 -1 0 4.7002,  0 -1 0 4.7211,  0 -1 0 4.6949,  0 -1 0 4.7054,
+0 -1 0 4.7717,  0 -1 0 4.7316,  0 -1 0 4.7333,  0 -1 0 4.7351,  0 -1 0 4.7124,
+0 -1 0 4.7298,  0 -1 0 4.7578,  0 -1 0 4.7089,  0 -1 0 4.7403,  0 -1 0 4.7089,
+0 -1 0 4.7351,  0 -1 0 4.7281,  0 -1 0 4.7368,  0 -1 0 4.7421,  0 -1 0 4.7595,
+0 -1 0 4.7281,  0 -1 0 4.7368,  0 -1 0 4.7421,  0 -1 0 4.6775,  0 -1 0 4.7403,
+0 -1 0 4.7037,  0 -1 0 4.7106,  0 -1 0 4.7700,  0 -1 0 4.7473,  0 -1 0 4.7124,
+0 -1 0 4.7316,  0 -1 0 4.7176,  0 -1 0 4.7176,  0 -1 0 4.7316,  0 -1 0 4.7089,
+0 -1 0 4.7438,  0 -1 0 4.7386,  0 -1 0 4.7194,  0 -1 0 4.7106,  0 -1 0 4.7246,
+0 -1 0 4.7106,  0 -1 0 4.7211,  0 -1 0 4.7316,  0 -1 0 4.7159,  0 -1 0 4.7159,
+0 -1 0 4.7124,  0 -1 0 4.7456,  0 -1 0 4.7560,  0 -1 0 4.7578,  0 -1 0 4.7438,
+0 -1 0 4.7525,  0 -1 0 4.7072,  0 -1 0 4.7054,  0 -1 0 4.7421,  0 -1 0 4.7368,
+0 -1 0 4.7159,  0 -1 0 4.7072,  0 -1 0 4.7630,  0 -1 0 4.7368,  0 -1 0 4.7368,
+0 -1 0 4.7490,  0 -1 0 4.7752,  0 -1 0 4.7351,  0 -1 0 4.7647,  0 -1 0 4.7578,
+0 -1 0 4.7351,  0 -1 0 4.7211,  0 -1 0 4.7490,  0 -1 0 4.7997,  0 -1 0 4.7508,
+0 -1 0 4.7665,  0 -1 0 4.7665,  0 -1 0 4.7264,  0 -1 0 4.7647,  0 -1 0 4.7595,
+0 -1 0 4.7089,  0 -1 0 4.7595,  0 -1 0 4.7630,  0 -1 0 4.7159,  0 -1 0 4.6897,
+0 -1 0 4.6897,  0 -1 0 4.6862,  0 -1 0 4.6635,  0 -1 0 4.6688,  0 -1 0 4.6705,
+0 -1 0 4.6478,  0 -1 0 4.7089,  0 -1 0 4.6653,  0 -1 0 4.6897,  0 -1 0 4.6635,
+0 -1 0 4.6810,  0 -1 0 4.6845,  0 -1 0 4.6600,  0 -1 0 4.7037,  0 -1 0 4.6496,
+0 -1 0 4.6897,  0 -1 0 4.6827,  0 -1 0 4.7054,  0 -1 0 4.6792,  0 -1 0 4.6949,
+0 -1 0 4.6880,  0 -1 0 4.7072,  0 -1 0 4.6792,  0 -1 0 4.6862,  0 -1 0 4.6129,
+0 -1 0 4.6042,  0 -1 0 4.5989,  0 -1 0 4.6653,  0 -1 0 4.6810,  0 -1 0 4.6880,
+0 -1 0 4.6600,  0 -1 0 4.6234,  0 -1 0 4.6932,  0 -1 0 4.6635,  0 -1 0 4.5693,
+0 -1 0 4.3878,  0 -1 0 4.3563,  0 -1 0 4.3808,  0 -1 0 4.4174,  0 -1 0 4.3947,
+0 -1 0 4.4174,  0 -1 0 4.4646,  0 -1 0 4.4035,  0 -1 0 4.4122,  0 -1 0 4.4227,
+0 -1 0 4.4017,  0 -1 0 4.4052,  0 -1 0 4.4070,  0 -1 0 4.3895,  0 -1 0 4.3720,
+0 -1 0 4.4331,  0 -1 0 4.4000,  0 -1 0 4.3755,  0 -1 0 4.3843,  0 -1 0 4.4227,
+0 -1 0 4.4070,  0 -1 0 4.3581,  0 -1 0 4.3720,  0 -1 0 4.3895,  0 -1 0 4.4506,
+0 -1 0 4.4628,  0 -1 0 4.4349,  0 -1 0 4.4628,  0 -1 0 4.4663,  0 -1 0 4.4454,
+0 -1 0 4.4227,  0 -1 0 4.4471,  0 -1 0 4.4331,  0 -1 0 4.4820,  0 -1 0 4.4401,
+0 -1 0 4.4314,  0 -1 0 4.4454,  0 -1 0 4.4488,  0 -1 0 4.4663,  0 -1 0 4.4296,
+0 -1 0 4.4611,  0 -1 0 4.4296,  0 -1 0 4.4314,  0 -1 0 4.4698,  0 -1 0 4.4977,
+0 -1 0 4.3790,  0 -1 0 4.4750,  0 -1 0 4.5169,  0 -1 0 4.5012,  0 -1 0 4.4663,
+0 -1 0 4.4611,  0 -1 0 4.4803,  0 -1 0 4.4680,  0 -1 0 4.4646,  0 -1 0 4.4506,
+0 -1 0 4.5344,  0 -1 0 4.5920,  0 -1 0 4.4855,  0 -1 0 4.4314,  0 -1 0 4.4646,
+0 -1 0 4.4366,  0 -1 0 4.4471,  0 -1 0 4.3982,  0 -1 0 4.4576,  0 -1 0 4.4157,
+0 -1 0 4.3982,  0 -1 0 4.6600,  0 -1 0 4.4611,  0 -1 0 4.3668,  0 -1 0 4.2220,
+0 -1 0 4.1504,  0 -1 0 4.2115,  0 -1 0 4.3284,  0 -1 0 4.3354,  0 -1 0 4.3459,
+0 -1 0 4.3581,  0 -1 0 4.3720,  0 -1 0 4.3581,  0 -1 0 4.3371,  0 -1 0 4.3581,
+0 -1 0 4.3773,  0 -1 0 4.3878,  0 -1 0 4.3633,  0 -1 0 4.3825,  0 -1 0 4.3389,
+0 -1 0 4.3424,  0 -1 0 4.3720,  0 -1 0 4.3703,  0 -1 0 4.3476,  0 -1 0 4.3738,
+0 -1 0 4.3686,  0 -1 0 4.3476,  0 -1 0 4.3529,  0 -1 0 4.3773,  0 -1 0 4.3860,
+0 -1 0 4.3581,  0 -1 0 4.3284,  0 -1 0 4.3441,  0 -1 0 4.3668,  0 -1 0 4.3494,
+0 -1 0 4.3459,  0 -1 0 4.3633,  0 -1 0 4.4104,  0 -1 0 4.3965,  0 -1 0 4.4104,
+0 -1 0 4.4017,  0 -1 0 4.3755,  0 -1 0 4.4052,  0 -1 0 4.3773,  0 -1 0 4.3912,
+0 -1 0 4.4331,  0 -1 0 4.4733,  0 -1 0 4.4384,  0 -1 0 4.4488,  0 -1 0 4.4401,
+0 -1 0 4.4680,  0 -1 0 4.4296,  0 -1 0 4.4052,  0 -1 0 4.4331,  0 -1 0 4.4122,
+0 -1 0 4.4471,  0 -1 0 4.4070,  0 -1 0 4.4576,  0 -1 0 4.4506,  0 -1 0 4.4035,
+0 -1 0 4.3982,  0 -1 0 4.4558,  0 -1 0 4.4104,  0 -1 0 4.4488,  0 -1 0 4.4331,
+0 -1 0 4.4192,  0 -1 0 4.4262,  0 -1 0 4.4419,  0 -1 0 4.4192,  0 -1 0 4.4488,
+0 -1 0 4.3947,  0 -1 0 4.3424,  0 -1 0 4.3546,  0 -1 0 4.3406,  0 -1 0 4.4541,
+0 -1 0 4.4558,  0 -1 0 4.4488,  0 -1 0 4.4419,  0 -1 0 4.4558,  0 -1 0 4.4209,
+0 -1 0 4.4384,  0 -1 0 4.3947,  0 -1 0 4.4262,  0 -1 0 4.4523,  0 -1 0 4.4000,
+0 -1 0 4.4122,  0 -1 0 4.4227,  0 -1 0 4.4139,  0 -1 0 4.4209,  0 -1 0 4.4488,
+0 -1 0 4.4646,  0 -1 0 4.4349,  0 -1 0 4.4262,  0 -1 0 4.3529,  0 -1 0 4.3895,
+0 -1 0 4.4035,  0 -1 0 4.4104,  0 -1 0 4.3668,  0 -1 0 4.4262,  0 -1 0 4.5082,
+0 -1 0 4.4680,  0 -1 0 4.4488,  0 -1 0 4.4279,  0 -1 0 4.4977,  0 -1 0 4.5344,
+0 -1 0 4.5466,  0 -1 0 4.5501,  0 -1 0 4.5483,  0 -1 0 4.5588,  0 -1 0 4.5326,
+0 -1 0 4.5221,  0 -1 0 4.5588
+    ]
+
+} # End SHIP
+
+DEF TS_T882 TimeController {
+  currentTime 0
+  startTime 0
+  stopTime 100
+  rate 10
+  run FALSE
+  loop TRUE
+  direction TRUE
+}
+
+DEF TIME_T882 TimeSensor {
+   cycleInterval 100
+   loop TRUE
+}
+
+# A little context terrain - to be commented out
+##Inline {
+##	url ["http://x3d-earth.nps.edu/globe/MBARI1MinuteBathy/west/tiles/0/worldwest0-0.x3d"]
+##}
+
+# High-resolution terrain for the dive area
+Inline {
+   url ["CoaxialSegment_MAUV_Topo_1m/trees/0/p0p0.x3dv"]
+}
+#
+
+ROUTE TS_T882.fraction_changed TO SHIP_T882.fraction
+ROUTE TS_T882.fraction_changed TO ROV_T882.fraction
+
+GeoViewpoint {
+   description "Above T882"
+   geoSystem ["GDC"]
+   position 46.5258 -129.5757 10000
+   orientation 1 0 0 -1.57   
+}
+
+# A second layer to show that we do have stuff on screen
+LayerSet {  
+  order [ 0 1]
+  layers [
+     Layer {
+      viewport DEF CONTROL1_VIEW CustomViewport {
+	fixedX FALSE
+	fixedY TRUE
+      
+        x -0.5
+        y 0
+        width 200
+        height -64
+      }
+  
+        children [
+          TextureBackground {
+              transparency 0.5
+              skyColor 0 0.5 0
+          }
+          Transform {
+             translation -14 0 0
+             scale 5 5 5
+             children [
+             DEF DVD1 DVDControl {}
+	     ]
+         }
+       ]
+    }
+    Layer {
+      viewport DEF CONTROL2_VIEW CustomViewport {
+	fixedX FALSE
+	fixedY TRUE
+      
+        x -0.5
+        y -64
+        width 200
+        height -64
+      }
+
+      children [
+        TextureBackground {
+            transparency 0.5
+            skyColor 0 0.5 0
+        }
+        Transform {
+           translation -14 0 0
+           scale 5 5 5
+           children [
+             DEF DVD2 DVDControl {}           
+	   ]
+	}
+      ]
+    }
+  ]
+}
+
+DEF TS_T882_LOGIC TimeControllerLogic {
+   endTime 100
+}
+
+ROUTE TS_T882_LOGIC.run TO TS_T882.run
+ROUTE TS_T882_LOGIC.rate TO TS_T882.rate
+ROUTE TS_T882_LOGIC.direction TO TS_T882.direction
+ROUTE TS_T882_LOGIC.currentTime TO TS_T882.currentTime
+ROUTE TS_T882_LOGIC.enabled TO TS_T882.enabled
+
+ROUTE DVD1.pause TO TS_T882_LOGIC.pause
+ROUTE DVD1.play TO TS_T882_LOGIC.play
+ROUTE DVD1.fastForward TO TS_T882_LOGIC.fastForward
+ROUTE DVD1.fastRewind TO TS_T882_LOGIC.fastRewind
+ROUTE DVD1.rewind TO TS_T882_LOGIC.rewind
+ROUTE DVD1.start TO TS_T882_LOGIC.start
+ROUTE DVD1.end TO TS_T882_LOGIC.end

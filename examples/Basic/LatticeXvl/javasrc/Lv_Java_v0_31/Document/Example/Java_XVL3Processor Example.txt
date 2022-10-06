@@ -1,0 +1,223 @@
+//
+// Java版XVL3 Processor利用の全体の流れ（一例）
+//
+
+import  jp.co.lattice.vProcessor.base.*;			// Java版XVL3 Processorパッケージ
+import  jp.co.lattice.vProcessor.com.*;				// 同上
+
+import  jp.co.lattice.vkernel.b0.*;					// Java版 Lattice Kernelパッケージ
+import  jp.co.lattice.vkernel.c0.*;					// 同上
+
+
+class XVL3Example {
+
+x3pGlobal  mX3pGlobal;								// XVL3 Processorグローバル情報
+
+
+// 処理全体
+//			applet:				当アプレット
+//			xvl3FileName:		XVL3ファイル名
+//			numDivEdgeOnGreg:	稜線分割数
+public void Proc( Applet applet、String xvl3FileName, int numDivEdgeOnGreg ) throws Throwable
+{
+    Init();											// 初期化
+
+    // Processorへのデータ出力
+    ToProcessor( applet xvl3FileName, numDivEdgeOnGreg );
+
+    // Processorからのデータ取得
+    x3pFromProcessor  fromProcessor = FromProcessor();
+
+    // fromProcessorからユーザープログラムデータへの変換
+    Convert( fromProcessor );
+
+    fromProcessor = null;          					// 以後、必要無いなら消去してよい
+}
+
+// 初期化
+public void Init()
+{
+    mX3pGlobal = x3pWorld.Init();					// 初期化
+}
+
+// Processorへのデータ出力
+public void ToProcessor( Applet applet、String xvl3FileName, int numDivEdgeOnGreg ) throws Throwable
+{
+    // 「 Processorへのデータ出力」用クラスを作成
+    x3pToProcessor  toProcessor = new x3pToProcessor( mX3pGlobal );
+
+    // XVL3ファイルのURLを得る
+    URL  xvl3FileUrl;
+    try { 
+        xvl3FileUrl = new URL( applet.getDocumentBase(), xvl3FileName );
+    }
+    catch( Exception e ) {
+        System.out.println( e.getMessage() );
+        throw new Throwable();
+    }
+
+    // 「Processorへのデータ」を記述
+    toProcessor.xvl3FileUrl      = xvl3FileUrl;
+    toProcessor.numDivEdgeOnGreg = numDivEdgeOnGreg;
+
+    // Processorへのデータ出力
+    boolean  result = toProcessor.SetData();
+    if( result == lvConst.LV_FAILURE ) {
+        System.out.println( lvError.Message( mX3pGlobal ) );
+        throw new Throwable();
+    }
+
+    toProcessor = null;								// toProcessorは、このあと不使用
+}
+
+ // Processorからのデータ取得
+public x3pFromProcessor FromProcessor() throws Throwable
+{
+    // 「Processorからのデータ取得」用クラスを作成
+    x3pFromProcessor  fromProcessor = new x3pFromProcessor( mX3pGlobal );
+
+    // Processorからのデータ取得
+    boolean  result = fromProcessor.GetData();
+    if( result == lvConst.LV_FAILURE ) {
+        System.out.println( lvError.Message( mX3pGlobal ) );
+        throw new Throwable();
+    }
+
+    return fromProcessor;							// 「Processorからのデータ」を返す
+}
+
+// fromProcessorからユーザープログラムデータへの変換
+public void Convert( x3pFromProcessor fromProcessor )
+{
+    // シェル単位のループ
+    for( int i=0; i<fromProcessor.shellInfo.length; i++ ) {
+
+        // シェル情報を取得
+        x3pShellInfo  shellInfo = fromProcessor.shellInfo[ i ];
+
+        // インスタンス単位のループ
+        for( int j=0; j<shellInfo.instance.length; j++ ) {
+
+            // Faces単位のループ
+            for( int k=0; k<shellInfo.faces.length; k++ )
+                ConvertFaces( fromProcessor, shellInfo.faces[ k ], shellInfo.instance[ j ] );
+        }
+    }
+}
+
+// fromProcessorからユーザープログラムデータへの変換（Faces単位）
+public void ConvertFaces( x3pFromProcessor fromProcessor, x3pShellInfo.Faces faces,
+                          x3pShellInfo.Instance instance )
+{
+    // fromProcessorからユーザープログラムデータへの変換（マテリアル単位）
+    ConvertMaterial( fromProcess.material[ faces.materialIndex ] );
+
+    // fromProcessorからユーザープログラムデータへの変換（テクスチャ単位）
+    if( fromProcess.texture != null && faces.enableTextue == true )
+        ConvertTexture( fromProcess.texture[ faces.textureIndex ] );
+
+    // 面単位のループ
+    for( int i=0; i<faces.fromKernel.length; i++ ) {
+        ConvertSurface( faces.fromKernel[ i ], faces.face[ i ], instance );
+    }
+}
+
+// fromProcessorからユーザープログラムデータへの変換（マテリアル単位）
+public void ConvertMaterial( x3pFromProcessor.Material material )
+{
+    ... = material.ambientIntensity;				// 環境光の量
+
+    ... = material.diffuseColor.r;					// 拡散反射光色
+    ... = material.diffuseColor.g;
+    ... = material.diffuseColor.b;
+
+    ... = material.emissiveColor.r;					// 発光色
+    ... = material.emissiveColor.g;
+    ... = material.emissiveColor.b;
+
+    ... = material.shininess;						// 鏡面反射の鋭さ
+
+    ... = material.specularColor.r; 				// 鏡面反射光色
+    ... = material.specularColor.g;
+    ... = material.specularColor.b;
+
+    ... = material.transparency;					// 透明度
+}
+
+// fromProcessorからユーザープログラムデータへの変換（テクスチャ単位）
+public void ConvertTexture( x3pFromProcessor.Texture texture )
+{
+    ... = texture.url;								// テクスチャファイルURL
+    ... = texture.repeatS;							// S方向繰り返しフラグ
+    ... = texture.repeatT;							// T方向繰り返しフラグ
+}
+
+ // fromProcessorからユーザープログラムデータへの変換（面単位）
+public void ConvertSurface( lvFromKernel fromKernel, x3pShellInfo.Face face,
+                            x3pShellInfo.Instance instance )
+{
+    // 頂点単位のループ
+    for( int i=0; i<fromKernel.vertex.length; i++ ) {
+
+        // fromProcessorからユーザープログラムデータへの変換（頂点位置単位）
+        ConvertPos( fromKernel.vertex[ i ].pos.x,
+                    fromKernel.vertex[ i ].pos.y,
+                    fromKernel.vertex[ i ].pos.z,
+                    instance.posMat );
+
+        // fromProcessorからユーザープログラムデータへの変換（頂点法線単位）
+        ConvertNormal( fromKernel.vertex[ i ].normal.x,
+                       fromKernel.vertex[ i ].normal.y,
+                       fromKernel.vertex[ i ].normal.z,
+                       instance.normalMat );
+
+        // fromProcessorからユーザープログラムデータへの変換（テクスチャ座標用）
+        if( face.uv != null ) {
+            ..._U = face.uv[ i ].u;
+            ..._V = face.uv[ i ].v;
+        }
+    }
+
+    // 三角ポリゴン単位のループ
+    for( int i=0; i<fromKernel.triIndex.length; i++ ) {
+        for( int j=0; j<3; j++ ) {
+            // 三角ポリゴンの頂点インデックス
+            ... = fromKernel.triIndex[ i ].vtxNo[ j ];
+        }
+    }
+}
+
+// fromProcessorからユーザープログラムデータへの変換（頂点位置単位）
+public void ConvertPos( double x, double y, double z, x3pMatrix posMat )
+{
+    // マトリックス変換
+    ..._X = x*posMat.m[0][0] + y*posMat.m[1][0] + z*posMat.m[2][0] + posMat.m[3][0];
+    ..._Y = x*posMat.m[0][1] + y*posMat.m[1][1] + z*posMat.m[2][1] + posMat.m[3][1];
+    ..._Z = x*posMat.m[0][2] + y*posMat.m[1][2] + z*posMat.m[2][2] + posMat.m[3][2];
+}
+
+// fromProcessorからユーザープログラムデータへの変換（頂点法線単位）
+public void ConvertNormal( double x, double y, double z, x3pMatrix normalMat )
+{
+    // マトリックス変換
+    double  xd = x*normalMat.m[0][0] + y*normalMat.m[1][0] + z*normalMat.m[2][0];
+    double  yd = x*normalMat.m[0][1] + y*normalMat.m[1][1] + z*normalMat.m[2][1];
+    double  zd = x*normalMat.m[0][2] + y*normalMat.m[1][2] + z*normalMat.m[2][2];
+
+    // 法線の変換後の長さ
+    double  len = Math.sqrt( xd*xd + yd*yd + zd*zd );
+
+    // 法線が長さを持つなら、単位ベクトルにする
+    if( len > 1.0e-6 ) {
+        ..._X = xd / len;
+        ..._Y = yd / len;
+        ..._Z = zd / len;
+    }
+    else {
+        ..._X = 0.0;
+        ..._Y = 0.0;
+        ..._Z = 0.0;
+    }
+}
+
+}													// XVL3Exampleクラスの終端

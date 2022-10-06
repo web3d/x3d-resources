@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <meta content='FollowerPrototypeDeclarations.x3d' name='title'/>
+    <meta content='Original implementation pattern as prototype declarations for Follower (Chaser and Damper) nodes, useful for browser developers.' name='description'/>
+    <meta content='Herbert Stocker' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='18 April 2006' name='created'/>
+    <meta content='2 December 2011' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='FollowerExternalPrototypeDeclarations.x3d' name='reference'/>
+    <meta content='originals/Chasers.wrl' name='reference'/>
+    <meta content='originals/Dampers.wrl' name='reference'/>
+    <meta content='Stocker_06_Followers.pdf' name='reference'/>
+    <meta content='http://www.hersto.com/Publications/Followers' name='reference'/>
+    <meta content='X3D version 3.0, 3.1' name='requires'/>
+    <meta content='X3D Follower Chaser Damper' name='subject'/>
+    <meta content='under development' name='warning'/>
+    <meta content='Rename and test these prototypes to match final names in X3D Specification Followers Component' name='TODO'/>
+    <meta content='Ensure full coverage of follower nodes in order to provide backwards compatibility with X3D v3.0 and v3.1.' name='TODO'/>
+    <meta content='Xj3D Player Bugzilla Issuehttp://bugzilla.xj3d.org/show_bug.cgi?id=639' name='TODO'/>
+    <meta content='https://www.web3d.org/x3d/specifications/ISO-IEC-19775-1.2-X3D-AbstractSpecification/Part01/components/followers.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/Followers/FollowerPrototypeDeclarations.x3d' name='identifier'/>
+    <meta content='Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html' name='generator'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo info='"The ExternProto nodes found in this file implement principles described in the paper" "Linear Filters - Animating Objects in a Flexible and Pleasing Way" "They have been proposed and added to the X3D standard in 2006." "Webpage: http://www.hersto.net/Followers" "" "Please use the code in this file in any content or application you like" "or modify it in any way." "" "The code here works, however things like detecting when a transition has ended" "and when the node can stop calculating and updating the output or secondary fields" "like set_value or initial_destination are not yet implemented." "Nevertheless, set_destination and value_changed do work."' title='Damper nodes'/>
+    <ProtoDeclare name='PositionChaser'>
+      <ProtoInterface>
+        <field accessType='outputOnly' name='value_changed' type='SFVec3f'/>
+        <field accessType='inputOnly' name='set_value' type='SFVec3f'/>
+        <field accessType='initializeOnly' name='credits' type='MFString' value='"Initial idea and copyright by Herbert Stocker http://www.hersto.net"'/>
+        <field accessType='outputOnly' name='isActive' type='SFBool'/>
+        <field accessType='inputOnly' name='set_destination' type='SFVec3f'/>
+        <field accessType='initializeOnly' name='duration' type='SFTime' value='1.0'/>
+        <field accessType='initializeOnly' name='initial_destination' type='SFVec3f' value='0.0 0.0 0.0'/>
+        <field accessType='initializeOnly' name='initial_value' type='SFVec3f' value='0.0 0.0 0.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script DEF='ScreenPositionDamper_PositionChaser'>
+          <field accessType='inputOnly' name='Tick' type='SFTime'/>
+          <field accessType='inputOnly' name='set_value' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='duration' type='SFTime'/>
+          <field accessType='initializeOnly' name='Buffer' type='MFVec3f'/>
+          <field accessType='initializeOnly' name='bInitialized' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='BufferEndTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='cNumSupports' type='SFInt32' value='10'/>
+          <field accessType='inputOnly' name='set_destination' type='SFVec3f'/>
+          <field accessType='outputOnly' name='value_changed' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='cStepTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='previousValue' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='initial_destination' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='destination' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='outputOnly' name='isActive' type='SFBool'/>
+          <field accessType='initializeOnly' name='initial_value' type='SFVec3f'/>
+          <IS>
+            <connect nodeField='set_value' protoField='set_value'/>
+            <connect nodeField='duration' protoField='duration'/>
+            <connect nodeField='set_destination' protoField='set_destination'/>
+            <connect nodeField='value_changed' protoField='value_changed'/>
+            <connect nodeField='initial_destination' protoField='initial_destination'/>
+            <connect nodeField='isActive' protoField='isActive'/>
+            <connect nodeField='initial_value' protoField='initial_value'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    CheckInit();
+}
+
+function CheckInit()
+{
+    if(!bInitialized)
+    {
+        bInitialized= true;  // Init() may call other functions that call CheckInit(). In that case it's better the flag is already set, otherwise an endless loop would occur.
+        Init();
+    }
+}
+
+function Init()
+{
+    destination= initial_destination;
+
+    Buffer.length= cNumSupports;
+
+    Buffer[0]= initial_destination;
+    for(var C= 1; C<Buffer.length; C++ )
+        Buffer[C]= initial_value;
+
+    previousValue= initial_value;
+
+    cStepTime= duration / cNumSupports;
+}
+
+function set_destination(Dest, Now)
+{
+    CheckInit();
+
+    destination= Dest;
+    // Somehow we assign to Buffer[-1] and wait untill this gets shifted into the real buffer.
+    // Would we assign to Buffer[0] instead, we'd have no delay, but this would create a jump in the
+    // output because Buffer[0] is associated with a value in the past.
+
+    UpdateBuffer(Now);
+}
+
+function Tick(Now)
+{
+    CheckInit();
+
+    if(!BufferEndTime)
+    {
+        BufferEndTime= Now; // first event we received, so we are in the initialization phase.
+
+        value_changed= initial_value;
+        return;
+    }
+
+    var Frac= UpdateBuffer(Now);
+    // Frac is a value in   0 <= Frac < 1.
+
+    // Now we can calculate the output.
+    // This means we calculate the delta between each entry in Buffer and its previous
+    // entries, calculate the step response of each such step and add it to form the output.
+
+    // The oldest vaule Buffer[Buffer.length - 1] needs some extra thought, because it has
+    // no previous value. More exactly, we haven't stored a previous value anymore.
+    // However, the step response of that missing previous value has already reached its
+    // destination, so we can - would we have that previous value - use this as a start point
+    // for adding the step responses.
+    // Actually UpdateBuffer(.) maintains this value in
+
+    var Output= previousValue;
+
+    var DeltaIn= Buffer[Buffer.length - 1].subtract(previousValue);
+
+    var DeltaOut= DeltaIn.multiply(StepResponse((Buffer.length - 1 + Frac) * cStepTime));
+
+    Output= Output.add(DeltaOut);
+
+    for(var C= Buffer.length - 2; C>=0; C-- )
+    {
+        var DeltaIn= Buffer[C].subtract(Buffer[C + 1]);
+
+        var DeltaOut= DeltaIn.multiply(StepResponse((C + Frac) * cStepTime));
+
+        Output= Output.add(DeltaOut);
+    }
+    if(Output != value_changed)
+        value_changed= Output;
+}
+
+function UpdateBuffer(Now)
+{
+    var Frac= (Now - BufferEndTime) / cStepTime;
+    // is normally < 1. When it has grown to be larger than 1, we have to shift the array because the step response
+    // of the oldest entry has already reached its destination, and it's time for a newer entry.
+    // has already reached it
+    // In the case of a very low frame rate, or a very short cStepTime we may need to shift by more than one entry.
+
+    if(Frac >= 1)
+    {
+        var NumToShift= Math.floor(Frac);
+        Frac-= NumToShift;
+
+        if(NumToShift < Buffer.length)
+        {   // normal case.
+
+            previousValue= Buffer[Buffer.length - NumToShift];
+
+            for(var C= Buffer.length - 1; C>=NumToShift; C-- )
+                Buffer[C]= Buffer[C - NumToShift];
+
+            for(var C= 0; C<NumToShift; C++ )
+            {
+                // Hmm, we have a destination value, but don't know how it has
+                // reached the current state.
+                // Therefore we do a linear interpolation from the latest value in the buffer to destination.
+
+                var Alpha= C / NumToShift;
+
+                Buffer[C]= Buffer[NumToShift].multiply(Alpha).add(destination.multiply((1 - Alpha)));
+            }
+        }else
+        {
+            // degenerated case:
+            //
+            // We have a _VERY_ low frame rate...
+            // we can only guess how we should fill the array.
+            // Maybe we could write part of a linear interpolation
+            // from Buffer[0] to destination, that goes from BufferEndTime to Now
+            // (possibly only the end of the interpolation is to be written),
+            // but if we rech here we are in a very degenerate case...
+            // Thus we just write destination to the buffer.
+
+            previousValue= NumToShift == Buffer.length? Buffer[0] : destination;
+
+            for(var C= 0; C<Buffer.length; C++ )
+                Buffer[C]= destination;
+        }
+
+        BufferEndTime+= NumToShift * cStepTime;
+    }
+    return Frac;
+}
+
+function StepResponse(t)
+{
+    if(t < 0)
+        return 0;
+
+    if(t > duration)
+        return 1;
+
+    // When optimizing for speed, the above two if(.) cases can be omitted,
+    // as this funciton will not be called for values outside of 0..duration.
+
+    return StepResponseCore(t / duration);
+}
+
+// This function defines the shape of how the output responds to the input.
+// It must accept values for T in the range 0 <= T <= 1.
+// In order to create a smooth animation, it should return 0 for T == 0,
+// 1 for T == 1 and be sufficient smooth in the range 0 <= T <= 1.
+
+// It should be optimized for speed, in order for high performance. It's
+// executed Buffer.length + 1 times each simulation tick.
+
+function StepResponseCore(T)
+{
+    return .5 - .5 * Math.cos(T * Math.PI);
+}
+
+// The following functions are not used. They provide other responses (for fun).
+function StepResponseCoreF(T)
+{
+    var cTau= .3;
+    var cFrequency= 2.5;
+    return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI));
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI))* (.5 + .5 * Math.cos(T * Math.PI));
+}
+
+
+function StepResponseCoreE(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin(Math.sqrt(1 - T) * Math.PI/2);
+
+    return A * .8 + B * .2;
+}
+
+
+function StepResponseCoreD(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin((1 - T) * Math.PI/2);
+
+    return A * .8 + B * .2;
+}
+
+function StepResponseCoreC(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+
+    return A * .8 + B * .2;
+}
+
+function StepResponseCoreB(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+    return A * .8 + B * .2;
+}
+function StepResponseCoreA(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+    var Alpha= .2 * T;
+    return A * (1 - Alpha) + B * Alpha;
+}
+]]>
+        </Script>
+        <TimeSensor DEF='Tmer_PositionChaser' loop='true'/>
+        <ROUTE fromField='time' fromNode='Tmer_PositionChaser' toField='Tick' toNode='ScreenPositionDamper_PositionChaser'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='OrientationChaser'>
+      <ProtoInterface>
+        <field accessType='outputOnly' name='value_changed' type='SFRotation'/>
+        <field accessType='inputOnly' name='set_value' type='SFRotation'/>
+        <field accessType='initializeOnly' name='credits' type='MFString' value='"Initial idea and copyright by Herbert Stocker http://www.hersto.net/"'/>
+        <field accessType='outputOnly' name='isActive' type='SFBool'/>
+        <field accessType='inputOnly' name='set_destination' type='SFRotation'/>
+        <field accessType='initializeOnly' name='duration' type='SFTime' value='1.0'/>
+        <field accessType='initializeOnly' name='initial_destination' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+        <field accessType='initializeOnly' name='initial_value' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script DEF='ScreenPositionDamper_OrientationChaser'>
+          <field accessType='inputOnly' name='Tick' type='SFTime'/>
+          <field accessType='inputOnly' name='set_value' type='SFRotation'/>
+          <field accessType='initializeOnly' name='duration' type='SFTime'/>
+          <field accessType='initializeOnly' name='Buffer' type='MFRotation'/>
+          <field accessType='initializeOnly' name='bInitialized' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='BufferEndTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='cNumSupports' type='SFInt32' value='10'/>
+          <field accessType='inputOnly' name='set_destination' type='SFRotation'/>
+          <field accessType='outputOnly' name='value_changed' type='SFRotation'/>
+          <field accessType='initializeOnly' name='cStepTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='previousValue' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+          <field accessType='initializeOnly' name='initial_destination' type='SFRotation'/>
+          <field accessType='initializeOnly' name='destination' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+          <field accessType='outputOnly' name='isActive' type='SFBool'/>
+          <field accessType='initializeOnly' name='initial_value' type='SFRotation'/>
+          <IS>
+            <connect nodeField='set_value' protoField='set_value'/>
+            <connect nodeField='duration' protoField='duration'/>
+            <connect nodeField='set_destination' protoField='set_destination'/>
+            <connect nodeField='value_changed' protoField='value_changed'/>
+            <connect nodeField='initial_destination' protoField='initial_destination'/>
+            <connect nodeField='isActive' protoField='isActive'/>
+            <connect nodeField='initial_value' protoField='initial_value'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    CheckInit();
+}
+
+function CheckInit()
+{
+    if(!bInitialized)
+    {
+        bInitialized= true;  // Init() may call other functions that call CheckInit(). In that case it's better the flag is already set, otherwise an endless loop would occur.
+        Init();
+    }
+}
+
+function Init()
+{
+    destination= initial_destination;
+
+    Buffer.length= cNumSupports;
+
+    Buffer[0]= initial_destination;
+    for(var C= 1; C<Buffer.length; C++ )
+        Buffer[C]= initial_value;
+
+    previousValue= initial_value;
+
+    cStepTime= duration / cNumSupports;
+}
+
+function set_destination(Dest, Now)
+{
+    CheckInit();
+
+    destination= Dest;
+    // Somehow we assign to Buffer[-1] and wait untill this gets shifted into the real buffer.
+    // Would we assign to Buffer[0] instead, we'd have no delay, but this would create a jump in the
+    // output because Buffer[0] is associated with a value in the past.
+
+    UpdateBuffer(Now);
+}
+
+function Tick(Now)
+{
+    CheckInit();
+
+    if(!BufferEndTime)
+    {
+        BufferEndTime= Now; // first event we received, so we are in the initialization phase.
+
+        value_changed= initial_value;
+        return;
+    }
+
+    var Frac= UpdateBuffer(Now);
+    // Frac is a value in   0 <= Frac < 1.
+
+    // Now we can calculate the output.
+    // This means we calculate the delta between each entry in Buffer and its previous
+    // entries, calculate the step response of each such step and add it to form the output.
+
+    // The oldest vaule Buffer[Buffer.length - 1] needs some extra thought, because it has
+    // no previous value. More exactly, we haven't stored a previous value anymore.
+    // However, the step response of that missing previous value has already reached its
+    // destination, so we can - would we have that previous value - use this as a start point
+    // for adding the step responses.
+    // Actually UpdateBuffer(.) maintains this value in
+
+    var Output= previousValue;
+
+    var DeltaIn= previousValue.inverse().multiply(Buffer[Buffer.length - 1]);
+
+    Output= Output.slerp(Output.multiply(DeltaIn), StepResponse((Buffer.length - 1 + Frac) * cStepTime));
+
+    for(var C= Buffer.length - 2; C>=0; C-- )
+    {
+        var DeltaIn= Buffer[C + 1].inverse().multiply(Buffer[C]);
+
+        Output= Output.slerp(Output.multiply(DeltaIn), StepResponse((C + Frac) * cStepTime));
+    }
+
+
+    if(Output != value_changed)
+        value_changed= Output;
+}
+
+function UpdateBuffer(Now)
+{
+    var Frac= (Now - BufferEndTime) / cStepTime;
+    // is normally < 1. When it has grown to be larger than 1, we have to shift the array because the step response
+    // of the oldest entry has already reached its destination, and it's time for a newer entry.
+    // has already reached it
+    // In the case of a very low frame rate, or a very short cStepTime we may need to shift by more than one entry.
+
+    if(Frac >= 1)
+    {
+        var NumToShift= Math.floor(Frac);
+        Frac-= NumToShift;
+
+        if(NumToShift < Buffer.length)
+        {   // normal case.
+
+            previousValue= Buffer[Buffer.length - NumToShift];
+
+            for(var C= Buffer.length - 1; C>=NumToShift; C-- )
+                Buffer[C]= Buffer[C - NumToShift];
+
+            for(var C= 0; C<NumToShift; C++ )
+            {
+                // Hmm, we have a destination value, but don't know how it has
+                // reached the current state.
+                // Therefore we do a linear interpolation from the latest value in the buffer to destination.
+
+                Buffer[C]= destination.slerp(Buffer[NumToShift], C / NumToShift);
+            }
+        }else
+        {
+            // degenerated case:
+            //
+            // We have a _VERY_ low frame rate...
+            // we can only guess how we should fill the array.
+            // Maybe we could write part of a linear interpolation
+            // from Buffer[0] to destination, that goes from BufferEndTime to Now
+            // (possibly only the end of the interpolation is to be written),
+            // but if we rech here we are in a very degenerate case...
+            // Thus we just write destination to the buffer.
+
+            previousValue= NumToShift == Buffer.length? Buffer[0] : destination;
+
+            for(var C= 0; C<Buffer.length; C++ )
+                Buffer[C]= destination;
+        }
+        BufferEndTime+= NumToShift * cStepTime;
+    }
+
+return Frac;
+}
+
+function StepResponse(t)
+{
+    if(t < 0)
+        return 0;
+
+    if(t > duration)
+        return 1;
+
+    // When optimizing for speed, the above two if(.) cases can be omitted,
+    // as this funciton will not be called for values outside of 0..duration.
+
+     return StepResponseCore(t / duration);
+}
+
+// This function defines the shape of how the output responds to the input.
+// It must accept values for T in the range 0 <= T <= 1.
+// In order to create a smooth animation, it should return 0 for T == 0,
+// 1 for T == 1 and be sufficient smooth in the range 0 <= T <= 1.
+
+// It should be optimized for speed, in order for high performance. It's
+// executed Buffer.length + 1 times each simulation tick.
+
+function StepResponseCore(T)
+{
+    return .5 - .5 * Math.cos(T * Math.PI);
+}
+
+// The following functions are not used. They provide other responses (for fun).
+
+function StepResponseCoreG(T)
+{
+    var cTau= .3;
+    var cFrequency= 5;
+    return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI));
+}
+
+function StepResponseCoreF(T)
+{
+    var cTau= .3;
+    var cFrequency= 2.5;
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI));
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI))* (.5 + .5 * Math.cos(T * Math.PI));
+}
+
+function StepResponseCoreE(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin(Math.sqrt(1 - T) * Math.PI/2);
+
+    return A * .8 + B * .2;
+}
+
+function StepResponseCoreD(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin((1 - T) * Math.PI/2);
+
+    return A * .8 + B * .2;
+}
+
+function StepResponseCoreC(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+
+    return A * .8 + B * .2;
+}
+
+function StepResponseCoreB(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+    return A * .8 + B * .2;
+}
+
+function StepResponseCoreA(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+    var Alpha= .2 * T;
+    return A * (1 - Alpha) + B * Alpha;
+}
+]]>
+        </Script>
+        <TimeSensor DEF='Tmer_OrientationChaser' loop='true'/>
+        <ROUTE fromField='time' fromNode='Tmer_OrientationChaser' toField='Tick' toNode='ScreenPositionDamper_OrientationChaser'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='Position2fChaser'>
+      <ProtoInterface>
+        <field accessType='outputOnly' name='value_changed' type='SFVec2f'/>
+        <field accessType='inputOnly' name='set_value' type='SFVec2f'/>
+        <field accessType='initializeOnly' name='credits' type='MFString' value='"Initial idea and copyright by Herbert Stocker http://www.hersto.net/"'/>
+        <field accessType='outputOnly' name='isActive' type='SFBool'/>
+        <field accessType='inputOnly' name='set_destination' type='SFVec2f'/>
+        <field accessType='initializeOnly' name='duration' type='SFTime' value='1.0'/>
+        <field accessType='initializeOnly' name='initial_destination' type='SFVec2f' value='0.0 0.0'/>
+        <field accessType='initializeOnly' name='initial_value' type='SFVec2f' value='0.0 0.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script DEF='ScreenPositionDamper_Position2fChaser'>
+          <field accessType='inputOnly' name='Tick' type='SFTime'/>
+          <field accessType='inputOnly' name='set_value' type='SFVec2f'/>
+          <field accessType='initializeOnly' name='duration' type='SFTime'/>
+          <field accessType='initializeOnly' name='Buffer' type='MFVec2f'/>
+          <field accessType='initializeOnly' name='bInitialized' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='BufferEndTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='cNumSupports' type='SFInt32' value='10'/>
+          <field accessType='inputOnly' name='set_destination' type='SFVec2f'/>
+          <field accessType='outputOnly' name='value_changed' type='SFVec2f'/>
+          <field accessType='initializeOnly' name='cStepTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='previousValue' type='SFVec2f' value='0.0 0.0'/>
+          <field accessType='initializeOnly' name='initial_destination' type='SFVec2f'/>
+          <field accessType='initializeOnly' name='destination' type='SFVec2f' value='0.0 0.0'/>
+          <field accessType='outputOnly' name='isActive' type='SFBool'/>
+          <field accessType='initializeOnly' name='initial_value' type='SFVec2f'/>
+          <IS>
+            <connect nodeField='set_value' protoField='set_value'/>
+            <connect nodeField='duration' protoField='duration'/>
+            <connect nodeField='set_destination' protoField='set_destination'/>
+            <connect nodeField='value_changed' protoField='value_changed'/>
+            <connect nodeField='initial_destination' protoField='initial_destination'/>
+            <connect nodeField='isActive' protoField='isActive'/>
+            <connect nodeField='initial_value' protoField='initial_value'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    CheckInit();
+}
+
+function CheckInit()
+{
+    if(!bInitialized)
+    {
+        bInitialized= true;  // Init() may call other functions that call CheckInit(). In that case it's better the flag is already set, otherwise an endless loop would occur.
+        Init();
+    }
+}
+
+function Init()
+{
+    destination= initial_destination;
+
+    Buffer.length= cNumSupports;
+
+    Buffer[0]= initial_destination;
+    for(var C= 1; C<Buffer.length; C++ )
+        Buffer[C]= initial_value;
+
+    previousValue= initial_value;
+
+    cStepTime= duration / cNumSupports;
+}
+
+function set_destination(Dest, Now)
+{
+    CheckInit();
+
+    destination= Dest;
+    // Somehow we assign to Buffer[-1] and wait untill this gets shifted into the real buffer.
+    // Would we assign to Buffer[0] instead, we'd have no delay, but this would create a jump in the
+    // output because Buffer[0] is associated with a value in the past.
+
+    UpdateBuffer(Now);
+}
+
+function Tick(Now)
+{
+    CheckInit();
+
+    if(!BufferEndTime)
+    {
+        BufferEndTime= Now; // first event we received, so we are in the initialization phase.
+
+        value_changed= initial_value;
+        return;
+    }
+
+    var Frac= UpdateBuffer(Now);
+    // Frac is a value in   0 <= Frac < 1.
+
+    // Now we can calculate the output.
+    // This means we calculate the delta between each entry in Buffer and its previous
+    // entries, calculate the step response of each such step and add it to form the output.
+
+    // The oldest vaule Buffer[Buffer.length - 1] needs some extra thought, because it has
+    // no previous value. More exactly, we haven't stored a previous value anymore.
+    // However, the step response of that missing previous value has already reached its
+    // destination, so we can - would we have that previous value - use this as a start point
+    // for adding the step responses.
+    // Actually UpdateBuffer(.) maintains this value in
+
+    var Output= previousValue;
+
+    var DeltaIn= Buffer[Buffer.length - 1].subtract(previousValue);
+
+    var DeltaOut= DeltaIn.multiply(StepResponse((Buffer.length - 1 + Frac) * cStepTime));
+
+    Output= Output.add(DeltaOut);
+
+    for(var C= Buffer.length - 2; C>=0; C-- )
+    {
+        var DeltaIn= Buffer[C].subtract(Buffer[C + 1]);
+
+        var DeltaOut= DeltaIn.multiply(StepResponse((C + Frac) * cStepTime));
+
+        Output= Output.add(DeltaOut);
+    }
+
+
+    if(Output != value_changed)
+        value_changed= Output;
+}
+
+function UpdateBuffer(Now)
+{
+    var Frac= (Now - BufferEndTime) / cStepTime;
+    // is normally < 1. When it has grown to be larger than 1, we have to shift the array because the step response
+    // of the oldest entry has already reached its destination, and it's time for a newer entry.
+    // has already reached it
+    // In the case of a very low frame rate, or a very short cStepTime we may need to shift by more than one entry.
+
+    if(Frac >= 1)
+    {
+        var NumToShift= Math.floor(Frac);
+        Frac-= NumToShift;
+
+        if(NumToShift < Buffer.length)
+        {   // normal case.
+
+            previousValue= Buffer[Buffer.length - NumToShift];
+
+            for(var C= Buffer.length - 1; C>=NumToShift; C-- )
+                Buffer[C]= Buffer[C - NumToShift];
+
+            for(var C= 0; C<NumToShift; C++ )
+            {
+                // Hmm, we have a destination value, but don't know how it has
+                // reached the current state.
+                // Therefore we do a linear interpolation from the latest value in the buffer to destination.
+
+                var Alpha= C / NumToShift;
+
+                Buffer[C]= Buffer[NumToShift].multiply(Alpha).add(destination.multiply((1 - Alpha)));
+            }
+        }else
+        {
+            // degenerated case:
+            //
+            // We have a _VERY_ low frame rate...
+            // we can only guess how we should fill the array.
+            // Maybe we could write part of a linear interpolation
+            // from Buffer[0] to destination, that goes from BufferEndTime to Now
+            // (possibly only the end of the interpolation is to be written),
+            // but if we rech here we are in a very degenerate case...
+            // Thus we just write destination to the buffer.
+
+            previousValue= NumToShift == Buffer.length? Buffer[0] : destination;
+
+            for(var C= 0; C<Buffer.length; C++ )
+                Buffer[C]= destination;
+        }
+
+        BufferEndTime+= NumToShift * cStepTime;
+    }
+
+return Frac;
+}
+
+
+
+function StepResponse(t)
+{
+    if(t < 0)
+return 0;
+
+    if(t > duration)
+return 1;
+
+    // When optimizing for speed, the above two if(.) cases can be omitted,
+    // as this funciton will not be called for values outside of 0..duration.
+
+return StepResponseCore(t / duration);
+}
+
+
+// This function defines the shape of how the output responds to the input.
+// It must accept values for T in the range 0 <= T <= 1.
+// In order to create a smooth animation, it should return 0 for T == 0,
+// 1 for T == 1 and be sufficient smooth in the range 0 <= T <= 1.
+
+// It should be optimized for speed, in order for high performance. It's
+// executed Buffer.length + 1 times each simulation tick.
+function StepResponseCore(T)
+{
+return .5 - .5 * Math.cos(T * Math.PI);
+}
+
+
+// The following functions are not used. They provide other responses (for fun).
+function StepResponseCoreF(T)
+{
+    var cTau= .3;
+    var cFrequency= 2.5;
+return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI));
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI))* (.5 + .5 * Math.cos(T * Math.PI));
+}
+
+function StepResponseCoreE(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+  var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin(Math.sqrt(1 - T) * Math.PI/2);
+
+return A * .8 + B * .2;
+}
+
+function StepResponseCoreD(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+  var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin((1 - T) * Math.PI/2);
+
+return A * .8 + B * .2;
+}
+
+function StepResponseCoreC(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+  var cTau= .3;
+  var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+
+return A * .8 + B * .2;
+}
+
+function StepResponseCoreB(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+  var cTau= .3;
+  var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+return A * .8 + B * .2;
+}
+
+function StepResponseCoreA(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+  var cTau= .3;
+  var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+    var Alpha= .2 * T;
+return A * (1 - Alpha) + B * Alpha;
+}
+]]>
+        </Script>
+        <TimeSensor DEF='Tmer_Position2fChaser' loop='true'/>
+        <ROUTE fromField='time' fromNode='Tmer_Position2fChaser' toField='Tick' toNode='ScreenPositionDamper_Position2fChaser'/>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='PlacementChaser'>
+      <ProtoInterface>
+        <field accessType='outputOnly' name='isLoaded' type='SFBool'/>
+        <field accessType='inputOnly' name='set_valuePos' type='SFVec3f'/>
+        <field accessType='inputOnly' name='set_valueOri' type='SFRotation'/>
+        <field accessType='inputOnly' name='set_destinationPos' type='SFVec3f'/>
+        <field accessType='initializeOnly' name='credits' type='MFString' value='"Initial idea and copyright by Herbert Stocker http://www.hersto.net/"'/>
+        <field accessType='initializeOnly' name='duration' type='SFTime' value='1.0'/>
+        <field accessType='inputOnly' name='set_destinationOri' type='SFRotation'/>
+        <field accessType='initializeOnly' name='initial_valuePos' type='SFVec3f' value='0.0 0.0 0.0'/>
+        <field accessType='initializeOnly' name='initial_destinationPos' type='SFVec3f' value='0.0 0.0 0.0'/>
+        <field accessType='outputOnly' name='valuePos_changed' type='SFVec3f'/>
+        <field accessType='initializeOnly' name='initial_valueOri' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+        <field accessType='initializeOnly' name='initial_destinationOri' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+        <field accessType='outputOnly' name='valueOri_changed' type='SFRotation'/>
+        <field accessType='outputOnly' name='isActive' type='SFBool'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Script DEF='ScreenPositionDamper_PlacementChaser'>
+          <field accessType='initializeOnly' name='previousValueOri' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+          <field accessType='inputOnly' name='Tick' type='SFTime'/>
+          <field accessType='initializeOnly' name='duration' type='SFTime'/>
+          <field accessType='inputOnly' name='set_destinationOri' type='SFRotation'/>
+          <field accessType='initializeOnly' name='bInitialized' type='SFBool' value='false'/>
+          <field accessType='inputOnly' name='set_valueOri' type='SFRotation'/>
+          <field accessType='initializeOnly' name='previousValuePos' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='destinationOri' type='SFRotation' value='0.0 0.0 1.0 0.0'/>
+          <field accessType='initializeOnly' name='initial_valueOri' type='SFRotation'/>
+          <field accessType='inputOnly' name='set_destinationPos' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='BufferEndTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='cNumSupports' type='SFInt32' value='10'/>
+          <field accessType='inputOnly' name='set_valuePos' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='cStepTime' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='initial_destinationOri' type='SFRotation'/>
+          <field accessType='initializeOnly' name='BufferOri' type='MFRotation'/>
+          <field accessType='initializeOnly' name='destinationPos' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='initial_valuePos' type='SFVec3f'/>
+          <field accessType='outputOnly' name='valuePos_changed' type='SFVec3f'/>
+          <field accessType='outputOnly' name='isActive' type='SFBool'/>
+          <field accessType='initializeOnly' name='initial_destinationPos' type='SFVec3f'/>
+          <field accessType='outputOnly' name='valueOri_changed' type='SFRotation'/>
+          <field accessType='initializeOnly' name='BufferPos' type='MFVec3f'/>
+          <IS>
+            <connect nodeField='duration' protoField='duration'/>
+            <connect nodeField='set_destinationOri' protoField='set_destinationOri'/>
+            <connect nodeField='set_valueOri' protoField='set_valueOri'/>
+            <connect nodeField='initial_valueOri' protoField='initial_valueOri'/>
+            <connect nodeField='set_destinationPos' protoField='set_destinationPos'/>
+            <connect nodeField='set_valuePos' protoField='set_valuePos'/>
+            <connect nodeField='initial_destinationOri' protoField='initial_destinationOri'/>
+            <connect nodeField='initial_valuePos' protoField='initial_valuePos'/>
+            <connect nodeField='valuePos_changed' protoField='valuePos_changed'/>
+            <connect nodeField='isActive' protoField='isActive'/>
+            <connect nodeField='initial_destinationPos' protoField='initial_destinationPos'/>
+            <connect nodeField='valueOri_changed' protoField='valueOri_changed'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    CheckInit();
+}
+
+function CheckInit()
+{
+    if(!bInitialized)
+    {
+        bInitialized= true;  // Init() may call other functions that call CheckInit(). In that case it's better the flag is already set, otherwise an endless loop would occur.
+        Init();
+    }
+}
+function Init()
+{
+    destinationPos= initial_destinationPos;
+    destinationOri= initial_destinationOri;
+
+    BufferPos.length=
+    BufferOri.length= cNumSupports;
+
+    BufferPos[0]= initial_destinationPos;
+    BufferOri[0]= initial_destinationOri;
+    for(var C= 1; C<BufferPos.length; C++ )
+    {
+        BufferPos[C]= initial_valuePos;
+        BufferOri[C]= initial_valueOri;
+    }
+
+    previousValuePos= initial_valuePos;
+    previousValueOri= initial_valueOri;
+
+    cStepTime= duration / cNumSupports;
+}
+function set_destinationPos(Dest, Now)
+{
+    CheckInit();
+
+    destinationPos= Dest;
+    // Somehow we assign to Buffer[-1] and wait untill this gets shifted into the real buffer.
+    // Would we assign to Buffer[0] instead, we'd have no delay, but this would create a jump in the
+    // output because Buffer[0] is associated with a value in the past.
+
+    //UpdateBuffer(Now);
+}
+
+function set_destinationOri(Dest, Now)
+{
+    CheckInit();
+
+    destinationOri= Dest;
+    // Somehow we assign to Buffer[-1] and wait untill this gets shifted into the real buffer.
+    // Would we assign to Buffer[0] instead, we'd have no delay, but this would create a jump in the
+    // output because Buffer[0] is associated with a value in the past.
+
+    //UpdateBuffer(Now);
+}
+function Tick(Now)
+{
+    CheckInit();
+
+    if(!BufferEndTime)
+    {
+        BufferEndTime= Now; // first event we received, so we are in the initialization phase.
+
+        valuePos_changed= initial_valuePos;
+        valueOri_changed= initial_valueOri;
+        return;
+    }
+
+    var Frac= UpdateBuffer(Now);
+    // Frac is a value in   0 <= Frac < 1.
+
+    // Now we can calculate the output.
+    // This means we calculate the delta between each entry in Buffer and its previous
+    // entries, calculate the step response of each such step and add it to form the output.
+
+    // The oldest vaule Buffer[Buffer.length - 1] needs some extra thought, because it has
+    // no previous value. More exactly, we haven't stored a previous value anymore.
+    // However, the step response of that missing previous value has already reached its
+    // destination, so we can - would we have that previous value - use this as a start point
+    // for adding the step responses.
+    // Actually UpdateBuffer(.) maintains this value in
+
+    var OutputPos= previousValuePos;
+    var OutputOri= previousValueOri;
+
+    var DeltaInPos= BufferPos[BufferPos.length - 1].subtract(previousValuePos);
+    var DeltaInOri= previousValueOri.inverse().multiply(BufferOri[BufferOri.length - 1]);
+
+    var DeltaOutPos= DeltaInPos.multiply(StepResponse((BufferPos.length - 1 + Frac) * cStepTime));
+
+    OutputPos= OutputPos.add(DeltaOutPos);
+    OutputOri= OutputOri.slerp(OutputOri.multiply(DeltaInOri), StepResponse((BufferOri.length - 1 + Frac) * cStepTime));
+
+    for(var C= BufferPos.length - 2; C>=0; C-- )
+    {
+        var DeltaInPos= BufferPos[C].subtract(BufferPos[C + 1]);
+        var DeltaInOri= BufferOri[C + 1].inverse().multiply(BufferOri[C]);
+
+        var DeltaOutPos= DeltaInPos.multiply(StepResponse((C + Frac) * cStepTime));
+
+        OutputPos= OutputPos.add(DeltaOutPos);
+        OutputOri= OutputOri.slerp(OutputOri.multiply(DeltaInOri), StepResponse((C + Frac) * cStepTime));
+    }
+    if(OutputPos != valuePos_changed)
+        valuePos_changed= OutputPos;
+
+    if(OutputOri != valueOri_changed)
+        valueOri_changed= OutputOri;
+}
+function UpdateBuffer(Now)
+{
+    var Frac= (Now - BufferEndTime) / cStepTime;
+    // is normally < 1. When it has grown to be larger than 1, we have to shift the array because the step response
+    // of the oldest entry has already reached its destination, and it's time for a newer entry.
+    // has already reached it
+    // In the case of a very low frame rate, or a very short cStepTime we may need to shift by more than one entry.
+
+    if(Frac >= 1)
+    {
+        var NumToShift= Math.floor(Frac);
+        Frac-= NumToShift;
+
+        if(NumToShift < BufferPos.length)
+        {   // normal case.
+
+            previousValuePos= BufferPos[BufferPos.length - NumToShift];
+            previousValueOri= BufferOri[BufferOri.length - NumToShift];
+
+            for(var C= BufferPos.length - 1; C>=NumToShift; C-- )
+            {
+                BufferPos[C]= BufferPos[C - NumToShift];
+                BufferOri[C]= BufferOri[C - NumToShift];
+            }
+
+            for(var C= 0; C<NumToShift; C++ )
+            {
+                // Hmm, we have a destination value, but don't know how it has
+                // reached the current state.
+                // Therefore we do a linear interpolation from the latest value in the buffer to destination.
+
+                var Alpha= C / NumToShift;
+
+                BufferPos[C]= BufferPos[NumToShift].multiply(Alpha).add(destinationPos.multiply((1 - Alpha)));
+                BufferOri[C]= destinationOri.slerp(BufferOri[NumToShift], Alpha);
+            }
+        }else
+        {
+            // degenerated case:
+            //
+            // We have a _VERY_ low frame rate...
+            // we can only guess how we should fill the array.
+            // Maybe we could write part of a linear interpolation
+            // from Buffer[0] to destination, that goes from BufferEndTime to Now
+            // (possibly only the end of the interpolation is to be written),
+            // but if we rech here we are in a very degenerate case...
+            // Thus we just write destination to the buffer.
+
+            previousValuePos= NumToShift == BufferPos.length? BufferPos[0] : destinationPos;
+            previousValueOri= NumToShift == BufferOri.length? BufferOri[0] : destinationOri;
+
+            for(var C= 0; C<BufferPos.length; C++ )
+            {
+                BufferPos[C]= destinationPos;
+                BufferOri[C]= destinationOri;
+            }
+        }
+        BufferEndTime+= NumToShift * cStepTime;
+    }
+    return Frac;
+}
+function StepResponse(t)
+{
+    if(t < 0)
+        return 0;
+
+    if(t > duration)
+        return 1;
+
+    // When optimizing for speed, the above two if(.) cases can be omitted,
+    // as this funciton will not be called for values outside of 0..duration.
+
+    return StepResponseCore(t / duration);
+}
+
+
+// This function defines the shape of how the output responds to the input.
+// It must accept values for T in the range 0 <= T <= 1.
+// In order to create a smooth animation, it should return 0 for T == 0,
+// 1 for T == 1 and be sufficient smooth in the range 0 <= T <= 1.
+
+// It should be optimized for speed, in order for high performance. It's
+// executed Buffer.length + 1 times each simulation tick.
+function StepResponseCore(T)
+{
+    return .5 - .5 * Math.cos(T * Math.PI);
+}
+
+// The following functions are not used. They provide other responses (for fun).
+function StepResponseCoreF(T)
+{
+    var cTau= .3;
+    var cFrequency= 2.5;
+    return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T) * (1 - T);
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI));
+//      return 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (.5 + .5 * Math.cos(T * Math.PI))* (.5 + .5 * Math.cos(T * Math.PI));
+}
+function StepResponseCoreE(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin(Math.sqrt(1 - T) * Math.PI/2);
+
+    return A * .8 + B * .2;
+}
+function StepResponseCoreD(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cFrequency= 2.5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.sin((1 - T) * Math.PI/2);
+
+    return A * .8 + B * .2;
+}
+function StepResponseCoreC(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) * Math.exp(-T / cTau) * (1 - T);
+
+    return A * .8 + B * .2;
+}
+
+
+function StepResponseCoreB(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+    return A * .8 + B * .2;
+}
+function StepResponseCoreA(T)
+{
+    var A= .5 - .5 * Math.cos(T * Math.PI);
+
+    var cTau= .3;
+    var cFrequency= 5;
+    var B= 1 - Math.cos(T * 2 * Math.PI * cFrequency) /** Math.exp(-T / cTau)*/ * (1 - T);
+
+    var Alpha= .2 * T;
+    return A * (1 - Alpha) + B * Alpha;
+}
+]]>
+        </Script>
+        <TimeSensor DEF='Tmer_PlacementChaser' loop='true'/>
+        <ROUTE fromField='time' fromNode='Tmer_PlacementChaser' toField='Tick' toNode='ScreenPositionDamper_PlacementChaser'/>
+        <Script DEF='LastNode'>
+          <field accessType='outputOnly' name='isLoaded' type='SFBool'/>
+          <IS>
+            <connect nodeField='isLoaded' protoField='isLoaded'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function initialize()
+{
+    isLoaded= true;
+}
+]]>
+        </Script>
+      </ProtoBody>
+    </ProtoDeclare>
+    <ProtoDeclare name='PositionDamper'>
+      <ProtoInterface>
+        <field accessType='outputOnly' name='isLoaded' type='SFBool'/>
+        <field accessType='outputOnly' name='value_changed' type='SFVec3f'/>
+        <field accessType='inputOnly' name='set_destination' type='SFVec3f'/>
+        <field accessType='initializeOnly' name='takeFirstInput' type='SFBool' value='true'/>
+        <field accessType='initializeOnly' name='initial_destination' type='SFVec3f' value='0.0 0.0 0.0'/>
+        <field accessType='initializeOnly' name='order' type='SFInt32' value='1'/>
+        <field accessType='initializeOnly' name='credits' type='MFString' value='"Initial idea and copyright by Herbert Stocker http://www.hersto.net/"'/>
+        <field accessType='initializeOnly' name='reachThreshold' type='SFFloat' value='0.01'/>
+        <field accessType='inputOutput' name='tau' type='SFFloat' value='1.0'/>
+        <field accessType='inputOnly' name='set_value' type='SFVec3f'/>
+        <field accessType='outputOnly' name='reached' type='SFBool'/>
+        <field accessType='initializeOnly' name='initial_value' type='SFVec3f' value='0.0 0.0 0.0'/>
+        <field accessType='outputOnly' name='isActive' type='SFBool'/>
+        <field accessType='initializeOnly' name='eps' type='SFFloat' value='0.0010'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <ProtoDeclare name='EFFS'>
+          <ProtoInterface>
+            <field accessType='inputOutput' name='tau' type='SFFloat' value='1.0'/>
+          </ProtoInterface>
+          <ProtoBody>
+            <Group/>
+          </ProtoBody>
+        </ProtoDeclare>
+        <ProtoInstance DEF='EFFS' name='EFFS'>
+          <fieldValue name='tau' value='1.0'/>
+        </ProtoInstance>
+        <Script DEF='Worker'>
+          <field accessType='inputOnly' name='set_value' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='IsCortona' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='bInitialized' type='SFBool' value='false'/>
+          <field accessType='initializeOnly' name='reachThreshold' type='SFFloat'/>
+          <field accessType='initializeOnly' name='lastTick' type='SFTime' value='0.0'/>
+          <field accessType='initializeOnly' name='bNeedToTakeFirstInput' type='SFBool' value='true'/>
+          <field accessType='initializeOnly' name='value5' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='value4' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='value3' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='value2' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='input' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='value1' type='SFVec3f' value='0.0 0.0 0.0'/>
+          <field accessType='initializeOnly' name='eps' type='SFFloat'/>
+          <field accessType='inputOnly' name='set_destination' type='SFVec3f'/>
+          <field accessType='outputOnly' name='value_changed' type='SFVec3f'/>
+          <field accessType='initializeOnly' name='tau' type='SFFloat' value='1.0'/>
+          <field accessType='initializeOnly' name='effs' type='SFNode'>
+            <ProtoInstance USE='EFFS'/>
+          </field>
+          <field accessType='initializeOnly' name='order' type='SFInt32'/>
+          <field accessType='outputOnly' name='needTimer' type='SFBool'/>
+          <field accessType='inputOnly' name='tick' type='SFTime'/>
+          <field accessType='inputOnly' name='set_tau' type='SFFloat'/>
+          <field accessType='initializeOnly' name='initial_value' type='SFVec3f'/>
+          <field accessType='outputOnly' name='reached' type='SFBool'/>
+          <field accessType='initializeOnly' name='takeFirstInput' type='SFBool'/>
+          <IS>
+            <connect nodeField='set_value' protoField='set_value'/>
+            <connect nodeField='reachThreshold' protoField='reachThreshold'/>
+            <connect nodeField='input' protoField='initial_destination'/>
+            <connect nodeField='eps' protoField='eps'/>
+            <connect nodeField='set_destination' protoField='set_destination'/>
+            <connect nodeField='value_changed' protoField='value_changed'/>
+            <connect nodeField='order' protoField='order'/>
+            <connect nodeField='needTimer' protoField='isActive'/>
+            <connect nodeField='initial_value' protoField='initial_value'/>
+            <connect nodeField='reached' protoField='reached'/>
+            <connect nodeField='takeFirstInput' protoField='takeFirstInput'/>
+          </IS>
+          <![CDATA[
+ecmascript:
+
+function StartTimer()
+{
+    if(IsCortona)
+        return;
+
+    if(!needTimer)
+    {
+        lastTick= 0;
+        needTimer= true;
+    }
+}
+
+function StopTimer()
+{
+    if(IsCortona)
+        return;
+
+    if(needTimer)
+    {
+        needTimer= false;
+    }
+}
+
+function initialize()
+{
+    CheckInit();
+}
+
+function CheckInit()
+{
+    if(!bInitialized)
+    {
+        bInitialized= true;
+        Init();
+    }
+
+}
+
+function Init()
+{
+    IsCortona= false && Browser.getName().indexOf('Cortona') != -1;
+
+    bNeedToTakeFirstInput= takeFirstInput;
+
+    tau= effs.tau;
+    set_value(initial_value);
+    if(IsCortona)
+        needTimer= true;
+    else
+        needTimer=    input.x != initial_value.x
+                   || input.y != initial_value.y
+                   || input.z != initial_value.z
+                   ;
+}
+
+function set_tau(t)
+{
+    CheckInit();
+
+    tau= t;
+}
+
+function set_destination(i)
+{
+    CheckInit();
+
+    if(bNeedToTakeFirstInput)
+    {
+        bNeedToTakeFirstInput= false;
+        set_value(i);
+    }
+
+
+    if(i != input)
+    {
+        input= i;
+        StartTimer();
+    }
+}
+
+function set_value(o)
+{
+    CheckInit();
+
+    bNeedToTakeFirstInput= false;
+
+    value1= value2= value3= value4= value5= o;
+    value_changed= o;
+    UpdateReached();
+    StartTimer();
+}
+
+function tick(now)
+{
+    CheckInit();
+
+    if(!lastTick)
+    {
+        lastTick= now;
+        return;
+    }
+
+    var delta= now - lastTick;
+    lastTick= now;
+
+    var alpha= Math.exp(-delta / tau);
+
+
+    if(bNeedToTakeFirstInput)  // then don't do any processing.
+        return;
+
+    value1= order > 0 && tau
+               ? input  .add(value1.subtract(input  ).multiply(alpha))
+               : input;
+
+    value2= order > 1 && tau
+               ? value1.add(value2.subtract(value1).multiply(alpha))
+               : value1;
+
+    value3= order > 2 && tau
+               ? value2.add(value3.subtract(value2).multiply(alpha))
+               : value2;
+
+    value4= order > 3 && tau
+               ? value3.add(value4.subtract(value3).multiply(alpha))
+               : value3;
+
+    value5= order > 4 && tau
+               ? value4.add(value5.subtract(value4).multiply(alpha))
+               : value4;
+
+    var dist= GetDist();
+
+    if(dist < eps)
+    {
+        value1= value2= value3= value4= value5= input;
+
+        value_changed= input;
+        UpdateReached2(dist);
+
+        StopTimer();
+        return;
+    }
+    value_changed= value5;
+    UpdateReached2(dist);
+
+}
+
+function GetDist()
+{
+    var dist= value1.subtract(input).length();
+    if(order > 1)
+    {
+        var dist2= value2.subtract(value1).length();
+        if( dist2 > dist)  dist= dist2;
+    }
+    if(order > 2)
+    {
+        var dist3= value3.subtract(value2).length();
+        if( dist3 > dist)  dist= dist3;
+    }
+    if(order > 3)
+    {
+        var dist4= value4.subtract(value3).length();
+        if( dist4 > dist)  dist= dist4;
+    }
+    if(order > 4)
+    {
+        var dist5= value5.subtract(value4).length();
+        if( dist5 > dist)  dist= dist5;
+    }
+    return dist;
+}
+
+function UpdateReached()
+{
+    return UpdateReached2(GetDist());
+}
+
+function UpdateReached2(Dist)
+{
+    if(reached)
+    {
+        if(Dist > reachThreshold)
+            reached= false;
+    }else
+    {
+        if(Dist <= reachThreshold)
+            reached= true;
+    }
+}
+]]>
+        </Script>
+        <TimeSensor DEF='Timer_PositionDamper' loop='true'/>
+        <ROUTE fromField='needTimer' fromNode='Worker' toField='enabled' toNode='Timer_PositionDamper'/>
+        <ROUTE fromField='time' fromNode='Timer_PositionDamper' toField='tick' toNode='Worker'/>
+      </ProtoBody>
+    </ProtoDeclare>
+  </Scene>
+</X3D>

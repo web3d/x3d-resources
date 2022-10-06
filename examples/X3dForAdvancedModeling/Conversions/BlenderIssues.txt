@@ -1,0 +1,43 @@
+Blender Export issues
+
+1. Metadata
+a. In order to match Dublin Core Metadata Item (DCMI) conventions,
+   <meta name="filename" content="BlenderDefaultBox.x3d" />
+   should be
+   <meta name="title" content="BlenderDefaultBox.x3d" />
+b. Include url after generator (authoring tool) name, e.g.
+   <meta content='Blender 2.82 (sub 7) https://blender.org' name='generator'/>
+c. Missing name of X3D scene author in meta tag, add
+   <meta name='creator' content='Author Name'/> [/X3D/head, info]
+d. Missing X3D scene description in meta tag, should appear as
+   <meta name='description' content='topic sentence plus good summary'/>
+e. Add typical document metadata, e.g.
+   <meta content='19 March 2020' name='created'/>
+   <meta content='19 March 2020' name='modified'/>
+   <meta content='author name' name='creator'/>
+f. Prompt author for license, e.g.
+   <meta content='http://www.web3d.org/x3d/content/examples/license.html' name='license'/>
+    
+2. Attribute values and file-size reduction
+a. Remove trailing zeroes
+b. Remove default values, for example
+   <Transform rotation='0 1 0 0' scale='1 1 1' translation='0 0 0'/>
+c. Avoid prepending minus sign on zero -0, use 0 instead (or omit if default value)
+
+3. X3D (document root)
+a. Recommend version='3.3' rather than 3.0, also affects XML Schema and DTD
+b. Reduce profile="Immersive" to profile='Interactive' or profile='Interchange'
+   when appropriate
+
+4. Viewpoint
+a. Missing description, which is important for accessibility and usability.
+   Example: description='initial view, rotate to examine object'
+b. Moving Viewpoint as child of Transform breaks navigation modes, as a result
+   EXAMINE rotations are incorrect and other modes are counterintuitive.
+c. Why is default Viewpoint position starting from behind the model?
+
+5. Additional suggestions
+a. Include WorldInfo node at top of scene graph for model title.  Example:
+   <WorldInfo title='Model Title'/>
+b. Provide option of X3D Canonicalization (C14N) for terse/consistent format
+   that is also suitable for version-control diffs and XML security.

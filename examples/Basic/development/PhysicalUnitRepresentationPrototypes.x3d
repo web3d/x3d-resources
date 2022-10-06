@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='PhysicalUnitRepresentationPrototypes.x3d' name='title'/>
+    <meta content='Prototypes to demonstrate functionality for Real-Length Representation nodes.' name='description'/>
+    <meta content='under development' name='warning'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='22 July 2007' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='Myeon Won Lee and Sun-Young Cho, "Real Length Representation for Virtual Objects," point paper, University of Suwon, Korea, June 2007.' name='reference'/>
+    <meta content='X3D scaling and metadata convenience nodes' name='subject'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/PhysicalUnitRepresentationPrototypes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- ==================== -->
+    <!-- Initial approach: direct scaling -->
+    <WorldInfo title='PhysicalUnitRepresentationPrototypes.x3d'/>
+    <Transform DEF='MyZeptoScale' scale='1.0E-10 1.0E-10 1.0E-10'>
+      <Transform scale='1.0E-11 1.0E-11 1.0E-11'>
+        <MetadataString name='lengthUnit' value='"ZEPTO meters"'/>
+        <!-- scaled content goes here -->
+        <Shape>
+          <Box/>
+        </Shape>
+      </Transform>
+    </Transform>
+    <!-- ==================== -->
+    <!-- Second approach: prototype nodes for scaling -->
+    <!-- ==================== -->
+    <ProtoDeclare appinfo='ZeptoScale applies a uniform scale factor of 10^-21 to all children' name='ZeptoScale'>
+      <ProtoInterface>
+        <field accessType='inputOutput' name='children' type='MFNode'>
+          <!-- initialization: NULL node -->
+        </field>
+        <!-- TODO: can add other fields for Transform node here to ensure completeness -->
+      </ProtoInterface>
+      <ProtoBody>
+        <Transform DEF='ZeptoScale' scale='1.0E-10 1.0E-10 1.0E-10'>
+          <Transform scale='1.0E-11 1.0E-11 1.0E-11'>
+            <IS>
+              <connect nodeField='children' protoField='children'/>
+            </IS>
+          </Transform>
+        </Transform>
+      </ProtoBody>
+    </ProtoDeclare>
+    <!-- ==================== -->
+    <!-- Example use of prototype: the following should be very very small... -->
+    <ProtoInstance name='ZeptoScale'>
+      <fieldValue name='children'>
+        <Shape>
+          <Sphere/>
+        </Shape>
+      </fieldValue>
+    </ProtoInstance>
+    <!-- ==================== -->
+    <Background groundColor='0.25 0.25 0.25' skyColor='0.25 0.25 0.25'/>
+  </Scene>
+</X3D>

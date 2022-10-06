@@ -1,0 +1,548 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./LatticeXvlOverview_files/filelist.xml">
+<link rel=Edit-Time-Data href="./LatticeXvlOverview_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Lattice Proposal</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Marc Jablonski</o:Author>
+  <o:LastAuthor>Marc Jablonski</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>45</o:TotalTime>
+  <o:Created>2002-01-20T23:43:00Z</o:Created>
+  <o:LastSaved>2002-01-22T02:39:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1581</o:Words>
+  <o:Characters>9013</o:Characters>
+  <o:Company>Fast Forward Software</o:Company>
+  <o:Lines>75</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>11068</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:20.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Arial;
+	color:#333399;
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+h2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Arial;
+	color:#333333;
+	font-weight:bold;
+	mso-bidi-font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:16.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:Verdana;
+	mso-bidi-font-family:Arial;
+	color:#333333;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<meta name=Author content="Makito Seki">
+</head>
+
+<body lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<h1 align=center style='text-align:center'><span style='mso-bidi-font-size:
+18.0pt;color:#336699'>LatticeXvl Extension for X3D</span> <br>
+<span style='mso-bidi-font-size:18.0pt;color:#336699'>by Lattice Technology,
+Inc.<o:p></o:p></span></h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<table border=1 cellpadding=0 style='mso-cellspacing:1.5pt;mso-padding-alt:
+ 0in 0in 0in 0in'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-family:Verdana;color:#336699'>Authors</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a href="mailto:seki@lattice.co.jp">Makito Seki</a>, <a
+  href="mailto:marc@ffwsw.com">Marc Jablonski</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-family:Verdana;color:#336699'>Contact</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a href="mailto:netdream@lattice.co.jp">Lattice
+  Technology, Inc.</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-family:Verdana;color:#336699'>Version</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>0.2 &#8211; 01/20/2002</p>
+  </td>
+ </tr>
+</table>
+
+<h2>Contents </h2>
+
+<table border=1 cellpadding=0 style='mso-cellspacing:1.5pt;mso-padding-alt:
+ 0in 0in 0in 0in'>
+ <tr>
+  <td width=235 style='width:176.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-family:Verdana;color:#336699'>Abstract</span></b>
+  <br>
+  <b><span style='font-family:Verdana;color:#336699'>Concept</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  What is Lattice?</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  What is XVL?</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>Structure of X3D Lattice</span></b>
+  <br>
+  <b><span style='font-family:Verdana;color:#336699'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  XvlShell Element - shell</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Shell Type</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Rounding weight</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>Conclusion</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>References</span></b> <br>
+  <b><span style='font-family:Verdana;color:#336699'>Tools</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=235 style='width:176.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-family:Verdana;color:#336699'><a
+  href="LatticeXvlElements.html">LatticeXvl Elements</a></span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=235 style='width:176.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><span style='font-family:Verdana;color:#336699'><a
+  href="LatticeXvl-compact.txt">LatticeXvl DTD</a></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<h3>Abstract </h3>
+
+<p><span style='color:black'>Current VRML modeling techniques using polygon
+meshes and X3D share the same problem: sending complicated 3D-Data (such as
+CAD/CAM files)&nbsp;across the Internet.<span style="mso-spacerun: yes">&nbsp;
+</span>High quality detail&nbsp;and geometry create large data files that are
+bulky and hard to transmit across current Internet pipelines.&nbsp; Reducing
+the file size for speed sacrifices accuracy and detail.</span> </p>
+
+<p><span style='color:black'>To address this problem, we propose an extension
+to X3D that uses the Lattice[1] structure and XVL[1] data format.<span
+style="mso-spacerun: yes">&nbsp; </span>Together, Lattice and XVL form a new
+framework for describing 3D shapes with a highly compressed data format.<span
+style="mso-spacerun: yes">&nbsp; </span>This results in very small data files
+that maintain accuracy and are easy to transmit and share across the Internet.</span>
+</p>
+
+<p><span style='color:black'>The Lattice structure consists of a Lattice
+Surface and a Lattice Mesh.<span style="mso-spacerun: yes">&nbsp; </span>The
+Lattice Surface is&nbsp;a free-form surface represented by Gregory
+patches[2].<span style="mso-spacerun: yes">&nbsp; </span>The Lattice Mesh is a
+low-density polygon mesh.&nbsp; The surface and mesh have one to one
+correspondence and can be interchanged by using the Lattice algorithm.<span
+style="mso-spacerun: yes">&nbsp; </span>When transmitting Lattice data, only
+the Lattice Mesh is transferred across the Internet, thereby maintaining fast
+transmission of data.&nbsp;&nbsp; The browser on the client side uses the
+Lattice Mesh data to reconstruct the original<span style="mso-spacerun:
+yes">&nbsp; </span>Lattice Surface.</span></p>
+
+<p><span style='color:black'>Using Lattice as an open extension to X3D will
+facilitate the transfer of complex 3D-Data in a&nbsp;fast, efficient
+manner.&nbsp; Lattice Mesh also provides an intuitive scalable 3D modeling
+solution for&nbsp;users that maintaines the integrity of the 3D model.</span> </p>
+
+<h2>Concepts </h2>
+
+<h3>What is Lattice? </h3>
+
+<p><span style='color:black'>Lattice creates compact 3D-Data representations
+with high quality surface shapes.&nbsp; The Lattice structure consists of&nbsp;
+a Lattice Surface and a Lattice Mesh.&nbsp; A Lattice Surface is free-form
+surface data represented by Gregory Patches[2].&nbsp; A Lattice Mesh is a
+polygon mesh that consists of topologies, faces, edges, vertices and rounding
+weights. These&nbsp;meshes have the same topology. Based on an invertible
+rounding algorithm, Lattice Mesh can be transformed into&nbsp;Lattice Surface
+and vice versa.<span style="mso-spacerun: yes">&nbsp; </span>Lattice Mesh
+creates small data files. Lattice Surface represents precise surfaces.&nbsp;
+The XVL format can describe both Lattice Surface and Lattice Mesh. The XVL
+format facilitates the efficient transfer of media rich precise 3D-Data.</span>
+</p>
+
+<p><img border=0 width=300 height=136 id="_x0000_i1025" src="arowana_pol.JPG"><img
+border=0 width=300 height=136 id="_x0000_i1026" src="arowana_gre.JPG"><br>
+<span style='color:black'>Figure 1: Lattice structure. Left model is Lattice
+Mesh and right model is Lattice Surface Both models share the same topology.</span>
+</p>
+
+<p><b><span style='color:black'>Design tool</span></b> </p>
+
+<p class=MsoNormal style='margin-right:.5in;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:.5in'><span style='color:black'>Surface shapes can be
+intuitively designed by manipulating the simple Lattice Mesh. Lattice Designer
+is a software tool&nbsp;for creating and editing Lattice models.</span></p>
+
+<p class=MsoNormal><b><span style='color:black'>Scalability</span></b> </p>
+
+<p class=MsoNormal style='margin-right:.5in;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:.5in'><span style='color:black'>Lattice models are scalable
+and maintain a high quality of surfaces. By changing the number of divisions
+(tesselation), it is easy to control quality of surfaces. In low-end computing
+environments, use 2 or 4 as number of divisions to maintain performance.<span
+style="mso-spacerun: yes">&nbsp; </span>In higher-end computing environments,
+use 6 or more for precise representation.<span style="mso-spacerun: yes">&nbsp;
+</span>The tesselation can be changed in the client Browser dynamically.<span
+style="mso-spacerun: yes">&nbsp; </span>This is a kind of LOD (Level of detail
+as a function for VRML).</span></p>
+
+<p class=MsoNormal><b><span style='color:black'>Keyword&nbsp;
+&quot;Lattice&quot;</span></b> </p>
+
+<p class=MsoNormal style='margin-right:.5in;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;margin-left:.5in'><span style='color:black'>Some people imagine Lattice as
+a morphing technique. Lattice structure is not only a morphing technique, but
+also describes smooth free-form sufaces.</span></p>
+
+<h3>What is XVL? </h3>
+
+<p><span style='color:black'>XVL(eXtensible Virtual world description Language)
+is a file format that describes the Lattice Structure.<span
+style="mso-spacerun: yes">&nbsp; </span>It is a compact 3D-Data format with
+high quality surface representations that facilitates the transfer of 3D-Data
+across the Internet environment.<span style="mso-spacerun: yes">&nbsp;
+</span>The XVL file describes only a Lattice Mesh (i.e. polygon) or Lattice
+Surface ( i.e. Gregory patch).&nbsp; XVL has two levels, G0T0 and G1T1. This
+proposal is for the G0T0 level. G1T1 treats trimmed surfaces besides G0T0.</span>
+</p>
+
+<h2>Structure of X3D Lattice </h2>
+
+<p><span style='color:black'>X3D Lattice specifies one XVL element, XvlShell
+element.</span> </p>
+
+<h3>XvlShell Element - shell </h3>
+
+<p>XvlShell Element corresponds to a shape called Shell described by Lattice
+structure. XvlShell element describes Lattice Mesh structure or Lattice
+Surface. Shell consists of faces, edges and vertices, corresponds Face elements
+Edge elements and Vertex elements. <br>
+<img border=0 width=251 height=120 id="_x0000_i1027" src=shell.gif><br>
+<span style='color:black'>Figure 2: Structure of Shell.</span> </p>
+
+<h3>Shell type </h3>
+
+<p>Shell has multiple types. There are two types and each type has few
+patterns. </p>
+
+<p class=MsoNormal>&nbsp; </p>
+
+<table border=1 cellpadding=0 bgcolor=white style='mso-cellspacing:1.5pt;
+ background:white;mso-padding-alt:0in 0in 0in 0in'>
+ <tr>
+  <td style='background:#CCFFFF;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Shell Type</p>
+  </td>
+  <td style='background:#CCFFFF;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Described data in
+  XVL-file</p>
+  </td>
+  <td style='background:#CCFFFF;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+  <td style='background:#CCFFFF;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Representation on
+  Browser</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Curve Sequence ( Poly line Sequence )</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=172 height=116 id="_x0000_i1028" src="CS_PO.gif"><br>
+  Consists of straight lines</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=46 height=23 id="_x0000_i1029" src=arrow.gif></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=174 height=117 id="_x0000_i1030" src="CS_PO_B.gif"><br>
+  Display Poly lines as it is.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Curve Sequence ( Bezier Sequence )</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=174 height=116 id="_x0000_i1031" src="CS_BE.gif"><br>
+  Consists of Bezier Curves</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><img border=0 width=46 height=23 id="_x0000_i1032"
+  src=arrow.gif></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=174 height=117 id="_x0000_i1033" src="CS_BE_B.gif"><br>
+  Display Bezier Curves as it is.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Surface Set ( Polygon Mesh without rounding )</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=174 height=116 id="_x0000_i1034" src="SS_PO.gif"><br>
+  Consists of straight lines and surfaces.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><img border=0 width=46 height=23 id="_x0000_i1035"
+  src=arrow.gif></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=175 height=118 id="_x0000_i1036" src="SS_PO_B.gif"><br>
+  Display Lattice Mesh as it is.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Surface Set ( Polygon Mesh with rounding )</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=174 height=116 id="_x0000_i1037" src="SS_PO.gif"><br>
+  Consists of straight lines, surfaces and Rounding weights.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><img border=0 width=46 height=23 id="_x0000_i1038"
+  src=arrow.gif></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=175 height=119 id="_x0000_i1039" src="SS_GR_B.gif"><br>
+  Generate Lattice Surface and display Gregory Patch.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Surface Set ( Gregory Mesh )</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=174 height=116 id="_x0000_i1040" src="SS_GR.gif"><br>
+  Consists of Bezier Curves and surfaces.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><img border=0 width=46 height=23 id="_x0000_i1041"
+  src=arrow.gif></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=175 height=119 id="_x0000_i1042" src="SS_GR_B.gif"><br>
+  Display Gregory Patch.</p>
+  </td>
+ </tr>
+</table>
+
+<p>Figure 3: Shell Types</p>
+
+<h3>Rounding weight </h3>
+
+<p>Edge and vertex can each have rounding weight&nbsp; represent the original
+smooth surface. Value of weight is between 0.5 and 1.5. By using Rounding
+Weight, it is possible to control the shape of surfaces. </p>
+
+<p><b>Rounding Weight of Edge</b> <br>
+&nbsp; </p>
+
+<table border=1 cellpadding=0 style='mso-cellspacing:1.5pt;mso-padding-alt:
+ 0in 0in 0in 0in'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=226 height=148 id="_x0000_i1043" src="round_ed_05.gif"><br>
+  Rounding Weights of all edges are 0.5.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=227 height=149 id="_x0000_i1044" src="round_normal.gif"><br>
+  Rounding Weights of all edges are 1(default).</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=227 height=148 id="_x0000_i1045" src="round_ed_15.gif"><br>
+  Rounding Weights of all edges are 1.5.</p>
+  </td>
+ </tr>
+</table>
+
+<p>Figure 4: Edge rounding weight <br>
+&nbsp; </p>
+
+<p><b>Rounding Weight of Vertex</b> <br>
+&nbsp; </p>
+
+<table border=1 cellpadding=0 style='mso-cellspacing:1.5pt;mso-padding-alt:
+ 0in 0in 0in 0in'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=228 height=148 id="_x0000_i1046" src="round_vx_05.gif"><br>
+  Rounding Weights of all vertices are 0.5.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=227 height=149 id="_x0000_i1047" src="round_normal.gif"><br>
+  Rounding Weights of all vertices are 1(default).</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=227 height=148 id="_x0000_i1048" src="round_vx_15.gif"><br>
+  Rounding Weights of all vertices are 1.5.</p>
+  </td>
+ </tr>
+</table>
+
+<p>Figure 5: Vertex rounding weight </p>
+
+<h2>Conclusion </h2>
+
+<p>We propose the inclusion of the&nbsp; XVL file framework as a compact
+3D-Data format with high quality surface representation as an open extension to
+the web3D. The data structure can be migrated to X3D for use in the Internet
+environment. Because XVL is based on a free-form surface, it enables rapid
+transmission of practical data across the Internet. The Lattice structure is
+composed of free-form surface and simple polygon mesh. These two data forms
+have the same topology and are interchangeable.&nbsp; A wide range of surface
+shapes can be generated using weighting factors. The simple rounding algorithm
+makes rapid surface generation an easy task. </p>
+
+<h2>References </h2>
+
+<p>&nbsp;&nbsp;&nbsp; [1]&nbsp; A.Wakita. M.Yajima, T.Harada, H.Toriya, and
+H.Chiyokura.,&quot;XVL: A Compact and Qualified 3D Representation With Lattice
+mesh and Surface for <br>
+the Internet&quot;, Proceedings of Web3-VRML2000, pp. 45-51, 2000. <br>
+&nbsp;&nbsp;&nbsp; [2]&nbsp; H.Chiyokura and F.Kimura, &quot;Design of Solids
+with free-form surfaces&quot;, Computer Graphics, pp. 289-298, 1983. </p>
+
+<h2>Tools </h2>
+
+<p>Lattice Designer, XVL Viewer and XVL Player are some of the software
+application tools supporting XVL. <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; </p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Greg Leaver">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>MBNMS VRML Terrain Project</TITLE>
+</HEAD>
+<BODY>
+<U><FONT COLOR="#993366"><FONT SIZE=+2>Monterey
+Bay National Marine Sanctuary VRML Terrain Project</FONT></FONT></U>
+<BR>&nbsp;
+<BR><B><FONT COLOR="#FF0000">On-line VRML model</FONT></B> at&nbsp; <A HREF="http://www.stl.nps.navy.mil/~auv/leaver/MBNMSterrain/2000m/Trees/mbnms.wrl">http://www.stl.nps.navy.mil/~auv/leaver/MBNMSterrain/2000m/Trees/mbnms.wrl</A>
+<BR><B><FONT COLOR="#FF0000">Download VRML model</FONT></B> at <A HREF="http://www.stl.nps.navy.mil/~auv/leaver/MBNMSterrain.zip">http://www.stl.nps.navy.mil/~auv/leaver/MBNMSterrain.zip</A>
+(1.1 MB)
+
+<P><B><FONT COLOR="#FF0000">Thesis results</FONT></B> at <A HREF="http://devo.stl.nps.navy.mil/~auv/leaver/Thesis/Thesis.doc">http://www.stl.nps.navy.mil/~auv/leaver/Thesis/Thesis.doc</A>
+(7.5MB)
+
+<P><B><U><FONT SIZE=+1>Overview</FONT></U></B>
+<BR>The VRML terrain model of the Monterey Bay National Marine Sanctuary
+(MBNMS) is the result of the collaborative efforts of Don Brutzman and
+Greg Leaver of the Naval Postgraduate School, Monterey and Ray McClain
+of Moss Landing Marine Labs - all in California.&nbsp; The project is documented
+in a thesis advised by Don and authored by Greg. The terrain model consists
+of numerous terrain tiles, terrain trees, and jpg images to support three
+levels of topographic resolution (2000m, 1000m, and 500m).&nbsp; Currently,
+the model uses the first version of the QuadLOD node.
+<BR>&nbsp;
+
+<P><B><U><FONT SIZE=+1>Navigation</FONT></U></B>
+<BR>The top-level scene is a single terrain tile at 2000m resolution. A
+navigation icon is positioned at the center of the tile in the screen foreground.&nbsp;
+Navigation icons are switched in and out together with corresponding terrain
+tiles.&nbsp; Each tile has a unique navigation icon that provides four
+relative viewpoints.&nbsp; The initial top-level scene is at the widest
+possible resolution (2000 m). The viewer can determine this by positioning
+the mouse over any of the navigation icon's four compass headings.&nbsp;
+This causes the current level of resolution (that the navigation icon is
+at) to be displayed at the bottom of the browser's window.&nbsp; By clicking
+on an icon direction label a viewpoint can be selected.&nbsp; Selecting
+the viewpoint causes the viewer's position to change to the direction of
+the compass heading chosen, at a perspective just above the navigation
+icon.&nbsp; Navigation icons are positioned at a tile's center on the boundary
+of the proximity sensor that controls the switch between resolutions.&nbsp;
+That is, if the viewer flys beneath or drops below a navigation icon, the
+next resolution for that tile will be switched in.&nbsp; Thus, a low-resolution
+tile (and the tile's navigation icon) is replaced with four higher resolution
+tiles (and their corresponding navigation icons).&nbsp; An icon can be
+made to disappear by clicking on its sphere.&nbsp;&nbsp; Icons which have
+been made to disappear can be restored by zooming out to a lower-resolution
+level and then zooming back in to reload the higher- resolution level.
+
+<P><B><U><FONT SIZE=+1>Georeferencing</FONT></U></B>
+<BR>The MBNMS Terrain Model's coordinate system is georeferenced to the
+UTM coordinate system.&nbsp; The model is built with the VRML coordinate
+system origin (the point 0,0,0 of the root node) corresponding to the baseline
+position of Zone 10 of the UTM coordinate system, i.e., 0 m North, 0 m
+East of Zone 10.&nbsp; The northwest corner of the real MBNMS is located
+at 4,200,000 m north and 460,000 m east (in UTM, 4,200,000N, 460,000E)
+of the zone 10 baseline.&nbsp; In VRML, the Terrain Model is designed so
+that North is in the positive x direction, and East is in the positive
+z direction.&nbsp; So, the northwest corner of the Terrain Model is located
+4,200,000 units in the positive x direction, and 460,000 units in the positive
+z direction. Thus, in the x-z plane, the coordinates of the Terrain Model
+correspond to the real life sanctuary in terms of the UTM coordinate system.
+The y-axis represents depth.
+
+<P><B><U><FONT SIZE=+1>Limitations</FONT></U></B>
+<BR>Currently, the MBNMS Terrain Model can be accessed by any VRML browser.&nbsp;
+However, going past the top-level low-resolution (2000m post-spacing) entry
+file is only possible using a PC or Macintosh.&nbsp; This is because the
+model uses Script nodes that interface with Java class files.&nbsp; Currently,
+only VRML browsers designed for PCs follow the VRML 97 specification as
+it pertains to Java in Script nodes.&nbsp; Therefore, the model currently
+does not show higher-resolution tiles with Cosmo Player under IRIX (SGI)
+because it does not support Java in the Script node.&nbsp; This limitation
+is expected to be temporary since all VRML used in the MBNMS model is compliant
+with the VRML 97 specification.&nbsp; <B>Also, the on-line version of the
+model&nbsp; seems to hang under Windows NT</B>.&nbsp; Therefore it is recommended
+that the <A HREF="http://www.stl.nps.navy.mil/~auv/leaver/MBNMSterrain.zip">zipped
+copy</A> be downloaded and run locally if running under Windows NT.
+
+<P>Greg Leaver
+<BR>NPS Monterey
+<BR>Updated 9/28/98
+</BODY>
+</HTML>

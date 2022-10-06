@@ -1,0 +1,421 @@
+#X3D V3.2 utf8
+
+PROFILE Immersive
+COMPONENT Geospatial:1
+COMPONENT xj3d_Time:1
+
+META "version", "'# $Id: TrackPrototype.x3dv 5954 2009-11-03 03:12:54Z giles7777 $'"
+META "title" "TrackPrototype.x3dv"
+META "description" "VCR-style playback of vehicle track data."
+META "creator" "Alan Hudson"
+META "created" "11 August 2007"
+META "modified" "21 August 2008"
+META "reference" "http://www.web3d.org/x3d-earth"
+META "reference" "http://x3d-earth.nps.edu"
+META "identifier" ""
+META "generator" "TextPad"
+META "license" "license.html"
+
+PROTO Track [
+    initializeOnly SFColor trackColor 1.0 0.0 0.0              # The color of the track line
+    initializeOnly SFFloat trackLineScale 1.0                  # The linewidth scale factor for the track line
+    initializeOnly SFFloat trackLinePickingWidth 0.0001        # The width of the picking box in degrees
+    initializeOnly SFFloat trackLinePickingHeight 10           # The height of the picking box in meters
+    initializeOnly SFColor markerColor 0.0 1.0 0.0             # The color of the location markers
+    initializeOnly SFFloat markerSize 0.2                      # The size of the location markers in meters
+    initializeOnly MFInt32 numLocations 2                      # The number of locations in the locations array
+    initializeOnly MFVec3d locations [ ]                       # The locations described in lat/long/height
+    initializeOnly MFRotation orientations [ ]                 # The orientation of the vehicle at the locations
+    initializeOnly MFFloat timings []                          # Fractional time of each location
+    initializeOnly SFBool pickingEnabled TRUE                  # Is picking enabled on the segments
+    initializeOnly MFFloat dataValue0 []                       # Data value for each segment, set 1
+    initializeOnly MFFloat dataValue1 []                       # Data value for each segment, set 2
+    initializeOnly MFFloat dataValue2 []                       # Data value for each segment, set 3
+    initializeOnly MFFloat dataValue3 []                       # Data value for each segment, set 4
+    initializeOnly MFFloat dataValue4 []                       # Data value for each segment, set 5
+    initializeOnly MFFloat dataValue5 []                       # Data value for each segment, set 6
+    initializeOnly MFFloat dataValue6 []                       # Data value for each segment, set 7
+    initializeOnly MFFloat dataValue7 []                       # Data value for each segment, set 8
+
+    initializeOnly MFColor dataVis0 []                         # Data to color the lines, set 1
+    initializeOnly MFColor dataVis1 []                         # Data to color the lines, set 2
+    initializeOnly MFColor dataVis2 []                         # Data to color the lines, set 3
+    initializeOnly MFColor dataVis3 []                         # Data to color the lines, set 4
+    initializeOnly MFColor dataVis4 []                         # Data to color the lines, set 5
+    initializeOnly MFColor dataVis5 []                         # Data to color the lines, set 6
+    initializeOnly MFColor dataVis6 []                         # Data to color the lines, set 7
+    initializeOnly MFColor dataVis7 []                         # Data to color the lines, set 8
+
+    inputOnly SFFloat fraction                                 # The simulation time to show
+
+    inputOutput SFBool visible TRUE                            # Should this track and all its parts be displayed
+    inputOutput MFString platformModel [ ]                     # List of URLS to use for the platform models
+    initializeOnly SFFloat scaleFactor 0.0                   # Distance scale factor for platform model
+    
+    inputOutput SFBool showMarkers TRUE                        # Show markers for the location points
+    inputOutput SFInt32 dataShown 0                            # Which data set to show, -1 for none
+
+    outputOnly SFBool platformSelected                         # The platform has been clicked
+    outputOnly SFBool platformActive                           # The platform's touchsensor isActive
+    outputOnly SFInt32 locationIndexOver                       # The index value of the segment location the mouse is over
+    outputOnly SFFloat locationTimeOver                        # the time value of the segment location the mouse is over.  Uses the time of the closet point
+    outputOnly MFFloat locationDataOver                        # The value of the segment location the mouse is over.  Uses the data value of the closet point          
+] {
+    DEF VISIBLE Switch {
+        whichChoice 0
+        children [
+            Group {
+                children [
+                    DEF TRACK Group {
+                        children [
+                            Group {
+                                children [
+                                    Shape {
+                                        appearance Appearance {
+                                            material Material {
+                                                emissiveColor IS trackColor
+                                            }
+
+                                            lineProperties LineProperties {
+                                                linewidthScaleFactor IS trackLineScale
+                                            }
+
+                                        }
+
+                                        geometry DEF TRACK_LINE LineSet {
+                                            vertexCount IS numLocations
+                                            coord DEF TRACK_COORD GeoCoordinate {
+                                                geoSystem ["GDC"]
+                                                point IS locations
+                                            }
+                                            color DEF TRACK_COLOR Color {}
+                                        }
+
+                                    }
+                                ]
+                            }
+                            DEF PLATFORM_GEOM GeoLocation {
+                                geoSystem ["GDC"]
+                                children [
+                                    DEF PLATFORM_TRANSFORM Transform {
+                                        children [
+                                            Inline {
+                                                url IS platformModel
+                                            }
+                                        ]
+                                    }
+				    DEF PLATFORM_PROX ProximitySensor {
+				       size 1e12 1e12 1e12
+				    }
+                                    
+                                ]
+                            }
+
+                            DEF WAYPOINT_GEOM Group {
+
+                            }
+                            DEF SELECTION_GEOM Group {
+
+                            }
+                        ]
+
+                    } # End TRACK Group
+
+                ]
+            }
+        ]
+
+    } # End VISIBLE Switch
+
+    DEF POS_INTERP GeoPositionInterpolator {
+        key IS timings
+        keyValue IS locations
+        set_fraction IS fraction
+    }
+
+    DEF ORI_INTERP OrientationInterpolator {
+        key IS timings
+        keyValue IS orientations
+        set_fraction IS fraction
+    }
+
+
+    ROUTE POS_INTERP.geovalue_changed TO PLATFORM_GEOM.set_geoCoords
+    ROUTE ORI_INTERP.value_changed TO PLATFORM_TRANSFORM.set_rotation
+
+    DEF TIME TimeSensor {
+        cycleInterval 0.2
+        loop TRUE
+    }
+
+    DEF SCRIPT Script {
+        directOutput TRUE
+
+        initializeOnly SFColor markerColor IS markerColor
+        initializeOnly SFFloat markerSize IS markerSize
+        initializeOnly MFVec3d locations IS locations
+        initializeOnly SFFloat trackLinePickingWidth IS trackLinePickingWidth
+        initializeOnly SFFloat trackLinePickingHeight IS trackLinePickingHeight
+        initializeOnly SFBool pickingEnabled IS pickingEnabled
+        initializeOnly MFFloat dataValue0 IS dataValue0                       # Data value for each location, set 1
+        initializeOnly MFFloat dataValue1 IS dataValue1                       # Data value for each location, set 2
+        initializeOnly MFFloat dataValue2 IS dataValue2                       # Data value for each location, set 3
+        initializeOnly MFFloat dataValue3 IS dataValue3                       # Data value for each location, set 4
+        initializeOnly MFFloat dataValue4 IS dataValue4                       # Data value for each location, set 5
+        initializeOnly MFFloat dataValue5 IS dataValue5                       # Data value for each location, set 6
+        initializeOnly MFFloat dataValue6 IS dataValue6                       # Data value for each location, set 7
+        initializeOnly MFFloat dataValue7 IS dataValue7                       # Data value for each location, set 8
+
+        initializeOnly MFColor dataVis0 IS dataVis0                         # Data to color the lines, set 1
+        initializeOnly MFColor dataVis1 IS dataVis1                         # Data to color the lines, set 2
+        initializeOnly MFColor dataVis2 IS dataVis2                         # Data to color the lines, set 3
+        initializeOnly MFColor dataVis3 IS dataVis3                         # Data to color the lines, set 4
+        initializeOnly MFColor dataVis4 IS dataVis4                         # Data to color the lines, set 5
+        initializeOnly MFColor dataVis5 IS dataVis5                         # Data to color the lines, set 6
+        initializeOnly MFColor dataVis6 IS dataVis6                         # Data to color the lines, set 7
+        initializeOnly MFColor dataVis7 IS dataVis7                         # Data to color the lines, set 8
+        initializeOnly SFFloat scaleFactor  IS scaleFactor                 # Distance scale factor for platform model
+        inputOutput SFInt32 dataShown IS dataShown                          # Which data set to show, -1 for none
+
+        inputOnly SFTime frameTick
+        inputOnly SFBool segmentOver
+        inputOnly SFVec3d geoCoordOver
+        inputOnly SFInt32 segmentID
+        inputOnly SFVec3f platformPosition                                  # Position of the platform
+        inputOutput SFFloat fraction IS fraction
+        
+        outputOnly MFNode selectionGeometry
+        outputOnly SFInt32 locationIndexOver IS locationIndexOver
+        outputOnly SFFloat locationTimeOver  IS locationTimeOver
+        outputOnly MFFloat locationDataOver  IS locationDataOver
+        outputOnly MFColor lineColor
+        outputOnly SFVec3f platformScale
+        
+        url ["ecmascript:
+            var activeLocation;
+            var isLocationActive = false;
+
+            function initialize() {
+
+                setupDataVis();
+
+                if (!pickingEnabled)
+                return;
+
+                output = new MFNode();
+                idx = 0;
+
+                Browser.println('len: ' + locations.length);
+                len = locations.length - 1;    // must subtract 1 or it goes forever
+                for(i=0; i < len; i++) {
+                    //                 for(i=0; i < 1; i++) {
+                    output[idx++] = createGeom(locations[i], locations[i+1], idx);
+                }
+
+                selectionGeometry = output;
+            }
+
+            // Setup the data visualization based on the dataShown value
+            function setupDataVis() {
+                // Setup data visualization
+                switch(dataShown) {
+                    case 0:
+                    if (dataVis0.length > 0)
+                    lineColor = dataVis0;
+                    break;
+                    case 1:
+                    if (dataVis1.length > 0)
+                    lineColor = dataVis1;
+                    break;
+                    case 2:
+                    if (dataVis2.length > 0)
+                    lineColor = dataVis2;
+                    break;
+                    case 3:
+                    if (dataVis3.length > 0)
+                    lineColor = dataVis3;
+                    break;
+                    case 4:
+                    if (dataVis4.length > 0)
+                    lineColor = dataVis4;
+                    break;
+                    case 5:
+                    if (dataVis5.length > 0)
+                    lineColor = dataVis5;
+                    break;
+                    case 6:
+                    if (dataVis6.length > 0)
+                    lineColor = dataVis6;
+                    break;
+                    case 7:
+                    if (dataVis7.length > 0)
+                    lineColor = dataVis7;
+                    break;
+                    default:
+                    Browser.println('Invalid dataShown value');
+                }
+
+
+            }
+
+            // Create geometry for making touch sensors work for lines on all browsers
+            function createTSGeometry(loc1, loc2, hwidth, hheight) {
+                //              	Browser.println('loc1: ' + loc1.x + ' ' + loc1.y + ' ' + loc1.z);
+                //              	Browser.println('loc2: ' + loc2.x + ' ' + loc2.y + ' ' + loc2.z);
+
+                code = '#X3D V3.0 utf8\n' +
+                'PROFILE Immersive\n' +
+                'COMPONENT Geospatial:1\n' +
+                '   Shape { ' +
+                '      appearance Appearance { material Material { transparency 1 } } ' +
+                '      geometry IndexedTriangleSet {\n' +
+                '      solid FALSE ' +
+                '      index [0 2 1, 0 3 2, 4 1 5, 1 2 5, 7 5 4, 6 7 4, 7 3 0, 7 0 6]\n' +
+                '      coord GeoCoordinate {\n' +
+                '      geoSystem [\"GDC\"] ' +
+                '         point [ ' +
+                (loc1.x - hwidth) + ' ' +
+                (loc1.y + hwidth) + ' ' +
+                (loc1.z + hheight) + ' ' +
+                (loc1.x + hwidth) + ' ' +
+                (loc1.y + hwidth) + ' ' +
+                (loc1.z + hheight) + ' ' +
+                (loc2.x + hwidth) + ' ' +
+                (loc2.y + hwidth) + ' ' +
+                (loc2.z + hheight) + ' ' +
+                (loc2.x - hwidth) + ' ' +
+                (loc2.y + hwidth) + ' ' +
+                (loc2.z + hheight) + ' ' +
+
+                (loc1.x + hwidth) + ' ' +
+                (loc1.y - hwidth) + ' ' +
+                (loc1.z - hheight) + ' ' +
+                (loc2.x + hwidth) + ' ' +
+                (loc2.y - hwidth) + ' ' +
+                (loc2.z - hheight) + ' ' +
+
+                (loc1.x - hwidth) + ' ' +
+                (loc1.y - hwidth) + ' ' +
+                (loc1.z - hheight) + ' ' +
+                (loc2.x - hwidth) + ' ' +
+                (loc2.y - hwidth) + ' ' +
+                (loc2.z - hheight) + ' ' +
+
+                ']}\n' +
+                '}}';
+
+                scene = Browser.createX3DFromString(code);
+                shape = scene.rootNodes[0];
+
+                return shape;
+            }
+
+            function createSphereGeometry(loc1, radius) {
+                code = '#X3D V3.0 utf8\n' +
+                'PROFILE Immersive\n' +
+                'COMPONENT Geospatial:1\n' +
+                '   GeoLocation { ' +
+                '      geoSystem [\"GDC\"] ' +
+                '      geoCoords ' + loc1.x + ' ' + loc1.y + ' ' + loc1.z +
+                '      children [ ' +
+                '         Shape { geometry Sphere { radius ' + radius + ' }} ' +
+                '      ]}';
+
+                scene = Browser.createX3DFromString(code);
+                shape = scene.rootNodes[0];
+
+                return shape;
+            }
+
+            function createGeom(loc1, loc2, segId) {
+                transform = Browser.currentScene.createNode('Transform');
+                loc1Marker = createSphereGeometry(loc1, 10);
+                loc2Marker = createSphereGeometry(loc2, 10);
+
+                //              	shape = createTSGeometry(loc1,loc2, 0.00001);
+                shape = createTSGeometry(loc1,loc2, trackLinePickingWidth, trackLinePickingHeight);
+
+                scene = Browser.createX3DFromString(
+                    '#X3D V3.0 utf8\n' +
+                    'PROFILE Immersive\n' +
+                    'COMPONENT Geospatial:1\n' +
+                    'DEF TOUCH1 GeoTouchSensor { geoSystem [\"GDC\"]}\n' +
+                    'DEF SCRIPT2 Script {\n' +
+                    'initializeOnly SFInt32 id ' + segId + '\n' +
+                    'inputOnly SFBool isActive\n' +
+                    'inputOnly SFBool isOver\n' +
+                    'inputOnly SFVec3d hitGeo\n' +
+                    'outputOnly SFInt32 id_changed\n' +
+                    '   url [\"ecmascript:\n' +
+                    '      function isActive() {\n' +
+                    'id_changed = id;\n' +
+                    '}\n' +
+                    'function isOver() {\n' +
+                    '   id_changed = id;\n' +
+                    '}\n' +
+                    '\"]' +
+                    '}' );
+                touch = scene.rootNodes[0];
+                script = scene.rootNodes[1];
+
+                transform.children = new MFNode(shape, touch, script);
+
+                Browser.currentScene.addRoute(touch, 'isOver', script, 'isOver');
+                Browser.currentScene.addRoute(touch, 'hitGeoCoord_changed', script, 'hitGeo');
+                Browser.currentScene.addRoute(touch, 'isOver', this, 'segmentOver');
+                Browser.currentScene.addRoute(touch, 'hitGeoCoord_changed', this, 'geoCoordOver');
+                Browser.currentScene.addRoute(script, 'id_changed', this, 'segmentID');
+
+                return transform;
+            }
+
+            function segmentOver(val) {
+                isLocationActive = val;
+            }
+
+            function geoCoordOver(val) {
+                //Browser.println('geoCoord: ' + val.x + ' ' + val.y + ' ' + val.z);
+            }
+
+            function segmentID(val) {
+                activeLocation = val;
+            }
+
+	    function platformPosition(val) {
+		dist = Math.sqrt (val[0] * val[0] + val[1] * val[1] + val[2] * val[2]);
+		scale = scaleFactor * dist;
+	        
+	        if (scale < 1)
+	           scale = 1;
+	           
+		platformScale = new SFVec3f(scale, scale, scale);
+	    }
+	    
+            // Handle items that need to happen at the end of a frame
+            // to sync with X3D event model.
+            function frameTick() {
+                if (isLocationActive) {
+                    Browser.println('active segment: ' + activeLocation);
+                    Browser.println('data Value0: ' + dataValue0[activeLocation]);
+                    isLocationActive = false;
+                    locationIndexOver = activeLocation;
+
+                    locationDataOver[0] = dataValue0[activeLocation];
+                    locationDataOver[1] = dataValue1[activeLocation];
+                    locationDataOver[2] = dataValue2[activeLocation];
+                    locationDataOver[3] = dataValue3[activeLocation];
+                    locationDataOver[4] = dataValue4[activeLocation];
+                    locationDataOver[5] = dataValue5[activeLocation];
+                    locationDataOver[6] = dataValue6[activeLocation];
+                    locationDataOver[7] = dataValue7[activeLocation];
+                }
+            }
+            "]
+    }
+
+    ROUTE SCRIPT.selectionGeometry TO SELECTION_GEOM.children
+    ROUTE SCRIPT.lineColor TO TRACK_COLOR.set_color
+    ROUTE PLATFORM_PROX.position_changed TO SCRIPT.platformPosition
+    ROUTE SCRIPT.platformScale TO PLATFORM_TRANSFORM.set_scale
+    ROUTE TIME.cycleTime TO SCRIPT.frameTick
+}

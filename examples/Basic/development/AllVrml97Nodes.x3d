@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='AllVrml97Nodes.x3d' name='title'/>
+    <meta content='Don Brutzman' name='creator'/>
+    <meta content='1 January 2000' name='created'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='List all VRML nodes in a single nonrendering scene as a convenient simple test for translation programs. Used for early development of X3D-Edit and Xj3D.' name='description'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/development/AllVrml97Nodes.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo DEF='WORLDINFO' title='VRML test scene: x3d/content/AllVrml97Nodes.wrl'/>
+    <WorldInfo DEF='DTD_TAGSET_CANDIDATES'/>
+    <WorldInfo DEF='Xj3D_BUGS_AND_ISSUES'/>
+    <WorldInfo DEF='Xj3D_FIXES'/>
+    <WorldInfo DEF='XEENA_BUGS_AND_ISSUES'/>
+    <WorldInfo DEF='XEENA_FIXES'/>
+    <Background DEF='BACKGROUND' groundColor='0.0 0.0 0.0'/>
+    <Fog DEF='FOG'/>
+    <NavigationInfo DEF='NAVIGATIONINFO' type='"EXAMINE" "WALK" "ANY" "FLY"'/>
+    <Viewpoint DEF='VIEWPOINT'/>
+    <Anchor DEF='ANCHOR'>
+      <Billboard DEF='Billboard'>
+        <Shape DEF='SHAPE_BOX'>
+          <Box DEF='BOX'/>
+          <Appearance DEF='APPEARANCE'>
+            <ImageTexture DEF='IMAGETEXTURE' url='"../icons/cube.gif" "https://www.web3d.org/x3d/content/examples/Basic/development/../icons/cube.gif"'/>
+            <Material DEF='MATERIAL'/>
+          </Appearance>
+        </Shape>
+      </Billboard>
+      <Collision DEF='COLLISION'>
+        <Group DEF='PROXY_GROUP'>
+          <Shape DEF='PROXY_SHAPE'>
+            <Box DEF='PROXY_BOX'/>
+          </Shape>
+        </Group>
+        <Shape DEF='SHAPE_CONE'>
+          <Cone DEF='CONE'/>
+          <Appearance/>
+        </Shape>
+      </Collision>
+      <Group DEF='GROUP'>
+        <Shape DEF='SHAPE_CYLINDER'>
+          <Cylinder DEF='CYLINDER'/>
+          <Appearance/>
+        </Shape>
+      </Group>
+      <Inline DEF='INLINE' url='"inlineTestFileOne.wrl" "inlineTestFileTwo.wrl" "inlineTestFileEmbedding%20Blanks%20In%20Name.wrl"'/>
+      <Inline DEF='INLINE_HELLO_WORLD' url='"HelloWorld.wrl" "https://www.web3d.org/x3d/content/examples/Basic/development/HelloWorld.wrl"'/>
+      <LOD DEF='LOD' range='1.0'>
+        <Shape DEF='SHAPE_ELEVATIONGRID'>
+          <ElevationGrid DEF='ELEVATIONGRID' height='1.0 2.0 3.0 4.0'/>
+          <Appearance USE='APPEARANCE'/>
+        </Shape>
+        <Shape DEF='SHAPE_EXTRUSION'>
+          <Extrusion DEF='EXTRUSION' crossSection='1.0 1.0 1.0 -1.0 -1.0 -1.0 -1.0 1.0 1.0 1.0' scale='1.0 1.0 1.0 1.0' spine='0.0 0.0 0.0 0.0 1.0 0.0'/>
+          <Appearance USE='APPEARANCE'/>
+        </Shape>
+      </LOD>
+      <Switch DEF='SWITCH' whichChoice='-1'>
+        <Shape DEF='SHAPE_TEXTURETRANSFORM_INDEXEDFACESET'>
+          <IndexedFaceSet DEF='INDEXEDFACESET' colorIndex='0 1 0 1' coordIndex='0 1 2 3' normalIndex='0 1 2 3' texCoordIndex='0 1 2 3'>
+            <Color DEF='COLOR' color='1.0 0.0 0.0 0.0 1.0 0.0'/>
+            <Coordinate DEF='COORDINATE' point='1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0'/>
+            <Normal DEF='NORMAL' vector='1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0'/>
+            <TextureCoordinate DEF='TEXTURECOORDINATE' point='0.1 0.1 0.9 0.1 0.9 0.9 0.1 0.9'/>
+          </IndexedFaceSet>
+          <Appearance DEF='APPEARANCE_TEXTURETRANSFORM'>
+            <ImageTexture USE='IMAGETEXTURE'/>
+            <Material/>
+            <TextureTransform DEF='TEXTURETRANSFORM' center='0.5 0.5'/>
+          </Appearance>
+        </Shape>
+        <Shape DEF='SHAPE_INDEXEDLINESET'>
+          <IndexedLineSet DEF='INDEXEDLINESET' colorIndex='0 1 0 1' coordIndex='0 1 2 3'>
+            <Coordinate USE='COORDINATE'/>
+            <Color USE='COLOR'/>
+          </IndexedLineSet>
+          <Appearance USE='APPEARANCE'/>
+        </Shape>
+        <Shape DEF='SHAPE_POINTSET'>
+          <PointSet DEF='POINTSET'>
+            <Color USE='COLOR'/>
+            <Coordinate USE='COORDINATE'/>
+          </PointSet>
+          <Appearance USE='APPEARANCE'/>
+        </Shape>
+        <Shape DEF='SHAPE_MOVIETEXTURE'>
+          <IndexedFaceSet coordIndex='0 1 2 3 -1' solid='false'>
+            <Coordinate point='0.0 0.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 0.0'/>
+          </IndexedFaceSet>
+          <Appearance/>
+        </Shape>
+      </Switch>
+      <Transform DEF='TRANSFORM'>
+        <Shape DEF='SHAPE_SPHERE'>
+          <Sphere DEF='SPHERE'/>
+          <Appearance USE='APPEARANCE'/>
+        </Shape>
+        <Shape DEF='SHAPE_TEXT'>
+          <Text DEF='TEXT' string='" first line of text" "second line of text"'>
+            <FontStyle DEF='FONTSTYLE'/>
+          </Text>
+          <Appearance USE='APPEARANCE'/>
+        </Shape>
+      </Transform>
+      <Sound DEF='SOUND'>
+        <AudioClip DEF='AUDIOCLIP' description='AudioClip'/>
+      </Sound>
+      <Group DEF='GROUP_LIGHTS'>
+        <DirectionalLight DEF='DIRECTIONALLIGHT'/>
+        <PointLight DEF='POINTLIGHT'/>
+        <SpotLight DEF='SPOTLIGHT' beamWidth='1.570796' cutOffAngle='.785398'/>
+      </Group>
+      <Group DEF='GROUP_INTERPOLATORS'>
+        <ColorInterpolator DEF='COLORINTERPOLATOR' key='0.0' keyValue='0.0 0.0 0.0'/>
+        <CoordinateInterpolator DEF='COORDINATEINTERPOLATOR' key='0.0' keyValue='0.0 0.0 0.0'/>
+        <NormalInterpolator DEF='NORMALINTERPOLATOR' key='0.0' keyValue='0.0 0.0 0.0'/>
+        <OrientationInterpolator DEF='ORIENTATIONINTERPOLATOR' key='0.0' keyValue='0.0 0.0 1.0 0.0'/>
+        <PositionInterpolator DEF='POSITIONINTERPOLATOR' key='0.0' keyValue='0.0 0.0 0.0'/>
+        <ScalarInterpolator DEF='SCALARINTERPOLATOR' key='0.0' keyValue='0.0'/>
+      </Group>
+      <Group DEF='GROUP_SENSORS'>
+        <CylinderSensor DEF='CYLINDERSENSOR'/>
+        <PlaneSensor DEF='PLANESENSOR'/>
+        <ProximitySensor DEF='PROXIMITYSENSOR'/>
+        <SphereSensor DEF='SPHERESENSOR'/>
+        <TimeSensor DEF='TIMESENSOR'/>
+        <TouchSensor DEF='TOUCHSENSOR'/>
+        <VisibilitySensor DEF='VISIBILITYSENSOR'/>
+      </Group>
+    </Anchor>
+    <WorldInfo DEF='Xj3D_NODE_TRANSLATION_STATUS'/>
+    <ROUTE fromField='isActive' fromNode='TOUCHSENSOR' toField='enabled' toNode='TOUCHSENSOR'/>
+  </Scene>
+</X3D>

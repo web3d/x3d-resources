@@ -1,0 +1,102 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO GeoInline [
+  field        MFString url
+  eventIn      MFString set_url
+  eventOut     MFString url_changed
+  field        SFBool   load
+  eventIn      SFBool   set_load
+  eventOut     SFBool   load_changed
+  field        SFVec3f  bboxCenter
+  field        SFVec3f  bboxSize
+  eventOut     MFNode   children
+] "http://www.ai.sri.com/geovrml/1.0/protos/GeoInline.wrl"
+
+Group {
+   children [
+
+      DEF TestInline GeoInline {
+	 url "http://www.ai.sri.com/geovrml/1.0/doc/examples/box.wrl"
+	 load FALSE     # don't load by default
+      }
+
+      # Two cones that are used to load and unload the URL for the box
+
+      Transform {
+	 translation 2 1.0 0 
+	 scale 0.5 0.5 0.5
+	 children [
+	    DEF LoadSensor TouchSensor {}
+	    Shape {
+	       appearance Appearance { material Material {diffuseColor 1 0 0} }
+	       geometry Cone {}
+	    }
+	 ]
+      }
+      Transform {
+	 translation 1.5 1.2 0.3
+	 scale 0.5 0.5 0.5
+	 children [
+	    Shape {
+	       geometry Text {
+		  string "Load Cube"
+		  fontStyle FontStyle {
+		     size 1.0
+		  }
+	       }
+	    }
+	 ]
+      }
+
+      Transform {
+	 translation 2 -1.0 0 
+	 scale 0.5 0.5 0.5
+	 rotation 1 0 0 3.1415
+	 children [
+	    DEF UnLoadSensor TouchSensor {}
+	    Shape {
+	       appearance Appearance { material Material {diffuseColor 0 0 1} }
+	       geometry Cone {} 
+	    } 
+	 ]
+      }
+      Transform {
+	 translation 1.5 -1.5 0.3
+	 scale 0.5 0.5 0.5
+	 children [
+	    Shape {
+	       geometry Text {
+		  string "Unload Cube"
+		  fontStyle FontStyle {
+		     size 1.0
+		  }
+	       }
+	    }
+	 ]
+      }
+
+   ]
+
+}
+
+# a couple of scripts to process the events from clicking on the cones
+
+DEF ReturnTrue Script {
+   eventIn  SFBool set_value
+   eventOut SFBool value_changed
+   url "javascript: function set_value( value ) { 
+           if ( value == true ) value_changed = true; }"
+}
+
+DEF ReturnFalse Script {
+   eventIn  SFBool set_value
+   eventOut SFBool value_changed
+   url "javascript: function set_value( value ) {
+           if ( value == true ) value_changed = false; }"
+}
+
+ROUTE LoadSensor.isActive TO ReturnTrue.set_value
+ROUTE ReturnTrue.value_changed TO TestInline.set_load
+
+ROUTE UnLoadSensor.isActive TO ReturnFalse.set_value
+ROUTE ReturnFalse.value_changed TO TestInline.set_load

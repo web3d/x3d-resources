@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.2.xsd'>
+  <head>
+    <component level='2' name='RigidBodyPhysics'/>
+    <meta content='BallBounce.x3d' name='title'/>
+    <meta content='Example scene for RigidBodyPhysics component' name='description'/>
+    <meta content='Alan Hudson and Justin Couch' name='creator'/>
+    <meta content='Don Brutzman' name='translator'/>
+    <meta content='1 January 2008' name='created'/>
+    <meta content='26 December 2008' name='translated'/>
+    <meta content='20 October 2019' name='modified'/>
+    <meta content='http://www.xj3d.org/extensions/index.html#Physics' name='reference'/>
+    <meta content='originals/ball_bounce.x3dv' name='reference'/>
+    <meta content='https://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/rigid_physics.html' name='reference'/>
+    <meta content='under development' name='warning'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/Basic/RigidBodyPhysics/BallBounce.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='Xj3D converter, http://www.xj3d.org' name='generator'/>
+    <meta content='../license.html' name='license'/>
+  </head>
+  <Scene>
+    <WorldInfo title='BallBounce.x3d'/>
+    <Viewpoint position='0.0 0.0 4.0'/>
+    <Group>
+      <CollidableShape DEF='BALL-GEOM'>
+        <Shape containerField='shape'>
+          <Appearance>
+            <Material emissiveColor='1.0 0.0 0.0'/>
+          </Appearance>
+          <Sphere radius='0.1'/>
+        </Shape>
+      </CollidableShape>
+      <CollidableShape DEF='GROUND-GEOM' translation='0.0 -0.5 0.0'>
+        <Shape containerField='shape'>
+          <Appearance>
+            <Material emissiveColor='0.0 1.0 0.0'/>
+          </Appearance>
+          <Box size='20.0 0.1 20.0'/>
+        </Shape>
+      </CollidableShape>
+    </Group>
+    <Transform translation='1.0 1.0 0.0'>
+      <Shape>
+        <Appearance>
+          <Material DEF='INDICATOR-MATERIAL' emissiveColor='0.0 0.0 1.0'/>
+        </Appearance>
+        <Sphere radius='0.2'/>
+      </Shape>
+    </Transform>
+    <RigidBodyCollection DEF='BODY-COLLECTION'>
+      <RigidBody DEF='BODY-1' containerField='bodies' position='0.0 2.0 0.0'>
+        <CollidableShape USE='BALL-GEOM' containerField='geometry'/>
+      </RigidBody>
+    </RigidBodyCollection>
+    <CollisionSensor DEF='COLLISION-OUTPUT'>
+      <CollisionCollection DEF='COLLISION-GROUP' bounce='1.0' containerField='collider' minBounceSpeed='1.0'>
+        <CollidableShape USE='BALL-GEOM' containerField='collidables'/>
+        <CollidableShape USE='GROUND-GEOM' containerField='collidables'/>
+      </CollisionCollection>
+    </CollisionSensor>
+    <Script DEF='CONTACT-SCRIPT' directOutput='true'>
+      <field accessType='inputOnly' name='activeSensor' type='SFBool'/>
+      <field accessType='outputOnly' name='indicatorColor' type='SFColor'/>
+      <field accessType='inputOnly' name='set_jointContacts' type='MFNode'/>
+      <field accessType='outputOnly' name='correctedContacts' type='MFNode'/>
+      <field accessType='initializeOnly' name='ground' type='SFNode'>
+        <CollidableShape USE='GROUND-GEOM'/>
+      </field>
+      <![CDATA[
+ecmascript:
+    function set_jointContacts(val) {
+      for(i = 0; i < val.length; i++) {
+        if(val[i].geometry1.equals(ground)) {
+	  val[i].geometry1 = null;
+	  val[i].body1 = null;
+	  val[i].bounce = 1;
+	}
+
+        if(val[i].geometry2.equals(ground)) {
+	  val[i].geometry2 = null;
+	  val[i].body2 = null;
+	  val[i].bounce = 1;
+	}
+      }
+      correctedContacts = val;
+    }
+
+    function activeSensor(val) {
+      if(val) {
+        indicatorColor.r = 0;
+        indicatorColor.g = 1;
+        indicatorColor.b = 0;
+      }	else {
+        indicatorColor.r = 1;
+        indicatorColor.g = 0;
+        indicatorColor.b = 0;
+      }
+    }
+]]>
+    </Script>
+    <ROUTE fromField='contacts' fromNode='COLLISION-OUTPUT' toField='set_jointContacts' toNode='CONTACT-SCRIPT'/>
+    <ROUTE fromField='isActive' fromNode='COLLISION-OUTPUT' toField='activeSensor' toNode='CONTACT-SCRIPT'/>
+    <ROUTE fromField='indicatorColor' fromNode='CONTACT-SCRIPT' toField='emissiveColor' toNode='INDICATOR-MATERIAL'/>
+    <ROUTE fromField='correctedContacts' fromNode='CONTACT-SCRIPT' toField='set_contacts' toNode='BODY-COLLECTION'/>
+  </Scene>
+</X3D>
